@@ -14,4 +14,6 @@ jobs:
           python-version: "3.11"
       - name: Validate lexicon and packs
         run: python tools/validate_lexicon.py
-
+      - name: Validate SVG icons
+        if: ${{ hashFiles('icons/svg/*.svg') != '' }}
+        run: python tools/validate_svg.py

@@ -50,3 +50,16 @@ One of the following renderers must be available:
 To render black/white variants reliably, SVGs should use `currentColor` for `fill`/`stroke`.
 The renderer injects `style=\"color: #000000\"` (black) or `style=\"color: #ffffff\"` (white) onto the root `<svg>`.
 
+## validate_svg.py
+
+Validates canonical icons in `icons/svg/` (ignores `.gitkeep`):
+- `viewBox` equivalent to `0 0 32 32`
+- no hardcoded colors in `fill`/`stroke` attributes or inline `style`
+  Allowed paint values: `currentColor`, `none`, empty
+- flags usage of `#...`, `rgb()/rgba()`, and named colors `black`/`white`
+
+Run:
+
+```bash
+python3 tools/validate_svg.py
+```
