@@ -1,0 +1,30 @@
+{
+  "version": "0.1.0",
+  "language": "en",
+  "icons": [
+    {
+      "id": "need_toilet",
+      "category": "needs",
+      "meaning_en": "toilet",
+      "aliases_en": ["wc", "bathroom", "restroom"],
+      "tags_en": ["urgent", "public"],
+      "examples": ["need_toilet ?", "need_toilet !"]
+    },
+    {
+      "id": "money_card",
+      "category": "money",
+      "meaning_en": "card payment",
+      "aliases_en": ["card", "credit card", "debit card", "pay by card"],
+      "tags_en": ["payment"],
+      "examples": ["money_card yes", "money_card (slashed)"]
+    },
+    {
+      "id": "place_shop",
+      "category": "places",
+      "meaning_en": "shop",
+      "aliases_en": ["store", "market"],
+      "tags_en": ["buy"],
+      "examples": ["place_shop + comm_phone", "place_shop + need_food"]
+    }
+  ]
+}

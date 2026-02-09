@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pictiq.org/schemas/icon-index.schema.json",
+  "title": "Pictiq Icon Index",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "language", "icons"],
+  "properties": {
+    "version": { "type": "string" },
+    "language": { "type": "string", "minLength": 2 },
+    "icons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "category", "meaning_en", "aliases_en", "tags_en", "examples"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+          "category": { "type": "string" },
+          "meaning_en": { "type": "string" },
+          "aliases_en": { "type": "array", "items": { "type": "string" } },
+          "tags_en": { "type": "array", "items": { "type": "string" } },
+          "examples": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}

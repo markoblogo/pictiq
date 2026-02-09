@@ -1,0 +1,12 @@
+{
+  "pack_id": "universal-v1",
+  "version": "0.1.0",
+  "language": "en",
+  "title": "Universal Pack v1",
+  "description": "Initial minimal universal pack for Pictiq.",
+  "icons": [
+    "need_toilet",
+    "money_card",
+    "place_shop"
+  ]
+}
