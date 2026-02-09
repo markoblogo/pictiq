@@ -6,11 +6,11 @@ Notation:
 
 ## 1. Default reading (Zero-Intent)
 Any object icon is a valid message by default.
-Example: `need_toilet` can mean "toilet?" / "I need a toilet" depending on context.
+Example: `need_toilet` can mean "toilet" / "I need a toilet" depending on context.
 
 ## 2. Punctuation operators
-- `punct_question` (`?`) — question / where / how / is there / can I
-- `punct_exclaim` (`!`) — urgent / attention / please help / insist
+- `punct_question` — question / where / how / is there / can I
+- `punct_exclaim` — urgent / attention / please help / insist
 
 Examples:
 - `need_toilet + punct_question`
