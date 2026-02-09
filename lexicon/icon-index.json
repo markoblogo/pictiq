@@ -1,30 +1,316 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "language": "en",
   "icons": [
     {
-      "id": "need_toilet",
-      "category": "needs",
-      "meaning_en": "toilet",
-      "aliases_en": ["wc", "bathroom", "restroom"],
-      "tags_en": ["urgent", "public"],
-      "examples": ["need_toilet ?", "need_toilet !"]
+      "id": "overlay_slash",
+      "type": "operator",
+      "category": "operator",
+      "meaning_en": "negation slash overlay",
+      "aliases_en": ["no", "not", "without", "forbidden", "allergy", "exclude"],
+      "tags_en": ["operator", "negation"],
+      "examples": ["money_card (overlay_slash)", "need_food (overlay_slash)"]
+    },
+
+    {
+      "id": "punct_question",
+      "type": "icon",
+      "category": "punctuation",
+      "meaning_en": "question",
+      "aliases_en": ["?", "where", "how", "is there", "can I"],
+      "tags_en": ["punctuation", "question"],
+      "examples": ["need_toilet + punct_question", "place_hotel + punct_question"]
+    },
+    {
+      "id": "punct_exclaim",
+      "type": "icon",
+      "category": "punctuation",
+      "meaning_en": "urgent",
+      "aliases_en": ["!", "urgent", "attention", "help"],
+      "tags_en": ["punctuation", "urgent"],
+      "examples": ["safety_medical + punct_exclaim", "need_water + punct_exclaim"]
+    },
+
+    {
+      "id": "logic_yes",
+      "type": "icon",
+      "category": "logic",
+      "meaning_en": "yes",
+      "aliases_en": ["yes", "ok", "accepted"],
+      "tags_en": ["logic", "confirmation"],
+      "examples": ["logic_yes", "money_card + logic_yes"]
+    },
+    {
+      "id": "logic_no",
+      "type": "icon",
+      "category": "logic",
+      "meaning_en": "no",
+      "aliases_en": ["no", "not", "reject"],
+      "tags_en": ["logic", "negation"],
+      "examples": ["logic_no", "money_card + logic_no"]
+    },
+
+    {
+      "id": "time",
+      "type": "icon",
+      "category": "time",
+      "meaning_en": "time",
+      "aliases_en": ["time", "when", "hours"],
+      "tags_en": ["time"],
+      "examples": ["time + punct_question", "move_public + time + punct_question"]
+    },
+
+    {
+      "id": "qty_1",
+      "type": "icon",
+      "category": "quantity",
+      "meaning_en": "one",
+      "aliases_en": ["1", "one", "single"],
+      "tags_en": ["quantity", "number"],
+      "examples": ["need_water + qty_1", "need_food + qty_1"]
+    },
+    {
+      "id": "qty_2",
+      "type": "icon",
+      "category": "quantity",
+      "meaning_en": "two",
+      "aliases_en": ["2", "two", "double"],
+      "tags_en": ["quantity", "number"],
+      "examples": ["need_water + qty_2", "need_food + qty_2"]
+    },
+    {
+      "id": "qty_5",
+      "type": "icon",
+      "category": "quantity",
+      "meaning_en": "five",
+      "aliases_en": ["5", "five", "many"],
+      "tags_en": ["quantity", "number"],
+      "examples": ["need_water + qty_5", "need_water + qty_5 + qty_5"]
+    },
+    {
+      "id": "qty_plus",
+      "type": "icon",
+      "category": "quantity",
+      "meaning_en": "more",
+      "aliases_en": ["more", "plus", "add"],
+      "tags_en": ["quantity", "modifier"],
+      "examples": ["need_water + qty_plus", "need_food + qty_plus"]
+    },
+    {
+      "id": "qty_minus",
+      "type": "icon",
+      "category": "quantity",
+      "meaning_en": "less",
+      "aliases_en": ["less", "minus", "reduce"],
+      "tags_en": ["quantity", "modifier"],
+      "examples": ["need_water + qty_minus", "need_food + qty_minus"]
+    },
+
+    {
+      "id": "money_coins",
+      "type": "icon",
+      "category": "money",
+      "meaning_en": "cash",
+      "aliases_en": ["coins", "cash", "pay cash"],
+      "tags_en": ["money", "payment"],
+      "examples": ["money_coins", "need_food + money_coins"]
     },
     {
       "id": "money_card",
+      "type": "icon",
       "category": "money",
       "meaning_en": "card payment",
       "aliases_en": ["card", "credit card", "debit card", "pay by card"],
-      "tags_en": ["payment"],
-      "examples": ["money_card yes", "money_card (slashed)"]
+      "tags_en": ["money", "payment"],
+      "examples": ["money_card + punct_question", "money_card (overlay_slash)"]
+    },
+    {
+      "id": "money_atm_bank",
+      "type": "icon",
+      "category": "money",
+      "meaning_en": "ATM / bank",
+      "aliases_en": ["atm", "bank", "cash machine"],
+      "tags_en": ["money", "service"],
+      "examples": ["money_atm_bank + punct_question", "money_atm_bank + time + punct_question"]
+    },
+
+    {
+      "id": "comm_wifi",
+      "type": "icon",
+      "category": "communication",
+      "meaning_en": "Wi-Fi",
+      "aliases_en": ["wifi", "internet", "wireless"],
+      "tags_en": ["communication", "internet"],
+      "examples": ["comm_wifi + punct_question", "place_hotel + comm_wifi"]
+    },
+    {
+      "id": "comm_phone",
+      "type": "icon",
+      "category": "communication",
+      "meaning_en": "phone",
+      "aliases_en": ["phone", "call", "telephone"],
+      "tags_en": ["communication"],
+      "examples": ["comm_phone + punct_question", "place_shop + comm_phone"]
+    },
+
+    {
+      "id": "power_plug",
+      "type": "icon",
+      "category": "power",
+      "meaning_en": "power outlet",
+      "aliases_en": ["plug", "electricity", "charger"],
+      "tags_en": ["power"],
+      "examples": ["power_plug + punct_question", "power_plug (overlay_slash)"]
+    },
+
+    {
+      "id": "need_toilet",
+      "type": "icon",
+      "category": "needs",
+      "meaning_en": "toilet",
+      "aliases_en": ["wc", "bathroom", "restroom"],
+      "tags_en": ["needs", "urgent"],
+      "examples": ["need_toilet + punct_question", "need_toilet + punct_exclaim"]
+    },
+    {
+      "id": "need_water",
+      "type": "icon",
+      "category": "needs",
+      "meaning_en": "water",
+      "aliases_en": ["water", "drink", "thirst"],
+      "tags_en": ["needs", "drink"],
+      "examples": ["need_water + qty_1", "need_water + qty_2"]
+    },
+    {
+      "id": "need_food",
+      "type": "icon",
+      "category": "needs",
+      "meaning_en": "food",
+      "aliases_en": ["food", "eat", "hungry"],
+      "tags_en": ["needs"],
+      "examples": ["need_food + punct_question", "need_food (overlay_slash)"]
+    },
+    {
+      "id": "need_bar",
+      "type": "icon",
+      "category": "needs",
+      "meaning_en": "bar",
+      "aliases_en": ["bar", "drink", "pub"],
+      "tags_en": ["needs", "places"],
+      "examples": ["need_bar + punct_question", "need_bar + time + punct_question"]
+    },
+
+    {
+      "id": "safety_medical",
+      "type": "icon",
+      "category": "safety",
+      "meaning_en": "medical help",
+      "aliases_en": ["doctor", "hospital", "medical"],
+      "tags_en": ["safety", "help"],
+      "examples": ["safety_medical + punct_exclaim", "safety_medical + punct_question"]
+    },
+    {
+      "id": "safety_police",
+      "type": "icon",
+      "category": "safety",
+      "meaning_en": "police",
+      "aliases_en": ["police", "security"],
+      "tags_en": ["safety"],
+      "examples": ["safety_police + punct_question", "safety_police + punct_exclaim"]
+    },
+
+    {
+      "id": "place_hotel",
+      "type": "icon",
+      "category": "places",
+      "meaning_en": "hotel",
+      "aliases_en": ["hotel", "hostel", "stay"],
+      "tags_en": ["places", "sleep"],
+      "examples": ["place_hotel + punct_question", "place_hotel + comm_wifi"]
     },
     {
       "id": "place_shop",
+      "type": "icon",
       "category": "places",
       "meaning_en": "shop",
       "aliases_en": ["store", "market"],
-      "tags_en": ["buy"],
-      "examples": ["place_shop + comm_phone", "place_shop + need_food"]
+      "tags_en": ["places", "buy"],
+      "examples": ["place_shop + punct_question", "place_shop + need_food"]
+    },
+    {
+      "id": "place_landmark_park",
+      "type": "icon",
+      "category": "places",
+      "meaning_en": "park / landmark",
+      "aliases_en": ["park", "landmark", "sight"],
+      "tags_en": ["places", "outdoors"],
+      "examples": ["place_landmark_park + punct_question", "place_landmark_park + time + punct_question"]
+    },
+    {
+      "id": "place_gas",
+      "type": "icon",
+      "category": "places",
+      "meaning_en": "gas station",
+      "aliases_en": ["gas", "petrol", "fuel"],
+      "tags_en": ["places", "service"],
+      "examples": ["place_gas + punct_question", "move_car + place_gas"]
+    },
+
+    {
+      "id": "service_tools",
+      "type": "icon",
+      "category": "service",
+      "meaning_en": "tools / repair",
+      "aliases_en": ["tools", "repair", "service"],
+      "tags_en": ["service"],
+      "examples": ["service_tools + punct_question", "move_car + service_tools"]
+    },
+
+    {
+      "id": "move_feet",
+      "type": "icon",
+      "category": "movement",
+      "meaning_en": "walk / go on foot",
+      "aliases_en": ["walk", "go", "on foot"],
+      "tags_en": ["movement"],
+      "examples": ["move_feet + time + punct_question", "move_feet + punct_question"]
+    },
+    {
+      "id": "move_taxi",
+      "type": "icon",
+      "category": "movement",
+      "meaning_en": "taxi",
+      "aliases_en": ["taxi", "cab"],
+      "tags_en": ["movement", "transport"],
+      "examples": ["move_taxi + punct_question", "move_taxi + money_card + punct_question"]
+    },
+    {
+      "id": "move_car",
+      "type": "icon",
+      "category": "movement",
+      "meaning_en": "car",
+      "aliases_en": ["car", "drive", "rental"],
+      "tags_en": ["movement", "transport"],
+      "examples": ["move_car + punct_question", "move_car + service_tools"]
+    },
+    {
+      "id": "move_public",
+      "type": "icon",
+      "category": "movement",
+      "meaning_en": "public transport",
+      "aliases_en": ["bus", "metro", "train", "public transport"],
+      "tags_en": ["movement", "transport"],
+      "examples": ["move_public + punct_question", "move_public + time + punct_question"]
+    },
+
+    {
+      "id": "place_disco",
+      "type": "icon",
+      "category": "places",
+      "meaning_en": "disco / club",
+      "aliases_en": ["disco", "club", "dance"],
+      "tags_en": ["places", "nightlife"],
+      "examples": ["place_disco + punct_question", "place_disco + time + punct_question"]
     }
   ]
 }

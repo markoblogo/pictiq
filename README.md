@@ -2,6 +2,7 @@
 
 Pictiq is a minimal visual protocol for short, universal messages across language barriers.
 It is not meant for long texts. It is meant for pointing, quick signs, stickers, and simple phrases.
+All lexicon icons are designed as framed tiles; the logo is not a tile.
 
 ## Core idea
 - Pointing at an object icon is a valid message by default.
@@ -16,7 +17,7 @@ It is not meant for long texts. It is meant for pointing, quick signs, stickers,
 
 ## Licensing (summary)
 - Personal use is allowed.
-- Non-commercial use is allowed under the license in `LICENSE`.
+- Non-commercial use is allowed under the license in `LICENSE` (CC BY-NC 4.0).
 - Commercial use requires a separate agreement: see `COMMERCIAL_LICENSE.md`.
 
 ## Status

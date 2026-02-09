@@ -13,9 +13,10 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["id", "category", "meaning_en", "aliases_en", "tags_en", "examples"],
+        "required": ["id", "type", "category", "meaning_en", "aliases_en", "tags_en", "examples"],
         "properties": {
           "id": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+          "type": { "type": "string", "enum": ["icon", "operator"] },
           "category": { "type": "string" },
           "meaning_en": { "type": "string" },
           "aliases_en": { "type": "array", "items": { "type": "string" } },

@@ -8,15 +8,16 @@ Icons must remain simple, readable, and consistent across print and digital medi
 - Source format: SVG
 - ViewBox: 32x32 (preferred) or 24x24 (allowed, but be consistent)
 - Color: single color (black or white). No gradients, no shadows, no halftones.
-- Each icon is delivered as:
-  - "tile" version (recommended for packs): icon inside a rounded square frame
-  - optional "raw" version: without the frame (for special layouts)
+- Canonical lexicon format: a framed "tile" icon (rounded-square frame) is REQUIRED for ALL lexicon icons,
+  including punctuation (`?`, `!`) and logic icons (YES/NO).
+- Optional export: a "raw" (no-frame) variant MAY be provided for special layouts, but it is not the canonical
+  representation in the lexicon.
 
 ## 3. The Tile Frame
-To avoid confusion with the project logo, lexicon icons use a rounded-square frame.
+The rounded-square tile frame is REQUIRED for all lexicon icons.
 - Corner radius: consistent across all icons
 - Padding: consistent; the pictogram must not touch the frame
-- The project logo must NOT use the tile frame.
+- Explicit note: the project logo NEVER uses the tile frame.
 
 ## 4. Stroke / Fill
 Pick one approach for the entire lexicon:
@@ -31,12 +32,13 @@ One icon = one base meaning.
 If a concept needs variants, prefer composition (BASE + QUALIFIER) instead of creating many near-duplicates.
 
 ## 6. Overlays (operators)
-- Negation overlay: diagonal slash across the tile.
-  - Used for: no / not / forbidden / without / allergy
-  - Users may also draw this slash manually on fabric with a marker.
-- Optional overlays (allowed but not required):
-  - check mark overlay (YES)
-  - cross/slash overlay (NO)
+Pictiq separates standalone logic icons from operators that can be applied to any icon.
+
+- `logic_no` (standalone icon): means "no".
+  - Definition: NOT a slashed circle. It is the tile frame itself, slashed by a bold diagonal line (no circle).
+- `overlay_slash` (operator): a diagonal slash overlay that can be applied to ANY icon.
+  - Meaning: no / not / forbidden / without / allergy
+  - Supported UX layer: users may also draw this slash manually on printed products (for example on fabric) with a marker.
 
 ## 7. No brands / no trademarks
 Icons must not include:

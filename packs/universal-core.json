@@ -1,9 +1,9 @@
 {
-  "pack_id": "universal-v1",
+  "pack_id": "universal-core",
   "version": "0.1.0",
   "language": "en",
-  "title": "Universal Pack v1",
-  "description": "Universal v1 pack: core set plus optional disco icon.",
+  "title": "Universal Core",
+  "description": "Universal core pack (no optional disco icon).",
   "icons": [
     "punct_question",
     "punct_exclaim",
@@ -35,8 +35,6 @@
     "move_feet",
     "move_taxi",
     "move_car",
-    "move_public",
-
-    "place_disco"
+    "move_public"
   ]
 }
