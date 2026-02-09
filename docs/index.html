@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pictiq Lexicon</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="wrap">
+        <div class="brand">
+          <div class="title">Pictiq Lexicon</div>
+          <div class="sub">Search the icon dictionary (static)</div>
+        </div>
+
+        <div class="controls">
+          <label class="field">
+            <span class="label">Search</span>
+            <input id="q" type="search" placeholder="toilet, wifi, payment, urgent..." autocomplete="off" />
+          </label>
+
+          <label class="field">
+            <span class="label">Language</span>
+            <select id="lang">
+              <option value="en" selected>en</option>
+              <option value="es">es</option>
+              <option value="fr">fr</option>
+              <option value="de">de</option>
+              <option value="ru">ru</option>
+              <option value="zh">zh</option>
+            </select>
+          </label>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <div class="status">
+        <div id="meta" class="meta">Loading…</div>
+        <div id="hint" class="hint"></div>
+      </div>
+
+      <section id="results" class="grid" aria-live="polite"></section>
+    </main>
+
+    <footer class="foot wrap">
+      <span>Data: <code>lexicon/icon-index.json</code></span>
+      <span class="sep">•</span>
+      <span>Protocol: <code>spec/</code></span>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
+
