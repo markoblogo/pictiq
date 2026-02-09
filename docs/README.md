@@ -2,6 +2,10 @@
 
 This folder contains a minimal static lexicon dictionary site (no build step).
 
+Note on negation:
+- Negation is done by slashing the tile visually (and can be drawn with a marker on fabric).
+- Examples may include the suffix `(slashed)` to indicate a slashed icon.
+
 ## Enable GitHub Pages
 
 Because the site loads data from `../lexicon/icon-index.json`, GitHub Pages must serve the repository root.
@@ -30,4 +34,3 @@ Open:
 
 The UI has a language selector. If `lexicon/i18n/{lang}.json` exists, it will be loaded and will override
 `meaning_en`, `aliases_en`, and (if provided) `tags_en` and `examples` for matching icon ids.
-
