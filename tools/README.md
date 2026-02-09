@@ -1,0 +1,52 @@
+# Tools
+
+## validate_lexicon.py
+
+Validates:
+- all ids in `packs/universal-core.json` and `packs/universal-v1.json` exist in `lexicon/icon-index.json`
+- lexicon ids are unique
+- required fields exist and `type` is one of: `icon`, `operator`
+
+Run:
+
+```bash
+python3 tools/validate_lexicon.py
+```
+
+## render_png.py
+
+Renders `icons/svg/{id}.svg` into PNG variants:
+- `icons/png/black/{id}.png`
+- `icons/png/white/{id}.png`
+
+Default output size preset:
+- 2400x3200 (baseline “apparel/classic tote” size)
+
+Run:
+
+```bash
+python3 tools/render_png.py
+```
+
+Dry run:
+
+```bash
+python3 tools/render_png.py --dry-run
+```
+
+### Requirements
+
+One of the following renderers must be available:
+
+1) CairoSVG (preferred)
+- Install: `pip install cairosvg`
+- Note: CairoSVG may require native libraries depending on your OS (for example Cairo/Pango).
+
+2) Inkscape CLI (fallback)
+- Install Inkscape and ensure `inkscape` is on your `PATH`.
+
+### Authoring requirement (for black/white variants)
+
+To render black/white variants reliably, SVGs should use `currentColor` for `fill`/`stroke`.
+The renderer injects `style=\"color: #000000\"` (black) or `style=\"color: #ffffff\"` (white) onto the root `<svg>`.
+
