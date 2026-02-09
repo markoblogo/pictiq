@@ -3,16 +3,6 @@
   "language": "en",
   "icons": [
     {
-      "id": "overlay_slash",
-      "type": "operator",
-      "category": "operator",
-      "meaning_en": "negation slash overlay",
-      "aliases_en": ["no", "not", "without", "forbidden", "allergy", "exclude"],
-      "tags_en": ["operator", "negation"],
-      "examples": ["money_card (overlay_slash)", "need_food (overlay_slash)"]
-    },
-
-    {
       "id": "punct_question",
       "type": "icon",
       "category": "punctuation",
@@ -122,7 +112,7 @@
       "meaning_en": "card payment",
       "aliases_en": ["card", "credit card", "debit card", "pay by card"],
       "tags_en": ["money", "payment"],
-      "examples": ["money_card + punct_question", "money_card (overlay_slash)"]
+      "examples": ["money_card + punct_question", "money_card (slashed)"]
     },
     {
       "id": "money_atm_bank",
@@ -160,7 +150,7 @@
       "meaning_en": "power outlet",
       "aliases_en": ["plug", "electricity", "charger"],
       "tags_en": ["power"],
-      "examples": ["power_plug + punct_question", "power_plug (overlay_slash)"]
+      "examples": ["power_plug + punct_question", "power_plug (slashed)"]
     },
 
     {
@@ -188,7 +178,7 @@
       "meaning_en": "food",
       "aliases_en": ["food", "eat", "hungry"],
       "tags_en": ["needs"],
-      "examples": ["need_food + punct_question", "need_food (overlay_slash)"]
+      "examples": ["need_food + punct_question", "need_food (slashed)"]
     },
     {
       "id": "need_bar",

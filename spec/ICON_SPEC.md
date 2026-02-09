@@ -36,7 +36,7 @@ Pictiq separates standalone logic icons from operators that can be applied to an
 
 - `logic_no` (standalone icon): means "no".
   - Definition: NOT a slashed circle. It is the tile frame itself, slashed by a bold diagonal line (no circle).
-- `overlay_slash` (operator): a diagonal slash overlay that can be applied to ANY icon.
+- Negation slash (visual operation): a diagonal slash across the tile that can be applied to ANY icon.
   - Meaning: no / not / forbidden / without / allergy
   - Supported UX layer: users may also draw this slash manually on printed products (for example on fabric) with a marker.
 

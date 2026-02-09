@@ -2,7 +2,7 @@
 
 Notation:
 - `A + B + C` means adjacent icons in a phrase (left to right).
-- `ICON (overlay_slash)` means the icon with the negation slash overlay applied.
+- `ICON (slashed)` means the icon with the negation slash visually applied.
 
 ## 1. Default reading (Zero-Intent)
 Any object icon is a valid message by default.
@@ -16,23 +16,23 @@ Examples:
 - `need_toilet + punct_question`
 - `safety_medical + punct_exclaim`
 
-## 3. overlay_slash (operator)
-`overlay_slash` is an operator that can be applied to ANY icon.
+## 3. Negation (visual slash)
+Negation is expressed by a diagonal slash across the tile.
 Meaning: no / not / forbidden / without / allergy.
 
 Supported UX layer: users may also manually slash an icon with a marker on printed products (for example on fabric).
 
 Examples:
-- `money_card (overlay_slash)` → "no card / card not accepted"
-- `need_food (overlay_slash)` → "no food / don't want food"
+- `money_card (slashed)` → "no card / card not accepted"
+- `need_food (slashed)` → "no food / don't want food"
 
-## 4. logic_no vs overlay_slash
+## 4. logic_no vs slashed icons
 - `logic_no` is a standalone icon meaning "no".
-- `overlay_slash` is a negation operator applied on top of an icon.
+- Slashing any icon means "no / not / forbidden / without / allergy" depending on context.
 
 Examples:
 - `money_card + logic_no` → "no card"
-- `money_card (overlay_slash)` → "card not accepted / no card"
+- `money_card (slashed)` → "card not accepted / no card"
 
 ## 5. Polysemy rule
 Some icons may act as actions in context:
