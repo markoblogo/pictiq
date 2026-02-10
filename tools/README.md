@@ -54,7 +54,7 @@ The renderer injects `style=\"color: #000000\"` (black) or `style=\"color: #ffff
 
 Validates canonical icons in `icons/svg/` (ignores `.gitkeep`):
 - `viewBox` equivalent to `0 0 32 32`
-- no SVG `<text>` elements (canonical icons must be curves/paths only)
+- no SVG `<text>` elements / no `<text` in canonical SVGs (icons must be curves/paths only)
 - no hardcoded colors in `fill`/`stroke` attributes or inline `style`
   Allowed paint values: `currentColor`, `none`, empty
 - flags usage of `#...`, `rgb()/rgba()`, and named colors `black`/`white`

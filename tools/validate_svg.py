@@ -81,9 +81,14 @@ def validate_svg(path: Path) -> list[str]:
     except Exception as exc:  # noqa: BLE001
         return [f"{path}: failed to read file: {exc}"]
 
-    # Fail on any <text> element (case-insensitive). Also catches namespaced <svg:text>.
+    # Canonical icons must not use SVG <text>. Enforce both:
+    # - a simple substring check for "<text" (per policy)
+    # - a stricter tag-pattern check (catches whitespace and namespaces)
+    raw_l = raw.lower()
+    if "<text" in raw_l:
+        errs.append(f"{path}: contains '<text' (canonical icons must not use SVG <text>)")
     if re.search(r"<\s*(?:[a-zA-Z0-9._-]+:)?text\b", raw, flags=re.IGNORECASE):
-        errs.append(f"{path}: contains a <text> element (canonical icons must not use SVG text)")
+        errs.append(f"{path}: contains a <text> element (canonical icons must not use SVG <text>)")
 
     try:
         tree = ET.parse(path)
