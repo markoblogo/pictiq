@@ -75,6 +75,16 @@ def parse_style(style: str) -> dict[str, str]:
 
 def validate_svg(path: Path) -> list[str]:
     errs: list[str] = []
+    raw = None
+    try:
+        raw = path.read_text(encoding="utf-8", errors="replace")
+    except Exception as exc:  # noqa: BLE001
+        return [f"{path}: failed to read file: {exc}"]
+
+    # Fail on any <text> element (case-insensitive). Also catches namespaced <svg:text>.
+    if re.search(r"<\s*(?:[a-zA-Z0-9._-]+:)?text\b", raw, flags=re.IGNORECASE):
+        errs.append(f"{path}: contains a <text> element (canonical icons must not use SVG text)")
+
     try:
         tree = ET.parse(path)
         root = tree.getroot()
@@ -87,6 +97,12 @@ def validate_svg(path: Path) -> list[str]:
 
     # Scan for forbidden color patterns in fill/stroke attrs and inline styles.
     for el in iter_elements(root):
+        # Secondary structured check for <text> in case raw regex misses edge cases.
+        tag = el.tag
+        local = tag.split("}", 1)[1] if "}" in tag else tag
+        if local.lower() == "text":
+            errs.append(f"{path}: contains a <text> element (canonical icons must not use SVG text)")
+
         for attr in ("fill", "stroke"):
             if attr in el.attrib:
                 val = normalize_paint(el.attrib.get(attr))
