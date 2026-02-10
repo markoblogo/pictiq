@@ -1,5 +1,10 @@
 # Pictiq
 
+[![CI](https://github.com/markoblogo/pictiq/actions/workflows/ci.yml/badge.svg)](https://github.com/markoblogo/pictiq/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/markoblogo/pictiq)](https://github.com/markoblogo/pictiq/releases)
+[![License](https://img.shields.io/github/license/markoblogo/pictiq)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/markoblogo/pictiq?style=flat)](https://github.com/markoblogo/pictiq/stargazers)
+
 Pictiq is a minimal visual protocol for short, universal messages across language barriers.
 It is not meant for long texts. It is meant for pointing, quick signs, stickers, and simple phrases.
 
@@ -44,4 +49,3 @@ All lexicon words are designed as framed tiles (rounded-square frame). The Picti
 
 ## Status
 Work in progress. The lexicon and packs will grow over time.
-
