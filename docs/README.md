@@ -3,8 +3,8 @@
 This folder contains a minimal static lexicon dictionary site (no build step).
 
 Note on negation:
-- Negation is done by slashing the tile visually (and can be drawn with a marker on fabric).
-- Examples may include the suffix `(slashed)` to indicate a slashed icon.
+- Primary form is token-based: `X + logic_no`.
+- Physical shortcut: users may also draw the diagonal slash with a marker on fabric.
 
 ## Enable GitHub Pages
 

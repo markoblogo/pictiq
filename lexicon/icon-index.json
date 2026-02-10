@@ -112,7 +112,7 @@
       "meaning_en": "card payment",
       "aliases_en": ["card", "credit card", "debit card", "pay by card"],
       "tags_en": ["money", "payment"],
-      "examples": ["money_card + punct_question", "money_card (slashed)"]
+      "examples": ["money_card + punct_question", "money_card + logic_no"]
     },
     {
       "id": "money_atm_bank",
@@ -150,7 +150,7 @@
       "meaning_en": "power outlet",
       "aliases_en": ["plug", "electricity", "charger"],
       "tags_en": ["power"],
-      "examples": ["power_plug + punct_question", "power_plug (slashed)"]
+      "examples": ["power_plug + punct_question", "power_plug + logic_no"]
     },
 
     {
@@ -178,7 +178,7 @@
       "meaning_en": "food",
       "aliases_en": ["food", "eat", "hungry"],
       "tags_en": ["needs"],
-      "examples": ["need_food + punct_question", "need_food (slashed)"]
+      "examples": ["need_food + punct_question", "need_food + logic_no"]
     },
     {
       "id": "need_bar",

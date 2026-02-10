@@ -2,7 +2,6 @@
 
 Notation:
 - `A + B + C` means adjacent icons in a phrase (left to right).
-- `ICON (slashed)` means the icon with the negation slash visually applied.
 
 ## 1. Default reading (Zero-Intent)
 Any object icon is a valid message by default.
@@ -16,23 +15,28 @@ Examples:
 - `need_toilet + punct_question`
 - `safety_medical + punct_exclaim`
 
-## 3. Negation (visual slash)
-Negation is expressed by a diagonal slash across the tile.
-Meaning: no / not / forbidden / without / allergy.
+## 3. Negation (logic_no token)
+Negation is expressed with an explicit token:
+- `X + logic_no`
 
-Supported UX layer: users may also manually slash an icon with a marker on printed products (for example on fabric).
+`logic_no` can also be used standalone as an answer meaning "no".
 
-Examples:
-- `money_card (slashed)` → "no card / card not accepted"
-- `need_food (slashed)` → "no food / don't want food"
+Meaning (context dependent): no / not / forbidden / without / allergy.
 
-## 4. logic_no vs slashed icons
-- `logic_no` is a standalone icon meaning "no".
-- Slashing any icon means "no / not / forbidden / without / allergy" depending on context.
+Physical shortcut: users may also draw the diagonal slash with a marker on printed products (for example on fabric),
+but examples in this spec use token form.
 
 Examples:
-- `money_card + logic_no` → "no card"
-- `money_card (slashed)` → "card not accepted / no card"
+- `money_card + logic_no` → "no card / card not accepted"
+- `need_food + logic_no` → "no food / don't want food"
+
+## 4. Fixed negations (single-tile icons)
+Some lexicon icons may encode a negated concept directly as a single tile (for example, a tile that already includes
+a bold diagonal slash over an object). These are lexicon items, not operators.
+
+Use cases:
+- signage where a single tile is preferred
+- fixed phrases that should not be compositional
 
 ## 5. Polysemy rule
 Some icons may act as actions in context:
