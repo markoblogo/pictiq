@@ -1,4 +1,3 @@
-
 # Emoji Bridge (Research Notes)
 
 This document proposes an optional “bridge” between **Pictiq concepts** and **Unicode emoji**
@@ -22,13 +21,13 @@ Sources:
 
 ## Proposed mapping model
 
-### 1) Pictiq → Emoji (primary)
+### Pictiq → Emoji
 For each Pictiq `id`, store:
-- `emoji_candidates`: list of 1..N candidate emoji
-- `confidence`: high/medium/low
+- `emoji_candidates`: list of 1..N candidates (single emoji or sequences)
+- `confidence`: high / medium / low
 - `notes`: ambiguity warnings (culture/platform differences)
 
-### 2) Emoji → Pictiq (reverse index)
+### Emoji → Pictiq (reverse index)
 Maintain a reverse lookup so that typing an emoji can suggest Pictiq concepts.
 
 ---
@@ -37,26 +36,18 @@ Maintain a reverse lookup so that typing an emoji can suggest Pictiq concepts.
 
 ### Maps well (often universal)
 - comm_wifi → 📶 / 📡 (check ambiguity)
-- need_water → 💧 / 🚰 / 🧴 (often ambiguous)
 - money_* → 💳 / 💰 / 🪙
-- move_public → 🚌 / 🚆 / 🚇 (but Pictiq keeps it “generic”)
 - place_shop → 🛒
 
 ### Maps poorly (high ambiguity / culture dependent)
-- safety_police (emoji may imply specific uniforms/regions)
-- logic_no (varies; ❌ is not the same as Pictiq’s slash logic)
-- place_hotel (🏨 is “hotel” but also “building”; Pictiq’s bed is clearer)
-- punct_question / punct_exclaim (emoji punctuation exists but style varies)
+- safety_police (uniform/region associations)
+- logic_no (❌ is not the same as Pictiq’s slash logic)
+- punct_* (punctuation emoji style varies)
 
 ---
 
-## Practical recommendation for Pictiq
+## Recommendation for Pictiq
 
-- Do NOT try to mirror Pictiq grammar into emoji grammar.
-- Use emoji bridge as “approximate shorthand”, not as a canonical writing system.
-- Keep Pictiq logic as:
-  - stable IDs
-  - stable canonical icons
-  - stable rules
-
-Emoji bridge is optional and can be versioned as a separate data file later.
+- Do NOT mirror Pictiq grammar into emoji grammar.
+- Use emoji bridge as approximate shorthand only.
+- Keep Pictiq tiles as canonical, controlled visuals.

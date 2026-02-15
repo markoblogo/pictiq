@@ -4,7 +4,7 @@ This document positions **Pictiq** among existing visual / constructed communica
 Pictiq is **not** trying to replace them. The goal is to borrow useful design patterns while
 keeping Pictiq minimal: short phrases, pointing, framed tiles, and a small core lexicon.
 
-## Quick comparison (what Pictiq is / isn’t)
+## Quick framing: what Pictiq is / isn’t
 
 - Pictiq is a **minimal visual protocol** for short, universal messages across language barriers.
 - Pictiq is **not** a full natural language, not a writing system for speech, and not intended for long texts.
@@ -18,18 +18,14 @@ keeping Pictiq minimal: short phrases, pointing, framed tiles, and a small core 
 
 ## LoCoS (Logographic Communication System)
 
-**What it is:** A minimalist logographic system aimed at communication through composable symbols.
+**Why it matters for Pictiq:** a reference for “small primitives + composition rules” discipline.
 
-**Why it matters for Pictiq:** LoCoS is a strong reference for “small primitives + composition rules”.
-Even if Pictiq uses more globally recognizable pictograms, the **discipline of composition**
-helps prevent uncontrolled growth.
+**Adopt:**
+- Prefer **composition** over new primitives.
+- Define “symbol families” and strict rules for introducing new base concepts.
 
-**Takeaways to adopt:**
-- Prefer **composition** over introducing new primitives.
-- Define “symbol families” and rules for introducing new base concepts.
-
-**Do NOT adopt:**
-- Expanding toward “cover everything” language completeness.
+**Avoid:**
+- Expanding toward “cover everything” completeness.
 
 Sources:
 - https://en.wikipedia.org/wiki/LoCoS
@@ -38,18 +34,16 @@ Sources:
 
 ## Blissymbolics (Blissymbols)
 
-**What it is:** An ideographic symbol system used in AAC contexts.
+**Why it matters for Pictiq:** evidence that pictographic systems can be operational, teachable, useful
+(AAC contexts), but scaling grammar/coverage has costs.
 
-**Why it matters for Pictiq:** Blissymbolics is real-world evidence that pictographic systems can be
-operational, teachable, and useful — but also shows the cost of scaling grammar/coverage.
+**Adopt:**
+- One symbol = one base meaning.
+- Controlled growth via packs/extensions.
+- Strong metadata discipline (aliases, tags, use-cases).
 
-**Takeaways to adopt:**
-- One symbol = one base meaning (avoid near-duplicates).
-- Treat the lexicon as a stable “standard” with controlled extensions.
-- Strong metadata: synonyms/aliases/use-cases.
-
-**Do NOT adopt:**
-- Heavy grammar and full-language ambitions (Pictiq wins by staying minimal).
+**Avoid:**
+- Heavy grammar and broad coverage ambitions.
 
 Sources:
 - https://en.wikipedia.org/wiki/Blissymbols
@@ -57,19 +51,15 @@ Sources:
 
 ---
 
-## SignWriting (writing systems for sign languages)
+## SignWriting
 
-**What it is:** A writing system for sign languages that encodes hand shapes, movement, facial expression, etc.
+**Why it matters for Pictiq:** shows what “spec-first standardization” looks like for non-verbal information.
+Pictiq is simpler, but can borrow the engineering mindset: stable forms, validation, documentation, user tests.
 
-**Why it matters for Pictiq:** SignWriting shows what formalization looks like when representing
-complex non-verbal information. Pictiq is simpler, but can borrow the engineering mindset:
-spec-first, stable forms, validation, and user testing.
+**Adopt:**
+- Spec-first mindset + validation + user-testing culture.
 
-**Takeaways to adopt:**
-- Treat the spec as a true standard: clear rules, examples, validation.
-- Consider future tooling (parsing, generation, recognition).
-
-**Do NOT adopt:**
+**Avoid:**
 - Movement/gesture encoding complexity.
 
 Sources:
@@ -80,17 +70,14 @@ Sources:
 
 ## Toki Pona + sitelen
 
-**What it is:** A minimalist constructed language with a small vocabulary; has writing systems such as sitelen pona.
+**Why it matters for Pictiq:** philosophy of minimal core + composition + context.
 
-**Why it matters for Pictiq:** The key inspiration is the philosophy: minimal set + context + composition.
-Pictiq can apply the same strategy to pictograms (few core tiles, many combinations).
+**Adopt:**
+- Keep the core small; grow by composition and context packs.
+- Avoid semantic bloat.
 
-**Takeaways to adopt:**
-- Minimize the core and grow by composition.
-- Use strict rules to prevent vocabulary bloat.
-
-**Do NOT adopt:**
-- Treating community-specific glyphs as globally universal.
+**Avoid:**
+- Assuming community-specific glyph systems are globally universal.
 
 Sources:
 - https://en.wikipedia.org/wiki/Toki_Pona
@@ -99,16 +86,14 @@ Sources:
 
 ## Lojban
 
-**What it is:** A constructed language designed for unambiguous grammar and logical structure.
+**Why it matters for Pictiq:** reference for machine-readability and unambiguous token grammar.
+Pictiq is not a logical language, but can borrow validation mentality.
 
-**Why it matters for Pictiq:** Pictiq is not a logical language, but Lojban is a useful reference
-for **machine-readability**: explicit tokens, unambiguous parsing, formal validation.
+**Adopt:**
+- Keep grammar token-based and parseable (validation-friendly).
+- Avoid ambiguous examples and inconsistent notation.
 
-**Takeaways to adopt:**
-- Keep the grammar token-based and parseable (validation-friendly).
-- Avoid ambiguous syntax in examples and docs.
-
-**Do NOT adopt:**
+**Avoid:**
 - Full logical-language complexity.
 
 Sources:
@@ -119,25 +104,21 @@ Sources:
 
 ## Emoji / Unicode / CLDR (search + interoperability)
 
-**What it is:** Unicode standardizes emoji characters and sequences; CLDR provides names and keywords (annotations)
-in many languages for search/discovery.
+**Why it matters for Pictiq:** strongest operational parallel:
+stable IDs, versions, multilingual keywords for search/discovery (CLDR annotations).
 
-**Why it matters for Pictiq:** This is the strongest operational parallel:
-Pictiq also needs stable IDs, searchable keywords, and multilingual annotations.
+**Adopt:**
+- Stable IDs + releases.
+- “Short name + keywords” model for multilingual search.
+- Optional “emoji bridge” mapping layer.
 
-**Takeaways to adopt:**
-- Stable IDs + versions/releases.
-- “Short name + keywords” model for multilingual search (like CLDR annotations).
-- An “emoji bridge” mapping: Pictiq concept → best matching emoji set, where feasible.
-
-**Do NOT adopt:**
-- Relying on emoji rendering consistency (vendors differ widely).
+**Avoid:**
+- Relying on emoji rendering consistency (vendors differ).
 - Overloading meaning just because an emoji exists.
 
 Sources:
 - https://unicode.org/reports/tr51/
 - https://www.unicode.org/cldr/charts/latest/annotations/index.html
-- https://www.unicode.org/faq/emoji_dingbats.html
 
 ---
 
@@ -145,22 +126,18 @@ Sources:
 
 | System | Adopt for Pictiq | Avoid for Pictiq |
 |---|---|---|
-| LoCoS | “primitives + composition discipline”, symbol families | full-language completeness |
-| Blissymbolics | stable semantics, controlled growth, metadata discipline | heavy grammar, broad coverage ambitions |
-| SignWriting | spec-first mindset, validation, user testing culture | movement/gesture encoding complexity |
-| Toki Pona | minimal core + composition + context | community-specific glyph universality assumptions |
-| Lojban | machine-parseable token grammar, validation mentality | logical-language complexity |
-| Emoji/Unicode/CLDR | stable IDs, releases, multilingual keywords, mapping bridges | vendor rendering dependence, meaning overload |
+| LoCoS | composition discipline, symbol families | completeness ambition |
+| Blissymbolics | stable semantics, controlled growth, metadata | heavy grammar |
+| SignWriting | spec-first mindset, validation, user testing | gesture/movement encoding |
+| Toki Pona | minimal core + composition | assuming global universality of niche glyphs |
+| Lojban | parseable token grammar, validation mentality | logical-language complexity |
+| Emoji/Unicode/CLDR | stable IDs, releases, multilingual keywords, mapping bridges | vendor rendering dependence |
 
 ---
 
-## Immediate action items for Pictiq (from this research)
+## Immediate action items for Pictiq
 
 1. Add a short section in `spec/PROTOCOL.md`: “Related systems / inspirations”.
-2. Add a rule in `spec/ICON_DEFINITIONS.md`: new symbols should be:
-   - a new primitive (rare), or
-   - a composition of existing symbols, or
-   - a clearly distinct object with minimal details.
-3. Add a planned “quick user test” to `PHASES.md` for the first canonical icons:
-   - 5–10 people, mixed languages/cultures, measure guessability and confusion cases.
-1. Plan an “emoji bridge” file (see `emoji-bridge.md`) once core icons are canonical.
+2. Add a strict growth rule in `spec/ICON_DEFINITIONS.md`: new symbols must be rare primitives, compositions, or clearly distinct objects.
+3. Add a planned “quick user test” to `PHASES.md` for canonical icons (guessability).
+4. Add an optional “emoji bridge” file once the first canonical set is stable.
