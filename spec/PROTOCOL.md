@@ -68,6 +68,50 @@ If both contextual and universal blocks exist:
 - universal block goes below and is usually smaller,
 - blocks may be grouped with a rounded rectangle outline.
 
+## Representations
+
+Pictiq supports two canonical representations of the same lexicon: **Catalog Grid Mode** and **Phrase Line Mode**.
+Both representations use the same tile design and token IDs.
+
+### Catalog Grid Mode (pointing)
+- Tiles are arranged in a **grid** for pointing at individual concepts.
+- A grid is interpreted as a **set of keywords**, not a single sentence.
+- Keyword order in a grid is not meaningful unless an explicit layout rule is provided by the pack/template.
+
+Recommended layout for merchandise:
+- **Context block** (optional) on top with larger tiles.
+- **Core block** below with smaller tiles.
+- Blocks MAY be visually separated by spacing or an outer rounded rectangle frame.
+- Inside each block, tile size SHOULD be consistent.
+
+### Phrase Line Mode (token sequence)
+- A phrase is a **single horizontal line** of tiles.
+- Reading order is **left to right**.
+- A phrase MUST NOT wrap. No line breaks inside a phrase.
+- One phrase MUST occupy exactly one line.
+- Multiple phrases are written as multiple lines.
+
+Length constraints:
+- A phrase SHOULD be 1–3 tiles.
+- A phrase MUST NOT exceed 5 tiles.
+
+### Mixed layouts (grid + phrases)
+If both phrases and keyword blocks are present in the same design:
+- Phrase lines SHOULD appear first (top).
+- Keyword blocks SHOULD appear after phrases.
+- Phrase lines MUST NOT be framed as a block (to keep them distinct from keyword sets).
+
+### Negation in representations
+- Negation is expressed as `X + logic_no` in Phrase Line Mode.
+- In Catalog Grid Mode, the same meaning is achieved by pointing at `X` and then `logic_no`.
+
+### Notes for computer vision / parsing
+A recognizer should:
+- detect tile boundaries (rounded-square frame)
+- detect line grouping vs grid grouping
+- reconstruct token order for Phrase Line Mode
+- treat grid mode as unordered keywords unless pack-specific rules apply
+
 ## 7. Dictionaries and packs
 ### 7.1 Core protocol
 - Core covers universal high-frequency human needs and concepts that are hard to replace with gestures.
