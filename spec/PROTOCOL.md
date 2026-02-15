@@ -3,7 +3,20 @@
 Pictiq is a minimal visual protocol for short universal messages across language barriers.
 It is meant for pointing, quick signs, stickers, and simple phrases — not for long texts.
 
-Related systems / inspirations: see `docs/research/related-systems.md`.
+## Related systems / inspirations
+
+Pictiq is a minimal visual protocol for short messages. It does not aim to replace existing visual languages,
+AAC symbol sets, emoji standards, or writing systems. We treat them as references for *engineering choices*:
+how to keep semantics stable, how to scale responsibly, and how to stay usable across cultures and platforms.
+
+We borrow ideas such as: strict control of primitives vs composition (LoCoS), stable meanings with disciplined growth (Blissymbolics),
+spec-first standardization and validation mindset (SignWriting), minimal core philosophy (Toki Pona), and parseable token grammar mentality (Lojban).
+For interoperability, we also study emoji/Unicode and CLDR keywording, but Pictiq tiles remain canonical.
+
+See the research notes:
+- `docs/research/related-systems.md`
+- `docs/research/emoji-bridge.md`
+- `docs/research/tiny-languages-protocol.md`
 
 ## 1. Core principles
 - Zero-intent: pointing at an object icon is a valid message by default (“this / need this / where is this”).
