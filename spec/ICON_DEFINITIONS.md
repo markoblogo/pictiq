@@ -3,6 +3,54 @@
 This document is a designer/developer brief: what each icon means and how it should look.
 Important: the repository only accepts SVG icons with no `<text>` elements. If a font is used as a drafting tool for `? ! + - I II IIIII`, it must be converted to curves and manually normalized before committing.
 
+## Icon families & growth rule
+
+- **Family definition:** Every icon belongs to a _family_ (e.g., punctuation, logic, quantity, money, communication, power, needs, safety, places, movement, service).
+    
+- **Growth rule (strict):** A new lexicon entry MUST be one of:
+    
+    1. **New primitive (rare)** — allowed only if the concept cannot be expressed by existing icons or a simple compound, and it is highly universal.
+        
+    2. **Composition** — use existing tiles as BASE + QUALIFIER (preferred).
+        
+    3. **New object (clear silhouette)** — a distinct real-world object, drawn with minimal detail, not overlapping with existing meanings.
+        
+    
+- **Rejection rule:** If a proposed icon is “almost the same” as an existing one, it MUST be rejected and replaced by:
+    
+    - better aliases/tags/examples for the existing icon, or
+        
+    - a compound phrase, not a new icon.
+        
+    
+- **Family consistency:** Within a family:
+    
+    - silhouette complexity stays comparable,
+        
+    - proportions and negative space follow the same reading logic,
+        
+    - no “special styling” is introduced for one icon.
+        
+    
+- **Core vs Context constraint:**
+    
+    - **Core** accepts only primitives that are globally useful and frequent.
+        
+    - **Context packs** can add less universal objects and “fixed negations” (object + the same logic_no slash).
+        
+    
+- **Checklist for adding a new icon (must pass):**
+    
+    - Is there already a synonym in the lexicon?
+        
+    - Can it be expressed as BASE + QUALIFIER?
+        
+    - Is the silhouette globally recognizable?
+        
+    - Does it avoid culture/religion/sexuality-sensitive symbols and brands?
+        
+    - Can it be rendered cleanly at arm’s length?
+
 ## 0. Style
 - SVG, viewBox `0 0 32 32`.
 - Mandatory rounded-square tile frame.

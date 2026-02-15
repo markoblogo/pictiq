@@ -1,0 +1,31 @@
+{
+  "lang": "fr",
+  "version": "0.1.0",
+  "strings": {
+    "need_water": {
+      "meaning": "eau",
+      "aliases": ["boire", "soif", "eau potable"],
+      "tags": ["boisson"]
+    },
+    "need_food": {
+      "meaning": "nourriture",
+      "aliases": ["manger", "repas"],
+      "tags": ["alimentation"]
+    },
+    "need_toilet": {
+      "meaning": "toilettes",
+      "aliases": ["WC", "salle de bain"],
+      "tags": ["urgent"]
+    },
+    "comm_wifi": {
+      "meaning": "Wi-Fi",
+      "aliases": ["internet", "sans fil"],
+      "tags": ["connexion"]
+    },
+    "place_hotel": {
+      "meaning": "hôtel",
+      "aliases": ["hébergement", "nuit"],
+      "tags": ["logement"]
+    }
+  }
+}

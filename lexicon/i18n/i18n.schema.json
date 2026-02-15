@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pictiq.org/schemas/i18n.schema.json",
+  "title": "Pictiq i18n Overlay",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["lang", "version", "strings"],
+  "properties": {
+    "lang": {
+      "type": "string",
+      "pattern": "^[A-Za-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$"
+    },
+    "version": {
+      "type": "string"
+    },
+    "strings": {
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^[a-z0-9_]+$"
+      },
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "meaning": { "type": "string" },
+          "aliases": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "tags": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "examples": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "anyOf": [
+          { "required": ["meaning"] },
+          { "required": ["aliases"] },
+          { "required": ["tags"] },
+          { "required": ["examples"] }
+        ]
+      }
+    }
+  }
+}
