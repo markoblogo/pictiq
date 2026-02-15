@@ -3,6 +3,8 @@
 Pictiq is a minimal visual protocol for short universal messages across language barriers.
 It is meant for pointing, quick signs, stickers, and simple phrases — not for long texts.
 
+Related systems / inspirations: see `docs/research/related-systems.md`.
+
 ## 1. Core principles
 - Zero-intent: pointing at an object icon is a valid message by default (“this / need this / where is this”).
 - Meaning is amplified by punctuation tiles and context.
@@ -87,4 +89,3 @@ Personal/corporate packs are allowed and may include:
 ## 10. Canonical SVG rule
 - Canonical icons in the repository must NOT contain SVG `<text>` elements.
 - This includes `? ! + - I II IIIII`: they must be vector shapes/paths, not text.
-

@@ -26,6 +26,8 @@ All lexicon words are designed as framed tiles (rounded-square frame). The Picti
 - Lexicon registry: `lexicon/icon-index.json`
 - Packs: `packs/universal-core.json`, `packs/universal-v1.json`
 - Static dictionary site (GitHub Pages): `docs/`
+- Research: `docs/research/related-systems.md`
+- Emoji bridge notes: `docs/research/emoji-bridge.md`
 
 ## Repository structure
 - `/spec` — protocol rules, grammar, and icon design definitions
