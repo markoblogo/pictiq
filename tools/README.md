@@ -6,6 +6,7 @@ Validates:
 - all ids in `packs/universal-core.json` and `packs/universal-v1.json` exist in `lexicon/icon-index.json`
 - lexicon ids are unique
 - required fields exist and `type` is one of: `icon`, `operator`
+- if `lexicon/i18n/` exists: every `strings.<id>` in `*.json` (except `i18n.schema.json`) must exist in lexicon IDs, and each `strings.<id>` value must be an object
 
 Run:
 

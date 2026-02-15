@@ -121,6 +121,46 @@ def validate_packs(root: Path, lexicon_ids: set[str]) -> list[str]:
     return errs
 
 
+def validate_i18n(root: Path, lexicon_ids: set[str]) -> list[str]:
+    errs: list[str] = []
+    i18n_dir = root / "lexicon" / "i18n"
+
+    # Backward compatible: i18n directory is optional.
+    if not i18n_dir.is_dir():
+        return errs
+
+    for i18n_file in sorted(i18n_dir.glob("*.json")):
+        if i18n_file.name == "i18n.schema.json":
+            continue
+
+        try:
+            data = load_json(i18n_file)
+        except FileNotFoundError:
+            continue
+        except Exception as exc:  # noqa: BLE001
+            errs.append(str(exc))
+            continue
+
+        if not isinstance(data, dict):
+            errs.append(f"{i18n_file}: expected object")
+            continue
+
+        strings = data.get("strings", {})
+        if strings is None:
+            strings = {}
+        if not isinstance(strings, dict):
+            errs.append(f"{i18n_file}: 'strings' must be an object")
+            continue
+
+        for key, value in strings.items():
+            if key not in lexicon_ids:
+                errs.append(f"i18n file {i18n_file.name} contains unknown id: {key}")
+            if not isinstance(value, dict):
+                errs.append(f"i18n file {i18n_file.name} has non-object value for id: {key}")
+
+    return errs
+
+
 def main(argv: list[str]) -> int:
     root = Path(__file__).resolve().parents[1]
 
@@ -139,10 +179,15 @@ def main(argv: list[str]) -> int:
             eprint(f"ERROR: {msg}")
         return 1
 
-    print("OK: lexicon and packs validated")
+    i18n_errs = validate_i18n(root, lexicon_ids)
+    if i18n_errs:
+        for msg in i18n_errs:
+            eprint(f"ERROR: {msg}")
+        return 1
+
+    print("OK: lexicon, packs, and i18n validated")
     return 0
 
 
 if __name__ == "__main__":
     raise SystemExit(main(sys.argv[1:]))
-
