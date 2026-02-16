@@ -70,6 +70,65 @@ Geometry notes:
 - Roman strokes are equal thickness with equal spacing.
 - Punctuation symbols are large and centered.
 
+## Emoji bridge (non-canonical)
+
+Pictiq icons are the canonical representation of meaning. Emoji mappings are provided only as a convenience bridge for typing short messages in environments where custom Pictiq tiles are not available.
+
+**Rule (strict):**
+- Each `icon_id` may define **exactly 1 primary emoji** (`primary_emoji`) and **up to 2 alternatives** (`alt_emoji`).
+- Do **not** add more than 3 emojis total per icon (1 primary + max 2 alt).
+- Emojis are **not normative**: emoji appearance and meaning may vary across platforms and fonts.
+- If an emoji is ambiguous, keep the mapping minimal and document the ambiguity in the notes below (do not “fix” ambiguity by adding many alternatives).
+
+**Selection criteria:**
+- Prefer globally recognizable, non-branded, non-religious, non-political symbols.
+- Prefer the emoji that most closely matches the **core meaning** of the Pictiq tile (not a niche interpretation).
+- Avoid emojis that strongly imply culture-specific or sensitive meanings unless the Pictiq meaning itself is explicitly that.
+- When in doubt, choose fewer mappings, not more.
+
+### Ambiguity notes (important)
+
+Some concepts are inherently more ambiguous in emoji form:
+
+- `logic_no`: many “no” emojis read as **forbidden/stop** rather than a neutral “not / no / closed / not accepted”. Treat emoji as a shortcut only; the canonical Pictiq meaning remains `X + logic_no`.
+- `need_water`: emoji often implies tap water (`🚰`) rather than “bottled water”. Pictiq canonical icon is the bottle silhouette; emoji is only a convenience.
+- `comm_wifi`: the best available emoji (`📶`) often reads as “cellular signal” rather than Wi-Fi. Use combinations (e.g., `place_hotel + comm_wifi`) to reduce ambiguity.
+- `move_public`: emoji usually encodes a specific vehicle type (bus/train/metro). Pictiq `move_public` is a **class** (“public transport”), not a specific mode.
+
+### Universal Core emoji bridge candidates (non-canonical)
+
+punct_question: ❓ (high) — question/where/how
+punct_exclaim: ❗ (high) — urgent/attention/help
+logic_yes: ✅/✔️ (medium) — ok/accepted; can read as “success”
+logic_no: 🚫/❌/⛔ (low) — varies: no vs forbidden vs stop
+time: 🕒/⏰ (high) — time/schedule
+qty_1: 1️⃣ (medium) — digit keycap; ok for messaging
+qty_2: 2️⃣ (medium)
+qty_5: 5️⃣ (medium) — “many” not guaranteed; combine with ➕ if needed
+qty_plus: ➕ (high) — more/add
+qty_minus: ➖ (high) — less/reduce
+money_coins: 🪙/💰 (medium) — coins vs generic money
+money_card: 💳 (high) — card payment
+money_atm_bank: 🏧/🏦 (high) — ATM/bank
+comm_wifi: 📶 (medium) — signal/network; not always Wi-Fi
+comm_phone: 📱/☎️ (high) — phone/call
+power_plug: 🔌 (high) — power/charging
+need_toilet: 🚻/🚽 (medium) — signage vs literal
+need_water: 🚰/💧 (medium) — tap vs abstract water
+need_food: 🍽️ (high) — food/eat
+need_bar: 🍷 (medium) — wine glass; “bar=beer” cultures exist
+safety_medical: 🏥/🩺 (medium) — hospital/medical help
+safety_police: 🚓/👮 (medium) — police; avatar variance
+place_hotel: 🏨/🛏️ (high) — hotel/bed
+place_shop: 🛒/🏬 (high) — shop/department store
+place_landmark_park: 🏞️/🌳 (medium) — park/landmark outdoors
+place_gas: ⛽ (high) — fuel
+service_tools: 🔧/🛠️ (high) — tools/repair
+move_feet: 🚶/👣 (high) — walk/on foot
+move_taxi: 🚕 (high) — taxi
+move_car: 🚗 (high) — car/drive
+move_public: 🚌/🚆/🚇 (medium) — public transport; type-specific
+
 ## 2. Icon definitions (Universal Core)
 
 All icons are framed tiles (rounded-square frame). Inner shapes are filled silhouettes using `currentColor`. No `<text>` elements in final SVGs; even `? ! + - I II IIIII` must be curves/paths.
