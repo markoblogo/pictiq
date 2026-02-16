@@ -95,39 +95,39 @@ Some concepts are inherently more ambiguous in emoji form:
 - `comm_wifi`: the best available emoji (`📶`) often reads as “cellular signal” rather than Wi-Fi. Use combinations (e.g., `place_hotel + comm_wifi`) to reduce ambiguity.
 - `move_public`: emoji usually encodes a specific vehicle type (bus/train/metro). Pictiq `move_public` is a **class** (“public transport”), not a specific mode.
 
-### Universal Core emoji bridge candidates (non-canonical)
+### Universal Core emoji mapping (finalized, non-canonical)
 
-punct_question: ❓ (high) — question/where/how
-punct_exclaim: ❗ (high) — urgent/attention/help
-logic_yes: ✅/✔️ (medium) — ok/accepted; can read as “success”
-logic_no: 🚫/❌/⛔ (low) — varies: no vs forbidden vs stop
-time: 🕒/⏰ (high) — time/schedule
-qty_1: 1️⃣ (medium) — digit keycap; ok for messaging
-qty_2: 2️⃣ (medium)
-qty_5: 5️⃣ (medium) — “many” not guaranteed; combine with ➕ if needed
-qty_plus: ➕ (high) — more/add
-qty_minus: ➖ (high) — less/reduce
-money_coins: 🪙/💰 (medium) — coins vs generic money
-money_card: 💳 (high) — card payment
-money_atm_bank: 🏧/🏦 (high) — ATM/bank
-comm_wifi: 📶 (medium) — signal/network; not always Wi-Fi
-comm_phone: 📱/☎️ (high) — phone/call
-power_plug: 🔌 (high) — power/charging
-need_toilet: 🚻/🚽 (medium) — signage vs literal
-need_water: 🚰/💧 (medium) — tap vs abstract water
-need_food: 🍽️ (high) — food/eat
-need_bar: 🍷 (medium) — wine glass; “bar=beer” cultures exist
-safety_medical: 🏥/🩺 (medium) — hospital/medical help
-safety_police: 🚓/👮 (medium) — police; avatar variance
-place_hotel: 🏨/🛏️ (high) — hotel/bed
-place_shop: 🛒/🏬 (high) — shop/department store
-place_landmark_park: 🏞️/🌳 (medium) — park/landmark outdoors
-place_gas: ⛽ (high) — fuel
-service_tools: 🔧/🛠️ (high) — tools/repair
-move_feet: 🚶/👣 (high) — walk/on foot
-move_taxi: 🚕 (high) — taxi
-move_car: 🚗 (high) — car/drive
-move_public: 🚌/🚆/🚇 (medium) — public transport; type-specific
+punct_question — primary: ❓; alt: ❔
+punct_exclaim — primary: ❗; alt: ❕
+logic_yes — primary: ✅; alt: ✔️
+logic_no — primary: 🚫; alt: ❌, ⛔
+time — primary: 🕒; alt: ⏰, 🕰️
+qty_1 — primary: 1️⃣
+qty_2 — primary: 2️⃣
+qty_5 — primary: 5️⃣; alt: 🔢
+qty_plus — primary: ➕
+qty_minus — primary: ➖
+money_coins — primary: 🪙; alt: 💰, 💵
+money_card — primary: 💳
+money_atm_bank — primary: 🏧; alt: 🏦
+comm_wifi — primary: 📶; alt: 🌐
+comm_phone — primary: 📱; alt: ☎️
+power_plug — primary: 🔌
+need_toilet — primary: 🚽
+need_water — primary: 🚰; alt: 💧
+need_food — primary: 🍽️; alt: 🍴
+need_bar — primary: 🍷; alt: 🍺, 🥃
+safety_medical — primary: 🏥; alt: 🚑, 🩺
+safety_police — primary: 👮; alt: 🚓, 🛡️
+place_hotel — primary: 🏨; alt: 🛏️
+place_shop — primary: 🛒; alt: 🏪, 🛍️
+place_landmark_park — primary: 🏞️; alt: 🌳
+place_gas — primary: ⛽
+service_tools — primary: 🔧; alt: 🛠️
+move_feet — primary: 🚶; alt: 👣
+move_taxi — primary: 🚕
+move_car — primary: 🚗; alt: 🚙
+move_public — primary: 🚌; alt: 🚆, 🚇
 
 ## 2. Icon definitions (Universal Core)
 

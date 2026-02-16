@@ -19,6 +19,7 @@ All lexicon words are designed as framed tiles (rounded-square frame). The Picti
 ## Start here
 - Protocol rules (EN): `spec/PROTOCOL.md`
 - Icon drawing brief (EN): `spec/ICON_DEFINITIONS.md`
+- Emoji bridge policy: `spec/EMOJI_BRIDGE.md`
 - Protocol rules (RU): `spec/PROTOCOL.ru.md`
 - Icon drawing brief (RU): `spec/ICON_DEFINITIONS.ru.md`
 - Style spec: `spec/ICON_SPEC.md`
