@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import copy
 import shutil
 import subprocess
 import tempfile
@@ -84,6 +85,54 @@ def extract_paths(traced_svg: Path) -> tuple[list[str], float, float]:
     return paths, src_w, src_h
 
 
+def parse_viewbox(root: ET.Element) -> tuple[float, float, float, float]:
+    vb = root.attrib.get("viewBox", "").replace(",", " ").split()
+    if len(vb) == 4:
+        min_x, min_y, w, h = (float(vb[0]), float(vb[1]), float(vb[2]), float(vb[3]))
+        if w > 0 and h > 0:
+            return min_x, min_y, w, h
+
+    w = float(root.attrib.get("width", "0") or 0)
+    h = float(root.attrib.get("height", "0") or 0)
+    if w <= 0 or h <= 0:
+        raise RuntimeError("traced SVG missing valid size/viewBox")
+    return 0.0, 0.0, w, h
+
+
+def extract_traced_group(traced_svg: Path) -> tuple[ET.Element, float, float, float, float]:
+    tree = ET.parse(traced_svg)
+    root = tree.getroot()
+    min_x, min_y, src_w, src_h = parse_viewbox(root)
+
+    traced_group: ET.Element | None = None
+    for el in root.iter():
+        tag = el.tag.split("}", 1)[-1]
+        if tag == "g" and any(c.tag.split("}", 1)[-1] == "path" for c in el.iter()):
+            traced_group = copy.deepcopy(el)
+            break
+    if traced_group is None:
+        raise RuntimeError("traced SVG contains no grouped path content")
+
+    # Normalize paint/styling to canonical constraints.
+    for el in traced_group.iter():
+        if "style" in el.attrib:
+            del el.attrib["style"]
+
+        fill = el.attrib.get("fill")
+        if fill is not None and fill not in {"none", "currentColor"}:
+            el.attrib["fill"] = "currentColor"
+
+        stroke = el.attrib.get("stroke")
+        if stroke is not None and stroke not in {"none", "currentColor"}:
+            el.attrib["stroke"] = "none"
+
+    # Ensure traced subtree has canonical inherited defaults.
+    traced_group.attrib["fill"] = "currentColor"
+    traced_group.attrib["stroke"] = "none"
+
+    return traced_group, min_x, min_y, src_w, src_h
+
+
 def make_tile_root() -> ET.Element:
     root = svg_el("svg", viewBox="0 0 32 32")
 
@@ -133,6 +182,36 @@ def build_final_svg(icon_id: str, path_data: list[str], src_w: float, src_h: flo
     ET.ElementTree(root).write(out_svg, encoding="utf-8", xml_declaration=True)
 
 
+def build_final_svg_from_group(
+    icon_id: str,
+    traced_group: ET.Element,
+    min_x: float,
+    min_y: float,
+    src_w: float,
+    src_h: float,
+    out_svg: Path,
+) -> None:
+    # Effective inner placement box: safe-area 24x24 with 1px inner padding => 22x22 at (5,5).
+    eff_x, eff_y, eff_w, eff_h = 5.0, 5.0, 22.0, 22.0
+    s = min(eff_w / src_w, eff_h / src_h)
+    tx = eff_x + (eff_w - src_w * s) / 2.0
+    ty = eff_y + (eff_h - src_h * s) / 2.0
+
+    root = make_tile_root()
+    icon_group = next(el for el in root if el.tag.endswith("g") and el.attrib.get("id") == "icon")
+
+    wrapper = svg_el(
+        "g",
+        id=f"shape_{icon_id}",
+        transform=f"translate({(tx - min_x * s):.6f} {(ty - min_y * s):.6f}) scale({s:.6f})",
+    )
+    wrapper.append(traced_group)
+    icon_group.append(wrapper)
+
+    out_svg.parent.mkdir(parents=True, exist_ok=True)
+    ET.ElementTree(root).write(out_svg, encoding="utf-8", xml_declaration=True)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Build Pictiq tile icon from silhouette PNG")
     parser.add_argument("--id", required=True, help="icon id")
@@ -166,8 +245,8 @@ def main() -> int:
         else:
             trace_with_inkscape(input_path, traced_svg)
 
-        paths, src_w, src_h = extract_paths(traced_svg)
-        build_final_svg(icon_id, paths, src_w, src_h, out_path)
+        traced_group, min_x, min_y, src_w, src_h = extract_traced_group(traced_svg)
+        build_final_svg_from_group(icon_id, traced_group, min_x, min_y, src_w, src_h, out_path)
 
     print(f"Built icon: {out_path}")
     return 0
