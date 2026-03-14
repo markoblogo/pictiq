@@ -18,6 +18,7 @@ The rounded-square tile frame is REQUIRED for all lexicon icons.
 - Corner radius: consistent across all icons
 - Padding: consistent; the pictogram must not touch the frame
 - Explicit note: the project logo NEVER uses the tile frame.
+- The Pictiq logo is not a tile and must not use the rounded-square frame.
 
 ## 4. Stroke / Fill
 Pick one approach for the entire lexicon:

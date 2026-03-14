@@ -27,6 +27,7 @@ See the research notes:
 - Every lexicon word is a framed tile: a rounded-square frame is mandatory.
 - Inner shapes must not touch the frame, except `logic_no`, where the slash may reach the frame as part of the canonical look.
 - Monochrome: canonical SVG uses `currentColor` to support black/white rendering on any background.
+- The Pictiq logo is not a tile and must not use the rounded-square frame.
 
 ## 3. Punctuation and logic
 Punctuation is expressed via dedicated tiles:

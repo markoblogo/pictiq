@@ -25,6 +25,7 @@ All lexicon words are designed as framed tiles (rounded-square frame). The Picti
 - Style spec: `spec/ICON_SPEC.md`
 - Grammar spec: `spec/GRAMMAR.md`
 - Silhouette input rules: `spec/SILHOUETTE_INPUTS.md`
+- Logo and branding assets: `branding/`
 - Lexicon registry: `lexicon/icon-index.json`
 - Packs: `packs/universal-core.json`, `packs/universal-v1.json`
 - Static dictionary site (GitHub Pages): `docs/`
