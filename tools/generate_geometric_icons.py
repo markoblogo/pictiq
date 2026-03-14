@@ -254,16 +254,26 @@ def main() -> int:
         "qty_1",
         "qty_2",
         "qty_5",
-        "punct_question",
-        "punct_exclaim",
-        "time",
     ]
+    silhouette_only = {"punct_question", "punct_exclaim", "time"}
     parser = argparse.ArgumentParser(description="Generate canonical geometric icons")
-    parser.add_argument("--only", nargs="+", choices=available, default=available, help="Icon(s) to generate")
+    parser.add_argument("--only", nargs="+", default=available, help="Icon(s) to generate")
     args = parser.parse_args()
 
+    requested = args.only
+    blocked = sorted(set(requested) & silhouette_only)
+    if blocked:
+        print("Use silhouette pipeline for punct_* and time.")
+        return 2
+
+    unknown = sorted(set(requested) - set(available))
+    if unknown:
+        print(f"Unknown geometric icon id(s): {', '.join(unknown)}")
+        print(f"Available: {', '.join(available)}")
+        return 2
+
     root = Path(__file__).resolve().parents[1]
-    for icon_id in args.only:
+    for icon_id in requested:
         out = root / "icons" / "svg" / f"{icon_id}.svg"
         if icon_id == "logic_yes":
             generate_logic_yes(out)
@@ -277,12 +287,6 @@ def main() -> int:
             generate_qty_bars(out, 2)
         elif icon_id == "qty_5":
             generate_qty_bars(out, 5)
-        elif icon_id == "punct_question":
-            generate_punct_question(out)
-        elif icon_id == "punct_exclaim":
-            generate_punct_exclaim(out)
-        elif icon_id == "time":
-            generate_time(out)
         print(f"Generated {out}")
 
     return 0
