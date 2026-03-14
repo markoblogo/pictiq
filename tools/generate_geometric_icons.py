@@ -234,9 +234,13 @@ def generate_time(out_path: Path) -> None:
     )
     ring = svg_el("path", d=ring_d, fill="currentColor", stroke="none", **{"fill-rule": "evenodd"})
     ig.append(ring)
-    # Hands as filled silhouettes, overlap by 1px at center to avoid gaps.
-    ig.append(rect(15, 8, 2, 9))   # minute hand (width 2)
-    ig.append(rect(15, 14.5, 8, 3))  # hour hand (width 3)
+    # Hands with 1px gap to inner radius (r=8): minute_len=7, hour_len=4.
+    # Minute hand up (12 o'clock), width=2.
+    ig.append(rect(15, 9, 2, 7))
+    # Hour hand right (3 o'clock), width=3.
+    ig.append(rect(16, 14.5, 4, 3))
+    # Center hub to remove seam artifacts.
+    ig.append(rect(14.5, 14.5, 3, 3))
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     ET.ElementTree(svg).write(out_path, encoding="utf-8", xml_declaration=True)
