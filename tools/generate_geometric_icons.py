@@ -74,25 +74,131 @@ def make_tile_root() -> ET.Element:
     return root
 
 
+def icon_group(root: ET.Element) -> ET.Element:
+    return next(el for el in root if el.tag.endswith("g") and el.attrib.get("id") == "icon")
+
+
+def rect(x: float, y: float, w: float, h: float) -> ET.Element:
+    return svg_el(
+        "rect",
+        x=f"{x:.6f}",
+        y=f"{y:.6f}",
+        width=f"{w:.6f}",
+        height=f"{h:.6f}",
+        fill="currentColor",
+        stroke="none",
+    )
+
+
 def generate_logic_no(out_path: Path) -> None:
     svg = make_tile_root()
-    icon_group = next(el for el in svg if el.tag.endswith("g") and el.attrib.get("id") == "icon")
+    ig = icon_group(svg)
     slash = svg_el("path", d=logic_no_slash_path(), fill="currentColor", stroke="none")
-    icon_group.append(slash)
+    ig.append(slash)
+
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    ET.ElementTree(svg).write(out_path, encoding="utf-8", xml_declaration=True)
+
+
+def generate_qty_minus(out_path: Path) -> None:
+    svg = make_tile_root()
+    ig = icon_group(svg)
+    ig.append(rect(10, 15, 12, 2))
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    ET.ElementTree(svg).write(out_path, encoding="utf-8", xml_declaration=True)
+
+
+def generate_qty_bars(out_path: Path, count: int) -> None:
+    svg = make_tile_root()
+    ig = icon_group(svg)
+    bar_w, bar_h, gap = 2.0, 16.0, 2.0
+    total_w = count * bar_w + (count - 1) * gap
+    start_x = 16.0 - total_w / 2.0
+    y = 8.0
+    for i in range(count):
+        ig.append(rect(start_x + i * (bar_w + gap), y, bar_w, bar_h))
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    ET.ElementTree(svg).write(out_path, encoding="utf-8", xml_declaration=True)
+
+
+def generate_punct_exclaim(out_path: Path) -> None:
+    svg = make_tile_root()
+    ig = icon_group(svg)
+    ig.append(rect(14, 7, 4, 14))
+    ig.append(rect(14, 24, 4, 4))
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    ET.ElementTree(svg).write(out_path, encoding="utf-8", xml_declaration=True)
+
+
+def generate_punct_question(out_path: Path) -> None:
+    svg = make_tile_root()
+    ig = icon_group(svg)
+    # Block-based approximation of a question mark silhouette.
+    ig.append(rect(10, 6, 12, 4))   # top cap
+    ig.append(rect(18, 10, 4, 6))   # right stem
+    ig.append(rect(14, 14, 8, 4))   # mid bridge
+    ig.append(rect(14, 18, 4, 4))   # lower connector
+    ig.append(rect(14, 24, 4, 4))   # dot
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    ET.ElementTree(svg).write(out_path, encoding="utf-8", xml_declaration=True)
+
+
+def generate_time(out_path: Path) -> None:
+    svg = make_tile_root()
+    ig = icon_group(svg)
+    # Donut ring: outer r=8, inner r=6, evenodd fill.
+    ring_d = (
+        "M 24 16 "
+        "A 8 8 0 1 1 8 16 "
+        "A 8 8 0 1 1 24 16 Z "
+        "M 22 16 "
+        "A 6 6 0 1 0 10 16 "
+        "A 6 6 0 1 0 22 16 Z"
+    )
+    ring = svg_el("path", d=ring_d, fill="currentColor", stroke="none", **{"fill-rule": "evenodd"})
+    ig.append(ring)
+    # Hands as filled silhouettes, thickness 2.
+    ig.append(rect(15, 11, 2, 5))  # minute hand up
+    ig.append(rect(16, 15, 4, 2))  # hour hand right
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     ET.ElementTree(svg).write(out_path, encoding="utf-8", xml_declaration=True)
 
 
 def main() -> int:
+    available = [
+        "logic_no",
+        "qty_minus",
+        "qty_1",
+        "qty_2",
+        "qty_5",
+        "punct_question",
+        "punct_exclaim",
+        "time",
+    ]
     parser = argparse.ArgumentParser(description="Generate canonical geometric icons")
-    parser.add_argument("--only", choices=["logic_no"], default="logic_no", help="Icon to generate")
+    parser.add_argument("--only", nargs="+", choices=available, default=available, help="Icon(s) to generate")
     args = parser.parse_args()
 
     root = Path(__file__).resolve().parents[1]
-    if args.only == "logic_no":
-        out = root / "icons" / "svg" / "logic_no.svg"
-        generate_logic_no(out)
+    for icon_id in args.only:
+        out = root / "icons" / "svg" / f"{icon_id}.svg"
+        if icon_id == "logic_no":
+            generate_logic_no(out)
+        elif icon_id == "qty_minus":
+            generate_qty_minus(out)
+        elif icon_id == "qty_1":
+            generate_qty_bars(out, 1)
+        elif icon_id == "qty_2":
+            generate_qty_bars(out, 2)
+        elif icon_id == "qty_5":
+            generate_qty_bars(out, 5)
+        elif icon_id == "punct_question":
+            generate_punct_question(out)
+        elif icon_id == "punct_exclaim":
+            generate_punct_exclaim(out)
+        elif icon_id == "time":
+            generate_time(out)
         print(f"Generated {out}")
 
     return 0
