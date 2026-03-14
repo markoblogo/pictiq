@@ -1,12 +1,14 @@
 # Pictiq
 
 [![CI](https://github.com/markoblogo/pictiq/actions/workflows/ci.yml/badge.svg)](https://github.com/markoblogo/pictiq/actions/workflows/ci.yml)
-[![Release](https://img.shields.io/github/v/release/markoblogo/pictiq)](https://github.com/markoblogo/pictiq/releases)
+[![Tag](https://img.shields.io/github/v/tag/markoblogo/pictiq)](https://github.com/markoblogo/pictiq/tags)
 [![License](https://img.shields.io/github/license/markoblogo/pictiq)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/markoblogo/pictiq?style=flat)](https://github.com/markoblogo/pictiq/stargazers)
 
 <p align="center">
-  <img src="branding/logo.png" alt="Pictiq logo" width="160" />
+  <a href="https://github.com/markoblogo/pictiq/tree/main/docs">
+    <img src="branding/logo.png" alt="Pictiq logo" width="160" />
+  </a>
 </p>
 
 Pictiq is a minimal visual protocol for short, universal messages across language barriers.
@@ -21,6 +23,8 @@ All lexicon words are designed as framed tiles (rounded-square frame). The Picti
 - Some nouns may act as actions depending on context (e.g., transport = ride, coins = pay).
 
 ## Core overview
+
+Point to a tile. Add `punct_question` to ask, `punct_exclaim` for urgency, and `logic_no` to negate.
 
 <p align="center">
   <img src="docs/overview/pictiq-core-grid.png" alt="Pictiq core overview grid" width="900" />
