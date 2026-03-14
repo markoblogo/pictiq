@@ -44,25 +44,41 @@ def logic_no_slash_path() -> str:
     )
 
 
-def generate_logic_no(out_path: Path) -> None:
-    svg = svg_el("svg", viewBox="0 0 32 32")
+def make_tile_root() -> ET.Element:
+    root = svg_el("svg", viewBox="0 0 32 32")
 
-    frame = svg_el(
-        "rect",
-        x="1",
-        y="1",
-        width="30",
-        height="30",
-        rx="4.8",
-        ry="4.8",
-        stroke="currentColor",
-        **{"stroke-width": "2"},
-        fill="none",
+    defs = svg_el("defs")
+    clip = svg_el("clipPath", id="icon-clip")
+    clip.append(svg_el("rect", x="2", y="2", width="28", height="28", rx="3.8", ry="3.8"))
+    defs.append(clip)
+    root.append(defs)
+
+    frame_group = svg_el("g", id="frame")
+    frame_group.append(
+        svg_el(
+            "rect",
+            x="1",
+            y="1",
+            width="30",
+            height="30",
+            rx="4.8",
+            ry="4.8",
+            stroke="currentColor",
+            **{"stroke-width": "2"},
+            fill="none",
+        )
     )
-    svg.append(frame)
+    root.append(frame_group)
 
+    root.append(svg_el("g", id="icon", **{"clip-path": "url(#icon-clip)"}))
+    return root
+
+
+def generate_logic_no(out_path: Path) -> None:
+    svg = make_tile_root()
+    icon_group = next(el for el in svg if el.tag.endswith("g") and el.attrib.get("id") == "icon")
     slash = svg_el("path", d=logic_no_slash_path(), fill="currentColor", stroke="none")
-    svg.append(slash)
+    icon_group.append(slash)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     ET.ElementTree(svg).write(out_path, encoding="utf-8", xml_declaration=True)

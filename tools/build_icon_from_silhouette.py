@@ -84,6 +84,36 @@ def extract_paths(traced_svg: Path) -> tuple[list[str], float, float]:
     return paths, src_w, src_h
 
 
+def make_tile_root() -> ET.Element:
+    root = svg_el("svg", viewBox="0 0 32 32")
+
+    defs = svg_el("defs")
+    clip = svg_el("clipPath", id="icon-clip")
+    clip.append(svg_el("rect", x="2", y="2", width="28", height="28", rx="3.8", ry="3.8"))
+    defs.append(clip)
+    root.append(defs)
+
+    frame_group = svg_el("g", id="frame")
+    frame_group.append(
+        svg_el(
+            "rect",
+            x="1",
+            y="1",
+            width="30",
+            height="30",
+            rx="4.8",
+            ry="4.8",
+            stroke="currentColor",
+            **{"stroke-width": "2"},
+            fill="none",
+        )
+    )
+    root.append(frame_group)
+
+    root.append(svg_el("g", id="icon", **{"clip-path": "url(#icon-clip)"}))
+    return root
+
+
 def build_final_svg(icon_id: str, path_data: list[str], src_w: float, src_h: float, out_svg: Path) -> None:
     # Effective inner placement box: safe-area 24x24 with 1px inner padding => 22x22 at (5,5).
     target_x, target_y, target_w, target_h = 5.0, 5.0, 22.0, 22.0
@@ -91,26 +121,13 @@ def build_final_svg(icon_id: str, path_data: list[str], src_w: float, src_h: flo
     tx = target_x + (target_w - src_w * scale) / 2.0
     ty = target_y + (target_h - src_h * scale) / 2.0
 
-    root = svg_el("svg", viewBox="0 0 32 32")
-
-    frame = svg_el(
-        "rect",
-        x="1",
-        y="1",
-        width="30",
-        height="30",
-        rx="4.8",
-        ry="4.8",
-        stroke="currentColor",
-        **{"stroke-width": "2"},
-        fill="none",
-    )
-    root.append(frame)
+    root = make_tile_root()
+    icon_group = next(el for el in root if el.tag.endswith("g") and el.attrib.get("id") == "icon")
 
     g = svg_el("g", id=f"shape_{icon_id}", transform=f"translate({tx:.6f} {ty:.6f}) scale({scale:.6f})")
     for d in path_data:
         g.append(svg_el("path", d=d, fill="currentColor", stroke="none"))
-    root.append(g)
+    icon_group.append(g)
 
     out_svg.parent.mkdir(parents=True, exist_ok=True)
     ET.ElementTree(root).write(out_svg, encoding="utf-8", xml_declaration=True)
