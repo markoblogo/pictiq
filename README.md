@@ -32,6 +32,10 @@ Point to a tile. Add `punct_question` to ask, `punct_exclaim` for urgency, and `
 
 Printable PDF: [`docs/overview/pictiq-core-grid.pdf`](docs/overview/pictiq-core-grid.pdf)
 
+## Artifacts
+- Core grid: `docs/overview/pictiq-core-grid.png` and `docs/overview/pictiq-core-grid.pdf`
+- Release tag: `v1.0.0-core`
+
 ## Start here
 - Protocol rules (EN): `spec/PROTOCOL.md`
 - Icon drawing brief (EN): `spec/ICON_DEFINITIONS.md`
