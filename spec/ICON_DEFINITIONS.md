@@ -58,6 +58,17 @@ Important: the repository only accepts SVG icons with no `<text>` elements. If a
 - Monochrome via `currentColor`, no hardcoded colors/gradients.
 - Filled silhouettes, no shadows, no halftones.
 
+## Input silhouette requirements (MVP build pipeline)
+- Input should be a black silhouette on white background (1-bit preferred).
+- No halftones, anti-aliased edges, or transparency gradients.
+- Avoid micro-details and thin strokes that collapse after tracing.
+- The traced shape must fit safely into the tile safe-area (pipeline places content into effective 22x22 inner box).
+- Keep silhouettes globally recognizable at arm's length.
+
+Reference examples:
+- Good input: `inputs/silhouettes/_example_ok.png`
+- Bad input: `inputs/silhouettes/_example_bad.png`
+
 ## 1. Font-as-draft (before converting to curves)
 Allowed only as a drafting method for:
 `punct_question`, `punct_exclaim`, `qty_plus`, `qty_minus`, `qty_1/2/5`.

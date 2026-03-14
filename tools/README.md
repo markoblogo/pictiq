@@ -14,6 +14,48 @@ Run:
 python3 tools/validate_lexicon.py
 ```
 
+## generate_template.py
+
+Generates canonical tile template SVG:
+- `templates/tile-template.svg`
+
+Output characteristics:
+- `viewBox="0 0 32 32"`
+- frame stroke `currentColor`, `stroke-width="2"`, `fill="none"`
+- rounded corners `rx=ry=4.8`
+- hidden guides group with safe-area and centering lines
+
+Run:
+
+```bash
+python3 tools/generate_template.py
+```
+
+## build_icon_from_silhouette.py
+
+Builds a canonical tile SVG from a silhouette PNG.
+
+Run:
+
+```bash
+python3 tools/build_icon_from_silhouette.py --id <icon_id> --input <silhouette.png> --out <output.svg>
+```
+
+Example:
+
+```bash
+python3 tools/build_icon_from_silhouette.py --id logic_yes --input inputs/silhouettes/logic_yes.png --out icons/svg/logic_yes.svg
+```
+
+Vectorization backend:
+- Prefer `potrace` CLI
+- Fallback: `inkscape` CLI trace mode
+- If neither is installed, the script exits with a clear error
+
+Install recommendations:
+- `potrace` (recommended): install via your package manager (for example `brew install potrace`)
+- `inkscape` (fallback): install Inkscape and ensure `inkscape` is available in `PATH`
+
 ## render_png.py
 
 Renders `icons/svg/{id}.svg` into PNG variants:
