@@ -1,5 +1,2 @@
 <?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><clipPath id="icon-clip"><rect x="2" y="2" width="28" height="28" rx="3.8" ry="3.8" /></clipPath></defs><g id="frame"><rect x="1" y="1" width="30" height="30" rx="4.8" ry="4.8" stroke="currentColor" stroke-width="2" fill="none" /></g><g id="icon" clip-path="url(#icon-clip)"><g id="shape_logic_yes" transform="translate(4.000000 4.000000) scale(0.375000)"><g transform="translate(0.000000,64.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
-<path d="M355 380 l-109 -121 -31 36 -30 37 -22 -24 -23 -24 54 -53 53 -52 131 139 131 139 -22 22 -23 21 -109 -120z" />
-</g>
-</g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><clipPath id="icon-clip"><rect x="2" y="2" width="28" height="28" rx="3.8" ry="3.8" /></clipPath></defs><g id="frame"><rect x="1" y="1" width="30" height="30" rx="4.8" ry="4.8" stroke="currentColor" stroke-width="2" fill="none" /></g><g id="icon" clip-path="url(#icon-clip)"><path d="M 8.585786 19.414214 L 13.585786 24.414214 L 16.526773 24.291884 L 27.526773 11.291884 L 24.473227 8.708116 L 13.473227 21.708116 L 16.414214 21.585786 L 11.414214 16.585786 Z" fill="currentColor" stroke="none" /></g></svg>

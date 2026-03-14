@@ -100,6 +100,50 @@ def generate_logic_no(out_path: Path) -> None:
     ET.ElementTree(svg).write(out_path, encoding="utf-8", xml_declaration=True)
 
 
+def polyline_bevel_fill_path(points: list[tuple[float, float]], thickness: float) -> str:
+    if len(points) != 3:
+        raise ValueError("Expected exactly 3 points for checkmark polyline")
+
+    a, b, c = points
+    half = thickness / 2.0
+
+    def norm(vx: float, vy: float) -> tuple[float, float]:
+        l = math.hypot(vx, vy)
+        return (vx / l, vy / l)
+
+    def left_normal(p0: tuple[float, float], p1: tuple[float, float]) -> tuple[float, float]:
+        dx, dy = p1[0] - p0[0], p1[1] - p0[1]
+        ux, uy = norm(dx, dy)
+        return (-uy, ux)
+
+    n1 = left_normal(a, b)
+    n2 = left_normal(b, c)
+
+    a_l = (a[0] + n1[0] * half, a[1] + n1[1] * half)
+    a_r = (a[0] - n1[0] * half, a[1] - n1[1] * half)
+
+    b_l1 = (b[0] + n1[0] * half, b[1] + n1[1] * half)
+    b_l2 = (b[0] + n2[0] * half, b[1] + n2[1] * half)
+    b_r2 = (b[0] - n2[0] * half, b[1] - n2[1] * half)
+    b_r1 = (b[0] - n1[0] * half, b[1] - n1[1] * half)
+
+    c_l = (c[0] + n2[0] * half, c[1] + n2[1] * half)
+    c_r = (c[0] - n2[0] * half, c[1] - n2[1] * half)
+
+    outline = [a_l, b_l1, b_l2, c_l, c_r, b_r2, b_r1, a_r]
+    d = "M " + " L ".join(f"{x:.6f} {y:.6f}" for x, y in outline) + " Z"
+    return d
+
+
+def generate_logic_yes(out_path: Path) -> None:
+    svg = make_tile_root()
+    ig = icon_group(svg)
+    d = polyline_bevel_fill_path([(10.0, 18.0), (15.0, 23.0), (26.0, 10.0)], thickness=4.0)
+    ig.append(svg_el("path", d=d, fill="currentColor", stroke="none"))
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    ET.ElementTree(svg).write(out_path, encoding="utf-8", xml_declaration=True)
+
+
 def generate_qty_minus(out_path: Path) -> None:
     svg = make_tile_root()
     ig = icon_group(svg)
@@ -167,6 +211,7 @@ def generate_time(out_path: Path) -> None:
 
 def main() -> int:
     available = [
+        "logic_yes",
         "logic_no",
         "qty_minus",
         "qty_1",
@@ -183,7 +228,9 @@ def main() -> int:
     root = Path(__file__).resolve().parents[1]
     for icon_id in args.only:
         out = root / "icons" / "svg" / f"{icon_id}.svg"
-        if icon_id == "logic_no":
+        if icon_id == "logic_yes":
+            generate_logic_yes(out)
+        elif icon_id == "logic_no":
             generate_logic_no(out)
         elif icon_id == "qty_minus":
             generate_qty_minus(out)
