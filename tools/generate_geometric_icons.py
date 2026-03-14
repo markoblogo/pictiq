@@ -165,7 +165,7 @@ def generate_logic_yes(out_path: Path) -> None:
     svg = make_tile_root()
     ig = icon_group(svg)
     d = polyline_miter_fill_path([(9.0, 19.0), (15.0, 24.0), (26.0, 10.0)], thickness=4.0)
-    ig.append(svg_el("path", d=d, fill="currentColor", stroke="none"))
+    ig.append(svg_el("path", d=d, fill="currentColor", stroke="none", transform="translate(-0.6 -0.6)"))
     out_path.parent.mkdir(parents=True, exist_ok=True)
     ET.ElementTree(svg).write(out_path, encoding="utf-8", xml_declaration=True)
 
