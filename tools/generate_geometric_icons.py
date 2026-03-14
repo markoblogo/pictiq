@@ -100,7 +100,25 @@ def generate_logic_no(out_path: Path) -> None:
     ET.ElementTree(svg).write(out_path, encoding="utf-8", xml_declaration=True)
 
 
-def polyline_bevel_fill_path(points: list[tuple[float, float]], thickness: float) -> str:
+def _line_intersection(
+    p1: tuple[float, float],
+    p2: tuple[float, float],
+    p3: tuple[float, float],
+    p4: tuple[float, float],
+) -> tuple[float, float] | None:
+    x1, y1 = p1
+    x2, y2 = p2
+    x3, y3 = p3
+    x4, y4 = p4
+    den = (x1 - x2) * (y3 - y4) - (y1 - y2) * (x3 - x4)
+    if abs(den) < 1e-9:
+        return None
+    px = ((x1 * y2 - y1 * x2) * (x3 - x4) - (x1 - x2) * (x3 * y4 - y3 * x4)) / den
+    py = ((x1 * y2 - y1 * x2) * (y3 - y4) - (y1 - y2) * (x3 * y4 - y3 * x4)) / den
+    return (px, py)
+
+
+def polyline_miter_fill_path(points: list[tuple[float, float]], thickness: float) -> str:
     if len(points) != 3:
         raise ValueError("Expected exactly 3 points for checkmark polyline")
 
@@ -122,15 +140,23 @@ def polyline_bevel_fill_path(points: list[tuple[float, float]], thickness: float
     a_l = (a[0] + n1[0] * half, a[1] + n1[1] * half)
     a_r = (a[0] - n1[0] * half, a[1] - n1[1] * half)
 
-    b_l1 = (b[0] + n1[0] * half, b[1] + n1[1] * half)
-    b_l2 = (b[0] + n2[0] * half, b[1] + n2[1] * half)
-    b_r2 = (b[0] - n2[0] * half, b[1] - n2[1] * half)
-    b_r1 = (b[0] - n1[0] * half, b[1] - n1[1] * half)
+    # Offset lines for miter join at B.
+    l1a = (a[0] + n1[0] * half, a[1] + n1[1] * half)
+    l1b = (b[0] + n1[0] * half, b[1] + n1[1] * half)
+    l2a = (b[0] + n2[0] * half, b[1] + n2[1] * half)
+    l2b = (c[0] + n2[0] * half, c[1] + n2[1] * half)
+    r1a = (a[0] - n1[0] * half, a[1] - n1[1] * half)
+    r1b = (b[0] - n1[0] * half, b[1] - n1[1] * half)
+    r2a = (b[0] - n2[0] * half, b[1] - n2[1] * half)
+    r2b = (c[0] - n2[0] * half, c[1] - n2[1] * half)
+
+    m_left = _line_intersection(l1a, l1b, l2a, l2b) or l1b
+    m_right = _line_intersection(r1a, r1b, r2a, r2b) or r1b
 
     c_l = (c[0] + n2[0] * half, c[1] + n2[1] * half)
     c_r = (c[0] - n2[0] * half, c[1] - n2[1] * half)
 
-    outline = [a_l, b_l1, b_l2, c_l, c_r, b_r2, b_r1, a_r]
+    outline = [a_l, m_left, c_l, c_r, m_right, a_r]
     d = "M " + " L ".join(f"{x:.6f} {y:.6f}" for x, y in outline) + " Z"
     return d
 
@@ -138,7 +164,7 @@ def polyline_bevel_fill_path(points: list[tuple[float, float]], thickness: float
 def generate_logic_yes(out_path: Path) -> None:
     svg = make_tile_root()
     ig = icon_group(svg)
-    d = polyline_bevel_fill_path([(10.0, 18.0), (15.0, 23.0), (26.0, 10.0)], thickness=4.0)
+    d = polyline_miter_fill_path([(9.0, 19.0), (15.0, 24.0), (26.0, 10.0)], thickness=4.0)
     ig.append(svg_el("path", d=d, fill="currentColor", stroke="none"))
     out_path.parent.mkdir(parents=True, exist_ok=True)
     ET.ElementTree(svg).write(out_path, encoding="utf-8", xml_declaration=True)
@@ -147,7 +173,7 @@ def generate_logic_yes(out_path: Path) -> None:
 def generate_qty_minus(out_path: Path) -> None:
     svg = make_tile_root()
     ig = icon_group(svg)
-    ig.append(rect(10, 15, 12, 2))
+    ig.append(rect(10, 14.5, 12, 3))
     out_path.parent.mkdir(parents=True, exist_ok=True)
     ET.ElementTree(svg).write(out_path, encoding="utf-8", xml_declaration=True)
 
@@ -155,7 +181,14 @@ def generate_qty_minus(out_path: Path) -> None:
 def generate_qty_bars(out_path: Path, count: int) -> None:
     svg = make_tile_root()
     ig = icon_group(svg)
-    bar_w, bar_h, gap = 2.0, 16.0, 2.0
+    if count == 1:
+        bar_w, gap = 3.0, 0.0
+    elif count == 2:
+        bar_w, gap = 3.0, 3.0
+    else:
+        # Keep qty_5 visually similar to existing look.
+        bar_w, gap = 2.0, 2.0
+    bar_h = 16.0
     total_w = count * bar_w + (count - 1) * gap
     start_x = 16.0 - total_w / 2.0
     y = 8.0
@@ -190,20 +223,20 @@ def generate_punct_question(out_path: Path) -> None:
 def generate_time(out_path: Path) -> None:
     svg = make_tile_root()
     ig = icon_group(svg)
-    # Donut ring: outer r=8, inner r=6, evenodd fill.
+    # Donut ring: outer r=10, inner r=8, evenodd fill.
     ring_d = (
+        "M 26 16 "
+        "A 10 10 0 1 1 6 16 "
+        "A 10 10 0 1 1 26 16 Z "
         "M 24 16 "
-        "A 8 8 0 1 1 8 16 "
-        "A 8 8 0 1 1 24 16 Z "
-        "M 22 16 "
-        "A 6 6 0 1 0 10 16 "
-        "A 6 6 0 1 0 22 16 Z"
+        "A 8 8 0 1 0 8 16 "
+        "A 8 8 0 1 0 24 16 Z"
     )
     ring = svg_el("path", d=ring_d, fill="currentColor", stroke="none", **{"fill-rule": "evenodd"})
     ig.append(ring)
-    # Hands as filled silhouettes, thickness 2.
-    ig.append(rect(15, 11, 2, 5))  # minute hand up
-    ig.append(rect(16, 15, 4, 2))  # hour hand right
+    # Hands as filled silhouettes, overlap by 1px at center to avoid gaps.
+    ig.append(rect(15, 8, 2, 9))   # minute hand (width 2)
+    ig.append(rect(15, 14.5, 8, 3))  # hour hand (width 3)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     ET.ElementTree(svg).write(out_path, encoding="utf-8", xml_declaration=True)
