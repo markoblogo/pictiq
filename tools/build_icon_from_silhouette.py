@@ -17,6 +17,13 @@ from PIL import Image, ImageOps
 SVG_NS = "http://www.w3.org/2000/svg"
 ET.register_namespace("", SVG_NS)
 
+# Default internal padding inside the safe-area (24x24).
+DEFAULT_INTERNAL_PADDING = 1.0
+# Per-icon overrides for visual balance.
+PADDING_OVERRIDES: dict[str, float] = {
+    "logic_yes": 0.0,
+}
+
 
 def svg_el(tag: str, **attrs: str) -> ET.Element:
     return ET.Element(f"{{{SVG_NS}}}{tag}", attrs)
@@ -191,8 +198,13 @@ def build_final_svg_from_group(
     src_h: float,
     out_svg: Path,
 ) -> None:
-    # Effective inner placement box: safe-area 24x24 with 1px inner padding => 22x22 at (5,5).
-    eff_x, eff_y, eff_w, eff_h = 5.0, 5.0, 22.0, 22.0
+    # Effective inner placement box inside safe-area 24x24, with per-id internal padding.
+    pad = PADDING_OVERRIDES.get(icon_id, DEFAULT_INTERNAL_PADDING)
+    safe_x, safe_y, safe_w, safe_h = 4.0, 4.0, 24.0, 24.0
+    eff_x = safe_x + pad
+    eff_y = safe_y + pad
+    eff_w = safe_w - (2.0 * pad)
+    eff_h = safe_h - (2.0 * pad)
     s = min(eff_w / src_w, eff_h / src_h)
     tx = eff_x + (eff_w - src_w * s) / 2.0
     ty = eff_y + (eff_h - src_h * s) / 2.0
