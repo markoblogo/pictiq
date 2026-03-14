@@ -5,6 +5,10 @@
 [![License](https://img.shields.io/github/license/markoblogo/pictiq)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/markoblogo/pictiq?style=flat)](https://github.com/markoblogo/pictiq/stargazers)
 
+<p align="center">
+  <img src="branding/logo.png" alt="Pictiq logo" width="160" />
+</p>
+
 Pictiq is a minimal visual protocol for short, universal messages across language barriers.
 It is not meant for long texts. It is meant for pointing, quick signs, stickers, and simple phrases.
 
@@ -15,6 +19,14 @@ All lexicon words are designed as framed tiles (rounded-square frame). The Picti
 - Meaning is amplified using punctuation tiles and context.
 - Negation is expressed as `X + logic_no` (and `logic_no` can be a standalone answer).
 - Some nouns may act as actions depending on context (e.g., transport = ride, coins = pay).
+
+## Core overview
+
+<p align="center">
+  <img src="docs/overview/pictiq-core-grid.png" alt="Pictiq core overview grid" width="900" />
+</p>
+
+Printable PDF: [`docs/overview/pictiq-core-grid.pdf`](docs/overview/pictiq-core-grid.pdf)
 
 ## Start here
 - Protocol rules (EN): `spec/PROTOCOL.md`
