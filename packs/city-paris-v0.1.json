@@ -1,0 +1,23 @@
+{
+  "pack_id": "city-paris-v0.1",
+  "version": "0.1.0",
+  "language": "en",
+  "title": "Paris Pack (v0.1)",
+  "description": "Paris tourism context pack: Paris-specific landmarks + reusable travel icons, designed to pair with the Core subset on merch.",
+  "icons": [
+    "paris_eiffel_tower",
+    "paris_arc_de_triomphe",
+    "paris_louvre_pyramid",
+    "paris_notre_dame",
+    "paris_sacre_coeur",
+    "paris_moulin_windmill",
+    "paris_metro",
+    "move_boat",
+    "place_catacombs",
+    "place_theme_park",
+    "place_airport",
+    "place_art_gallery",
+    "place_fashion_shopping",
+    "paris_croissant"
+  ]
+}
