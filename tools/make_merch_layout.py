@@ -50,15 +50,18 @@ BOTTOM_SUBSET = [
     "power_plug",
     "need_toilet",
     "need_water",
-    "need_food",
-    "need_bar",
     "place_hotel",
     "place_shop",
-    "place_landmark_park",
     "move_feet",
     "move_taxi",
     "move_public",
     "place_airport",
+]
+
+TOP_EXTRA = [
+    "need_food",
+    "need_bar",
+    "place_landmark_park",
 ]
 
 
@@ -124,7 +127,8 @@ def main() -> int:
     out_preview = out_dir / "paris-shirt-preview-1200x1600.png"
 
     pack = json.loads(pack_path.read_text(encoding="utf-8"))
-    top_icons = list(pack.get("icons", []))
+    top_icons = [icon_id for icon_id in pack.get("icons", []) if icon_id != "place_airport"]
+    top_icons.extend(TOP_EXTRA)
 
     required = list(top_icons) + list(BOTTOM_SUBSET)
     missing = sorted({icon_id for icon_id in required if not (icons_dir / f"{icon_id}.svg").exists()})
