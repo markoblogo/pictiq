@@ -745,29 +745,6 @@
       ]
     },
     {
-      "id": "paris_metro",
-      "type": "icon",
-      "category": "paris",
-      "meaning_en": "Paris metro",
-      "aliases_en": [
-        "metro",
-        "subway",
-        "paris metro",
-        "underground"
-      ],
-      "tags_en": [
-        "paris",
-        "transport",
-        "metro",
-        "movement",
-        "public"
-      ],
-      "examples": [
-        "paris_metro + punct_question",
-        "paris_metro + time + punct_question"
-      ]
-    },
-    {
       "id": "paris_croissant",
       "type": "icon",
       "category": "paris",
