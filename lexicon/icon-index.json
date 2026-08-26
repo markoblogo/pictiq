@@ -959,6 +959,15 @@
       "aliases_en": ["flower", "rose", "blossom"],
       "tags_en": ["nature", "flower", "plant", "poetry"],
       "examples": ["nature_flower + qty_5", "nature_flower + qty_plus + time"]
+    },
+    {
+      "id": "tech_ai",
+      "type": "icon",
+      "category": "technology",
+      "meaning_en": "artificial intelligence / AI system",
+      "aliases_en": ["artificial intelligence", "AI", "AI system", "AI assistant", "chatbot", "generative AI"],
+      "tags_en": ["technology", "computer", "assistant", "chatbot", "automation"],
+      "examples": ["tech_ai + punct_question", "comm_phone + tech_ai", "tech_ai + logic_no"]
     }
   ]
 }
