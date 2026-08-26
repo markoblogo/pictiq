@@ -1,0 +1,6 @@
+{
+  "id": "travel-transit",
+  "title": "Travel Transit",
+  "primary": ["place_airport", "move_public", "move_taxi", "move_feet", "place_hotel", "money_card", "time", "punct_question"],
+  "secondary": ["money_coins", "logic_no", "comm_phone", "comm_wifi"]
+}

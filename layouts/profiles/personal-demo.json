@@ -1,0 +1,6 @@
+{
+  "id": "personal-demo",
+  "title": "Personal Demo",
+  "primary": ["comm_phone", "comm_wifi", "need_water", "need_food", "move_taxi", "move_public", "need_bar", "drink_beer", "money_card", "safety_medical", "place_hotel", "punct_question"],
+  "secondary": ["logic_no", "time", "move_feet", "place_airport"]
+}

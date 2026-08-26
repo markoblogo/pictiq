@@ -11,3 +11,5 @@ Generate the Paris wallet card:
 ```bash
 python3 tools/make_wallet_card.py --profile paris
 ```
+
+Additional physical layouts: **Luggage Tag / Sticker** and **Phone Lock Screen**. Both read a profile; the layout script determines the form factor.
