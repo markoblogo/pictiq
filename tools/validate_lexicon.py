@@ -222,6 +222,23 @@ def validate_profiles(root: Path, lexicon_ids: set[str]) -> list[str]:
             if len(selected[group]) > limit:
                 errs.append(f"{path}: wallet card {group} capacity exceeded: {len(selected[group])}/{limit}")
 
+        lighter = profile.get("lighter")
+        if lighter is not None:
+            if not isinstance(lighter, dict):
+                errs.append(f"{path}: lighter must be an object")
+                continue
+            for side in ("side_a", "side_b"):
+                icon_ids = lighter.get(side)
+                if not isinstance(icon_ids, list) or len(icon_ids) != 3 or not all(isinstance(value, str) for value in icon_ids):
+                    errs.append(f"{path}: lighter.{side} must contain exactly 3 icon ids")
+                    continue
+                unknown = [value for value in icon_ids if value not in lexicon_ids]
+                if unknown:
+                    errs.append(f"{path}: lighter.{side} ids missing from lexicon: {', '.join(unknown)}")
+                missing_svg = [value for value in icon_ids if not (root / 'icons' / 'svg' / f'{value}.svg').exists()]
+                if missing_svg:
+                    errs.append(f"{path}: lighter.{side} ids missing SVG: {', '.join(missing_svg)}")
+
     return errs
 
 

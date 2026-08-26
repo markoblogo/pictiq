@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><clipPath id="icon-clip"><rect x="2" y="2" width="28" height="28" rx="3.8" ry="3.8"/></clipPath></defs><g id="frame"><rect x="1" y="1" width="30" height="30" rx="4.8" ry="4.8" stroke="currentColor" stroke-width="2" fill="none"/></g><g id="icon" clip-path="url(#icon-clip)"><path d="M16 27 6 17c-5-6 3-15 10-8 7-7 15 2 10 8z" fill="currentColor" stroke="none"/></g></svg>

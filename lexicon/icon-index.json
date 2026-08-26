@@ -905,6 +905,51 @@
         "place_fashion_shopping + punct_question",
         "place_shop + place_fashion_shopping"
       ]
+    },
+    {
+      "id": "item_cigarette",
+      "type": "icon",
+      "category": "items",
+      "meaning_en": "cigarette / smoking",
+      "aliases_en": ["cigarette", "smoking", "tobacco"],
+      "tags_en": ["item", "nightlife", "smoking"],
+      "examples": ["item_cigarette + logic_no", "item_cigarette + punct_question"]
+    },
+    {
+      "id": "item_cannabis",
+      "type": "icon",
+      "category": "items",
+      "meaning_en": "cannabis / cannabis-related products",
+      "aliases_en": ["cannabis", "CBD", "cannabis products"],
+      "tags_en": ["item", "nightlife", "cannabis"],
+      "examples": ["item_cannabis + punct_question", "item_cannabis + place_shop"]
+    },
+    {
+      "id": "drink_beer",
+      "type": "icon",
+      "category": "drinks",
+      "meaning_en": "beer",
+      "aliases_en": ["beer", "beer mug", "pint"],
+      "tags_en": ["drink", "nightlife", "bar"],
+      "examples": ["drink_beer + need_bar", "drink_beer + qty_2"]
+    },
+    {
+      "id": "love_heart",
+      "type": "icon",
+      "category": "social",
+      "meaning_en": "love / affection / romance",
+      "aliases_en": ["love", "heart", "romance", "affection"],
+      "tags_en": ["social", "nightlife", "relationship"],
+      "examples": ["love_heart + punct_question", "love_heart + logic_no"]
+    },
+    {
+      "id": "item_condom",
+      "type": "icon",
+      "category": "safety",
+      "meaning_en": "condom / safer-sex protection",
+      "aliases_en": ["condom", "safe sex", "protection"],
+      "tags_en": ["item", "safety", "nightlife"],
+      "examples": ["item_condom + punct_question", "item_condom + logic_no"]
     }
   ]
 }

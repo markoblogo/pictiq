@@ -1,0 +1,10 @@
+{
+  "id": "nightlife",
+  "title": "Nightlife",
+  "primary": ["need_bar", "place_disco", "place_hotel", "move_taxi", "drink_beer", "item_cigarette", "item_cannabis", "need_toilet", "love_heart", "item_condom", "punct_question", "logic_no"],
+  "secondary": ["time", "punct_exclaim", "logic_yes", "qty_plus", "money_coins", "money_card", "money_atm_bank", "comm_wifi", "comm_phone", "power_plug", "need_water", "need_food", "place_shop", "move_feet", "move_public", "place_airport", "qty_1", "qty_2", "qty_5", "qty_minus"],
+  "lighter": {
+    "side_a": ["item_cigarette", "item_cannabis", "need_bar"],
+    "side_b": ["love_heart", "item_condom", "drink_beer"]
+  }
+}

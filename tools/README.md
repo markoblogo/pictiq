@@ -23,6 +23,14 @@ Renders print-resolution, two-sided wallet-card assets from a content profile. T
 python3 tools/make_wallet_card.py --profile paris
 ```
 
+## make_lighter.py
+
+Renders the two broad faces of a disposable lighter from the optional `lighter` block in a content profile.
+
+```bash
+python3 tools/make_lighter.py --profile nightlife
+```
+
 ## generate_template.py
 
 Generates canonical tile template SVG:
