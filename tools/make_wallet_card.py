@@ -8,17 +8,22 @@ import json
 import tempfile
 from pathlib import Path
 
-from PIL import Image
+from PIL import Image, ImageDraw
 
 from make_merch_layout import tile_bitmap
 from render_png import _detect_backend
 
 
-DPI = 300
+# 4280 / 2699 is the exact 85.60 / 53.98 mm ID-1 aspect ratio at 1270 dpi.
+DPI = 1270
 CARD_MM = (85.60, 53.98)
-CARD_SIZE = tuple(round(mm / 25.4 * DPI) for mm in CARD_MM)
-PREVIEW_GAP = 120
-PREVIEW_MARGIN = 80
+CARD_SIZE = (4280, 2699)
+PX_PER_MM = DPI / 25.4
+OUTLINE_WIDTH = round(0.4 * PX_PER_MM)
+OUTLINE_RADIUS = round(3.18 * PX_PER_MM)
+SAFE_INSET = round(3.5 * PX_PER_MM)
+PREVIEW_GAP = round(2.4 * PX_PER_MM)
+PREVIEW_MARGIN = round(1.6 * PX_PER_MM)
 
 
 def select_group(profile: dict, group: str) -> list[str]:
@@ -30,8 +35,7 @@ def render_side(
     icon_ids: list[str],
     columns: int,
     rows: int,
-    tile_size: int,
-    gap: int,
+    vertical_gap_mm: float,
     temp_dir: Path,
     icons_dir: Path,
     backend: str,
@@ -40,15 +44,29 @@ def render_side(
         raise ValueError(f"{len(icon_ids)} icons exceed {columns}x{rows} capacity")
 
     canvas = Image.new("RGB", CARD_SIZE, "white")
-    width = columns * tile_size + (columns - 1) * gap
-    height = rows * tile_size + (rows - 1) * gap
+    draw = ImageDraw.Draw(canvas)
+    outline_inset = OUTLINE_WIDTH // 2 + 1
+    draw.rounded_rectangle(
+        (outline_inset, outline_inset, canvas.width - outline_inset - 1, canvas.height - outline_inset - 1),
+        radius=OUTLINE_RADIUS,
+        outline="black",
+        width=OUTLINE_WIDTH,
+    )
+
+    safe_width = canvas.width - 2 * SAFE_INSET
+    safe_height = canvas.height - 2 * SAFE_INSET
+    gap_y = round(vertical_gap_mm * PX_PER_MM)
+    tile_size = (safe_height - (rows - 1) * gap_y) // rows
+    gap_x = (safe_width - columns * tile_size) // (columns - 1)
+    width = columns * tile_size + (columns - 1) * gap_x
+    height = rows * tile_size + (rows - 1) * gap_y
     x0 = (canvas.width - width) // 2
     y0 = (canvas.height - height) // 2
 
     for index, icon_id in enumerate(icon_ids):
         row, col = divmod(index, columns)
         tile = tile_bitmap(temp_dir, icons_dir, icon_id, tile_size, backend)
-        canvas.paste(tile, (x0 + col * (tile_size + gap), y0 + row * (tile_size + gap)))
+        canvas.paste(tile, (x0 + col * (tile_size + gap_x), y0 + row * (tile_size + gap_y)))
     return canvas
 
 
@@ -88,8 +106,8 @@ def main() -> int:
 
     with tempfile.TemporaryDirectory(prefix="pictiq_wallet_card_") as tmp:
         temp_dir = Path(tmp)
-        front = render_side(primary, columns=3, rows=4, tile_size=122, gap=22, temp_dir=temp_dir, icons_dir=icons_dir, backend=backend)
-        back = render_side(secondary, columns=4, rows=5, tile_size=98, gap=10, temp_dir=temp_dir, icons_dir=icons_dir, backend=backend)
+        front = render_side(primary, columns=4, rows=3, vertical_gap_mm=1.2, temp_dir=temp_dir, icons_dir=icons_dir, backend=backend)
+        back = render_side(secondary, columns=5, rows=4, vertical_gap_mm=1.0, temp_dir=temp_dir, icons_dir=icons_dir, backend=backend)
 
     preview = make_preview(front, back)
     front.save(out_dir / "front.png", dpi=(DPI, DPI))
@@ -97,8 +115,8 @@ def main() -> int:
     preview.save(out_dir / "preview.png", dpi=(DPI, DPI))
     front.save(out_dir / f"{args.profile}-wallet-card.pdf", "PDF", resolution=DPI, save_all=True, append_images=[back])
     print(f"Renderer backend: {backend}")
-    print(f"Primary: {len(primary)}/12")
-    print(f"Secondary: {len(secondary)}/20")
+    print(f"Front grid: 3 rows x 4 columns ({len(primary)}/12)")
+    print(f"Back grid: 4 rows x 5 columns ({len(secondary)}/20)")
     for path in (out_dir / "front.png", out_dir / "back.png", out_dir / "preview.png", out_dir / f"{args.profile}-wallet-card.pdf"):
         print(f"Wrote: {path}")
     return 0
