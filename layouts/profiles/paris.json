@@ -1,0 +1,60 @@
+{
+  "id": "paris",
+  "title": "Paris",
+  "primary": [
+    "paris_eiffel_tower",
+    "paris_arc_de_triomphe",
+    "paris_louvre_pyramid",
+    "paris_notre_dame",
+    "paris_sacre_coeur",
+    "paris_moulin_windmill",
+    "move_boat",
+    "place_catacombs",
+    "place_theme_park",
+    "place_art_gallery",
+    "place_fashion_shopping",
+    "paris_croissant",
+    "need_food",
+    "need_bar",
+    "place_landmark_park"
+  ],
+  "secondary": [
+    "punct_question",
+    "punct_exclaim",
+    "logic_yes",
+    "logic_no",
+    "time",
+    "qty_1",
+    "qty_2",
+    "qty_5",
+    "qty_minus",
+    "qty_plus",
+    "money_coins",
+    "money_card",
+    "money_atm_bank",
+    "comm_wifi",
+    "comm_phone",
+    "power_plug",
+    "need_toilet",
+    "need_water",
+    "place_hotel",
+    "place_shop",
+    "move_feet",
+    "move_taxi",
+    "move_public",
+    "place_airport"
+  ],
+  "wallet_card": {
+    "exclude_primary": [
+      "place_landmark_park",
+      "move_boat",
+      "need_food"
+    ],
+    "exclude_secondary": [
+      "qty_1",
+      "qty_2",
+      "qty_5",
+      "qty_minus"
+    ]
+  }
+}

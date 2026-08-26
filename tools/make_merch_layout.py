@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 import json
 import math
 import tempfile
@@ -30,40 +31,6 @@ TOP_COLS = 5
 BOTTOM_TILE = 250
 BOTTOM_SPACE = 28
 BOTTOM_COLS = 6
-
-BOTTOM_SUBSET = [
-    "punct_question",
-    "punct_exclaim",
-    "logic_yes",
-    "logic_no",
-    "time",
-    "qty_1",
-    "qty_2",
-    "qty_5",
-    "qty_minus",
-    "qty_plus",
-    "money_coins",
-    "money_card",
-    "money_atm_bank",
-    "comm_wifi",
-    "comm_phone",
-    "power_plug",
-    "need_toilet",
-    "need_water",
-    "place_hotel",
-    "place_shop",
-    "move_feet",
-    "move_taxi",
-    "move_public",
-    "place_airport",
-]
-
-TOP_EXTRA = [
-    "need_food",
-    "need_bar",
-    "place_landmark_park",
-]
-
 
 def render_black_svg(svg_path: Path, out_png: Path, size: int, backend: str) -> None:
     svg_text = svg_path.read_text(encoding="utf-8")
@@ -119,18 +86,21 @@ def place_block(
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description="Generate Pictiq shirt artwork from a content profile")
+    parser.add_argument("--profile", default="paris", help="Profile ID from layouts/profiles/ (default: paris)")
+    args = parser.parse_args()
     repo = Path(__file__).resolve().parents[1]
     icons_dir = repo / "icons" / "svg"
-    pack_path = repo / "packs" / "city-paris-v0.1.json"
+    profile_path = repo / "layouts" / "profiles" / f"{args.profile}.json"
     out_dir = repo / "docs" / "merch"
     out_print = out_dir / "paris-shirt-print-2400x3200.png"
     out_preview = out_dir / "paris-shirt-preview-1200x1600.png"
 
-    pack = json.loads(pack_path.read_text(encoding="utf-8"))
-    top_icons = [icon_id for icon_id in pack.get("icons", []) if icon_id != "place_airport"]
-    top_icons.extend(TOP_EXTRA)
+    profile = json.loads(profile_path.read_text(encoding="utf-8"))
+    top_icons = profile["primary"]
+    bottom_icons = profile["secondary"]
 
-    required = list(top_icons) + list(BOTTOM_SUBSET)
+    required = list(top_icons) + list(bottom_icons)
     missing = sorted({icon_id for icon_id in required if not (icons_dir / f"{icon_id}.svg").exists()})
     if missing:
         print("Missing required SVG icons:")
@@ -148,7 +118,7 @@ def main() -> int:
         temp_dir = Path(td)
 
         top_w, top_h, _ = block_dims(len(top_icons), TOP_COLS, TOP_TILE, TOP_SPACE)
-        bot_w, bot_h, _ = block_dims(len(BOTTOM_SUBSET), BOTTOM_COLS, BOTTOM_TILE, BOTTOM_SPACE)
+        bot_w, bot_h, _ = block_dims(len(bottom_icons), BOTTOM_COLS, BOTTOM_TILE, BOTTOM_SPACE)
         total_h = top_h + BLOCK_GAP + bot_h
         available_h = PRINT_SIZE[1] - 2 * OUTER_MARGIN
         if total_h > available_h:
@@ -161,7 +131,7 @@ def main() -> int:
         y = OUTER_MARGIN
         y = place_block(canvas, top_icons, TOP_COLS, TOP_TILE, TOP_SPACE, y, temp_dir, icons_dir, backend)
         y += BLOCK_GAP
-        place_block(canvas, BOTTOM_SUBSET, BOTTOM_COLS, BOTTOM_TILE, BOTTOM_SPACE, y, temp_dir, icons_dir, backend)
+        place_block(canvas, bottom_icons, BOTTOM_COLS, BOTTOM_TILE, BOTTOM_SPACE, y, temp_dir, icons_dir, backend)
 
     canvas.save(out_print)
     preview = canvas.resize(PREVIEW_SIZE, resample=Image.Resampling.NEAREST)

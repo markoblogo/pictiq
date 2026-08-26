@@ -3,7 +3,7 @@
 Pictiq lexicon validation.
 
 Checks:
-- every id in packs/universal-core.json and packs/universal-v1.json exists in lexicon/icon-index.json
+- every pack and content-profile id exists in lexicon/icon-index.json
 - all lexicon ids are unique
 - required fields exist and type is valid
 """
@@ -161,6 +161,70 @@ def validate_i18n(root: Path, lexicon_ids: set[str]) -> list[str]:
     return errs
 
 
+def validate_profiles(root: Path, lexicon_ids: set[str]) -> list[str]:
+    errs: list[str] = []
+    profiles_dir = root / "layouts" / "profiles"
+    if not profiles_dir.is_dir():
+        return errs
+
+    for path in sorted(profiles_dir.glob("*.json")):
+        try:
+            profile = load_json(path)
+        except Exception as exc:  # noqa: BLE001
+            errs.append(str(exc))
+            continue
+        if not isinstance(profile, dict):
+            errs.append(f"{path}: expected object")
+            continue
+        if not isinstance(profile.get("id"), str) or not profile["id"]:
+            errs.append(f"{path}: missing/invalid profile id")
+        if not isinstance(profile.get("title"), str) or not profile["title"]:
+            errs.append(f"{path}: missing/invalid profile title")
+        for group in ("primary", "secondary"):
+            values = profile.get(group)
+            if not isinstance(values, list) or not all(isinstance(value, str) and value for value in values):
+                errs.append(f"{path}: {group} must be an array of non-empty ids")
+                continue
+            if len(values) != len(set(values)):
+                errs.append(f"{path}: duplicate ids in {group}")
+            unknown = [value for value in values if value not in lexicon_ids]
+            if unknown:
+                errs.append(f"{path}: {group} ids missing from lexicon: {', '.join(unknown)}")
+            missing_svg = [value for value in values if not (root / 'icons' / 'svg' / f'{value}.svg').exists()]
+            if missing_svg:
+                errs.append(f"{path}: {group} ids missing SVG: {', '.join(missing_svg)}")
+
+        primary = profile.get("primary", [])
+        secondary = profile.get("secondary", [])
+        if isinstance(primary, list) and isinstance(secondary, list):
+            overlap = sorted(set(primary) & set(secondary))
+            if overlap:
+                errs.append(f"{path}: ids duplicated between primary and secondary: {', '.join(overlap)}")
+
+        wallet = profile.get("wallet_card", {})
+        if wallet is not None and not isinstance(wallet, dict):
+            errs.append(f"{path}: wallet_card must be an object")
+            continue
+        wallet = wallet or {}
+        selected: dict[str, list[str]] = {}
+        for group, limit in (("primary", 12), ("secondary", 20)):
+            excluded = wallet.get(f"exclude_{group}", [])
+            if not isinstance(excluded, list) or not all(isinstance(value, str) for value in excluded):
+                errs.append(f"{path}: wallet_card.exclude_{group} must be an array of ids")
+                continue
+            if len(excluded) != len(set(excluded)):
+                errs.append(f"{path}: duplicate wallet_card.exclude_{group} ids")
+            source = profile.get(group, [])
+            unknown_exclusions = [value for value in excluded if value not in source]
+            if unknown_exclusions:
+                errs.append(f"{path}: wallet_card excludes ids outside {group}: {', '.join(unknown_exclusions)}")
+            selected[group] = [value for value in source if value not in set(excluded)]
+            if len(selected[group]) > limit:
+                errs.append(f"{path}: wallet card {group} capacity exceeded: {len(selected[group])}/{limit}")
+
+    return errs
+
+
 def main(argv: list[str]) -> int:
     root = Path(__file__).resolve().parents[1]
 
@@ -185,7 +249,13 @@ def main(argv: list[str]) -> int:
             eprint(f"ERROR: {msg}")
         return 1
 
-    print("OK: lexicon, packs, and i18n validated")
+    profile_errs = validate_profiles(root, lexicon_ids)
+    if profile_errs:
+        for msg in profile_errs:
+            eprint(f"ERROR: {msg}")
+        return 1
+
+    print("OK: lexicon, packs, profiles, and i18n validated")
     return 0
 
 

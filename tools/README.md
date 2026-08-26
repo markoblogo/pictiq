@@ -3,7 +3,8 @@
 ## validate_lexicon.py
 
 Validates:
-- all ids in `packs/universal-core.json` and `packs/universal-v1.json` exist in `lexicon/icon-index.json`
+- all ids in packs and `layouts/profiles/*.json` exist in `lexicon/icon-index.json`
+- profile groups have no duplicates, have matching SVGs, and wallet-card selections fit their capacities
 - lexicon ids are unique
 - required fields exist and `type` is one of: `icon`, `operator`
 - if `lexicon/i18n/` exists: every `strings.<id>` in `*.json` (except `i18n.schema.json`) must exist in lexicon IDs, and each `strings.<id>` value must be an object
@@ -12,6 +13,14 @@ Run:
 
 ```bash
 python3 tools/validate_lexicon.py
+```
+
+## make_wallet_card.py
+
+Renders print-resolution, two-sided wallet-card assets from a content profile. The profile can declare documented wallet-only exclusions when a physical card capacity differs from the complete profile.
+
+```bash
+python3 tools/make_wallet_card.py --profile paris
 ```
 
 ## generate_template.py
