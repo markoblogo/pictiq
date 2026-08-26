@@ -1,20 +1,40 @@
-# Pictiq
+# PICTIQ
 
 [![CI](https://github.com/markoblogo/pictiq/actions/workflows/ci.yml/badge.svg)](https://github.com/markoblogo/pictiq/actions/workflows/ci.yml)
 [![Tag](https://img.shields.io/github/v/tag/markoblogo/pictiq)](https://github.com/markoblogo/pictiq/tags)
 [![License](https://img.shields.io/github/license/markoblogo/pictiq)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/markoblogo/pictiq?style=flat)](https://github.com/markoblogo/pictiq/stargazers)
 
+**Minimal visual protocol for short messages across language barriers.**
+
+Pictiq is designed for pointing, quick signs, stickers, portable communication surfaces, and short composable phrases. It is not intended to replace natural language or long-form writing.
+
+All lexicon words are designed as framed tiles (rounded-square frame). The Pictiq logo is not a tile.
+
+## Pictiq Handbook v1.0
+
 <p align="center">
-  <a href="https://github.com/markoblogo/pictiq/tree/main/docs">
-    <img src="branding/logo.png" alt="Pictiq logo" width="160" />
+  <a href="books/handbook-v1/README.md">
+    <img src="books/handbook-v1/promo.png" alt="Pictiq Handbook v1.0 — A Visual Protocol for Short Messages" width="960" />
   </a>
 </p>
 
-Pictiq is a minimal visual protocol for short, universal messages across language barriers.
-It is not meant for long texts. It is meant for pointing, quick signs, stickers, and simple phrases.
+<p align="center">
+  <a href="books/handbook-v1/pictiq-handbook-v1.0.pdf"><img alt="Download PDF" src="https://img.shields.io/badge/Download-PDF-black?style=for-the-badge" /></a>
+  <a href="books/handbook-v1/pictiq-handbook-v1.0.epub"><img alt="Download EPUB" src="https://img.shields.io/badge/Download-EPUB-black?style=for-the-badge" /></a>
+  <a href="books/handbook-v1/README.md"><img alt="Handbook files" src="https://img.shields.io/badge/Handbook-Files-black?style=for-the-badge" /></a>
+</p>
 
-All lexicon words are designed as framed tiles (rounded-square frame). The Pictiq logo is not a tile.
+**Pictiq: A Visual Protocol for Short Messages**
+by Anton Biletskyi-Volokh
+
+A free 95-page illustrated field guide covering:
+
+- protocol rules and the Core lexicon
+- context packs and the Paris case
+- shirts, wallet cards, lighter, luggage-tag, and phone-lockscreen layouts
+- visual storytelling and poetry experiments
+- computer-vision and language-model concepts
 
 ## Core idea
 - Zero-intent: pointing at an object tile is a valid message by default (“this / need this / where is this”).
@@ -32,11 +52,8 @@ Point to a tile. Add `punct_question` to ask, `punct_exclaim` for urgency, and `
 
 Printable PDF: [`docs/overview/pictiq-core-grid.pdf`](docs/overview/pictiq-core-grid.pdf)
 
-## Artifacts
-- Core grid: `docs/overview/pictiq-core-grid.png` and `docs/overview/pictiq-core-grid.pdf`
-- Release tag: `v1.0.0-core`
-
 ## Start here
+- Handbook: `books/handbook-v1/`
 - Protocol rules (EN): `spec/PROTOCOL.md`
 - Icon drawing brief (EN): `spec/ICON_DEFINITIONS.md`
 - Emoji bridge policy: `spec/EMOJI_BRIDGE.md`
@@ -50,24 +67,30 @@ Printable PDF: [`docs/overview/pictiq-core-grid.pdf`](docs/overview/pictiq-core-
 - Packs: `packs/universal-core.json`, `packs/universal-v1.json`
 - Static dictionary site (GitHub Pages): `docs/`
 
+Core overview artifacts: `docs/overview/pictiq-core-grid.png` and `docs/overview/pictiq-core-grid.pdf`
+Core protocol release: `v1.0.0-core`
+
 ### Research
 - Related systems: `docs/research/related-systems.md`
 - Emoji bridge: `docs/research/emoji-bridge.md`
 - Tiny Languages Protocol note: `docs/research/tiny-languages-protocol.md`
 
 ## Repository structure
+- `/books` — published handbook editions and release artwork
 - `/spec` — protocol rules, grammar, and icon design definitions
 - `/lexicon` — icon registry (metadata index + schema)
 - `/packs` — curated icon packs (core and extensions)
 - `/icons` — canonical SVG icons + exported PNGs
+- `/layouts` — reusable content profiles and physical representations
 - `/templates` — tile template for icon authoring
 - `/tools` — validation and SVG→PNG rendering scripts
 - `/docs` — static dictionary site (GitHub Pages-ready)
+- `/releases` — release-note sources
 
 ## Tooling & CI
-- `tools/validate_lexicon.py` validates that packs reference existing lexicon IDs and that metadata is well-formed.
-- `tools/validate_svg.py` validates canonical SVG rules (viewBox, `currentColor`, etc.).  
-  Note: SVG validation may skip if no SVG icons exist yet.
+- `tools/validate_lexicon.py` validates lexicon metadata, packs, profiles, SVG references, and i18n data.
+- `tools/validate_svg.py` validates canonical SVG rules, including the standard viewBox and `currentColor` use.
+- Layout generators produce wallet cards, luggage tags, phone lockscreens, lighter artwork, and documentation overviews from content profiles.
 - GitHub Actions runs validation on push and pull requests.
 
 ## Licensing (summary)
@@ -76,4 +99,4 @@ Printable PDF: [`docs/overview/pictiq-core-grid.pdf`](docs/overview/pictiq-core-
 - Commercial use requires a separate agreement: see `COMMERCIAL_LICENSE.md`.
 
 ## Status
-Work in progress. The lexicon and packs will grow over time.
+The Core protocol and the first Pictiq Handbook are published. The lexicon, context packs, profiles, layouts, and machine-readable experiments remain under active development.

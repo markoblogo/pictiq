@@ -1,7 +1,9 @@
 # Phases
 
 - Infrastructure & Docs (pre-icons): complete (`v0.3.0-infra`)
-- Canonical icons v1: pending
+- Core protocol and canonical icons v1: complete (`v1.0.0-core`)
+- Pictiq Handbook v1.0: complete (`handbook-v1.0.0`)
+- Context packs, profiles, physical layouts, and experiments: active
 
 ### User test protocol (quick)
 

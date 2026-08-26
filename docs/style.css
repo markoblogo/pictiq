@@ -30,6 +30,72 @@ body {
   margin: 0 auto;
 }
 
+.handbook {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.8fr);
+  gap: 24px;
+  align-items: center;
+  margin: 28px 0 12px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: linear-gradient(145deg, rgba(18, 22, 35, 0.98), rgba(15, 19, 32, 0.9));
+  box-shadow: var(--shadow);
+}
+
+.handbook-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.handbook-copy h1 {
+  margin: 6px 0 12px;
+  font-size: clamp(24px, 4vw, 38px);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.handbook-copy p {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.handbook-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 18px;
+}
+
+.handbook-actions a {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  padding: 0 13px;
+  border: 1px solid rgba(97, 216, 166, 0.32);
+  border-radius: 10px;
+  color: var(--text);
+  background: rgba(97, 216, 166, 0.08);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.handbook-actions a:hover {
+  border-color: var(--accent);
+  background: rgba(97, 216, 166, 0.14);
+}
+
 .top {
   position: sticky;
   top: 0;
@@ -174,7 +240,7 @@ input[type="search"]:focus, select:focus {
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 640px) {
+  .handbook { grid-template-columns: 1fr; }
   .controls { grid-template-columns: 1fr; }
   .grid { grid-template-columns: 1fr; }
 }
-
