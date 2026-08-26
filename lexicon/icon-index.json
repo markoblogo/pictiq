@@ -950,6 +950,15 @@
       "aliases_en": ["condom", "safe sex", "protection"],
       "tags_en": ["item", "safety", "nightlife"],
       "examples": ["item_condom + punct_question", "item_condom + logic_no"]
+    },
+    {
+      "id": "nature_flower",
+      "type": "icon",
+      "category": "nature",
+      "meaning_en": "flower",
+      "aliases_en": ["flower", "rose", "blossom"],
+      "tags_en": ["nature", "flower", "plant", "poetry"],
+      "examples": ["nature_flower + qty_5", "nature_flower + qty_plus + time"]
     }
   ]
 }
