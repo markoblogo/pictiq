@@ -13,3 +13,11 @@ python3 tools/make_wallet_card.py --profile paris
 ```
 
 Additional physical layouts: **Luggage Tag / Sticker** and **Phone Lock Screen**. Both read a profile; the layout script determines the form factor.
+
+### Output layers
+
+- Artwork — exact flat production graphic.
+- Preview — schematic object with the exact artwork applied.
+- Mockup — optional realistic presentation image.
+
+Previews must consume generated artwork or canonical SVG assets. They must never redraw or reinterpret Pictiq icons. Future shirt previews use a black-outline T-shirt schematic; the approved Paris shirt assets remain unchanged.

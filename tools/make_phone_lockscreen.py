@@ -6,6 +6,7 @@ from pathlib import Path
 from PIL import Image
 from make_merch_layout import tile_bitmap
 from render_png import _detect_backend
+from layout_preview import draw_phone_outline, place_artwork
 
 SIZE=(1440,3200); TOP_SAFE=420; BOTTOM_SAFE=520
 def main() -> int:
@@ -20,5 +21,5 @@ def main() -> int:
     with tempfile.TemporaryDirectory(prefix='pictiq_phone_') as tmp:
       for n,icon in enumerate(ids):
         tile_image=tile_bitmap(Path(tmp),icons,icon,tile,backend); row,col=divmod(n,cols); image.paste(tile_image,(x0+col*(tile+gap),y0+row*(tile+gap)))
-    image.save(out/'wallpaper.png',dpi=(400,400)); image.save(out/'preview.png',dpi=(400,400)); print(f'Wrote: {out}'); return 0
+    image.save(out/'wallpaper.png',dpi=(400,400)); preview=Image.new('RGB',(1800,3600),'white'); screen=draw_phone_outline(preview,(130,100,1670,3500)); place_artwork(preview,image,screen); preview.save(out/'preview.png',dpi=(400,400)); print(f'Wrote: {out}'); return 0
 if __name__=='__main__': raise SystemExit(main())

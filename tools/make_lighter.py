@@ -8,18 +8,17 @@ import json
 import tempfile
 from pathlib import Path
 
-from PIL import Image, ImageDraw
+from PIL import Image
 
 from make_merch_layout import tile_bitmap
 from render_png import _detect_backend
+from layout_preview import draw_lighter_outline, place_artwork
 
 
-CANVAS = (1500, 3000)
-OUTLINE = 22
-RADIUS = 250
-TILE = 700
-TOP = 470
-GAP = 115
+CANVAS = (900, 2400)
+TILE = 650
+TOP = 170
+GAP = 90
 PREVIEW_MARGIN = 120
 PREVIEW_GAP = 180
 
@@ -28,11 +27,6 @@ def render_side(icon_ids: list[str], temp_dir: Path, icons_dir: Path, backend: s
     if len(icon_ids) != 3:
         raise ValueError(f"lighter side needs exactly 3 icons, got {len(icon_ids)}")
     image = Image.new("RGB", CANVAS, "white")
-    draw = ImageDraw.Draw(image)
-    inset = OUTLINE // 2 + 1
-    draw.rounded_rectangle((inset, inset, image.width - inset - 1, image.height - inset - 1), radius=RADIUS, outline="black", width=OUTLINE)
-    draw.rounded_rectangle((210, 95, 1290, 420), radius=70, outline="black", width=OUTLINE)
-    draw.line((300, 410, 1200, 410), fill="black", width=OUTLINE)
     x = (image.width - TILE) // 2
     for index, icon_id in enumerate(icon_ids):
         tile = tile_bitmap(temp_dir, icons_dir, icon_id, TILE, backend)
@@ -63,9 +57,9 @@ def main() -> int:
     with tempfile.TemporaryDirectory(prefix="pictiq_lighter_") as tmp:
         side_a_image = render_side(side_a, Path(tmp), icons_dir, backend)
         side_b_image = render_side(side_b, Path(tmp), icons_dir, backend)
-    preview = Image.new("RGB", (CANVAS[0] * 2 + PREVIEW_GAP + PREVIEW_MARGIN * 2, CANVAS[1] + PREVIEW_MARGIN * 2), "white")
-    preview.paste(side_a_image, (PREVIEW_MARGIN, PREVIEW_MARGIN))
-    preview.paste(side_b_image, (PREVIEW_MARGIN + CANVAS[0] + PREVIEW_GAP, PREVIEW_MARGIN))
+    preview = Image.new("RGB", (2600, 2800), "white")
+    left=draw_lighter_outline(preview,(170,120,1190,2680)); right=draw_lighter_outline(preview,(1410,120,2430,2680))
+    place_artwork(preview,side_a_image,left); place_artwork(preview,side_b_image,right)
     side_a_image.save(out_dir / "side-a.png")
     side_b_image.save(out_dir / "side-b.png")
     preview.save(out_dir / "preview.png")
