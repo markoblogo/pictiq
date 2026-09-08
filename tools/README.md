@@ -124,3 +124,30 @@ Run:
 ```bash
 python3 tools/validate_svg.py
 ```
+
+## make_icon_qa_sheet.py
+
+Prepares a deterministic, self-contained HTML sheet with original canonical SVGs
+embedded as isolated images: canonical, small-size and comparison-grid renders,
+plus an optional existing PNG/JPEG layout. Python standard library only; open the
+result in a browser to render it. Same source bytes/options produce identical HTML;
+actual pixels can vary by browser/display. Generated sheets are ignored in `build/qa/`.
+
+```bash
+python3 tools/make_icon_qa_sheet.py item_cannabis
+python3 tools/make_icon_qa_sheet.py item_cannabis --small-px 16 --neighbors item_cigarette nature_flower
+python3 tools/make_icon_qa_sheet.py paris_eiffel_tower --layout docs/merch/paris-shirt-preview-1200x1600.png
+python3 -m unittest discover -s tests -v
+```
+
+Open `build/qa/<icon_id>.html`. Default grid neighbors are selected deterministically,
+favoring the same category; reviewers should supply plausible confusion pairs.
+Review size options are illustrative CSS pixels, not normative geometry. Check at
+100% zoom and verify physical layouts at actual size/distance separately. The tool
+does not alter profile/layout selections or verify that a supplied layout contains
+the target icon. Reviewers must check this. Labels are concealed until expanded.
+
+Follow the [Visual QA Protocol](../spec/ICON_SPEC.md#visual-qa-protocol) and record
+results in the change/PR. A missing required layout remains pending. Generating a
+sheet is neither an automated recognition test nor perceptual acceptance. Run both
+structural validators independently before visual QA.

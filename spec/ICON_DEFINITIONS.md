@@ -25,7 +25,7 @@ Important: the repository only accepts SVG icons with no `<text>` elements. If a
     
 - **Family consistency:** Within a family:
     
-    - silhouette complexity stays comparable,
+    - silhouette complexity MAY differ when this improves recognition; apply the [Perceptual Design Principles](ICON_SPEC.md#perceptual-design-principles),
         
     - proportions and negative space follow the same reading logic,
         
@@ -50,6 +50,8 @@ Important: the repository only accepts SVG icons with no `<text>` elements. If a
     - Does it avoid culture/religion/sexuality-sensitive symbols and brands?
         
     - Can it be rendered cleanly at arm’s length?
+
+    - Has it passed structural validation and the [Visual QA Protocol](ICON_SPEC.md#visual-qa-protocol)?
 
 ## 0. Style
 - SVG, viewBox `0 0 32 32`.

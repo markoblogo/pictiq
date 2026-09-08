@@ -3,6 +3,7 @@
 - Infrastructure & Docs (pre-icons): complete (`v0.3.0-infra`)
 - Core protocol and canonical icons v1: complete (`v1.0.0-core`)
 - Pictiq Handbook v1.0: complete (`handbook-v1.0.0`)
+- Perceptual design principles and visual QA workflow: complete (`v1.0.1`); see [icon spec](spec/ICON_SPEC.md#visual-qa-protocol). This does not certify retrospective perceptual acceptance.
 - Context packs, profiles, physical layouts, and experiments: active
 
 ### User test protocol (quick)

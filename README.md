@@ -70,7 +70,12 @@ Printable PDF: [`docs/overview/pictiq-core-grid.pdf`](docs/overview/pictiq-core-
 Core overview artifacts: `docs/overview/pictiq-core-grid.png` and `docs/overview/pictiq-core-grid.pdf`
 Core protocol release: `v1.0.0-core`
 
+**Perceptual design (v1.0.1)**
+
+Pictiq treats technical SVG validity and perceptual recognition as separate requirements. The [perceptual design principles and visual QA workflow](spec/ICON_SPEC.md#perceptual-design-principles) guide evaluation at multiple scales and in representative layouts.
+
 ### Research
+- Historical reference: [Jock Kinneir and Margaret Calvert’s British road-sign programme](spec/ICON_SPEC.md#reference-systems), identified after Pictiq v1.0.
 - Related systems: `docs/research/related-systems.md`
 - Emoji bridge: `docs/research/emoji-bridge.md`
 - Tiny Languages Protocol note: `docs/research/tiny-languages-protocol.md`

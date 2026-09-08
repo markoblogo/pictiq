@@ -4,6 +4,19 @@ All notable changes to this repository will be documented in this file.
 
 This project uses milestone-style tags. The `-infra` suffix indicates a pre-icons infrastructure release.
 
+## v1.0.1
+
+### Perceptual design
+- Added six perceptual design principles.
+- Formalized recognition-over-abstraction and minimum-sufficient-detail rules.
+- Added relative geometry based on canonical tile units, without new numerical constraints.
+- Added visual QA pipeline: canonical → small → grid → layout.
+- Distinguished structural validation from perceptual acceptance.
+- Added Kinneir–Calvert British road signage as a non-normative historical reference system identified after Pictiq v1.0.
+- Added a dependency-free, deterministic HTML visual QA sheet tool and automated tooling checks; sheets prepare human review evidence, not semantic acceptance.
+
+This is a standards/documentation and QA workflow evolution, not a Core replacement. No canonical IDs, existing icon geometry, or pack/profile/layout composition changed. Handbook v1.0 remains unchanged. Historical tags `v1.0.0-core` and `handbook-v1.0.0` remain unchanged.
+
 ## handbook-v1.0.0 — Pictiq Handbook v1.0
 
 ### Added
