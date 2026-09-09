@@ -4,6 +4,7 @@
   "mode": "Embodied Communication",
   "principle": "What is worth carrying when I also have a body?",
   "canonical_lexicon": "lexicon/icon-index.json",
+  "vocabulary_classification": "lexicon/vocabulary-classification.json",
   "included_ids": ["punct_question", "punct_exclaim", "logic_yes", "logic_no", "qual_good", "qual_bad", "time", "qty_1", "qty_2", "qty_5", "qty_plus", "qty_minus", "money_coins", "money_card", "money_atm_bank", "comm_wifi", "comm_phone", "power_plug", "power_energy", "need_toilet", "need_water", "need_food", "need_bar", "safety_medical", "safety_police", "place_hotel", "place_shop", "place_landmark_park", "place_gas", "service_tools", "move_feet", "move_taxi", "move_car", "move_public", "state_hot", "state_cold", "rel_here", "rel_up", "rel_down"],
   "omitted_concepts": {
     "person_generic": "A present person can point to self or another participant.",

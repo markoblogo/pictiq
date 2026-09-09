@@ -16,6 +16,8 @@ jobs:
         run: python tools/validate_lexicon.py
       - name: Validate vocabulary profiles
         run: python tools/validate_profiles.py
+      - name: Validate vocabulary classification
+        run: python tools/validate_vocabulary_classification.py
       - name: Validate SVG icons
         if: ${{ hashFiles('icons/svg/*.svg') != '' }}
         run: python tools/validate_svg.py

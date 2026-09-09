@@ -67,6 +67,27 @@ Examples:
 - **Hot / cold:** live physical context may help but is often unreliable. Standalone safety or comfort messages may need conventional heat/fire or cold cues; no asset is defined here.
 - **Light:** ambient light can be indicated live. An unattended lighting, visibility, or access instruction may need the concept encoded; no asset is defined here.
 
+#### Vocabulary architecture
+
+This section is normative. The accepted vocabulary architecture separates five layers:
+
+**Canonical Registry != Core Vocabulary != Standalone Core != Context Packs != Entity Registry.**
+
+
+1. **Canonical Registry** — every accepted ordinary reusable tile in `lexicon/icon-index.json`.
+2. **Core Vocabulary** — broad everyday primitives selected from the canonical registry.
+3. **Standalone Core** — concepts that often need explicit representation when the communicator, body, object, or live situation is absent.
+4. **Context Packs** — scenario-specific vocabulary and selections for domains such as Paris, nightlife, travel, retail, health, infrastructure, narrative, or machine interfaces.
+5. **Entity Registry** — scoped visual proper names in `entities/`; entity symbols are not ordinary lexical icons and MUST NOT be counted as Core vocabulary.
+
+> Canonical does not mean Core.
+
+> Complexity belongs to the context that requires it, not to Core.
+
+Vocabulary generality and communication surface are independent axes. Generality is classified as `MECHANISM`, `CORE`, `STANDALONE_CORE`, `CONTEXTUAL`, or `SPECIALIZED`. Communication surface is classified as `EMBODIED` or `STANDALONE`. Profiles select vocabulary for a surface; they do not redefine canonical meaning or turn every selected tile into Core.
+
+The authoritative machine-readable classification is [`../lexicon/vocabulary-classification.json`](../lexicon/vocabulary-classification.json), with a human-readable mirror in [Vocabulary Classification](VOCABULARY_CLASSIFICATION.md). `icon-index.json` remains the semantic registry; classification metadata MUST NOT duplicate or rewrite lexical meaning.
+
 #### Absence states
 
 An absent lexical equivalent MUST NOT be treated automatically as a protocol defect. Gap analysis SHOULD classify the intended use with one or more of these states:
@@ -233,24 +254,34 @@ A recognizer should:
 - reconstruct token order for Phrase Line Mode
 - treat grid mode as unordered keywords unless pack-specific rules apply
 
-## 7. Dictionaries and packs
-### 7.1 Core protocol
-- Core covers universal high-frequency human needs and concepts that are hard to replace with gestures.
-- Core does NOT include fixed negations.
+## 7. Dictionaries, profiles, and packs
 
-### 7.2 Context protocols
-Context packs extend vocabulary for a scenario (cities, sports, business events, vegan/allergy packs, etc.).
-Context packs may include fixed negations.
-Each context pack:
-- adds context-specific icons,
-- recommends a subset of core icons.
+### 7.1 Canonical registry
 
-### 7.3 Personal and corporate protocols
+The canonical registry contains every accepted ordinary reusable tile. It is not identical to Core vocabulary. A canonical tile may be Core, Standalone Core, Contextual, Specialized, or a protocol Mechanism.
+
+### 7.2 Core vocabulary
+
+Core covers broad, high-frequency human needs and concepts that are hard to replace reliably with gestures across many contexts. Core does NOT include fixed negations and MUST NOT absorb domain complexity merely because a tile is canonical.
+
+### 7.3 Profiles
+
+Profiles select useful subsets of the canonical registry for a communication surface such as Embodied or Standalone Communication. A Standalone profile may include Standalone Core and contextual tiles needed by durable surfaces; that selection does not make every selected tile ordinary Core.
+
+### 7.4 Context protocols
+
+Context packs extend or select vocabulary for a scenario (cities, sports, business events, vegan/allergy packs, narrative packs, machine-interface packs, etc.). Context packs may include fixed negations where the context requires them. Each context pack:
+- adds or selects context-specific icons,
+- recommends a subset of canonical and Core icons,
+- records why context complexity belongs in that pack instead of Core.
+
+### 7.5 Personal and corporate protocols
+
 Personal/corporate packs are allowed and may include:
 - fixed negations,
 - interest/needs-specific icons,
-- unique icons (if no synonym exists and protocol rules are met),
-- proper names.
+- unique icons or scoped entity symbols if no synonym exists and protocol rules are met,
+- proper names under the entity-symbol rules.
 
 ## 8. Proper names and entity symbols
 - Proper names are not Core lexical words. Plain text used as a name remains outside the tile system.

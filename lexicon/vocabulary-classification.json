@@ -1,0 +1,957 @@
+{
+  "schema_version": "0.1.0",
+  "status": "ACCEPTED VOCABULARY ARCHITECTURE CLASSIFICATION SOURCE OF TRUTH",
+  "canonical_lexicon": "lexicon/icon-index.json",
+  "ordinary_canonical_icon_count": 75,
+  "entity_registry": "entities/entity-index.json",
+  "entity_registry_policy": "Entity symbols are excluded from ordinary vocabulary classification.",
+  "principles": [
+    "Canonical does not mean Core.",
+    "Complexity belongs to the context that requires it, not to Core."
+  ],
+  "axes": {
+    "vocabulary_generality": [
+      "MECHANISM",
+      "CORE",
+      "STANDALONE_CORE",
+      "CONTEXTUAL",
+      "SPECIALIZED"
+    ],
+    "communication_surface": [
+      "EMBODIED",
+      "STANDALONE"
+    ]
+  },
+  "controlled_values": {
+    "primary_role": [
+      "MECHANISM",
+      "CORE",
+      "STANDALONE_CORE",
+      "CONTEXTUAL",
+      "SPECIALIZED"
+    ],
+    "relevance": [
+      "HIGH",
+      "MEDIUM",
+      "LOW"
+    ],
+    "confidence": [
+      "HIGH",
+      "MEDIUM",
+      "LOW"
+    ],
+    "secondary_contexts": [
+      "BODY",
+      "CITY",
+      "COMMUNICATION",
+      "CULTURE",
+      "EVALUATION",
+      "EVERYDAY",
+      "FOOD",
+      "HEALTH",
+      "INFRASTRUCTURE",
+      "LEGAL",
+      "LEISURE",
+      "MACHINE_INTERFACE",
+      "MEDIA",
+      "NATURE",
+      "NAVIGATION",
+      "NIGHTLIFE",
+      "PARIS",
+      "PAYMENT",
+      "PEOPLE",
+      "PERCEPTION",
+      "QUANTITY",
+      "RELATION",
+      "RETAIL",
+      "SAFETY",
+      "SOCIAL",
+      "SPECIALIZED",
+      "STANDALONE",
+      "TECH",
+      "TIME",
+      "TRANSPORT",
+      "TRAVEL"
+    ]
+  },
+  "entries": [
+    {
+      "id": "punct_question",
+      "primary_role": "MECHANISM",
+      "secondary_contexts": [
+        "EVERYDAY",
+        "COMMUNICATION"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "punct_exclaim",
+      "primary_role": "MECHANISM",
+      "secondary_contexts": [
+        "EVERYDAY",
+        "SAFETY"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "logic_yes",
+      "primary_role": "MECHANISM",
+      "secondary_contexts": [
+        "EVERYDAY",
+        "COMMUNICATION"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "logic_no",
+      "primary_role": "MECHANISM",
+      "secondary_contexts": [
+        "EVERYDAY",
+        "SAFETY",
+        "COMMUNICATION"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "qual_good",
+      "primary_role": "MECHANISM",
+      "secondary_contexts": [
+        "EVERYDAY",
+        "EVALUATION"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "qual_bad",
+      "primary_role": "MECHANISM",
+      "secondary_contexts": [
+        "EVERYDAY",
+        "EVALUATION"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "time",
+      "primary_role": "CORE",
+      "secondary_contexts": [
+        "EVERYDAY",
+        "TRAVEL"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "state_hot",
+      "primary_role": "CORE",
+      "secondary_contexts": [
+        "EVERYDAY",
+        "SAFETY"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "state_cold",
+      "primary_role": "CORE",
+      "secondary_contexts": [
+        "EVERYDAY",
+        "SAFETY"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "person_generic",
+      "primary_role": "STANDALONE_CORE",
+      "secondary_contexts": [
+        "STANDALONE",
+        "PEOPLE"
+      ],
+      "embodied_relevance": "LOW",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH",
+      "note": "Standalone Core because durable messages often need an explicit human participant."
+    },
+    {
+      "id": "qty_1",
+      "primary_role": "MECHANISM",
+      "secondary_contexts": [
+        "EVERYDAY",
+        "QUANTITY"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "qty_2",
+      "primary_role": "MECHANISM",
+      "secondary_contexts": [
+        "EVERYDAY",
+        "QUANTITY"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "qty_5",
+      "primary_role": "MECHANISM",
+      "secondary_contexts": [
+        "EVERYDAY",
+        "QUANTITY"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "qty_plus",
+      "primary_role": "MECHANISM",
+      "secondary_contexts": [
+        "EVERYDAY",
+        "QUANTITY"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "qty_minus",
+      "primary_role": "MECHANISM",
+      "secondary_contexts": [
+        "EVERYDAY",
+        "QUANTITY"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "money_coins",
+      "primary_role": "CORE",
+      "secondary_contexts": [
+        "EVERYDAY",
+        "PAYMENT"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "money_card",
+      "primary_role": "CORE",
+      "secondary_contexts": [
+        "EVERYDAY",
+        "PAYMENT"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "money_atm_bank",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "PAYMENT",
+        "TRAVEL"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "comm_wifi",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "COMMUNICATION",
+        "TRAVEL"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "comm_phone",
+      "primary_role": "CORE",
+      "secondary_contexts": [
+        "COMMUNICATION",
+        "EVERYDAY"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "power_plug",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "TECH",
+        "TRAVEL",
+        "INFRASTRUCTURE",
+        "EVERYDAY"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH",
+      "note": "Contextual infrastructure/charging concept; not universal Core."
+    },
+    {
+      "id": "power_energy",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "TECH",
+        "SAFETY",
+        "INFRASTRUCTURE",
+        "EVERYDAY"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH",
+      "note": "Contextual electricity/energy concept; not ordinary Core and not narrow specialized jargon."
+    },
+    {
+      "id": "need_toilet",
+      "primary_role": "CORE",
+      "secondary_contexts": [
+        "EVERYDAY",
+        "TRAVEL"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "need_water",
+      "primary_role": "CORE",
+      "secondary_contexts": [
+        "EVERYDAY",
+        "TRAVEL"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "need_food",
+      "primary_role": "CORE",
+      "secondary_contexts": [
+        "EVERYDAY",
+        "TRAVEL"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "need_bar",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "NIGHTLIFE",
+        "TRAVEL"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "safety_medical",
+      "primary_role": "CORE",
+      "secondary_contexts": [
+        "SAFETY",
+        "HEALTH",
+        "TRAVEL"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "safety_police",
+      "primary_role": "CORE",
+      "secondary_contexts": [
+        "SAFETY",
+        "TRAVEL"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "place_hotel",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "TRAVEL",
+        "CITY"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "place_shop",
+      "primary_role": "CORE",
+      "secondary_contexts": [
+        "EVERYDAY",
+        "RETAIL",
+        "TRAVEL"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH",
+      "note": "Accepted as Core because shopping is a broad everyday/travel need."
+    },
+    {
+      "id": "place_landmark_park",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "CITY",
+        "TRAVEL",
+        "LEISURE"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "place_gas",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "TRANSPORT",
+        "TRAVEL"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "service_tools",
+      "primary_role": "CORE",
+      "secondary_contexts": [
+        "EVERYDAY",
+        "INFRASTRUCTURE"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "MEDIUM",
+      "note": "Kept in Core for now; repair/help contexts are broad but should be reviewed with use evidence."
+    },
+    {
+      "id": "move_feet",
+      "primary_role": "CORE",
+      "secondary_contexts": [
+        "EVERYDAY",
+        "TRANSPORT"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "move_taxi",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "TRANSPORT",
+        "TRAVEL"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "move_car",
+      "primary_role": "CORE",
+      "secondary_contexts": [
+        "EVERYDAY",
+        "TRANSPORT"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH",
+      "note": "Accepted as Core because car access and driving/riding are broad practical needs."
+    },
+    {
+      "id": "move_public",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "TRANSPORT",
+        "CITY",
+        "TRAVEL"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH",
+      "note": "Contextual transport/city/travel concept."
+    },
+    {
+      "id": "place_disco",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "NIGHTLIFE",
+        "LEISURE"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "paris_eiffel_tower",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "PARIS",
+        "CITY",
+        "TRAVEL",
+        "CULTURE"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "paris_arc_de_triomphe",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "PARIS",
+        "CITY",
+        "TRAVEL",
+        "CULTURE"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "paris_louvre_pyramid",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "PARIS",
+        "CITY",
+        "TRAVEL",
+        "CULTURE"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "paris_notre_dame",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "PARIS",
+        "CITY",
+        "TRAVEL",
+        "CULTURE"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "paris_sacre_coeur",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "PARIS",
+        "CITY",
+        "TRAVEL",
+        "CULTURE"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "paris_moulin_windmill",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "PARIS",
+        "NIGHTLIFE",
+        "CULTURE"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "paris_croissant",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "PARIS",
+        "FOOD",
+        "CULTURE"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH",
+      "note": "Paris-specific food/culture symbol in the Paris context, not generic food Core."
+    },
+    {
+      "id": "move_boat",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "TRANSPORT",
+        "TRAVEL"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "place_catacombs",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "CITY",
+        "TRAVEL",
+        "LEISURE"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "place_theme_park",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "LEISURE",
+        "TRAVEL"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "place_airport",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "TRANSPORT",
+        "TRAVEL"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "place_art_gallery",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "CULTURE",
+        "LEISURE",
+        "TRAVEL"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "place_fashion_shopping",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "RETAIL",
+        "CULTURE",
+        "TRAVEL"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "item_cigarette",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "NIGHTLIFE",
+        "RETAIL",
+        "HEALTH",
+        "LEGAL"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH",
+      "note": "Contextual nightlife/retail/health/legal item, not a specialized technical concept."
+    },
+    {
+      "id": "item_cannabis",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "NIGHTLIFE",
+        "RETAIL",
+        "HEALTH",
+        "LEGAL"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH",
+      "note": "Contextual nightlife/retail/health/legal item, not a specialized technical concept."
+    },
+    {
+      "id": "drink_beer",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "NIGHTLIFE",
+        "FOOD",
+        "LEGAL"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "love_heart",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "SOCIAL",
+        "EVERYDAY"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "item_condom",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "HEALTH",
+        "SAFETY",
+        "NIGHTLIFE",
+        "TRAVEL"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "MEDIUM",
+      "note": "Contextual for now; safety/health/nightlife/travel use needs future evidence before Core."
+    },
+    {
+      "id": "nature_flower",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "NATURE",
+        "SOCIAL",
+        "LEISURE"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "eye_look",
+      "primary_role": "STANDALONE_CORE",
+      "secondary_contexts": [
+        "STANDALONE",
+        "PERCEPTION"
+      ],
+      "embodied_relevance": "LOW",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "item_clothing",
+      "primary_role": "STANDALONE_CORE",
+      "secondary_contexts": [
+        "STANDALONE",
+        "EVERYDAY"
+      ],
+      "embodied_relevance": "LOW",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "comm_speak",
+      "primary_role": "STANDALONE_CORE",
+      "secondary_contexts": [
+        "STANDALONE",
+        "COMMUNICATION"
+      ],
+      "embodied_relevance": "LOW",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "comm_sound",
+      "primary_role": "STANDALONE_CORE",
+      "secondary_contexts": [
+        "STANDALONE",
+        "COMMUNICATION"
+      ],
+      "embodied_relevance": "LOW",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "media_text",
+      "primary_role": "STANDALONE_CORE",
+      "secondary_contexts": [
+        "STANDALONE",
+        "MEDIA"
+      ],
+      "embodied_relevance": "LOW",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "media_image",
+      "primary_role": "STANDALONE_CORE",
+      "secondary_contexts": [
+        "STANDALONE",
+        "MEDIA"
+      ],
+      "embodied_relevance": "LOW",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "nature_sun",
+      "primary_role": "STANDALONE_CORE",
+      "secondary_contexts": [
+        "STANDALONE",
+        "NATURE",
+        "TIME"
+      ],
+      "embodied_relevance": "LOW",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "state_light",
+      "primary_role": "STANDALONE_CORE",
+      "secondary_contexts": [
+        "STANDALONE",
+        "INFRASTRUCTURE"
+      ],
+      "embodied_relevance": "LOW",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "food_produce",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "FOOD",
+        "RETAIL",
+        "EVERYDAY"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "MEDIUM",
+      "note": "Food/retail subcategory; useful in standalone contexts but narrower than food Core."
+    },
+    {
+      "id": "food_bakery",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "FOOD",
+        "RETAIL",
+        "EVERYDAY"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "MEDIUM",
+      "note": "Food/retail subcategory; useful in standalone contexts but narrower than food Core."
+    },
+    {
+      "id": "rel_greater",
+      "primary_role": "MECHANISM",
+      "secondary_contexts": [
+        "NAVIGATION",
+        "RELATION"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "rel_lesser",
+      "primary_role": "MECHANISM",
+      "secondary_contexts": [
+        "NAVIGATION",
+        "RELATION"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "body_mouth",
+      "primary_role": "STANDALONE_CORE",
+      "secondary_contexts": [
+        "STANDALONE",
+        "BODY",
+        "FOOD"
+      ],
+      "embodied_relevance": "LOW",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "rel_here",
+      "primary_role": "MECHANISM",
+      "secondary_contexts": [
+        "NAVIGATION",
+        "RELATION"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "rel_up",
+      "primary_role": "MECHANISM",
+      "secondary_contexts": [
+        "NAVIGATION",
+        "RELATION"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "rel_down",
+      "primary_role": "MECHANISM",
+      "secondary_contexts": [
+        "NAVIGATION",
+        "RELATION"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "nature_moon",
+      "primary_role": "STANDALONE_CORE",
+      "secondary_contexts": [
+        "STANDALONE",
+        "NATURE",
+        "TIME"
+      ],
+      "embodied_relevance": "LOW",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "tech_ai",
+      "primary_role": "SPECIALIZED",
+      "secondary_contexts": [
+        "TECH",
+        "SPECIALIZED",
+        "MACHINE_INTERFACE"
+      ],
+      "embodied_relevance": "LOW",
+      "standalone_relevance": "LOW",
+      "confidence": "HIGH",
+      "note": "Specialized machine-interface concept."
+    }
+  ],
+  "canonical_lexicon_version": "0.5.0"
+}

@@ -6,6 +6,11 @@ This project uses milestone-style tags. The `-infra` suffix indicates a pre-icon
 
 ## Unreleased
 
+### Vocabulary and phrase architecture
+- Added `lexicon/vocabulary-classification.json` as the machine-readable source of truth for architectural role classification across all 75 ordinary canonical IDs, explicitly excluding the 6 entity-symbol examples.
+- Added `spec/VOCABULARY_CLASSIFICATION.md` and validation for the accepted distinction between Canonical Registry, Core Vocabulary, Standalone Core, Context Packs, Specialized vocabulary, Mechanisms, and Entity Registry.
+- Formalized phrase architecture in `spec/GRAMMAR.md`: bare tile / zero-intent, bare adjacency as contextual association, postfix scope for qualifiers/quantities/negation, additive numeric quantity expressions, relational-orientation operators, `rel_here` as reference, and one proposition per phrase line.
+
 ### Accepted canonical lexicon work
 - Accepted Standalone Batch C as canonical: `body_mouth`, `rel_here`, `rel_up`, `rel_down`, and `nature_moon`.
 - Bumped ordinary canonical lexicon metadata to `0.5.0`; the ordinary lexicon now has 75 icons.

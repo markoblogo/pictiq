@@ -110,6 +110,20 @@ One of the following renderers must be available:
 To render black/white variants reliably, SVGs should use `currentColor` for `fill`/`stroke`.
 The renderer injects `style=\"color: #000000\"` (black) or `style=\"color: #ffffff\"` (white) onto the root `<svg>`.
 
+## validate_vocabulary_classification.py
+
+Validates `lexicon/vocabulary-classification.json` against the ordinary canonical lexicon and separate entity registry:
+- every ordinary canonical ID appears exactly once
+- no entity-symbol IDs appear in vocabulary classification
+- role, relevance, confidence, and context values come from controlled lists
+- required classification fields are present
+
+Run:
+
+```bash
+python3 tools/validate_vocabulary_classification.py
+```
+
 ## validate_svg.py
 
 Validates canonical icons in `icons/svg/` (ignores `.gitkeep`):

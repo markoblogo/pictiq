@@ -8,7 +8,8 @@
 - Standalone Batch A and approved Batch B: released in `v1.0.2` after sequential structural and perceptual gates.
 - Standalone Batch C: complete and human-accepted; ordinary canonical lexicon is 75 icons.
 - Entity-symbol pilot: complete and human-accepted as six official Pictiq project examples in `entities/entity-index.json`; entity growth is separate from ordinary lexical growth.
-- Current architecture has three scaling layers: canonical lexicon (general primitives), profiles/context packs (communication-context selection and extension), and entity registry (specific named entities / visual proper names).
+- Vocabulary and phrase architecture classification: complete after accepted post-v1.0.2 migration; see [Vocabulary Classification](spec/VOCABULARY_CLASSIFICATION.md) and [Grammar](spec/GRAMMAR.md).
+- Current architecture has five scaling layers: canonical registry, Core vocabulary, Standalone Core, context packs/profiles, and entity registry (specific named entities / visual proper names).
 - Next sequence: prototype parametric COLOR; then run the Road Signs × Pictiq stress test, font/rendering work, translation experiments, and a web-navigation adapter. Evaluation does not authorize automatic implementation or broad lexicon expansion.
 - Context packs, profiles, physical layouts, and experiments: active
 

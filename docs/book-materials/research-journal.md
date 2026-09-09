@@ -487,3 +487,29 @@ Post-publication task validation, Road Signs × Pictiq stress testing, and any f
 ### Possible future book use
 
 A concise case study showing how a visual protocol decides between body-supplied meaning, standalone explicitness, operators, and lexical tiles.
+
+## 2026-09-10 — Vocabulary architecture classification
+
+### Starting question
+
+How should Pictiq classify accepted icons after the ordinary canonical registry reached 75 IDs and entity symbols became a separate accepted pilot?
+
+### What happened
+
+The project formalized a source-of-truth vocabulary classification file and a human-readable architecture document. The migration separated Canonical Registry, Core Vocabulary, Standalone Core, Context Packs, Specialized vocabulary, Mechanisms, and Entity Registry without changing canonical IDs, icon morphology, or accepted lexical semantics.
+
+### Evidence
+
+[Vocabulary Classification](../../spec/VOCABULARY_CLASSIFICATION.md), [`lexicon/vocabulary-classification.json`](../../lexicon/vocabulary-classification.json), and [Grammar](../../spec/GRAMMAR.md).
+
+### Decision / outcome
+
+“Canonical does not mean Core” became explicit architecture. Contextual and specialized complexity now belongs in the context that requires it, while profiles remain communication-surface selections rather than separate icon libraries.
+
+### Why it matters
+
+The distinction lets Pictiq grow through evidence-led context packs and entity namespaces while preserving a small Core vocabulary and clear protocol mechanics.
+
+### Possible future book use
+
+Use as a design-governance case study about how a visual protocol can scale without treating every accepted symbol as universal vocabulary.
