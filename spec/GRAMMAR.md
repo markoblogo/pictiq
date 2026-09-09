@@ -68,8 +68,12 @@ Examples:
 - `place_shop + comm_phone` → phone/electronics shop
 - `place_shop + need_food` → grocery
 - `move_car + service_tools` → car repair/service
+- `place_hotel + qual_good` → hotel evaluated as good / satisfactory
+- `need_food + qual_bad` → food evaluated as bad / unsatisfactory
 
-Proposed GOOD/BAD, LARGE/SMALL, parametric COLOR, and entity-symbol mechanisms are classified in [Protocol §1.2](PROTOCOL.md#12-communication-primitive-classes) but are not current grammar tokens.
+`qual_good` and `qual_bad` are postfix evaluation modifiers. They qualify a base concept only; they do not encode every emotional or moral meaning of “good” and “bad.” `logic_yes` means confirmation / acceptance / open / yes, while `qual_good` means positive evaluation. `logic_no` means negation / prohibition / closed / no, while `qual_bad` means negative evaluation.
+
+Proposed LARGE/SMALL, parametric COLOR, and entity-symbol mechanisms are classified in [Protocol §1.2](PROTOCOL.md#12-communication-primitive-classes) but are not current grammar tokens.
 
 ## 8. Phrase length guidance
 - Maximum allowed phrase length: 5 icons.

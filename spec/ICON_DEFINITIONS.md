@@ -174,6 +174,20 @@ Direction: top-right → bottom-left. Thickness: 2–3× the frame stroke.
 **Avoid:** circles, letter X, double-cross (unless introduced later as a separate icon).  
 **Examples:** `money_card + logic_no`, `need_food + logic_no`.
 
+### qual_good — good / positive / acceptable / satisfactory
+**Visual:** A thick upward/smiling curve with rounded ends; no face, eyes, or text.
+**Meaning:** practical positive evaluation of the preceding base tile.
+**Use:** postfix qualifier `X + qual_good`.
+**Avoid:** confirmation/YES, general emotion, or unrestricted moral judgment.
+**Examples:** `need_food + qual_good`, `place_hotel + qual_good`.
+
+### qual_bad — bad / poor / unpleasant / unsatisfactory
+**Visual:** The inverse thick downward/frowning curve with rounded ends; no face, eyes, or text.
+**Meaning:** practical negative evaluation of the preceding base tile.
+**Use:** postfix qualifier `X + qual_bad`.
+**Avoid:** negation/NO, general emotion, or unrestricted moral judgment.
+**Examples:** `need_food + qual_bad`, `place_hotel + qual_bad`.
+
 ### Fixed negations (context packs only)
 **Visual:** Any object icon with the same `logic_no` slash over the object (same direction, same character).  
 **Meaning:** stable, one-tile restrictions (“no meat”, “no alcohol”, “no nuts”, etc.).  

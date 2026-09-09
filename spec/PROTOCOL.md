@@ -93,7 +93,7 @@ Modifiers qualify another tile; operators alter how another tile or phrase is in
 
 > Do not create a word when a modifier will do.
 
-Evaluation and truth are distinct axes. `logic_yes` and `logic_no` MUST NOT be overloaded as generic GOOD and BAD. Future GOOD/POSITIVE and BAD/NEGATIVE modifiers may qualify food, hotel, or another base concept; their form, IDs, and acceptance status remain open. Likewise, physical LARGE/SMALL must not be equated with `qty_plus`/`qty_minus`; embodied users can show scale with their hands, while standalone use should investigate reusable scale modifiers.
+Evaluation and truth are distinct axes. `logic_yes` and `logic_no` MUST NOT be overloaded as generic GOOD and BAD. Canonical `qual_good` and `qual_bad` modifiers may qualify food, hotel, or another base concept as positively or negatively evaluated; they do not encode every emotional or moral sense of “good” and “bad.” Likewise, physical LARGE/SMALL must not be equated with `qty_plus`/`qty_minus`; embodied users can show scale with their hands, while standalone use should investigate reusable scale modifiers.
 
 As a research example, Toki Pona `mute` is better approximated compositionally as `qty_5 + qty_plus` than by `qty_5` alone. This observation defines no new mechanism.
 
