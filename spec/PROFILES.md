@@ -14,6 +14,6 @@ Context profiles can layer on either core profile: Paris shirt = Embodied + Pari
 
 ## Standalone Profile
 
-[`profiles/standalone-core-v0.1.json`](../profiles/standalone-core-v0.1.json) contains the current practical standalone core and records missing candidates without inventing IDs. It is incomplete until Batch B concepts and a parametric COLOR prototype are evaluated. Entity symbols remain scoped context or narrative mechanisms.
+[`profiles/standalone-core-v0.1.json`](../profiles/standalone-core-v0.1.json) contains the current practical standalone core and records missing candidates without inventing IDs. The Batch B entries are provisional until human visual acceptance; the profile remains incomplete until the batch and a parametric COLOR prototype are evaluated. Entity symbols remain scoped context or narrative mechanisms.
 
 The JSON files reference IDs in [`lexicon/icon-index.json`](../lexicon/icon-index.json); they do not duplicate SVGs or create `icons/embodied/` and `icons/standalone/` trees.

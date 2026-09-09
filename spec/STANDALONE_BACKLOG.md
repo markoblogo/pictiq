@@ -77,6 +77,10 @@ Clothing, produce, and bakery/bread.
 
 COLOR remains a separate parametric prototype, and entity symbols remain a separate scoped experiment.
 
+#### Batch B local implementation for review
+
+The supplied approved reference sheet produced these provisional local IDs for human visual review: `eye_look`, `item_clothing`, `comm_speak`, `comm_sound`, `media_text`, `media_image`, `nature_sun`, `state_light`, `food_produce`, `food_bakery`, `rel_greater`, and `rel_lesser`. They are **IMPLEMENTED LOCALLY / HUMAN REVIEW PENDING** and must not be treated as canonical until the acceptance gate is complete.
+
 #### Generic building / home — lexical-tile design research
 
 - **Need:** generic shelter or destination beyond hotel, shop, airport, and landmark tiles.
@@ -141,6 +145,8 @@ This backlog does not decide the number of concepts or icons.
 - **Standalone direction:** reusable scale modifiers using conventions such as outward/inward arrows, expansion/contraction, or directional size cues.
 - **Boundary:** `qty_plus` and `qty_minus` mean more/less and are not physical size.
 - **Status:** **MODIFIER RESEARCH**.
+
+For Batch B review, the supplied morphology is `>` for LARGE/greater and `<` for SMALL/lesser. The IDs are provisional `rel_greater` and `rel_lesser`; they are relational operators, not quantity synonyms.
 
 #### Parametric COLOR prototype
 

@@ -95,6 +95,8 @@ Modifiers qualify another tile; operators alter how another tile or phrase is in
 
 Evaluation and truth are distinct axes. `logic_yes` and `logic_no` MUST NOT be overloaded as generic GOOD and BAD. Canonical `qual_good` and `qual_bad` modifiers may qualify food, hotel, or another base concept as positively or negatively evaluated; they do not encode every emotional or moral sense of “good” and “bad.” Likewise, physical LARGE/SMALL must not be equated with `qty_plus`/`qty_minus`; embodied users can show scale with their hands, while standalone use should investigate reusable scale modifiers.
 
+The provisional relational operators `rel_greater` (`>`) and `rel_lesser` (`<`) compare larger/greater with smaller/lesser. They remain distinct from `qty_plus` and `qty_minus`, which request additional quantity or reduction. In a clearly navigational context they MAY also carry rightward or leftward direction; this contextual reading does not redefine either operator as a permanent direction token.
+
 As a research example, Toki Pona `mute` is better approximated compositionally as `qty_5 + qty_plus` than by `qty_5` alone. This observation defines no new mechanism.
 
 #### Parametric tiles

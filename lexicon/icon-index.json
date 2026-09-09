@@ -1152,6 +1152,114 @@
       ]
     },
     {
+      "id": "eye_look",
+      "type": "icon",
+      "category": "perception",
+      "meaning_en": "eye / look / see",
+      "aliases_en": ["eye", "look", "see", "visual attention"],
+      "tags_en": ["perception", "visual", "attention"],
+      "examples": ["eye_look + punct_question"]
+    },
+    {
+      "id": "item_clothing",
+      "type": "icon",
+      "category": "item",
+      "meaning_en": "clothing / garment",
+      "aliases_en": ["clothing", "clothes", "garment"],
+      "tags_en": ["item", "clothing"],
+      "examples": ["item_clothing + punct_question"]
+    },
+    {
+      "id": "comm_speak",
+      "type": "icon",
+      "category": "communication",
+      "meaning_en": "speak / communication / voice",
+      "aliases_en": ["speak", "talk", "voice", "communication"],
+      "tags_en": ["communication", "speech", "voice"],
+      "examples": ["comm_speak + punct_question"]
+    },
+    {
+      "id": "comm_sound",
+      "type": "icon",
+      "category": "communication",
+      "meaning_en": "sound / audio",
+      "aliases_en": ["sound", "audio", "audible"],
+      "tags_en": ["communication", "sound", "audio"],
+      "examples": ["comm_sound + logic_no"]
+    },
+    {
+      "id": "media_text",
+      "type": "icon",
+      "category": "media",
+      "meaning_en": "text / writing / document",
+      "aliases_en": ["text", "writing", "document"],
+      "tags_en": ["media", "text", "writing"],
+      "examples": ["media_text + punct_question"]
+    },
+    {
+      "id": "media_image",
+      "type": "icon",
+      "category": "media",
+      "meaning_en": "image / picture",
+      "aliases_en": ["image", "picture", "illustration", "photo"],
+      "tags_en": ["media", "image", "picture"],
+      "examples": ["media_image + punct_question"]
+    },
+    {
+      "id": "nature_sun",
+      "type": "icon",
+      "category": "nature",
+      "meaning_en": "sun / daylight",
+      "aliases_en": ["sun", "daylight", "day"],
+      "tags_en": ["nature", "sun", "daylight"],
+      "examples": ["nature_sun + punct_question"]
+    },
+    {
+      "id": "state_light",
+      "type": "icon",
+      "category": "state",
+      "meaning_en": "light / lighting / lamp",
+      "aliases_en": ["light", "lighting", "lamp"],
+      "tags_en": ["state", "light", "visibility"],
+      "examples": ["state_light + logic_no"]
+    },
+    {
+      "id": "food_produce",
+      "type": "icon",
+      "category": "food",
+      "meaning_en": "fresh produce",
+      "aliases_en": ["fruit", "vegetables", "produce"],
+      "tags_en": ["food", "produce", "fruit", "vegetables"],
+      "examples": ["need_food + food_produce"]
+    },
+    {
+      "id": "food_bakery",
+      "type": "icon",
+      "category": "food",
+      "meaning_en": "bread / bakery / baked goods",
+      "aliases_en": ["bread", "bakery", "baked goods"],
+      "tags_en": ["food", "bakery", "bread"],
+      "examples": ["place_shop + food_bakery"]
+    },
+    {
+      "id": "rel_greater",
+      "type": "operator",
+      "category": "relation",
+      "meaning_en": "greater than / larger than",
+      "aliases_en": [">", "greater", "larger", "more"],
+      "tags_en": ["relation", "comparison", "direction"],
+      "examples": ["OBJECT_A > OBJECT_B", "move_feet + rel_greater"]
+    },
+    {
+      "id": "rel_lesser",
+      "type": "operator",
+      "category": "relation",
+      "meaning_en": "less than / smaller than",
+      "aliases_en": ["<", "less", "smaller"],
+      "tags_en": ["relation", "comparison", "direction"],
+      "examples": ["OBJECT_A < OBJECT_B", "move_feet + rel_lesser"]
+    },
+    {
       "id": "tech_ai",
       "type": "icon",
       "category": "technology",

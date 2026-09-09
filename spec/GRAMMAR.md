@@ -73,7 +73,13 @@ Examples:
 
 `qual_good` and `qual_bad` are postfix evaluation modifiers. They qualify a base concept only; they do not encode every emotional or moral meaning of “good” and “bad.” `logic_yes` means confirmation / acceptance / open / yes, while `qual_good` means positive evaluation. `logic_no` means negation / prohibition / closed / no, while `qual_bad` means negative evaluation.
 
-Proposed LARGE/SMALL, parametric COLOR, and entity-symbol mechanisms are classified in [Protocol §1.2](PROTOCOL.md#12-communication-primitive-classes) but are not current grammar tokens.
+Parametric COLOR and entity-symbol mechanisms are classified in [Protocol §1.2](PROTOCOL.md#12-communication-primitive-classes) but are not current grammar tokens. `rel_greater` (`>`) and `rel_lesser` (`<`) are provisional relational operators described below.
+
+## 7.1 Relational and directional operators (provisional)
+
+`rel_greater` (`>`) and `rel_lesser` (`<`) compare adjacent concepts. In a form such as `OBJECT_A + rel_greater + OBJECT_B`, they can mean that A is larger, greater, or more than B; the interpretation is relational and contextual. They do not mean “give me more,” which remains `qty_plus`, and they do not replace `qty_minus` for reduction.
+
+In a clear navigation context, the same operators MAY indicate rightward (`move_feet + rel_greater`) or leftward (`move_feet + rel_lesser`). This is contextual direction, not a redefinition of LARGE as right or SMALL as left; a dedicated direction mechanism may still be preferable where ambiguity is dangerous.
 
 ## 8. Phrase length guidance
 - Maximum allowed phrase length: 5 icons.
