@@ -83,7 +83,7 @@ Pictiq uses five architectural classes. The class describes how meaning enters a
 
 #### Lexical tiles
 
-Lexical tiles represent reusable concepts that genuinely require explicit visual representation. Current examples include water, food, taxi, hotel, airport, medical help, and bar.
+Lexical tiles represent reusable concepts that genuinely require explicit visual representation. Current examples include water, food, a neutral person, taxi, hotel, airport, medical help, and bar.
 
 A lexical tile SHOULD be created only when the concept has independent Pictiq utility, embodiment and context do not replace it reliably in all required modes, composition or modification is insufficient, and it survives the vocabulary decision tree. A word in Toki Pona or another source language, or a translation gap by itself, MUST NOT justify a lexical tile.
 

@@ -148,6 +148,12 @@ move_public — primary: 🚌; alt: 🚆, 🚇
 
 All icons are framed tiles (rounded-square frame). Inner shapes are filled silhouettes using `currentColor`. No `<text>` elements in final SVGs; even `? ! + - I II IIIII` must be curves/paths.
 
+### person_generic — generic person / human participant
+**Visual:** An original neutral standing-human silhouette based on familiar public-information conventions: circular head, straight body, open arms, and separated legs.
+**Meaning:** a generic human participant when the person must remain explicit in standalone communication.
+**Avoid:** pronouns, named identity, gender, clothing, facial detail, or cultural markers.
+**Examples:** `person_generic + safety_medical`, `person_generic + move_feet`, `person_generic + place_hotel`. Their precise readings remain contextual under the existing composition grammar.
+
 ### punct_question — question
 **Visual:** A large question mark `?`, centered.  
 **Meaning:** where/how/is there/can I.  

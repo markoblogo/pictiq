@@ -142,6 +142,28 @@
       ]
     },
     {
+      "id": "person_generic",
+      "type": "icon",
+      "category": "people",
+      "meaning_en": "generic person / human participant",
+      "aliases_en": [
+        "person",
+        "human",
+        "participant",
+        "someone"
+      ],
+      "tags_en": [
+        "people",
+        "person",
+        "standalone"
+      ],
+      "examples": [
+        "person_generic + safety_medical",
+        "person_generic + move_feet",
+        "person_generic + place_hotel"
+      ]
+    },
+    {
       "id": "qty_1",
       "type": "icon",
       "category": "quantity",
