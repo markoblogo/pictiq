@@ -1,7 +1,7 @@
 # Portable Visual Communication Verification Matrix
 
-> **Status:** Research QA matrix  
-> **Checked:** 2026-09-09  
+> **Status:** Research QA matrix
+> **Checked:** 2026-09-09
 > **Scope:** Major supplied claims from the portable visual communication precedent study.
 
 | Claim | Case | Status | Best source | Notes |

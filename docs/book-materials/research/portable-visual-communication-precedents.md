@@ -1,8 +1,8 @@
 # Portable Visual Communication Precedents
 
-> **Status:** Research source / case-study archive  
-> **Added:** 2026-09-09  
-> **Relationship to Pictiq:** Comparative precedent research, not protocol specification.  
+> **Status:** Research source / case-study archive
+> **Added:** 2026-09-09
+> **Relationship to Pictiq:** Comparative precedent research, not protocol specification.
 > **Terminology:** These systems are treated as precedents, analogues, and adjacent systems, not as direct ancestors of Pictiq and not merely as competitors.
 
 ## Why these cases matter

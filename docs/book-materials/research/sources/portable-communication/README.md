@@ -1,7 +1,7 @@
 # Portable Communication Source Archive
 
-> **Status:** Source index, not a copy archive  
-> **Accessed:** 2026-09-09  
+> **Status:** Source index, not a copy archive
+> **Accessed:** 2026-09-09
 > **Rule:** Do not download copyrighted books, screenshots, photographs, proprietary symbols, or page layouts into the repository.
 
 ## Point It

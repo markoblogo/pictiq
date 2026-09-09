@@ -1,7 +1,7 @@
 # Portable Visual Communication Market Radar
 
-> **Status:** Dated market snapshot  
-> **Purpose:** Time-sensitive product metadata for future publishing and product research.  
+> **Status:** Dated market snapshot
+> **Purpose:** Time-sensitive product metadata for future publishing and product research.
 > **Rule:** Append future snapshots; do not rewrite older observations unless correcting an error.
 
 ## 2026-09-09 snapshot

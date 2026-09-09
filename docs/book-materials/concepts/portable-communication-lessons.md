@@ -1,7 +1,7 @@
 # Portable Communication Lessons
 
-> **Status:** Concept note  
-> **Added:** 2026-09-09  
+> **Status:** Concept note
+> **Added:** 2026-09-09
 > **Source:** [Portable Visual Communication Precedents](../research/portable-visual-communication-precedents.md)
 
 ## Photography vs abstraction
