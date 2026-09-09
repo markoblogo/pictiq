@@ -22,6 +22,13 @@ DEFAULT_INTERNAL_PADDING = 1.0
 # Per-icon overrides for visual balance.
 PADDING_OVERRIDES: dict[str, float] = {
     "logic_yes": 0.0,
+    # Batch C symbols are intentionally scaled closer to the safe-area boundary
+    # after visual review; they still remain inside the rounded-square frame.
+    "body_mouth": -1.0,
+    "rel_here": -1.0,
+    "rel_up": -1.0,
+    "rel_down": -1.0,
+    "nature_moon": -1.0,
 }
 
 
