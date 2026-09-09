@@ -1,8 +1,8 @@
 # Standalone Communication Backlog
 
-Status: **PLANNING AND IMPLEMENTATION RECORD** for the unreleased v1.0.2 specification.
+Status: **IMPLEMENTATION RECORD** for released v1.0.2; remaining entries are future research.
 
-An item becomes canonical only through the [vocabulary decision tree](PROTOCOL.md#decision-tree), structural validation, the [Visual QA Protocol](ICON_SPEC.md#visual-qa-protocol), and explicit acceptance. Batch A records the first six implementations to complete that path; all other entries remain non-canonical proposals.
+An item becomes canonical only through the [vocabulary decision tree](PROTOCOL.md#decision-tree), structural validation, the [Visual QA Protocol](ICON_SPEC.md#visual-qa-protocol), and explicit acceptance. Batch A and the accepted Batch B record the implementations that completed that path; remaining entries are non-canonical proposals.
 
 ## Architectural priorities
 
@@ -77,9 +77,9 @@ Clothing, produce, and bakery/bread.
 
 COLOR remains a separate parametric prototype, and entity symbols remain a separate scoped experiment.
 
-#### Batch B local implementation for review
+#### Batch B accepted implementation
 
-The supplied approved reference sheet produced these provisional local IDs for human visual review: `eye_look`, `item_clothing`, `comm_speak`, `comm_sound`, `media_text`, `media_image`, `nature_sun`, `state_light`, `food_produce`, `food_bakery`, `rel_greater`, and `rel_lesser`. They are **IMPLEMENTED LOCALLY / HUMAN REVIEW PENDING** and must not be treated as canonical until the acceptance gate is complete.
+The supplied approved reference sheet produced these accepted IDs: `eye_look`, `item_clothing`, `comm_speak`, `comm_sound`, `media_text`, `media_image`, `nature_sun`, `state_light`, `food_produce`, `food_bakery`, `rel_greater`, and `rel_lesser`. They are **IMPLEMENTED / CANONICAL in v1.0.2** after structural and human visual acceptance.
 
 #### Generic building / home — lexical-tile design research
 
@@ -95,26 +95,26 @@ This backlog does not decide the number of concepts or icons.
 - **Potential scope:** fruit, vegetables, or fresh produce for markets, supermarkets, and food preference/context.
 - **Visual direction:** a small composition of recognizable produce silhouettes, potentially a pear/apple, banana, and round fruit or vegetable.
 - **Boundary:** not automatically vegan; exact objects remain open.
-- **Status:** **POSSIBLE**.
+- **Status:** **IMPLEMENTED / CANONICAL** as `food_produce` in v1.0.2.
 
 #### Bakery / bread — lexical-tile candidate
 
 - **Potential scope:** bread, bakery, and baked goods; generic grain remains excluded unless future use establishes it.
 - **Visual direction:** a recognizable mix such as baguette, loaf, croissant, pretzel, or pastry.
 - **Reference:** existing experience with `paris_croissant` may inform recognition, but the candidate must be universal and not Paris-specific.
-- **Status:** **POSSIBLE**.
+- **Status:** **IMPLEMENTED / CANONICAL** as `food_bakery` in v1.0.2.
 
 #### Eye / visual attention — lexical-tile candidate
 
 - **Embodied equivalent:** point to the eyes or direct gaze.
 - **Standalone direction:** two eyes or another recognizable visual-attention representation.
-- **Status:** **POSSIBLE**.
+- **Status:** **IMPLEMENTED / CANONICAL** as `eye_look` in v1.0.2.
 
 #### Clothing — lexical-tile candidate
 
 - **Embodied equivalent:** point to or pull clothing.
 - **Standalone direction:** shirt or T-shirt on a hanger with a clearly recognizable hook.
-- **Status:** **POSSIBLE**.
+- **Status:** **IMPLEMENTED / CANONICAL** as `item_clothing` in v1.0.2.
 
 #### Communication / speaking — lexical-tile candidate
 
@@ -122,20 +122,20 @@ This backlog does not decide the number of concepts or icons.
 - **Standalone direction:** a head or profile with mouth and outward emission marks.
 - **Potential scope:** speak, communication, call out, or voice.
 - **Boundary:** shouting and singing must not be assumed equivalent.
-- **Status:** **POSSIBLE**.
+- **Status:** **IMPLEMENTED / CANONICAL** as `comm_speak` in v1.0.2.
 
 #### Light — lexical-tile candidate
 
 - **Visual direction:** classic incandescent light bulb with separated radiating marks.
 - **Potential scope:** light, lighting, or lamp.
-- **Status:** **POSSIBLE**.
+- **Status:** **IMPLEMENTED / CANONICAL** as `state_light` in v1.0.2.
 
 #### Sun / day — lexical-tile candidate
 
 - **Visual direction:** circle with radiating rays.
 - **Potential scope:** sun or daylight, and day only in an established context.
 - **Boundary:** keep separate from generic light until testing supports a relationship.
-- **Status:** **POSSIBLE**.
+- **Status:** **IMPLEMENTED / CANONICAL** as `nature_sun` in v1.0.2.
 
 ### Batch C — protocol mechanisms
 
@@ -144,9 +144,9 @@ This backlog does not decide the number of concepts or icons.
 - **Embodied equivalent:** show scale with hands or body.
 - **Standalone direction:** reusable scale modifiers using conventions such as outward/inward arrows, expansion/contraction, or directional size cues.
 - **Boundary:** `qty_plus` and `qty_minus` mean more/less and are not physical size.
-- **Status:** **MODIFIER RESEARCH**.
+- **Status:** **IMPLEMENTED / CANONICAL RELATIONAL OPERATORS** as `rel_greater` and `rel_lesser` in v1.0.2.
 
-For Batch B review, the supplied morphology is `>` for LARGE/greater and `<` for SMALL/lesser. The IDs are provisional `rel_greater` and `rel_lesser`; they are relational operators, not quantity synonyms.
+The supplied morphology is `>` for LARGE/greater and `<` for SMALL/lesser. The IDs are relational operators, not quantity synonyms.
 
 #### Parametric COLOR prototype
 

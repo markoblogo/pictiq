@@ -4,7 +4,7 @@ All notable changes to this repository will be documented in this file.
 
 This project uses milestone-style tags. The `-infra` suffix indicates a pre-icons infrastructure release.
 
-## v1.0.2 (unreleased)
+## v1.0.2 — 2026-09-09
 
 ### Architecture
 - Added recommended Embodied and Standalone vocabulary profiles over the single canonical lexicon; context packs may layer on either profile.
@@ -23,6 +23,8 @@ This project uses milestone-style tags. The `-infra` suffix indicates a pre-icon
 - Added `state_hot` as a practical contextual heat/fire tile and `state_cold` for cold/freezing/refrigeration.
 - Added `power_energy` for electricity and electrical power, distinct from `power_plug` and physical strength.
 - Expanded the canonical lexicon metadata to `0.3.0`, from 52 to 58 icons, and regenerated the overview grid.
+- Added approved Batch B concepts: `eye_look`, `item_clothing`, `comm_speak`, `comm_sound`, `media_text`, `media_image`, `nature_sun`, `state_light`, `food_produce`, `food_bakery`, `rel_greater`, and `rel_lesser`.
+- Bumped canonical lexicon metadata to `0.4.0` (70 icons) and preserved the supplied reference morphology through the trace and visual-QA workflow.
 
 ### Research
 - Recorded the Toki Pona interoperability findings as evidence about lexical gaps versus standalone needs, not as a translation target or historical influence.

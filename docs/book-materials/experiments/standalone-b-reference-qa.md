@@ -10,11 +10,11 @@ The reference image was cropped into black/white 512 px silhouettes, traced with
 
 ## Result
 
-Twelve non-parametric candidates are implemented locally for human review: `eye_look`, `item_clothing`, `comm_speak`, `comm_sound`, `media_text`, `media_image`, `nature_sun`, `state_light`, `food_produce`, `food_bakery`, `rel_greater`, and `rel_lesser`. The approved sheet’s `>` / `<` morphology is retained as provisional relational operators.
+Twelve non-parametric candidates were implemented and accepted after human visual review: `eye_look`, `item_clothing`, `comm_speak`, `comm_sound`, `media_text`, `media_image`, `nature_sun`, `state_light`, `food_produce`, `food_bakery`, `rel_greater`, and `rel_lesser`. The approved sheet’s `>` / `<` morphology is retained as canonical relational operators in v1.0.2.
 
 ## Failures / limitations
 
-This is not human visual acceptance. COLOR is not a lexical icon and is demonstrated separately at red, blue, yellow, dark grey-green, and very light values. Grayscale preserves luminance differences where present, not hue.
+COLOR is not a lexical icon and is demonstrated separately at red, blue, yellow, dark grey-green, and very light values. Grayscale preserves luminance differences where present, not hue.
 
 ## Evidence
 
@@ -22,4 +22,4 @@ Source: `Зображення Codex 9 вер. 2026 р., 18_04_51.png` supplied o
 
 ## Follow-up
 
-Human review each candidate individually. Do not push, tag, release v1.0.2, or mark the candidates canonical before acceptance.
+Human visual acceptance is complete. Release v1.0.2 includes the accepted Batch B IDs; future work remains limited to the separate COLOR and entity-symbol mechanisms.

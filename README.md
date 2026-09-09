@@ -45,7 +45,7 @@ A free 95-page illustrated field guide covering:
 ## Core overview
 
 Point to a tile. Add `punct_question` to ask, `punct_exclaim` for urgency, and `logic_no` to negate.
-The current canonical lexicon contains **58 icons**, including lexical tiles and the `qual_good` / `qual_bad` evaluation modifiers.
+The current canonical lexicon contains **70 icons**, including lexical tiles, evaluation modifiers, and relational operators.
 
 <p align="center">
   <img src="docs/overview/pictiq-core-grid.png" alt="Pictiq core overview grid" width="900" />
@@ -75,11 +75,11 @@ Core protocol release: `v1.0.0-core`
 
 Pictiq treats technical SVG validity and perceptual recognition as separate requirements. The [perceptual design principles and visual QA workflow](spec/ICON_SPEC.md#perceptual-design-principles) guide evaluation at multiple scales and in representative layouts.
 
-**Communication modes (v1.0.2, unreleased)**
+**Communication modes (v1.0.2)**
 
 Pictiq now distinguishes [Embodied Communication from Standalone Communication](spec/PROTOCOL.md#11-embodied-and-standalone-communication). Live pointing, gaze, gesture, voice, visible objects, and shared context can make a tile unnecessary; signs, cards, stickers, screens, and remote instructions must preserve the same meaning after the communicator is gone.
 
-Meaning may enter a message through [lexical tiles, modifiers/operators, parametric tiles, entity symbols, or embodied references](spec/PROTOCOL.md#12-communication-primitive-classes). Standalone Batch A implements six accepted primitives; remaining candidates and mechanisms stay in the [standalone backlog](spec/STANDALONE_BACKLOG.md) for evaluation.
+Meaning may enter a message through [lexical tiles, modifiers/operators, parametric tiles, entity symbols, or embodied references](spec/PROTOCOL.md#12-communication-primitive-classes). Standalone Batch A and the approved Batch B candidates are implemented; parametric COLOR and entity symbols remain separate mechanisms under evaluation.
 
 The single canonical lexicon can be selected through an [Embodied Profile](spec/PROFILES.md#embodied-profile) for person-present communication or a [Standalone Profile](spec/PROFILES.md#standalone-profile) for durable/remote communication. Context packs layer on either profile; they are not separate icon libraries.
 

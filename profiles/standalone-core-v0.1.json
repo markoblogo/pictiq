@@ -9,5 +9,5 @@
   "required_mechanisms": ["parametric_color"],
   "separate_mechanisms": ["entity_symbols"],
   "context_layers": ["Paris", "Nightlife", "Web/UI", "Narrative/Entity namespace"],
-  "status": "RECOMMENDED PROFILE / PROVISIONAL BATCH B MEMBERSHIP / NOT A SEPARATE ICON LIBRARY"
+  "status": "RECOMMENDED PROFILE / ACCEPTED BATCH B MEMBERSHIP / NOT A SEPARATE ICON LIBRARY"
 }
