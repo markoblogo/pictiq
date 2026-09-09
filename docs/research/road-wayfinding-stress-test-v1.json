@@ -1,0 +1,512 @@
+{
+  "experiment": "Pictiq Stress Test 02: Road & Public Wayfinding",
+  "date": "2026-09-10",
+  "architecture_commit": "d5e3641",
+  "scope": "Phase 1 read-only analysis against current Pictiq, followed by Phase 2 hypothesis simulation; no normative architecture changes.",
+  "sources": [
+    {
+      "id": "vienna-1968",
+      "title": "UNECE consolidated Vienna Convention on Road Signs and Signals",
+      "url": "https://unece.org/DAM/trans/conventn/Conv_road_signs_2006v_EN.pdf",
+      "used_for": [
+        "international sign classes",
+        "warning/prohibitory/mandatory/information/service categories",
+        "road-service signs"
+      ]
+    },
+    {
+      "id": "govuk-highway-code-signs",
+      "title": "GOV.UK Highway Code traffic signs guidance",
+      "url": "https://www.gov.uk/guidance/the-highway-code/traffic-signs",
+      "used_for": [
+        "UK public explanation of orders, warnings, direction, information, and road works signs"
+      ]
+    },
+    {
+      "id": "govuk-know-your-traffic-signs",
+      "title": "UK Department for Transport / DVSA Know Your Traffic Signs PDF",
+      "url": "https://assets.publishing.service.gov.uk/media/656ef4271104cf0013fa74ef/know-your-traffic-signs-dft.pdf",
+      "used_for": [
+        "common road-user sign meanings and examples"
+      ]
+    },
+    {
+      "id": "fhwa-mutcd-11",
+      "title": "FHWA Manual on Uniform Traffic Control Devices current edition page",
+      "url": "https://mutcd.fhwa.dot.gov/",
+      "used_for": [
+        "US standard framing for traffic-control devices that regulate, warn, and guide public travel"
+      ]
+    },
+    {
+      "id": "legifrance-1967",
+      "title": "Arrêté du 24 novembre 1967 relatif à la signalisation des routes et autoroutes",
+      "url": "https://www.legifrance.gouv.fr/loda/id/LEGITEXT000006075080",
+      "used_for": [
+        "French/European examples: no entry, no left/right turn, no parking, pedestrians prohibited, speed limit"
+      ]
+    },
+    {
+      "id": "amazon-related-context",
+      "title": "Amazon.fr listing B0HJ3WMYKD, user-supplied public listing excerpt",
+      "url": "https://www.amazon.fr/dp/B0HJ3WMYKD",
+      "used_for": [
+        "related project context only",
+        "title: Французькі правила й дорожні знаки українською: Практичний довідник для першого знайомства і перенесення водійського досвіду до Франції",
+        "author: Route Atlas Press",
+        "format: Paperback",
+        "visible positioning: Ukrainian practical guide for understanding French road rules/signs and transferring Ukrainian driving experience to France",
+        "price/stock/delivery metadata treated as volatile and not used as stable research evidence"
+      ]
+    }
+  ],
+  "counts": {
+    "CONTEXT-SUFFICIENT": 8,
+    "DIRECT": 7,
+    "GAP": 1,
+    "COMPOSED": 3,
+    "LOSSY": 5,
+    "DOMAIN-EXTENSION": 1,
+    "OUT-OF-SCOPE": 0
+  },
+  "cases": [
+    {
+      "case": "turn/go right",
+      "official_meaning": "Proceed or turn right according to road/public-wayfinding indication.",
+      "required_action": "Move right / choose the rightward route.",
+      "current_pictiq": "`rel_greater`",
+      "back_interpretation": "rightward / greater-side orientation in navigation context",
+      "result": "CONTEXT-SUFFICIENT",
+      "failure_mode": [
+        "RELATION",
+        "CONTEXT"
+      ],
+      "action_ambiguity": "No in road-wayfinding context; yes outside it, where `>` may mean comparison.",
+      "hypothesis_improvement": "Road convention could reserve `rel_greater` as rightward inside a Road pack.",
+      "architectural_consequence": "Relational morphology can carry direction when context is explicit; do not make RIGHT a Core tile yet."
+    },
+    {
+      "case": "turn/go left",
+      "official_meaning": "Proceed or turn left according to road/public-wayfinding indication.",
+      "required_action": "Move left / choose the leftward route.",
+      "current_pictiq": "`rel_lesser`",
+      "back_interpretation": "leftward / lesser-side orientation in navigation context",
+      "result": "CONTEXT-SUFFICIENT",
+      "failure_mode": [
+        "RELATION",
+        "CONTEXT"
+      ],
+      "action_ambiguity": "No in road-wayfinding context; yes outside it, where `<` may mean comparison.",
+      "hypothesis_improvement": "Road convention could reserve `rel_lesser` as leftward inside a Road pack.",
+      "architectural_consequence": "Same as right: works contextually, not as universal lexical direction."
+    },
+    {
+      "case": "straight/ahead",
+      "official_meaning": "Continue straight ahead.",
+      "required_action": "Continue forward on the present route.",
+      "current_pictiq": "`rel_up`",
+      "back_interpretation": "up / above / ahead in navigation context",
+      "result": "CONTEXT-SUFFICIENT",
+      "failure_mode": [
+        "RELATION",
+        "CONTEXT"
+      ],
+      "action_ambiguity": "Low on a road sign; higher in building maps where up may mean upstairs.",
+      "hypothesis_improvement": "Road layout arrow convention can disambiguate ahead vs physically up.",
+      "architectural_consequence": "Unary `rel_up` is usable as ahead only with explicit navigation context."
+    },
+    {
+      "case": "down / lower level",
+      "official_meaning": "Go down, lower level, or downward route.",
+      "required_action": "Move down or choose the lower-level route.",
+      "current_pictiq": "`rel_down`",
+      "back_interpretation": "down / below / lower",
+      "result": "DIRECT",
+      "failure_mode": [],
+      "action_ambiguity": "No for generic lower/down movement.",
+      "hypothesis_improvement": "None needed for first-pass public wayfinding.",
+      "architectural_consequence": "Existing relational operator covers the required distinction."
+    },
+    {
+      "case": "no entry",
+      "official_meaning": "Entry prohibited / do not enter this road or area.",
+      "required_action": "Do not enter or proceed into the signed way.",
+      "current_pictiq": "`rel_here + logic_no`",
+      "back_interpretation": "not here / this place no / no current reference",
+      "result": "GAP",
+      "failure_mode": [
+        "VOCABULARY",
+        "RELATION",
+        "SAFETY-PRECISION"
+      ],
+      "action_ambiguity": "Yes. It can be read as no current location, not available here, or no place here rather than entry forbidden.",
+      "hypothesis_improvement": "Road-specific access/prohibition convention is stronger than a new Core word.",
+      "architectural_consequence": "Candidate Road pack notation for access/entry restriction; avoid Core expansion until cross-domain evidence appears."
+    },
+    {
+      "case": "pedestrian route",
+      "official_meaning": "Route or path for pedestrians.",
+      "required_action": "Walk here / pedestrians should use this route.",
+      "current_pictiq": "`move_feet`",
+      "back_interpretation": "walking / go on foot",
+      "result": "CONTEXT-SUFFICIENT",
+      "failure_mode": [
+        "CONTEXT"
+      ],
+      "action_ambiguity": "Low in pedestrian-wayfinding context.",
+      "hypothesis_improvement": "A Road/Public pack may specify that bare walking in route signage means pedestrian route.",
+      "architectural_consequence": "No new pedestrian primitive needed for this case."
+    },
+    {
+      "case": "pedestrians prohibited",
+      "official_meaning": "Access prohibited to pedestrians.",
+      "required_action": "Do not walk here / pedestrians must not enter.",
+      "current_pictiq": "`move_feet + logic_no`",
+      "back_interpretation": "walking/pedestrian movement prohibited",
+      "result": "COMPOSED",
+      "failure_mode": [],
+      "action_ambiguity": "No material ambiguity for the required action.",
+      "hypothesis_improvement": "No hypothesis needed.",
+      "architectural_consequence": "Strong success for current composition and postfix negation."
+    },
+    {
+      "case": "pedestrian crossing",
+      "official_meaning": "Pedestrian crossing or crossing place.",
+      "required_action": "Expect/use a crossing point; drivers yield/slow where applicable; pedestrians cross here.",
+      "current_pictiq": "`move_feet + rel_here`",
+      "back_interpretation": "walking here / pedestrian movement at this location",
+      "result": "LOSSY",
+      "failure_mode": [
+        "RELATION",
+        "LAYOUT",
+        "SAFETY-PRECISION"
+      ],
+      "action_ambiguity": "Yes. Walking here is not the same as a crossing relation between two sides of a road.",
+      "hypothesis_improvement": "A crossing/path relation or Road pack layout convention could preserve the missing distinction.",
+      "architectural_consequence": "Candidate Road/Public relation, not immediate Core."
+    },
+    {
+      "case": "parking",
+      "official_meaning": "Parking place or parking permitted.",
+      "required_action": "A driver may park here / find parking here.",
+      "current_pictiq": "`rel_here + move_car`",
+      "back_interpretation": "car here / car at this place",
+      "result": "CONTEXT-SUFFICIENT",
+      "failure_mode": [
+        "CONTEXT"
+      ],
+      "action_ambiguity": "Low in road context. Outside it, this could mean car location rather than permission to park.",
+      "hypothesis_improvement": "A Road pack could define `rel_here + move_car` as parking-place shorthand.",
+      "architectural_consequence": "Parking is not a lexical gap in first pass."
+    },
+    {
+      "case": "no parking",
+      "official_meaning": "Parking prohibited.",
+      "required_action": "Do not park here.",
+      "current_pictiq": "`rel_here + move_car + logic_no`",
+      "back_interpretation": "car-at-this-place prohibited / no car here",
+      "result": "CONTEXT-SUFFICIENT",
+      "failure_mode": [
+        "CONTEXT",
+        "SAFETY-PRECISION"
+      ],
+      "action_ambiguity": "Usually acceptable in road context, but can overread as all cars prohibited here.",
+      "hypothesis_improvement": "Road prohibition convention could narrow it to parking rather than vehicle presence.",
+      "architectural_consequence": "Works compositionally enough for first pass; review only if legal precision is required."
+    },
+    {
+      "case": "fuel/petrol station",
+      "official_meaning": "Fuel service or petrol station.",
+      "required_action": "Go here for fuel.",
+      "current_pictiq": "`place_gas`",
+      "back_interpretation": "gas station / fuel place",
+      "result": "DIRECT",
+      "failure_mode": [],
+      "action_ambiguity": "No material ambiguity.",
+      "hypothesis_improvement": "None needed.",
+      "architectural_consequence": "Existing contextual tile succeeds as direct service sign."
+    },
+    {
+      "case": "hospital/medical",
+      "official_meaning": "Hospital or medical service nearby.",
+      "required_action": "Go here for medical help.",
+      "current_pictiq": "`safety_medical`",
+      "back_interpretation": "medical help / medical service",
+      "result": "DIRECT",
+      "failure_mode": [],
+      "action_ambiguity": "No material ambiguity for wayfinding.",
+      "hypothesis_improvement": "None needed.",
+      "architectural_consequence": "Existing Core/safety tile succeeds."
+    },
+    {
+      "case": "police",
+      "official_meaning": "Police service or police post.",
+      "required_action": "Go here for police help or comply with police-point indication.",
+      "current_pictiq": "`safety_police`",
+      "back_interpretation": "police / police help",
+      "result": "DIRECT",
+      "failure_mode": [],
+      "action_ambiguity": "No material ambiguity.",
+      "hypothesis_improvement": "None needed.",
+      "architectural_consequence": "Existing Core/safety tile succeeds."
+    },
+    {
+      "case": "food/restaurant",
+      "official_meaning": "Food service / restaurant available.",
+      "required_action": "Go here for food.",
+      "current_pictiq": "`need_food`",
+      "back_interpretation": "food / need food",
+      "result": "CONTEXT-SUFFICIENT",
+      "failure_mode": [
+        "CONTEXT"
+      ],
+      "action_ambiguity": "Low in service-sign context, but it does not distinguish restaurant, grocery, or food need.",
+      "hypothesis_improvement": "Context packs can refine restaurant/grocery if the action differs.",
+      "architectural_consequence": "No Core expansion; context may select food subcategory tiles where needed."
+    },
+    {
+      "case": "hotel",
+      "official_meaning": "Hotel/accommodation available.",
+      "required_action": "Go here for lodging.",
+      "current_pictiq": "`place_hotel`",
+      "back_interpretation": "hotel",
+      "result": "DIRECT",
+      "failure_mode": [],
+      "action_ambiguity": "No material ambiguity.",
+      "hypothesis_improvement": "None needed.",
+      "architectural_consequence": "Existing contextual tile succeeds directly in road-service context."
+    },
+    {
+      "case": "information",
+      "official_meaning": "Information point / tourist or public information.",
+      "required_action": "Go here to obtain information.",
+      "current_pictiq": "`media_text`",
+      "back_interpretation": "text / writing / document",
+      "result": "LOSSY",
+      "failure_mode": [
+        "VOCABULARY",
+        "CONTEXT"
+      ],
+      "action_ambiguity": "Yes. Written text is not always an information service, and information can be spoken/digital.",
+      "hypothesis_improvement": "`media_text + comm_speak` improves service feel but remains broad.",
+      "architectural_consequence": "Potential Public/Wayfinding context primitive, but not automatically Core."
+    },
+    {
+      "case": "warning/caution",
+      "official_meaning": "General danger warning or caution ahead.",
+      "required_action": "Pay attention, slow, prepare for hazard.",
+      "current_pictiq": "`punct_exclaim`",
+      "back_interpretation": "attention / urgent / caution",
+      "result": "DIRECT",
+      "failure_mode": [],
+      "action_ambiguity": "No for generic caution; yes if the hazard type or severity changes action.",
+      "hypothesis_improvement": "DEAD could represent extreme/deadly danger, not generic warning.",
+      "architectural_consequence": "`!` is enough for generic warning, not for all danger severity."
+    },
+    {
+      "case": "road works",
+      "official_meaning": "Road works or maintenance ahead.",
+      "required_action": "Expect works, slow down, follow temporary routing.",
+      "current_pictiq": "`service_tools + punct_exclaim`",
+      "back_interpretation": "tools/repair/service with caution",
+      "result": "CONTEXT-SUFFICIENT",
+      "failure_mode": [
+        "CONTEXT"
+      ],
+      "action_ambiguity": "Low in road context; outside it could mean repair help or tools needed.",
+      "hypothesis_improvement": "Road pack could define this as works/maintenance ahead.",
+      "architectural_consequence": "Contextual polysemy is adequate; no road-works tile yet."
+    },
+    {
+      "case": "slippery road",
+      "official_meaning": "Road surface may be slippery.",
+      "required_action": "Slow down, avoid abrupt steering/braking, increase caution.",
+      "current_pictiq": "`punct_exclaim`",
+      "back_interpretation": "caution / urgent attention",
+      "result": "LOSSY",
+      "failure_mode": [
+        "VOCABULARY",
+        "SAFETY-PRECISION"
+      ],
+      "action_ambiguity": "Yes. Generic warning does not say surface traction is the issue.",
+      "hypothesis_improvement": "WAVY + `punct_exclaim` preserves problematic/unstable surface more clearly.",
+      "architectural_consequence": "Evidence for a surface-irregularity primitive or road/domain notation."
+    },
+    {
+      "case": "uneven/bumpy road",
+      "official_meaning": "Uneven or rough road surface ahead.",
+      "required_action": "Slow down and expect rough surface/vehicle movement.",
+      "current_pictiq": "`punct_exclaim`",
+      "back_interpretation": "caution / urgent attention",
+      "result": "LOSSY",
+      "failure_mode": [
+        "VOCABULARY",
+        "SAFETY-PRECISION"
+      ],
+      "action_ambiguity": "Yes. Generic caution loses the surface condition.",
+      "hypothesis_improvement": "WAVY + `punct_exclaim` may compress slippery/uneven into a shared surface-problem warning.",
+      "architectural_consequence": "Same WAVY evidence as slippery road."
+    },
+    {
+      "case": "speed bump",
+      "official_meaning": "Speed hump/bump ahead.",
+      "required_action": "Slow down before a vertical traffic-calming feature.",
+      "current_pictiq": "`rel_up + punct_exclaim`",
+      "back_interpretation": "up/ahead with caution",
+      "result": "LOSSY",
+      "failure_mode": [
+        "VOCABULARY",
+        "RELATION",
+        "SAFETY-PRECISION"
+      ],
+      "action_ambiguity": "Yes. It may mean go up, uphill, upstairs, or caution ahead, not a bump.",
+      "hypothesis_improvement": "WAVY helps only partly; a bump may require road-specific surface/traffic-calming notation.",
+      "architectural_consequence": "Most adversarial WAVY case; likely Road-pack refinement if precision matters."
+    },
+    {
+      "case": "dead end",
+      "official_meaning": "Road has no through continuation.",
+      "required_action": "Do not expect through passage; turn around or choose another route if needed.",
+      "current_pictiq": "`rel_up + logic_no`",
+      "back_interpretation": "no ahead / no upward-forward continuation",
+      "result": "COMPOSED",
+      "failure_mode": [
+        "CONTEXT"
+      ],
+      "action_ambiguity": "Low in road navigation context, but not safe outside it.",
+      "hypothesis_improvement": "Do not use DEAD; dead end is a linguistic coincidence.",
+      "architectural_consequence": "Current composition is adequate for simple wayfinding."
+    },
+    {
+      "case": "speed limit 50",
+      "official_meaning": "Do not exceed 50 in the jurisdiction's speed unit.",
+      "required_action": "Keep speed at or below 50 km/h or mph depending on jurisdiction.",
+      "current_pictiq": "`qty_5 + qty_5`",
+      "back_interpretation": "ten / two fives; not fifty and not speed limit",
+      "result": "DOMAIN-EXTENSION",
+      "failure_mode": [
+        "NUMERIC/NOTATION",
+        "VOCABULARY",
+        "SAFETY-PRECISION"
+      ],
+      "action_ambiguity": "Yes. Current quantity primitives cannot encode exact 50 or maximum-speed rule.",
+      "hypothesis_improvement": "Digits `50` plus established road speed-limit convention solve the case better than Core expansion.",
+      "architectural_consequence": "Create a shared numeric notation layer candidate; Road pack can reference it."
+    },
+    {
+      "case": "no left turn",
+      "official_meaning": "Turning left at the next junction is prohibited.",
+      "required_action": "Do not turn left.",
+      "current_pictiq": "`rel_lesser + logic_no`",
+      "back_interpretation": "left/lesser orientation prohibited",
+      "result": "COMPOSED",
+      "failure_mode": [
+        "RELATION",
+        "CONTEXT"
+      ],
+      "action_ambiguity": "Low in road context. Adding `move_car` is usually redundant because the sign context supplies vehicle/road use.",
+      "hypothesis_improvement": "Road prohibition convention could make the maneuver restriction explicit.",
+      "architectural_consequence": "Existing relation + negation works if Road context is clear."
+    },
+    {
+      "case": "you are here/current location",
+      "official_meaning": "Current viewer/location reference point on a map or wayfinding board.",
+      "required_action": "Orient from this point.",
+      "current_pictiq": "`rel_here`",
+      "back_interpretation": "here / current reference point / target",
+      "result": "DIRECT",
+      "failure_mode": [],
+      "action_ambiguity": "No material ambiguity in a wayfinding layout.",
+      "hypothesis_improvement": "None needed.",
+      "architectural_consequence": "HERE reference semantics are coherent across map/current-location use."
+    }
+  ],
+  "hypotheses": {
+    "DEAD": {
+      "helps_cases": [
+        "warning/caution only when danger severity is extreme or deadly; not needed for generic road warning",
+        "potential cross-domain medical, narrative, and general safety messages"
+      ],
+      "independent_case_count_in_this_set": 1,
+      "cross_domain_potential": [
+        "road/safety",
+        "medical",
+        "narrative",
+        "general warning"
+      ],
+      "reduces_phrase_complexity": "Only for extreme danger; does not solve dead end and should not be used for it.",
+      "dangerous_ambiguity": "Moderate: death/deadly/dead person are related but action differs by context.",
+      "recommended_role": "DEFER",
+      "reason": "Cross-domain potential exists, but this road test alone does not justify canonicalization or Core status."
+    },
+    "WAVY": {
+      "helps_cases": [
+        "slippery road",
+        "uneven/bumpy road",
+        "partly speed bump",
+        "possible non-road waves/rough water"
+      ],
+      "independent_case_count_in_this_set": 3,
+      "cross_domain_potential": [
+        "road surface",
+        "weather/sea",
+        "physical-surface contexts"
+      ],
+      "reduces_phrase_complexity": "Yes for generic surface problem + caution.",
+      "dangerous_ambiguity": "Moderate: slippery, uneven, wavy water, and speed bump may require different preparation.",
+      "recommended_role": "CONTEXTUAL/DEFER",
+      "reason": "Strong evidence for semantic compression, but speed bump remains a precision challenge."
+    },
+    "numeric_notation": {
+      "helps_cases": [
+        "speed limit 50"
+      ],
+      "independent_case_count_in_this_set": 1,
+      "cross_domain_potential": [
+        "road",
+        "accounting",
+        "retail",
+        "science",
+        "measurement",
+        "timetables"
+      ],
+      "recommended_role": "SHARED NOTATION LAYER CANDIDATE",
+      "reason": "Digits 0-9 should not be ordinary lexical vocabulary and should not replace pragmatic quantity tiles."
+    }
+  },
+  "decision_queue": [
+    "Should DEAD enter the candidate backlog, and if so as DEFER pending cross-domain medical/narrative/safety evidence?",
+    "Should WAVY be accepted as a contextual surface-irregularity candidate, or held until non-road uses are tested?",
+    "Should Pictiq create a shared numeric notation registry separate from ordinary lexical tiles?",
+    "Should Road/Public Wayfinding define domain conventions for speed limits instead of trying to express them in pure Pictiq?",
+    "Is a crossing/path relation needed for pedestrian crossing, or should it remain Road-pack notation?",
+    "Is `punct_exclaim` sufficient for generic warning while DEAD handles only extreme/deadly danger?",
+    "Are `< > ∧ ∨` safe as directional operators when a Road/Wayfinding context is explicit?",
+    "Should `rel_here + move_car` be accepted as parking shorthand in Road context?",
+    "Does “information point” justify a Public/Wayfinding contextual primitive, or can `media_text` plus context remain enough?",
+    "Did this test expose any Phrase Architecture rule that needs normative change? Current result: no, only domain notation gaps."
+  ],
+  "confirmations": {
+    "canonical_lexicon_remains_75": true,
+    "entity_symbols_remain_separate": true,
+    "normative_specs_modified": false,
+    "icons_created": false,
+    "tag_or_release_created": false,
+    "pushed": false
+  },
+  "related_publication": {
+    "source": "User-supplied Amazon.fr public listing excerpt for https://www.amazon.fr/dp/B0HJ3WMYKD",
+    "title": "Французькі правила й дорожні знаки українською: Практичний довідник для першого знайомства і перенесення водійського досвіду до Франції",
+    "author": "Route Atlas Press",
+    "format": "Paperback",
+    "language_edition": "Ukrainian edition",
+    "visible_positioning": "Practical Ukrainian-language guide for two reader groups: beginners and experienced Ukrainian drivers transferring knowledge to France; explains French road rules, sign form/color/symbol/number/supplementary plates, 127 French signs, transfer traps, self-checks, quick review, and bilingual index.",
+    "boundary": "Related project context only; not evidence that Pictiq road communication works."
+  },
+  "visual_sheets": {
+    "full": "build/research/road-wayfinding-comparison.png",
+    "selected": "build/research/road-wayfinding-comparison-selected.png",
+    "validation": "build/research/road-wayfinding-comparison-validation.json",
+    "note": "Pictiq tile sequences are rendered from canonical repository SVG files; conventional signs are schematic public-standard forms."
+  }
+}
