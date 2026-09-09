@@ -457,3 +457,33 @@ The deployment remains GitHub’s legacy branch `/docs` model; a workflow-built 
 ### Possible future book use
 
 A short engineering sidebar on how a correct local path can still be wrong in production.
+
+## 2026-09-09 — Standalone Batch C local implementation
+
+### Starting question
+
+Could five approved reference shapes become canonical Pictiq candidates without redesigning the protocol or changing existing icons?
+
+### What happened
+
+Five local candidates were implemented: `body_mouth`, `rel_here`, `rel_up`, `rel_down`, and `nature_moon`. The canonical registry now has 75 local icons. Standalone Core includes all five candidates; Embodied Core includes the three relation operators and omits mouth and moon/night by default because live body/context can often supply them.
+
+### Evidence
+
+[Batch C QA note](experiments/standalone-batch-c-reference-qa.md), [Protocol §1.1](../../spec/PROTOCOL.md#11-embodied-and-standalone-communication), [Grammar §7.1](../../spec/GRAMMAR.md#71-relational-and-directional-operators-provisional), and local QA sheets in `build/qa/`.
+
+### Decision / outcome
+
+Batch C is locally implemented and structurally validated, but it remains pending human visual acceptance. No push, tag, release, or public verification is implied.
+
+### Why it matters
+
+The batch turns the Embodied/Standalone distinction into practical profile decisions and clarifies action-relevant ambiguity, relation operators, and daylight/nighttime composition.
+
+### Open questions
+
+Human visual acceptance and any later release work remain separate gates.
+
+### Possible future book use
+
+A concise case study showing how a visual protocol decides between body-supplied meaning, standalone explicitness, operators, and lexical tiles.

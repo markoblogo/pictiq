@@ -4,9 +4,13 @@
 
 Some meaning is supplied by the communicator’s body, objects, gaze, gesture, and situation. A durable sign, card, screen, or remote instruction must carry that meaning itself.
 
+Standalone Communication therefore externalizes embodiment. It moves selected cues from the body, object, gesture, place, or moment into the durable artifact when the communicator will not be present to repair or disambiguate the message.
+
 ## How it was discovered
 
 The Toki Pona crosswalk initially looked like a list of missing tiles. Reviewing live communication showed that eyes, clothing, size, person reference, color, direction, and emotion often already exist on the embodied channel.
+
+Later standalone batches sharpened the distinction: `body_mouth` is useful when a remote card must preserve mouth / eating / drinking intent, while a live user can usually indicate the mouth directly. `rel_here`, `rel_up`, and `rel_down` remain useful in both profiles when a compact target or orientation relation must survive beyond immediate pointing.
 
 ## Evidence
 
@@ -15,6 +19,8 @@ The Toki Pona crosswalk initially looked like a list of missing tiles. Reviewing
 ## Current status
 
 Normative architecture in the v1.0.2 unreleased specification; Handbook v1 remains unchanged.
+
+Batch C is locally implemented as a visual review candidate and remains pending human acceptance before any push, tag, or release.
 
 ## Unresolved questions
 

@@ -33,6 +33,8 @@ Pictiq MUST evaluate vocabulary and composition against the communication mode i
 
 In practice: use the body for what the body can express, and use the icon for what must remain after the body is gone. Before expanding the vocabulary, check the body, gesture, physical object, environment, pointing, neighboring tiles, existing protocol operators, and shared contextual knowledge.
 
+Standalone Communication externalizes embodiment. A standalone tile sequence has to carry cues that an embodied exchange could leave on the communicator’s body, visible object, place, gesture, gaze, or timing. This does not make the standalone form more complete in every case; it makes a different communication surface explicit.
+
 This rule complements [Design for the decision](ICON_SPEC.md#1-design-for-the-decision): the minimum sufficient message includes all available channels, not only the drawing.
 
 #### Decision tree
@@ -51,6 +53,10 @@ For each proposed concept or message:
 Only after these alternatives fail should a new lexical tile be considered. Any proposed canonical rendering MUST then pass the Perceptual Design Principles and Visual QA Protocol before acceptance.
 
 > A missing lexical equivalent is not automatically a missing Pictiq concept.
+
+Zero-intent still applies in both modes: a tile may be used by itself as a valid message. The difference is where disambiguation comes from. In embodied use, intent may be supplied by pointing, the current action, a visible referent, or repair dialogue. In standalone use, the same ambiguity must be acceptable for the decision at hand or reduced through neighboring tiles, operators, labels, layout, or context packs.
+
+Pictiq therefore tolerates **action-relevant ambiguity**. A symbol does not need to encode every dictionary sense of a word; it needs to preserve enough meaning for the practical action. `body_mouth`, for example, can cover mouth, eating, drinking, or oral intake when the surrounding phrase and situation make the intended action clear. It should not be stretched to unrelated speech, identity, or emotion senses when a better tile, operator, or embodied cue exists.
 
 Examples:
 
@@ -95,7 +101,9 @@ Modifiers qualify another tile; operators alter how another tile or phrase is in
 
 Evaluation and truth are distinct axes. `logic_yes` and `logic_no` MUST NOT be overloaded as generic GOOD and BAD. Canonical `qual_good` and `qual_bad` modifiers may qualify food, hotel, or another base concept as positively or negatively evaluated; they do not encode every emotional or moral sense of “good” and “bad.” Likewise, physical LARGE/SMALL must not be equated with `qty_plus`/`qty_minus`; embodied users can show scale with their hands, while standalone use should investigate reusable scale modifiers.
 
-The provisional relational operators `rel_greater` (`>`) and `rel_lesser` (`<`) compare larger/greater with smaller/lesser. They remain distinct from `qty_plus` and `qty_minus`, which request additional quantity or reduction. In a clearly navigational context they MAY also carry rightward or leftward direction; this contextual reading does not redefine either operator as a permanent direction token.
+The provisional relational operators `rel_greater` (`>`), `rel_lesser` (`<`), `rel_up` (`∧`), and `rel_down` (`∨`) compare or orient adjacent concepts. They remain distinct from `qty_plus` and `qty_minus`, which request additional quantity or reduction. In a clearly navigational context they MAY carry rightward, leftward, upward, or downward direction; this contextual reading does not redefine quantity, size, or permanent movement tokens.
+
+`rel_here` marks a selected place, target, or reference point. It is a relation/reference operator rather than a new class of place. In embodied use, pointing may supply the same target; in standalone use, `rel_here` can preserve the reference when the pointing body is absent.
 
 As a research example, Toki Pona `mute` is better approximated compositionally as `qty_5 + qty_plus` than by `qty_5` alone. This observation defines no new mechanism.
 

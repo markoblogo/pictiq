@@ -1260,6 +1260,51 @@
       "examples": ["OBJECT_A < OBJECT_B", "move_feet + rel_lesser"]
     },
     {
+      "id": "body_mouth",
+      "type": "icon",
+      "category": "body",
+      "meaning_en": "mouth / oral intake",
+      "aliases_en": ["mouth", "eat", "drink", "oral intake"],
+      "tags_en": ["body", "mouth", "eat", "drink"],
+      "examples": ["body_mouth + need_food", "body_mouth + need_water", "body_mouth + punct_question"]
+    },
+    {
+      "id": "rel_here",
+      "type": "operator",
+      "category": "relation",
+      "meaning_en": "here / this place / target location",
+      "aliases_en": ["here", "this place", "target", "location"],
+      "tags_en": ["relation", "place", "target", "reference"],
+      "examples": ["rel_here + place_hotel", "rel_here + punct_question", "rel_here + time"]
+    },
+    {
+      "id": "rel_up",
+      "type": "operator",
+      "category": "relation",
+      "meaning_en": "up / above / higher",
+      "aliases_en": ["up", "above", "higher", "more in spatial context"],
+      "tags_en": ["relation", "direction", "up", "higher"],
+      "examples": ["move_feet + rel_up", "place_hotel + rel_up", "rel_up + punct_question"]
+    },
+    {
+      "id": "rel_down",
+      "type": "operator",
+      "category": "relation",
+      "meaning_en": "down / below / lower",
+      "aliases_en": ["down", "below", "lower", "less in spatial context"],
+      "tags_en": ["relation", "direction", "down", "lower"],
+      "examples": ["move_feet + rel_down", "place_hotel + rel_down", "rel_down + punct_question"]
+    },
+    {
+      "id": "nature_moon",
+      "type": "icon",
+      "category": "nature",
+      "meaning_en": "moon / night / nighttime",
+      "aliases_en": ["moon", "night", "nighttime"],
+      "tags_en": ["nature", "moon", "night", "time"],
+      "examples": ["time + nature_moon", "nature_moon + punct_question", "nature_moon + need_bar"]
+    },
+    {
       "id": "tech_ai",
       "type": "icon",
       "category": "technology",

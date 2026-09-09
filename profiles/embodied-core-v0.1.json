@@ -4,7 +4,7 @@
   "mode": "Embodied Communication",
   "principle": "What is worth carrying when I also have a body?",
   "canonical_lexicon": "lexicon/icon-index.json",
-  "included_ids": ["punct_question", "punct_exclaim", "logic_yes", "logic_no", "qual_good", "qual_bad", "time", "qty_1", "qty_2", "qty_5", "qty_plus", "qty_minus", "money_coins", "money_card", "money_atm_bank", "comm_wifi", "comm_phone", "power_plug", "power_energy", "need_toilet", "need_water", "need_food", "need_bar", "safety_medical", "safety_police", "place_hotel", "place_shop", "place_landmark_park", "place_gas", "service_tools", "move_feet", "move_taxi", "move_car", "move_public", "state_hot", "state_cold"],
+  "included_ids": ["punct_question", "punct_exclaim", "logic_yes", "logic_no", "qual_good", "qual_bad", "time", "qty_1", "qty_2", "qty_5", "qty_plus", "qty_minus", "money_coins", "money_card", "money_atm_bank", "comm_wifi", "comm_phone", "power_plug", "power_energy", "need_toilet", "need_water", "need_food", "need_bar", "safety_medical", "safety_police", "place_hotel", "place_shop", "place_landmark_park", "place_gas", "service_tools", "move_feet", "move_taxi", "move_car", "move_public", "state_hot", "state_cold", "rel_here", "rel_up", "rel_down"],
   "omitted_concepts": {
     "person_generic": "A present person can point to self or another participant.",
     "eye_look": "Gaze or pointing to the eyes supplies the reference live.",
@@ -12,10 +12,12 @@
     "body": "The body is present and can be indicated directly.",
     "size": "Hands or body can show scale in live interaction.",
     "color": "A user can point to the actual visible color.",
-    "direction": "Pointing, gaze, and placement can supply direction.",
+    "direction": "Pointing, gaze, and placement can supply direction; rel_here, rel_up, and rel_down remain available when the relation must be durable or disambiguated.",
     "communication": "Speech, gesture, or a shown phone can supply the channel.",
-    "context_icons": "Paris, Nightlife, and other context concepts layer as packs."
+    "context_icons": "Paris, Nightlife, and other context concepts layer as packs.",
+    "mouth": "A present person can indicate the mouth or use actual eating/drinking context; standalone messages may still need body_mouth.",
+    "moon_night": "Shared time, darkness, or local context may supply night live; standalone messages may still need nature_moon."
   },
   "context_layers": ["Paris", "Nightlife", "travel-transit", "personal-demo"],
-  "status": "RECOMMENDED PROFILE / NOT A SEPARATE ICON LIBRARY"
+  "status": "RECOMMENDED PROFILE / LOCAL BATCH C RELATION MEMBERSHIP PENDING VISUAL ACCEPTANCE / NOT A SEPARATE ICON LIBRARY"
 }

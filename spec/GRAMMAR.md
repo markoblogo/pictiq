@@ -44,6 +44,9 @@ Some icons may act as actions in context:
 - `move_public` → ride by public transport
 - `money_coins` / `money_card` → pay / buy / money operation
 - `move_car` → car / drive / car rental (context dependent)
+- `body_mouth` → mouth / eat / drink / oral intake, when the surrounding phrase and situation make the intended action clear
+
+Polysemy is acceptable only when it remains action-relevant. A tile may cover related practical readings, but it MUST NOT be used as a general dictionary substitute when the message would become misleading.
 
 ## 6. Quantity
 Quantity follows the object: WHAT then HOW MUCH.
@@ -73,13 +76,17 @@ Examples:
 
 `qual_good` and `qual_bad` are postfix evaluation modifiers. They qualify a base concept only; they do not encode every emotional or moral meaning of “good” and “bad.” `logic_yes` means confirmation / acceptance / open / yes, while `qual_good` means positive evaluation. `logic_no` means negation / prohibition / closed / no, while `qual_bad` means negative evaluation.
 
-Parametric COLOR and entity-symbol mechanisms are classified in [Protocol §1.2](PROTOCOL.md#12-communication-primitive-classes) but are not current grammar tokens. `rel_greater` (`>`) and `rel_lesser` (`<`) are provisional relational operators described below.
+Parametric COLOR and entity-symbol mechanisms are classified in [Protocol §1.2](PROTOCOL.md#12-communication-primitive-classes) but are not current grammar tokens. `rel_greater` (`>`), `rel_lesser` (`<`), `rel_up` (`∧`), `rel_down` (`∨`), and `rel_here` are provisional relational operators described below.
 
 ## 7.1 Relational and directional operators (provisional)
 
 `rel_greater` (`>`) and `rel_lesser` (`<`) compare adjacent concepts. In a form such as `OBJECT_A + rel_greater + OBJECT_B`, they can mean that A is larger, greater, or more than B; the interpretation is relational and contextual. They do not mean “give me more,” which remains `qty_plus`, and they do not replace `qty_minus` for reduction.
 
-In a clear navigation context, the same operators MAY indicate rightward (`move_feet + rel_greater`) or leftward (`move_feet + rel_lesser`). This is contextual direction, not a redefinition of LARGE as right or SMALL as left; a dedicated direction mechanism may still be preferable where ambiguity is dangerous.
+`rel_up` (`∧`) and `rel_down` (`∨`) extend the same relational family to vertical orientation: up / above / higher and down / below / lower. In a clear navigation context, the relation operators MAY indicate rightward (`move_feet + rel_greater`), leftward (`move_feet + rel_lesser`), upward (`move_feet + rel_up`), or downward (`move_feet + rel_down`). This is contextual direction, not a redefinition of LARGE as right, SMALL as left, more as up, or less as down; a dedicated direction mechanism may still be preferable where ambiguity is dangerous.
+
+`rel_here` marks a selected place, target, destination, or reference point. It can stand alone when the surrounding layout supplies the target, or combine with another tile such as `rel_here + place_hotel` or `rel_here + time`. It does not replace physical pointing in embodied communication; it preserves the reference in standalone communication.
+
+`nature_sun` and `nature_moon` can combine with `time` to distinguish daylight and nighttime contexts (`time + nature_sun`, `time + nature_moon`). They are not a complete calendar or clock system.
 
 ## 8. Phrase length guidance
 - Maximum allowed phrase length: 5 icons.

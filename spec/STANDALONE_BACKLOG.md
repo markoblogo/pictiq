@@ -137,7 +137,17 @@ This backlog does not decide the number of concepts or icons.
 - **Boundary:** keep separate from generic light until testing supports a relationship.
 - **Status:** **IMPLEMENTED / CANONICAL** as `nature_sun` in v1.0.2.
 
-### Batch C — protocol mechanisms
+### Batch C — protocol mechanisms and standalone gaps
+
+#### Batch C local implementation
+
+The supplied approved reference sheet is used as the visual source for five local canonical candidates: `body_mouth`, `rel_here`, `rel_up`, `rel_down`, and `nature_moon`. They are **LOCALLY IMPLEMENTED / PENDING HUMAN VISUAL ACCEPTANCE** and must not be described as released until push, tag, release, and public verification are completed.
+
+Profile treatment:
+
+- `body_mouth` is a Standalone Core candidate. In Embodied Core, a present user can usually indicate the mouth or use eating/drinking context directly.
+- `rel_here`, `rel_up`, and `rel_down` are Standalone Core and Embodied Core candidates because they preserve compact reference and orientation relations when pointing alone is not durable enough.
+- `nature_moon` is a Standalone Core candidate. In Embodied Core, darkness, timing, or shared context may often supply night; add only where local utility requires it.
 
 #### LARGE / SMALL — modifier research
 
@@ -146,7 +156,30 @@ This backlog does not decide the number of concepts or icons.
 - **Boundary:** `qty_plus` and `qty_minus` mean more/less and are not physical size.
 - **Status:** **IMPLEMENTED / CANONICAL RELATIONAL OPERATORS** as `rel_greater` and `rel_lesser` in v1.0.2.
 
-The supplied morphology is `>` for LARGE/greater and `<` for SMALL/lesser. The IDs are relational operators, not quantity synonyms.
+The supplied morphology is `>` for LARGE/greater and `<` for SMALL/lesser. Batch C extends the same relation/operator family with `rel_up` (`∧`) and `rel_down` (`∨`). The IDs are relational operators, not quantity synonyms.
+
+#### HERE / target — relation operator
+
+- **Embodied equivalent:** point to the actual place, object, body location, or target.
+- **Standalone direction:** central target/crosshair mark that identifies “here / this place / target location.”
+- **Boundary:** not a generic place tile; use existing place tiles for hotel, shop, gas, etc.
+- **Status:** **LOCALLY IMPLEMENTED** as `rel_here`, pending human visual acceptance.
+
+#### Mouth / oral intake — lexical-tile candidate
+
+- **Embodied equivalent:** point to the mouth, eat, drink, or show the relevant action.
+- **Standalone direction:** filled lips with white mouth opening from the approved reference sheet.
+- **Potential scope:** mouth, eat, drink, or oral intake when context makes the action clear.
+- **Boundary:** not speech, language, identity, or emotion; use `comm_speak` for communication.
+- **Status:** **LOCALLY IMPLEMENTED** as `body_mouth`, pending human visual acceptance.
+
+#### Moon / night — lexical-tile candidate
+
+- **Embodied equivalent:** use current darkness, time of day, or shared schedule context when reliable.
+- **Standalone direction:** filled crescent moon from the approved reference sheet.
+- **Potential scope:** moon, night, nighttime, or night context with `time`.
+- **Boundary:** not a complete time or calendar mechanism; keep separate from daylight/sun.
+- **Status:** **LOCALLY IMPLEMENTED** as `nature_moon`, pending human visual acceptance.
 
 #### Parametric COLOR prototype
 
