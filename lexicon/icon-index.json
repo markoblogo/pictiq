@@ -142,6 +142,46 @@
       ]
     },
     {
+      "id": "state_hot",
+      "type": "icon",
+      "category": "state",
+      "meaning_en": "hot / heat / fire",
+      "aliases_en": [
+        "hot",
+        "heat",
+        "fire"
+      ],
+      "tags_en": [
+        "state",
+        "temperature",
+        "heat",
+        "fire"
+      ],
+      "examples": [
+        "need_food + state_hot",
+        "state_hot + punct_exclaim"
+      ]
+    },
+    {
+      "id": "state_cold",
+      "type": "icon",
+      "category": "state",
+      "meaning_en": "cold / freezing / refrigeration",
+      "aliases_en": [
+        "cold",
+        "freezing",
+        "refrigeration"
+      ],
+      "tags_en": [
+        "state",
+        "temperature",
+        "cold"
+      ],
+      "examples": [
+        "need_food + state_cold"
+      ]
+    },
+    {
       "id": "person_generic",
       "type": "icon",
       "category": "people",
@@ -369,6 +409,25 @@
       "examples": [
         "power_plug + punct_question",
         "power_plug + logic_no"
+      ]
+    },
+    {
+      "id": "power_energy",
+      "type": "icon",
+      "category": "power",
+      "meaning_en": "electrical energy / electricity / power",
+      "aliases_en": [
+        "energy",
+        "electricity",
+        "electrical power"
+      ],
+      "tags_en": [
+        "power",
+        "electricity",
+        "energy"
+      ],
+      "examples": [
+        "power_energy + punct_exclaim"
       ]
     },
     {

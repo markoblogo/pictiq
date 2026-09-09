@@ -274,6 +274,24 @@ Hands meet at center. No numbers/ticks.
 **Visual:** A generic plug silhouette. Avoid country-specific plug standards if possible.  
 **Examples:** `power_plug + punct_question`, `power_plug + logic_no`.
 
+### power_energy — electrical energy / electricity / power
+**Visual:** A simple filled lightning-bolt silhouette.
+**Meaning:** electrical energy, electricity, or power; it does not encode human physical strength.
+**Avoid:** treating it as an outlet or charger (`power_plug`), a weather-only lightning symbol, or a translation of a source-language word.
+**Examples:** `power_energy + punct_exclaim`; adjacency with other tiles remains context-dependent.
+
+### state_hot — hot / heat / fire
+**Visual:** A classic filled flame silhouette with one stable inner opening.
+**Meaning:** a practical contextual cue for hot, heat, or fire. These senses are related uses of one tile, not a claim that the concepts are identical.
+**Avoid:** assigning a specialized hazard class without supporting context.
+**Examples:** `need_food + state_hot`, `state_hot + punct_exclaim`.
+
+### state_cold — cold / freezing / refrigeration
+**Visual:** A minimal six-branch snowflake with rounded stroke ends.
+**Meaning:** a practical cue for cold, freezing conditions, or refrigeration.
+**Avoid:** claiming every weather or ice-related meaning.
+**Examples:** `need_food + state_cold`; adjacency with other tiles remains context-dependent.
+
 ---
 
 ## Needs
