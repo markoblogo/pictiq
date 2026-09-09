@@ -193,11 +193,13 @@ The prototype must test machine representation, contrast, print behavior, access
 #### Entity-symbol namespace and prototype
 
 - **Need:** identify a named person, fictional character, organization, place, or object without alphabetic spelling.
-- **Scope model:** an explicit local namespace such as `entity:odysseus@odyssey-pack`.
+- **Scope model:** an explicit local namespace such as `entity:odysseus@literary`.
 - **Governance:** personal authority where practical for real people; project-local canonicity for fictional, historical, or public-domain entities; no universal first-claim ownership.
-- **Status:** **ARCHITECTURE PROTOTYPE — NOT IMPLEMENTED**.
+- **Status:** **LOCALLY IMPLEMENTED PILOT — PENDING HUMAN VISUAL ACCEPTANCE**.
 
-The prototype should test local definitions such as symbol A = Odysseus, symbol B = Penelope, and symbol C = Telemachus. An Alice narrative dictionary may likewise identify recurring characters.
+The first local pilot defines six person entity-symbol examples in `entities/entity-index.json`: Anton Biletskyi-Volokh, Odysseus, William Shakespeare, Albert Einstein, Leonardo da Vinci, and Buddha / Siddhartha Gautama. These examples demonstrate the mechanism and do not add named people to Core vocabulary.
+
+The prototype should next test edition-specific narrative definitions such as symbol A = Odysseus, symbol B = Penelope, and symbol C = Telemachus. An Alice narrative dictionary may likewise identify recurring characters.
 
 #### Emission-mark convention
 

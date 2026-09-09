@@ -119,15 +119,20 @@ COLOR is a **PROPOSED PARAMETRIC MECHANISM**. It defines no canonical icon, ID, 
 
 #### Entity symbols
 
-An entity symbol is a unique visual identifier for a specific person, fictional character, organization, place, object, or other named entity within an explicit context. It differs from a generic lexical concept: a neutral person tile means “person / human participant,” while an entity symbol means “this specific identified entity.”
+An entity symbol is a unique visual identifier for a specific person, fictional character, organization, place, object, or other named entity within an explicit context. It behaves like a **visual proper name**. It differs from a generic lexical concept: a neutral person tile means “person / human participant,” while an entity symbol means “this specific identified entity.”
 
 > Do not spell an identity when a symbol can identify it.
 
-Entity symbols are not automatically part of the Core lexicon. They MAY belong to context packs, narrative dictionaries, personal profiles, or future entity registries. A narrative may locally define symbols for Odysseus, Penelope, and Telemachus just as an Alice narrative pack may identify a recurring character. A conceptual namespace such as `entity:odysseus@odyssey-pack` expresses the required scope; it is not implemented syntax.
+Entity symbols are not automatically part of the Core lexicon and MUST NOT be counted as ordinary Core/Standalone lexical tiles. They MAY belong to context packs, narrative dictionaries, personal profiles, or entity registries. A narrative may locally define symbols for Odysseus, Penelope, and Telemachus just as an Alice narrative pack may identify a recurring character. A namespaced identifier such as `entity:odysseus@literary` expresses the required scope.
+
+One canonical entity symbol identifies one specific entity within its namespace. Natural-language aliases such as “Leonardo,” “Leonardo da Vinci,” and “da Vinci” may resolve to the same entity ID when context is unambiguous. Associative visual features help recognition but are not lexical semantics: waves in an Odysseus symbol do not mean “sea,” and distinctive hair in an Einstein symbol does not mean “hair.”
+
+Entity symbols may participate in normal Pictiq composition. `entity:anton-biletskyi-volokh@personal + comm_speak` can mean Anton speaks, Anton said, or communication associated with Anton depending on context. Pictiq does not introduce a possession operator for this; adjacent entity + concept expresses contextual association unless the difference changes the required action.
 
 Governance requirements:
 
 - **Real people:** the represented person SHOULD be able to define or revise their personal symbol where practical. A third-party context MAY use a local identifier but MUST NOT claim ownership of a universal identity.
+- **Self-defined personal symbols:** if a living person supplies an intentional personal mark or logo, Pictiq adapts that mark technically to the protocol rather than inventing a new identity for that person.
 - **Fictional, historical, and public-domain entities:** a project, translation, pack, or narrative MAY define a symbol canonical within that named context and version until explicitly revised.
 - **Scope:** identity MUST have an explicit namespace or context. No global first-claim registry is implied.
 - **Recognition:** a symbol SHOULD use distinctive, recognizable associations rather than an arbitrary abstract mark where practical. A tile rendering MUST pass normal perceptual QA.
@@ -251,12 +256,15 @@ Personal/corporate packs are allowed and may include:
 - Proper names are not Core lexical words. Plain text used as a name remains outside the tile system.
 - An entity symbol MAY identify a named entity inside an explicitly scoped context under §1.2; it does not become a global Core word.
 - The Pictiq logo remains the only globally defined proper-name mark and is not a tile.
-- Context protocols may define geographic, narrative, personal, or organizational entity symbols. Brand identifiers require appropriate authority and remain subject to §9.
+- Context protocols may define geographic, narrative, personal, or organizational entity symbols. A registry entry MUST record provenance, authority, aliases, namespace, and status.
+- A narrative or context pack SHOULD introduce each entity once, assign a stable entity symbol, record it in that namespace, and reuse the same symbol consistently throughout that edition or context.
+- Brand identifiers and personal marks require appropriate authority and remain subject to §9.
 
 ## 9. Safety & restrictions
 - No text/wordmarks/logos.
 - Avoid cultural/religious/political sensitive symbols (medical cross is allowed as an international standard).
 - No trademarks, brand identity elements, or place names as text.
+- Entity symbols are the controlled exception for scoped identity marks. They still MUST avoid readable text inside the tile and MUST record authority/provenance; self-defined personal marks may be adapted when the represented person supplies them.
 
 ## 10. Canonical SVG rule
 - Canonical icons in the repository must NOT contain SVG `<text>` elements.

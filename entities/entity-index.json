@@ -1,0 +1,126 @@
+{
+  "schema_version": "0.1",
+  "status": "LOCAL ENTITY-SYMBOL EXAMPLES / PENDING HUMAN VISUAL ACCEPTANCE / NOT CORE LEXICON",
+  "symbols": [
+    {
+      "id": "entity:anton-biletskyi-volokh@personal",
+      "namespace": "personal",
+      "slug": "anton-biletskyi-volokh__personal",
+      "display_name": "Anton Biletskyi-Volokh",
+      "entity_type": "person",
+      "entity_class": "living_person",
+      "aliases": ["Anton", "Anton Biletskyi", "Anton Biletskyi-Volokh"],
+      "authority": "self-defined",
+      "provenance": {
+        "source": "self-supplied personal logo adapted to Pictiq framing",
+        "source_crop_path": "inputs/silhouettes/entity-symbols/anton-biletskyi-volokh__personal.png",
+        "visual_source": "approved personal-icons reference image supplied for this pilot"
+      },
+      "icon_path": "entities/svg/anton-biletskyi-volokh__personal.svg",
+      "status": "LOCAL_CANDIDATE_PENDING_VISUAL_ACCEPTANCE",
+      "visual_cues": ["self-supplied monogram/logo"],
+      "governance": "A living person's self-defined symbol has preferred authority where practical.",
+      "notes": "Technical adaptation preserves the supplied logo geometry and converts meaningful non-background components to monochrome black."
+    },
+    {
+      "id": "entity:odysseus@literary",
+      "namespace": "literary",
+      "slug": "odysseus__literary",
+      "display_name": "Odysseus",
+      "entity_type": "person",
+      "entity_class": "literary_entity",
+      "aliases": ["Odysseus", "Ulysses"],
+      "authority": "project-scoped associative example",
+      "provenance": {
+        "source": "approved generated associative reference symbol",
+        "source_crop_path": "inputs/silhouettes/entity-symbols/odysseus__literary.png",
+        "visual_source": "approved personal-icons reference image supplied for this pilot"
+      },
+      "icon_path": "entities/svg/odysseus__literary.svg",
+      "status": "LOCAL_CANDIDATE_PENDING_VISUAL_ACCEPTANCE",
+      "visual_cues": ["ancient traveler head", "head covering", "beard", "waves"],
+      "governance": "Project-scoped literary example; does not claim universal ownership of Odysseus representation.",
+      "notes": "Waves are associative identification cues, not lexical semantics for sea or travel."
+    },
+    {
+      "id": "entity:william-shakespeare@historical",
+      "namespace": "historical",
+      "slug": "william-shakespeare__historical",
+      "display_name": "William Shakespeare",
+      "entity_type": "person",
+      "entity_class": "historical_literary_entity",
+      "aliases": ["William Shakespeare", "Shakespeare"],
+      "authority": "project-scoped associative example",
+      "provenance": {
+        "source": "approved generated associative reference symbol",
+        "source_crop_path": "inputs/silhouettes/entity-symbols/william-shakespeare__historical.png",
+        "visual_source": "approved personal-icons reference image supplied for this pilot"
+      },
+      "icon_path": "entities/svg/william-shakespeare__historical.svg",
+      "status": "LOCAL_CANDIDATE_PENDING_VISUAL_ACCEPTANCE",
+      "visual_cues": ["bald head silhouette", "side hair", "moustache", "collar"],
+      "governance": "Project-scoped historical/literary example; reusable inside Pictiq demos after visual acceptance.",
+      "notes": "The symbol identifies the named entity; it does not encode writing, books, or English literature as lexical concepts."
+    },
+    {
+      "id": "entity:albert-einstein@historical",
+      "namespace": "historical",
+      "slug": "albert-einstein__historical",
+      "display_name": "Albert Einstein",
+      "entity_type": "person",
+      "entity_class": "historical_entity",
+      "aliases": ["Albert Einstein", "Einstein"],
+      "authority": "project-scoped associative example",
+      "provenance": {
+        "source": "approved generated associative reference symbol",
+        "source_crop_path": "inputs/silhouettes/entity-symbols/albert-einstein__historical.png",
+        "visual_source": "approved personal-icons reference image supplied for this pilot"
+      },
+      "icon_path": "entities/svg/albert-einstein__historical.svg",
+      "status": "LOCAL_CANDIDATE_PENDING_VISUAL_ACCEPTANCE",
+      "visual_cues": ["wild hair", "simplified face", "moustache"],
+      "governance": "Project-scoped historical example; does not use formulas or scientific notation as identity text.",
+      "notes": "Hair is an associative identification cue, not the symbol's lexical meaning."
+    },
+    {
+      "id": "entity:leonardo-da-vinci@historical",
+      "namespace": "historical",
+      "slug": "leonardo-da-vinci__historical",
+      "display_name": "Leonardo da Vinci",
+      "entity_type": "person",
+      "entity_class": "historical_entity",
+      "aliases": ["Leonardo", "Leonardo da Vinci", "da Vinci"],
+      "authority": "project-scoped associative example",
+      "provenance": {
+        "source": "approved generated associative reference symbol",
+        "source_crop_path": "inputs/silhouettes/entity-symbols/leonardo-da-vinci__historical.png",
+        "visual_source": "approved personal-icons reference image supplied for this pilot"
+      },
+      "icon_path": "entities/svg/leonardo-da-vinci__historical.svg",
+      "status": "LOCAL_CANDIDATE_PENDING_VISUAL_ACCEPTANCE",
+      "visual_cues": ["head covering", "long hair", "long beard"],
+      "governance": "Project-scoped historical example; avoids external artworks or readable text.",
+      "notes": "The symbol identifies Leonardo da Vinci; it does not encode art, invention, or a specific artwork."
+    },
+    {
+      "id": "entity:siddhartha-gautama-buddha@historical",
+      "namespace": "historical",
+      "slug": "siddhartha-gautama-buddha__historical",
+      "display_name": "Buddha / Siddhartha Gautama",
+      "entity_type": "person",
+      "entity_class": "historical_entity",
+      "aliases": ["Buddha", "Siddhartha Gautama", "Gautama Buddha"],
+      "authority": "project-scoped associative example",
+      "provenance": {
+        "source": "approved generated associative reference symbol",
+        "source_crop_path": "inputs/silhouettes/entity-symbols/siddhartha-gautama-buddha__historical.png",
+        "visual_source": "approved personal-icons reference image supplied for this pilot"
+      },
+      "icon_path": "entities/svg/siddhartha-gautama-buddha__historical.svg",
+      "status": "LOCAL_CANDIDATE_PENDING_VISUAL_ACCEPTANCE",
+      "visual_cues": ["calm face", "topknot", "forehead mark", "ear shapes"],
+      "governance": "Project-scoped historical example subject to correct entity naming and respectful contextual use.",
+      "notes": "The symbol identifies the named entity; it is not a tile for Buddhism, religion, meditation, peace, or teaching."
+    }
+  ]
+}

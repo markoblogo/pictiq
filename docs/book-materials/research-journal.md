@@ -376,15 +376,15 @@ How can Pictiq identify Odysseus, Alice, or a specific person without alphabetic
 
 ### What happened
 
-The project described scoped entity symbols such as `entity:odysseus@odyssey-pack`, distinguishing a named entity from `person_generic`. Governance separates personal authority from project-local canonicity and rejects universal first-claim ownership.
+The project described scoped entity symbols such as `entity:odysseus@literary`, distinguishing a named entity from `person_generic`. Governance separates personal authority from project-local canonicity and rejects universal first-claim ownership. The first local pilot now implements six person examples: Anton Biletskyi-Volokh, Odysseus, William Shakespeare, Albert Einstein, Leonardo da Vinci, and Buddha / Siddhartha Gautama.
 
 ### Evidence
 
-[Protocol entity symbols](../../spec/PROTOCOL.md#12-communication-primitive-classes) and [backlog prototype](../../spec/STANDALONE_BACKLOG.md#entity-symbol-namespace-and-prototype).
+[Protocol entity symbols](../../spec/PROTOCOL.md#12-communication-primitive-classes), [entity-symbol concept](concepts/entity-symbols.md), [pilot note](experiments/entity-symbol-pilot.md), [entity registry](../../entities/entity-index.json), and [backlog prototype](../../spec/STANDALONE_BACKLOG.md#entity-symbol-namespace-and-prototype).
 
 ### Decision / outcome
 
-Entity symbols remain an **ARCHITECTURE PROTOTYPE — NOT IMPLEMENTED**.
+Entity symbols are a **LOCAL PILOT IMPLEMENTED — PENDING HUMAN VISUAL ACCEPTANCE**. They are not ordinary Core lexical tiles and do not change the Core/Standalone lexicon count.
 
 ### Why it matters
 

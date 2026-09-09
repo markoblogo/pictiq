@@ -65,6 +65,7 @@ Printable PDF: [`docs/overview/pictiq-core-grid.pdf`](docs/overview/pictiq-core-
 - Silhouette input rules: `spec/SILHOUETTE_INPUTS.md`
 - Logo and branding assets: `branding/`
 - Lexicon registry: `lexicon/icon-index.json`
+- Entity-symbol registry: `entities/entity-index.json`
 - Packs: `packs/universal-core.json`, `packs/universal-v1.json`
 - Static dictionary site (GitHub Pages): `docs/`
 
@@ -79,7 +80,7 @@ Pictiq treats technical SVG validity and perceptual recognition as separate requ
 
 Pictiq now distinguishes [Embodied Communication from Standalone Communication](spec/PROTOCOL.md#11-embodied-and-standalone-communication). Live pointing, gaze, gesture, voice, visible objects, and shared context can make a tile unnecessary; signs, cards, stickers, screens, and remote instructions must preserve the same meaning after the communicator is gone.
 
-Meaning may enter a message through [lexical tiles, modifiers/operators, parametric tiles, entity symbols, or embodied references](spec/PROTOCOL.md#12-communication-primitive-classes). Standalone Batch A and the approved Batch B candidates are implemented; parametric COLOR and entity symbols remain separate mechanisms under evaluation.
+Meaning may enter a message through [lexical tiles, modifiers/operators, parametric tiles, entity symbols, or embodied references](spec/PROTOCOL.md#12-communication-primitive-classes). Standalone Batch A and the approved Batch B candidates are implemented; parametric COLOR remains under evaluation, and entity symbols now have a local pilot registry pending visual acceptance.
 
 The single canonical lexicon can be selected through an [Embodied Profile](spec/PROFILES.md#embodied-profile) for person-present communication or a [Standalone Profile](spec/PROFILES.md#standalone-profile) for durable/remote communication. Context packs layer on either profile; they are not separate icon libraries.
 
@@ -94,6 +95,7 @@ The single canonical lexicon can be selected through an [Embodied Profile](spec/
 - `/books` — published handbook editions and release artwork
 - `/spec` — protocol rules, grammar, and icon design definitions
 - `/lexicon` — icon registry (metadata index + schema)
+- `/entities` — scoped visual proper-name examples and registry
 - `/packs` — curated icon packs (core and extensions)
 - `/icons` — canonical SVG icons + exported PNGs
 - `/layouts` — reusable content profiles and physical representations
@@ -106,6 +108,7 @@ The single canonical lexicon can be selected through an [Embodied Profile](spec/
 ## Tooling & CI
 - `tools/validate_lexicon.py` validates lexicon metadata, packs, profiles, SVG references, and i18n data.
 - `tools/validate_svg.py` validates canonical SVG rules, including the standard viewBox and `currentColor` use.
+- `tools/validate_entities.py` validates scoped entity-symbol metadata and SVG assets.
 - Layout generators produce wallet cards, luggage tags, phone lockscreens, lighter artwork, and documentation overviews from content profiles.
 - GitHub Actions runs validation on push and pull requests.
 

@@ -125,6 +125,22 @@ Run:
 python3 tools/validate_svg.py
 ```
 
+## validate_entities.py
+
+Validates scoped entity symbols separately from the ordinary Core lexicon:
+- every `entities/entity-index.json` symbol has a namespaced `entity:...@namespace` ID
+- no entity ID collides with `lexicon/icon-index.json`
+- each symbol records namespace, aliases, authority, provenance, status, source crop, and SVG path
+- each entity SVG follows the same canonical SVG constraints as ordinary icons
+
+Run:
+
+```bash
+python3 tools/validate_entities.py
+```
+
+Entity symbols live under `entities/` and are not added to `icons/svg/`, packs, or Core profiles unless a future context/profile explicitly references them.
+
 ## make_icon_qa_sheet.py
 
 Prepares a deterministic, self-contained HTML sheet with original canonical SVGs
