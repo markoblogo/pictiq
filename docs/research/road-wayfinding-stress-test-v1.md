@@ -22,9 +22,17 @@ The success criterion is practical action, not literal redrawing or exact Englis
 
 The Amazon listing is treated only as related project context. No Amazon preview/book content was copied, and the listing does not validate Pictiq road communication.
 
+## Human-accepted final visual representation
+
+The authoritative visual result of Stress Test 02 is the supplied, human-accepted image: [`../book-materials/experiments/assets/road-wayfinding-pictiq-representation.png`](../book-materials/experiments/assets/road-wayfinding-pictiq-representation.png).
+
+This PNG is preserved exactly as supplied. It is not a regenerated infographic and not an automatic rendering from the original v1 JSON. It incorporates later human semantic review and the accepted architectural decisions for `surface_wavy`, `state_dead`, and numeric notation.
+
+Earlier Codex-generated road comparison sheets are rejected as final visuals because they contained inaccurate or outdated sign/mapping choices. They may remain only as historical intermediate artifacts.
+
 ## Method
 
-Each case records official/conventional meaning separately from the Pictiq representation. The first pass uses only current accepted Pictiq primitives. The result class is exactly one of: DIRECT, COMPOSED, CONTEXT-SUFFICIENT, LOSSY, DOMAIN-EXTENSION, GAP, OUT-OF-SCOPE.
+Each case records official/conventional meaning separately from the Pictiq representation. The first pass used the then-current accepted Pictiq primitives. The result class is exactly one of: DIRECT, COMPOSED, CONTEXT-SUFFICIENT, LOSSY, DOMAIN-EXTENSION, GAP, OUT-OF-SCOPE.
 
 Failure modes are secondary labels: VOCABULARY, GRAMMAR, RELATION, LAYOUT, NUMERIC/NOTATION, CONTEXT, SAFETY-PRECISION.
 
@@ -49,9 +57,9 @@ Failure modes are secondary labels: VOCABULARY, GRAMMAR, RELATION, LAYOUT, NUMER
 | straight/ahead | Continue straight ahead. | Continue forward on the present route. | `rel_up` | up / above / ahead in navigation context | CONTEXT-SUFFICIENT | RELATION, CONTEXT | Low on a road sign; higher in building maps where up may mean upstairs. | Road layout arrow convention can disambiguate ahead vs physically up. | Unary `rel_up` is usable as ahead only with explicit navigation context. |
 | down / lower level | Go down, lower level, or downward route. | Move down or choose the lower-level route. | `rel_down` | down / below / lower | DIRECT | — | No for generic lower/down movement. | None needed for first-pass public wayfinding. | Existing relational operator covers the required distinction. |
 | no entry | Entry prohibited / do not enter this road or area. | Do not enter or proceed into the signed way. | `rel_here + logic_no` | not here / this place no / no current reference | GAP | VOCABULARY, RELATION, SAFETY-PRECISION | Yes. It can be read as no current location, not available here, or no place here rather than entry forbidden. | Road-specific access/prohibition convention is stronger than a new Core word. | Candidate Road pack notation for access/entry restriction; avoid Core expansion until cross-domain evidence appears. |
-| pedestrian route | Route or path for pedestrians. | Walk here / pedestrians should use this route. | `move_feet` | walking / go on foot | CONTEXT-SUFFICIENT | CONTEXT | Low in pedestrian-wayfinding context. | A Road/Public pack may specify that bare walking in route signage means pedestrian route. | No new pedestrian primitive needed for this case. |
-| pedestrians prohibited | Access prohibited to pedestrians. | Do not walk here / pedestrians must not enter. | `move_feet + logic_no` | walking/pedestrian movement prohibited | COMPOSED | — | No material ambiguity for the required action. | No hypothesis needed. | Strong success for current composition and postfix negation. |
-| pedestrian crossing | Pedestrian crossing or crossing place. | Expect/use a crossing point; drivers yield/slow where applicable; pedestrians cross here. | `move_feet + rel_here` | walking here / pedestrian movement at this location | LOSSY | RELATION, LAYOUT, SAFETY-PRECISION | Yes. Walking here is not the same as a crossing relation between two sides of a road. | A crossing/path relation or Road pack layout convention could preserve the missing distinction. | Candidate Road/Public relation, not immediate Core. |
+| pedestrian route | Route or path for pedestrians. | Walk here / pedestrians should use this route. | `person_generic + move_feet` | person / walking route | CONTEXT-SUFFICIENT | CONTEXT | Low in pedestrian-wayfinding context. | Accepted image adds the person component; a pedestrian is not footprints alone. | No new pedestrian primitive needed for this case. |
+| pedestrians prohibited | Access prohibited to pedestrians. | Do not walk here / pedestrians must not enter. | `person_generic + move_feet + logic_no` | person / walking / no | COMPOSED | — | No material ambiguity for the required action. | Accepted image adds the person component. | Strong success for composition and postfix negation. |
+| pedestrian crossing | Pedestrian crossing or crossing place. | Expect/use a crossing point; drivers yield/slow where applicable; pedestrians cross here. | `person_generic + move_feet + rel_here` | person walking at this reference/location | LOSSY | RELATION, LAYOUT, SAFETY-PRECISION | Yes. Person walking here is still not the same as a crossing relation between two sides of a road. | Accepted image adds the person component but preserves LOSSY status. | Candidate Road/Public relation, not immediate Core. |
 | parking | Parking place or parking permitted. | A driver may park here / find parking here. | `rel_here + move_car` | car here / car at this place | CONTEXT-SUFFICIENT | CONTEXT | Low in road context. Outside it, this could mean car location rather than permission to park. | A Road pack could define `rel_here + move_car` as parking-place shorthand. | Parking is not a lexical gap in first pass. |
 | no parking | Parking prohibited. | Do not park here. | `rel_here + move_car + logic_no` | car-at-this-place prohibited / no car here | CONTEXT-SUFFICIENT | CONTEXT, SAFETY-PRECISION | Usually acceptable in road context, but can overread as all cars prohibited here. | Road prohibition convention could narrow it to parking rather than vehicle presence. | Works compositionally enough for first pass; review only if legal precision is required. |
 | fuel/petrol station | Fuel service or petrol station. | Go here for fuel. | `place_gas` | gas station / fuel place | DIRECT | — | No material ambiguity. | None needed. | Existing contextual tile succeeds as direct service sign. |
@@ -62,11 +70,11 @@ Failure modes are secondary labels: VOCABULARY, GRAMMAR, RELATION, LAYOUT, NUMER
 | information | Information point / tourist or public information. | Go here to obtain information. | `media_text` | text / writing / document | LOSSY | VOCABULARY, CONTEXT | Yes. Written text is not always an information service, and information can be spoken/digital. | `media_text + comm_speak` improves service feel but remains broad. | Potential Public/Wayfinding context primitive, but not automatically Core. |
 | warning/caution | General danger warning or caution ahead. | Pay attention, slow, prepare for hazard. | `punct_exclaim` | attention / urgent / caution | DIRECT | — | No for generic caution; yes if the hazard type or severity changes action. | DEAD could represent extreme/deadly danger, not generic warning. | `!` is enough for generic warning, not for all danger severity. |
 | road works | Road works or maintenance ahead. | Expect works, slow down, follow temporary routing. | `service_tools + punct_exclaim` | tools/repair/service with caution | CONTEXT-SUFFICIENT | CONTEXT | Low in road context; outside it could mean repair help or tools needed. | Road pack could define this as works/maintenance ahead. | Contextual polysemy is adequate; no road-works tile yet. |
-| slippery road | Road surface may be slippery. | Slow down, avoid abrupt steering/braking, increase caution. | `punct_exclaim` | caution / urgent attention | LOSSY | VOCABULARY, SAFETY-PRECISION | Yes. Generic warning does not say surface traction is the issue. | WAVY + `punct_exclaim` preserves problematic/unstable surface more clearly. | Evidence for a surface-irregularity primitive or road/domain notation. |
-| uneven/bumpy road | Uneven or rough road surface ahead. | Slow down and expect rough surface/vehicle movement. | `punct_exclaim` | caution / urgent attention | LOSSY | VOCABULARY, SAFETY-PRECISION | Yes. Generic caution loses the surface condition. | WAVY + `punct_exclaim` may compress slippery/uneven into a shared surface-problem warning. | Same WAVY evidence as slippery road. |
-| speed bump | Speed hump/bump ahead. | Slow down before a vertical traffic-calming feature. | `rel_up + punct_exclaim` | up/ahead with caution | LOSSY | VOCABULARY, RELATION, SAFETY-PRECISION | Yes. It may mean go up, uphill, upstairs, or caution ahead, not a bump. | WAVY helps only partly; a bump may require road-specific surface/traffic-calming notation. | Most adversarial WAVY case; likely Road-pack refinement if precision matters. |
+| slippery road | Road surface may be slippery. | Slow down, avoid abrupt steering/braking, increase caution. | `surface_wavy + punct_exclaim` | wavy/unstable surface warning | LOSSY | SEMANTIC-COMPRESSION | Low for the shared action: surface problem → slow down / proceed carefully. | Accepted image uses broad WAVY semantic compression plus warning. | Evidence for contextual `surface_wavy`, not separate primitives for every surface adjective. |
+| uneven/bumpy road | Uneven or rough road surface ahead. | Slow down and expect rough surface/vehicle movement. | `surface_wavy + punct_exclaim` | wavy/unstable surface warning | LOSSY | SEMANTIC-COMPRESSION | Low for the shared action: surface problem → slow down / proceed carefully. | Accepted image uses broad WAVY semantic compression plus warning. | Same `surface_wavy` evidence as slippery road. |
+| speed bump | Speed hump/bump ahead. | Slow down before a vertical traffic-calming feature. | `surface_wavy + punct_exclaim` | surface-irregularity warning | LOSSY | SEMANTIC-COMPRESSION, SAFETY-PRECISION | Yes. WAVY preserves the slow/careful action but compresses a discrete bump into broader surface irregularity. | Accepted image uses broad WAVY compression. | Road-pack refinement may still be needed if discrete bump precision matters. |
 | dead end | Road has no through continuation. | Do not expect through passage; turn around or choose another route if needed. | `rel_up + logic_no` | no ahead / no upward-forward continuation | COMPOSED | CONTEXT | Low in road navigation context, but not safe outside it. | Do not use DEAD; dead end is a linguistic coincidence. | Current composition is adequate for simple wayfinding. |
-| speed limit 50 | Do not exceed 50 in the jurisdiction's speed unit. | Keep speed at or below 50 km/h or mph depending on jurisdiction. | `qty_5 + qty_5` | ten / two fives; not fifty and not speed limit | DOMAIN-EXTENSION | NUMERIC/NOTATION, VOCABULARY, SAFETY-PRECISION | Yes. Current quantity primitives cannot encode exact 50 or maximum-speed rule. | Digits `50` plus established road speed-limit convention solve the case better than Core expansion. | Create a shared numeric notation layer candidate; Road pack can reference it. |
+| speed limit 50 | Do not exceed 50 in the jurisdiction's speed unit. | Keep speed at or below 50 km/h or mph depending on jurisdiction. | `numeric(50)` | exact numeric notation 50 inside road speed-limit convention | DOMAIN-EXTENSION | DOMAIN-NOTATION, SAFETY-PRECISION | Yes. Numeric notation supplies exact 50, while road convention supplies the maximum-speed rule. | Accepted image rejects `qty_5 + qty_5` for exact 50. | Shared numeric notation; Road pack references it without owning it. |
 | no left turn | Turning left at the next junction is prohibited. | Do not turn left. | `rel_lesser + logic_no` | left/lesser orientation prohibited | COMPOSED | RELATION, CONTEXT | Low in road context. Adding `move_car` is usually redundant because the sign context supplies vehicle/road use. | Road prohibition convention could make the maneuver restriction explicit. | Existing relation + negation works if Road context is clear. |
 | you are here/current location | Current viewer/location reference point on a map or wayfinding board. | Orient from this point. | `rel_here` | here / current reference point / target | DIRECT | — | No material ambiguity in a wayfinding layout. | None needed. | HERE reference semantics are coherent across map/current-location use. |
 
@@ -81,8 +89,8 @@ Failure modes are secondary labels: VOCABULARY, GRAMMAR, RELATION, LAYOUT, NUMER
 ## Strongest current failures
 
 - No entry is not honestly captured by `rel_here + logic_no`; entry/access prohibition is missing.
-- Pedestrian crossing loses the crossing/path relation. `move_feet + rel_here` says walking here, not crossing here.
-- Speed limit 50 exposes the numeric/notation layer gap: current quantity tiles cannot encode exact 50 or maximum speed.
+- Pedestrian crossing still loses the crossing/path relation. `person_generic + move_feet + rel_here` says a person walking here, not necessarily crossing here.
+- Speed limit 50 rejects `qty_5 + qty_5`; exact 50 belongs to numeric notation, while the speed-limit rule remains domain convention.
 - Slippery/uneven/speed-bump signs show that generic caution loses safety-relevant surface information.
 - Information point is only approximated by `media_text`; information service is broader than text/writing.
 
@@ -120,7 +128,7 @@ Digits should be treated as a shared notation layer candidate, not as ordinary l
 
 ## Speed-limit-50 result
 
-Current Pictiq fails. `qty_5 + qty_5` means ten under current grammar, not fifty, and it does not encode speed or maximum/limit. The best architecture is DOMAIN-EXTENSION: use ordinary numeric notation `50` inside established Road speed-limit convention, with Pictiq coexisting rather than replacing the domain notation.
+The original baseline failed because `qty_5 + qty_5` means ten under current grammar, not fifty, and it does not encode speed or maximum/limit. The accepted current representation uses numeric notation `50` inside established Road speed-limit convention, with Pictiq coexisting rather than replacing the domain notation.
 
 ## No-left-turn result
 
@@ -185,13 +193,14 @@ Still open:
 
 ## Visual comparison sheets
 
-The rebuilt sheets compare schematic conventional road/public signs with exact current Pictiq tile sequences rendered from repository SVG assets. They are presentation artifacts only and do not change the analytical classifications. DEAD and WAVY appear only in the original separate hypothesis area marked “not canonical”; the accepted follow-up QA sheet supersedes that label for `surface_wavy` and `state_dead`.
+The supplied human-accepted PNG is the final visual representation. Earlier rebuilt Codex sheets are rejected for final use and remain only as intermediate research artifacts. The accepted PNG is the visual summary; the research note and official sources remain the evidence layer.
 
 ## Artifacts
 
 - Machine-readable matrix: [`road-wayfinding-stress-test-v1.json`](road-wayfinding-stress-test-v1.json)
-- Full visual comparison sheet: [`../../build/research/road-wayfinding-comparison.png`](../../build/research/road-wayfinding-comparison.png)
-- Selected visual comparison sheet: [`../../build/research/road-wayfinding-comparison-selected.png`](../../build/research/road-wayfinding-comparison-selected.png)
+- Human-accepted final visual representation: [`../book-materials/experiments/assets/road-wayfinding-pictiq-representation.png`](../book-materials/experiments/assets/road-wayfinding-pictiq-representation.png)
+- Rejected intermediate full sheet: `build/research/road-wayfinding-comparison.png`
+- Rejected intermediate selected sheet: `build/research/road-wayfinding-comparison-selected.png`
 - Book-materials note: [`../book-materials/experiments/road-wayfinding-stress-test.md`](../book-materials/experiments/road-wayfinding-stress-test.md)
 
 ## Closeout confirmations

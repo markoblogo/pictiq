@@ -535,3 +535,21 @@ The project accepted `surface_wavy` and `state_dead` as contextual ordinary cano
 ### Why it matters
 
 The decision preserves action-relevant distinctions while keeping Core small: context packs select and reuse primitives or notation, they do not own them exclusively.
+
+## 2026-09-10 — Road Wayfinding final visual acceptance
+
+### Starting question
+
+Which visual output should represent Stress Test 02 after human review rejected the first generated comparison sheets?
+
+### What happened
+
+The supplied image `road-wayfinding-pictiq-representation.png` became the human-accepted final visual representation. It replaces the earlier Codex-generated comparison sheets as the current visual result while preserving them as rejected intermediate artifacts.
+
+### Corrections preserved
+
+Pedestrian route/prohibition/crossing now use PERSON plus FEET/WALKING. Exact `50` uses numeric notation, not `qty_5 + qty_5`. Slippery, uneven, and speed-bump cases use the broad `surface_wavy + punct_exclaim` compression where the practical action is surface problem → slow down / proceed carefully. `state_dead` is recorded as death/deadly/not-alive and is explicitly not used for dead end; dead end remains forward/ahead plus NO.
+
+### Method lesson
+
+Future stress tests should validate source meaning, validate Pictiq semantic mapping, obtain human acceptance, and only then create the final visual comparison.

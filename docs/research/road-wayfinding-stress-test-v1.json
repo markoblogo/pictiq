@@ -61,12 +61,12 @@
     }
   ],
   "counts": {
-    "CONTEXT-SUFFICIENT": 8,
     "DIRECT": 7,
-    "GAP": 1,
     "COMPOSED": 3,
+    "CONTEXT-SUFFICIENT": 8,
     "LOSSY": 5,
     "DOMAIN-EXTENSION": 1,
+    "GAP": 1,
     "OUT-OF-SCOPE": 0
   },
   "cases": [
@@ -147,34 +147,38 @@
       "case": "pedestrian route",
       "official_meaning": "Route or path for pedestrians.",
       "required_action": "Walk here / pedestrians should use this route.",
-      "current_pictiq": "`move_feet`",
-      "back_interpretation": "walking / go on foot",
+      "current_pictiq": "`person_generic + move_feet`",
+      "back_interpretation": "person / walking route",
       "result": "CONTEXT-SUFFICIENT",
       "failure_mode": [
         "CONTEXT"
       ],
       "action_ambiguity": "Low in pedestrian-wayfinding context.",
       "hypothesis_improvement": "A Road/Public pack may specify that bare walking in route signage means pedestrian route.",
-      "architectural_consequence": "No new pedestrian primitive needed for this case."
+      "architectural_consequence": "No new pedestrian primitive needed for this case.",
+      "original_v1_pictiq": "`move_feet`",
+      "accepted_visual_note": "Pedestrian route now includes both person and walking morphology; not footprints alone."
     },
     {
       "case": "pedestrians prohibited",
       "official_meaning": "Access prohibited to pedestrians.",
       "required_action": "Do not walk here / pedestrians must not enter.",
-      "current_pictiq": "`move_feet + logic_no`",
-      "back_interpretation": "walking/pedestrian movement prohibited",
+      "current_pictiq": "`person_generic + move_feet + logic_no`",
+      "back_interpretation": "person / walking / no",
       "result": "COMPOSED",
       "failure_mode": [],
       "action_ambiguity": "No material ambiguity for the required action.",
       "hypothesis_improvement": "No hypothesis needed.",
-      "architectural_consequence": "Strong success for current composition and postfix negation."
+      "architectural_consequence": "Strong success for current composition and postfix negation.",
+      "original_v1_pictiq": "`move_feet + logic_no`",
+      "accepted_visual_note": "Accepted representation keeps the person component semantically explicit."
     },
     {
       "case": "pedestrian crossing",
       "official_meaning": "Pedestrian crossing or crossing place.",
       "required_action": "Expect/use a crossing point; drivers yield/slow where applicable; pedestrians cross here.",
-      "current_pictiq": "`move_feet + rel_here`",
-      "back_interpretation": "walking here / pedestrian movement at this location",
+      "current_pictiq": "`person_generic + move_feet + rel_here`",
+      "back_interpretation": "person walking at this reference/location",
       "result": "LOSSY",
       "failure_mode": [
         "RELATION",
@@ -183,7 +187,9 @@
       ],
       "action_ambiguity": "Yes. Walking here is not the same as a crossing relation between two sides of a road.",
       "hypothesis_improvement": "A crossing/path relation or Road pack layout convention could preserve the missing distinction.",
-      "architectural_consequence": "Candidate Road/Public relation, not immediate Core."
+      "architectural_consequence": "Candidate Road/Public relation, not immediate Core.",
+      "original_v1_pictiq": "`move_feet + rel_here`",
+      "accepted_visual_note": "Accepted representation preserves LOSSY status while adding the person component."
     },
     {
       "case": "parking",
@@ -321,47 +327,50 @@
       "case": "slippery road",
       "official_meaning": "Road surface may be slippery.",
       "required_action": "Slow down, avoid abrupt steering/braking, increase caution.",
-      "current_pictiq": "`punct_exclaim`",
-      "back_interpretation": "caution / urgent attention",
+      "current_pictiq": "`surface_wavy + punct_exclaim`",
+      "back_interpretation": "wavy/unstable surface warning",
       "result": "LOSSY",
       "failure_mode": [
-        "VOCABULARY",
-        "SAFETY-PRECISION"
+        "SEMANTIC-COMPRESSION"
       ],
       "action_ambiguity": "Yes. Generic warning does not say surface traction is the issue.",
-      "hypothesis_improvement": "WAVY + `punct_exclaim` preserves problematic/unstable surface more clearly.",
-      "architectural_consequence": "Evidence for a surface-irregularity primitive or road/domain notation."
+      "hypothesis_improvement": "Accepted visual representation uses `surface_wavy + punct_exclaim`.",
+      "architectural_consequence": "Evidence for a surface-irregularity primitive or road/domain notation.",
+      "original_v1_pictiq": "`punct_exclaim`",
+      "accepted_visual_note": "Accepted improvement uses broad WAVY semantic compression plus warning."
     },
     {
       "case": "uneven/bumpy road",
       "official_meaning": "Uneven or rough road surface ahead.",
       "required_action": "Slow down and expect rough surface/vehicle movement.",
-      "current_pictiq": "`punct_exclaim`",
-      "back_interpretation": "caution / urgent attention",
+      "current_pictiq": "`surface_wavy + punct_exclaim`",
+      "back_interpretation": "wavy/unstable surface warning",
       "result": "LOSSY",
       "failure_mode": [
-        "VOCABULARY",
-        "SAFETY-PRECISION"
+        "SEMANTIC-COMPRESSION"
       ],
       "action_ambiguity": "Yes. Generic caution loses the surface condition.",
-      "hypothesis_improvement": "WAVY + `punct_exclaim` may compress slippery/uneven into a shared surface-problem warning.",
-      "architectural_consequence": "Same WAVY evidence as slippery road."
+      "hypothesis_improvement": "Accepted visual representation uses `surface_wavy + punct_exclaim`.",
+      "architectural_consequence": "Same WAVY evidence as slippery road.",
+      "original_v1_pictiq": "`punct_exclaim`",
+      "accepted_visual_note": "Accepted improvement uses broad WAVY semantic compression plus warning."
     },
     {
       "case": "speed bump",
       "official_meaning": "Speed hump/bump ahead.",
       "required_action": "Slow down before a vertical traffic-calming feature.",
-      "current_pictiq": "`rel_up + punct_exclaim`",
-      "back_interpretation": "up/ahead with caution",
+      "current_pictiq": "`surface_wavy + punct_exclaim`",
+      "back_interpretation": "surface irregularity warning",
       "result": "LOSSY",
       "failure_mode": [
-        "VOCABULARY",
-        "RELATION",
+        "SEMANTIC-COMPRESSION",
         "SAFETY-PRECISION"
       ],
       "action_ambiguity": "Yes. It may mean go up, uphill, upstairs, or caution ahead, not a bump.",
-      "hypothesis_improvement": "WAVY helps only partly; a bump may require road-specific surface/traffic-calming notation.",
-      "architectural_consequence": "Most adversarial WAVY case; likely Road-pack refinement if precision matters."
+      "hypothesis_improvement": "Accepted visual representation uses `surface_wavy + punct_exclaim`.",
+      "architectural_consequence": "Most adversarial WAVY case; likely Road-pack refinement if precision matters.",
+      "original_v1_pictiq": "`rel_up + punct_exclaim`",
+      "accepted_visual_note": "Accepted image uses WAVY compression; remains LOSSY because a discrete bump is more specific."
     },
     {
       "case": "dead end",
@@ -381,17 +390,18 @@
       "case": "speed limit 50",
       "official_meaning": "Do not exceed 50 in the jurisdiction's speed unit.",
       "required_action": "Keep speed at or below 50 km/h or mph depending on jurisdiction.",
-      "current_pictiq": "`qty_5 + qty_5`",
-      "back_interpretation": "ten / two fives; not fifty and not speed limit",
+      "current_pictiq": "`numeric(50)`",
+      "back_interpretation": "exact numeric notation 50 in road speed-limit convention",
       "result": "DOMAIN-EXTENSION",
       "failure_mode": [
-        "NUMERIC/NOTATION",
-        "VOCABULARY",
+        "DOMAIN-NOTATION",
         "SAFETY-PRECISION"
       ],
       "action_ambiguity": "Yes. Current quantity primitives cannot encode exact 50 or maximum-speed rule.",
-      "hypothesis_improvement": "Digits `50` plus established road speed-limit convention solve the case better than Core expansion.",
-      "architectural_consequence": "Create a shared numeric notation layer candidate; Road pack can reference it."
+      "hypothesis_improvement": "Accepted visual representation uses numeric notation `50`, not pragmatic quantity tiles.",
+      "architectural_consequence": "Create a shared numeric notation layer candidate; Road pack can reference it.",
+      "original_v1_pictiq": "`qty_5 + qty_5`",
+      "accepted_visual_note": "Rejected `qty_5 + qty_5`; exact 50 belongs to reusable numeric notation."
     },
     {
       "case": "no left turn",
@@ -499,11 +509,12 @@
     "boundary": "Related project context only; not evidence that Pictiq road communication works."
   },
   "visual_sheets": {
-    "full": "build/research/road-wayfinding-comparison.png",
-    "selected": "build/research/road-wayfinding-comparison-selected.png",
+    "final_human_accepted": "docs/book-materials/experiments/assets/road-wayfinding-pictiq-representation.png",
+    "rejected_intermediate_full": "build/research/road-wayfinding-comparison.png",
+    "rejected_intermediate_selected": "build/research/road-wayfinding-comparison-selected.png",
     "validation": "build/research/road-wayfinding-comparison-validation.json",
-    "note": "Pictiq tile sequences are rendered from canonical repository SVG files; conventional signs are schematic public-standard forms.",
-    "accepted_concepts_qa": "build/qa/stress-test-02-accepted-concepts.png"
+    "accepted_concepts_qa": "build/qa/stress-test-02-accepted-concepts.png",
+    "note": "The supplied accepted PNG is the final visual representation. Earlier Codex-generated comparison sheets are retained only as rejected/intermediate research artifacts."
   },
   "accepted_followup": {
     "date": "2026-09-10",
@@ -553,12 +564,19 @@
       "Pictiq preserves the distinction required for the decision, not every distinction present in the source language.",
       "Complexity belongs to the context that requires it, not to Core.",
       "Context packs select and reuse primitives/notation; they do not own them exclusively."
-    ]
+    ],
+    "final_visual": "docs/book-materials/experiments/assets/road-wayfinding-pictiq-representation.png"
   },
   "resolved_decisions": [
     "state_dead accepted as Contextual ordinary canonical primitive, not Core.",
     "surface_wavy accepted as Contextual ordinary canonical primitive, not narrowed to slippery road.",
     "numeric notation introduced as a shared notation layer separate from ordinary lexical tiles.",
     "Road/Public Wayfinding can reference numeric notation for exact speed values."
-  ]
+  ],
+  "human_accepted_final_visual": {
+    "path": "docs/book-materials/experiments/assets/road-wayfinding-pictiq-representation.png",
+    "sha256": "56f62a7c96cda897306bcabf35e383792f605b7bd05395c3cf00ab9691a404f0",
+    "status": "HUMAN-ACCEPTED FINAL VISUAL REPRESENTATION",
+    "note": "Supplied PNG is preserved exactly as the authoritative visual result. It incorporates subsequent human semantic review and architectural decisions; it was not regenerated from the original v1 JSON."
+  }
 }
