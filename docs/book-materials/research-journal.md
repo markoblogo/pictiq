@@ -218,6 +218,36 @@ Future Pictiq books and essays can now use publication-safe facts differently fr
 
 Use as a product-history chapter on portable communication: photographic specificity in Point It, vertical specialization in Kwikpoint, humanitarian adaptation in ICOON, publisher category entry in This, Please, and protocol-over-vocabulary in PECS.
 
+## 2026-09-09 — AI and text-to-tile research input harvest
+
+### Starting question
+
+What genuinely new research value is present in the supplied Pictiq idea PDF and text-to-tile RAG prototype after the verified precedent material is already in the archive?
+
+### What happened
+
+The supplied PDF and Python prototype were preserved as research inputs, then reviewed separately from accepted protocol/specification material. The older precedent claims in the PDF were marked as superseded where the repository already has stronger verification. The runnable prototype was inspected directly and reproduced with the current 70-icon lexicon in a temporary Python environment.
+
+### Main result
+
+The durable new material is the machine-facing research layer: Pictiq as a constrained symbolic protocol, text-to-Pictiq baseline retrieval, explicit GAP behavior, human-machine shared symbols, planned machine-vision benchmarking, back-translation evaluation, scenario stress tests, and measured hypotheses around constrained generation, safety, token cost, and agent/tool adapters.
+
+### Evidence
+
+[Archived inputs](research/inputs/README.md), [ideas harvest](research/perplexity-ideas-harvest-2026-09.md), [text-to-Pictiq prototype record](experiments/text-to-pictiq-rag-prototype.md), [human-machine shared symbols](concepts/human-machine-shared-symbols.md), [machine-vision benchmark plan](experiments/machine-vision-benchmark-planning.md), [scenario bank](experiments/scenario-bank.md), and [AI/machine backlog](research/ai-machine-backlog.md).
+
+### Decision / outcome
+
+No AI roadmap, MCP tool, protocol grammar, canonical tile, pack, profile, or release change was accepted. The prototype's two failures are preserved as evidence: multi-clause input needs segmentation, and lexical TF-IDF can produce false positives even when output syntax is valid.
+
+### Why it matters
+
+This creates a clean path from speculative AI ideas to testable experiments without allowing a PDF or prototype to silently become Pictiq doctrine.
+
+### Possible future book use
+
+Use as a chapter or essay seed about why a visual protocol becomes more interesting when humans and machines can share stable IDs, while still needing empirical tests for translation, vision, safety, and compression claims.
+
 ## 2026-09-08 — Full 120-word crosswalk
 
 ### Starting question

@@ -47,3 +47,5 @@ Distribution is not the same as communicative effectiveness. Pictiq should keep 
 - Which context packs require practitioner input before public claims?
 - When should Pictiq use abstract icons, photographic supplements, text labels, or a hybrid?
 - How should Pictiq measure success: recognition, task completion, repair after misunderstanding, retention, or repeated-use fluency?
+
+Related stress-test domains are tracked in the [scenario bank](../experiments/scenario-bank.md).

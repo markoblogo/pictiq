@@ -16,6 +16,8 @@ Pictiq—a minimal protocol of framed icon “tiles,” punctuation, yes/no logi
 
 For product-level precedents adjacent to portable pointing and physical communication surfaces, see the companion [Portable Visual Communication Precedents](portable-visual-communication-precedents.md) study. That document covers Point It, Kwikpoint, ICOON, This, Please, and PECS / A Picture's Worth as case studies, while this report remains the broader historical and academic context.
 
+For AI, machine-readable IDs, text-to-tile translation, and human-machine shared symbol hypotheses, see the later [Perplexity ideas harvest](perplexity-ideas-harvest-2026-09.md). Those notes are experiment leads, not canonical protocol claims.
+
 ## 1. Introduction: one visual field, several communicative jobs
 
 A pictogram resembles or schematizes a referent; an ideogram denotes an idea; a logogram conventionally represents a linguistic unit; and a writing system encodes enough of a language to support open-ended linguistic expression. Britannica accordingly describes pictography as communication by pictures and drawings with a communicative aim, while distinguishing painted rock *petrograms* from carved *petroglyphs* ([Encyclopaedia Britannica](https://www.britannica.com/topic/pictography)). These categories overlap in practice, but they should not be treated as stages on a single ladder toward “universal language.”
