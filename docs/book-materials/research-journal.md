@@ -188,6 +188,36 @@ The communication surface, distribution infrastructure, governance, training, an
 
 Use the report as a source for a future history-and-design book or several essays, preserving the research-to-journal-to-concept workflow before any chapter rewrite.
 
+## 2026-09-09 — Portable visual communication precedent study
+
+### Starting question
+
+What existing products already solve communication by pointing at visual representations, and how are they structurally different from Pictiq?
+
+### What happened
+
+Point It, Kwikpoint, ICOON, This, Please, and PECS / A Picture's Worth were researched and fact-checked as precedents, analogues, and adjacent systems. Current retail observations were separated into a dated market radar so volatile price, availability, rating, and marketplace data do not become stable historical claims.
+
+### Main result
+
+The adjacent field is older and richer than a simple "picture dictionary" category. It spans photography, illustrated pointing systems, specialized vertical products, humanitarian adaptation, conventional publishing, and formal interaction protocols.
+
+### Evidence
+
+[Portable precedent study](research/portable-visual-communication-precedents.md), [verification matrix](research/portable-visual-communication-verification-matrix.md), [market radar](market/portable-visual-communication-radar.md), [source archive](research/sources/portable-communication/README.md), and [portable communication lessons](concepts/portable-communication-lessons.md).
+
+### Decision / outcome
+
+No Pictiq protocol, lexicon, profile, pack, icon, or release behavior changed. The research strengthens three working distinctions: visual vocabulary is not the same as interaction protocol; distribution evidence is not the same as communication-effectiveness evidence; and physical pointing surfaces deserve their own task-based tests.
+
+### Why it matters
+
+Future Pictiq books and essays can now use publication-safe facts differently from attractive but weak anecdotes. The archive records which claims are ready, which need attribution, and which should not be used without better evidence.
+
+### Possible future book use
+
+Use as a product-history chapter on portable communication: photographic specificity in Point It, vertical specialization in Kwikpoint, humanitarian adaptation in ICOON, publisher category entry in This, Please, and protocol-over-vocabulary in PECS.
+
 ## 2026-09-08 — Full 120-word crosswalk
 
 ### Starting question

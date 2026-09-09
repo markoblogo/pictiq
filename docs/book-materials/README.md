@@ -35,3 +35,5 @@ Start with the [research journal](research-journal.md), then browse [concepts](c
 Recent architecture material includes the [Embodied and Standalone Profile decision](concepts/embodied-vs-standalone.md) and [Standalone Batch B planning](../../spec/STANDALONE_BACKLOG.md).
 
 The [comparative visual-language review](research/from-pictographs-to-protocols.md) is a major preserved source for possible future popular-science or design books on visual communication history, constructed languages, signage, AAC, pictogram standards, empirical comprehension, and Pictiq as a contemporary case study. It supports multiple future books; no fixed outline is decided.
+
+The [portable visual communication precedent study](research/portable-visual-communication-precedents.md) is a product- and case-study-oriented companion to the broader literature review. It covers Point It, Kwikpoint, ICOON, This, Please, and PECS / A Picture's Worth as precedents, analogues, and adjacent systems; the separate [market radar](market/portable-visual-communication-radar.md) preserves dated retail observations that should not be treated as stable history.

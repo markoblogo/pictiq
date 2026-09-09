@@ -16,3 +16,7 @@ Navigation index for the preserved [From Pictographs to Protocols](from-pictogra
 | Makaton | Multimodal AAC program | Training and redundancy across channels | §4.5 |
 | PECS | Picture-exchange protocol | Interaction procedure distinct from vocabulary | §4.6 |
 | Emoji | Digital character repertoire | Technical infrastructure and interoperability | §3.7 |
+| Point It | Portable photo pointing dictionary | Photography, pocket format, and travel pointing | [Portable precedents](portable-visual-communication-precedents.md#point-it) |
+| Kwikpoint | Vertical visual translators/reference guides | Context specialization and institutional use claims | [Portable precedents](portable-visual-communication-precedents.md#kwikpoint) |
+| ICOON | Picture dictionary and humanitarian adaptation | Context packs and practitioner-informed vocabulary | [Portable precedents](portable-visual-communication-precedents.md#icoon) |
+| This, Please | Tourist picture dictionary | Conventional publisher entry into pointing-dictionary format | [Portable precedents](portable-visual-communication-precedents.md#this-please) |
