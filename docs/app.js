@@ -1,7 +1,7 @@
 /* Fully static lexicon search (no build step). */
 
-const INDEX_URL = "../lexicon/icon-index.json";
-const I18N_URL = (lang) => `../lexicon/i18n/${lang}.json`;
+const INDEX_URL = "./lexicon/icon-index.json";
+const I18N_URL = (lang) => `./lexicon/i18n/${lang}.json`;
 
 const $q = document.getElementById("q");
 const $lang = document.getElementById("lang");
@@ -79,6 +79,7 @@ function card(entry) {
   return `
     <article class="card">
       <div class="row">
+        <img class="icon" src="./lexicon/svg/${encodeURIComponent(e.id)}.svg" alt="" loading="lazy" />
         <div class="id">${escapeHtml(e.id)}</div>
       </div>
       <div class="meaning">${escapeHtml(e.meaning_en || "")}</div>
@@ -181,4 +182,3 @@ $q.addEventListener("input", debounce(render, 40));
 $lang.addEventListener("change", () => loadLang($lang.value));
 
 boot();
-

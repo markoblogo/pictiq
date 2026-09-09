@@ -17,5 +17,7 @@ jobs:
       - name: Validate SVG icons
         if: ${{ hashFiles('icons/svg/*.svg') != '' }}
         run: python tools/validate_svg.py
+      - name: Validate Pages artifact
+        run: python tools/validate_pages_artifact.py
       - name: Test visual QA evidence tooling
         run: python -m unittest discover -s tests -v

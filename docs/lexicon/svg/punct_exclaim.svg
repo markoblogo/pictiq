@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><clipPath id="icon-clip"><rect x="2" y="2" width="28" height="28" rx="3.8" ry="3.8" /></clipPath></defs><g id="frame"><rect x="1" y="1" width="30" height="30" rx="4.8" ry="4.8" stroke="currentColor" stroke-width="2" fill="none" /></g><g id="icon" clip-path="url(#icon-clip)"><g id="shape_punct_exclaim" transform="translate(5.000000 5.000000) scale(0.042969)"><g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
+<path d="M2130 4121 l0 -559 110 -892 c61 -491 113 -897 116 -901 7 -12 401 -12 408 0 3 4 57 417 121 918 l115 909 0 542 0 542 -435 0 -435 0 0 -559z" />
+<path d="M2110 970 l0 -450 455 0 455 0 0 450 0 450 -455 0 -455 0 0 -450z" />
+</g>
+</g></g></svg>

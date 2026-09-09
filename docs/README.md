@@ -1,6 +1,6 @@
 # Docs (GitHub Pages)
 
-This folder contains a minimal static lexicon dictionary site (no build step).
+This folder is the published GitHub Pages artifact for the static lexicon dictionary (no build step).
 
 Note on negation:
 - Primary form is token-based: `X + logic_no`.
@@ -8,16 +8,17 @@ Note on negation:
 
 ## Enable GitHub Pages
 
-Because the site loads data from `../lexicon/icon-index.json`, GitHub Pages must serve the repository root.
+GitHub Pages publishes the `main` branch `/docs` folder in legacy mode. The artifact therefore includes its
+own `lexicon/` data and resolves all app assets relative to the site root.
 
 In GitHub:
 1. Go to **Settings** -> **Pages**
 2. **Build and deployment**: **Deploy from a branch**
 3. **Branch**: `main`
-4. **Folder**: `/ (root)`
+4. **Folder**: `/docs`
 
 Then open:
-- `https://<user>.github.io/<repo>/docs/`
+- `https://<user>.github.io/<repo>/`
 
 ## Local preview
 
@@ -28,9 +29,9 @@ python3 -m http.server 8000
 ```
 
 Open:
-- `http://localhost:8000/docs/`
+- `http://localhost:8000/docs/` (the local path mirrors the published folder)
 
 ## Optional i18n
 
-The UI has a language selector. If `lexicon/i18n/{lang}.json` exists, it will be loaded and will override
+The UI exposes only locales shipped in `docs/lexicon/i18n/` (`en`, `es`, `fr`). If `lexicon/i18n/{lang}.json` exists, it will be loaded and will override
 `meaning_en`, `aliases_en`, and (if provided) `tags_en` and `examples` for matching icon ids.

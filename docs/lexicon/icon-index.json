@@ -1,0 +1,1181 @@
+{
+  "version": "0.3.0",
+  "language": "en",
+  "icons": [
+    {
+      "id": "punct_question",
+      "type": "icon",
+      "category": "punctuation",
+      "meaning_en": "question",
+      "aliases_en": [
+        "?",
+        "where",
+        "how",
+        "is there",
+        "can I"
+      ],
+      "tags_en": [
+        "punctuation",
+        "question"
+      ],
+      "examples": [
+        "need_toilet + punct_question",
+        "place_hotel + punct_question"
+      ]
+    },
+    {
+      "id": "punct_exclaim",
+      "type": "icon",
+      "category": "punctuation",
+      "meaning_en": "urgent",
+      "aliases_en": [
+        "!",
+        "urgent",
+        "attention",
+        "help"
+      ],
+      "tags_en": [
+        "punctuation",
+        "urgent"
+      ],
+      "examples": [
+        "safety_medical + punct_exclaim",
+        "need_water + punct_exclaim"
+      ]
+    },
+    {
+      "id": "logic_yes",
+      "type": "icon",
+      "category": "logic",
+      "meaning_en": "yes",
+      "aliases_en": [
+        "yes",
+        "ok",
+        "accepted"
+      ],
+      "tags_en": [
+        "logic",
+        "confirmation"
+      ],
+      "examples": [
+        "logic_yes",
+        "money_card + logic_yes"
+      ]
+    },
+    {
+      "id": "logic_no",
+      "type": "icon",
+      "category": "logic",
+      "meaning_en": "no",
+      "aliases_en": [
+        "no",
+        "not",
+        "reject"
+      ],
+      "tags_en": [
+        "logic",
+        "negation"
+      ],
+      "examples": [
+        "logic_no",
+        "money_card + logic_no"
+      ]
+    },
+    {
+      "id": "qual_good",
+      "type": "operator",
+      "category": "qualifier",
+      "meaning_en": "good / positive evaluation",
+      "aliases_en": [
+        "good",
+        "positive",
+        "acceptable",
+        "satisfactory"
+      ],
+      "tags_en": [
+        "qualifier",
+        "evaluation",
+        "positive"
+      ],
+      "examples": [
+        "need_food + qual_good",
+        "place_hotel + qual_good"
+      ]
+    },
+    {
+      "id": "qual_bad",
+      "type": "operator",
+      "category": "qualifier",
+      "meaning_en": "bad / negative evaluation",
+      "aliases_en": [
+        "bad",
+        "poor",
+        "unpleasant",
+        "unsatisfactory"
+      ],
+      "tags_en": [
+        "qualifier",
+        "evaluation",
+        "negative"
+      ],
+      "examples": [
+        "need_food + qual_bad",
+        "place_hotel + qual_bad"
+      ]
+    },
+    {
+      "id": "time",
+      "type": "icon",
+      "category": "time",
+      "meaning_en": "time",
+      "aliases_en": [
+        "time",
+        "when",
+        "hours"
+      ],
+      "tags_en": [
+        "time"
+      ],
+      "examples": [
+        "time + punct_question",
+        "move_public + time + punct_question"
+      ]
+    },
+    {
+      "id": "state_hot",
+      "type": "icon",
+      "category": "state",
+      "meaning_en": "hot / heat / fire",
+      "aliases_en": [
+        "hot",
+        "heat",
+        "fire"
+      ],
+      "tags_en": [
+        "state",
+        "temperature",
+        "heat",
+        "fire"
+      ],
+      "examples": [
+        "need_food + state_hot",
+        "state_hot + punct_exclaim"
+      ]
+    },
+    {
+      "id": "state_cold",
+      "type": "icon",
+      "category": "state",
+      "meaning_en": "cold / freezing / refrigeration",
+      "aliases_en": [
+        "cold",
+        "freezing",
+        "refrigeration"
+      ],
+      "tags_en": [
+        "state",
+        "temperature",
+        "cold"
+      ],
+      "examples": [
+        "need_food + state_cold"
+      ]
+    },
+    {
+      "id": "person_generic",
+      "type": "icon",
+      "category": "people",
+      "meaning_en": "generic person / human participant",
+      "aliases_en": [
+        "person",
+        "human",
+        "participant",
+        "someone"
+      ],
+      "tags_en": [
+        "people",
+        "person",
+        "standalone"
+      ],
+      "examples": [
+        "person_generic + safety_medical",
+        "person_generic + move_feet",
+        "person_generic + place_hotel"
+      ]
+    },
+    {
+      "id": "qty_1",
+      "type": "icon",
+      "category": "quantity",
+      "meaning_en": "one",
+      "aliases_en": [
+        "1",
+        "one",
+        "single"
+      ],
+      "tags_en": [
+        "quantity",
+        "number"
+      ],
+      "examples": [
+        "need_water + qty_1",
+        "need_food + qty_1"
+      ]
+    },
+    {
+      "id": "qty_2",
+      "type": "icon",
+      "category": "quantity",
+      "meaning_en": "two",
+      "aliases_en": [
+        "2",
+        "two",
+        "double"
+      ],
+      "tags_en": [
+        "quantity",
+        "number"
+      ],
+      "examples": [
+        "need_water + qty_2",
+        "need_food + qty_2"
+      ]
+    },
+    {
+      "id": "qty_5",
+      "type": "icon",
+      "category": "quantity",
+      "meaning_en": "five",
+      "aliases_en": [
+        "5",
+        "five",
+        "many"
+      ],
+      "tags_en": [
+        "quantity",
+        "number"
+      ],
+      "examples": [
+        "need_water + qty_5",
+        "need_water + qty_5 + qty_5"
+      ]
+    },
+    {
+      "id": "qty_plus",
+      "type": "icon",
+      "category": "quantity",
+      "meaning_en": "more",
+      "aliases_en": [
+        "more",
+        "plus",
+        "add"
+      ],
+      "tags_en": [
+        "quantity",
+        "modifier"
+      ],
+      "examples": [
+        "need_water + qty_plus",
+        "need_food + qty_plus"
+      ]
+    },
+    {
+      "id": "qty_minus",
+      "type": "icon",
+      "category": "quantity",
+      "meaning_en": "less",
+      "aliases_en": [
+        "less",
+        "minus",
+        "reduce"
+      ],
+      "tags_en": [
+        "quantity",
+        "modifier"
+      ],
+      "examples": [
+        "need_water + qty_minus",
+        "need_food + qty_minus"
+      ]
+    },
+    {
+      "id": "money_coins",
+      "type": "icon",
+      "category": "money",
+      "meaning_en": "cash",
+      "aliases_en": [
+        "coins",
+        "cash",
+        "pay cash"
+      ],
+      "tags_en": [
+        "money",
+        "payment"
+      ],
+      "examples": [
+        "money_coins",
+        "need_food + money_coins"
+      ]
+    },
+    {
+      "id": "money_card",
+      "type": "icon",
+      "category": "money",
+      "meaning_en": "card payment",
+      "aliases_en": [
+        "card",
+        "credit card",
+        "debit card",
+        "pay by card"
+      ],
+      "tags_en": [
+        "money",
+        "payment"
+      ],
+      "examples": [
+        "money_card + punct_question",
+        "money_card + logic_no"
+      ]
+    },
+    {
+      "id": "money_atm_bank",
+      "type": "icon",
+      "category": "money",
+      "meaning_en": "ATM / bank",
+      "aliases_en": [
+        "atm",
+        "bank",
+        "cash machine"
+      ],
+      "tags_en": [
+        "money",
+        "service"
+      ],
+      "examples": [
+        "money_atm_bank + punct_question",
+        "money_atm_bank + time + punct_question"
+      ]
+    },
+    {
+      "id": "comm_wifi",
+      "type": "icon",
+      "category": "communication",
+      "meaning_en": "Wi-Fi",
+      "aliases_en": [
+        "wifi",
+        "internet",
+        "wireless"
+      ],
+      "tags_en": [
+        "communication",
+        "internet"
+      ],
+      "examples": [
+        "comm_wifi + punct_question",
+        "place_hotel + comm_wifi"
+      ]
+    },
+    {
+      "id": "comm_phone",
+      "type": "icon",
+      "category": "communication",
+      "meaning_en": "phone",
+      "aliases_en": [
+        "phone",
+        "call",
+        "telephone"
+      ],
+      "tags_en": [
+        "communication"
+      ],
+      "examples": [
+        "comm_phone + punct_question",
+        "place_shop + comm_phone"
+      ]
+    },
+    {
+      "id": "power_plug",
+      "type": "icon",
+      "category": "power",
+      "meaning_en": "power outlet",
+      "aliases_en": [
+        "plug",
+        "electricity",
+        "charger"
+      ],
+      "tags_en": [
+        "power"
+      ],
+      "examples": [
+        "power_plug + punct_question",
+        "power_plug + logic_no"
+      ]
+    },
+    {
+      "id": "power_energy",
+      "type": "icon",
+      "category": "power",
+      "meaning_en": "electrical energy / electricity / power",
+      "aliases_en": [
+        "energy",
+        "electricity",
+        "electrical power"
+      ],
+      "tags_en": [
+        "power",
+        "electricity",
+        "energy"
+      ],
+      "examples": [
+        "power_energy + punct_exclaim"
+      ]
+    },
+    {
+      "id": "need_toilet",
+      "type": "icon",
+      "category": "needs",
+      "meaning_en": "toilet",
+      "aliases_en": [
+        "wc",
+        "bathroom",
+        "restroom"
+      ],
+      "tags_en": [
+        "needs",
+        "urgent"
+      ],
+      "examples": [
+        "need_toilet + punct_question",
+        "need_toilet + punct_exclaim"
+      ]
+    },
+    {
+      "id": "need_water",
+      "type": "icon",
+      "category": "needs",
+      "meaning_en": "water",
+      "aliases_en": [
+        "water",
+        "drink",
+        "thirst"
+      ],
+      "tags_en": [
+        "needs",
+        "drink"
+      ],
+      "examples": [
+        "need_water + qty_1",
+        "need_water + qty_2"
+      ]
+    },
+    {
+      "id": "need_food",
+      "type": "icon",
+      "category": "needs",
+      "meaning_en": "food",
+      "aliases_en": [
+        "food",
+        "eat",
+        "hungry"
+      ],
+      "tags_en": [
+        "needs"
+      ],
+      "examples": [
+        "need_food + punct_question",
+        "need_food + logic_no"
+      ]
+    },
+    {
+      "id": "need_bar",
+      "type": "icon",
+      "category": "needs",
+      "meaning_en": "bar",
+      "aliases_en": [
+        "bar",
+        "drink",
+        "pub"
+      ],
+      "tags_en": [
+        "needs",
+        "places"
+      ],
+      "examples": [
+        "need_bar + punct_question",
+        "need_bar + time + punct_question"
+      ]
+    },
+    {
+      "id": "safety_medical",
+      "type": "icon",
+      "category": "safety",
+      "meaning_en": "medical help",
+      "aliases_en": [
+        "doctor",
+        "hospital",
+        "medical"
+      ],
+      "tags_en": [
+        "safety",
+        "help"
+      ],
+      "examples": [
+        "safety_medical + punct_exclaim",
+        "safety_medical + punct_question"
+      ]
+    },
+    {
+      "id": "safety_police",
+      "type": "icon",
+      "category": "safety",
+      "meaning_en": "police",
+      "aliases_en": [
+        "police",
+        "security"
+      ],
+      "tags_en": [
+        "safety"
+      ],
+      "examples": [
+        "safety_police + punct_question",
+        "safety_police + punct_exclaim"
+      ]
+    },
+    {
+      "id": "place_hotel",
+      "type": "icon",
+      "category": "places",
+      "meaning_en": "hotel",
+      "aliases_en": [
+        "hotel",
+        "hostel",
+        "stay"
+      ],
+      "tags_en": [
+        "places",
+        "sleep"
+      ],
+      "examples": [
+        "place_hotel + punct_question",
+        "place_hotel + comm_wifi"
+      ]
+    },
+    {
+      "id": "place_shop",
+      "type": "icon",
+      "category": "places",
+      "meaning_en": "shop",
+      "aliases_en": [
+        "store",
+        "market"
+      ],
+      "tags_en": [
+        "places",
+        "buy"
+      ],
+      "examples": [
+        "place_shop + punct_question",
+        "place_shop + need_food"
+      ]
+    },
+    {
+      "id": "place_landmark_park",
+      "type": "icon",
+      "category": "places",
+      "meaning_en": "park / landmark",
+      "aliases_en": [
+        "park",
+        "landmark",
+        "sight"
+      ],
+      "tags_en": [
+        "places",
+        "outdoors"
+      ],
+      "examples": [
+        "place_landmark_park + punct_question",
+        "place_landmark_park + time + punct_question"
+      ]
+    },
+    {
+      "id": "place_gas",
+      "type": "icon",
+      "category": "places",
+      "meaning_en": "gas station",
+      "aliases_en": [
+        "gas",
+        "petrol",
+        "fuel"
+      ],
+      "tags_en": [
+        "places",
+        "service"
+      ],
+      "examples": [
+        "place_gas + punct_question",
+        "move_car + place_gas"
+      ]
+    },
+    {
+      "id": "service_tools",
+      "type": "icon",
+      "category": "service",
+      "meaning_en": "tools / repair",
+      "aliases_en": [
+        "tools",
+        "repair",
+        "service"
+      ],
+      "tags_en": [
+        "service"
+      ],
+      "examples": [
+        "service_tools + punct_question",
+        "move_car + service_tools"
+      ]
+    },
+    {
+      "id": "move_feet",
+      "type": "icon",
+      "category": "movement",
+      "meaning_en": "walk / go on foot",
+      "aliases_en": [
+        "walk",
+        "go",
+        "on foot"
+      ],
+      "tags_en": [
+        "movement"
+      ],
+      "examples": [
+        "move_feet + time + punct_question",
+        "move_feet + punct_question"
+      ]
+    },
+    {
+      "id": "move_taxi",
+      "type": "icon",
+      "category": "movement",
+      "meaning_en": "taxi",
+      "aliases_en": [
+        "taxi",
+        "cab"
+      ],
+      "tags_en": [
+        "movement",
+        "transport"
+      ],
+      "examples": [
+        "move_taxi + punct_question",
+        "move_taxi + money_card + punct_question"
+      ]
+    },
+    {
+      "id": "move_car",
+      "type": "icon",
+      "category": "movement",
+      "meaning_en": "car",
+      "aliases_en": [
+        "car",
+        "drive",
+        "rental"
+      ],
+      "tags_en": [
+        "movement",
+        "transport"
+      ],
+      "examples": [
+        "move_car + punct_question",
+        "move_car + service_tools"
+      ]
+    },
+    {
+      "id": "move_public",
+      "type": "icon",
+      "category": "movement",
+      "meaning_en": "public transport",
+      "aliases_en": [
+        "bus",
+        "metro",
+        "train",
+        "public transport"
+      ],
+      "tags_en": [
+        "movement",
+        "transport"
+      ],
+      "examples": [
+        "move_public + punct_question",
+        "move_public + time + punct_question"
+      ]
+    },
+    {
+      "id": "place_disco",
+      "type": "icon",
+      "category": "places",
+      "meaning_en": "disco / club",
+      "aliases_en": [
+        "disco",
+        "club",
+        "dance"
+      ],
+      "tags_en": [
+        "places",
+        "nightlife"
+      ],
+      "examples": [
+        "place_disco + punct_question",
+        "place_disco + time + punct_question"
+      ]
+    },
+    {
+      "id": "paris_eiffel_tower",
+      "type": "icon",
+      "category": "paris",
+      "meaning_en": "Eiffel Tower",
+      "aliases_en": [
+        "eiffel tower",
+        "eiffel",
+        "tower",
+        "paris tower",
+        "iron tower"
+      ],
+      "tags_en": [
+        "paris",
+        "landmark",
+        "tower",
+        "sightseeing",
+        "tourism"
+      ],
+      "examples": [
+        "paris_eiffel_tower + punct_question",
+        "paris_eiffel_tower + time + punct_question"
+      ]
+    },
+    {
+      "id": "paris_arc_de_triomphe",
+      "type": "icon",
+      "category": "paris",
+      "meaning_en": "Arc de Triomphe",
+      "aliases_en": [
+        "arc de triomphe",
+        "triumphal arch",
+        "paris arch",
+        "arch monument"
+      ],
+      "tags_en": [
+        "paris",
+        "landmark",
+        "arch",
+        "monument",
+        "tourism"
+      ],
+      "examples": [
+        "paris_arc_de_triomphe + punct_question",
+        "paris_arc_de_triomphe + time + punct_question"
+      ]
+    },
+    {
+      "id": "paris_louvre_pyramid",
+      "type": "icon",
+      "category": "paris",
+      "meaning_en": "Louvre pyramid",
+      "aliases_en": [
+        "louvre pyramid",
+        "glass pyramid",
+        "museum pyramid",
+        "paris pyramid"
+      ],
+      "tags_en": [
+        "paris",
+        "landmark",
+        "museum",
+        "pyramid",
+        "tourism"
+      ],
+      "examples": [
+        "paris_louvre_pyramid + punct_question",
+        "place_art_gallery + paris_louvre_pyramid"
+      ]
+    },
+    {
+      "id": "paris_notre_dame",
+      "type": "icon",
+      "category": "paris",
+      "meaning_en": "Notre-Dame cathedral",
+      "aliases_en": [
+        "notre dame",
+        "cathedral",
+        "paris cathedral",
+        "gothic church"
+      ],
+      "tags_en": [
+        "paris",
+        "landmark",
+        "cathedral",
+        "architecture",
+        "tourism"
+      ],
+      "examples": [
+        "paris_notre_dame + punct_question",
+        "paris_notre_dame + time + punct_question"
+      ]
+    },
+    {
+      "id": "paris_sacre_coeur",
+      "type": "icon",
+      "category": "paris",
+      "meaning_en": "Sacre-Coeur basilica",
+      "aliases_en": [
+        "sacre coeur",
+        "basilica",
+        "montmartre basilica",
+        "paris basilica"
+      ],
+      "tags_en": [
+        "paris",
+        "landmark",
+        "basilica",
+        "hill",
+        "tourism"
+      ],
+      "examples": [
+        "paris_sacre_coeur + punct_question",
+        "paris_sacre_coeur + time + punct_question"
+      ]
+    },
+    {
+      "id": "paris_moulin_windmill",
+      "type": "icon",
+      "category": "paris",
+      "meaning_en": "Paris windmill cabaret landmark",
+      "aliases_en": [
+        "paris windmill",
+        "moulin windmill",
+        "windmill landmark",
+        "cabaret landmark"
+      ],
+      "tags_en": [
+        "paris",
+        "landmark",
+        "windmill",
+        "nightlife",
+        "tourism"
+      ],
+      "examples": [
+        "paris_moulin_windmill + punct_question",
+        "paris_moulin_windmill + time + punct_question"
+      ]
+    },
+    {
+      "id": "paris_croissant",
+      "type": "icon",
+      "category": "paris",
+      "meaning_en": "croissant",
+      "aliases_en": [
+        "croissant",
+        "pastry",
+        "bakery croissant",
+        "breakfast pastry"
+      ],
+      "tags_en": [
+        "paris",
+        "food",
+        "bakery",
+        "breakfast",
+        "snack"
+      ],
+      "examples": [
+        "paris_croissant + punct_question",
+        "paris_croissant + qty_2"
+      ]
+    },
+    {
+      "id": "move_boat",
+      "type": "icon",
+      "category": "movement",
+      "meaning_en": "boat transport",
+      "aliases_en": [
+        "boat",
+        "ferry",
+        "river boat",
+        "boat ride",
+        "water transport"
+      ],
+      "tags_en": [
+        "movement",
+        "transport",
+        "water",
+        "travel",
+        "route"
+      ],
+      "examples": [
+        "move_boat + punct_question",
+        "move_boat + time + punct_question"
+      ]
+    },
+    {
+      "id": "place_catacombs",
+      "type": "icon",
+      "category": "places",
+      "meaning_en": "catacombs",
+      "aliases_en": [
+        "catacombs",
+        "underground ossuary",
+        "underground tunnels",
+        "historic tunnels"
+      ],
+      "tags_en": [
+        "places",
+        "underground",
+        "history",
+        "tourism",
+        "site"
+      ],
+      "examples": [
+        "place_catacombs + punct_question",
+        "place_catacombs + time + punct_question"
+      ]
+    },
+    {
+      "id": "place_theme_park",
+      "type": "icon",
+      "category": "places",
+      "meaning_en": "theme park",
+      "aliases_en": [
+        "theme park",
+        "amusement park",
+        "rides park",
+        "family park"
+      ],
+      "tags_en": [
+        "places",
+        "entertainment",
+        "rides",
+        "family",
+        "tourism"
+      ],
+      "examples": [
+        "place_theme_park + punct_question",
+        "place_theme_park + time + punct_question"
+      ]
+    },
+    {
+      "id": "place_airport",
+      "type": "icon",
+      "category": "places",
+      "meaning_en": "airport",
+      "aliases_en": [
+        "airport",
+        "terminal",
+        "flight hub",
+        "air travel"
+      ],
+      "tags_en": [
+        "places",
+        "travel",
+        "transport",
+        "flights",
+        "terminal"
+      ],
+      "examples": [
+        "place_airport + punct_question",
+        "move_taxi + place_airport"
+      ]
+    },
+    {
+      "id": "place_art_gallery",
+      "type": "icon",
+      "category": "places",
+      "meaning_en": "art gallery",
+      "aliases_en": [
+        "art gallery",
+        "gallery",
+        "art museum",
+        "exhibition hall"
+      ],
+      "tags_en": [
+        "places",
+        "art",
+        "culture",
+        "museum",
+        "exhibition"
+      ],
+      "examples": [
+        "place_art_gallery + punct_question",
+        "place_art_gallery + time + punct_question"
+      ]
+    },
+    {
+      "id": "place_fashion_shopping",
+      "type": "icon",
+      "category": "places",
+      "meaning_en": "fashion shopping",
+      "aliases_en": [
+        "fashion shopping",
+        "clothing district",
+        "fashion store area",
+        "boutique shopping"
+      ],
+      "tags_en": [
+        "places",
+        "shopping",
+        "fashion",
+        "style",
+        "retail"
+      ],
+      "examples": [
+        "place_fashion_shopping + punct_question",
+        "place_shop + place_fashion_shopping"
+      ]
+    },
+    {
+      "id": "item_cigarette",
+      "type": "icon",
+      "category": "items",
+      "meaning_en": "cigarette / smoking",
+      "aliases_en": [
+        "cigarette",
+        "smoking",
+        "tobacco"
+      ],
+      "tags_en": [
+        "item",
+        "nightlife",
+        "smoking"
+      ],
+      "examples": [
+        "item_cigarette + logic_no",
+        "item_cigarette + punct_question"
+      ]
+    },
+    {
+      "id": "item_cannabis",
+      "type": "icon",
+      "category": "items",
+      "meaning_en": "cannabis / cannabis-related products",
+      "aliases_en": [
+        "cannabis",
+        "CBD",
+        "cannabis products"
+      ],
+      "tags_en": [
+        "item",
+        "nightlife",
+        "cannabis"
+      ],
+      "examples": [
+        "item_cannabis + punct_question",
+        "item_cannabis + place_shop"
+      ]
+    },
+    {
+      "id": "drink_beer",
+      "type": "icon",
+      "category": "drinks",
+      "meaning_en": "beer",
+      "aliases_en": [
+        "beer",
+        "beer mug",
+        "pint"
+      ],
+      "tags_en": [
+        "drink",
+        "nightlife",
+        "bar"
+      ],
+      "examples": [
+        "drink_beer + need_bar",
+        "drink_beer + qty_2"
+      ]
+    },
+    {
+      "id": "love_heart",
+      "type": "icon",
+      "category": "social",
+      "meaning_en": "love / affection / romance",
+      "aliases_en": [
+        "love",
+        "heart",
+        "romance",
+        "affection"
+      ],
+      "tags_en": [
+        "social",
+        "nightlife",
+        "relationship"
+      ],
+      "examples": [
+        "love_heart + punct_question",
+        "love_heart + logic_no"
+      ]
+    },
+    {
+      "id": "item_condom",
+      "type": "icon",
+      "category": "safety",
+      "meaning_en": "condom / safer-sex protection",
+      "aliases_en": [
+        "condom",
+        "safe sex",
+        "protection"
+      ],
+      "tags_en": [
+        "item",
+        "safety",
+        "nightlife"
+      ],
+      "examples": [
+        "item_condom + punct_question",
+        "item_condom + logic_no"
+      ]
+    },
+    {
+      "id": "nature_flower",
+      "type": "icon",
+      "category": "nature",
+      "meaning_en": "flower",
+      "aliases_en": [
+        "flower",
+        "rose",
+        "blossom"
+      ],
+      "tags_en": [
+        "nature",
+        "flower",
+        "plant",
+        "poetry"
+      ],
+      "examples": [
+        "nature_flower + qty_5",
+        "nature_flower + qty_plus + time"
+      ]
+    },
+    {
+      "id": "tech_ai",
+      "type": "icon",
+      "category": "technology",
+      "meaning_en": "artificial intelligence / AI system",
+      "aliases_en": [
+        "artificial intelligence",
+        "AI",
+        "AI system",
+        "AI assistant",
+        "chatbot",
+        "generative AI"
+      ],
+      "tags_en": [
+        "technology",
+        "computer",
+        "assistant",
+        "chatbot",
+        "automation"
+      ],
+      "examples": [
+        "tech_ai + punct_question",
+        "comm_phone + tech_ai",
+        "tech_ai + logic_no"
+      ]
+    }
+  ]
+}
