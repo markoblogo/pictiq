@@ -9,9 +9,9 @@ Pictiq is a minimal visual protocol for short messages. It does not aim to repla
 AAC symbol sets, emoji standards, or writing systems. We treat them as references for *engineering choices*:
 how to keep semantics stable, how to scale responsibly, and how to stay usable across cultures and platforms.
 
-We borrow ideas such as: strict control of primitives vs composition (LoCoS), stable meanings with disciplined growth (Blissymbolics),
-spec-first standardization and validation mindset (SignWriting), minimal core philosophy (Toki Pona), and parseable token grammar mentality (Lojban).
-For interoperability, we also study emoji/Unicode and CLDR keywording, but Pictiq tiles remain canonical.
+We study engineering patterns found in systems such as LoCoS, Blissymbolics, SignWriting, Lojban, emoji/Unicode, and Toki Pona with sitelen pona. These systems are references for comparison, interoperability, and design analysis rather than direct ancestors of Pictiq.
+
+Relevant patterns include control of primitives versus composition, stable semantics, spec-first standardization, constrained vocabularies, parseable grammar, visual writing, and cross-system interoperability. Pictiq tiles remain canonical.
 
 See the research notes:
 - `docs/research/related-systems.md`
@@ -41,9 +41,14 @@ For each proposed concept or message:
 
 1. Ask whether the concept is independently useful to Pictiq outside a particular translation or crosswalk. If not, do not add it.
 2. Identify the intended mode. If body, gesture, pointing, environment, carrier object, or existing tiles supply the concept reliably in embodied use, an embodied-specific tile is usually unnecessary; continue only if standalone use creates a genuine need.
-3. Remove the person and transient context. If the standalone artifact remains clear, prefer context or composition. If it becomes ambiguous, continue.
-4. Test whether an existing tile, composition, modifier, or parameter can preserve the concept before proposing a new lexical tile.
-5. If a new canonical concept is still justified, apply the Perceptual Design Principles and Visual QA Protocol before acceptance.
+3. Remove the person and transient context. Ask whether the concept must survive in standalone communication. If not, prefer embodiment or context.
+4. Test whether an existing lexical tile expresses the concept honestly.
+5. Test whether composition with existing tiles expresses it.
+6. Ask whether it qualifies another tile and is therefore a modifier or operator.
+7. Ask whether it is a semantic type with a dynamic value and is therefore better represented as a parameter.
+8. Ask whether it identifies one named entity within a defined context and is therefore an entity symbol.
+
+Only after these alternatives fail should a new lexical tile be considered. Any proposed canonical rendering MUST then pass the Perceptual Design Principles and Visual QA Protocol before acceptance.
 
 > A missing lexical equivalent is not automatically a missing Pictiq concept.
 
@@ -66,17 +71,64 @@ An absent lexical equivalent MUST NOT be treated automatically as a protocol def
 
 The states are analytical and may overlap. For example, visual attention can be EMBODIED-OMITTABLE when gaze or pointing is visible and still be a STANDALONE-GAP for an unattended accessibility cue.
 
-#### Parametric visual modifiers
-
-A compact color system is a candidate for future standalone communication because color can distinguish an object after the communicator is gone. In embodied use, pointing at an existing color remains preferred when reliable.
-
-The standalone research direction is a parametric visual modifier: the canonical Pictiq frame plus a neutral internal color sample whose actual value carries the meaning. Conceptual forms include `color(#ff0000)`, `color(#264653)`, and `color(#747b72)`; the palette is not lexically bounded. A machine-readable form could be `{ "type": "color", "value": "#747b72" }`.
-
-This may become the first parametric Pictiq tile or operator. Because color itself is the semantic payload, it would be an intentional exception to the normal monochrome visual system. This is a non-canonical proposal: it defines no icon, ID, sample geometry, palette, syntax, implementation, or acceptance status, and it does not introduce hardcoded color tiles.
-
 #### Relationship to Toki Pona
 
-**Non-normative.** Toki Pona and Pictiq both use context to reduce explicit vocabulary, but they do so through different media. A Toki Pona lexical absence in Pictiq may be supplied by embodiment, may expose a real standalone requirement, or may fall outside Pictiq’s intended scope. Crosswalk coverage is therefore evidence for analysis, not a completeness target.
+**Non-normative.** Toki Pona and sitelen pona became a comparative research system for Pictiq after the initial protocol was developed. The crosswalk is used to study how a minimal lexical language differs from an embodied visual protocol; it is not presented as a direct design reference or source of Pictiq's original architecture.
+
+Toki Pona and Pictiq both use context to reduce explicit vocabulary, but they do so through different media. A Toki Pona lexical absence in Pictiq may be supplied by embodiment, may expose a real standalone requirement, or may fall outside Pictiq’s intended scope. Crosswalk coverage is therefore evidence for analysis, not a completeness target.
+
+### 1.2 Communication primitive classes
+
+Pictiq uses five architectural classes. The class describes how meaning enters a message; it does not grant canonical status.
+
+#### Lexical tiles
+
+Lexical tiles represent reusable concepts that genuinely require explicit visual representation. Current examples include water, food, taxi, hotel, airport, medical help, and bar.
+
+A lexical tile SHOULD be created only when the concept has independent Pictiq utility, embodiment and context do not replace it reliably in all required modes, composition or modification is insufficient, and it survives the vocabulary decision tree. A word in Toki Pona or another source language, or a translation gap by itself, MUST NOT justify a lexical tile.
+
+#### Modifiers and operators
+
+Modifiers qualify another tile; operators alter how another tile or phrase is interpreted. Existing punctuation, yes/no logic, quantities, plus, and minus are the current examples. Their exact behavior remains defined in §§3–5 and [Grammar](GRAMMAR.md).
+
+> Do not create a word when a modifier will do.
+
+Evaluation and truth are distinct axes. `logic_yes` and `logic_no` MUST NOT be overloaded as generic GOOD and BAD. Future GOOD/POSITIVE and BAD/NEGATIVE modifiers may qualify food, hotel, or another base concept; their form, IDs, and acceptance status remain open. Likewise, physical LARGE/SMALL must not be equated with `qty_plus`/`qty_minus`; embodied users can show scale with their hands, while standalone use should investigate reusable scale modifiers.
+
+As a research example, Toki Pona `mute` is better approximated compositionally as `qty_5 + qty_plus` than by `qty_5` alone. This observation defines no new mechanism.
+
+#### Parametric tiles
+
+A parametric tile represents a semantic type whose value is supplied dynamically rather than selected from a finite lexical vocabulary. COLOR is the first proposed Pictiq parametric type.
+
+In embodied use, point to an actual visible color where reliable. In standalone use, the proposed representation is the canonical Pictiq frame containing a neutral color-sample shape, preferably a circle, filled with the requested value. Conceptual forms include `color(#ff0000)`, `color(#264653)`, and `color(#747b72)`. A machine-readable form could be `{ "type": "color", "value": "#747b72" }`.
+
+The palette is not lexically bounded; arbitrary colors are permitted. The actual color is the semantic payload, making COLOR an intentional exception to normal monochrome rendering while the frame remains canonical Pictiq structure. Separate red, yellow, blue, green, or other lexical color tiles MUST NOT be created merely to enumerate a palette.
+
+COLOR is a **PROPOSED PARAMETRIC MECHANISM**. It defines no canonical icon, ID, sample geometry, syntax, implementation, or acceptance status. Future parametric types MAY be considered only through the same decision tree.
+
+#### Entity symbols
+
+An entity symbol is a unique visual identifier for a specific person, fictional character, organization, place, object, or other named entity within an explicit context. It differs from a generic lexical concept: a neutral person tile means “person / human participant,” while an entity symbol means “this specific identified entity.”
+
+> Do not spell an identity when a symbol can identify it.
+
+Entity symbols are not automatically part of the Core lexicon. They MAY belong to context packs, narrative dictionaries, personal profiles, or future entity registries. A narrative may locally define symbols for Odysseus, Penelope, and Telemachus just as an Alice narrative pack may identify a recurring character. A conceptual namespace such as `entity:odysseus@odyssey-pack` expresses the required scope; it is not implemented syntax.
+
+Governance requirements:
+
+- **Real people:** the represented person SHOULD be able to define or revise their personal symbol where practical. A third-party context MAY use a local identifier but MUST NOT claim ownership of a universal identity.
+- **Fictional, historical, and public-domain entities:** a project, translation, pack, or narrative MAY define a symbol canonical within that named context and version until explicitly revised.
+- **Scope:** identity MUST have an explicit namespace or context. No global first-claim registry is implied.
+- **Recognition:** a symbol SHOULD use distinctive, recognizable associations rather than an arbitrary abstract mark where practical. A tile rendering MUST pass normal perceptual QA.
+
+#### Embodied references
+
+An embodied reference deliberately leaves meaning on the human communication surface. A person can point to self or another person, indicate eyes or direct gaze, pull clothing, point to a body location or mouth, show physical size with hands, indicate a visible color, point toward a direction or place, and use facial expression, voice, or gesture for emotion.
+
+These are intentional protocol behaviors, not missing features. A standalone requirement may still move the same concept into another class.
+
+> Embodiment is part of the protocol, not a workaround for the protocol.
 
 ## 2. Tiles and frame
 - Every lexicon word is a framed tile: a rounded-square frame is mandatory.
@@ -100,9 +152,7 @@ Negation form:
 ## 4. Quantity
 Quantity follows the object (WHAT then HOW MUCH):
 - `qty_1`, `qty_2`, `qty_5`, `qty_plus`, `qty_minus`
-“Many” may be expressed by:
-- repeating `qty_5` (e.g. `qty_5 + qty_5`)
-- combining `qty_5` with `qty_plus`
+“Many / more” is best approximated by combining `qty_5` with `qty_plus`. Repeating `qty_5` represents a concrete total of ten.
 
 Note:
 - In live interaction, fingers often work better for exact numbers.
@@ -187,12 +237,11 @@ Personal/corporate packs are allowed and may include:
 - unique icons (if no synonym exists and protocol rules are met),
 - proper names.
 
-## 8. Proper names (non-tiles)
-- Proper names are not core lexicon words and do not use the tile frame.
-- The only globally allowed proper name is the Pictiq logo itself (non-tile).
-- Other proper names are allowed only inside context protocols (geo, brands by request, personal/corporate identifiers, etc.).
-- A dedicated geo protocol may define types like city/country/river.
-- Brand icons are added only by brand initiative and must avoid text/logos.
+## 8. Proper names and entity symbols
+- Proper names are not Core lexical words. Plain text used as a name remains outside the tile system.
+- An entity symbol MAY identify a named entity inside an explicitly scoped context under §1.2; it does not become a global Core word.
+- The Pictiq logo remains the only globally defined proper-name mark and is not a tile.
+- Context protocols may define geographic, narrative, personal, or organizational entity symbols. Brand identifiers require appropriate authority and remain subject to §9.
 
 ## 9. Safety & restrictions
 - No text/wordmarks/logos.

@@ -83,6 +83,8 @@ An icon SHOULD preserve the information necessary for the intended recognition, 
 
 The intended use MUST also identify whether communication is embodied or standalone. The [protocol distinction](PROTOCOL.md#11-embodied-and-standalone-communication) determines which meaning can be supplied by a present person and which must remain in the artifact.
 
+Before drawing, classify the proposal as a lexical tile, modifier/operator, parametric tile, entity symbol, or embodied reference under [Protocol §1.2](PROTOCOL.md#12-communication-primitive-classes). Only proposals that require a rendered tile enter icon design and visual QA.
+
 ### 2. Recognition over abstraction
 
 Recognition SHOULD take precedence over geometric purity or stylistic abstraction. When two silhouettes are structurally valid, prefer the one recognized faster and with less ambiguity, even if it is less geometrically regular. Do not simplify a distinctive feature merely to make an icon stylistically uniform.

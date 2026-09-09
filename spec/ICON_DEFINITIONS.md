@@ -9,7 +9,7 @@ Important: the repository only accepts SVG icons with no `<text>` elements. If a
     
 - **Growth rule (strict):** A new lexicon entry MUST be one of:
     
-    1. **New primitive (rare)** — allowed only if the concept cannot be expressed by existing icons or a simple compound, and it is highly universal.
+    1. **New lexical primitive (rare)** — allowed only if the concept cannot be expressed by embodiment, existing icons, composition, a modifier/operator, a parameter, or a scoped entity symbol, and it is highly universal.
         
     2. **Composition** — use existing tiles as BASE + QUALIFIER (preferred).
         
@@ -44,6 +44,8 @@ Important: the repository only accepts SVG icons with no `<text>` elements. If a
     - Is there already a synonym in the lexicon?
         
     - Can it be expressed as BASE + QUALIFIER?
+
+    - Is it actually a modifier/operator, parameter, entity symbol, or embodied reference under the [communication primitive taxonomy](PROTOCOL.md#12-communication-primitive-classes)?
         
     - Is the silhouette globally recognizable?
         

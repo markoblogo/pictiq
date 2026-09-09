@@ -12,6 +12,10 @@ This project uses milestone-style tags. The `-infra` suffix indicates a pre-icon
 - Defined EMBODIED-OMITTABLE, STANDALONE-GAP, and OUT-OF-SCOPE absence states for vocabulary research.
 - Recorded a non-canonical parametric color-modifier direction for future standalone use.
 - Added a non-normative note on why Toki Pona crosswalk gaps are analytical evidence rather than a completeness target.
+- Classified communication primitives as lexical tiles, modifiers/operators, parametric tiles, entity symbols, and embodied references.
+- Separated YES/NO logic from proposed GOOD/BAD evaluation and quantity from proposed LARGE/SMALL scale modifiers.
+- Defined scoped entity-symbol governance without implementing a namespace or registry.
+- Added a prioritized, non-canonical Standalone Communication implementation backlog.
 
 This is a standards and documentation update. It changes no canonical icons, IDs, geometry, packs, profiles, layouts, or Handbook files.
 

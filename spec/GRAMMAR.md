@@ -49,13 +49,16 @@ Some icons may act as actions in context:
 Quantity follows the object: WHAT then HOW MUCH.
 Allowed quantity set (core): `qty_1`, `qty_2`, `qty_5`, `qty_plus`, `qty_minus`.
 "3" is expressed as `qty_1 + qty_2`.
-"Many" may be expressed by repeating `qty_5`.
+"Many / more" is better approximated by `qty_5 + qty_plus`; repeating `qty_5` remains available when the intended reading is a concrete total of ten.
 
 Examples:
 - `need_water + qty_2`
 - `need_food + qty_1`
 - `need_water + qty_1 + qty_2` (3)
-- `need_water + qty_5 + qty_5` (many)
+- `need_water + qty_5 + qty_plus` (many / more)
+- `need_water + qty_5 + qty_5` (10)
+
+Quantity and physical scale are distinct. `qty_plus` and `qty_minus` MUST NOT be treated as LARGE and SMALL without an independently defined modifier mechanism.
 
 ## 7. Compounds (BASE + QUALIFIER)
 Two adjacent icons can form a compound:
@@ -65,6 +68,8 @@ Examples:
 - `place_shop + comm_phone` → phone/electronics shop
 - `place_shop + need_food` → grocery
 - `move_car + service_tools` → car repair/service
+
+Proposed GOOD/BAD, LARGE/SMALL, parametric COLOR, and entity-symbol mechanisms are classified in [Protocol §1.2](PROTOCOL.md#12-communication-primitive-classes) but are not current grammar tokens.
 
 ## 8. Phrase length guidance
 - Maximum allowed phrase length: 5 icons.
