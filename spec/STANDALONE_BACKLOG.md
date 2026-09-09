@@ -1,8 +1,8 @@
 # Standalone Communication Backlog
 
-Status: **IMPLEMENTATION RECORD** for released v1.0.2; remaining entries are future research.
+Status: **IMPLEMENTATION RECORD** for released v1.0.2 plus accepted unreleased work; remaining entries are future research.
 
-An item becomes canonical only through the [vocabulary decision tree](PROTOCOL.md#decision-tree), structural validation, the [Visual QA Protocol](ICON_SPEC.md#visual-qa-protocol), and explicit acceptance. Batch A and the accepted Batch B record the implementations that completed that path; remaining entries are non-canonical proposals.
+An item becomes canonical only through the [vocabulary decision tree](PROTOCOL.md#decision-tree), structural validation, the [Visual QA Protocol](ICON_SPEC.md#visual-qa-protocol), and explicit acceptance. Batch A, Batch B, and Batch C record the implementations that completed that path; remaining entries are non-canonical proposals.
 
 ## Architectural priorities
 
@@ -75,7 +75,7 @@ Sun/day, light, and LARGE/SMALL modifiers.
 
 Clothing, produce, and bakery/bread.
 
-COLOR remains a separate parametric prototype, and entity symbols remain a separate scoped experiment.
+COLOR remains a separate parametric prototype. Entity symbols now have a separate accepted pilot registry outside ordinary Core vocabulary.
 
 #### Batch B accepted implementation
 
@@ -141,7 +141,7 @@ This backlog does not decide the number of concepts or icons.
 
 #### Batch C local implementation
 
-The supplied approved reference sheet is used as the visual source for five local canonical candidates: `body_mouth`, `rel_here`, `rel_up`, `rel_down`, and `nature_moon`. They are **LOCALLY IMPLEMENTED / PENDING HUMAN VISUAL ACCEPTANCE** and must not be described as released until push, tag, release, and public verification are completed.
+The supplied approved reference sheet produced five accepted canonical primitives: `body_mouth`, `rel_here`, `rel_up`, `rel_down`, and `nature_moon`. They are **IMPLEMENTED / ACCEPTED / CANONICAL** after structural validation and human visual acceptance. They bring the ordinary canonical lexicon from 70 to 75 icons.
 
 Profile treatment:
 
@@ -163,7 +163,7 @@ The supplied morphology is `>` for LARGE/greater and `<` for SMALL/lesser. Batch
 - **Embodied equivalent:** point to the actual place, object, body location, or target.
 - **Standalone direction:** central target/crosshair mark that identifies “here / this place / target location.”
 - **Boundary:** not a generic place tile; use existing place tiles for hotel, shop, gas, etc.
-- **Status:** **LOCALLY IMPLEMENTED** as `rel_here`, pending human visual acceptance.
+- **Status:** **IMPLEMENTED / ACCEPTED / CANONICAL** as `rel_here`.
 
 #### Mouth / oral intake — lexical-tile candidate
 
@@ -171,7 +171,7 @@ The supplied morphology is `>` for LARGE/greater and `<` for SMALL/lesser. Batch
 - **Standalone direction:** filled lips with white mouth opening from the approved reference sheet.
 - **Potential scope:** mouth, eat, drink, or oral intake when context makes the action clear.
 - **Boundary:** not speech, language, identity, or emotion; use `comm_speak` for communication.
-- **Status:** **LOCALLY IMPLEMENTED** as `body_mouth`, pending human visual acceptance.
+- **Status:** **IMPLEMENTED / ACCEPTED / CANONICAL** as `body_mouth`.
 
 #### Moon / night — lexical-tile candidate
 
@@ -179,7 +179,7 @@ The supplied morphology is `>` for LARGE/greater and `<` for SMALL/lesser. Batch
 - **Standalone direction:** filled crescent moon from the approved reference sheet.
 - **Potential scope:** moon, night, nighttime, or night context with `time`.
 - **Boundary:** not a complete time or calendar mechanism; keep separate from daylight/sun.
-- **Status:** **LOCALLY IMPLEMENTED** as `nature_moon`, pending human visual acceptance.
+- **Status:** **IMPLEMENTED / ACCEPTED / CANONICAL** as `nature_moon`.
 
 #### Parametric COLOR prototype
 
@@ -195,7 +195,7 @@ The prototype must test machine representation, contrast, print behavior, access
 - **Need:** identify a named person, fictional character, organization, place, or object without alphabetic spelling.
 - **Scope model:** an explicit local namespace such as `entity:odysseus@literary`.
 - **Governance:** personal authority where practical for real people; project-local canonicity for fictional, historical, or public-domain entities; no universal first-claim ownership.
-- **Status:** **LOCALLY IMPLEMENTED PILOT — PENDING HUMAN VISUAL ACCEPTANCE**.
+- **Status:** **IMPLEMENTED / ACCEPTED OFFICIAL PICTIQ PROJECT EXAMPLES**.
 
 The first local pilot defines six person entity-symbol examples in `entities/entity-index.json`: Anton Biletskyi-Volokh, Odysseus, William Shakespeare, Albert Einstein, Leonardo da Vinci, and Buddha / Siddhartha Gautama. These examples demonstrate the mechanism and do not add named people to Core vocabulary.
 

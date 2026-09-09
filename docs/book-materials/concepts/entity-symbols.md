@@ -29,7 +29,7 @@ Entity symbols may sit next to ordinary Pictiq concepts. `entity:anton-biletskyi
 
 ## Current status
 
-**LOCAL PILOT IMPLEMENTED — PENDING HUMAN VISUAL ACCEPTANCE.** The six examples are not ordinary Core lexical tiles and do not change the Core/Standalone lexicon count.
+**IMPLEMENTED / ACCEPTED.** The six examples are official Pictiq project entity-symbol examples. They are not ordinary Core lexical tiles and do not change the Core/Standalone lexicon count.
 
 ## Unresolved questions
 

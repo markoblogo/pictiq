@@ -226,7 +226,7 @@ What genuinely new research value is present in the supplied Pictiq idea PDF and
 
 ### What happened
 
-The supplied PDF and Python prototype were preserved as research inputs, then reviewed separately from accepted protocol/specification material. The older precedent claims in the PDF were marked as superseded where the repository already has stronger verification. The runnable prototype was inspected directly and reproduced with the current 70-icon lexicon in a temporary Python environment.
+The supplied PDF and Python prototype were preserved as research inputs, then reviewed separately from accepted protocol/specification material. The older precedent claims in the PDF were marked as superseded where the repository already has stronger verification. The runnable prototype was inspected directly and reproduced with the then-current 70-icon lexicon in a temporary Python environment.
 
 ### Main result
 
@@ -384,7 +384,7 @@ The project described scoped entity symbols such as `entity:odysseus@literary`, 
 
 ### Decision / outcome
 
-Entity symbols are a **LOCAL PILOT IMPLEMENTED — PENDING HUMAN VISUAL ACCEPTANCE**. They are not ordinary Core lexical tiles and do not change the Core/Standalone lexicon count.
+Entity symbols are **IMPLEMENTED / ACCEPTED** as official Pictiq project entity-symbol examples. They are not ordinary Core lexical tiles and do not change the Core/Standalone lexicon count.
 
 ### Why it matters
 
@@ -466,7 +466,7 @@ Could five approved reference shapes become canonical Pictiq candidates without 
 
 ### What happened
 
-Five local candidates were implemented: `body_mouth`, `rel_here`, `rel_up`, `rel_down`, and `nature_moon`. The canonical registry now has 75 local icons. Standalone Core includes all five candidates; Embodied Core includes the three relation operators and omits mouth and moon/night by default because live body/context can often supply them.
+Five Batch C primitives were implemented and human-accepted: `body_mouth`, `rel_here`, `rel_up`, `rel_down`, and `nature_moon`. The ordinary canonical lexicon now has 75 icons. Standalone Core includes all five; Embodied Core includes the three relation operators and omits mouth and moon/night by default because live body/context can often supply them.
 
 ### Evidence
 
@@ -474,7 +474,7 @@ Five local candidates were implemented: `body_mouth`, `rel_here`, `rel_up`, `rel
 
 ### Decision / outcome
 
-Batch C is locally implemented and structurally validated, but it remains pending human visual acceptance. No push, tag, release, or public verification is implied.
+Batch C is implemented, structurally validated, and human-accepted as canonical. Push/public verification remain separate gates; no new tag or GitHub release is implied.
 
 ### Why it matters
 
@@ -482,7 +482,7 @@ The batch turns the Embodied/Standalone distinction into practical profile decis
 
 ### Open questions
 
-Human visual acceptance and any later release work remain separate gates.
+Post-publication task validation, Road Signs × Pictiq stress testing, and any future release/tag decision remain separate gates.
 
 ### Possible future book use
 

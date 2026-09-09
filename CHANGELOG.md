@@ -4,6 +4,19 @@ All notable changes to this repository will be documented in this file.
 
 This project uses milestone-style tags. The `-infra` suffix indicates a pre-icons infrastructure release.
 
+## Unreleased
+
+### Accepted canonical lexicon work
+- Accepted Standalone Batch C as canonical: `body_mouth`, `rel_here`, `rel_up`, `rel_down`, and `nature_moon`.
+- Bumped ordinary canonical lexicon metadata to `0.5.0`; the ordinary lexicon now has 75 icons.
+- Recorded Batch C architecture decisions for contextual polysemy, action-relevant ambiguity, standalone externalization of embodiment, spatial reference, the `< > ∧ ∨` relation/orientation family, and `time + nature_sun` / `time + nature_moon` day/night composition.
+
+### Entity symbols
+- Accepted the first six official Pictiq project entity-symbol examples: `entity:anton-biletskyi-volokh@personal`, `entity:odysseus@literary`, `entity:william-shakespeare@historical`, `entity:albert-einstein@historical`, `entity:leonardo-da-vinci@historical`, and `entity:siddhartha-gautama-buddha@historical`.
+- Added `entities/entity-index.json`, `entities/svg/`, entity-source crops, QA generation, and entity-registry validation.
+- Clarified that entity symbols are visual proper names in scoped namespaces, not ordinary lexical icons; the entity registry count is 6 and must not be combined into “81 Core icons.”
+- Formalized self-defined personal symbols, project-scoped historical/literary examples, narrative/context namespaces, contextual association without a possession operator, and the Buddha / Siddhartha Gautama semantic boundary.
+
 ## v1.0.2 — 2026-09-09
 
 ### Architecture

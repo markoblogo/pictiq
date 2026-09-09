@@ -4,7 +4,7 @@
 
 Can the next five standalone candidates be implemented from the approved reference image without changing existing icons or expanding the protocol into unrelated future concepts?
 
-## Local candidate IDs
+## Accepted IDs
 
 | ID | Class | Primary semantics | Standalone profile | Embodied profile |
 | --- | --- | --- | --- | --- |
@@ -31,4 +31,4 @@ Local visual sheets:
 - `build/qa/batch-c.png`
 - `build/qa/batch-c-compositions.png`
 
-Both sheets are local review artifacts. Batch C remains pending human visual acceptance and is not released, tagged, or pushed by this local implementation task.
+Batch C passed human visual acceptance. The accepted versions are the current repository SVGs; publication, tags, and GitHub releases remain separate gates.

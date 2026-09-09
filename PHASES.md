@@ -6,7 +6,10 @@
 - Perceptual design principles and visual QA workflow: complete (`v1.0.1`); see [icon spec](spec/ICON_SPEC.md#visual-qa-protocol). This does not certify retrospective perceptual acceptance.
 - Embodied/standalone communication distinction: released in `v1.0.2`; see [protocol](spec/PROTOCOL.md#11-embodied-and-standalone-communication).
 - Standalone Batch A and approved Batch B: released in `v1.0.2` after sequential structural and perceptual gates.
-- Next sequence: prototype parametric COLOR; run the entity-symbol pilot; then run the Road Signs × Pictiq stress test, font/rendering work, translation experiments, and a web-navigation adapter. Evaluation does not authorize automatic implementation or broad lexicon expansion.
+- Standalone Batch C: complete and human-accepted; ordinary canonical lexicon is 75 icons.
+- Entity-symbol pilot: complete and human-accepted as six official Pictiq project examples in `entities/entity-index.json`; entity growth is separate from ordinary lexical growth.
+- Current architecture has three scaling layers: canonical lexicon (general primitives), profiles/context packs (communication-context selection and extension), and entity registry (specific named entities / visual proper names).
+- Next sequence: prototype parametric COLOR; then run the Road Signs × Pictiq stress test, font/rendering work, translation experiments, and a web-navigation adapter. Evaluation does not authorize automatic implementation or broad lexicon expansion.
 - Context packs, profiles, physical layouts, and experiments: active
 
 ### Testing direction

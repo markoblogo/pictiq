@@ -18,9 +18,9 @@ Later standalone batches sharpened the distinction: `body_mouth` is useful when 
 
 ## Current status
 
-Normative architecture in the v1.0.2 unreleased specification; Handbook v1 remains unchanged.
+Normative architecture in the v1.0.2 specification; Handbook v1 remains unchanged.
 
-Batch C is locally implemented as a visual review candidate and remains pending human acceptance before any push, tag, or release.
+Batch C is human-accepted as canonical local repository work. Publishing to `main` is a separate release-state gate.
 
 ## Unresolved questions
 

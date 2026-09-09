@@ -1,8 +1,8 @@
 # Text to Pictiq RAG Prototype
 
-> **Status:** PROTOTYPE / BASELINE  
-> **Input source:** [archived Python prototype](../research/inputs/pictiq-text-to-tile-rag-prototype.py)  
-> **Reviewed against:** current `main`, Pictiq v1.0.2-era 70-icon lexicon  
+> **Status:** PROTOTYPE / BASELINE
+> **Input source:** [archived Python prototype](../research/inputs/pictiq-text-to-tile-rag-prototype.py)
+> **Reviewed against:** then-current `main`, Pictiq v1.0.2-era 70-icon lexicon
 > **Rule:** This is not production code and not an accepted translator architecture.
 
 ## Research question

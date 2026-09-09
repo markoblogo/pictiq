@@ -46,4 +46,4 @@ This pilot supports future material on visual proper names, narrative translatio
 
 ## Current status
 
-Local implementation only. The pilot remains pending human visual acceptance. No push, tag, release, or ordinary lexicon version bump is implied.
+Implemented and human-accepted as official Pictiq project entity-symbol examples. No tag, release, or ordinary Core lexicon count change is implied.

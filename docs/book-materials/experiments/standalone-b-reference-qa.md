@@ -22,4 +22,4 @@ Source: `Зображення Codex 9 вер. 2026 р., 18_04_51.png` supplied o
 
 ## Follow-up
 
-Human visual acceptance is complete. Release v1.0.2 includes the accepted Batch B IDs; future work remains limited to the separate COLOR and entity-symbol mechanisms.
+Human visual acceptance is complete. Release v1.0.2 includes the accepted Batch B IDs; later work keeps COLOR as a separate parametric mechanism and entity symbols as a separate registry mechanism.

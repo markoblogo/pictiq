@@ -45,7 +45,7 @@ A free 95-page illustrated field guide covering:
 ## Core overview
 
 Point to a tile. Add `punct_question` to ask, `punct_exclaim` for urgency, and `logic_no` to negate.
-The current canonical lexicon contains **70 icons**, including lexical tiles, evaluation modifiers, and relational operators.
+The current canonical lexicon contains **75 icons**, including lexical tiles, evaluation modifiers, and relational operators.
 
 <p align="center">
   <img src="docs/overview/pictiq-core-grid.png" alt="Pictiq core overview grid" width="900" />
@@ -80,9 +80,11 @@ Pictiq treats technical SVG validity and perceptual recognition as separate requ
 
 Pictiq now distinguishes [Embodied Communication from Standalone Communication](spec/PROTOCOL.md#11-embodied-and-standalone-communication). Live pointing, gaze, gesture, voice, visible objects, and shared context can make a tile unnecessary; signs, cards, stickers, screens, and remote instructions must preserve the same meaning after the communicator is gone.
 
-Meaning may enter a message through [lexical tiles, modifiers/operators, parametric tiles, entity symbols, or embodied references](spec/PROTOCOL.md#12-communication-primitive-classes). Standalone Batch A and the approved Batch B candidates are implemented; parametric COLOR remains under evaluation, and entity symbols now have a local pilot registry pending visual acceptance.
+Meaning may enter a message through [lexical tiles, modifiers/operators, parametric tiles, entity symbols, or embodied references](spec/PROTOCOL.md#12-communication-primitive-classes). Standalone Batches A, B, and C are implemented and accepted; parametric COLOR remains under evaluation, and entity symbols now have an accepted pilot registry.
 
 The single canonical lexicon can be selected through an [Embodied Profile](spec/PROFILES.md#embodied-profile) for person-present communication or a [Standalone Profile](spec/PROFILES.md#standalone-profile) for durable/remote communication. Context packs layer on either profile; they are not separate icon libraries.
+
+Pictiq currently scales through three distinct layers: the 75-icon canonical lexicon for general reusable primitives, profiles/context packs for communication settings, and the 6-example entity registry for specific named entities or visual proper names. Entity registry growth does not increase the ordinary Core lexicon count.
 
 ### Research
 - [Toki Pona interoperability research](https://github.com/markoblogo/toki-pona-translator) compares the 120-word Toki Pona core vocabulary, sitelen pona, sitelen emoji, and the current Pictiq lexicon as a semantic and interoperability stress test—not as evidence of historical influence or lexical equivalence.
