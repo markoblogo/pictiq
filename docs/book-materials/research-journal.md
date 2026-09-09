@@ -152,6 +152,42 @@ The pilot’s detailed table belongs in the Toki Pona repository rather than thi
 
 Use the pilot as a compact experiment in why translation equivalence and protocol equivalence diverge.
 
+## 2026-09-09 — Comparative visual-language research review
+
+### Starting question
+
+Where does Pictiq sit historically and functionally among visual languages, symbolic conlangs, AAC systems, public-information systems, and international sign standards?
+
+### What happened
+
+A broad literature review was assembled covering historical visual communication, modern wayfinding, symbolic constructed languages, AAC, international graphical-symbol standards, empirical comprehension studies, and adoption mechanisms.
+
+### Key findings
+
+1. Pictorial resemblance does not automatically produce universal comprehension.
+2. Successful systems constrain domain, teach conventions, exploit context, or gain institutional and technical infrastructure.
+3. Mature systems combine pictorial form with syntax, layout, color, shape, captions, training, interaction protocols, or software tooling.
+4. Pictiq is best compared with a mixture of situational protocol, symbolic visual language, AAC-style selection interface, and public-information system rather than a full replacement writing system.
+5. Vocabulary size alone is not a useful measure of expressive or practical capability.
+6. Adoption mechanisms matter as much as icon design.
+7. Cross-cultural comprehension must be treated as empirical rather than assumed from visual style.
+
+### Evidence
+
+[Preserved full report](research/from-pictographs-to-protocols.md), [perceptual-design concept](concepts/perceptual-design.md), [Embodied vs Standalone concept](concepts/embodied-vs-standalone.md), and [Pictiq protocol](../../spec/PROTOCOL.md).
+
+### Decision / outcome
+
+The report is a comparative source, not a rewrite of Pictiq doctrine. Its ISO 9186 finding is preserved as a methodological reference for graphical-symbol comprehensibility and identifiable elements. Pictiq currently prioritizes task-based, context-rich experiments; recognition or guessability checks may be one component of those experiments, rather than a generic classroom-style gate.
+
+### Why it matters
+
+The communication surface, distribution infrastructure, governance, training, and context shape practical success alongside icon design.
+
+### Possible future book use
+
+Use the report as a source for a future history-and-design book or several essays, preserving the research-to-journal-to-concept workflow before any chapter rewrite.
+
 ## 2026-09-08 — Full 120-word crosswalk
 
 ### Starting question

@@ -33,3 +33,5 @@ The archive supports several possible books: a visual-language/popular-science b
 Start with the [research journal](research-journal.md), then browse [concepts](concepts/), [experiments](experiments/), and [products](products/).
 
 Recent architecture material includes the [Embodied and Standalone Profile decision](concepts/embodied-vs-standalone.md) and [Standalone Batch B planning](../../spec/STANDALONE_BACKLOG.md).
+
+The [comparative visual-language review](research/from-pictographs-to-protocols.md) is a major preserved source for possible future popular-science or design books on visual communication history, constructed languages, signage, AAC, pictogram standards, empirical comprehension, and Pictiq as a contemporary case study. It supports multiple future books; no fixed outline is decided.

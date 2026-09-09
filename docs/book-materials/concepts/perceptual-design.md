@@ -23,3 +23,7 @@ Controlled human recognition and physical-size studies remain future work.
 ## Potential book angle
 
 Why visual minimalism is an operational constraint rather than a style preference.
+
+## Comparative research note
+
+The [comparative visual-language review](../research/from-pictographs-to-protocols.md) records the useful tension that iconicity can help initial interpretation, familiarity stabilizes interpretation, context narrows possibilities, distinctiveness reduces confusion, and training creates convention. “Universal” should therefore mean demonstrated performance in specified contexts and populations, not an aesthetic property of an icon.
