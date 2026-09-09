@@ -90,10 +90,10 @@ def validate_lexicon_index(root: Path) -> tuple[list[dict[str, Any]], list[str]]
 
 def validate_packs(root: Path, lexicon_ids: set[str]) -> list[str]:
     errs: list[str] = []
-    pack_paths = [
-        root / "packs" / "universal-core.json",
-        root / "packs" / "universal-v1.json",
-    ]
+    pack_paths = sorted((root / "packs").glob("*.json"))
+    if not pack_paths:
+        errs.append(f"{root / 'packs'}: no pack JSON files found")
+        return errs
 
     for pack_path in pack_paths:
         try:

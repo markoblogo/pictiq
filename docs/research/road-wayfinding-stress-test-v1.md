@@ -3,7 +3,7 @@
 > Status: RESEARCH / STRESS TEST  
 > Architecture baseline: `d5e3641` — Formalize vocabulary and phrase architecture  
 > Date: 2026-09-10  
-> Scope: Phase 1 tests current Pictiq only; Phase 2 simulates DEAD, WAVY, and numeric notation hypotheses. No canonical icons, normative architecture, profiles, packs, tags, or releases are changed.
+> Scope: Phase 1 tested then-current Pictiq only; Phase 2 simulated DEAD, WAVY, and numeric notation hypotheses. A 2026-09-10 accepted follow-up adds two contextual primitives and partial shared numeric notation without changing the original case matrix.
 
 ## Research question
 
@@ -148,35 +148,44 @@ No accepted Phrase Architecture rule failed materially. The failures are mostly 
 
 ## Proposed Road/Public Wayfinding additions
 
-These are recommendations only, not implementation:
+The original research recommendations are now partly resolved by the accepted follow-up. Remaining recommendations are still candidates only.
+
+Resolved in the accepted follow-up:
+
+- `surface_wavy` accepted as contextual surface-irregularity/waves primitive.
+- Shared numeric notation layer introduced, referenced by Road speed-limit conventions.
+
+Still open:
 
 - Road access/prohibition notation for no entry.
 - Crossing/path relation or layout convention for pedestrian crossing.
-- Surface-irregularity candidate, possibly WAVY, for slippery/uneven/rough surface.
 - Road-specific refinement for speed bump if practical action requires it.
 - Information-point contextual primitive, pending more service-sign cases.
-- Shared numeric notation layer, referenced by Road speed-limit conventions.
 
 ## Genuine Core evidence
 
-No new concept has enough evidence from this Road-only test to become Core. DEAD has possible cross-domain evidence but remains unproven. WAVY is stronger as contextual. Numeric notation should be a shared notation layer, not Core vocabulary.
+No Stress Test 02 addition has enough evidence to become Core. `surface_wavy` and `state_dead` are accepted as Contextual. Numeric notation is a shared notation layer, not Core vocabulary.
 
 ## Human Decision Queue
 
-1. Should DEAD enter the candidate backlog, and if so as DEFER pending cross-domain medical/narrative/safety evidence?
-2. Should WAVY be accepted as a contextual surface-irregularity candidate, or held until non-road uses are tested?
-3. Should Pictiq create a shared numeric notation registry separate from ordinary lexical tiles?
-4. Should Road/Public Wayfinding define domain conventions for speed limits instead of trying to express them in pure Pictiq?
-5. Is a crossing/path relation needed for pedestrian crossing, or should it remain Road-pack notation?
-6. Is `punct_exclaim` sufficient for generic warning while DEAD handles only extreme/deadly danger?
-7. Are `< > ∧ ∨` safe as directional operators when a Road/Wayfinding context is explicit?
-8. Should `rel_here + move_car` be accepted as parking shorthand in Road context?
-9. Does “information point” justify a Public/Wayfinding contextual primitive, or can `media_text` plus context remain enough?
-10. Did this test expose any Phrase Architecture rule that needs normative change? Current result: no, only domain notation gaps.
+Resolved by accepted follow-up:
+
+1. DEAD entered the ordinary canonical registry as `state_dead` with Contextual classification.
+2. WAVY entered the ordinary canonical registry as `surface_wavy` with Contextual classification.
+3. Numeric notation entered as a shared notation layer separate from ordinary lexical tiles.
+4. Road/Public Wayfinding can reference numeric notation for speed-limit conventions instead of treating `50` as a Pictiq lexical word.
+
+Still open:
+
+1. Is a crossing/path relation needed for pedestrian crossing, or should it remain Road-pack notation?
+2. Is `punct_exclaim` sufficient for generic warning while `state_dead` handles only extreme/deadly danger?
+3. Are `< > ∧ ∨` safe as directional operators when a Road/Wayfinding context is explicit?
+4. Should `rel_here + move_car` be accepted as parking shorthand in Road context?
+5. Does “information point” justify a Public/Wayfinding contextual primitive, or can `media_text` plus context remain enough?
 
 ## Visual comparison sheets
 
-The rebuilt sheets compare schematic conventional road/public signs with exact current Pictiq tile sequences rendered from repository SVG assets. They are presentation artifacts only and do not change the analytical classifications. DEAD and WAVY appear only in a separate hypothesis area marked “not canonical.”
+The rebuilt sheets compare schematic conventional road/public signs with exact current Pictiq tile sequences rendered from repository SVG assets. They are presentation artifacts only and do not change the analytical classifications. DEAD and WAVY appear only in the original separate hypothesis area marked “not canonical”; the accepted follow-up QA sheet supersedes that label for `surface_wavy` and `state_dead`.
 
 ## Artifacts
 
@@ -188,8 +197,8 @@ The rebuilt sheets compare schematic conventional road/public signs with exact c
 ## Closeout confirmations
 
 - Normative spec unchanged: yes.
-- Canonical lexicon remains 75 ordinary IDs: yes.
+- Original baseline used 75 ordinary IDs; accepted follow-up raises the ordinary canonical lexicon to 77 IDs.
 - Entity symbols remain separate: yes.
-- No icons created: yes.
+- Accepted follow-up created `surface_wavy` and `state_dead`: yes.
 - No tag/release created: yes.
 - Nothing pushed: yes.

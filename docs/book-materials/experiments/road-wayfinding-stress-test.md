@@ -1,6 +1,6 @@
 # Road & Public Wayfinding Stress Test
 
-> Status: RESEARCH NOTE / NOT SPEC  
+> Status: RESEARCH NOTE + ACCEPTED FOLLOW-UP / NOT SPEC
 > Source artifact: [Pictiq Stress Test 02](../../research/road-wayfinding-stress-test-v1.md)  
 > Date: 2026-09-10
 
@@ -10,7 +10,7 @@ Can current Pictiq communicate established road and public-wayfinding meanings w
 
 ## Methodology
 
-The experiment used 25 common road/public-wayfinding cases. Each case separated official/conventional meaning from current Pictiq representation, neutral back-interpretation, practical action, result class, failure mode, and action ambiguity. Phase 1 used only current accepted Pictiq primitives. Phase 2 simulated three hypotheses: DEAD, WAVY, and numeric notation.
+The experiment used 25 common road/public-wayfinding cases. Each case separated official/conventional meaning from current Pictiq representation, neutral back-interpretation, practical action, result class, failure mode, and action ambiguity. Phase 1 used only current accepted Pictiq primitives. Phase 2 simulated three hypotheses: DEAD, WAVY, and numeric notation. A later acceptance pass converted two hypotheses into contextual canonical primitives and converted numeric `50` into the first partial shared numeric-notation rendering.
 
 ## Surprising successes
 
@@ -32,11 +32,11 @@ No entry, pedestrian crossing, speed limit 50, and information point exposed rea
 
 ## DEAD / WAVY hypotheses
 
-DEAD has possible cross-domain value for extreme danger, medical, narrative, and safety contexts, but the road test alone does not justify canonicalization. WAVY is stronger: it helps slippery and uneven roads and may generalize to waves/rough water or unstable surfaces, but speed bump remains only partly solved.
+The acceptance pass added `surface_wavy` and `state_dead` as contextual ordinary canonical primitives. `surface_wavy` keeps the broad WAVY / UNEVEN / UNSTABLE / SLIPPERY / WAVES / SURFACE IRREGULARITY field and must not be narrowed to “slippery road.” `state_dead` remains contextual rather than Core: it is useful for death/not-alive/deadly-context messages, but current evidence still says complexity belongs to the contexts that require it.
 
 ## Numerical notation question
 
-Speed limit 50 showed that exact numbers belong in a shared notation layer, not in ordinary lexical vocabulary and not as replacements for pragmatic quantity tiles. Road packs should be able to reference such notation without owning it exclusively.
+Speed limit 50 produced a partial shared notation layer under `notation/numeric/`. The pass implemented the referenced `5` and `0` digit assets plus a canonical `50` rendering. It did not create `num_50`, and it did not replace `qty_1`, `qty_2`, `qty_5`, `qty_plus`, or `qty_minus`. Context packs may reference numeric notation; they do not own it exclusively.
 
 ## Architectural lessons
 

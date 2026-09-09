@@ -94,6 +94,8 @@ Examples:
 
 `qty_plus` is not mathematical addition. It means more / extra / additional. `qty_minus` means less / fewer / reduce / remove, according to context. `qty_plus` and `qty_minus` MUST NOT be treated as LARGE and SMALL without an independently defined scale-modifier mechanism.
 
+Exact written numbers belong to the separate [Numeric Notation](NUMERIC_NOTATION.md) mechanism. `qty_5 + qty_5` means ten under phrase grammar; it does not mean `50`.
+
 ## 9. Relational and orientation operators
 
 The relational-orientation family contains `rel_greater` (`>`), `rel_lesser` (`<`), `rel_up` (`∧`), and `rel_down` (`∨`). These are horizontal/vertical relation operators, not quantity, size, or movement tokens.

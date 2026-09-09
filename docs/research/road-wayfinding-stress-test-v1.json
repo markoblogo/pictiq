@@ -2,7 +2,7 @@
   "experiment": "Pictiq Stress Test 02: Road & Public Wayfinding",
   "date": "2026-09-10",
   "architecture_commit": "d5e3641",
-  "scope": "Phase 1 read-only analysis against current Pictiq, followed by Phase 2 hypothesis simulation; no normative architecture changes.",
+  "scope": "Phase 1 tested then-current Pictiq only; Phase 2 simulated DEAD, WAVY, and numeric notation hypotheses; accepted follow-up recorded separately.",
   "sources": [
     {
       "id": "vienna-1968",
@@ -475,22 +475,17 @@
     }
   },
   "decision_queue": [
-    "Should DEAD enter the candidate backlog, and if so as DEFER pending cross-domain medical/narrative/safety evidence?",
-    "Should WAVY be accepted as a contextual surface-irregularity candidate, or held until non-road uses are tested?",
-    "Should Pictiq create a shared numeric notation registry separate from ordinary lexical tiles?",
-    "Should Road/Public Wayfinding define domain conventions for speed limits instead of trying to express them in pure Pictiq?",
     "Is a crossing/path relation needed for pedestrian crossing, or should it remain Road-pack notation?",
-    "Is `punct_exclaim` sufficient for generic warning while DEAD handles only extreme/deadly danger?",
-    "Are `< > ∧ ∨` safe as directional operators when a Road/Wayfinding context is explicit?",
-    "Should `rel_here + move_car` be accepted as parking shorthand in Road context?",
-    "Does “information point” justify a Public/Wayfinding contextual primitive, or can `media_text` plus context remain enough?",
-    "Did this test expose any Phrase Architecture rule that needs normative change? Current result: no, only domain notation gaps."
+    "Is punct_exclaim sufficient for generic warning while state_dead handles only extreme/deadly danger?",
+    "Are < > ∧ ∨ safe as directional operators when a Road/Wayfinding context is explicit?",
+    "Should rel_here + move_car be accepted as parking shorthand in Road context?",
+    "Does information point justify a Public/Wayfinding contextual primitive, or can media_text plus context remain enough?"
   ],
   "confirmations": {
-    "canonical_lexicon_remains_75": true,
+    "original_case_matrix_preserved": true,
+    "ordinary_canonical_lexicon_after_followup": 77,
     "entity_symbols_remain_separate": true,
-    "normative_specs_modified": false,
-    "icons_created": false,
+    "numeric_notation_separate_from_ordinary_lexicon": true,
     "tag_or_release_created": false,
     "pushed": false
   },
@@ -507,6 +502,63 @@
     "full": "build/research/road-wayfinding-comparison.png",
     "selected": "build/research/road-wayfinding-comparison-selected.png",
     "validation": "build/research/road-wayfinding-comparison-validation.json",
-    "note": "Pictiq tile sequences are rendered from canonical repository SVG files; conventional signs are schematic public-standard forms."
-  }
+    "note": "Pictiq tile sequences are rendered from canonical repository SVG files; conventional signs are schematic public-standard forms.",
+    "accepted_concepts_qa": "build/qa/stress-test-02-accepted-concepts.png"
+  },
+  "accepted_followup": {
+    "date": "2026-09-10",
+    "ordinary_canonical_icon_count_after_followup": 77,
+    "accepted_icons": [
+      {
+        "id": "surface_wavy",
+        "classification": "CONTEXTUAL",
+        "semantic_field": [
+          "wavy",
+          "uneven",
+          "unstable",
+          "slippery",
+          "waves",
+          "surface irregularity"
+        ],
+        "note": "Broad practical surface/waves concept; not narrowed to slippery road."
+      },
+      {
+        "id": "state_dead",
+        "classification": "CONTEXTUAL",
+        "semantic_field": [
+          "dead",
+          "death",
+          "not alive",
+          "deadly contextually"
+        ],
+        "note": "Two X marks in eye positions; no face circle, head, skull, or bones; not Core on current evidence."
+      }
+    ],
+    "numeric_notation": {
+      "registry": "notation/numeric/index.json",
+      "implemented_digits": [
+        "5",
+        "0"
+      ],
+      "implemented_number_renderings": [
+        "50"
+      ],
+      "not_created": [
+        "num_50"
+      ],
+      "relationship_to_qty": "Existing qty_* tiles keep pragmatic quantity semantics; numeric notation encodes exact written numbers."
+    },
+    "qa_sheet": "build/qa/stress-test-02-accepted-concepts.png",
+    "principles": [
+      "Pictiq preserves the distinction required for the decision, not every distinction present in the source language.",
+      "Complexity belongs to the context that requires it, not to Core.",
+      "Context packs select and reuse primitives/notation; they do not own them exclusively."
+    ]
+  },
+  "resolved_decisions": [
+    "state_dead accepted as Contextual ordinary canonical primitive, not Core.",
+    "surface_wavy accepted as Contextual ordinary canonical primitive, not narrowed to slippery road.",
+    "numeric notation introduced as a shared notation layer separate from ordinary lexical tiles.",
+    "Road/Public Wayfinding can reference numeric notation for exact speed values."
+  ]
 }

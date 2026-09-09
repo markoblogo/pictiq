@@ -1,0 +1,61 @@
+{
+  "schema_version": "0.1.0",
+  "status": "ACCEPTED NUMERIC NOTATION MECHANISM / PARTIAL DIGIT IMPLEMENTATION",
+  "type": "notation_registry",
+  "principle": "Exact numeric notation coexists with pragmatic quantity tiles.",
+  "canonical_lexicon_relationship": "Numeric notation is not ordinary lexical vocabulary and does not create num_50.",
+  "implemented_digits": [
+    {
+      "digit": "0",
+      "svg": "notation/numeric/svg/digit_0.svg",
+      "source_crop": "inputs/silhouettes/road-wayfinding-stress-test-02/digit_0.png"
+    },
+    {
+      "digit": "5",
+      "svg": "notation/numeric/svg/digit_5.svg",
+      "source_crop": "inputs/silhouettes/road-wayfinding-stress-test-02/digit_5.png"
+    }
+  ],
+  "implemented_numbers": [
+    {
+      "value": "50",
+      "svg": "notation/numeric/svg/number_50.svg",
+      "composition": [
+        "digit_5",
+        "digit_0"
+      ],
+      "source_reference": "inputs/silhouettes/road-wayfinding-stress-test-02/number_50_reference.png"
+    }
+  ],
+  "future_digits": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "6",
+    "7",
+    "8",
+    "9"
+  ],
+  "not_implemented": [
+    "percent",
+    "multiplication",
+    "division",
+    "square_root",
+    "decimal_separator"
+  ],
+  "reuse_contexts": [
+    "ROAD",
+    "ACCOUNTING",
+    "RETAIL",
+    "SCIENCE",
+    "MEASUREMENT",
+    "TIMETABLES",
+    "TIME"
+  ],
+  "examples": [
+    "speed limit 50",
+    "price 50",
+    "measurement 50"
+  ]
+}

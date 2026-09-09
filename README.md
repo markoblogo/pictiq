@@ -45,7 +45,7 @@ A free 95-page illustrated field guide covering:
 ## Canonical overview
 
 Point to a tile. Add `punct_question` to ask, `punct_exclaim` for urgency, and `logic_no` to negate.
-The current canonical registry contains **75 ordinary icons**, including lexical tiles, evaluation modifiers, quantities, and relational operators. Canonical does not mean Core: the accepted classification separates Core, Standalone Core, Contextual, Specialized, and Mechanism roles.
+The current canonical registry contains **77 ordinary icons**, including lexical tiles, evaluation modifiers, quantities, relational operators, `surface_wavy`, and `state_dead`. Canonical does not mean Core: the accepted classification separates Core, Standalone Core, Contextual, Specialized, and Mechanism roles.
 
 <p align="center">
   <img src="docs/overview/pictiq-core-grid.png" alt="Pictiq core overview grid" width="900" />
@@ -62,6 +62,7 @@ Printable PDF: [`docs/overview/pictiq-core-grid.pdf`](docs/overview/pictiq-core-
 - Icon drawing brief (RU): `spec/ICON_DEFINITIONS.ru.md`
 - Style spec: `spec/ICON_SPEC.md`
 - Grammar spec: `spec/GRAMMAR.md`
+- Numeric notation: `spec/NUMERIC_NOTATION.md` and `notation/numeric/index.json`
 - Silhouette input rules: `spec/SILHOUETTE_INPUTS.md`
 - Logo and branding assets: `branding/`
 - Lexicon registry: `lexicon/icon-index.json`
@@ -85,7 +86,7 @@ Meaning may enter a message through [lexical tiles, modifiers/operators, paramet
 
 The single canonical lexicon can be selected through an [Embodied Profile](spec/PROFILES.md#embodied-profile) for person-present communication or a [Standalone Profile](spec/PROFILES.md#standalone-profile) for durable/remote communication. Context packs layer on either profile; they are not separate icon libraries.
 
-Pictiq currently scales through five distinct layers: the 75-icon canonical registry, Core vocabulary, Standalone Core, context packs/profiles, and the 6-example entity registry for specific named entities or visual proper names. Entity registry growth does not increase the ordinary Core lexicon count.
+Pictiq currently scales through five distinct layers: the 77-icon canonical registry, Core vocabulary, Standalone Core, context packs/profiles, and the 6-example entity registry for specific named entities or visual proper names. Entity registry growth does not increase the ordinary Core lexicon count.
 
 ### Research
 - [Toki Pona interoperability research](https://github.com/markoblogo/toki-pona-translator) compares the 120-word Toki Pona core vocabulary, sitelen pona, sitelen emoji, and the current Pictiq lexicon as a semantic and interoperability stress test—not as evidence of historical influence or lexical equivalence.
@@ -111,6 +112,7 @@ Pictiq currently scales through five distinct layers: the 75-icon canonical regi
 ## Tooling & CI
 - `tools/validate_lexicon.py` validates lexicon metadata, packs, profiles, SVG references, and i18n data.
 - `tools/validate_vocabulary_classification.py` validates vocabulary role classification against the canonical lexicon and separate entity registry.
+- `tools/validate_numeric_notation.py` validates the numeric notation registry and path-based digit/number SVG assets.
 - `tools/validate_svg.py` validates canonical SVG rules, including the standard viewBox and `currentColor` use.
 - `tools/validate_entities.py` validates scoped entity-symbol metadata and SVG assets.
 - Layout generators produce wallet cards, luggage tags, phone lockscreens, lighter artwork, and documentation overviews from content profiles.

@@ -9,7 +9,7 @@ Pictiq separates five registries and selection layers:
 **Canonical Registry != Core Vocabulary != Standalone Core != Context Packs != Entity Registry.**
 
 
-1. **Canonical Registry** — every accepted ordinary reusable tile in `lexicon/icon-index.json`; currently 75 IDs.
+1. **Canonical Registry** — every accepted ordinary reusable tile in `lexicon/icon-index.json`; currently 77 IDs.
 2. **Core Vocabulary** — broad everyday primitives inside the canonical registry.
 3. **Standalone Core** — concepts that must often be explicit when the body, object, or live situation disappears.
 4. **Context Packs** — scenario-specific selections and additions such as Paris, nightlife, travel, retail, health, or infrastructure.
@@ -38,12 +38,11 @@ A tile can be contextual and still useful in both embodied and standalone commun
 | MECHANISM | 16 |
 | CORE | 15 |
 | STANDALONE_CORE | 11 |
-| CONTEXTUAL | 32 |
+| CONTEXTUAL | 34 |
 | SPECIALIZED | 1 |
+| Total ordinary canonical IDs | 77 |
 
-| Total ordinary canonical IDs | 75 |
-
-Entity symbols are excluded from these counts.
+Entity symbols and numeric notation assets are excluded from these counts.
 
 ## Classification table
 
@@ -123,8 +122,10 @@ Entity symbols are excluded from these counts.
 | `rel_up` | MECHANISM | NAVIGATION, RELATION | HIGH | HIGH | HIGH |  |
 | `rel_down` | MECHANISM | NAVIGATION, RELATION | HIGH | HIGH | HIGH |  |
 | `nature_moon` | STANDALONE_CORE | STANDALONE, NATURE, TIME | LOW | HIGH | HIGH |  |
+| `surface_wavy` | CONTEXTUAL | ROAD, SURFACE, SAFETY, WATER | MEDIUM | HIGH | HIGH | Accepted from Road & Public Wayfinding Stress Test 02 as a broad surface/wavy/unstable/waves concept, not narrowly slippery road. |
+| `state_dead` | CONTEXTUAL | SAFETY, HEALTH, NARRATIVE, ROAD, INDUSTRIAL | MEDIUM | HIGH | MEDIUM | Accepted from Stress Test 02 as death/not-alive/deadly-contextual; cross-domain potential exists but current evidence does not justify Core. |
 | `tech_ai` | SPECIALIZED | TECH, SPECIALIZED, MACHINE_INTERFACE | LOW | LOW | HIGH | Specialized machine-interface concept. |
 
 ## Review queue
 
-The current accepted classification keeps `service_tools` in Core with medium confidence, and keeps `item_condom`, `food_produce`, and `food_bakery` contextual with medium confidence. Future changes should be evidence-led and should update the JSON source of truth, this document, and validation in the same change.
+The current accepted classification includes `surface_wavy` and `state_dead` as contextual Stress Test 02 additions. It keeps `service_tools` in Core with medium confidence, and keeps `item_condom`, `food_produce`, and `food_bakery` contextual with medium confidence. Future changes should be evidence-led and should update the JSON source of truth, this document, and validation in the same change.

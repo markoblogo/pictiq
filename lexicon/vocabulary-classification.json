@@ -2,7 +2,7 @@
   "schema_version": "0.1.0",
   "status": "ACCEPTED VOCABULARY ARCHITECTURE CLASSIFICATION SOURCE OF TRUTH",
   "canonical_lexicon": "lexicon/icon-index.json",
-  "ordinary_canonical_icon_count": 75,
+  "ordinary_canonical_icon_count": 77,
   "entity_registry": "entities/entity-index.json",
   "entity_registry_policy": "Entity symbols are excluded from ordinary vocabulary classification.",
   "principles": [
@@ -49,11 +49,13 @@
       "EVERYDAY",
       "FOOD",
       "HEALTH",
+      "INDUSTRIAL",
       "INFRASTRUCTURE",
       "LEGAL",
       "LEISURE",
       "MACHINE_INTERFACE",
       "MEDIA",
+      "NARRATIVE",
       "NATURE",
       "NAVIGATION",
       "NIGHTLIFE",
@@ -64,14 +66,17 @@
       "QUANTITY",
       "RELATION",
       "RETAIL",
+      "ROAD",
       "SAFETY",
       "SOCIAL",
       "SPECIALIZED",
       "STANDALONE",
+      "SURFACE",
       "TECH",
       "TIME",
       "TRANSPORT",
-      "TRAVEL"
+      "TRAVEL",
+      "WATER"
     ]
   },
   "entries": [
@@ -940,6 +945,35 @@
       "confidence": "HIGH"
     },
     {
+      "id": "surface_wavy",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "ROAD",
+        "SURFACE",
+        "SAFETY",
+        "WATER"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH",
+      "note": "Accepted from Road & Public Wayfinding Stress Test 02 as a broad surface/wavy/unstable/waves concept, not narrowly slippery road."
+    },
+    {
+      "id": "state_dead",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "SAFETY",
+        "HEALTH",
+        "NARRATIVE",
+        "ROAD",
+        "INDUSTRIAL"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "HIGH",
+      "confidence": "MEDIUM",
+      "note": "Accepted from Stress Test 02 as death/not-alive/deadly-contextual; cross-domain potential exists but current evidence does not justify Core."
+    },
+    {
       "id": "tech_ai",
       "primary_role": "SPECIALIZED",
       "secondary_contexts": [
@@ -953,5 +987,5 @@
       "note": "Specialized machine-interface concept."
     }
   ],
-  "canonical_lexicon_version": "0.5.0"
+  "canonical_lexicon_version": "0.6.0"
 }

@@ -41,3 +41,7 @@ The [portable visual communication precedent study](research/portable-visual-com
 The [Perplexity ideas harvest](research/perplexity-ideas-harvest-2026-09.md) and [text-to-Pictiq RAG prototype record](experiments/text-to-pictiq-rag-prototype.md) preserve a later AI/machine-interface research input. Use these as experiment material only: they do not change Pictiq protocol behavior, canonical icons, packs, profiles, or release state.
 
 The [vocabulary architecture classification](concepts/vocabulary-architecture.md) preserves the post-v1.0.2 distinction between canonical registry, Core, Standalone Core, context packs, specialized vocabulary, mechanisms, and entity symbols. It is book material, not a replacement for the normative spec.
+
+## Current research threads
+
+- Road Wayfinding accepted additions: `surface_wavy`, `state_dead`, and partial numeric notation are recorded in [`experiments/road-wayfinding-stress-test.md`](experiments/road-wayfinding-stress-test.md) and [`../research/road-wayfinding-stress-test-v1.md`](../research/road-wayfinding-stress-test-v1.md).

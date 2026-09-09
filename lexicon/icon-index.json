@@ -1,5 +1,5 @@
 {
-  "version": "0.5.0",
+  "version": "0.6.0",
   "language": "en",
   "icons": [
     {
@@ -1303,6 +1303,24 @@
       "aliases_en": ["moon", "night", "nighttime"],
       "tags_en": ["nature", "moon", "night", "time"],
       "examples": ["time + nature_moon", "nature_moon + punct_question", "nature_moon + need_bar"]
+    },
+    {
+      "id": "surface_wavy",
+      "type": "icon",
+      "category": "surface",
+      "meaning_en": "wavy / uneven / unstable surface",
+      "aliases_en": ["wavy", "uneven", "unstable", "slippery", "waves", "surface irregularity", "rough surface"],
+      "tags_en": ["surface", "wavy", "uneven", "unstable", "slippery", "waves", "road", "water"],
+      "examples": ["surface_wavy + punct_exclaim", "move_boat + surface_wavy"]
+    },
+    {
+      "id": "state_dead",
+      "type": "icon",
+      "category": "state",
+      "meaning_en": "dead / death / not alive",
+      "aliases_en": ["dead", "death", "not alive", "deadly", "fatal"],
+      "tags_en": ["state", "death", "deadly", "safety", "medical", "narrative"],
+      "examples": ["person_generic + state_dead", "state_dead + punct_exclaim"]
     },
     {
       "id": "tech_ai",

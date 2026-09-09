@@ -124,6 +124,19 @@ Run:
 python3 tools/validate_vocabulary_classification.py
 ```
 
+## validate_numeric_notation.py
+
+Validates `notation/numeric/index.json` and numeric SVG assets:
+- implemented digit assets exist and use path geometry, not SVG `<text>`
+- composed number renderings match their digit composition
+- numeric renderings keep `viewBox="0 0 32 32"` and canonical paint constraints
+
+Run:
+
+```bash
+python3 tools/validate_numeric_notation.py
+```
+
 ## validate_svg.py
 
 Validates canonical icons in `icons/svg/` (ignores `.gitkeep`):

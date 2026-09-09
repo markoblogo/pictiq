@@ -513,3 +513,25 @@ The distinction lets Pictiq grow through evidence-led context packs and entity n
 ### Possible future book use
 
 Use as a design-governance case study about how a visual protocol can scale without treating every accepted symbol as universal vocabulary.
+
+## 2026-09-10 — Road Wayfinding accepted additions
+
+### Starting question
+
+Which Stress Test 02 findings should become durable architecture after visual acceptance?
+
+### What happened
+
+The project accepted `surface_wavy` and `state_dead` as contextual ordinary canonical primitives and introduced partial shared numeric notation demonstrated by `50`. The ordinary canonical lexicon now has 77 icons. Numeric notation stays outside ordinary lexical count and coexists with the pragmatic `qty_*` quantity system.
+
+### Evidence
+
+[Road Wayfinding Stress Test](experiments/road-wayfinding-stress-test.md), [Stress Test 02 research artifact](../research/road-wayfinding-stress-test-v1.md), [Numeric Notation](../../spec/NUMERIC_NOTATION.md), and accepted-concepts QA sheet in `build/qa/stress-test-02-accepted-concepts.png`.
+
+### Decision / outcome
+
+`surface_wavy` remains broad enough for wavy, uneven, unstable, slippery, waves, and surface irregularity. `state_dead` remains contextual because cross-domain usefulness alone does not make it Core. Numeric `50` is rendered through notation assets, not a lexical `num_50`.
+
+### Why it matters
+
+The decision preserves action-relevant distinctions while keeping Core small: context packs select and reuse primitives or notation, they do not own them exclusively.

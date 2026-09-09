@@ -138,6 +138,8 @@ The palette is not lexically bounded; arbitrary colors are permitted. The actual
 
 COLOR is a **PROPOSED PARAMETRIC MECHANISM**. It defines no canonical icon, ID, sample geometry, syntax, implementation, or acceptance status. Future parametric types MAY be considered only through the same decision tree.
 
+Numeric notation is an **ACCEPTED SHARED NOTATION MECHANISM** for exact written numbers. It is separate from ordinary lexical vocabulary and from pragmatic quantity tiles. The first partial implementation is defined in [Numeric Notation](NUMERIC_NOTATION.md).
+
 #### Entity symbols
 
 An entity symbol is a unique visual identifier for a specific person, fictional character, organization, place, object, or other named entity within an explicit context. It behaves like a **visual proper name**. It differs from a generic lexical concept: a neutral person tile means “person / human participant,” while an entity symbol means “this specific identified entity.”

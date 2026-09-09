@@ -1,0 +1,37 @@
+{
+  "pack_id": "road-wayfinding-v0.1",
+  "version": "0.1.0",
+  "language": "en",
+  "title": "Road & Public Wayfinding Pack v0.1",
+  "description": "Recommended context pack emerging from Stress Test 02. Contextual selection only; not a Core expansion.",
+  "canonical_lexicon": "lexicon/icon-index.json",
+  "vocabulary_classification": "lexicon/vocabulary-classification.json",
+  "notation_refs": [
+    "notation/numeric"
+  ],
+  "icons": [
+    "rel_greater",
+    "rel_lesser",
+    "rel_up",
+    "rel_down",
+    "rel_here",
+    "logic_no",
+    "punct_exclaim",
+    "move_feet",
+    "move_car",
+    "place_gas",
+    "safety_medical",
+    "safety_police",
+    "need_food",
+    "place_hotel",
+    "media_text",
+    "service_tools",
+    "surface_wavy",
+    "state_dead"
+  ],
+  "notes": {
+    "numeric_notation": "Road speed-limit examples should reference shared numeric notation rather than lexical num_50.",
+    "surface_wavy": "Broad surface/waves/unstable concept, not narrowly slippery road.",
+    "state_dead": "Contextual death/deadly concept; not Core by default."
+  }
+}
