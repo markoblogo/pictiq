@@ -1,0 +1,13 @@
+{
+  "id": "standalone-core-v0.1",
+  "title": "Standalone Core Profile v0.1",
+  "mode": "Standalone Communication",
+  "principle": "What must remain explicit after the body disappears?",
+  "canonical_lexicon": "lexicon/icon-index.json",
+  "included_ids": ["punct_question", "punct_exclaim", "logic_yes", "logic_no", "qual_good", "qual_bad", "time", "person_generic", "qty_1", "qty_2", "qty_5", "qty_plus", "qty_minus", "money_coins", "money_card", "money_atm_bank", "comm_wifi", "comm_phone", "power_plug", "power_energy", "need_toilet", "need_water", "need_food", "need_bar", "safety_medical", "safety_police", "place_hotel", "place_shop", "place_landmark_park", "place_gas", "service_tools", "move_feet", "move_taxi", "move_car", "move_public", "state_hot", "state_cold"],
+  "missing_candidates": ["eye_look", "clothing", "communication", "sound", "text_writing", "image_picture", "sun_day", "light", "large_modifier", "small_modifier", "produce", "bakery_bread"],
+  "required_mechanisms": ["parametric_color"],
+  "separate_mechanisms": ["entity_symbols"],
+  "context_layers": ["Paris", "Nightlife", "Web/UI", "Narrative/Entity namespace"],
+  "status": "RECOMMENDED PROFILE / INCOMPLETE / NOT A SEPARATE ICON LIBRARY"
+}

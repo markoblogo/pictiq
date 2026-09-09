@@ -81,6 +81,8 @@ Pictiq now distinguishes [Embodied Communication from Standalone Communication](
 
 Meaning may enter a message through [lexical tiles, modifiers/operators, parametric tiles, entity symbols, or embodied references](spec/PROTOCOL.md#12-communication-primitive-classes). Standalone Batch A implements six accepted primitives; remaining candidates and mechanisms stay in the [standalone backlog](spec/STANDALONE_BACKLOG.md) for evaluation.
 
+The single canonical lexicon can be selected through an [Embodied Profile](spec/PROFILES.md#embodied-profile) for person-present communication or a [Standalone Profile](spec/PROFILES.md#standalone-profile) for durable/remote communication. Context packs layer on either profile; they are not separate icon libraries.
+
 ### Research
 - [Toki Pona interoperability research](https://github.com/markoblogo/toki-pona-translator) compares the 120-word Toki Pona core vocabulary, sitelen pona, sitelen emoji, and the current Pictiq lexicon as a semantic and interoperability stress test—not as evidence of historical influence or lexical equivalence.
 - Historical reference: [Jock Kinneir and Margaret Calvert’s British road-sign programme](spec/ICON_SPEC.md#reference-systems), identified after Pictiq v1.0.
@@ -95,6 +97,7 @@ Meaning may enter a message through [lexical tiles, modifiers/operators, paramet
 - `/packs` — curated icon packs (core and extensions)
 - `/icons` — canonical SVG icons + exported PNGs
 - `/layouts` — reusable content profiles and physical representations
+- `/profiles` — recommended Embodied and Standalone vocabulary profiles
 - `/templates` — tile template for icon authoring
 - `/tools` — validation and SVG→PNG rendering scripts
 - `/docs` — static dictionary site (GitHub Pages-ready)

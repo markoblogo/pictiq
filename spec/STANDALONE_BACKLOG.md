@@ -61,6 +61,22 @@ The accepted lightning-bolt tile means electricity or electrical power. It remai
 
 ### Batch B — practical standalone vocabulary
 
+**Scope:** planning only. No Batch B icon or ID is implemented by this record. Candidates use existing canonical IDs only when later accepted through the vocabulary decision tree, structural validation, and Visual QA.
+
+#### B1 — essential standalone semantics
+
+Eye/look, communication/speaking, sound, text/writing, and image/picture.
+
+#### B2 — environment and visual context
+
+Sun/day, light, and LARGE/SMALL modifiers.
+
+#### B3 — practical category vocabulary
+
+Clothing, produce, and bakery/bread.
+
+COLOR remains a separate parametric prototype, and entity symbols remain a separate scoped experiment.
+
 #### Generic building / home — lexical-tile design research
 
 - **Need:** generic shelter or destination beyond hotel, shop, airport, and landmark tiles.
@@ -202,3 +218,15 @@ Toki Pona is not presented as an ancestor of Pictiq. The comparison records a re
 ## Future Handbook revision
 
 A future Handbook revision may explain Embodied versus Standalone Communication, the body as a communication surface, modifiers versus lexical tiles, parametric color, entity symbols, and the Toki Pona crosswalk findings. Handbook v1.0 remains unchanged; this note does not schedule or create Handbook v1.1.
+
+## Stress-test and testing guidance
+
+> Stress tests are allowed to expand Pictiq, but they are not allowed to dictate Pictiq.
+
+> A useful stress test should try to break the protocol rather than prove that it already works.
+
+Gaps found through Toki Pona, road signs, literature, websites, narrative, or machine translation still require independent Pictiq utility review. Road Signs × Pictiq is deliberately deferred until the obvious Standalone gaps above are implemented or prototyped, so it tests genuine limitations rather than known omissions.
+
+The next evidence gate is task-based: use a Paris card, understand a road sign, read a narrative fragment, navigate a website, understand a poster/sticker, back-translate a Pictiq text, or use physical merch as an interface. Recognition questions may be local components, but a generic icon-naming exercise is not sufficient. No participants are scheduled here.
+
+Standalone Profile work is also a prerequisite for a future translation laboratory covering an Odyssey fragment, Marcus Aurelius reflections, dialogue, procedural text, a contemporary notice, or poetry. Those translations are not performed in this task.

@@ -7,6 +7,8 @@ This project uses milestone-style tags. The `-infra` suffix indicates a pre-icon
 ## v1.0.2 (unreleased)
 
 ### Architecture
+- Added recommended Embodied and Standalone vocabulary profiles over the single canonical lexicon; context packs may layer on either profile.
+- Replaced the generic classroom-style usability gate with task-based real-context testing guidance and staged Batch B planning.
 - Distinguished Embodied Communication from Standalone Communication in the normative protocol.
 - Added a decision tree for deciding when the body, live context, composition, or an explicit concept must carry meaning.
 - Defined EMBODIED-OMITTABLE, STANDALONE-GAP, and OUT-OF-SCOPE absence states for vocabulary research.

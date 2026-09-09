@@ -6,51 +6,9 @@
 - Perceptual design principles and visual QA workflow: complete (`v1.0.1`); see [icon spec](spec/ICON_SPEC.md#visual-qa-protocol). This does not certify retrospective perceptual acceptance.
 - Embodied/standalone communication distinction: documented for `v1.0.2` (unreleased); see [protocol](spec/PROTOCOL.md#11-embodied-and-standalone-communication).
 - Standalone Batch A: implemented locally for `v1.0.2` after sequential structural and perceptual gates (`qual_good`, `qual_bad`, `person_generic`, `state_hot`, `state_cold`, `power_energy`).
-- Next research: evaluate Batch B and Batch C from the [standalone backlog](spec/STANDALONE_BACKLOG.md). Evaluation does not authorize automatic implementation or broad lexicon expansion.
+- Next sequence: define and use the [Embodied and Standalone Profiles](spec/PROFILES.md); evaluate Standalone Batch B; prototype parametric COLOR; run the entity-symbol pilot; then run the Road Signs × Pictiq stress test, font/rendering work, translation experiments, and a web-navigation adapter. Evaluation does not authorize automatic implementation or broad lexicon expansion.
 - Context packs, profiles, physical layouts, and experiments: active
 
-### User test protocol (quick)
+### Testing direction
 
-Goal: validate guessability of the first canonical icons across different language/culture backgrounds.
-
-Participants:
-- 5–10 people, mixed native languages/cultures (as diverse as possible).
-- Avoid recruiting only designers or only people already familiar with symbol systems.
-
-Materials:
-- The first 6 canonical tiles:
-  - punct_question, punct_exclaim, logic_yes, logic_no, need_toilet, need_water
-- Show icons with **no labels** first.
-
-Tasks (10 prompts):
-1) “Where is the toilet?”
-2) “Urgent medical help!”
-3) “Need water (two)”
-4) “Is card payment accepted?”
-5) “No / not allowed”
-6) “Where can I get Wi-Fi?” (icon may not exist yet; note confusion)
-7) “Need a place to sleep”
-8) “More water”
-9) “Less food”
-10) “Taxi?” (baseline transport comprehension)
-
-Procedure:
-- Phase 1: show icons without labels; record first guess + confidence (1–5).
-- Phase 2: show minimal context (“Pictiq is for short universal messages”); record updated guess.
-- Measure time-to-first-guess (rough: <3s / 3–10s / >10s).
-
-Metrics:
-- First-guess accuracy per icon
-- Common confusion pairs
-- Accuracy improvement after minimal context
-- Notes about cultural ambiguity
-
-Pass criteria (initial):
-- Operators (punct_question, punct_exclaim, logic_yes, logic_no) ≥ 70% correct first-guess.
-- need_toilet / need_water: identify major confusion patterns; redesign if repeated confusion appears.
-
-Recording template fields:
-- participant_id, native_language, country/region
-- icon_id, guess_1, confidence_1, time_bucket_1
-- guess_2, confidence_2
-- notes/confusions
+Do not use a generic classroom-style “show an icon and ask what it means” study as the next release gate. Test Pictiq by making someone accomplish something with it: use a Paris card, understand a road sign, read a narrative fragment, navigate the website, understand a poster/sticker, back-translate a text, or use physical merch as an interface. Recognition checks may remain local components of those task-based experiments; no participant study is scheduled here.

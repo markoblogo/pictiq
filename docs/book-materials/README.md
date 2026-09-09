@@ -31,3 +31,5 @@ Meaningful usability, interoperability, product, visual-QA, protocol, machine-in
 The archive supports several possible books: a visual-language/popular-science book; a practical travel-communication book using Pictiq; and a narrative or comic experiment in which characters communicate through Pictiq. No title or publication plan is decided.
 
 Start with the [research journal](research-journal.md), then browse [concepts](concepts/), [experiments](experiments/), and [products](products/).
+
+Recent architecture material includes the [Embodied and Standalone Profile decision](concepts/embodied-vs-standalone.md) and [Standalone Batch B planning](../../spec/STANDALONE_BACKLOG.md).
