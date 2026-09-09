@@ -81,6 +81,7 @@ Pictiq now distinguishes [Embodied Communication from Standalone Communication](
 Meaning may enter a message through [lexical tiles, modifiers/operators, parametric tiles, entity symbols, or embodied references](spec/PROTOCOL.md#12-communication-primitive-classes). Proposed standalone additions are tracked in a [non-canonical backlog](spec/STANDALONE_BACKLOG.md).
 
 ### Research
+- [Toki Pona interoperability research](https://github.com/markoblogo/toki-pona-translator) compares the 120-word Toki Pona core vocabulary, sitelen pona, sitelen emoji, and the current Pictiq lexicon as a semantic and interoperability stress test—not as evidence of historical influence or lexical equivalence.
 - Historical reference: [Jock Kinneir and Margaret Calvert’s British road-sign programme](spec/ICON_SPEC.md#reference-systems), identified after Pictiq v1.0.
 - Related systems: `docs/research/related-systems.md`
 - Emoji bridge: `docs/research/emoji-bridge.md`
