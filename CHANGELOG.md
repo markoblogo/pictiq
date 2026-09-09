@@ -6,18 +6,28 @@ This project uses milestone-style tags. The `-infra` suffix indicates a pre-icon
 
 ## v1.0.2 (unreleased)
 
-### Communication architecture
+### Architecture
 - Distinguished Embodied Communication from Standalone Communication in the normative protocol.
 - Added a decision tree for deciding when the body, live context, composition, or an explicit concept must carry meaning.
 - Defined EMBODIED-OMITTABLE, STANDALONE-GAP, and OUT-OF-SCOPE absence states for vocabulary research.
-- Recorded a non-canonical parametric color-modifier direction for future standalone use.
-- Added a non-normative note on why Toki Pona crosswalk gaps are analytical evidence rather than a completeness target.
 - Classified communication primitives as lexical tiles, modifiers/operators, parametric tiles, entity symbols, and embodied references.
-- Separated YES/NO logic from proposed GOOD/BAD evaluation and quantity from proposed LARGE/SMALL scale modifiers.
+- Separated YES/NO logic from GOOD/BAD evaluation and quantity from proposed LARGE/SMALL scale modifiers.
+- Recorded a non-canonical parametric color direction for future standalone use.
 - Defined scoped entity-symbol governance without implementing a namespace or registry.
-- Added a prioritized, non-canonical Standalone Communication implementation backlog.
 
-This is a standards and documentation update. It changes no canonical icons, IDs, geometry, packs, profiles, layouts, or Handbook files.
+### Implementation
+- Added `qual_good` and `qual_bad` evaluation modifiers with explicit `BASE + QUALIFIER` grammar.
+- Added `person_generic` for a neutral human participant in standalone messages.
+- Added `state_hot` as a practical contextual heat/fire tile and `state_cold` for cold/freezing/refrigeration.
+- Added `power_energy` for electricity and electrical power, distinct from `power_plug` and physical strength.
+- Expanded the canonical lexicon metadata to `0.3.0`, from 52 to 58 icons, and regenerated the overview grid.
+
+### Research
+- Recorded the Toki Pona interoperability findings as evidence about lexical gaps versus standalone needs, not as a translation target or historical influence.
+- Preserved the distinction between embodied omissions, standalone gaps, modifiers, parametric color, scoped entity symbols, and grammar that intentionally remains outside Pictiq.
+- Updated the standalone backlog with Batch A implementation outcomes while retaining its original rationale and open questions.
+
+Handbook v1.0, existing packs, profiles, layouts, and pre-existing icon geometry remain unchanged.
 
 ## v1.0.1
 

@@ -1,8 +1,8 @@
 # Standalone Communication Backlog
 
-Status: **NON-CANONICAL PLANNING DOCUMENT** for the unreleased v1.0.2 specification.
+Status: **PLANNING AND IMPLEMENTATION RECORD** for the unreleased v1.0.2 specification.
 
-Nothing in this file creates a canonical concept, icon, ID, geometry, grammar token, namespace, registry, pack, profile, or layout. Every rendered proposal must first survive the [vocabulary decision tree](PROTOCOL.md#decision-tree), then structural validation and the [Visual QA Protocol](ICON_SPEC.md#visual-qa-protocol).
+An item becomes canonical only through the [vocabulary decision tree](PROTOCOL.md#decision-tree), structural validation, the [Visual QA Protocol](ICON_SPEC.md#visual-qa-protocol), and explicit acceptance. Batch A records the first six implementations to complete that path; all other entries remain non-canonical proposals.
 
 ## Architectural priorities
 
@@ -13,7 +13,7 @@ Nothing in this file creates a canonical concept, icon, ID, geometry, grammar to
 - **Need:** a generic human participant in unattended travel, safety, and accessibility messages.
 - **Embodied equivalent:** point to oneself or another person.
 - **Visual direction:** familiar public-sign or road-sign-like standing human silhouette.
-- **Status:** **STRONG CANDIDATE**.
+- **Status:** **IMPLEMENTED / CANONICAL** as `person_generic` in Batch A2.
 
 The concept is generic “person / human participant.” It does not encode a particular individual, pronoun, or gender.
 
@@ -22,38 +22,42 @@ The concept is generic “person / human participant.” It does not encode a pa
 - **Need:** qualify a base concept as good, acceptable, positive, or satisfactory.
 - **Examples:** `food + GOOD`; `hotel + GOOD`.
 - **Visual direction:** a simple positive or upward smile curve, or another broadly recognizable positive-evaluation mark.
-- **Status:** **MODIFIER RESEARCH**.
+- **Status:** **IMPLEMENTED / CANONICAL MODIFIER** as `qual_good` in Batch A1.
 
-GOOD is not YES. It must not overload `logic_yes`. No geometry or ID is selected.
+GOOD is not YES and does not overload `logic_yes`. Batch A accepted a thick upward/smiling curve without a face; the historical minimal-curve direction was retained.
 
 #### BAD / NEGATIVE — modifier
 
 - **Need:** qualify a base concept as bad, poor, unpleasant, or unsatisfactory.
 - **Example:** `hotel + BAD`.
 - **Visual direction:** a simple downward or frowning curve, or another broadly recognizable negative-evaluation mark.
-- **Status:** **MODIFIER RESEARCH**.
+- **Status:** **IMPLEMENTED / CANONICAL MODIFIER** as `qual_bad` in Batch A1.
 
-BAD is not NO. It must not overload `logic_no`. YES/NO and GOOD/BAD are separate semantic axes. No geometry or ID is selected.
+BAD is not NO and does not overload `logic_no`. YES/NO and GOOD/BAD remain separate semantic axes. Batch A accepted the inverse downward/frowning curve.
 
 #### Hot / fire — lexical-tile candidate
 
 - **Uses to test:** heat, hot, fire, and warning.
 - **Visual direction:** conventional flame silhouette familiar from safety signage.
 - **Open question:** whether hot and fire can remain one contextual concept.
-- **Status:** **HIGH-UTILITY CANDIDATE**.
+- **Status:** **IMPLEMENTED / CANONICAL** as `state_hot` in Batch A3.
+
+The accepted tile is a practical contextual cue for hot, heat, or fire. It does not erase the conceptual distinction among those senses or define a specialized hazard class.
 
 #### Cold — lexical-tile candidate
 
 - **Uses to test:** cold, freezing, refrigeration, and comfort/safety.
 - **Visual direction:** conventional snowflake associated with refrigeration or freezer use.
-- **Status:** **HIGH-UTILITY CANDIDATE**.
+- **Status:** **IMPLEMENTED / CANONICAL** as `state_cold` in Batch A3.
 
 #### Energy / electricity — lexical-tile candidate
 
 - **Uses to test:** energy, electricity, and electrical power.
 - **Visual direction:** conventional lightning bolt.
 - **Boundary:** physical strength is a separate concept and must not be inferred.
-- **Status:** **CANDIDATE**.
+- **Status:** **IMPLEMENTED / CANONICAL** as `power_energy` in Batch A3.
+
+The accepted lightning-bolt tile means electricity or electrical power. It remains distinct from `power_plug` and does not encode human physical strength.
 
 ### Batch B — practical standalone vocabulary
 

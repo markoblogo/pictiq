@@ -45,6 +45,7 @@ A free 95-page illustrated field guide covering:
 ## Core overview
 
 Point to a tile. Add `punct_question` to ask, `punct_exclaim` for urgency, and `logic_no` to negate.
+The current canonical lexicon contains **58 icons**, including lexical tiles and the `qual_good` / `qual_bad` evaluation modifiers.
 
 <p align="center">
   <img src="docs/overview/pictiq-core-grid.png" alt="Pictiq core overview grid" width="900" />
@@ -78,7 +79,7 @@ Pictiq treats technical SVG validity and perceptual recognition as separate requ
 
 Pictiq now distinguishes [Embodied Communication from Standalone Communication](spec/PROTOCOL.md#11-embodied-and-standalone-communication). Live pointing, gaze, gesture, voice, visible objects, and shared context can make a tile unnecessary; signs, cards, stickers, screens, and remote instructions must preserve the same meaning after the communicator is gone.
 
-Meaning may enter a message through [lexical tiles, modifiers/operators, parametric tiles, entity symbols, or embodied references](spec/PROTOCOL.md#12-communication-primitive-classes). Proposed standalone additions are tracked in a [non-canonical backlog](spec/STANDALONE_BACKLOG.md).
+Meaning may enter a message through [lexical tiles, modifiers/operators, parametric tiles, entity symbols, or embodied references](spec/PROTOCOL.md#12-communication-primitive-classes). Standalone Batch A implements six accepted primitives; remaining candidates and mechanisms stay in the [standalone backlog](spec/STANDALONE_BACKLOG.md) for evaluation.
 
 ### Research
 - [Toki Pona interoperability research](https://github.com/markoblogo/toki-pona-translator) compares the 120-word Toki Pona core vocabulary, sitelen pona, sitelen emoji, and the current Pictiq lexicon as a semantic and interoperability stress test—not as evidence of historical influence or lexical equivalence.

@@ -48,7 +48,7 @@ def _build_pdf(previews: list[tuple[str, Path]], out_pdf: Path) -> None:
     per_page = COLUMNS * rows_per_page
 
     out_pdf.parent.mkdir(parents=True, exist_ok=True)
-    c = canvas.Canvas(str(out_pdf), pagesize=A4, pageCompression=1)
+    c = canvas.Canvas(str(out_pdf), pagesize=A4, pageCompression=1, invariant=1)
     c.setAuthor("Pictiq")
     c.setTitle("Pictiq Core Grid")
 
