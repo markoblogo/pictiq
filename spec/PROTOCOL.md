@@ -23,6 +23,61 @@ See the research notes:
 - Meaning is amplified by punctuation tiles and context.
 - Some nouns may act as actions depending on context (transport = ride, coins = pay).
 
+### 1.1 Embodied and Standalone Communication
+
+This section is normative. **Embodied Communication** is a live exchange in which a person can use their body, voice, gaze, pointing, a visible object, and the shared physical situation together with Pictiq. **Standalone Communication** is a durable or remote artifact—such as a sign, printed card, sticker, screen, or unattended instruction—that must remain understandable when the author is absent.
+
+Pictiq MUST evaluate vocabulary and composition against the communication mode in which a message must work. A concept supplied reliably by the embodied channel SHOULD be omitted from the tile sequence. The same concept MAY require explicit representation when the message must survive without the person, object, or situation that supplied it.
+
+> Design only what the communication surface cannot already provide.
+
+In practice: use the body for what the body can express, and use the icon for what must remain after the body is gone. Before expanding the vocabulary, check the body, gesture, physical object, environment, pointing, neighboring tiles, existing protocol operators, and shared contextual knowledge.
+
+This rule complements [Design for the decision](ICON_SPEC.md#1-design-for-the-decision): the minimum sufficient message includes all available channels, not only the drawing.
+
+#### Decision tree
+
+For each proposed concept or message:
+
+1. Ask whether the concept is independently useful to Pictiq outside a particular translation or crosswalk. If not, do not add it.
+2. Identify the intended mode. If body, gesture, pointing, environment, carrier object, or existing tiles supply the concept reliably in embodied use, an embodied-specific tile is usually unnecessary; continue only if standalone use creates a genuine need.
+3. Remove the person and transient context. If the standalone artifact remains clear, prefer context or composition. If it becomes ambiguous, continue.
+4. Test whether an existing tile, composition, modifier, or parameter can preserve the concept before proposing a new lexical tile.
+5. If a new canonical concept is still justified, apply the Perceptual Design Principles and Visual QA Protocol before acceptance.
+
+> A missing lexical equivalent is not automatically a missing Pictiq concept.
+
+Examples:
+
+- **Person / participant:** pointing to oneself or another person may supply the participant in an embodied exchange. An unattended medical card or evacuation sign may need a neutral person concept.
+- **Direction / location:** a pointing arm, gaze, or placement can carry direction in a live exchange. A standalone route sign needs direction encoded in the artifact.
+- **Color / object identification:** pointing to a visible red object can make a color tile redundant. A remote instruction such as “use the red container” needs color to remain explicit.
+- **Communication / message:** speaking, showing a phone, or indicating a written note can supply the channel live. A standalone interface may need a channel-neutral message concept.
+- **Hot / cold:** live physical context may help but is often unreliable. Standalone safety or comfort messages may need conventional heat/fire or cold cues; no asset is defined here.
+- **Light:** ambient light can be indicated live. An unattended lighting, visibility, or access instruction may need the concept encoded; no asset is defined here.
+
+#### Absence states
+
+An absent lexical equivalent MUST NOT be treated automatically as a protocol defect. Gap analysis SHOULD classify the intended use with one or more of these states:
+
+- **EMBODIED-OMITTABLE:** the embodied channel can supply the concept reliably enough that no tile is needed for that use.
+- **STANDALONE-GAP:** the concept is necessary when the message must work without the communicator or transient context, and existing tiles or composition do not preserve it honestly.
+- **OUT-OF-SCOPE:** explicit encoding would add language-specific grammar, excessive lexical breadth, or a concept without demonstrated independent Pictiq utility.
+
+The states are analytical and may overlap. For example, visual attention can be EMBODIED-OMITTABLE when gaze or pointing is visible and still be a STANDALONE-GAP for an unattended accessibility cue.
+
+#### Parametric visual modifiers
+
+A compact color system is a candidate for future standalone communication because color can distinguish an object after the communicator is gone. In embodied use, pointing at an existing color remains preferred when reliable.
+
+The standalone research direction is a parametric visual modifier: the canonical Pictiq frame plus a neutral internal color sample whose actual value carries the meaning. Conceptual forms include `color(#ff0000)`, `color(#264653)`, and `color(#747b72)`; the palette is not lexically bounded. A machine-readable form could be `{ "type": "color", "value": "#747b72" }`.
+
+This may become the first parametric Pictiq tile or operator. Because color itself is the semantic payload, it would be an intentional exception to the normal monochrome visual system. This is a non-canonical proposal: it defines no icon, ID, sample geometry, palette, syntax, implementation, or acceptance status, and it does not introduce hardcoded color tiles.
+
+#### Relationship to Toki Pona
+
+**Non-normative.** Toki Pona and Pictiq both use context to reduce explicit vocabulary, but they do so through different media. A Toki Pona lexical absence in Pictiq may be supplied by embodiment, may expose a real standalone requirement, or may fall outside Pictiq’s intended scope. Crosswalk coverage is therefore evidence for analysis, not a completeness target.
+
 ## 2. Tiles and frame
 - Every lexicon word is a framed tile: a rounded-square frame is mandatory.
 - Inner shapes must not touch the frame, except `logic_no`, where the slash may reach the frame as part of the canonical look.

@@ -4,6 +4,17 @@ All notable changes to this repository will be documented in this file.
 
 This project uses milestone-style tags. The `-infra` suffix indicates a pre-icons infrastructure release.
 
+## v1.0.2 (unreleased)
+
+### Communication architecture
+- Distinguished Embodied Communication from Standalone Communication in the normative protocol.
+- Added a decision tree for deciding when the body, live context, composition, or an explicit concept must carry meaning.
+- Defined EMBODIED-OMITTABLE, STANDALONE-GAP, and OUT-OF-SCOPE absence states for vocabulary research.
+- Recorded a non-canonical parametric color-modifier direction for future standalone use.
+- Added a non-normative note on why Toki Pona crosswalk gaps are analytical evidence rather than a completeness target.
+
+This is a standards and documentation update. It changes no canonical icons, IDs, geometry, packs, profiles, layouts, or Handbook files.
+
 ## v1.0.1
 
 ### Perceptual design

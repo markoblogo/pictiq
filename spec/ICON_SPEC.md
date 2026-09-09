@@ -81,6 +81,8 @@ These principles are normative. MUST / MUST NOT indicate requirements; SHOULD in
 
 An icon SHOULD preserve the information necessary for the intended recognition, decision, or action rather than pictorial completeness. Do not optimize an icon for illustration quality. The relevant question is not “Does this depict the object accurately?” but “Can the intended concept be recognized quickly enough for the intended use?”
 
+The intended use MUST also identify whether communication is embodied or standalone. The [protocol distinction](PROTOCOL.md#11-embodied-and-standalone-communication) determines which meaning can be supplied by a present person and which must remain in the artifact.
+
 ### 2. Recognition over abstraction
 
 Recognition SHOULD take precedence over geometric purity or stylistic abstraction. When two silhouettes are structurally valid, prefer the one recognized faster and with less ambiguity, even if it is less geometrically regular. Do not simplify a distinctive feature merely to make an icon stylistically uniform.

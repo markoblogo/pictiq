@@ -74,6 +74,10 @@ Core protocol release: `v1.0.0-core`
 
 Pictiq treats technical SVG validity and perceptual recognition as separate requirements. The [perceptual design principles and visual QA workflow](spec/ICON_SPEC.md#perceptual-design-principles) guide evaluation at multiple scales and in representative layouts.
 
+**Communication modes (v1.0.2, unreleased)**
+
+Pictiq now distinguishes [Embodied Communication from Standalone Communication](spec/PROTOCOL.md#11-embodied-and-standalone-communication). Live pointing, gaze, gesture, voice, visible objects, and shared context can make a tile unnecessary; signs, cards, stickers, screens, and remote instructions must preserve the same meaning after the communicator is gone.
+
 ### Research
 - Historical reference: [Jock Kinneir and Margaret Calvert’s British road-sign programme](spec/ICON_SPEC.md#reference-systems), identified after Pictiq v1.0.
 - Related systems: `docs/research/related-systems.md`
