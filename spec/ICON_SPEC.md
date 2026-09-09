@@ -89,6 +89,8 @@ Before drawing, classify the proposal as a lexical tile, modifier/operator, para
 
 Recognition SHOULD take precedence over geometric purity or stylistic abstraction. When two silhouettes are structurally valid, prefer the one recognized faster and with less ambiguity, even if it is less geometrically regular. Do not simplify a distinctive feature merely to make an icon stylistically uniform.
 
+Preserve established morphology when recognition depends on it. Reference provenance may inform the source, and the final Pictiq asset must remain legally usable; structural validity does not override perceptual recognition. Reference-driven tracing still requires the same Visual QA as any other proposal, and this guidance is only relevant where a distinctive form carries the meaning.
+
 ### 3. Minimum sufficient detail
 
 Canonical icons SHOULD contain the minimum detail necessary for reliable recognition. Remove visual detail until further removal begins to reduce recognition, distinction, or contextual usefulness. “Minimal” does not mean the fewest possible shapes: it means the least visual information that still performs the intended communicative function.
