@@ -606,3 +606,29 @@ The pass shows the vocabulary architecture working under narrative pressure: gen
 ### Possible future book use
 
 Use as the first concrete example of moving from narrative stress-test findings to accepted canonical symbols while preserving the difference between vocabulary, context packs, and entity symbols.
+
+## 2026-09-10 — Odyssey entity symbols
+
+### Starting question
+
+Can Pictiq represent recurring mythological names in narrative material without turning associative attributes into ordinary vocabulary?
+
+### What happened
+
+Stage 2B added five scoped Odyssey Entity Symbols: Poseidon, Zeus, Saturn, Polyphemus, and Calypso. The symbols were extracted from the human-accepted reference sheet, vectorized into the canonical frame, and recorded separately from the ordinary lexicon.
+
+### Evidence
+
+[Stage 2B research record](../research/odyssey-toki-pona-pictiq-stress-test-03-stage-2b.md), [entity registry](../../entities/entity-index.json), and [visual QA sheet](../../build/qa/stress-test-03-stage-2b-entity-qa.png).
+
+### Decision / outcome
+
+The entity registry now demonstrates three identity strategies: self-defined personal symbol, portrait/recognition-based associative identity, and non-portrait associative identity. The ordinary canonical registry remains unchanged at 82 icons.
+
+### Why it matters
+
+This keeps narrative names stable without adding GOD, TRIDENT, SICKLE, CAVE, SEA, WOMAN, or CYCLOPS to Core or ordinary contextual vocabulary just because one story uses them.
+
+### Possible future book use
+
+Use as a chapter example for scoped visual proper names and for the rule that visual associations are not lexical semantics.

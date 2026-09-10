@@ -156,6 +156,7 @@ python3 tools/validate_svg.py
 
 Validates scoped entity symbols separately from the ordinary Core lexicon:
 - every `entities/entity-index.json` symbol has a namespaced `entity:...@namespace` ID
+- accepted entity types currently include `person` and `mythological_entity`
 - no entity ID collides with `lexicon/icon-index.json`
 - each symbol records namespace, aliases, authority, provenance, status, source crop, and SVG path
 - each entity SVG follows the same canonical SVG constraints as ordinary icons

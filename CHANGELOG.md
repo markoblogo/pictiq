@@ -10,6 +10,7 @@ This project uses milestone-style tags. The `-infra` suffix indicates a pre-icon
 - Formalized Stage 1 narrative architecture for Odyssey × Toki Pona × sitelen pona × Pictiq: semantic/practical translation, `INTENTIONAL_OMISSION`, structural gender neutrality, semantic frames, and deferred entity-symbol work.
 - Integrated the five human-accepted Stage 2A ordinary primitives from the supplied reference sheet: `action_conflict`, `move_watercraft`, `qual_sacred`, `nature_animal`, and `nature_cloud`.
 - Bumped ordinary canonical lexicon metadata to `0.7.0`; the ordinary lexicon now has 82 icons. Entity symbols remain counted separately.
+- Added five human-accepted Stage 2B Odyssey Entity Symbols: `entity:poseidon@odyssey`, `entity:zeus@odyssey`, `entity:saturn@odyssey`, `entity:polyphemus@odyssey`, and `entity:calypso@odyssey`.
 
 ### Road & Public Wayfinding findings
 - Accepted `surface_wavy` and `state_dead` as contextual ordinary canonical primitives emerging from Stress Test 02; ordinary canonical lexicon metadata is now `0.6.0` with 77 icons.
@@ -17,7 +18,7 @@ This project uses milestone-style tags. The `-infra` suffix indicates a pre-icon
 - Added numeric notation validation and QA evidence for WAVY, DEAD, and numeric `50`.
 
 ### Vocabulary and phrase architecture
-- Added `lexicon/vocabulary-classification.json` as the machine-readable source of truth for architectural role classification across all accepted ordinary canonical IDs, explicitly excluding the 6 entity-symbol examples.
+- Added `lexicon/vocabulary-classification.json` as the machine-readable source of truth for architectural role classification across all accepted ordinary canonical IDs, explicitly excluding the 11 entity-symbol examples.
 - Added `spec/VOCABULARY_CLASSIFICATION.md` and validation for the accepted distinction between Canonical Registry, Core Vocabulary, Standalone Core, Context Packs, Specialized vocabulary, Mechanisms, and Entity Registry.
 - Formalized phrase architecture in `spec/GRAMMAR.md`: bare tile / zero-intent, bare adjacency as contextual association, postfix scope for qualifiers/quantities/negation, additive numeric quantity expressions, relational-orientation operators, `rel_here` as reference, and one proposition per phrase line.
 
@@ -29,7 +30,7 @@ This project uses milestone-style tags. The `-infra` suffix indicates a pre-icon
 ### Entity symbols
 - Accepted the first six official Pictiq project entity-symbol examples: `entity:anton-biletskyi-volokh@personal`, `entity:odysseus@literary`, `entity:william-shakespeare@historical`, `entity:albert-einstein@historical`, `entity:leonardo-da-vinci@historical`, and `entity:siddhartha-gautama-buddha@historical`.
 - Added `entities/entity-index.json`, `entities/svg/`, entity-source crops, QA generation, and entity-registry validation.
-- Clarified that entity symbols are visual proper names in scoped namespaces, not ordinary lexical icons; the entity registry count is 6 and must not be combined into “81 Core icons.”
+- Clarified that entity symbols are visual proper names in scoped namespaces, not ordinary lexical icons; the entity registry count is 11 and must not be combined into ordinary Core or canonical icon counts.
 - Formalized self-defined personal symbols, project-scoped historical/literary examples, narrative/context namespaces, contextual association without a possession operator, and the Buddha / Siddhartha Gautama semantic boundary.
 
 ## v1.0.2 — 2026-09-09

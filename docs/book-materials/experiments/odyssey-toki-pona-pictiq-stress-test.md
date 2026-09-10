@@ -60,3 +60,19 @@ Stage 2A integrated five human-accepted ordinary primitives from the supplied vi
 The methodological point remains that Odyssey discovers pressure on the vocabulary; it is not copied as a source-language vocabulary template. Stage 2A did not add Calypso, Poseidon, Zeus, Saturn, or Polyphemus entity symbols.
 
 QA evidence: [`../../../build/qa/stress-test-03-stage-2a-primitive-qa.png`](../../../build/qa/stress-test-03-stage-2a-primitive-qa.png).
+
+## Stage 2B — accepted Odyssey Entity Symbols
+
+Stage 2B integrated five human-accepted scoped entity symbols from the supplied mythological-entities reference sheet. The source image is archived at [`assets/stress-test-03-stage-2b-reference.png`](assets/stress-test-03-stage-2b-reference.png) with SHA-256 `df459dc55625efc8c279d00bc621f2cbb204fc9ce6e25b000fce4dc7f5bd98f3`.
+
+| Entity ID | Role | Boundary |
+| --- | --- | --- |
+| `entity:poseidon@odyssey` | scoped mythological entity | Uses trident/waves as identity cues; does not add TRIDENT or SEA primitives. |
+| `entity:zeus@odyssey` | scoped mythological entity | Uses cloud/lightning as identity cues; does not add GOD, THUNDER, or STORM primitives. |
+| `entity:saturn@odyssey` | scoped mythological entity | Uses sickle/disc as identity cues; does not add SICKLE or astronomy primitives. |
+| `entity:polyphemus@odyssey` | scoped mythological entity | Uses one eye/cave silhouette as identity cues; does not add CYCLOPS or CAVE primitives. |
+| `entity:calypso@odyssey` | scoped mythological entity | Uses sea cave/waves as identity cues; does not add ISLAND, WOMAN, CAVE, or SEA primitives. |
+
+The architectural finding is that entity symbols can be non-portrait associative visual proper names. They remain separate from ordinary vocabulary and do not change the 82-icon ordinary canonical registry.
+
+QA evidence: [`../../../build/qa/stress-test-03-stage-2b-entity-qa.png`](../../../build/qa/stress-test-03-stage-2b-entity-qa.png).

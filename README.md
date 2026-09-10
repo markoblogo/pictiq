@@ -86,7 +86,7 @@ Meaning may enter a message through [lexical tiles, modifiers/operators, paramet
 
 The single canonical lexicon can be selected through an [Embodied Profile](spec/PROFILES.md#embodied-profile) for person-present communication or a [Standalone Profile](spec/PROFILES.md#standalone-profile) for durable/remote communication. Context packs layer on either profile; they are not separate icon libraries.
 
-Pictiq currently scales through five distinct layers: the 82-icon canonical registry, Core vocabulary, Standalone Core, context packs/profiles, and the 6-example entity registry for specific named entities or visual proper names. Entity registry growth does not increase the ordinary Core lexicon count.
+Pictiq currently scales through five distinct layers: the 82-icon canonical registry, Core vocabulary, Standalone Core, context packs/profiles, and the 11-example entity registry for specific named entities or visual proper names. Entity registry growth does not increase the ordinary Core lexicon count.
 
 ### Research
 - [Toki Pona interoperability research](https://github.com/markoblogo/toki-pona-translator) compares the 120-word Toki Pona core vocabulary, sitelen pona, sitelen emoji, and the current Pictiq lexicon as a semantic and interoperability stress test—not as evidence of historical influence or lexical equivalence.

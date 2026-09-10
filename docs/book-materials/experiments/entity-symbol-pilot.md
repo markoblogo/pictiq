@@ -11,7 +11,8 @@ A named entity can be represented by one stable visual identifier inside a decla
 ## Mechanisms tested
 
 1. **Self-defined identity:** Anton Biletskyi-Volokh uses a supplied personal logo adapted into the Pictiq frame.
-2. **Associative identity:** Odysseus, William Shakespeare, Albert Einstein, Leonardo da Vinci, and Buddha / Siddhartha Gautama use approved associative visual identifiers.
+2. **Portrait/recognition-based associative identity:** Odysseus, William Shakespeare, Albert Einstein, Leonardo da Vinci, and Buddha / Siddhartha Gautama use approved associative visual identifiers.
+3. **Non-portrait associative identity:** Poseidon, Zeus, Saturn, Polyphemus, and Calypso use scoped Odyssey symbols built from associative attributes rather than portrait likeness.
 
 ## Local registry
 
@@ -29,14 +30,19 @@ Entity symbols are stored under `entities/svg/` and are intentionally separate f
 | `entity:albert-einstein@historical` | Albert Einstein | historical | project-scoped associative | approved generated reference symbol |
 | `entity:leonardo-da-vinci@historical` | Leonardo da Vinci | historical | project-scoped associative | approved generated reference symbol |
 | `entity:siddhartha-gautama-buddha@historical` | Buddha / Siddhartha Gautama | historical | project-scoped associative | approved generated reference symbol |
+| `entity:poseidon@odyssey` | Poseidon | odyssey | project-scoped associative | accepted Odyssey Stage 2B reference symbol |
+| `entity:zeus@odyssey` | Zeus | odyssey | project-scoped associative | accepted Odyssey Stage 2B reference symbol |
+| `entity:saturn@odyssey` | Saturn | odyssey | project-scoped associative | accepted Odyssey Stage 2B reference symbol |
+| `entity:polyphemus@odyssey` | Polyphemus | odyssey | project-scoped associative | accepted Odyssey Stage 2B reference symbol |
+| `entity:calypso@odyssey` | Calypso | odyssey | project-scoped associative | accepted Odyssey Stage 2B reference symbol |
 
 ## Conceptual finding
 
-Entity symbols behave like visual proper names. Their internal visual cues are recognition aids, not lexical components. One symbol identifies one entity within a namespace, and natural-language aliases may resolve to the same entity ID.
+Entity symbols behave like visual proper names. Their internal visual cues are recognition aids, not lexical components. One symbol identifies one entity within a namespace, and natural-language aliases may resolve to the same entity ID. The Odyssey additions show that a stable entity symbol can be associative without being portrait-like: a trident can identify Poseidon in the Odyssey namespace without creating a generic TRIDENT primitive.
 
 ## QA artifact
 
-Local visual review sheet: `build/qa/entity-symbols-demo.png`.
+Local visual review sheets: `build/qa/entity-symbols-demo.png` and `build/qa/stress-test-03-stage-2b-entity-qa.png`.
 
 The sheet compares each source crop with the framed canonical symbol plus 64 px and 24 px renders. The expected test is distinguishability and learnability after introduction, not unaided universal name recognition.
 
@@ -46,4 +52,4 @@ This pilot supports future material on visual proper names, narrative translatio
 
 ## Current status
 
-Implemented and human-accepted as official Pictiq project entity-symbol examples. No tag, release, or ordinary Core lexicon count change is implied.
+Implemented locally as official Pictiq project entity-symbol examples after human acceptance of the supplied reference imagery. No tag, release, or ordinary Core lexicon count change is implied.

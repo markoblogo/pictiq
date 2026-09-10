@@ -1,0 +1,56 @@
+{
+  "id": "stress-test-03-odyssey-stage-2b-entities",
+  "title": "Pictiq Stress Test 03 Stage 2B: Odyssey mythological entity symbols",
+  "date": "2026-09-10",
+  "status": "IMPLEMENTED LOCALLY / HUMAN VISUAL ACCEPTANCE PENDING",
+  "source_reference": {
+    "path": "docs/book-materials/experiments/assets/stress-test-03-stage-2b-reference.png",
+    "sha256": "df459dc55625efc8c279d00bc621f2cbb204fc9ce6e25b000fce4dc7f5bd98f3",
+    "human_acceptance_status": "accepted visual reference sheet"
+  },
+  "starting_entity_symbol_count": 6,
+  "resulting_entity_symbol_count": 11,
+  "ordinary_canonical_count_unchanged": 82,
+  "entities": [
+    {
+      "id": "entity:poseidon@odyssey",
+      "namespace": "odyssey",
+      "entity_type": "mythological_entity",
+      "svg": "entities/svg/poseidon__odyssey.svg"
+    },
+    {
+      "id": "entity:zeus@odyssey",
+      "namespace": "odyssey",
+      "entity_type": "mythological_entity",
+      "svg": "entities/svg/zeus__odyssey.svg"
+    },
+    {
+      "id": "entity:saturn@odyssey",
+      "namespace": "odyssey",
+      "entity_type": "mythological_entity",
+      "svg": "entities/svg/saturn__odyssey.svg"
+    },
+    {
+      "id": "entity:polyphemus@odyssey",
+      "namespace": "odyssey",
+      "entity_type": "mythological_entity",
+      "svg": "entities/svg/polyphemus__odyssey.svg"
+    },
+    {
+      "id": "entity:calypso@odyssey",
+      "namespace": "odyssey",
+      "entity_type": "mythological_entity",
+      "svg": "entities/svg/calypso__odyssey.svg"
+    }
+  ],
+  "qa_sheet": "build/qa/stress-test-03-stage-2b-entity-qa.png",
+  "constraints_confirmed": {
+    "ordinary_icons_added": false,
+    "ordinary_lexicon_modified": false,
+    "stage_2a_icons_modified": false,
+    "external_icon_libraries_used": false,
+    "image_generator_used": false,
+    "tag_or_release_created": false,
+    "pushed": false
+  }
+}
