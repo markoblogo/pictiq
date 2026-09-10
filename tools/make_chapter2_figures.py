@@ -154,7 +154,7 @@ def figure_2_2b(temp_dir: Path, repo: Path, out_dir: Path, backend: str) -> None
         ["move_taxi", "punct_question"],
         ["money_card", "punct_question"],
         ["money_card", "logic_no"],
-        ["place_hotel", "comm_wifi", "punct_question"],
+        ["place_home", "comm_wifi", "punct_question"],
         ["move_public", "time", "punct_question"],
     ]
 

@@ -14,15 +14,15 @@ def paste_center(sheet: Image.Image, image: Image.Image, box: tuple[int,int,int,
     x=box[0]+(box[2]-box[0]-image.width)//2; y=box[1]+(box[3]-box[1]-image.height)//2; sheet.paste(image,(x,y))
 
 def main():
-    p=argparse.ArgumentParser(); p.add_argument('--cigarette',type=Path,required=True); p.add_argument('--cannabis',type=Path,required=True); p.add_argument('--condom',type=Path,required=True); p.add_argument('--bar',type=Path); p.add_argument('--beer',type=Path); p.add_argument('--lighter',type=Path,required=True); args=p.parse_args()
+    p=argparse.ArgumentParser(); p.add_argument('--cigarette',type=Path,required=True); p.add_argument('--cannabis',type=Path,required=True); p.add_argument('--condom',type=Path,required=True); p.add_argument('--alcohol',type=Path); p.add_argument('--beer',type=Path); p.add_argument('--lighter',type=Path,required=True); args=p.parse_args()
     repo=Path(__file__).resolve().parents[1]; out=repo/'layouts/overview'; out.mkdir(parents=True,exist_ok=True); backend=_detect_backend('auto')
     refs={'item_cigarette':args.cigarette,'item_cannabis':args.cannabis,'item_condom':args.condom}
-    if args.bar: refs['need_bar']=args.bar
+    if args.alcohol: refs['drink_alcohol']=args.alcohol
     if args.beer: refs['drink_beer']=args.beer
     review=Image.new('RGB',(2400,600*len(refs)),'white')
     with tempfile.TemporaryDirectory(prefix='pictiq_repair_review_') as tmp:
         for row,(icon_id,reference) in enumerate(refs.items()):
-            input_path=(repo/'inputs/silhouettes'/f'{icon_id}.png') if icon_id=='need_bar' else (repo/'inputs/silhouettes/reusable'/f'{icon_id}.png')
+            input_path=(repo/'inputs/silhouettes'/f'{icon_id}.png') if icon_id=='drink_alcohol' else (repo/'inputs/silhouettes/reusable'/f'{icon_id}.png')
             images=[fit(reference,(500,500)),fit(input_path,(500,500)),tile_bitmap(Path(tmp),repo/'icons/svg',icon_id,500,backend)]
             for col,image in enumerate(images): paste_center(review,image,(col*800,row*600,(col+1)*800,(row+1)*600))
     review.save(out/'nightlife-icon-repair-review.png')

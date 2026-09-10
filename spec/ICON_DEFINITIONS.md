@@ -107,7 +107,7 @@ Some concepts are inherently more ambiguous in emoji form:
 
 - `logic_no`: many “no” emojis read as **forbidden/stop** rather than a neutral “not / no / closed / not accepted”. Treat emoji as a shortcut only; the canonical Pictiq meaning remains `X + logic_no`.
 - `need_water`: emoji often implies tap water (`🚰`) rather than “bottled water”. Pictiq canonical icon is the bottle silhouette; emoji is only a convenience.
-- `comm_wifi`: the best available emoji (`📶`) often reads as “cellular signal” rather than Wi-Fi. Use combinations (e.g., `place_hotel + comm_wifi`) to reduce ambiguity.
+- `comm_wifi`: the best available emoji (`📶`) often reads as “cellular signal” rather than Wi-Fi. Use combinations (e.g., `place_home + comm_wifi`) to reduce ambiguity.
 - `move_public`: emoji usually encodes a specific vehicle type (bus/train/metro). Pictiq `move_public` is a **class** (“public transport”), not a specific mode.
 
 ### Universal Core emoji mapping (finalized, non-canonical)
@@ -132,10 +132,10 @@ power_plug — primary: 🔌
 need_toilet — primary: 🚽
 need_water — primary: 🚰; alt: 💧
 need_food — primary: 🍽️; alt: 🍴
-need_bar — primary: 🍷; alt: 🍺, 🥃
+drink_alcohol — primary: 🍷; alt: 🍺, 🥃
 safety_medical — primary: 🏥; alt: 🚑, 🩺
 safety_police — primary: 👮; alt: 🚓, 🛡️
-place_hotel — primary: 🏨; alt: 🛏️
+place_home — primary: 🛏️; alt: 🏨
 place_shop — primary: 🛒; alt: 🏪, 🛍️
 place_landmark_park — primary: 🏞️; alt: 🌳
 place_gas — primary: ⛽
@@ -153,13 +153,13 @@ All icons are framed tiles (rounded-square frame). Inner shapes are filled silho
 **Visual:** An original neutral standing-human silhouette based on familiar public-information conventions: circular head, straight body, open arms, and separated legs.
 **Meaning:** a generic human participant when the person must remain explicit in standalone communication.
 **Avoid:** pronouns, named identity, gender, clothing, facial detail, or cultural markers.
-**Examples:** `person_generic + safety_medical`, `person_generic + move_feet`, `person_generic + place_hotel`. Their precise readings remain contextual under the existing composition grammar.
+**Examples:** `person_generic + safety_medical`, `person_generic + move_feet`, `person_generic + place_home`. Their precise readings remain contextual under the existing composition grammar.
 
 ### punct_question — question
 **Visual:** A large question mark `?`, centered.  
 **Meaning:** where/how/is there/can I.  
 **Avoid:** decorative serif-like endings, tiny dot details.  
-**Examples:** `need_toilet + punct_question`, `place_hotel + punct_question`.
+**Examples:** `need_toilet + punct_question`, `place_home + punct_question`.
 
 ### punct_exclaim — urgent / attention / help
 **Visual:** A large exclamation mark `!`, centered.  
@@ -171,7 +171,7 @@ All icons are framed tiles (rounded-square frame). Inner shapes are filled silho
 **Visual:** A check mark (tick) centered, simple silhouette.  
 **Meaning:** confirmation, acceptance, “works”, “open”.  
 **Avoid:** circles, smileys, letters.  
-**Examples:** `money_card + logic_yes`, `place_hotel + logic_yes`.
+**Examples:** `money_card + logic_yes`, `place_home + logic_yes`.
 
 ### logic_no — no / not / forbidden / closed
 **Visual:** A single diagonal slash `/` inside an otherwise empty tile.  
@@ -186,14 +186,14 @@ Direction: top-right → bottom-left. Thickness: 2–3× the frame stroke.
 **Meaning:** practical positive evaluation of the preceding base tile.
 **Use:** postfix qualifier `X + qual_good`.
 **Avoid:** confirmation/YES, general emotion, or unrestricted moral judgment.
-**Examples:** `need_food + qual_good`, `place_hotel + qual_good`.
+**Examples:** `need_food + qual_good`, `place_home + qual_good`.
 
 ### qual_bad — bad / poor / unpleasant / unsatisfactory
 **Visual:** The inverse thick downward/frowning curve with rounded ends; no face, eyes, or text.
 **Meaning:** practical negative evaluation of the preceding base tile.
 **Use:** postfix qualifier `X + qual_bad`.
 **Avoid:** negation/NO, general emotion, or unrestricted moral judgment.
-**Examples:** `need_food + qual_bad`, `place_hotel + qual_bad`.
+**Examples:** `need_food + qual_bad`, `place_home + qual_bad`.
 
 ### Fixed negations (context packs only)
 **Visual:** Any object icon with the same `logic_no` slash over the object (same direction, same character).  
@@ -264,7 +264,7 @@ Hands meet at center. No numbers/ticks.
 ### comm_wifi — Wi-Fi
 **Visual:** A dot + two arcs (standard Wi-Fi symbol).  
 **Avoid:** “WiFi” letters.  
-**Examples:** `comm_wifi + punct_question`, `place_hotel + comm_wifi`.
+**Examples:** `comm_wifi + punct_question`, `place_home + comm_wifi`.
 
 ### comm_phone — phone / mobile connection
 **Visual:** Simple smartphone silhouette (rounded rectangle). Inside: 4–6 large rounded app tiles (no tiny details).  
@@ -319,11 +319,11 @@ Hands meet at center. No numbers/ticks.
 **Avoid:** separate steak, chicken, pork, beef, or drumstick primitives unless future Food/Animal context vocabularies show actual need. Do not add other food categories merely for taxonomic symmetry.
 **Examples:** `food_meat`, `food_meat + state_hot`, `place_shop + food_meat`.
 
-### need_bar — alcohol / alcoholic drink
+### drink_alcohol — alcohol / alcoholic drink
 **Visual:** A wine glass half-filled (liquid level is the key identifier).
 **Meaning:** alcohol or alcoholic drink by default; bar, drinking venue, or alcohol service contextually.
-**Avoid:** cocktail umbrellas/straws, complex cocktails, or creating a duplicate `drink_alcohol` while this compatibility ID remains active.
-**Examples:** `need_bar + punct_question`, `need_bar + time + punct_question`.
+**Avoid:** cocktail umbrellas/straws, complex cocktails, or creating duplicate alcohol primitives.
+**Examples:** `drink_alcohol + punct_question`, `drink_alcohol + time + punct_question`.
 
 ---
 
@@ -343,10 +343,10 @@ Hands meet at center. No numbers/ticks.
 
 ## Places & services
 
-### place_hotel — home / shelter / sleeping place / building
+### place_home — home / shelter / sleeping place / building
 **Canonical visual:** A bed (road-sign style) as the universal lodging/sleeping-place marker.
 **Meaning:** home, shelter, sleeping place, or building broadly; hotel, accommodation, lodging, bedroom, or homeland contextually.
-**Examples:** `place_hotel + punct_question`, `place_hotel + comm_wifi`.
+**Examples:** `place_home + punct_question`, `place_home + comm_wifi`.
 
 ### place_shop — shop / store
 **Canonical visual:** A supermarket cart silhouette (simple, no brand cues).  

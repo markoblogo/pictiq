@@ -15,6 +15,7 @@ def require(path: str) -> Path:
 require("index.html")
 require("app.js")
 require("style.css")
+compatibility = require("lexicon/compatibility.json")
 data = json.loads(require("lexicon/icon-index.json").read_text())
 ids = [entry["id"] for entry in data["icons"]]
 for icon_id in ids:
@@ -31,4 +32,4 @@ app = (ROOT / "app.js").read_text()
 for ref in ("./lexicon/icon-index.json", "./lexicon/i18n/", "./lexicon/svg/" ):
     if ref not in app:
         raise SystemExit(f"missing runtime reference: {ref}")
-print(f"OK: Pages artifact contains {len(ids)} icons, i18n en/es/fr, and local app assets")
+print(f"OK: Pages artifact contains {len(ids)} icons, compatibility metadata, i18n en/es/fr, and local app assets")

@@ -1,8 +1,10 @@
 {
-  "schema_version": "2026-09-10.reconciliation",
-  "title": "Pictiq Architecture & Vocabulary Audit 2026-09 — reconciliation pass",
-  "status": "LOCAL_HUMAN_REVIEW_PENDING",
-  "ordinary_canonical_count": 83,
+  "schema_version": "2026-09-11.closed",
+  "title": "Pictiq Architecture & Vocabulary Audit 2026-09",
+  "status": "CLOSED",
+  "ordinary_canonical_identifier_count": 83,
+  "active_ordinary_semantic_concept_count": 82,
+  "retained_legacy_deprecated_identifier_count": 4,
   "entity_symbol_count": 11,
   "classification_counts": {
     "MECHANISM": 16,
@@ -14,66 +16,75 @@
     "KEEP_CORE": 42,
     "KEEP_STANDALONE_CORE": 5,
     "KEEP_CONTEXTUAL": 36,
-    "VISUAL_REDESIGN_CANDIDATE": 12,
     "SEMANTIC_MIGRATION": 2,
     "LEGACY_CONTEXTUAL": 1,
     "DEPRECATE_COMPOSABLE": 1
   },
   "semantic_migrations": {
-    "need_bar": "Future preferred ID should be alcohol-oriented (for example `drink_alcohol` or equivalent accepted naming). Retain `need_bar` as legacy alias/deprecated identifier for compatibility until alias infrastructure is formalized.",
-    "place_hotel": "Future preferred ID should be home-oriented (for example `place_home` or equivalent accepted naming). Retain `place_hotel` as legacy alias/deprecated identifier for compatibility until alias infrastructure is formalized."
+    "drink_alcohol": "Implemented semantic migration from historical `need_bar`; legacy alias retained.",
+    "place_home": "Implemented semantic migration from historical `place_hotel`; legacy alias retained."
   },
   "deprecate_composable": {
-    "place_fashion_shopping": "Prefer `place_shop + item_clothing`; dedicated compound is no longer needed and old artwork diverges from newer morphology."
+    "place_fashion_shopping": "Prefer `place_shop + item_clothing`; retained deprecated legacy identifier because active schema does not yet split inactive IDs safely."
   },
   "legacy_contextual": {
-    "move_boat": "Narrower historical/recreational/travel-oriented subtype under Travel/Maritime; `move_watercraft` is the accepted broad parent. Final deprecation/alias decision is deferred."
+    "move_boat": "Narrower historical/recreational/travel-oriented subtype under Travel/Maritime; broad concept is `move_watercraft`; final compatibility action deferred."
   },
-  "visual_redesign_candidates": {
-    "place_fashion_shopping": "Obsolete compound plus visually inconsistent older artwork; do not redesign until future visual-redesign pass decides whether legacy asset remains needed.",
-    "place_landmark_park": "Dense older travel/city artwork; 24 px readability and visual mass should be retested.",
-    "place_theme_park": "Detailed amusement-park/city artwork; 24 px readability and older generation style should be retested.",
-    "place_art_gallery": "Detailed/outlined exhibition-room artwork; visual mass and small-size clarity should be retested.",
-    "place_catacombs": "Skull cluster is dense at small size; contextual Paris asset should be retested before broad reuse.",
-    "money_atm_bank": "ATM details/keypad create small-size density; contextual finance/travel icon should be retested.",
-    "money_card": "Overlapping card/cash forms may be dense at 24 px; contextual payment icon should be retested.",
-    "move_public": "Vehicle detail is dense at 24 px; transport contextual icon should be retested.",
-    "paris_notre_dame": "Detailed landmark silhouette; Paris contextual icon should be retested at small size.",
-    "paris_sacre_coeur": "Detailed landmark silhouette; Paris contextual icon should be retested at small size.",
-    "paris_moulin_windmill": "Detailed landmark silhouette; Paris contextual icon should be retested at small size.",
-    "paris_arc_de_triomphe": "Landmark form may need mass/readability retest in the Paris context pack."
+  "visual_audit_final_decisions": {
+    "money_card": [
+      "KEEP AS IS",
+      "Current artwork is usable; no concrete semantic or technical failure justifies redesign."
+    ],
+    "money_atm_bank": [
+      "KEEP AS IS",
+      "Current artwork is usable; no concrete semantic or technical failure justifies redesign."
+    ],
+    "place_landmark_park": [
+      "KEEP AS IS",
+      "Current artwork is usable; no concrete semantic or technical failure justifies redesign."
+    ],
+    "move_public": [
+      "KEEP AS IS",
+      "Current artwork is usable; no concrete semantic or technical failure justifies redesign."
+    ],
+    "paris_arc_de_triomphe": [
+      "KEEP AS IS",
+      "Current artwork is usable; no concrete semantic or technical failure justifies redesign."
+    ],
+    "paris_notre_dame": [
+      "KEEP AS IS",
+      "Current artwork is usable; no concrete semantic or technical failure justifies redesign."
+    ],
+    "paris_sacre_coeur": [
+      "KEEP AS IS",
+      "Current artwork is usable; no concrete semantic or technical failure justifies redesign."
+    ],
+    "paris_moulin_windmill": [
+      "KEEP AS IS",
+      "Current artwork is usable; no concrete semantic or technical failure justifies redesign."
+    ],
+    "place_catacombs": [
+      "KEEP AS IS",
+      "Current artwork is usable; no concrete semantic or technical failure justifies redesign."
+    ],
+    "place_theme_park": [
+      "KEEP AS IS",
+      "Current artwork is usable; no concrete semantic or technical failure justifies redesign."
+    ],
+    "place_art_gallery": [
+      "KEEP AS IS",
+      "Current artwork is usable; no concrete semantic or technical failure justifies redesign."
+    ],
+    "place_fashion_shopping": [
+      "DO NOT REDRAW / DEPRECATE",
+      "Concept is compositionally obsolete; prefer `place_shop + item_clothing`."
+    ]
   },
   "human_review_required_ids": [],
-  "github_metadata_recommendation": {
-    "about": "Pictiq: an open visual language and symbolic protocol built from a small vocabulary, compositional grammar, and contextual extensions.",
-    "retain_topics": [
-      "visual-language",
-      "visual-communication",
-      "symbolic-language",
-      "communication",
-      "pictograms",
-      "icons",
-      "conlang",
-      "constructed-language",
-      "hci",
-      "accessibility",
-      "open-standard",
-      "open-source",
-      "protocol",
-      "svg"
-    ],
-    "deprioritize_as_project_defining": [
-      "travel",
-      "aac",
-      "computer-vision"
-    ],
-    "status": "recommendation only; no GitHub metadata changed in this task"
-  },
   "rows": [
     {
       "id": "punct_question",
       "semantic_field": "question",
-      "classification_at_start_of_reconciliation": "MECHANISM",
       "final_classification": "MECHANISM",
       "final_dispositions": [
         "KEEP_CORE"
@@ -85,16 +96,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
-      "reason": "Accepted classification retained or reconciled to human review decisions."
+      "reason": ""
     },
     {
       "id": "punct_exclaim",
       "semantic_field": "urgent",
-      "classification_at_start_of_reconciliation": "MECHANISM",
       "final_classification": "MECHANISM",
       "final_dispositions": [
         "KEEP_CORE"
@@ -106,16 +116,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
-      "reason": "Accepted classification retained or reconciled to human review decisions."
+      "reason": ""
     },
     {
       "id": "logic_yes",
       "semantic_field": "yes",
-      "classification_at_start_of_reconciliation": "MECHANISM",
       "final_classification": "MECHANISM",
       "final_dispositions": [
         "KEEP_CORE"
@@ -127,16 +136,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
-      "reason": "Accepted classification retained or reconciled to human review decisions."
+      "reason": ""
     },
     {
       "id": "logic_no",
       "semantic_field": "no",
-      "classification_at_start_of_reconciliation": "MECHANISM",
       "final_classification": "MECHANISM",
       "final_dispositions": [
         "KEEP_CORE"
@@ -149,16 +157,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
-      "reason": "Accepted classification retained or reconciled to human review decisions."
+      "reason": ""
     },
     {
       "id": "qual_good",
       "semantic_field": "good / positive evaluation",
-      "classification_at_start_of_reconciliation": "MECHANISM",
       "final_classification": "MECHANISM",
       "final_dispositions": [
         "KEEP_CORE"
@@ -170,16 +177,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
-      "reason": "Accepted classification retained or reconciled to human review decisions."
+      "reason": ""
     },
     {
       "id": "qual_bad",
       "semantic_field": "bad / negative evaluation",
-      "classification_at_start_of_reconciliation": "MECHANISM",
       "final_classification": "MECHANISM",
       "final_dispositions": [
         "KEEP_CORE"
@@ -191,16 +197,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
-      "reason": "Accepted classification retained or reconciled to human review decisions."
+      "reason": ""
     },
     {
       "id": "time",
       "semantic_field": "time",
-      "classification_at_start_of_reconciliation": "CORE",
       "final_classification": "CORE",
       "final_dispositions": [
         "KEEP_CORE"
@@ -212,16 +217,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
-      "reason": "Accepted classification retained or reconciled to human review decisions."
+      "reason": ""
     },
     {
       "id": "state_hot",
       "semantic_field": "hot / heat / fire",
-      "classification_at_start_of_reconciliation": "CORE",
       "final_classification": "CORE",
       "final_dispositions": [
         "KEEP_CORE"
@@ -233,16 +237,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
-      "reason": "Accepted classification retained or reconciled to human review decisions."
+      "reason": ""
     },
     {
       "id": "state_cold",
       "semantic_field": "cold / freezing / refrigeration",
-      "classification_at_start_of_reconciliation": "CORE",
       "final_classification": "CORE",
       "final_dispositions": [
         "KEEP_CORE"
@@ -254,16 +257,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
-      "reason": "Accepted classification retained or reconciled to human review decisions."
+      "reason": ""
     },
     {
       "id": "person_generic",
       "semantic_field": "generic person / human participant",
-      "classification_at_start_of_reconciliation": "STANDALONE_CORE",
       "final_classification": "STANDALONE_CORE",
       "final_dispositions": [
         "KEEP_STANDALONE_CORE"
@@ -275,16 +277,15 @@
       "embodied_relevance": "LOW",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Standalone Core because durable messages often need an explicit human participant."
     },
     {
       "id": "qty_1",
       "semantic_field": "one",
-      "classification_at_start_of_reconciliation": "MECHANISM",
       "final_classification": "MECHANISM",
       "final_dispositions": [
         "KEEP_CORE"
@@ -296,16 +297,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
-      "reason": "Accepted classification retained or reconciled to human review decisions."
+      "reason": ""
     },
     {
       "id": "qty_2",
       "semantic_field": "two",
-      "classification_at_start_of_reconciliation": "MECHANISM",
       "final_classification": "MECHANISM",
       "final_dispositions": [
         "KEEP_CORE"
@@ -317,16 +317,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
-      "reason": "Accepted classification retained or reconciled to human review decisions."
+      "reason": ""
     },
     {
       "id": "qty_5",
       "semantic_field": "five",
-      "classification_at_start_of_reconciliation": "MECHANISM",
       "final_classification": "MECHANISM",
       "final_dispositions": [
         "KEEP_CORE"
@@ -338,16 +337,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
-      "reason": "Accepted classification retained or reconciled to human review decisions."
+      "reason": ""
     },
     {
       "id": "qty_plus",
       "semantic_field": "more",
-      "classification_at_start_of_reconciliation": "MECHANISM",
       "final_classification": "MECHANISM",
       "final_dispositions": [
         "KEEP_CORE"
@@ -359,16 +357,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
-      "reason": "Accepted classification retained or reconciled to human review decisions."
+      "reason": ""
     },
     {
       "id": "qty_minus",
       "semantic_field": "less",
-      "classification_at_start_of_reconciliation": "MECHANISM",
       "final_classification": "MECHANISM",
       "final_dispositions": [
         "KEEP_CORE"
@@ -380,16 +377,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
-      "reason": "Accepted classification retained or reconciled to human review decisions."
+      "reason": ""
     },
     {
       "id": "money_coins",
       "semantic_field": "money / currency / payment value",
-      "classification_at_start_of_reconciliation": "CORE",
       "final_classification": "CORE",
       "final_dispositions": [
         "KEEP_CORE"
@@ -402,20 +398,18 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Human decision: KEEP_CORE. Primary field is MONEY / CURRENCY / PAYMENT VALUE."
     },
     {
       "id": "money_card",
       "semantic_field": "card payment",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
-        "KEEP_CONTEXTUAL",
-        "VISUAL_REDESIGN_CANDIDATE"
+        "KEEP_CONTEXTUAL"
       ],
       "secondary_contexts": [
         "PAYMENT",
@@ -425,20 +419,18 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "VISUAL_REDESIGN_CANDIDATE",
-      "visual_review_note": "Overlapping card/cash forms may be dense at 24 px; contextual payment icon should be retested.",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "KEEP AS IS",
+      "visual_note": "Current artwork is usable; no concrete semantic or technical failure justifies redesign.",
       "human_review_required": false,
       "reason": "Specific card/payment-instrument concept; Finance/Travel/Commerce contextual vocabulary, not Core."
     },
     {
       "id": "money_atm_bank",
       "semantic_field": "ATM / bank",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
-        "KEEP_CONTEXTUAL",
-        "VISUAL_REDESIGN_CANDIDATE"
+        "KEEP_CONTEXTUAL"
       ],
       "secondary_contexts": [
         "PAYMENT",
@@ -448,16 +440,15 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "VISUAL_REDESIGN_CANDIDATE",
-      "visual_review_note": "ATM details/keypad create small-size density; contextual finance/travel icon should be retested.",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "KEEP AS IS",
+      "visual_note": "Current artwork is usable; no concrete semantic or technical failure justifies redesign.",
       "human_review_required": false,
       "reason": "Specific ATM/bank infrastructure concept; Finance/Travel/Commerce contextual vocabulary, not Core."
     },
     {
       "id": "comm_wifi",
       "semantic_field": "Wi-Fi",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
         "KEEP_CONTEXTUAL"
@@ -470,16 +461,15 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Technology/travel/modern-everyday contextual concept; not Core."
     },
     {
       "id": "comm_phone",
       "semantic_field": "phone",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
         "KEEP_CONTEXTUAL"
@@ -493,16 +483,15 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Technology/travel/modern-everyday contextual concept; not Core."
     },
     {
       "id": "power_plug",
       "semantic_field": "power outlet",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
         "KEEP_CONTEXTUAL"
@@ -516,16 +505,15 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Technology/travel/infrastructure contextual concept; do not confuse POWER PLUG with ENERGY."
     },
     {
       "id": "power_energy",
       "semantic_field": "electrical energy / electricity / power",
-      "classification_at_start_of_reconciliation": "CORE",
       "final_classification": "CORE",
       "final_dispositions": [
         "KEEP_CORE"
@@ -539,16 +527,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Human decision: broad POWER / ENERGY remains separate and Core; not the same as power plug."
     },
     {
       "id": "need_toilet",
       "semantic_field": "toilet",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
         "KEEP_CONTEXTUAL"
@@ -561,16 +548,15 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Human decision: KEEP_CONTEXTUAL. Everyday/Public Facilities/Travel concept; preserve canonical asset."
     },
     {
       "id": "need_water",
       "semantic_field": "water",
-      "classification_at_start_of_reconciliation": "CORE",
       "final_classification": "CORE",
       "final_dispositions": [
         "KEEP_CORE"
@@ -583,16 +569,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Broad water/basic-need concept."
     },
     {
       "id": "need_food",
       "semantic_field": "food",
-      "classification_at_start_of_reconciliation": "CORE",
       "final_classification": "CORE",
       "final_dispositions": [
         "KEEP_CORE"
@@ -605,16 +590,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Broad food/basic-need concept."
     },
     {
-      "id": "need_bar",
+      "id": "drink_alcohol",
       "semantic_field": "alcohol / alcoholic drink",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
         "KEEP_CONTEXTUAL",
@@ -628,16 +612,15 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "Future preferred ID should be alcohol-oriented (for example `drink_alcohol` or equivalent accepted naming). Retain `need_bar` as legacy alias/deprecated identifier for compatibility until alias infrastructure is formalized.",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "Implemented semantic migration from historical `need_bar`; legacy alias retained.",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
-      "reason": "SEMANTIC_MIGRATION: accepted primary field ALCOHOL / ALCOHOLIC DRINK; secondary BAR / DRINKING VENUE / ALCOHOL SERVICE. Future preferred ID should be alcohol-oriented; retain need_bar as legacy alias/deprecated identifier."
+      "reason": "SEMANTIC_MIGRATION complete: preferred active ID for ALCOHOL / ALCOHOLIC DRINK. Historical need_bar is retained as compatibility alias; artwork unchanged."
     },
     {
       "id": "safety_medical",
       "semantic_field": "medical help",
-      "classification_at_start_of_reconciliation": "CORE",
       "final_classification": "CORE",
       "final_dispositions": [
         "KEEP_CORE"
@@ -650,16 +633,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Broad medical/safety concept."
     },
     {
       "id": "safety_police",
       "semantic_field": "police",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
         "KEEP_CONTEXTUAL"
@@ -673,16 +655,15 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Public safety/legal service concept; canonical contextual vocabulary rather than minimal Core."
     },
     {
-      "id": "place_hotel",
+      "id": "place_home",
       "semantic_field": "home / shelter / sleeping place / building",
-      "classification_at_start_of_reconciliation": "CORE",
       "final_classification": "CORE",
       "final_dispositions": [
         "KEEP_CORE",
@@ -696,16 +677,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "Future preferred ID should be home-oriented (for example `place_home` or equivalent accepted naming). Retain `place_hotel` as legacy alias/deprecated identifier for compatibility until alias infrastructure is formalized.",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "Implemented semantic migration from historical `place_hotel`; legacy alias retained.",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
-      "reason": "SEMANTIC_MIGRATION: accepted primary field HOME / SHELTER / SLEEPING PLACE / BUILDING, HOMELAND contextually. Future preferred ID should be home-oriented; retain place_hotel as legacy alias/deprecated identifier."
+      "reason": "SEMANTIC_MIGRATION complete: preferred active ID for HOME / SHELTER / SLEEPING PLACE / BUILDING, HOMELAND contextually. Historical place_hotel is retained as compatibility alias; artwork unchanged."
     },
     {
       "id": "place_shop",
       "semantic_field": "shop",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
         "KEEP_CONTEXTUAL"
@@ -718,39 +698,15 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Human decision: KEEP_CONTEXTUAL. Commercial/contextual vocabulary, not minimal Core."
     },
     {
       "id": "place_landmark_park",
       "semantic_field": "park / landmark",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
-      "final_classification": "CONTEXTUAL",
-      "final_dispositions": [
-        "KEEP_CONTEXTUAL",
-        "VISUAL_REDESIGN_CANDIDATE"
-      ],
-      "secondary_contexts": [
-        "CITY",
-        "TRAVEL",
-        "LEISURE"
-      ],
-      "embodied_relevance": "MEDIUM",
-      "standalone_relevance": "MEDIUM",
-      "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "VISUAL_REDESIGN_CANDIDATE",
-      "visual_review_note": "Dense older travel/city artwork; 24 px readability and visual mass should be retested.",
-      "human_review_required": false,
-      "reason": "Tourism/nightlife/city contextual vocabulary; not minimal Core after historical travel-bias cleanup."
-    },
-    {
-      "id": "place_gas",
-      "semantic_field": "gas station",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
         "KEEP_CONTEXTUAL"
@@ -763,16 +719,36 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "KEEP AS IS",
+      "visual_note": "Current artwork is usable; no concrete semantic or technical failure justifies redesign.",
+      "human_review_required": false,
+      "reason": "Tourism/nightlife/city contextual vocabulary; not minimal Core after historical travel-bias cleanup."
+    },
+    {
+      "id": "place_gas",
+      "semantic_field": "gas station",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL"
+      ],
+      "secondary_contexts": [
+        "CITY",
+        "TRAVEL",
+        "LEISURE"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Tourism/nightlife/city contextual vocabulary; not minimal Core after historical travel-bias cleanup."
     },
     {
       "id": "service_tools",
       "semantic_field": "tools / repair",
-      "classification_at_start_of_reconciliation": "CORE",
       "final_classification": "CORE",
       "final_dispositions": [
         "KEEP_CORE"
@@ -785,16 +761,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Human decision: KEEP_CORE. Primary field is TOOLS / REPAIR / MAINTENANCE / FIXING; SERVICE is contextual."
     },
     {
       "id": "move_feet",
       "semantic_field": "walk / go on foot",
-      "classification_at_start_of_reconciliation": "CORE",
       "final_classification": "CORE",
       "final_dispositions": [
         "KEEP_CORE"
@@ -807,16 +782,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Broad walking/on-foot movement concept."
     },
     {
       "id": "move_taxi",
       "semantic_field": "taxi",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
         "KEEP_CONTEXTUAL"
@@ -829,16 +803,15 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Transport/Travel/City contextual concept; not minimal Core."
     },
     {
       "id": "move_car",
       "semantic_field": "car",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
         "KEEP_CONTEXTUAL"
@@ -851,20 +824,18 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Transport/Travel/City contextual concept; not minimal Core."
     },
     {
       "id": "move_public",
       "semantic_field": "public transport",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
-        "KEEP_CONTEXTUAL",
-        "VISUAL_REDESIGN_CANDIDATE"
+        "KEEP_CONTEXTUAL"
       ],
       "secondary_contexts": [
         "TRANSPORT",
@@ -874,16 +845,15 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "VISUAL_REDESIGN_CANDIDATE",
-      "visual_review_note": "Vehicle detail is dense at 24 px; transport contextual icon should be retested.",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "KEEP AS IS",
+      "visual_note": "Current artwork is usable; no concrete semantic or technical failure justifies redesign.",
       "human_review_required": false,
       "reason": "Transport/Travel/City contextual concept; not minimal Core."
     },
     {
       "id": "place_disco",
       "semantic_field": "disco / club",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
         "KEEP_CONTEXTUAL"
@@ -896,16 +866,15 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Tourism/nightlife/city contextual vocabulary; not minimal Core after historical travel-bias cleanup."
     },
     {
       "id": "paris_eiffel_tower",
       "semantic_field": "Eiffel Tower",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
         "KEEP_CONTEXTUAL"
@@ -918,20 +887,18 @@
       "embodied_relevance": "LOW",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Paris-specific contextual vocabulary; not general Core."
     },
     {
       "id": "paris_arc_de_triomphe",
       "semantic_field": "Arc de Triomphe",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
-        "KEEP_CONTEXTUAL",
-        "VISUAL_REDESIGN_CANDIDATE"
+        "KEEP_CONTEXTUAL"
       ],
       "secondary_contexts": [
         "PARIS",
@@ -941,16 +908,15 @@
       "embodied_relevance": "LOW",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "VISUAL_REDESIGN_CANDIDATE",
-      "visual_review_note": "Landmark form may need mass/readability retest in the Paris context pack.",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "KEEP AS IS",
+      "visual_note": "Current artwork is usable; no concrete semantic or technical failure justifies redesign.",
       "human_review_required": false,
       "reason": "Paris-specific contextual vocabulary; not general Core."
     },
     {
       "id": "paris_louvre_pyramid",
       "semantic_field": "Louvre pyramid",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
         "KEEP_CONTEXTUAL"
@@ -963,85 +929,15 @@
       "embodied_relevance": "LOW",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Paris-specific contextual vocabulary; not general Core."
     },
     {
       "id": "paris_notre_dame",
       "semantic_field": "Notre-Dame cathedral",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
-      "final_classification": "CONTEXTUAL",
-      "final_dispositions": [
-        "KEEP_CONTEXTUAL",
-        "VISUAL_REDESIGN_CANDIDATE"
-      ],
-      "secondary_contexts": [
-        "PARIS",
-        "CITY",
-        "TRAVEL"
-      ],
-      "embodied_relevance": "LOW",
-      "standalone_relevance": "MEDIUM",
-      "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "VISUAL_REDESIGN_CANDIDATE",
-      "visual_review_note": "Detailed landmark silhouette; Paris contextual icon should be retested at small size.",
-      "human_review_required": false,
-      "reason": "Paris-specific contextual vocabulary; not general Core."
-    },
-    {
-      "id": "paris_sacre_coeur",
-      "semantic_field": "Sacre-Coeur basilica",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
-      "final_classification": "CONTEXTUAL",
-      "final_dispositions": [
-        "KEEP_CONTEXTUAL",
-        "VISUAL_REDESIGN_CANDIDATE"
-      ],
-      "secondary_contexts": [
-        "PARIS",
-        "CITY",
-        "TRAVEL"
-      ],
-      "embodied_relevance": "LOW",
-      "standalone_relevance": "MEDIUM",
-      "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "VISUAL_REDESIGN_CANDIDATE",
-      "visual_review_note": "Detailed landmark silhouette; Paris contextual icon should be retested at small size.",
-      "human_review_required": false,
-      "reason": "Paris-specific contextual vocabulary; not general Core."
-    },
-    {
-      "id": "paris_moulin_windmill",
-      "semantic_field": "Paris windmill cabaret landmark",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
-      "final_classification": "CONTEXTUAL",
-      "final_dispositions": [
-        "KEEP_CONTEXTUAL",
-        "VISUAL_REDESIGN_CANDIDATE"
-      ],
-      "secondary_contexts": [
-        "PARIS",
-        "CITY",
-        "TRAVEL"
-      ],
-      "embodied_relevance": "LOW",
-      "standalone_relevance": "MEDIUM",
-      "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "VISUAL_REDESIGN_CANDIDATE",
-      "visual_review_note": "Detailed landmark silhouette; Paris contextual icon should be retested at small size.",
-      "human_review_required": false,
-      "reason": "Paris-specific contextual vocabulary; not general Core."
-    },
-    {
-      "id": "paris_croissant",
-      "semantic_field": "croissant",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
         "KEEP_CONTEXTUAL"
@@ -1054,16 +950,78 @@
       "embodied_relevance": "LOW",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "KEEP AS IS",
+      "visual_note": "Current artwork is usable; no concrete semantic or technical failure justifies redesign.",
+      "human_review_required": false,
+      "reason": "Paris-specific contextual vocabulary; not general Core."
+    },
+    {
+      "id": "paris_sacre_coeur",
+      "semantic_field": "Sacre-Coeur basilica",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL"
+      ],
+      "secondary_contexts": [
+        "PARIS",
+        "CITY",
+        "TRAVEL"
+      ],
+      "embodied_relevance": "LOW",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "KEEP AS IS",
+      "visual_note": "Current artwork is usable; no concrete semantic or technical failure justifies redesign.",
+      "human_review_required": false,
+      "reason": "Paris-specific contextual vocabulary; not general Core."
+    },
+    {
+      "id": "paris_moulin_windmill",
+      "semantic_field": "Paris windmill cabaret landmark",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL"
+      ],
+      "secondary_contexts": [
+        "PARIS",
+        "CITY",
+        "TRAVEL"
+      ],
+      "embodied_relevance": "LOW",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "KEEP AS IS",
+      "visual_note": "Current artwork is usable; no concrete semantic or technical failure justifies redesign.",
+      "human_review_required": false,
+      "reason": "Paris-specific contextual vocabulary; not general Core."
+    },
+    {
+      "id": "paris_croissant",
+      "semantic_field": "croissant",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL"
+      ],
+      "secondary_contexts": [
+        "PARIS",
+        "CITY",
+        "TRAVEL"
+      ],
+      "embodied_relevance": "LOW",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Paris-specific contextual vocabulary; not general Core."
     },
     {
       "id": "move_boat",
       "semantic_field": "boat transport",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
         "KEEP_CONTEXTUAL",
@@ -1077,20 +1035,18 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "Narrower historical/recreational/travel-oriented subtype under Travel/Maritime; `move_watercraft` is the accepted broad parent. Final deprecation/alias decision is deferred.",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "Narrower historical/recreational/travel-oriented subtype under Travel/Maritime; broad concept is `move_watercraft`; final compatibility action deferred.",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "LEGACY_CONTEXTUAL: narrower historical/recreational/travel-oriented boat subtype. move_watercraft is accepted as the broad hierarchy parent; final compatibility decision deferred."
     },
     {
       "id": "place_catacombs",
       "semantic_field": "catacombs",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
-        "KEEP_CONTEXTUAL",
-        "VISUAL_REDESIGN_CANDIDATE"
+        "KEEP_CONTEXTUAL"
       ],
       "secondary_contexts": [
         "PARIS",
@@ -1100,20 +1056,18 @@
       "embodied_relevance": "LOW",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "VISUAL_REDESIGN_CANDIDATE",
-      "visual_review_note": "Skull cluster is dense at small size; contextual Paris asset should be retested before broad reuse.",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "KEEP AS IS",
+      "visual_note": "Current artwork is usable; no concrete semantic or technical failure justifies redesign.",
       "human_review_required": false,
       "reason": "Paris-specific contextual vocabulary; not general Core."
     },
     {
       "id": "place_theme_park",
       "semantic_field": "theme park",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
-        "KEEP_CONTEXTUAL",
-        "VISUAL_REDESIGN_CANDIDATE"
+        "KEEP_CONTEXTUAL"
       ],
       "secondary_contexts": [
         "CITY",
@@ -1123,16 +1077,15 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "VISUAL_REDESIGN_CANDIDATE",
-      "visual_review_note": "Detailed amusement-park/city artwork; 24 px readability and older generation style should be retested.",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "KEEP AS IS",
+      "visual_note": "Current artwork is usable; no concrete semantic or technical failure justifies redesign.",
       "human_review_required": false,
       "reason": "Tourism/nightlife/city contextual vocabulary; not minimal Core after historical travel-bias cleanup."
     },
     {
       "id": "place_airport",
       "semantic_field": "airport",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
         "KEEP_CONTEXTUAL"
@@ -1145,20 +1098,18 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Transport/Travel/City contextual concept; not minimal Core."
     },
     {
       "id": "place_art_gallery",
       "semantic_field": "art gallery",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
-        "KEEP_CONTEXTUAL",
-        "VISUAL_REDESIGN_CANDIDATE"
+        "KEEP_CONTEXTUAL"
       ],
       "secondary_contexts": [
         "CITY",
@@ -1168,21 +1119,19 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "VISUAL_REDESIGN_CANDIDATE",
-      "visual_review_note": "Detailed/outlined exhibition-room artwork; visual mass and small-size clarity should be retested.",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "KEEP AS IS",
+      "visual_note": "Current artwork is usable; no concrete semantic or technical failure justifies redesign.",
       "human_review_required": false,
       "reason": "Tourism/nightlife/city contextual vocabulary; not minimal Core after historical travel-bias cleanup."
     },
     {
       "id": "place_fashion_shopping",
-      "semantic_field": "fashion shopping",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "semantic_field": "fashion shopping (deprecated composable legacy concept)",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
         "KEEP_CONTEXTUAL",
-        "DEPRECATE_COMPOSABLE",
-        "VISUAL_REDESIGN_CANDIDATE"
+        "DEPRECATE_COMPOSABLE"
       ],
       "secondary_contexts": [
         "RETAIL",
@@ -1192,16 +1141,15 @@
       "embodied_relevance": "LOW",
       "standalone_relevance": "LOW",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "Prefer `place_shop + item_clothing`; dedicated compound is no longer needed and old artwork diverges from newer morphology.",
-      "visual_review_status": "VISUAL_REDESIGN_CANDIDATE",
-      "visual_review_note": "Obsolete compound plus visually inconsistent older artwork; do not redesign until future visual-redesign pass decides whether legacy asset remains needed.",
+      "migration_deprecation_or_legacy_note": "Prefer `place_shop + item_clothing`; retained deprecated legacy identifier because active schema does not yet split inactive IDs safely.",
+      "visual_final_decision": "DO NOT REDRAW / DEPRECATE",
+      "visual_note": "Concept is compositionally obsolete; prefer `place_shop + item_clothing`.",
       "human_review_required": false,
-      "reason": "DEPRECATE_COMPOSABLE and VISUAL_REDESIGN_CANDIDATE: prefer place_shop + item_clothing; preserve only as legacy/history."
+      "reason": "DEPRECATE_COMPOSABLE: retained legacy/deprecated identifier; active recommendation is place_shop + item_clothing. Do not redesign by default."
     },
     {
       "id": "item_cigarette",
       "semantic_field": "cigarette / smoking",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
         "KEEP_CONTEXTUAL"
@@ -1214,16 +1162,15 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Adult practical communication / Health-Safety / Travel contextual concept; not Core."
     },
     {
       "id": "item_cannabis",
       "semantic_field": "cannabis / cannabis-related products",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
         "KEEP_CONTEXTUAL"
@@ -1237,16 +1184,15 @@
       "embodied_relevance": "LOW",
       "standalone_relevance": "LOW",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Adult practical communication / Health-Safety / Legal / Travel contextual concept; not Core."
     },
     {
       "id": "drink_beer",
       "semantic_field": "beer",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
         "KEEP_CONTEXTUAL"
@@ -1259,16 +1205,15 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Adult practical communication / Food-Drink contextual concept; not Core."
     },
     {
       "id": "love_heart",
       "semantic_field": "love / affection / romance",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
         "KEEP_CONTEXTUAL"
@@ -1281,16 +1226,15 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Broad love/affection concept. HEART + PERSON and HEART + PERSON + MANY remain contextual compositions, not new lexical primitives."
     },
     {
       "id": "item_condom",
       "semantic_field": "condom / safer-sex protection",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
         "KEEP_CONTEXTUAL"
@@ -1303,16 +1247,15 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Health/Safety/adult practical communication contextual concept; not Core."
     },
     {
       "id": "nature_flower",
       "semantic_field": "plant / vegetation / flower",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CORE",
       "final_dispositions": [
         "KEEP_CORE"
@@ -1325,16 +1268,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Primary broad field is PLANT / VEGETATION / FLOWER contextually; do not force botanical precision."
     },
     {
       "id": "eye_look",
       "semantic_field": "eye / look / see",
-      "classification_at_start_of_reconciliation": "STANDALONE_CORE",
       "final_classification": "STANDALONE_CORE",
       "final_dispositions": [
         "KEEP_STANDALONE_CORE"
@@ -1346,16 +1288,15 @@
       "embodied_relevance": "LOW",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
-      "reason": "Accepted classification retained or reconciled to human review decisions."
+      "reason": ""
     },
     {
       "id": "item_clothing",
       "semantic_field": "clothing / garment",
-      "classification_at_start_of_reconciliation": "STANDALONE_CORE",
       "final_classification": "STANDALONE_CORE",
       "final_dispositions": [
         "KEEP_STANDALONE_CORE"
@@ -1367,16 +1308,15 @@
       "embodied_relevance": "LOW",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
-      "reason": "Accepted classification retained or reconciled to human review decisions."
+      "reason": ""
     },
     {
       "id": "comm_speak",
       "semantic_field": "speech / communication / oral or audible communication",
-      "classification_at_start_of_reconciliation": "STANDALONE_CORE",
       "final_classification": "CORE",
       "final_dispositions": [
         "KEEP_CORE"
@@ -1389,16 +1329,15 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Primary field is SPEECH / COMMUNICATION / ORAL OR AUDIBLE COMMUNICATION; do not collapse into SOUND + TEXT."
     },
     {
       "id": "comm_sound",
       "semantic_field": "sound / audible signal / music / what is heard",
-      "classification_at_start_of_reconciliation": "STANDALONE_CORE",
       "final_classification": "CORE",
       "final_dispositions": [
         "KEEP_CORE"
@@ -1411,16 +1350,15 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Primary field is SOUND / AUDIBLE SIGNAL / MUSIC / WHAT IS HEARD."
     },
     {
       "id": "media_text",
       "semantic_field": "text / written information",
-      "classification_at_start_of_reconciliation": "STANDALONE_CORE",
       "final_classification": "CORE",
       "final_dispositions": [
         "KEEP_CORE"
@@ -1433,16 +1371,15 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Primary field is TEXT / WRITTEN INFORMATION; READ/WRITE/INFORMATION are contextual."
     },
     {
       "id": "media_image",
       "semantic_field": "image / picture / photo / drawing / visual representation",
-      "classification_at_start_of_reconciliation": "STANDALONE_CORE",
       "final_classification": "CORE",
       "final_dispositions": [
         "KEEP_CORE"
@@ -1455,16 +1392,15 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Primary field is IMAGE / PICTURE / PHOTO / DRAWING / PAINTING / VISUAL REPRESENTATION."
     },
     {
       "id": "nature_sun",
       "semantic_field": "sun / daylight",
-      "classification_at_start_of_reconciliation": "STANDALONE_CORE",
       "final_classification": "STANDALONE_CORE",
       "final_dispositions": [
         "KEEP_STANDALONE_CORE"
@@ -1477,16 +1413,15 @@
       "embodied_relevance": "LOW",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
-      "reason": "Accepted classification retained or reconciled to human review decisions."
+      "reason": ""
     },
     {
       "id": "state_light",
       "semantic_field": "light / lighting / lamp",
-      "classification_at_start_of_reconciliation": "CORE",
       "final_classification": "CORE",
       "final_dispositions": [
         "KEEP_CORE"
@@ -1499,16 +1434,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Broad light/lighting concept."
     },
     {
       "id": "food_produce",
       "semantic_field": "fruit / vegetable / fresh produce",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CORE",
       "final_dispositions": [
         "KEEP_CORE"
@@ -1521,16 +1455,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Primary field is FRUIT / VEGETABLE / FRESH PRODUCE. Not PLANT."
     },
     {
       "id": "food_bakery",
       "semantic_field": "bread / baked food / baked goods / pastry",
-      "classification_at_start_of_reconciliation": "CORE",
       "final_classification": "CORE",
       "final_dispositions": [
         "KEEP_CORE"
@@ -1543,16 +1476,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Primary field is BREAD / BAKED FOOD / BAKED GOODS / PASTRY. Bakery/place reading is secondary."
     },
     {
       "id": "food_meat",
       "semantic_field": "meat / animal food / meat products",
-      "classification_at_start_of_reconciliation": "CORE",
       "final_classification": "CORE",
       "final_dispositions": [
         "KEEP_CORE"
@@ -1565,16 +1497,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Human-accepted Architecture & Vocabulary Audit addition. Broad MEAT / ANIMAL FOOD / MEAT PRODUCTS primitive; do not split into steak, chicken, pork, beef, or drumstick without future context evidence."
     },
     {
       "id": "rel_greater",
       "semantic_field": "greater / more / comparative relation",
-      "classification_at_start_of_reconciliation": "MECHANISM",
       "final_classification": "MECHANISM",
       "final_dispositions": [
         "KEEP_CORE"
@@ -1586,16 +1517,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Comparative GREATER/MORE relation; rightward reading is contextual only, not a global arrow definition."
     },
     {
       "id": "rel_lesser",
       "semantic_field": "lesser / less / comparative relation",
-      "classification_at_start_of_reconciliation": "MECHANISM",
       "final_classification": "MECHANISM",
       "final_dispositions": [
         "KEEP_CORE"
@@ -1607,16 +1537,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Comparative LESSER/LESS relation; leftward reading is contextual only, not a global arrow definition."
     },
     {
       "id": "body_mouth",
       "semantic_field": "mouth / oral intake",
-      "classification_at_start_of_reconciliation": "STANDALONE_CORE",
       "final_classification": "STANDALONE_CORE",
       "final_dispositions": [
         "KEEP_STANDALONE_CORE"
@@ -1629,16 +1558,15 @@
       "embodied_relevance": "LOW",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
-      "reason": "Accepted classification retained or reconciled to human review decisions."
+      "reason": ""
     },
     {
       "id": "rel_here",
       "semantic_field": "here / target / this location / reference point",
-      "classification_at_start_of_reconciliation": "MECHANISM",
       "final_classification": "MECHANISM",
       "final_dispositions": [
         "KEEP_CORE"
@@ -1650,16 +1578,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Broad here/target/reference-point operator; context determines exact reading."
     },
     {
       "id": "rel_up",
       "semantic_field": "up / above / higher / vertical relation",
-      "classification_at_start_of_reconciliation": "MECHANISM",
       "final_classification": "MECHANISM",
       "final_dispositions": [
         "KEEP_CORE"
@@ -1671,16 +1598,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "UP/DOWN vertical relation family member; not redefined as MORE/LESS for symmetry."
     },
     {
       "id": "rel_down",
       "semantic_field": "down / below / lower / vertical relation",
-      "classification_at_start_of_reconciliation": "MECHANISM",
       "final_classification": "MECHANISM",
       "final_dispositions": [
         "KEEP_CORE"
@@ -1692,16 +1618,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "UP/DOWN vertical relation family member; not redefined as MORE/LESS for symmetry."
     },
     {
       "id": "nature_moon",
       "semantic_field": "moon / night / nighttime",
-      "classification_at_start_of_reconciliation": "STANDALONE_CORE",
       "final_classification": "CORE",
       "final_dispositions": [
         "KEEP_CORE"
@@ -1714,16 +1639,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Primary field is MOON / NIGHT / NIGHTTIME. Do not add DAY merely for symmetry."
     },
     {
       "id": "surface_wavy",
       "semantic_field": "wavy / waves / instability / unevenness / slipperiness / irregular surface",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CORE",
       "final_dispositions": [
         "KEEP_CORE"
@@ -1737,16 +1661,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Broad WAVY / WAVES / INSTABILITY / UNEVENNESS / SLIPPERINESS / IRREGULAR SURFACE concept; water-surface reading is contextual and WATER remains separate."
     },
     {
       "id": "state_dead",
       "semantic_field": "dead / death / not alive",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
         "KEEP_CONTEXTUAL"
@@ -1761,16 +1684,15 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "HIGH",
       "confidence": "MEDIUM",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Accepted from Stress Test 02 as death/not-alive/deadly-contextual; cross-domain potential exists but current evidence does not justify Core."
     },
     {
       "id": "tech_ai",
       "semantic_field": "artificial intelligence / AI system",
-      "classification_at_start_of_reconciliation": "SPECIALIZED",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
         "KEEP_CONTEXTUAL"
@@ -1783,16 +1705,15 @@
       "embodied_relevance": "LOW",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "AI/Machine/Technology context vocabulary; not Core."
     },
     {
       "id": "action_conflict",
       "semantic_field": "conflict / war / aggression / fight / hostile action",
-      "classification_at_start_of_reconciliation": "CORE",
       "final_classification": "CORE",
       "final_dispositions": [
         "KEEP_CORE"
@@ -1806,16 +1727,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Human decision: KEEP_CORE. Broad CONFLICT / WAR / AGGRESSION / FIGHT / ATTACK / HOSTILE ACTION / VIOLENCE concept, distinct from BAD evaluation."
     },
     {
       "id": "move_watercraft",
       "semantic_field": "boat / ship / generic watercraft transport",
-      "classification_at_start_of_reconciliation": "CONTEXTUAL",
       "final_classification": "CONTEXTUAL",
       "final_dispositions": [
         "KEEP_CONTEXTUAL"
@@ -1829,16 +1749,15 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Human decision: KEEP_CONTEXTUAL. Preferred broad WATERCRAFT / BOAT / SHIP / GENERIC WATER TRANSPORT concept; do not promote to Core solely because broad."
     },
     {
       "id": "qual_sacred",
       "semantic_field": "sacred / holy / divine / religious",
-      "classification_at_start_of_reconciliation": "CORE",
       "final_classification": "CORE",
       "final_dispositions": [
         "KEEP_CORE"
@@ -1851,16 +1770,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Human decision: KEEP_CORE. Broad SACRED / HOLY / DIVINE / RELIGIOUS / GOD-DIVINITY contextually / SACRED STATUS concept."
     },
     {
       "id": "nature_animal",
       "semantic_field": "animal / general land-animal category",
-      "classification_at_start_of_reconciliation": "CORE",
       "final_classification": "CORE",
       "final_dispositions": [
         "KEEP_CORE"
@@ -1874,16 +1792,15 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Human decision: KEEP_CORE. General land-animal category; not scientific taxonomy. Birds/fish/insects may emerge later if needed."
     },
     {
       "id": "nature_cloud",
       "semantic_field": "cloud / sky / air / atmospheric space",
-      "classification_at_start_of_reconciliation": "CORE",
       "final_classification": "CORE",
       "final_dispositions": [
         "KEEP_CORE"
@@ -1897,9 +1814,9 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "semantic_migration_or_deprecation_note": "",
-      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
-      "visual_review_note": "",
+      "migration_deprecation_or_legacy_note": "",
+      "visual_final_decision": "ACCEPTED_AS_IS",
+      "visual_note": "No visual redesign requested or required in final closure.",
       "human_review_required": false,
       "reason": "Human decision: KEEP_CORE. Broad CLOUD / SKY / AIR / ATMOSPHERIC SPACE / WEATHER context / OVERHEAD SKY CONTEXT."
     }

@@ -39,6 +39,16 @@ This project uses milestone-style tags. The `-infra` suffix indicates a pre-icon
 - Clarified that entity symbols are visual proper names in scoped namespaces, not ordinary lexical icons; the entity registry count is 11 and must not be combined into ordinary Core or canonical icon counts.
 - Formalized self-defined personal symbols, project-scoped historical/literary examples, narrative/context namespaces, contextual association without a possession operator, and the Buddha / Siddhartha Gautama semantic boundary.
 
+## v1.1.0 — 2026-09-11
+
+### Architecture & vocabulary audit
+- Closed the 2026-09 Architecture & Vocabulary Audit after human acceptance.
+- Implemented semantic migrations `need_bar` → `drink_alcohol` and `place_hotel` → `place_home`, preserving old IDs as compatibility aliases and legacy SVG assets only.
+- Retained `place_fashion_shopping` as a deprecated composable compatibility identifier, with `place_shop + item_clothing` as the preferred active composition.
+- Accepted `move_watercraft` as the broad water-transport primitive while keeping `move_boat` as a legacy contextual subtype with final compatibility action deferred.
+- Added compatibility validation and final audit/visual QA artifacts.
+- Final counts: 83 retained ordinary canonical identifiers, 82 active ordinary semantic concepts, and 11 separate Entity Symbols.
+
 ## v1.0.2 — 2026-09-09
 
 ### Architecture

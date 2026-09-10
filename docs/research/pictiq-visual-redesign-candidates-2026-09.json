@@ -1,18 +1,55 @@
 {
-  "status": "AUDIT_ONLY_NO_SVG_REDESIGN",
+  "status": "CLOSED_NO_REDESIGN",
   "ordinary_icons_reviewed": 83,
-  "candidates": {
-    "place_fashion_shopping": "Obsolete compound plus visually inconsistent older artwork; do not redesign until future visual-redesign pass decides whether legacy asset remains needed.",
-    "place_landmark_park": "Dense older travel/city artwork; 24 px readability and visual mass should be retested.",
-    "place_theme_park": "Detailed amusement-park/city artwork; 24 px readability and older generation style should be retested.",
-    "place_art_gallery": "Detailed/outlined exhibition-room artwork; visual mass and small-size clarity should be retested.",
-    "place_catacombs": "Skull cluster is dense at small size; contextual Paris asset should be retested before broad reuse.",
-    "money_atm_bank": "ATM details/keypad create small-size density; contextual finance/travel icon should be retested.",
-    "money_card": "Overlapping card/cash forms may be dense at 24 px; contextual payment icon should be retested.",
-    "move_public": "Vehicle detail is dense at 24 px; transport contextual icon should be retested.",
-    "paris_notre_dame": "Detailed landmark silhouette; Paris contextual icon should be retested at small size.",
-    "paris_sacre_coeur": "Detailed landmark silhouette; Paris contextual icon should be retested at small size.",
-    "paris_moulin_windmill": "Detailed landmark silhouette; Paris contextual icon should be retested at small size.",
-    "paris_arc_de_triomphe": "Landmark form may need mass/readability retest in the Paris context pack."
-  }
+  "final_decisions": {
+    "money_card": [
+      "KEEP AS IS",
+      "Current artwork is usable; no concrete semantic or technical failure justifies redesign."
+    ],
+    "money_atm_bank": [
+      "KEEP AS IS",
+      "Current artwork is usable; no concrete semantic or technical failure justifies redesign."
+    ],
+    "place_landmark_park": [
+      "KEEP AS IS",
+      "Current artwork is usable; no concrete semantic or technical failure justifies redesign."
+    ],
+    "move_public": [
+      "KEEP AS IS",
+      "Current artwork is usable; no concrete semantic or technical failure justifies redesign."
+    ],
+    "paris_arc_de_triomphe": [
+      "KEEP AS IS",
+      "Current artwork is usable; no concrete semantic or technical failure justifies redesign."
+    ],
+    "paris_notre_dame": [
+      "KEEP AS IS",
+      "Current artwork is usable; no concrete semantic or technical failure justifies redesign."
+    ],
+    "paris_sacre_coeur": [
+      "KEEP AS IS",
+      "Current artwork is usable; no concrete semantic or technical failure justifies redesign."
+    ],
+    "paris_moulin_windmill": [
+      "KEEP AS IS",
+      "Current artwork is usable; no concrete semantic or technical failure justifies redesign."
+    ],
+    "place_catacombs": [
+      "KEEP AS IS",
+      "Current artwork is usable; no concrete semantic or technical failure justifies redesign."
+    ],
+    "place_theme_park": [
+      "KEEP AS IS",
+      "Current artwork is usable; no concrete semantic or technical failure justifies redesign."
+    ],
+    "place_art_gallery": [
+      "KEEP AS IS",
+      "Current artwork is usable; no concrete semantic or technical failure justifies redesign."
+    ],
+    "place_fashion_shopping": [
+      "DO NOT REDRAW / DEPRECATE",
+      "Concept is compositionally obsolete; prefer `place_shop + item_clothing`."
+    ]
+  },
+  "principle": "Visual consistency is a constraint, not a goal in itself. Old-generation style alone is not a redesign trigger."
 }

@@ -11,9 +11,9 @@ def prepare(source: Path, output: Path, max_size: int):
 
 def main():
     p=argparse.ArgumentParser()
-    for name in ('cigarette','cannabis','condom','bar','beer'): p.add_argument(f'--{name}',type=Path)
+    for name in ('cigarette','cannabis','condom','alcohol','beer'): p.add_argument(f'--{name}',type=Path)
     p.add_argument('--out-dir',type=Path,required=True); args=p.parse_args()
-    jobs=((args.cigarette,'item_cigarette.png',460),(args.cannabis,'item_cannabis.png',460),(args.condom,'item_condom.png',360),(args.bar,'need_bar.png',460),(args.beer,'drink_beer.png',460))
+    jobs=((args.cigarette,'item_cigarette.png',460),(args.cannabis,'item_cannabis.png',460),(args.condom,'item_condom.png',360),(args.alcohol,'drink_alcohol.png',460),(args.beer,'drink_beer.png',460))
     for source,name,size in jobs:
         if source: prepare(source,args.out_dir/name,size)
 if __name__=='__main__': main()

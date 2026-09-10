@@ -385,7 +385,7 @@
       "note": "Broad food/basic-need concept."
     },
     {
-      "id": "need_bar",
+      "id": "drink_alcohol",
       "primary_role": "CONTEXTUAL",
       "secondary_contexts": [
         "NIGHTLIFE",
@@ -395,7 +395,7 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "note": "SEMANTIC_MIGRATION: accepted primary field ALCOHOL / ALCOHOLIC DRINK; secondary BAR / DRINKING VENUE / ALCOHOL SERVICE. Future preferred ID should be alcohol-oriented; retain need_bar as legacy alias/deprecated identifier."
+      "note": "SEMANTIC_MIGRATION complete: preferred active ID for ALCOHOL / ALCOHOLIC DRINK. Historical need_bar is retained as compatibility alias; artwork unchanged."
     },
     {
       "id": "safety_medical",
@@ -425,7 +425,7 @@
       "note": "Public safety/legal service concept; canonical contextual vocabulary rather than minimal Core."
     },
     {
-      "id": "place_hotel",
+      "id": "place_home",
       "primary_role": "CORE",
       "secondary_contexts": [
         "EVERYDAY",
@@ -435,7 +435,7 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "note": "SEMANTIC_MIGRATION: accepted primary field HOME / SHELTER / SLEEPING PLACE / BUILDING, HOMELAND contextually. Future preferred ID should be home-oriented; retain place_hotel as legacy alias/deprecated identifier."
+      "note": "SEMANTIC_MIGRATION complete: preferred active ID for HOME / SHELTER / SLEEPING PLACE / BUILDING, HOMELAND contextually. Historical place_hotel is retained as compatibility alias; artwork unchanged."
     },
     {
       "id": "place_shop",
@@ -721,7 +721,7 @@
       "embodied_relevance": "LOW",
       "standalone_relevance": "LOW",
       "confidence": "HIGH",
-      "note": "DEPRECATE_COMPOSABLE and VISUAL_REDESIGN_CANDIDATE: prefer place_shop + item_clothing; preserve only as legacy/history."
+      "note": "DEPRECATE_COMPOSABLE: retained legacy/deprecated identifier; active recommendation is place_shop + item_clothing. Do not redesign by default."
     },
     {
       "id": "item_cigarette",
@@ -1137,5 +1137,5 @@
       "note": "Human decision: KEEP_CORE. Broad CLOUD / SKY / AIR / ATMOSPHERIC SPACE / WEATHER context / OVERHEAD SKY CONTEXT."
     }
   ],
-  "canonical_lexicon_version": "0.6.0"
+  "canonical_lexicon_version": "0.8.0"
 }

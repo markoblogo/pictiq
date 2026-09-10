@@ -1,0 +1,48 @@
+{
+  "schema_version": "0.1.0",
+  "status": "ACTIVE_COMPATIBILITY_MAPPING",
+  "canonical_lexicon": "lexicon/icon-index.json",
+  "migrations": [
+    {
+      "legacy_id": "need_bar",
+      "preferred_id": "drink_alcohol",
+      "kind": "SEMANTIC_MIGRATION",
+      "legacy_semantics": "bar / drinks",
+      "preferred_semantics": "alcohol / alcoholic drink",
+      "compatibility_treatment": "legacy alias; source SVG copied to legacy/svg and active artwork reused unchanged",
+      "artwork_changed": false
+    },
+    {
+      "legacy_id": "place_hotel",
+      "preferred_id": "place_home",
+      "kind": "SEMANTIC_MIGRATION",
+      "legacy_semantics": "hotel / lodging / overnight stay",
+      "preferred_semantics": "home / shelter / sleeping place / building; homeland contextually",
+      "compatibility_treatment": "legacy alias; source SVG copied to legacy/svg and active artwork reused unchanged",
+      "artwork_changed": false
+    },
+    {
+      "legacy_id": "place_fashion_shopping",
+      "preferred_composition": [
+        "place_shop",
+        "item_clothing"
+      ],
+      "kind": "DEPRECATE_COMPOSABLE",
+      "legacy_semantics": "fashion shopping",
+      "preferred_semantics": "shop + clothing",
+      "compatibility_treatment": "retained deprecated identifier; removed from active recommendations",
+      "artwork_changed": false
+    },
+    {
+      "legacy_id": "move_boat",
+      "preferred_id": "move_watercraft",
+      "kind": "LEGACY_CONTEXTUAL",
+      "legacy_semantics": "narrower historical/recreational/travel boat subtype",
+      "preferred_semantics": "broad watercraft / boat / ship / generic water transport",
+      "compatibility_treatment": "retained contextual subtype; final deprecation/alias decision deferred",
+      "artwork_changed": false,
+      "final_action_deferred": true,
+      "deferred_to": "Pictiq Architecture & Vocabulary Audit follow-up: exact subtype compatibility policy"
+    }
+  ]
+}

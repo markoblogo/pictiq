@@ -1,5 +1,5 @@
 {
-  "version": "0.7.0",
+  "version": "0.8.0",
   "language": "en",
   "icons": [
     {
@@ -20,7 +20,7 @@
       ],
       "examples": [
         "need_toilet + punct_question",
-        "place_hotel + punct_question"
+        "place_home + punct_question"
       ]
     },
     {
@@ -99,7 +99,7 @@
       ],
       "examples": [
         "need_food + qual_good",
-        "place_hotel + qual_good"
+        "place_home + qual_good"
       ]
     },
     {
@@ -120,7 +120,7 @@
       ],
       "examples": [
         "need_food + qual_bad",
-        "place_hotel + qual_bad"
+        "place_home + qual_bad"
       ]
     },
     {
@@ -200,7 +200,7 @@
       "examples": [
         "person_generic + safety_medical",
         "person_generic + move_feet",
-        "person_generic + place_hotel"
+        "person_generic + place_home"
       ]
     },
     {
@@ -378,7 +378,7 @@
       ],
       "examples": [
         "comm_wifi + punct_question",
-        "place_hotel + comm_wifi"
+        "place_home + comm_wifi"
       ]
     },
     {
@@ -493,28 +493,46 @@
       ]
     },
     {
-      "id": "need_bar",
+      "id": "drink_alcohol",
       "type": "icon",
       "category": "drinks",
       "meaning_en": "alcohol / alcoholic drink",
       "aliases_en": [
         "alcohol",
         "alcoholic drink",
+        "drink alcohol",
         "bar",
         "drinking venue",
         "alcohol service",
-        "drinks"
+        "drinks",
+        "need_bar"
       ],
       "tags_en": [
         "drinks",
         "alcohol",
         "nightlife",
-        "legacy-id"
+        "compatibility-alias"
       ],
       "examples": [
-        "need_bar + punct_question",
-        "need_bar + time + punct_question",
-        "nature_moon + need_bar"
+        "drink_alcohol + punct_question",
+        "drink_alcohol + time + punct_question",
+        "nature_moon + drink_alcohol"
+      ],
+      "name": "Alcoholic drink",
+      "description": "Alcoholic drink, bar drink, or alcohol-serving context; formerly need_bar as a narrow travel/nightlife label.",
+      "keywords": [
+        "alcohol",
+        "bar",
+        "beer",
+        "drink",
+        "nightlife",
+        "wine"
+      ],
+      "aliases": [
+        "alcoholic drink",
+        "bar",
+        "drink alcohol",
+        "need_bar"
       ]
     },
     {
@@ -554,7 +572,7 @@
       ]
     },
     {
-      "id": "place_hotel",
+      "id": "place_home",
       "type": "icon",
       "category": "places",
       "meaning_en": "home / shelter / sleeping place / building",
@@ -566,19 +584,38 @@
         "hotel",
         "accommodation",
         "bedroom",
-        "homeland"
+        "homeland",
+        "place_hotel"
       ],
       "tags_en": [
-        "place",
+        "places",
         "home",
         "shelter",
         "building",
-        "sleep"
+        "compatibility-alias"
       ],
       "examples": [
-        "place_hotel + punct_question",
-        "place_hotel + comm_wifi",
-        "place_hotel + qual_sacred"
+        "place_home + punct_question",
+        "place_home + comm_wifi",
+        "place_home + qual_sacred",
+        "place_home + place_shop",
+        "place_home + nature_animal"
+      ],
+      "description": "Home, dwelling, accommodation, or place to stay; context decides whether it means private home, lodging, or temporary accommodation.",
+      "keywords": [
+        "accommodation",
+        "dwelling",
+        "home",
+        "house",
+        "lodging",
+        "stay"
+      ],
+      "aliases": [
+        "home",
+        "hotel",
+        "house",
+        "lodging",
+        "place_hotel"
       ]
     },
     {
@@ -1031,7 +1068,7 @@
       "id": "place_fashion_shopping",
       "type": "icon",
       "category": "places",
-      "meaning_en": "fashion shopping",
+      "meaning_en": "fashion shopping (deprecated composable legacy concept)",
       "aliases_en": [
         "fashion shopping",
         "clothing district",
@@ -1043,11 +1080,12 @@
         "shopping",
         "fashion",
         "style",
-        "retail"
+        "retail",
+        "deprecated"
       ],
       "examples": [
-        "place_fashion_shopping + punct_question",
-        "place_shop + place_fashion_shopping"
+        "place_shop + item_clothing",
+        "place_fashion_shopping (legacy only)"
       ]
     },
     {
@@ -1106,7 +1144,7 @@
         "bar"
       ],
       "examples": [
-        "drink_beer + need_bar",
+        "drink_beer + drink_alcohol",
         "drink_beer + qty_2"
       ]
     },
@@ -1499,7 +1537,7 @@
         "reference"
       ],
       "examples": [
-        "rel_here + place_hotel",
+        "rel_here + place_home",
         "rel_here + punct_question",
         "rel_here + time"
       ]
@@ -1523,7 +1561,7 @@
       ],
       "examples": [
         "move_feet + rel_up",
-        "place_hotel + rel_up",
+        "place_home + rel_up",
         "rel_up + punct_question"
       ]
     },
@@ -1546,7 +1584,7 @@
       ],
       "examples": [
         "move_feet + rel_down",
-        "place_hotel + rel_down",
+        "place_home + rel_down",
         "rel_down + punct_question"
       ]
     },
@@ -1569,7 +1607,7 @@
       "examples": [
         "time + nature_moon",
         "nature_moon + punct_question",
-        "nature_moon + need_bar"
+        "nature_moon + drink_alcohol"
       ]
     },
     {
@@ -1724,7 +1762,7 @@
       ],
       "examples": [
         "person_generic + qual_sacred",
-        "place_hotel + qual_sacred",
+        "place_home + qual_sacred",
         "nature_animal + qual_sacred"
       ]
     },

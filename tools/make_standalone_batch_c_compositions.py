@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 ROWS = [
     ("body_mouth + need_food", ["body_mouth", "need_food"]),
     ("body_mouth + need_water", ["body_mouth", "need_water"]),
-    ("rel_here + place_hotel", ["rel_here", "place_hotel"]),
+    ("rel_here + place_home", ["rel_here", "place_home"]),
     ("rel_here + time", ["rel_here", "time"]),
     ("move_feet + rel_up", ["move_feet", "rel_up"]),
     ("move_feet + rel_down", ["move_feet", "rel_down"]),

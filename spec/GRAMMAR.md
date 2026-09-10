@@ -38,7 +38,7 @@ Qualifiers, quantities, and negation are postfix by default. They apply to the i
 
 Examples:
 
-- `place_hotel + qual_good` → hotel evaluated as good/satisfactory.
+- `place_home + qual_good` → hotel evaluated as good/satisfactory.
 - `need_food + qual_bad` → food evaluated as bad/unsatisfactory.
 - `need_water + qty_2` → two waters / two units of water.
 - `place_shop + need_food + qual_good` → a food shop/grocery evaluated as good, where the compound is established by context.
@@ -107,8 +107,8 @@ Binary form: `A + REL + B`.
 
 Unary/contextual form: `A + REL`. In a clear navigation context, this may indicate orientation from A or from the current reference frame:
 
-- `place_hotel + rel_greater` → hotel/rightward in navigation context.
-- `place_hotel + rel_up` → hotel/upstairs/above in navigation context.
+- `place_home + rel_greater` → hotel/rightward in navigation context.
+- `place_home + rel_up` → hotel/upstairs/above in navigation context.
 
 Do NOT claim these operators solve all navigation. Where ambiguity is dangerous, context-specific notation may be preferable.
 
@@ -118,7 +118,7 @@ Do NOT claim these operators solve all navigation. Where ambiguity is dangerous,
 
 Examples:
 
-- `rel_here + place_hotel`
+- `rel_here + place_home`
 - `rel_here + time`
 
 `rel_here + time` may contextually mean now / this time / current moment. Do NOT add a separate NOW tile.

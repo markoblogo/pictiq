@@ -4,15 +4,17 @@ This document formalizes the accepted Pictiq vocabulary architecture. The machin
 
 ## Core distinctions
 
-Pictiq separates five registries and selection layers:
+Pictiq separates seven layers:
 
-**Canonical Registry != Core Vocabulary != Standalone Core != Context Packs != Entity Registry.**
+**Canonical Registry != Core Vocabulary != Standalone Core != Context Packs != Specialized Vocabulary != Entity Registry != Legacy/Deprecated compatibility.**
 
-1. **Canonical Registry** — every accepted ordinary reusable tile in `lexicon/icon-index.json`; currently 83 IDs.
+1. **Canonical Registry** — every accepted ordinary reusable tile in `lexicon/icon-index.json`; currently 83 active/retained ordinary identifiers.
 2. **Core Vocabulary** — broad everyday primitives inside the canonical registry.
 3. **Standalone Core** — concepts that must often be explicit when the body, object, or live situation disappears.
-4. **Context Packs** — scenario-specific selections and additions such as Paris, nightlife, travel, retail, health, food, technology, or infrastructure.
-5. **Entity Registry** — scoped visual proper names under `entities/`; these are not ordinary lexical icons and do not increase the Core count.
+4. **Context Packs** — scenario-specific selections such as Paris, nightlife, travel, retail, health, food, technology, or infrastructure.
+5. **Specialized Vocabulary** — domain-specific ordinary symbols when needed; currently 0 active IDs in this role.
+6. **Entity Registry** — scoped visual proper names under `entities/`; these are not ordinary lexical icons and do not increase the Core count.
+7. **Legacy/Deprecated compatibility** — historical IDs, aliases, retained deprecated identifiers, and migration records that preserve older references without creating duplicate active concepts.
 
 Two principles control classification:
 
@@ -32,13 +34,14 @@ Two principles control classification:
 | STANDALONE_CORE | 5 |
 | CONTEXTUAL | 36 |
 | SPECIALIZED | 0 |
-| Total ordinary canonical IDs | 83 |
+| Active ordinary semantic concepts | 82 |
+| Retained ordinary identifiers in canonical registry | 83 |
 
-Entity symbols and numeric notation assets are excluded from these counts.
+Entity symbols and numeric notation assets are excluded from these counts. `place_fashion_shopping` is retained as a deprecated compatibility identifier, so the active semantic concept count and retained ordinary identifier count differ by one.
 
 ## Reconciled disposition summary
 
-Disposition counts can overlap. See the full audit matrix in [`../docs/research/pictiq-architecture-vocabulary-audit-2026-09.md`](../docs/research/pictiq-architecture-vocabulary-audit-2026-09.md).
+Disposition counts can overlap.
 
 | Disposition | Count |
 | --- | ---: |
@@ -48,7 +51,7 @@ Disposition counts can overlap. See the full audit matrix in [`../docs/research/
 | SEMANTIC_MIGRATION | 2 |
 | DEPRECATE_COMPOSABLE | 1 |
 | LEGACY_CONTEXTUAL | 1 |
-| VISUAL_REDESIGN_CANDIDATE | 12 |
+| VISUAL_REDESIGN_CANDIDATE | 0 |
 | HUMAN_REVIEW_REQUIRED | 0 |
 
 ## Classification table
@@ -80,10 +83,10 @@ Disposition counts can overlap. See the full audit matrix in [`../docs/research/
 | `need_toilet` | CONTEXTUAL | EVERYDAY, TRAVEL, INFRASTRUCTURE | MEDIUM | HIGH | HIGH | Human decision: KEEP_CONTEXTUAL. Everyday/Public Facilities/Travel concept; preserve canonical asset. |
 | `need_water` | CORE | EVERYDAY, WATER, SAFETY | HIGH | HIGH | HIGH | Broad water/basic-need concept. |
 | `need_food` | CORE | EVERYDAY, FOOD, SAFETY | HIGH | HIGH | HIGH | Broad food/basic-need concept. |
-| `need_bar` | CONTEXTUAL | NIGHTLIFE, TRAVEL, FOOD | MEDIUM | MEDIUM | HIGH | SEMANTIC_MIGRATION: accepted primary field ALCOHOL / ALCOHOLIC DRINK; secondary BAR / DRINKING VENUE / ALCOHOL SERVICE. Future preferred ID should be alcohol-oriented; retain need_bar as legacy alias/deprecated identifier. |
+| `drink_alcohol` | CONTEXTUAL | NIGHTLIFE, TRAVEL, FOOD | MEDIUM | MEDIUM | HIGH | SEMANTIC_MIGRATION complete: preferred active ID for ALCOHOL / ALCOHOLIC DRINK. Historical need_bar is retained as compatibility alias; artwork unchanged. |
 | `safety_medical` | CORE | SAFETY, HEALTH, EVERYDAY | HIGH | HIGH | HIGH | Broad medical/safety concept. |
 | `safety_police` | CONTEXTUAL | SAFETY, LEGAL, CITY, TRAVEL | MEDIUM | HIGH | HIGH | Public safety/legal service concept; canonical contextual vocabulary rather than minimal Core. |
-| `place_hotel` | CORE | EVERYDAY, TRAVEL, CITY | HIGH | HIGH | HIGH | SEMANTIC_MIGRATION: accepted primary field HOME / SHELTER / SLEEPING PLACE / BUILDING, HOMELAND contextually. Future preferred ID should be home-oriented; retain place_hotel as legacy alias/deprecated identifier. |
+| `place_home` | CORE | EVERYDAY, TRAVEL, CITY | HIGH | HIGH | HIGH | SEMANTIC_MIGRATION complete: preferred active ID for HOME / SHELTER / SLEEPING PLACE / BUILDING, HOMELAND contextually. Historical place_hotel is retained as compatibility alias; artwork unchanged. |
 | `place_shop` | CONTEXTUAL | RETAIL, EVERYDAY, TRAVEL | MEDIUM | MEDIUM | HIGH | Human decision: KEEP_CONTEXTUAL. Commercial/contextual vocabulary, not minimal Core. |
 | `place_landmark_park` | CONTEXTUAL | CITY, TRAVEL, LEISURE | MEDIUM | MEDIUM | HIGH | Tourism/nightlife/city contextual vocabulary; not minimal Core after historical travel-bias cleanup. |
 | `place_gas` | CONTEXTUAL | CITY, TRAVEL, LEISURE | MEDIUM | MEDIUM | HIGH | Tourism/nightlife/city contextual vocabulary; not minimal Core after historical travel-bias cleanup. |
@@ -105,7 +108,7 @@ Disposition counts can overlap. See the full audit matrix in [`../docs/research/
 | `place_theme_park` | CONTEXTUAL | CITY, TRAVEL, LEISURE | MEDIUM | MEDIUM | HIGH | Tourism/nightlife/city contextual vocabulary; not minimal Core after historical travel-bias cleanup. |
 | `place_airport` | CONTEXTUAL | TRANSPORT, TRAVEL, CITY | MEDIUM | MEDIUM | HIGH | Transport/Travel/City contextual concept; not minimal Core. |
 | `place_art_gallery` | CONTEXTUAL | CITY, TRAVEL, LEISURE | MEDIUM | MEDIUM | HIGH | Tourism/nightlife/city contextual vocabulary; not minimal Core after historical travel-bias cleanup. |
-| `place_fashion_shopping` | CONTEXTUAL | RETAIL, CITY, TRAVEL | LOW | LOW | HIGH | DEPRECATE_COMPOSABLE and VISUAL_REDESIGN_CANDIDATE: prefer place_shop + item_clothing; preserve only as legacy/history. |
+| `place_fashion_shopping` | CONTEXTUAL | RETAIL, CITY, TRAVEL | LOW | LOW | HIGH | DEPRECATE_COMPOSABLE: retained legacy/deprecated identifier; active recommendation is place_shop + item_clothing. Do not redesign by default. |
 | `item_cigarette` | CONTEXTUAL | NIGHTLIFE, HEALTH, TRAVEL | MEDIUM | MEDIUM | HIGH | Adult practical communication / Health-Safety / Travel contextual concept; not Core. |
 | `item_cannabis` | CONTEXTUAL | NIGHTLIFE, HEALTH, LEGAL, TRAVEL | LOW | LOW | HIGH | Adult practical communication / Health-Safety / Legal / Travel contextual concept; not Core. |
 | `drink_beer` | CONTEXTUAL | NIGHTLIFE, FOOD, TRAVEL | MEDIUM | MEDIUM | HIGH | Adult practical communication / Food-Drink contextual concept; not Core. |

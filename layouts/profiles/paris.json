@@ -12,10 +12,9 @@
     "place_catacombs",
     "place_theme_park",
     "place_art_gallery",
-    "place_fashion_shopping",
     "paris_croissant",
     "need_food",
-    "need_bar",
+    "drink_alcohol",
     "place_landmark_park"
   ],
   "secondary": [
@@ -37,12 +36,13 @@
     "power_plug",
     "need_toilet",
     "need_water",
-    "place_hotel",
+    "place_home",
     "place_shop",
     "move_feet",
     "move_taxi",
     "move_public",
-    "place_airport"
+    "place_airport",
+    "item_clothing"
   ],
   "wallet_card": {
     "exclude_primary": [
@@ -54,7 +54,12 @@
       "qty_1",
       "qty_2",
       "qty_5",
-      "qty_minus"
+      "qty_minus",
+      "item_clothing"
     ]
+  },
+  "notes": {
+    "fashion_shopping": "Deprecated composable concept: prefer place_shop + item_clothing. Historical place_fashion_shopping is not part of the active Paris layout profile.",
+    "wallet_card_capacity": "The compact wallet-card profile omits item_clothing to preserve the 20-slot secondary limit; the full Paris profile still recommends place_shop + item_clothing for fashion shopping."
   }
 }

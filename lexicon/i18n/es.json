@@ -1,31 +1,71 @@
 {
   "lang": "es",
-  "version": "0.1.0",
+  "version": "0.8.0",
   "strings": {
     "need_water": {
       "meaning": "agua",
-      "aliases": ["beber", "sed", "agua potable"],
-      "tags": ["bebida"]
+      "aliases": [
+        "beber",
+        "sed",
+        "agua potable"
+      ],
+      "tags": [
+        "bebida"
+      ]
     },
     "need_food": {
       "meaning": "comida",
-      "aliases": ["comer", "alimento"],
-      "tags": ["alimentación"]
+      "aliases": [
+        "comer",
+        "alimento"
+      ],
+      "tags": [
+        "alimentación"
+      ]
     },
     "need_toilet": {
       "meaning": "baño",
-      "aliases": ["aseo", "servicio"],
-      "tags": ["urgente"]
+      "aliases": [
+        "aseo",
+        "servicio"
+      ],
+      "tags": [
+        "urgente"
+      ]
     },
     "comm_wifi": {
       "meaning": "Wi-Fi",
-      "aliases": ["internet", "inalámbrico"],
-      "tags": ["conexión"]
+      "aliases": [
+        "internet",
+        "inalámbrico"
+      ],
+      "tags": [
+        "conexión"
+      ]
     },
-    "place_hotel": {
-      "meaning": "hotel",
-      "aliases": ["alojamiento", "hospedaje"],
-      "tags": ["dormir"]
+    "place_home": {
+      "meaning": "casa / hogar",
+      "aliases": [
+        "vivienda",
+        "domicilio",
+        "alojamiento"
+      ],
+      "tags": [
+        "lugar",
+        "vida diaria"
+      ]
+    },
+    "drink_alcohol": {
+      "meaning": "alcohol / bebida alcohólica",
+      "aliases": [
+        "bar",
+        "vino",
+        "cerveza"
+      ],
+      "tags": [
+        "bebida",
+        "noche"
+      ]
     }
   }
 }
