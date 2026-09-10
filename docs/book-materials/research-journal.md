@@ -690,3 +690,29 @@ The closeout gives future books and essays one complete case study: a published 
 ### Open questions
 
 `move_boat` versus `move_watercraft` remains deferred. A future vocabulary audit may review ordinary/core classification, but this closeout did not start it.
+
+## 2026-09-10 — Book, kids, and experimental-methods harvest
+
+### Starting question
+
+Which ideas from three supplied Perplexity planning artifacts should be preserved for future Pictiq books, children's narrative experiments, tooling, and experimental methods without turning them into roadmap commitments or normative protocol?
+
+### What happened
+
+The three supplied markdown inputs were archived byte-for-byte under [`research/inputs/perplexity-2026-09/`](research/inputs/perplexity-2026-09/), with SHA-256 recorded. A critical harvest separated supported material from strong directions, experiment candidates, tooling candidates, book material, verification-required claims, premature product ideas, and rejected claims.
+
+### Evidence
+
+[Critical harvest](research/perplexity-book-kids-and-experiment-harvest-2026-09.md), [book architecture hypotheses](planning/pictiq-book-architecture-hypotheses.md), [kids/narrative research track](research/kids-narrative-research-track.md), [experimental methods backlog](research/experimental-methods-backlog.md), [tooling architecture note](concepts/pictiq-tooling-architecture.md), and [research workflow note](concepts/research-workflow.md).
+
+### Decision / outcome
+
+The strongest preserved working principle is that future Pictiq products, publications, and tools should whenever practical also function as experiments that return evidence to the language itself. Children’s-book ideas are retained as a future experimental track, not as an accepted product line and not as a blocker for Book 1.
+
+### Why it matters
+
+This links books, Composer, renderer/API work, VLM benchmarks, translation challenges, physical layouts, and dev-diary content into one evidence loop: product value and research value should be recorded separately, including failures and negative results.
+
+### Open questions
+
+Pedagogical claims, ISO 9186 details, cross-cultural comprehension studies, early-reader publishing trends, and broad competitive claims about grammar remain verification-required. The upcoming Architecture & Vocabulary Audit was not started.

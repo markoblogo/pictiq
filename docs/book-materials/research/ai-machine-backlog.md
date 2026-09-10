@@ -28,3 +28,8 @@ This backlog records possible research directions. It is not an implementation r
 2. Specify a grammar/phrase validator before constrained generation.
 3. Build a small benchmark dataset before changing retrieval methods.
 4. Treat security, token savings, and AI-to-AI claims as measured hypotheses only.
+
+
+## 2026-09-10 methods connection
+
+The [Experimental Methods Backlog](experimental-methods-backlog.md) adds two future tracks that should connect to this file rather than duplicate it: VLM recognition after the visual consistency audit, and Machine Mind comparisons across natural language, compressed natural language, Toki Pona, and Pictiq IDs. Treat Pictiq as a possible inspectable intermediate representation until evidence shows otherwise.

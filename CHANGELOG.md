@@ -8,6 +8,7 @@ This project uses milestone-style tags. The `-infra` suffix indicates a pre-icon
 
 ### Research archive
 - Harvested three Perplexity inclusive-design and application-domain inputs into book-materials research, with originals archived byte-for-byte, SHA-256 recorded, external-claim verification backlog, application-domain radar, and identity-neutral substrate notes. No normative architecture, lexicon, icon, profile, pack, or entity registry changes are implied.
+- Archived three Perplexity book/kids/experiment planning inputs byte-for-byte and added critical harvest, book-architecture hypotheses, kids/narrative research track, experimental-methods backlog, tooling-architecture note, and research-workflow note. No normative architecture, lexicon, icon, profile, pack, entity, tag, or release changes are implied.
 
 ### Odyssey Stress Test 03 findings
 - Formalized Stage 1 narrative architecture for Odyssey × Toki Pona × sitelen pona × Pictiq: semantic/practical translation, `INTENTIONAL_OMISSION`, structural gender neutrality, semantic frames, and deferred entity-symbol work.
