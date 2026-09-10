@@ -6,7 +6,7 @@ How can Pictiq grow beyond the first accepted icon batches without letting “ca
 
 ## Decision / outcome
 
-Pictiq now separates five layers: canonical registry, Core vocabulary, Standalone Core, context packs/profiles, and entity registry. A tile can be accepted and canonical while still being contextual or specialized. Entity symbols remain scoped visual proper names and do not increase the ordinary Core count.
+Pictiq now separates five layers: canonical registry, Core vocabulary, Standalone Core, context packs/profiles, and entity registry. A tile can be accepted and canonical while still being contextual or specialized. Entity symbols remain scoped visual proper names and do not increase the ordinary Core count. The post-Odyssey audit also accepted `food_meat` as a broad Core food-category gap, without adding narrower meat taxa for symmetry.
 
 Two principles capture the decision:
 

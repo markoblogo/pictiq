@@ -302,19 +302,25 @@
       "id": "money_coins",
       "type": "icon",
       "category": "money",
-      "meaning_en": "cash",
+      "meaning_en": "money / currency / payment value",
       "aliases_en": [
-        "coins",
+        "money",
+        "currency",
+        "payment",
+        "payment value",
         "cash",
-        "pay cash"
+        "coins"
       ],
       "tags_en": [
         "money",
-        "payment"
+        "currency",
+        "payment",
+        "value"
       ],
       "examples": [
         "money_coins",
-        "need_food + money_coins"
+        "need_food + money_coins",
+        "money_coins + punct_question"
       ]
     },
     {
@@ -489,20 +495,26 @@
     {
       "id": "need_bar",
       "type": "icon",
-      "category": "needs",
-      "meaning_en": "bar",
+      "category": "drinks",
+      "meaning_en": "alcohol / alcoholic drink",
       "aliases_en": [
+        "alcohol",
+        "alcoholic drink",
         "bar",
-        "drink",
-        "pub"
+        "drinks",
+        "drinking venue",
+        "alcohol service"
       ],
       "tags_en": [
-        "needs",
-        "places"
+        "drinks",
+        "alcohol",
+        "nightlife",
+        "legacy-id"
       ],
       "examples": [
         "need_bar + punct_question",
-        "need_bar + time + punct_question"
+        "need_bar + time + punct_question",
+        "nature_moon + need_bar"
       ]
     },
     {
@@ -545,19 +557,28 @@
       "id": "place_hotel",
       "type": "icon",
       "category": "places",
-      "meaning_en": "hotel",
+      "meaning_en": "home / shelter / sleeping place / building",
       "aliases_en": [
+        "home",
+        "shelter",
+        "sleeping place",
+        "building",
         "hotel",
-        "hostel",
-        "stay"
+        "accommodation",
+        "lodging",
+        "homeland"
       ],
       "tags_en": [
-        "places",
+        "place",
+        "home",
+        "shelter",
+        "building",
         "sleep"
       ],
       "examples": [
         "place_hotel + punct_question",
-        "place_hotel + comm_wifi"
+        "place_hotel + comm_wifi",
+        "place_hotel + qual_sacred"
       ]
     },
     {
@@ -1134,21 +1155,22 @@
       "id": "nature_flower",
       "type": "icon",
       "category": "nature",
-      "meaning_en": "flower",
+      "meaning_en": "plant / vegetation / flower",
       "aliases_en": [
+        "plant",
+        "vegetation",
         "flower",
-        "rose",
-        "blossom"
+        "flora"
       ],
       "tags_en": [
         "nature",
-        "flower",
         "plant",
-        "poetry"
+        "flower",
+        "vegetation"
       ],
       "examples": [
-        "nature_flower + qty_5",
-        "nature_flower + qty_plus + time"
+        "nature_flower",
+        "love_heart + nature_flower"
       ]
     },
     {
@@ -1193,12 +1215,13 @@
       "id": "comm_speak",
       "type": "icon",
       "category": "communication",
-      "meaning_en": "speak / communication / voice",
+      "meaning_en": "speech / communication / oral or audible communication",
       "aliases_en": [
         "speak",
         "talk",
+        "communication",
         "voice",
-        "communication"
+        "oral communication"
       ],
       "tags_en": [
         "communication",
@@ -1206,65 +1229,81 @@
         "voice"
       ],
       "examples": [
-        "comm_speak + punct_question"
+        "comm_speak + punct_question",
+        "comm_speak + punct_exclaim",
+        "comm_speak + power_energy"
       ]
     },
     {
       "id": "comm_sound",
       "type": "icon",
       "category": "communication",
-      "meaning_en": "sound / audio",
+      "meaning_en": "sound / audible signal / music / audio",
       "aliases_en": [
         "sound",
         "audio",
-        "audible"
+        "audible signal",
+        "music",
+        "heard"
       ],
       "tags_en": [
         "communication",
         "sound",
-        "audio"
+        "audio",
+        "music"
       ],
       "examples": [
-        "comm_sound + logic_no"
+        "comm_sound + punct_question",
+        "comm_sound + qual_bad"
       ]
     },
     {
       "id": "media_text",
       "type": "icon",
       "category": "media",
-      "meaning_en": "text / writing / document",
+      "meaning_en": "text / written information",
       "aliases_en": [
         "text",
         "writing",
+        "written information",
+        "read",
+        "write",
         "document"
       ],
       "tags_en": [
         "media",
         "text",
-        "writing"
+        "writing",
+        "information"
       ],
       "examples": [
-        "media_text + punct_question"
+        "media_text + punct_question",
+        "media_text + comm_speak"
       ]
     },
     {
       "id": "media_image",
       "type": "icon",
       "category": "media",
-      "meaning_en": "image / picture",
+      "meaning_en": "image / picture / photo / drawing / visual representation",
       "aliases_en": [
         "image",
         "picture",
-        "illustration",
-        "photo"
+        "photo",
+        "drawing",
+        "painting",
+        "visual representation"
       ],
       "tags_en": [
         "media",
         "image",
-        "picture"
+        "picture",
+        "photo",
+        "visual"
       ],
       "examples": [
-        "media_image + punct_question"
+        "media_image + punct_question",
+        "media_image + qual_good"
       ]
     },
     {
@@ -1309,46 +1348,80 @@
       "id": "food_produce",
       "type": "icon",
       "category": "food",
-      "meaning_en": "fresh produce",
+      "meaning_en": "fruit / vegetable / fresh produce",
       "aliases_en": [
         "fruit",
-        "vegetables",
+        "vegetable",
+        "fresh produce",
         "produce"
       ],
       "tags_en": [
         "food",
-        "produce",
         "fruit",
-        "vegetables"
+        "vegetable",
+        "produce"
       ],
       "examples": [
-        "need_food + food_produce"
+        "food_produce",
+        "food_produce + punct_question",
+        "place_shop + food_produce"
       ]
     },
     {
       "id": "food_bakery",
       "type": "icon",
       "category": "food",
-      "meaning_en": "bread / bakery / baked goods",
+      "meaning_en": "bread / baked food / baked goods / pastry",
       "aliases_en": [
         "bread",
-        "bakery",
-        "baked goods"
+        "baked food",
+        "baked goods",
+        "pastry",
+        "bakery"
       ],
       "tags_en": [
         "food",
-        "bakery",
-        "bread"
+        "bread",
+        "baked",
+        "pastry"
       ],
       "examples": [
+        "food_bakery",
+        "food_bakery + punct_question",
         "place_shop + food_bakery"
+      ]
+    },
+    {
+      "id": "food_meat",
+      "type": "icon",
+      "category": "food",
+      "meaning_en": "meat / animal food / meat products",
+      "aliases_en": [
+        "meat",
+        "animal food",
+        "meat products",
+        "steak",
+        "drumstick",
+        "shank",
+        "meat cut"
+      ],
+      "tags_en": [
+        "food",
+        "meat",
+        "animal",
+        "protein"
+      ],
+      "examples": [
+        "food_meat",
+        "food_meat + state_hot",
+        "place_shop + food_meat"
       ]
     },
     {
       "id": "rel_greater",
       "type": "operator",
       "category": "relation",
-      "meaning_en": "greater than / larger than",
+      "meaning_en": "greater / more / comparative relation",
       "aliases_en": [
         ">",
         "greater",
@@ -1369,7 +1442,7 @@
       "id": "rel_lesser",
       "type": "operator",
       "category": "relation",
-      "meaning_en": "less than / smaller than",
+      "meaning_en": "lesser / less / comparative relation",
       "aliases_en": [
         "<",
         "less",
@@ -1412,7 +1485,7 @@
       "id": "rel_here",
       "type": "operator",
       "category": "relation",
-      "meaning_en": "here / this place / target location",
+      "meaning_en": "here / target / this location / reference point",
       "aliases_en": [
         "here",
         "this place",
@@ -1435,7 +1508,7 @@
       "id": "rel_up",
       "type": "operator",
       "category": "relation",
-      "meaning_en": "up / above / higher",
+      "meaning_en": "up / above / higher / vertical relation",
       "aliases_en": [
         "up",
         "above",
@@ -1458,7 +1531,7 @@
       "id": "rel_down",
       "type": "operator",
       "category": "relation",
-      "meaning_en": "down / below / lower",
+      "meaning_en": "down / below / lower / vertical relation",
       "aliases_en": [
         "down",
         "below",
@@ -1503,29 +1576,28 @@
       "id": "surface_wavy",
       "type": "icon",
       "category": "surface",
-      "meaning_en": "wavy / uneven / unstable surface",
+      "meaning_en": "wavy / waves / unstable uneven or slippery surface",
       "aliases_en": [
         "wavy",
+        "waves",
         "uneven",
         "unstable",
         "slippery",
-        "waves",
-        "surface irregularity",
-        "rough surface"
+        "irregular surface",
+        "water surface"
       ],
       "tags_en": [
         "surface",
         "wavy",
-        "uneven",
-        "unstable",
-        "slippery",
         "waves",
-        "road",
+        "uneven",
+        "slippery",
         "water"
       ],
       "examples": [
         "surface_wavy + punct_exclaim",
-        "move_boat + surface_wavy"
+        "move_boat + surface_wavy",
+        "nature_cloud + surface_wavy"
       ]
     },
     {
@@ -1583,23 +1655,23 @@
       "id": "action_conflict",
       "type": "icon",
       "category": "action",
-      "meaning_en": "conflict / war / aggression / hostile action",
+      "meaning_en": "conflict / war / aggression / fight / hostile action",
       "aliases_en": [
         "conflict",
         "war",
         "aggression",
+        "fight",
         "attack",
         "hostile action",
-        "fight"
+        "violent action",
+        "tension"
       ],
       "tags_en": [
         "action",
         "conflict",
         "war",
-        "attack",
         "fight",
-        "narrative",
-        "safety"
+        "hostile"
       ],
       "examples": [
         "action_conflict",
@@ -1635,71 +1707,77 @@
       "id": "qual_sacred",
       "type": "operator",
       "category": "qualifier",
-      "meaning_en": "sacred / divine / religious / holy / ritual",
+      "meaning_en": "sacred / holy / divine / religious / ritual",
       "aliases_en": [
         "sacred",
+        "holy",
         "divine",
         "religious",
-        "holy",
-        "ritual"
+        "ritual",
+        "god",
+        "divinity"
       ],
       "tags_en": [
         "qualifier",
         "sacred",
         "religion",
-        "culture",
-        "narrative"
+        "divine",
+        "ritual"
       ],
       "examples": [
         "person_generic + qual_sacred",
-        "qual_sacred + qty_5 + qty_plus"
+        "place_hotel + qual_sacred",
+        "nature_animal + qual_sacred"
       ]
     },
     {
       "id": "nature_animal",
       "type": "icon",
       "category": "nature",
-      "meaning_en": "animal / general animal category",
+      "meaning_en": "animal / general land-animal category",
       "aliases_en": [
         "animal",
-        "animals",
-        "creature",
-        "beast"
+        "land animal",
+        "mammal",
+        "reptile",
+        "creature"
       ],
       "tags_en": [
         "nature",
         "animal",
         "food",
-        "narrative",
-        "agriculture"
+        "narrative"
       ],
       "examples": [
         "nature_animal + need_food",
-        "nature_animal + state_hot"
+        "nature_animal + state_hot",
+        "nature_animal + qual_sacred"
       ]
     },
     {
       "id": "nature_cloud",
       "type": "icon",
       "category": "nature",
-      "meaning_en": "cloud / sky / overhead atmospheric context",
+      "meaning_en": "cloud / sky / air / atmospheric space",
       "aliases_en": [
         "cloud",
         "sky",
+        "air",
+        "atmosphere",
         "weather",
-        "overhead atmosphere"
+        "overhead"
       ],
       "tags_en": [
         "nature",
         "cloud",
         "sky",
-        "weather",
-        "travel",
-        "narrative"
+        "air",
+        "weather"
       ],
       "examples": [
         "nature_cloud",
-        "nature_cloud + surface_wavy"
+        "nature_cloud + surface_wavy",
+        "nature_cloud + state_light"
       ]
     }
   ]

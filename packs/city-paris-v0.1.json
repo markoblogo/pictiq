@@ -16,7 +16,11 @@
     "place_theme_park",
     "place_airport",
     "place_art_gallery",
-    "place_fashion_shopping",
-    "paris_croissant"
-  ]
+    "paris_croissant",
+    "place_shop",
+    "item_clothing"
+  ],
+  "notes": {
+    "fashion_shopping": "Deprecated composable concept: prefer place_shop + item_clothing. Historical place_fashion_shopping remains canonical legacy contextual evidence but is removed from this active Paris recommendation."
+  }
 }

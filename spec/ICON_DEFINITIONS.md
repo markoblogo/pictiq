@@ -124,6 +124,7 @@ qty_plus — primary: ➕
 qty_minus — primary: ➖
 money_coins — primary: 🪙; alt: 💰, 💵
 money_card — primary: 💳
+food_meat — primary: 🥩; alt: 🍗
 money_atm_bank — primary: 🏧; alt: 🏦
 comm_wifi — primary: 📶; alt: 🌐
 comm_phone — primary: 📱; alt: ☎️
@@ -312,9 +313,16 @@ Hands meet at center. No numbers/ticks.
 **Avoid:** culturally narrow dishes in core.  
 **Examples:** `need_food + punct_question`, `need_food + logic_no`.
 
-### need_bar — bar / drinks
-**Visual:** A wine glass half-filled (liquid level is the key identifier).  
-**Avoid:** cocktail umbrellas/straws, complex cocktails.  
+### food_meat — meat / animal food / meat products
+**Visual:** Compact overlapping composition of recognizable meat forms: steak, drumstick/shank, and strip/cut of meat.
+**Meaning:** broad animal-food category; meat products contextually.
+**Avoid:** separate steak, chicken, pork, beef, or drumstick primitives unless future Food/Animal context vocabularies show actual need. Do not add other food categories merely for taxonomic symmetry.
+**Examples:** `food_meat`, `food_meat + state_hot`, `place_shop + food_meat`.
+
+### need_bar — alcohol / alcoholic drink
+**Visual:** A wine glass half-filled (liquid level is the key identifier).
+**Meaning:** alcohol or alcoholic drink by default; bar, drinking venue, or alcohol service contextually.
+**Avoid:** cocktail umbrellas/straws, complex cocktails, or creating a duplicate `drink_alcohol` while this compatibility ID remains active.
 **Examples:** `need_bar + punct_question`, `need_bar + time + punct_question`.
 
 ---
@@ -335,8 +343,9 @@ Hands meet at center. No numbers/ticks.
 
 ## Places & services
 
-### place_hotel — hotel / lodging / overnight stay
-**Canonical visual:** A bed (road-sign style) as the universal lodging marker.  
+### place_hotel — home / shelter / sleeping place / building
+**Canonical visual:** A bed (road-sign style) as the universal lodging/sleeping-place marker.
+**Meaning:** home, shelter, sleeping place, or building broadly; hotel, accommodation, lodging, bedroom, or homeland contextually.
 **Examples:** `place_hotel + punct_question`, `place_hotel + comm_wifi`.
 
 ### place_shop — shop / store

@@ -45,7 +45,7 @@ A free 95-page illustrated field guide covering:
 ## Canonical overview
 
 Point to a tile. Add `punct_question` to ask, `punct_exclaim` for urgency, and `logic_no` to negate.
-The current canonical registry contains **82 ordinary icons**, including lexical tiles, evaluation modifiers, quantities, relational operators, `surface_wavy`, `state_dead`, and the five accepted Odyssey Stress Test 03 Stage 2A primitives. Canonical does not mean Core: the accepted classification separates Core, Standalone Core, Contextual, Specialized, and Mechanism roles.
+The current canonical registry contains **83 ordinary icons**, including lexical tiles, evaluation modifiers, quantities, relational operators, `surface_wavy`, `state_dead`, the five accepted Odyssey Stress Test 03 Stage 2A primitives, and the post-audit `food_meat` primitive. Canonical does not mean Core: the accepted classification separates Core, Standalone Core, Contextual, Specialized, and Mechanism roles.
 
 <p align="center">
   <img src="docs/overview/pictiq-core-grid.png" alt="Pictiq core overview grid" width="900" />

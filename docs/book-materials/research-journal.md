@@ -716,3 +716,25 @@ This links books, Composer, renderer/API work, VLM benchmarks, translation chall
 ### Open questions
 
 Pedagogical claims, ISO 9186 details, cross-cultural comprehension studies, early-reader publishing trends, and broad competitive claims about grammar remain verification-required. The upcoming Architecture & Vocabulary Audit was not started.
+
+## 2026-09-10 — Architecture & Vocabulary Audit pass
+
+### Starting question
+
+How can Pictiq cleanly separate Canonical Registry, Core, Standalone Core, context packs, specialized vocabulary, numeric notation, and Entity Symbols after the accepted stress tests?
+
+### What happened
+
+The audit applied accepted architecture decisions to the ordinary vocabulary registry and profiles. It also accepted `food_meat` as a new broad Core primitive for meat / animal food / meat products, based on a supplied human-approved reference image. The addition fills a genuine broad food-category gap alongside `food_produce` and `food_bakery` without creating narrower meat taxa.
+
+### Evidence
+
+[Architecture & Vocabulary Audit](../research/pictiq-architecture-vocabulary-audit-2026-09.md), [machine-readable audit matrix](../research/pictiq-architecture-vocabulary-audit-2026-09.json), [food_meat QA note](experiments/architecture-vocabulary-audit-food-meat-qa.md), [Vocabulary Classification](../../spec/VOCABULARY_CLASSIFICATION.md), and [`lexicon/vocabulary-classification.json`](../../lexicon/vocabulary-classification.json).
+
+### Decision / outcome
+
+The ordinary canonical registry now contains 83 icons. Entity Symbols remain a separate registry. Numeric notation remains separate from pragmatic `qty_*` communication quantities. `move_boat` versus `move_watercraft` remains explicitly deferred to a compatibility audit. No unresolved Stress Test 03 hypothesis was promoted to normative grammar.
+
+### Why it matters
+
+The audit preserves a minimal architecture while allowing the vocabulary to grow where real use exposes a gap. It records that Core is need-driven and asymmetric, rather than a taxonomy.
