@@ -632,3 +632,33 @@ This keeps narrative names stable without adding GOD, TRIDENT, SICKLE, CAVE, SEA
 ### Possible future book use
 
 Use as a chapter example for scoped visual proper names and for the rule that visual associations are not lexical semantics.
+
+## 2026-09-10 — Inclusive-design and application-domain idea harvest
+
+### Starting question
+
+Which ideas from exploratory Perplexity material are useful for Pictiq without turning unverified prose into specification?
+
+### What happened
+
+Three supplied markdown artifacts were archived byte-for-byte under [`research/inputs/perplexity-2026-09/`](research/inputs/perplexity-2026-09/). A critical harvest separated already-supported architecture, strong concepts, experiment candidates, verification-required claims, speculative material, and claims to reject.
+
+### Evidence
+
+[Critical harvest](research/perplexity-inclusive-design-and-use-cases-harvest-2026-09.md), [identity-neutral substrate](concepts/identity-neutral-substrate.md), [manifesto notes](concepts/inclusive-design-manifesto-notes.md), [verification backlog](research/inclusive-design-verification-backlog.md), and [application-domain radar](research/application-domains-radar.md).
+
+### Decision / outcome
+
+The strongest preserved idea is that Pictiq can behave as an identity-neutral substrate: it does not encode identity categories by default, but preserves distinctions when they are materially required for the intended meaning, decision, or action. This is treated as book-material interpretation of existing architecture, not a new normative rule.
+
+### Why it matters
+
+The archive connects inclusive-design framing to already accepted Pictiq decisions: neutral `person_generic`, structural gender neutrality, Entity Symbols, context-pack complexity, numeric notation, and Odyssey's distinction between source-language detail and action-relevant meaning.
+
+### Open questions
+
+External claims about signage, emoji history, AAC systems, legal requirements, market size, and competitor uniqueness remain unverified until a dedicated verification pass.
+
+### Possible future book use
+
+Use for a chapter or essay on “what a visual language chooses not to encode,” plus future stress tests in situational AAC, humanitarian aid, workplace safety, maritime/logistics, public services, HoReCa/retail, mass events, and machine-readable Pictiq.

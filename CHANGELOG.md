@@ -6,6 +6,9 @@ This project uses milestone-style tags. The `-infra` suffix indicates a pre-icon
 
 ## Unreleased
 
+### Research archive
+- Harvested three Perplexity inclusive-design and application-domain inputs into book-materials research, with originals archived byte-for-byte, SHA-256 recorded, external-claim verification backlog, application-domain radar, and identity-neutral substrate notes. No normative architecture, lexicon, icon, profile, pack, or entity registry changes are implied.
+
 ### Odyssey Stress Test 03 findings
 - Formalized Stage 1 narrative architecture for Odyssey × Toki Pona × sitelen pona × Pictiq: semantic/practical translation, `INTENTIONAL_OMISSION`, structural gender neutrality, semantic frames, and deferred entity-symbol work.
 - Integrated the five human-accepted Stage 2A ordinary primitives from the supplied reference sheet: `action_conflict`, `move_watercraft`, `qual_sacred`, `nature_animal`, and `nature_cloud`.

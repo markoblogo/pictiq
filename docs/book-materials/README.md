@@ -42,6 +42,8 @@ The [Perplexity ideas harvest](research/perplexity-ideas-harvest-2026-09.md) and
 
 The [vocabulary architecture classification](concepts/vocabulary-architecture.md) preserves the post-v1.0.2 distinction between canonical registry, Core, Standalone Core, context packs, specialized vocabulary, mechanisms, and entity symbols. It is book material, not a replacement for the normative spec.
 
+The [inclusive-design and use-case harvest](research/perplexity-inclusive-design-and-use-cases-harvest-2026-09.md), [identity-neutral substrate note](concepts/identity-neutral-substrate.md), [manifesto notes](concepts/inclusive-design-manifesto-notes.md), [verification backlog](research/inclusive-design-verification-backlog.md), and [application-domain radar](research/application-domains-radar.md) preserve a critical reading of three Perplexity ideation artifacts. Treat them as research/book material only: they do not change Pictiq protocol behavior, vocabulary classification, icons, packs, profiles, or entity registry.
+
 ## Current research threads
 
 - Road Wayfinding accepted additions: `surface_wavy`, `state_dead`, and partial numeric notation are recorded in [`experiments/road-wayfinding-stress-test.md`](experiments/road-wayfinding-stress-test.md) and [`../research/road-wayfinding-stress-test-v1.md`](../research/road-wayfinding-stress-test-v1.md).

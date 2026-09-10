@@ -94,6 +94,7 @@ Pictiq currently scales through five distinct layers: the 82-icon canonical regi
 - Related systems: `docs/research/related-systems.md`
 - Emoji bridge: `docs/research/emoji-bridge.md`
 - Tiny Languages Protocol note: `docs/research/tiny-languages-protocol.md`
+- Inclusive-design and application-domain harvest: `docs/book-materials/research/perplexity-inclusive-design-and-use-cases-harvest-2026-09.md`
 
 ## Repository structure
 - `/books` — published handbook editions and release artwork
