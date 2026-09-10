@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><clipPath id="icon-clip"><rect x="2" y="2" width="28" height="28" rx="3.8" ry="3.8" /></clipPath></defs><g id="frame"><rect x="1" y="1" width="30" height="30" rx="4.8" ry="4.8" stroke="currentColor" stroke-width="2" fill="none" /></g><g id="icon" clip-path="url(#icon-clip)"><g id="shape_nature_cloud" transform="translate(3.750000 8.166144) scale(0.076803)"><g transform="translate(0.000000,204.000000) scale(0.100000,-0.100000)"
+fill="currentColor" stroke="none">
+<path d="M1555 1953 c-50 -11 -155 -48 -200 -71 -109 -55 -237 -174 -295 -275
+-29 -50 -73 -165 -84 -218 l-6 -27 -62 20 c-97 30 -221 22 -311 -19 -157 -74
+-264 -242 -267 -423 -1 -32 -7 -39 -61 -74 -219 -141 -250 -460 -64 -652 63
+-64 149 -108 243 -124 47 -8 381 -10 1127 -8 l1060 3 65 22 c97 33 178 85 247
+160 223 238 218 609 -11 838 -80 80 -178 136 -273 156 -35 7 -100 10 -165 6
+l-108 -5 0 43 c0 63 -34 184 -73 261 -93 182 -269 325 -463 374 -73 19 -241
+26 -299 13z"/>
+</g></g></g></svg>

@@ -1,0 +1,79 @@
+{
+  "id": "stress-test-03-odyssey-stage-2a-primitives",
+  "title": "Pictiq Stress Test 03 Stage 2A: accepted ordinary primitives",
+  "date": "2026-09-10",
+  "status": "IMPLEMENTED LOCALLY / HUMAN VISUAL ACCEPTANCE PENDING",
+  "source_reference": {
+    "path": "docs/book-materials/experiments/assets/stress-test-03-stage-2a-reference.png",
+    "sha256": "8e6c3732336c77330c2ea5b1579e2c7174976b2b7233305e95f1b8eb5bf91883",
+    "human_acceptance_status": "accepted visual reference sheet"
+  },
+  "starting_ordinary_canonical_count": 77,
+  "resulting_ordinary_canonical_count": 82,
+  "icons": [
+    {
+      "id": "action_conflict",
+      "classification": "CONTEXTUAL",
+      "semantic_field": [
+        "conflict",
+        "war",
+        "aggression",
+        "attack",
+        "hostile action",
+        "fight"
+      ],
+      "svg": "icons/svg/action_conflict.svg"
+    },
+    {
+      "id": "move_watercraft",
+      "classification": "CONTEXTUAL",
+      "semantic_field": [
+        "boat",
+        "ship",
+        "watercraft",
+        "generic water transport"
+      ],
+      "svg": "icons/svg/move_watercraft.svg"
+    },
+    {
+      "id": "qual_sacred",
+      "classification": "CONTEXTUAL",
+      "modifier": true,
+      "semantic_field": [
+        "sacred",
+        "divine",
+        "religious",
+        "holy",
+        "ritual"
+      ],
+      "svg": "icons/svg/qual_sacred.svg"
+    },
+    {
+      "id": "nature_animal",
+      "classification": "CORE",
+      "semantic_field": [
+        "animal",
+        "general animal category"
+      ],
+      "svg": "icons/svg/nature_animal.svg"
+    },
+    {
+      "id": "nature_cloud",
+      "classification": "CONTEXTUAL",
+      "semantic_field": [
+        "cloud",
+        "sky",
+        "overhead atmospheric context"
+      ],
+      "svg": "icons/svg/nature_cloud.svg"
+    }
+  ],
+  "qa_sheet": "build/qa/stress-test-03-stage-2a-primitive-qa.png",
+  "constraints_confirmed": {
+    "entity_symbols_added": false,
+    "existing_icons_redesigned": false,
+    "stage_1_hypotheses_promoted": false,
+    "tag_or_release_created": false,
+    "pushed": false
+  }
+}

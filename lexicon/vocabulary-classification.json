@@ -2,7 +2,7 @@
   "schema_version": "0.1.0",
   "status": "ACCEPTED VOCABULARY ARCHITECTURE CLASSIFICATION SOURCE OF TRUTH",
   "canonical_lexicon": "lexicon/icon-index.json",
-  "ordinary_canonical_icon_count": 77,
+  "ordinary_canonical_icon_count": 82,
   "entity_registry": "entities/entity-index.json",
   "entity_registry_policy": "Entity symbols are excluded from ordinary vocabulary classification.",
   "principles": [
@@ -985,6 +985,75 @@
       "standalone_relevance": "LOW",
       "confidence": "HIGH",
       "note": "Specialized machine-interface concept."
+    },
+    {
+      "id": "action_conflict",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "NARRATIVE",
+        "SAFETY",
+        "CULTURE"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "HIGH",
+      "confidence": "MEDIUM",
+      "note": "Accepted from Odyssey Stress Test 03 Stage 2A as active conflict/war/aggression/hostile action; kept distinct from qual_bad evaluation."
+    },
+    {
+      "id": "move_watercraft",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "TRANSPORT",
+        "TRAVEL",
+        "WATER",
+        "NARRATIVE"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "HIGH",
+      "confidence": "MEDIUM",
+      "note": "Generic watercraft class primitive. Existing move_boat remains unchanged; future cleanup may consolidate naming after compatibility review."
+    },
+    {
+      "id": "qual_sacred",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "CULTURE",
+        "NARRATIVE",
+        "TRAVEL",
+        "SOCIAL"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "HIGH",
+      "confidence": "MEDIUM",
+      "note": "Contextual qualifier for sacred/divine/religious/holy/ritual readings; does not create separate GOD/PRIEST/TEMPLE primitives."
+    },
+    {
+      "id": "nature_animal",
+      "primary_role": "CORE",
+      "secondary_contexts": [
+        "EVERYDAY",
+        "NATURE",
+        "FOOD",
+        "NARRATIVE"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "MEDIUM",
+      "note": "Generic animal category accepted as broad ordinary primitive; species and taxonomy remain contextual/specialized."
+    },
+    {
+      "id": "nature_cloud",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "NATURE",
+        "TRAVEL",
+        "NARRATIVE",
+        "WATER"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "HIGH",
+      "confidence": "MEDIUM",
+      "note": "Broad cloud/sky/overhead atmospheric context primitive; dark/storm readings should prefer parametric COLOR where needed."
     }
   ],
   "canonical_lexicon_version": "0.6.0"

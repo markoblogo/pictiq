@@ -579,3 +579,30 @@ Narrative use exposes a different pressure than road signs. Pictiq needs a defen
 ### Possible future book use
 
 Use as a case study in translating narrative into protocol structure rather than into a visual word-for-word gloss.
+
+
+## 2026-09-10 — Odyssey Stage 2A accepted ordinary primitives
+
+### Starting question
+
+Which ordinary primitives from the Odyssey stress test have enough human-accepted visual and architectural evidence to enter the canonical registry without turning the Odyssey into a source-language vocabulary template?
+
+### What happened
+
+Five accepted silhouettes were integrated as ordinary canonical Pictiq primitives: `action_conflict`, `move_watercraft`, `qual_sacred`, `nature_animal`, and `nature_cloud`. The implementation archived the supplied visual reference, generated QA evidence, updated lexicon metadata to 82 ordinary IDs, and kept Entity Symbols separate.
+
+### Evidence
+
+[Stage 2A research note](../research/odyssey-toki-pona-pictiq-stress-test-03-stage-2a.md), [Stage 2A JSON summary](../research/odyssey-toki-pona-pictiq-stress-test-03-stage-2a.json), [source reference](experiments/assets/stress-test-03-stage-2a-reference.png), and [QA sheet](../../build/qa/stress-test-03-stage-2a-primitive-qa.png).
+
+### Decision / outcome
+
+Only `nature_animal` entered Core, with medium confidence. `action_conflict`, `move_watercraft`, `qual_sacred`, and `nature_cloud` remain Contextual. The existing `move_boat` asset was not redesigned; `move_watercraft` records the accepted generic watercraft morphology pending any future compatibility cleanup.
+
+### Why it matters
+
+The pass shows the vocabulary architecture working under narrative pressure: general primitives can be accepted when they solve reusable semantic problems, while source-language-specific words, species detail, divine entity names, and poetic physical detail remain outside Core unless future contexts justify them.
+
+### Possible future book use
+
+Use as the first concrete example of moving from narrative stress-test findings to accepted canonical symbols while preserving the difference between vocabulary, context packs, and entity symbols.

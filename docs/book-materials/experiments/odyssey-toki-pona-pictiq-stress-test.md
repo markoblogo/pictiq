@@ -44,3 +44,19 @@ Stress Test 02 showed that a road context can reuse broad primitives and shared 
 ## Future work
 
 Stage 2 can design scoped Odyssey entity symbols and test deferred ordinary primitive candidates. A later visual comparison must use actual canonical Pictiq assets and must not invent fake sitelen pona glyphs or fake Pictiq icons.
+
+## Stage 2A — accepted ordinary primitives
+
+Stage 2A integrated five human-accepted ordinary primitives from the supplied visual reference sheet. The source image is archived at [`assets/stress-test-03-stage-2a-reference.png`](assets/stress-test-03-stage-2a-reference.png) with SHA-256 `8e6c3732336c77330c2ea5b1579e2c7174976b2b7233305e95f1b8eb5bf91883`.
+
+| ID | Classification | Why this general primitive was chosen | Rejected alternatives |
+| --- | --- | --- | --- |
+| `action_conflict` | CONTEXTUAL | Odyssey pressure separated active hostile action from `qual_bad` negative attitude. | Separate WAR / ATTACK / FIGHT primitives. |
+| `move_watercraft` | CONTEXTUAL | Ship/sea narrative required a generic water-transport form, not a literary ship subtype. | Sailboat, yacht, tanker, ferry, cruise ship, military vessel, or immediate cleanup of existing `move_boat`. |
+| `qual_sacred` | CONTEXTUAL modifier | Divine/religious pressure can be handled by a broad modifier. | Separate GOD / PRIEST / TEMPLE primitives. |
+| `nature_animal` | CORE | Food/survival/cooking pressure exposed a broad animal category with everyday reuse. | Species, subspecies, mammal-only interpretation, or named-animal Entity Symbols. |
+| `nature_cloud` | CONTEXTUAL | Dark sky/sea pressure supports cloud/sky plus parametric color. | Separate SKY / DARK / BLACK / GREY primitives. |
+
+The methodological point remains that Odyssey discovers pressure on the vocabulary; it is not copied as a source-language vocabulary template. Stage 2A did not add Calypso, Poseidon, Zeus, Saturn, or Polyphemus entity symbols.
+
+QA evidence: [`../../../build/qa/stress-test-03-stage-2a-primitive-qa.png`](../../../build/qa/stress-test-03-stage-2a-primitive-qa.png).

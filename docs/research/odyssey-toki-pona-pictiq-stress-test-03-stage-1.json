@@ -89,5 +89,19 @@
     "island",
     "land",
     "cave"
+  ],
+  "followups": [
+    {
+      "stage": "2A",
+      "date": "2026-09-10",
+      "implemented_ordinary_primitives": [
+        "action_conflict",
+        "move_watercraft",
+        "qual_sacred",
+        "nature_animal",
+        "nature_cloud"
+      ],
+      "reference": "docs/research/odyssey-toki-pona-pictiq-stress-test-03-stage-2a.md"
+    }
   ]
 }

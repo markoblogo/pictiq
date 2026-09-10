@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "language": "en",
   "title": "Universal Core",
-  "description": "Universal core pack (no optional disco icon).",
+  "description": "Universal core pack, updated with the accepted generic animal primitive from Stress Test 03 Stage 2A.",
   "icons": [
     "punct_question",
     "punct_exclaim",
@@ -24,6 +24,7 @@
     "need_toilet",
     "need_water",
     "need_food",
+    "nature_animal",
     "need_bar",
     "safety_medical",
     "safety_police",

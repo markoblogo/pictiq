@@ -6,13 +6,18 @@ This project uses milestone-style tags. The `-infra` suffix indicates a pre-icon
 
 ## Unreleased
 
+### Odyssey Stress Test 03 findings
+- Formalized Stage 1 narrative architecture for Odyssey × Toki Pona × sitelen pona × Pictiq: semantic/practical translation, `INTENTIONAL_OMISSION`, structural gender neutrality, semantic frames, and deferred entity-symbol work.
+- Integrated the five human-accepted Stage 2A ordinary primitives from the supplied reference sheet: `action_conflict`, `move_watercraft`, `qual_sacred`, `nature_animal`, and `nature_cloud`.
+- Bumped ordinary canonical lexicon metadata to `0.7.0`; the ordinary lexicon now has 82 icons. Entity symbols remain counted separately.
+
 ### Road & Public Wayfinding findings
 - Accepted `surface_wavy` and `state_dead` as contextual ordinary canonical primitives emerging from Stress Test 02; ordinary canonical lexicon metadata is now `0.6.0` with 77 icons.
 - Added partial shared numeric notation under `notation/numeric/`, demonstrating `50` through digit assets rather than a lexical `num_50`.
 - Added numeric notation validation and QA evidence for WAVY, DEAD, and numeric `50`.
 
 ### Vocabulary and phrase architecture
-- Added `lexicon/vocabulary-classification.json` as the machine-readable source of truth for architectural role classification across all 75 ordinary canonical IDs, explicitly excluding the 6 entity-symbol examples.
+- Added `lexicon/vocabulary-classification.json` as the machine-readable source of truth for architectural role classification across all accepted ordinary canonical IDs, explicitly excluding the 6 entity-symbol examples.
 - Added `spec/VOCABULARY_CLASSIFICATION.md` and validation for the accepted distinction between Canonical Registry, Core Vocabulary, Standalone Core, Context Packs, Specialized vocabulary, Mechanisms, and Entity Registry.
 - Formalized phrase architecture in `spec/GRAMMAR.md`: bare tile / zero-intent, bare adjacency as contextual association, postfix scope for qualifiers/quantities/negation, additive numeric quantity expressions, relational-orientation operators, `rel_here` as reference, and one proposition per phrase line.
 

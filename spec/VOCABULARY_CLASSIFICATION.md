@@ -9,7 +9,7 @@ Pictiq separates five registries and selection layers:
 **Canonical Registry != Core Vocabulary != Standalone Core != Context Packs != Entity Registry.**
 
 
-1. **Canonical Registry** — every accepted ordinary reusable tile in `lexicon/icon-index.json`; currently 77 IDs.
+1. **Canonical Registry** — every accepted ordinary reusable tile in `lexicon/icon-index.json`; currently 82 IDs.
 2. **Core Vocabulary** — broad everyday primitives inside the canonical registry.
 3. **Standalone Core** — concepts that must often be explicit when the body, object, or live situation disappears.
 4. **Context Packs** — scenario-specific selections and additions such as Paris, nightlife, travel, retail, health, or infrastructure.
@@ -36,11 +36,11 @@ A tile can be contextual and still useful in both embodied and standalone commun
 | Role | Count |
 | --- | ---: |
 | MECHANISM | 16 |
-| CORE | 15 |
+| CORE | 16 |
 | STANDALONE_CORE | 11 |
-| CONTEXTUAL | 34 |
+| CONTEXTUAL | 38 |
 | SPECIALIZED | 1 |
-| Total ordinary canonical IDs | 77 |
+| Total ordinary canonical IDs | 82 |
 
 Entity symbols and numeric notation assets are excluded from these counts.
 
@@ -125,7 +125,12 @@ Entity symbols and numeric notation assets are excluded from these counts.
 | `surface_wavy` | CONTEXTUAL | ROAD, SURFACE, SAFETY, WATER | MEDIUM | HIGH | HIGH | Accepted from Road & Public Wayfinding Stress Test 02 as a broad surface/wavy/unstable/waves concept, not narrowly slippery road. |
 | `state_dead` | CONTEXTUAL | SAFETY, HEALTH, NARRATIVE, ROAD, INDUSTRIAL | MEDIUM | HIGH | MEDIUM | Accepted from Stress Test 02 as death/not-alive/deadly-contextual; cross-domain potential exists but current evidence does not justify Core. |
 | `tech_ai` | SPECIALIZED | TECH, SPECIALIZED, MACHINE_INTERFACE | LOW | LOW | HIGH | Specialized machine-interface concept. |
+| `action_conflict` | CONTEXTUAL | NARRATIVE, SAFETY, CULTURE | MEDIUM | HIGH | MEDIUM | Accepted from Odyssey Stress Test 03 Stage 2A as active conflict/war/aggression/hostile action; kept distinct from qual_bad evaluation. |
+| `move_watercraft` | CONTEXTUAL | TRANSPORT, TRAVEL, WATER, NARRATIVE | MEDIUM | HIGH | MEDIUM | Generic watercraft class primitive. Existing move_boat remains unchanged; future cleanup may consolidate naming after compatibility review. |
+| `qual_sacred` | CONTEXTUAL | CULTURE, NARRATIVE, TRAVEL, SOCIAL | MEDIUM | HIGH | MEDIUM | Contextual qualifier for sacred/divine/religious/holy/ritual readings; does not create separate GOD/PRIEST/TEMPLE primitives. |
+| `nature_animal` | CORE | EVERYDAY, NATURE, FOOD, NARRATIVE | HIGH | HIGH | MEDIUM | Generic animal category accepted as broad ordinary primitive; species and taxonomy remain contextual/specialized. |
+| `nature_cloud` | CONTEXTUAL | NATURE, TRAVEL, NARRATIVE, WATER | MEDIUM | HIGH | MEDIUM | Broad cloud/sky/overhead atmospheric context primitive; dark/storm readings should prefer parametric COLOR where needed. |
 
 ## Review queue
 
-The current accepted classification includes `surface_wavy` and `state_dead` as contextual Stress Test 02 additions. It keeps `service_tools` in Core with medium confidence, and keeps `item_condom`, `food_produce`, and `food_bakery` contextual with medium confidence. Future changes should be evidence-led and should update the JSON source of truth, this document, and validation in the same change.
+The current accepted classification includes `surface_wavy` and `state_dead` as contextual Stress Test 02 additions, plus the Stress Test 03 Stage 2A additions `action_conflict`, `move_watercraft`, `qual_sacred`, `nature_animal`, and `nature_cloud`. It keeps `nature_animal` in Core with medium confidence, keeps `service_tools` in Core with medium confidence, and keeps `item_condom`, `food_produce`, and `food_bakery` contextual with medium confidence. Future changes should be evidence-led and should update the JSON source of truth, this document, and validation in the same change.

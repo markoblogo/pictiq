@@ -390,3 +390,38 @@ Hands meet at center. No numbers/ticks.
 **Visual:** A disco ball (simple sphere with a few large tiles).  
 **Avoid:** dense grids and tiny reflections.  
 **Examples:** `place_disco + punct_question`, `place_disco + time + punct_question`.
+---
+
+## Odyssey Stress Test 03 Stage 2A additions
+
+These five ordinary primitives were derived from the human-accepted Stage 2A reference sheet. Preserve the accepted silhouettes; do not replace them with unrelated icon-library forms.
+
+### action_conflict — conflict / war / aggression / hostile action
+**Visual:** Two filled black crossed swords.
+**Meaning:** active conflict, war, aggression, attack, hostile action, or fight in context.
+**Avoid:** outline swords; separate WAR, ATTACK, or FIGHT primitives from this evidence alone; confusing hostile action with `qual_bad` negative evaluation.
+**Examples:** `action_conflict`, `person_generic + action_conflict + person_generic`, `qual_bad + power_energy + action_conflict`.
+
+### move_watercraft — boat / ship / generic watercraft
+**Visual:** Filled generic boat/ship silhouette with a broad hull, minimal upper structure, and waves below.
+**Meaning:** generic water transport or vessel class.
+**Avoid:** making the silhouette a sailboat, yacht, tanker, ferry, cruise ship, or military vessel. Existing `move_boat` remains unchanged until a separate compatibility cleanup.
+**Examples:** `move_watercraft + punct_question`, `person_generic + qty_5 + qty_plus + move_watercraft + surface_wavy`.
+
+### qual_sacred — sacred / divine / religious / holy / ritual
+**Visual:** Heavy horizontal halo/ring with short radiating marks, clearly distinct from `nature_sun` and `state_light`.
+**Meaning:** contextual sacred, divine, religious, holy, or ritual modifier.
+**Avoid:** adding separate GOD, PRIEST, or TEMPLE primitives from this evidence alone.
+**Examples:** `person_generic + qual_sacred`, `qual_sacred + qty_5 + qty_plus`.
+
+### nature_animal — animal / general animal category
+**Visual:** Multiple overlapping filled animal silhouettes of different scales, facing left.
+**Meaning:** generic animal category. Species and taxonomic detail belong to contextual or specialized vocabularies; named individual animals may additionally use Entity Symbols.
+**Avoid:** defining the tile as one dominant species or as mammal-only if the context can avoid that restriction.
+**Examples:** `nature_animal + need_food`, `nature_animal + state_hot`.
+
+### nature_cloud — cloud / sky / overhead atmospheric context
+**Visual:** Simple filled cloud silhouette.
+**Meaning:** cloud, sky, or overhead atmospheric context.
+**Avoid:** rain, sun, lightning, snow, and separate SKY/DARK primitives from this evidence alone. Use parametric COLOR when color/value carries the needed information.
+**Examples:** `nature_cloud`, `nature_cloud + COLOR(dark)`.
