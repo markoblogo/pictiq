@@ -1,157 +1,154 @@
 #!/usr/bin/env python3
-"""Build an icon overview contact sheet from icons/svg as A4 PDF (+ optional PNG)."""
+"""Build the canonical icon overview contact sheet as PNG and PDF."""
 
 from __future__ import annotations
 
+import hashlib
 import math
+import shutil
+import subprocess
 import sys
 import tempfile
 from pathlib import Path
 
-from reportlab.lib.pagesizes import A4
-from reportlab.lib.utils import ImageReader
-from reportlab.lib.units import mm
-from reportlab.pdfgen import canvas
-
-from render_png import (
-    _detect_backend,
-    _inject_current_color,
-    _render_with_cairosvg,
-    _render_with_inkscape,
-)
+from render_png import _detect_backend, _inject_current_color, _render_with_cairosvg, _render_with_inkscape
 
 
 PREVIEW_SIZE = 256
-MARGIN_MM = 12
-COLUMNS = 6
-LABEL_FONT = "Helvetica"
-LABEL_SIZE = 7
+COLUMNS = 7
+
+
+def _render_with_quicklook(svg_text: str, png_path: Path, size: int) -> None:
+    qlmanage = shutil.which("qlmanage")
+    if not qlmanage:
+        raise RuntimeError("qlmanage not found")
+    png_path.parent.mkdir(parents=True, exist_ok=True)
+    digest = hashlib.sha1(svg_text.encode("utf-8")).hexdigest()[:10]
+    with tempfile.TemporaryDirectory(prefix="pictiq_ql_") as td:
+        tmp_dir = Path(td)
+        tmp_svg = tmp_dir / f"icon_{digest}.svg"
+        tmp_svg.write_text(svg_text, encoding="utf-8")
+        subprocess.run(
+            [qlmanage, "-t", "-s", str(size), "-o", str(tmp_dir), str(tmp_svg)],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            check=True,
+        )
+        rendered = tmp_dir / f"{tmp_svg.name}.png"
+        if not rendered.exists():
+            candidates = list(tmp_dir.glob("*.png"))
+            if not candidates:
+                raise RuntimeError(f"QuickLook did not render {tmp_svg}")
+            rendered = candidates[0]
+        png_path.write_bytes(rendered.read_bytes())
 
 
 def _render_preview(svg_path: Path, png_path: Path, backend: str) -> None:
-    svg_text = svg_path.read_text(encoding="utf-8")
-    colored_svg = _inject_current_color(svg_text, "#000000")
-    if backend == "cairosvg":
-        _render_with_cairosvg(colored_svg, png_path, PREVIEW_SIZE, PREVIEW_SIZE)
+    svg_text = _inject_current_color(svg_path.read_text(encoding="utf-8"), "#000000")
+    if backend == "quicklook":
+        _render_with_quicklook(svg_text, png_path, PREVIEW_SIZE)
+    elif backend == "cairosvg":
+        _render_with_cairosvg(svg_text, png_path, PREVIEW_SIZE, PREVIEW_SIZE)
     else:
-        _render_with_inkscape(colored_svg, png_path, PREVIEW_SIZE, PREVIEW_SIZE)
+        _render_with_inkscape(svg_text, png_path, PREVIEW_SIZE, PREVIEW_SIZE)
 
 
-def _build_pdf(previews: list[tuple[str, Path]], out_pdf: Path) -> None:
-    page_w, page_h = A4
-    margin = MARGIN_MM * mm
-    grid_w = page_w - 2 * margin
-    grid_h = page_h - 2 * margin
-    cell_w = grid_w / COLUMNS
-    cell_h = cell_w + 16
-    rows_per_page = max(1, int(grid_h // cell_h))
-    per_page = COLUMNS * rows_per_page
-
-    out_pdf.parent.mkdir(parents=True, exist_ok=True)
-    c = canvas.Canvas(str(out_pdf), pagesize=A4, pageCompression=1, invariant=1)
-    c.setAuthor("Pictiq")
-    c.setTitle("Pictiq Core Grid")
-
-    for idx, (icon_id, png_path) in enumerate(previews):
-        slot = idx % per_page
-        if idx > 0 and slot == 0:
-            c.showPage()
-
-        row = slot // COLUMNS
-        col = slot % COLUMNS
-
-        x = margin + col * cell_w
-        y_top = page_h - margin - row * cell_h
-
-        img_size = min(cell_w - 8, cell_h - 18)
-        img_x = x + (cell_w - img_size) / 2
-        img_y = y_top - img_size - 2
-        c.drawImage(
-            ImageReader(str(png_path)),
-            img_x,
-            img_y,
-            width=img_size,
-            height=img_size,
-            preserveAspectRatio=True,
-            mask="auto",
-        )
-
-        c.setFont(LABEL_FONT, LABEL_SIZE)
-        c.drawCentredString(x + cell_w / 2, img_y - 8, icon_id)
-
-    c.save()
+def _choose_backend() -> str:
+    # QuickLook handles the full set of currentColor fill/stroke SVGs correctly on macOS.
+    if shutil.which("qlmanage"):
+        return "quicklook"
+    return _detect_backend("auto")
 
 
-def _build_optional_png(previews: list[tuple[str, Path]], out_png: Path) -> bool:
-    try:
-        from PIL import Image, ImageDraw, ImageFont
-    except Exception:
-        return False
+def _load_fonts():
+    from PIL import ImageFont
 
+    def load(path: str, size: int):
+        try:
+            return ImageFont.truetype(path, size)
+        except Exception:
+            return ImageFont.load_default()
+
+    return (
+        load("/System/Library/Fonts/Supplemental/Arial Bold.ttf", 30),
+        load("/System/Library/Fonts/Supplemental/Arial.ttf", 18),
+    )
+
+
+def _build_png(previews: list[tuple[str, Path]], out_png: Path) -> None:
+    from PIL import Image, ImageDraw
+
+    title_font, label_font = _load_fonts()
     cols = COLUMNS
+    tile = 192
+    label_h = 28
+    margin = 32
+    spacing = 18
+    header_h = 76
     rows = max(1, math.ceil(len(previews) / cols))
-    tile = 256
-    label_h = 22
-    margin = 24
-    spacing = 16
 
     width = margin * 2 + cols * tile + (cols - 1) * spacing
-    height = margin * 2 + rows * (tile + label_h) + (rows - 1) * spacing
+    height = margin * 2 + header_h + rows * (tile + label_h) + (rows - 1) * spacing
     page = Image.new("RGB", (width, height), "white")
     draw = ImageDraw.Draw(page)
-    font = ImageFont.load_default()
+    draw.text((margin, 24), "Pictiq canonical ordinary icon grid", fill="black", font=title_font)
+    draw.text(
+        (margin, 58),
+        f"{len(previews)} ordinary canonical icons; entity symbols and numeric notation are separate registries.",
+        fill=(80, 88, 96),
+        font=label_font,
+    )
 
     for idx, (icon_id, preview_path) in enumerate(previews):
         col = idx % cols
         row = idx // cols
         x = margin + col * (tile + spacing)
-        y = margin + row * (tile + label_h + spacing)
+        y = margin + header_h + row * (tile + label_h + spacing)
 
         icon_img = Image.open(preview_path).convert("RGBA")
-        page.paste(icon_img, (x, y), icon_img)
+        icon_img.thumbnail((tile, tile), Image.Resampling.LANCZOS)
+        page.paste(icon_img, (x + (tile - icon_img.width) // 2, y + (tile - icon_img.height) // 2), icon_img)
 
-        bbox = draw.textbbox((0, 0), icon_id, font=font)
-        text_w = bbox[2] - bbox[0]
-        tx = x + (tile - text_w) // 2
-        ty = y + tile + 4
-        draw.text((tx, ty), icon_id, fill="black", font=font)
+        bbox = draw.textbbox((0, 0), icon_id, font=label_font)
+        draw.text((x + (tile - (bbox[2] - bbox[0])) // 2, y + tile + 6), icon_id, fill="black", font=label_font)
 
     out_png.parent.mkdir(parents=True, exist_ok=True)
     page.save(out_png)
-    return True
+
+
+def _build_pdf_from_png(out_png: Path, out_pdf: Path) -> None:
+    from PIL import Image
+
+    img = Image.open(out_png).convert("RGB")
+    img.save(out_pdf, "PDF", resolution=144.0)
 
 
 def main() -> int:
     repo = Path(__file__).resolve().parents[1]
     icons_dir = repo / "icons" / "svg"
+    lexicon = repo / "lexicon" / "icon-index.json"
     out_pdf = repo / "docs" / "overview" / "pictiq-core-grid.pdf"
     out_png = repo / "docs" / "overview" / "pictiq-core-grid.png"
 
-    svgs = sorted(p for p in icons_dir.glob("*.svg") if p.name != ".gitkeep")
-    if not svgs:
-        print(f"No SVG icons found in {icons_dir}")
-        return 1
+    import json
 
-    backend = _detect_backend("auto")
+    ids = [item["id"] for item in json.loads(lexicon.read_text(encoding="utf-8"))["icons"]]
+    backend = _choose_backend()
     print(f"Rendering previews with: {backend}")
 
     with tempfile.TemporaryDirectory(prefix="pictiq_contact_sheet_") as td:
         tmp = Path(td)
         previews: list[tuple[str, Path]] = []
-        for svg in svgs:
-            icon_id = svg.stem
+        for icon_id in ids:
+            svg = icons_dir / f"{icon_id}.svg"
             preview = tmp / f"{icon_id}.png"
             _render_preview(svg, preview, backend)
             previews.append((icon_id, preview))
+        _build_png(previews, out_png)
+        _build_pdf_from_png(out_png, out_pdf)
 
-        _build_pdf(previews, out_pdf)
-        png_written = _build_optional_png(previews, out_png)
-
+    print(f"Wrote: {out_png}")
     print(f"Wrote: {out_pdf}")
-    if png_written:
-        print(f"Wrote: {out_png}")
-    else:
-        print("Skipped optional PNG contact sheet (Pillow not available).")
     return 0
 
 

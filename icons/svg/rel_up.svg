@@ -1,5 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><clipPath id="icon-clip"><rect x="2" y="2" width="28" height="28" rx="3.8" ry="3.8" /></clipPath></defs><g id="frame"><rect x="1" y="1" width="30" height="30" rx="4.8" ry="4.8" stroke="currentColor" stroke-width="2" fill="none" /></g><g id="icon" clip-path="url(#icon-clip)"><g id="shape_rel_up" transform="translate(3.000000 3.000000) scale(0.050781)"><g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
-<path d="M2481 3259 c-26 -10 -52 -34 -675 -639 -250 -243 -436 -431 -447 -452 -56 -109 -19 -236 84 -290 53 -28 146 -30 197 -5 19 10 232 208 473 442 401 388 440 424 458 412 19 -14 405 -385 699 -673 91 -89 179 -168 195 -177 87 -43 197 -25 259 43 46 52 56 77 56 149 0 103 42 58 -800 872 -294 284 -317 305 -354 319 -33 12 -113 12 -145 -1z" />
-</g>
-</g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs><clipPath id="icon-clip"><rect x="2" y="2" width="28" height="28" rx="3.8" ry="3.8" /></clipPath></defs>
+  <g id="frame"><rect x="1" y="1" width="30" height="30" rx="4.8" ry="4.8" stroke="currentColor" stroke-width="2" fill="none" /></g>
+  <g id="icon" clip-path="url(#icon-clip)">
+    <path id="shape_rel_up" d="M6.5 20.5 L16 11 L25.5 20.5" stroke="currentColor" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  </g>
+</svg>
