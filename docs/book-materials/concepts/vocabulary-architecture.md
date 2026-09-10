@@ -24,3 +24,5 @@ The normative source is [Vocabulary Classification](../../../spec/VOCABULARY_CLA
 ## Possible future book use
 
 Use this as a short architecture chapter: growth does not require making the language bloated if the system distinguishes universal primitives, standalone needs, context-specific vocabulary, mechanisms, and named-entity symbols.
+
+The reconciliation pass clarified semantic migration, deprecate-composable compounds, and legacy contextual vocabulary as separate outcomes. `need_bar` and `place_hotel` are migrations, `place_fashion_shopping` is composable deprecation, and `move_boat` is legacy contextual under the accepted `move_watercraft` hierarchy.

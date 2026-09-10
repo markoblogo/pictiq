@@ -1,2560 +1,1907 @@
 {
-  "schema_version": "2026-09-10",
-  "title": "Pictiq Architecture & Vocabulary Audit",
+  "schema_version": "2026-09-10.reconciliation",
+  "title": "Pictiq Architecture & Vocabulary Audit 2026-09 — reconciliation pass",
+  "status": "LOCAL_HUMAN_REVIEW_PENDING",
   "ordinary_canonical_count": 83,
   "entity_symbol_count": 11,
   "classification_counts": {
     "MECHANISM": 16,
-    "CORE": 18,
-    "STANDALONE_CORE": 10,
-    "CONTEXTUAL": 38,
-    "SPECIALIZED": 1
+    "CORE": 26,
+    "STANDALONE_CORE": 5,
+    "CONTEXTUAL": 36
   },
-  "principles": [
-    "Canonical does not mean Core.",
-    "Complexity belongs to the context that requires it, not to Core.",
-    "Pictiq vocabulary is need-driven, not taxonomically symmetrical.",
-    "Vocabulary growth should follow real communication pressure, composition attempt, semantic compression, context-pack option, actual gap, and only then candidate primitive."
-  ],
-  "explicit_deferrals": [
-    "move_boat vs move_watercraft compatibility remains deferred"
-  ],
-  "new_human_accepted_primitives": [
-    "food_meat"
-  ],
-  "audit_rows": [
+  "disposition_counts": {
+    "KEEP_CORE": 42,
+    "KEEP_STANDALONE_CORE": 5,
+    "KEEP_CONTEXTUAL": 36,
+    "VISUAL_REDESIGN_CANDIDATE": 12,
+    "SEMANTIC_MIGRATION": 2,
+    "LEGACY_CONTEXTUAL": 1,
+    "DEPRECATE_COMPOSABLE": 1
+  },
+  "semantic_migrations": {
+    "need_bar": "Future preferred ID should be alcohol-oriented (for example `drink_alcohol` or equivalent accepted naming). Retain `need_bar` as legacy alias/deprecated identifier for compatibility until alias infrastructure is formalized.",
+    "place_hotel": "Future preferred ID should be home-oriented (for example `place_home` or equivalent accepted naming). Retain `place_hotel` as legacy alias/deprecated identifier for compatibility until alias infrastructure is formalized."
+  },
+  "deprecate_composable": {
+    "place_fashion_shopping": "Prefer `place_shop + item_clothing`; dedicated compound is no longer needed and old artwork diverges from newer morphology."
+  },
+  "legacy_contextual": {
+    "move_boat": "Narrower historical/recreational/travel-oriented subtype under Travel/Maritime; `move_watercraft` is the accepted broad parent. Final deprecation/alias decision is deferred."
+  },
+  "visual_redesign_candidates": {
+    "place_fashion_shopping": "Obsolete compound plus visually inconsistent older artwork; do not redesign until future visual-redesign pass decides whether legacy asset remains needed.",
+    "place_landmark_park": "Dense older travel/city artwork; 24 px readability and visual mass should be retested.",
+    "place_theme_park": "Detailed amusement-park/city artwork; 24 px readability and older generation style should be retested.",
+    "place_art_gallery": "Detailed/outlined exhibition-room artwork; visual mass and small-size clarity should be retested.",
+    "place_catacombs": "Skull cluster is dense at small size; contextual Paris asset should be retested before broad reuse.",
+    "money_atm_bank": "ATM details/keypad create small-size density; contextual finance/travel icon should be retested.",
+    "money_card": "Overlapping card/cash forms may be dense at 24 px; contextual payment icon should be retested.",
+    "move_public": "Vehicle detail is dense at 24 px; transport contextual icon should be retested.",
+    "paris_notre_dame": "Detailed landmark silhouette; Paris contextual icon should be retested at small size.",
+    "paris_sacre_coeur": "Detailed landmark silhouette; Paris contextual icon should be retested at small size.",
+    "paris_moulin_windmill": "Detailed landmark silhouette; Paris contextual icon should be retested at small size.",
+    "paris_arc_de_triomphe": "Landmark form may need mass/readability retest in the Paris context pack."
+  },
+  "human_review_required_ids": [],
+  "github_metadata_recommendation": {
+    "about": "Pictiq: an open visual language and symbolic protocol built from a small vocabulary, compositional grammar, and contextual extensions.",
+    "retain_topics": [
+      "visual-language",
+      "visual-communication",
+      "symbolic-language",
+      "communication",
+      "pictograms",
+      "icons",
+      "conlang",
+      "constructed-language",
+      "hci",
+      "accessibility",
+      "open-standard",
+      "open-source",
+      "protocol",
+      "svg"
+    ],
+    "deprioritize_as_project_defining": [
+      "travel",
+      "aac",
+      "computer-vision"
+    ],
+    "status": "recommendation only; no GitHub metadata changed in this task"
+  },
+  "rows": [
     {
-      "current_id": "punct_question",
-      "current_primary_semantics": "question",
-      "accepted_semantic_field": "question",
-      "current_classification_at_audit_start": "MECHANISM",
-      "proposed_classification": "MECHANISM",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json"
-        ]
-      },
-      "embodied_relevance": "HIGH",
-      "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "id": "punct_question",
+      "semantic_field": "question",
+      "classification_at_start_of_reconciliation": "MECHANISM",
+      "final_classification": "MECHANISM",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
         "EVERYDAY",
         "COMMUNICATION"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "punct_exclaim",
-      "current_primary_semantics": "urgent",
-      "accepted_semantic_field": "urgent",
-      "current_classification_at_audit_start": "MECHANISM",
-      "proposed_classification": "MECHANISM",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json",
-          "packs/road-wayfinding-v0.1.json"
-        ]
-      },
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Accepted classification retained or reconciled to human review decisions."
+    },
+    {
+      "id": "punct_exclaim",
+      "semantic_field": "urgent",
+      "classification_at_start_of_reconciliation": "MECHANISM",
+      "final_classification": "MECHANISM",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
         "EVERYDAY",
         "SAFETY"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "logic_yes",
-      "current_primary_semantics": "yes",
-      "accepted_semantic_field": "yes",
-      "current_classification_at_audit_start": "MECHANISM",
-      "proposed_classification": "MECHANISM",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json"
-        ]
-      },
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Accepted classification retained or reconciled to human review decisions."
+    },
+    {
+      "id": "logic_yes",
+      "semantic_field": "yes",
+      "classification_at_start_of_reconciliation": "MECHANISM",
+      "final_classification": "MECHANISM",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
         "EVERYDAY",
         "COMMUNICATION"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "logic_no",
-      "current_primary_semantics": "no",
-      "accepted_semantic_field": "no",
-      "current_classification_at_audit_start": "MECHANISM",
-      "proposed_classification": "MECHANISM",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json",
-          "packs/road-wayfinding-v0.1.json"
-        ]
-      },
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Accepted classification retained or reconciled to human review decisions."
+    },
+    {
+      "id": "logic_no",
+      "semantic_field": "no",
+      "classification_at_start_of_reconciliation": "MECHANISM",
+      "final_classification": "MECHANISM",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
         "EVERYDAY",
         "SAFETY",
         "COMMUNICATION"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "qual_good",
-      "current_primary_semantics": "good / positive evaluation",
-      "accepted_semantic_field": "good / positive evaluation",
-      "current_classification_at_audit_start": "MECHANISM",
-      "proposed_classification": "MECHANISM",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json"
-        ]
-      },
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Accepted classification retained or reconciled to human review decisions."
+    },
+    {
+      "id": "qual_good",
+      "semantic_field": "good / positive evaluation",
+      "classification_at_start_of_reconciliation": "MECHANISM",
+      "final_classification": "MECHANISM",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
         "EVERYDAY",
         "EVALUATION"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "qual_bad",
-      "current_primary_semantics": "bad / negative evaluation",
-      "accepted_semantic_field": "bad / negative evaluation",
-      "current_classification_at_audit_start": "MECHANISM",
-      "proposed_classification": "MECHANISM",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json"
-        ]
-      },
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Accepted classification retained or reconciled to human review decisions."
+    },
+    {
+      "id": "qual_bad",
+      "semantic_field": "bad / negative evaluation",
+      "classification_at_start_of_reconciliation": "MECHANISM",
+      "final_classification": "MECHANISM",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
         "EVERYDAY",
         "EVALUATION"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "time",
-      "current_primary_semantics": "time",
-      "accepted_semantic_field": "time",
-      "current_classification_at_audit_start": "CORE",
-      "proposed_classification": "CORE",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json"
-        ]
-      },
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Accepted classification retained or reconciled to human review decisions."
+    },
+    {
+      "id": "time",
+      "semantic_field": "time",
+      "classification_at_start_of_reconciliation": "CORE",
+      "final_classification": "CORE",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
         "EVERYDAY",
         "TRAVEL"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "state_hot",
-      "current_primary_semantics": "hot / heat / fire",
-      "accepted_semantic_field": "hot / heat / fire",
-      "current_classification_at_audit_start": "CORE",
-      "proposed_classification": "CORE",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json"
-        ]
-      },
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Accepted classification retained or reconciled to human review decisions."
+    },
+    {
+      "id": "state_hot",
+      "semantic_field": "hot / heat / fire",
+      "classification_at_start_of_reconciliation": "CORE",
+      "final_classification": "CORE",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
         "EVERYDAY",
         "SAFETY"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "state_cold",
-      "current_primary_semantics": "cold / freezing / refrigeration",
-      "accepted_semantic_field": "cold / freezing / refrigeration",
-      "current_classification_at_audit_start": "CORE",
-      "proposed_classification": "CORE",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json"
-        ]
-      },
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Accepted classification retained or reconciled to human review decisions."
+    },
+    {
+      "id": "state_cold",
+      "semantic_field": "cold / freezing / refrigeration",
+      "classification_at_start_of_reconciliation": "CORE",
+      "final_classification": "CORE",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
         "EVERYDAY",
         "SAFETY"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Accepted classification retained or reconciled to human review decisions."
     },
     {
-      "current_id": "person_generic",
-      "current_primary_semantics": "generic person / human participant",
-      "accepted_semantic_field": "generic person / human participant",
-      "current_classification_at_audit_start": "STANDALONE_CORE",
-      "proposed_classification": "STANDALONE_CORE",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": []
-      },
-      "embodied_relevance": "LOW",
-      "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "id": "person_generic",
+      "semantic_field": "generic person / human participant",
+      "classification_at_start_of_reconciliation": "STANDALONE_CORE",
+      "final_classification": "STANDALONE_CORE",
+      "final_dispositions": [
+        "KEEP_STANDALONE_CORE"
+      ],
+      "secondary_contexts": [
         "STANDALONE",
         "PEOPLE"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Standalone Core because durable messages often need an explicit human participant.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "embodied_relevance": "LOW",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Standalone Core because durable messages often need an explicit human participant."
     },
     {
-      "current_id": "qty_1",
-      "current_primary_semantics": "one",
-      "accepted_semantic_field": "one",
-      "current_classification_at_audit_start": "MECHANISM",
-      "proposed_classification": "MECHANISM",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json"
-        ]
-      },
-      "embodied_relevance": "HIGH",
-      "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "id": "qty_1",
+      "semantic_field": "one",
+      "classification_at_start_of_reconciliation": "MECHANISM",
+      "final_classification": "MECHANISM",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
         "EVERYDAY",
         "QUANTITY"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "qty_2",
-      "current_primary_semantics": "two",
-      "accepted_semantic_field": "two",
-      "current_classification_at_audit_start": "MECHANISM",
-      "proposed_classification": "MECHANISM",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json"
-        ]
-      },
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Accepted classification retained or reconciled to human review decisions."
+    },
+    {
+      "id": "qty_2",
+      "semantic_field": "two",
+      "classification_at_start_of_reconciliation": "MECHANISM",
+      "final_classification": "MECHANISM",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
         "EVERYDAY",
         "QUANTITY"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "qty_5",
-      "current_primary_semantics": "five",
-      "accepted_semantic_field": "five",
-      "current_classification_at_audit_start": "MECHANISM",
-      "proposed_classification": "MECHANISM",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json"
-        ]
-      },
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Accepted classification retained or reconciled to human review decisions."
+    },
+    {
+      "id": "qty_5",
+      "semantic_field": "five",
+      "classification_at_start_of_reconciliation": "MECHANISM",
+      "final_classification": "MECHANISM",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
         "EVERYDAY",
         "QUANTITY"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "qty_plus",
-      "current_primary_semantics": "more",
-      "accepted_semantic_field": "more",
-      "current_classification_at_audit_start": "MECHANISM",
-      "proposed_classification": "MECHANISM",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json"
-        ]
-      },
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Accepted classification retained or reconciled to human review decisions."
+    },
+    {
+      "id": "qty_plus",
+      "semantic_field": "more",
+      "classification_at_start_of_reconciliation": "MECHANISM",
+      "final_classification": "MECHANISM",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
         "EVERYDAY",
         "QUANTITY"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "qty_minus",
-      "current_primary_semantics": "less",
-      "accepted_semantic_field": "less",
-      "current_classification_at_audit_start": "MECHANISM",
-      "proposed_classification": "MECHANISM",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json"
-        ]
-      },
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Accepted classification retained or reconciled to human review decisions."
+    },
+    {
+      "id": "qty_minus",
+      "semantic_field": "less",
+      "classification_at_start_of_reconciliation": "MECHANISM",
+      "final_classification": "MECHANISM",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
         "EVERYDAY",
         "QUANTITY"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "money_coins",
-      "current_primary_semantics": "money / currency / payment value",
-      "accepted_semantic_field": "money / currency / payment value",
-      "current_classification_at_audit_start": "CORE",
-      "proposed_classification": "CORE",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json"
-        ]
-      },
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Accepted classification retained or reconciled to human review decisions."
+    },
+    {
+      "id": "money_coins",
+      "semantic_field": "money / currency / payment value",
+      "classification_at_start_of_reconciliation": "CORE",
+      "final_classification": "CORE",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
         "EVERYDAY",
         "PAYMENT",
         "RETAIL"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Primary semantic field is MONEY / CURRENCY / PAYMENT VALUE. Cash/coins remain visual and contextual readings.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Human decision: KEEP_CORE. Primary field is MONEY / CURRENCY / PAYMENT VALUE."
     },
     {
-      "current_id": "money_card",
-      "current_primary_semantics": "card payment",
-      "accepted_semantic_field": "card payment",
-      "current_classification_at_audit_start": "CORE",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": [
-          "packs/universal-v1.json"
-        ]
-      },
-      "embodied_relevance": "MEDIUM",
-      "standalone_relevance": "MEDIUM",
-      "contextual_domains": [
+      "id": "money_card",
+      "semantic_field": "card payment",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL",
+        "VISUAL_REDESIGN_CANDIDATE"
+      ],
+      "secondary_contexts": [
         "PAYMENT",
         "RETAIL",
         "TRAVEL"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "RECLASSIFY"
-      ],
-      "evidence_reason": "Specific payment instrument; useful canonical contextual vocabulary, not minimal Core.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "money_atm_bank",
-      "current_primary_semantics": "ATM / bank",
-      "accepted_semantic_field": "ATM / bank",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": [
-          "packs/universal-v1.json"
-        ]
-      },
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "VISUAL_REDESIGN_CANDIDATE",
+      "visual_review_note": "Overlapping card/cash forms may be dense at 24 px; contextual payment icon should be retested.",
+      "human_review_required": false,
+      "reason": "Specific card/payment-instrument concept; Finance/Travel/Commerce contextual vocabulary, not Core."
+    },
+    {
+      "id": "money_atm_bank",
+      "semantic_field": "ATM / bank",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL",
+        "VISUAL_REDESIGN_CANDIDATE"
+      ],
+      "secondary_contexts": [
         "PAYMENT",
         "TRAVEL",
         "INFRASTRUCTURE"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Specific finance/infrastructure service, not minimal Core.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "comm_wifi",
-      "current_primary_semantics": "Wi-Fi",
-      "accepted_semantic_field": "Wi-Fi",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": [
-          "packs/universal-v1.json"
-        ]
-      },
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "VISUAL_REDESIGN_CANDIDATE",
+      "visual_review_note": "ATM details/keypad create small-size density; contextual finance/travel icon should be retested.",
+      "human_review_required": false,
+      "reason": "Specific ATM/bank infrastructure concept; Finance/Travel/Commerce contextual vocabulary, not Core."
+    },
+    {
+      "id": "comm_wifi",
+      "semantic_field": "Wi-Fi",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL"
+      ],
+      "secondary_contexts": [
         "TECH",
         "COMMUNICATION",
-        "TRAVEL",
-        "INFRASTRUCTURE"
+        "TRAVEL"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Technology/infrastructure/travel concept; not minimal general Core.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "comm_phone",
-      "current_primary_semantics": "phone",
-      "accepted_semantic_field": "phone",
-      "current_classification_at_audit_start": "CORE",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": [
-          "packs/universal-v1.json"
-        ]
-      },
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Technology/travel/modern-everyday contextual concept; not Core."
+    },
+    {
+      "id": "comm_phone",
+      "semantic_field": "phone",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL"
+      ],
+      "secondary_contexts": [
         "TECH",
         "COMMUNICATION",
         "EVERYDAY",
         "TRAVEL"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "RECLASSIFY"
-      ],
-      "evidence_reason": "Modern communication device/service; useful contextual vocabulary, not minimal Core.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "power_plug",
-      "current_primary_semantics": "power outlet",
-      "accepted_semantic_field": "power outlet",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": [
-          "packs/universal-v1.json"
-        ]
-      },
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Technology/travel/modern-everyday contextual concept; not Core."
+    },
+    {
+      "id": "power_plug",
+      "semantic_field": "power outlet",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL"
+      ],
+      "secondary_contexts": [
         "TECH",
         "TRAVEL",
         "INFRASTRUCTURE",
         "EVERYDAY"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Specific charging/outlet concept; distinct from power_energy and not minimal Core.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Technology/travel/infrastructure contextual concept; do not confuse POWER PLUG with ENERGY."
     },
     {
-      "current_id": "power_energy",
-      "current_primary_semantics": "electrical energy / electricity / power",
-      "accepted_semantic_field": "electrical energy / electricity / power",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CORE",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json"
-        ]
-      },
+      "id": "power_energy",
+      "semantic_field": "electrical energy / electricity / power",
+      "classification_at_start_of_reconciliation": "CORE",
+      "final_classification": "CORE",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
+        "SAFETY",
+        "INFRASTRUCTURE",
+        "EVERYDAY",
+        "TECH"
+      ],
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
-        "EVERYDAY",
-        "TECH",
-        "SAFETY",
-        "INFRASTRUCTURE"
-      ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "RECLASSIFY"
-      ],
-      "evidence_reason": "Broad energy/electricity/power concept; not equivalent to power_plug.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Human decision: broad POWER / ENERGY remains separate and Core; not the same as power plug."
     },
     {
-      "current_id": "need_toilet",
-      "current_primary_semantics": "toilet",
-      "accepted_semantic_field": "toilet",
-      "current_classification_at_audit_start": "CORE",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": [
-          "packs/universal-v1.json"
-        ]
-      },
-      "embodied_relevance": "MEDIUM",
-      "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "id": "need_toilet",
+      "semantic_field": "toilet",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL"
+      ],
+      "secondary_contexts": [
         "EVERYDAY",
         "TRAVEL",
         "INFRASTRUCTURE"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "RECLASSIFY"
-      ],
-      "evidence_reason": "Everyday/public-facility/travel concept; useful canonical vocabulary but outside minimal Core.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Human decision: KEEP_CONTEXTUAL. Everyday/Public Facilities/Travel concept; preserve canonical asset."
     },
     {
-      "current_id": "need_water",
-      "current_primary_semantics": "water",
-      "accepted_semantic_field": "water",
-      "current_classification_at_audit_start": "CORE",
-      "proposed_classification": "CORE",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json"
-        ]
-      },
-      "embodied_relevance": "HIGH",
-      "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "id": "need_water",
+      "semantic_field": "water",
+      "classification_at_start_of_reconciliation": "CORE",
+      "final_classification": "CORE",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
         "EVERYDAY",
         "WATER",
         "SAFETY"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Broad water/basic-need concept.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "need_food",
-      "current_primary_semantics": "food",
-      "accepted_semantic_field": "food",
-      "current_classification_at_audit_start": "CORE",
-      "proposed_classification": "CORE",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json",
-          "packs/road-wayfinding-v0.1.json"
-        ]
-      },
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Broad water/basic-need concept."
+    },
+    {
+      "id": "need_food",
+      "semantic_field": "food",
+      "classification_at_start_of_reconciliation": "CORE",
+      "final_classification": "CORE",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
         "EVERYDAY",
         "FOOD",
         "SAFETY"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Broad food/basic-need concept.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "need_bar",
-      "current_primary_semantics": "alcohol / alcoholic drink",
-      "accepted_semantic_field": "alcohol / alcoholic drink",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": []
-      },
-      "embodied_relevance": "MEDIUM",
-      "standalone_relevance": "MEDIUM",
-      "contextual_domains": [
-        "NIGHTLIFE",
-        "FOOD",
-        "LEGAL",
-        "TRAVEL"
-      ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "yes: ID says bar but accepted primary meaning is alcohol/alcoholic drink",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "SEMANTIC_MIGRATION"
-      ],
-      "evidence_reason": "SEMANTIC_MIGRATION: compatibility ID. Accepted primary semantics are ALCOHOL / ALCOHOLIC DRINK; BAR/venue is secondary. Preferred future ID candidate: drink_alcohol. Do not create a duplicate active concept.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "safety_medical",
-      "current_primary_semantics": "medical help",
-      "accepted_semantic_field": "medical help",
-      "current_classification_at_audit_start": "CORE",
-      "proposed_classification": "CORE",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json",
-          "packs/road-wayfinding-v0.1.json"
-        ]
-      },
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Broad food/basic-need concept."
+    },
+    {
+      "id": "need_bar",
+      "semantic_field": "alcohol / alcoholic drink",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL",
+        "SEMANTIC_MIGRATION"
+      ],
+      "secondary_contexts": [
+        "NIGHTLIFE",
+        "TRAVEL",
+        "FOOD"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "Future preferred ID should be alcohol-oriented (for example `drink_alcohol` or equivalent accepted naming). Retain `need_bar` as legacy alias/deprecated identifier for compatibility until alias infrastructure is formalized.",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "SEMANTIC_MIGRATION: accepted primary field ALCOHOL / ALCOHOLIC DRINK; secondary BAR / DRINKING VENUE / ALCOHOL SERVICE. Future preferred ID should be alcohol-oriented; retain need_bar as legacy alias/deprecated identifier."
+    },
+    {
+      "id": "safety_medical",
+      "semantic_field": "medical help",
+      "classification_at_start_of_reconciliation": "CORE",
+      "final_classification": "CORE",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
         "SAFETY",
         "HEALTH",
         "EVERYDAY"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Broad medical/safety concept.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Broad medical/safety concept."
     },
     {
-      "current_id": "safety_police",
-      "current_primary_semantics": "police",
-      "accepted_semantic_field": "police",
-      "current_classification_at_audit_start": "CORE",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": [
-          "packs/universal-v1.json",
-          "packs/road-wayfinding-v0.1.json"
-        ]
-      },
-      "embodied_relevance": "MEDIUM",
-      "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "id": "safety_police",
+      "semantic_field": "police",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL"
+      ],
+      "secondary_contexts": [
         "SAFETY",
         "LEGAL",
         "CITY",
         "TRAVEL"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "RECLASSIFY"
-      ],
-      "evidence_reason": "Public safety/legal service concept; canonical contextual vocabulary rather than minimal Core.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Public safety/legal service concept; canonical contextual vocabulary rather than minimal Core."
     },
     {
-      "current_id": "place_hotel",
-      "current_primary_semantics": "home / shelter / sleeping place / building",
-      "accepted_semantic_field": "home / shelter / sleeping place / building",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CORE",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json",
-          "packs/road-wayfinding-v0.1.json"
-        ]
-      },
-      "embodied_relevance": "HIGH",
-      "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "id": "place_hotel",
+      "semantic_field": "home / shelter / sleeping place / building",
+      "classification_at_start_of_reconciliation": "CORE",
+      "final_classification": "CORE",
+      "final_dispositions": [
+        "KEEP_CORE",
+        "SEMANTIC_MIGRATION"
+      ],
+      "secondary_contexts": [
         "EVERYDAY",
-        "STANDALONE",
         "TRAVEL",
         "CITY"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "yes: ID says hotel but accepted primary meaning is home/shelter/sleeping place/building",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "RECLASSIFY",
-        "SEMANTIC_MIGRATION"
-      ],
-      "evidence_reason": "SEMANTIC_MIGRATION: compatibility ID. Accepted primary semantics are HOME / SHELTER / SLEEPING PLACE / BUILDING; HOTEL/accommodation is secondary. Preferred future ID candidate: place_home. Do not create a duplicate active concept.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "Future preferred ID should be home-oriented (for example `place_home` or equivalent accepted naming). Retain `place_hotel` as legacy alias/deprecated identifier for compatibility until alias infrastructure is formalized.",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "SEMANTIC_MIGRATION: accepted primary field HOME / SHELTER / SLEEPING PLACE / BUILDING, HOMELAND contextually. Future preferred ID should be home-oriented; retain place_hotel as legacy alias/deprecated identifier."
     },
     {
-      "current_id": "place_shop",
-      "current_primary_semantics": "shop",
-      "accepted_semantic_field": "shop",
-      "current_classification_at_audit_start": "CORE",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": [
-          "packs/universal-v1.json",
-          "packs/city-paris-v0.1.json"
-        ]
-      },
-      "embodied_relevance": "MEDIUM",
-      "standalone_relevance": "MEDIUM",
-      "contextual_domains": [
+      "id": "place_shop",
+      "semantic_field": "shop",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL"
+      ],
+      "secondary_contexts": [
         "RETAIL",
         "EVERYDAY",
         "TRAVEL"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "RECLASSIFY"
-      ],
-      "evidence_reason": "Generic shop remains useful commercial contextual vocabulary; not minimal Core merely because many compounds can use it.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "place_landmark_park",
-      "current_primary_semantics": "park / landmark",
-      "accepted_semantic_field": "park / landmark",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": []
-      },
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Human decision: KEEP_CONTEXTUAL. Commercial/contextual vocabulary, not minimal Core."
+    },
+    {
+      "id": "place_landmark_park",
+      "semantic_field": "park / landmark",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL",
+        "VISUAL_REDESIGN_CANDIDATE"
+      ],
+      "secondary_contexts": [
         "CITY",
         "TRAVEL",
         "LEISURE"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "place_gas",
-      "current_primary_semantics": "gas station",
-      "accepted_semantic_field": "gas station",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": [
-          "packs/road-wayfinding-v0.1.json"
-        ]
-      },
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
-      "contextual_domains": [
-        "TRANSPORT",
-        "TRAVEL"
-      ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "VISUAL_REDESIGN_CANDIDATE",
+      "visual_review_note": "Dense older travel/city artwork; 24 px readability and visual mass should be retested.",
+      "human_review_required": false,
+      "reason": "Tourism/nightlife/city contextual vocabulary; not minimal Core after historical travel-bias cleanup."
     },
     {
-      "current_id": "service_tools",
-      "current_primary_semantics": "tools / repair",
-      "accepted_semantic_field": "tools / repair",
-      "current_classification_at_audit_start": "CORE",
-      "proposed_classification": "CORE",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json",
-          "packs/road-wayfinding-v0.1.json"
-        ]
-      },
-      "embodied_relevance": "HIGH",
-      "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "id": "place_gas",
+      "semantic_field": "gas station",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL"
+      ],
+      "secondary_contexts": [
+        "CITY",
+        "TRAVEL",
+        "LEISURE"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Tourism/nightlife/city contextual vocabulary; not minimal Core after historical travel-bias cleanup."
+    },
+    {
+      "id": "service_tools",
+      "semantic_field": "tools / repair",
+      "classification_at_start_of_reconciliation": "CORE",
+      "final_classification": "CORE",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
         "EVERYDAY",
-        "INFRASTRUCTURE"
+        "INFRASTRUCTURE",
+        "INDUSTRIAL"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "HUMAN_REVIEW_REQUIRED"
-      ],
-      "evidence_reason": "Kept in Core for now; repair/help contexts are broad but should be reviewed with use evidence.",
-      "human_decision_status": "HUMAN_REVIEW_REQUIRED"
-    },
-    {
-      "current_id": "move_feet",
-      "current_primary_semantics": "walk / go on foot",
-      "accepted_semantic_field": "walk / go on foot",
-      "current_classification_at_audit_start": "CORE",
-      "proposed_classification": "CORE",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json",
-          "packs/road-wayfinding-v0.1.json"
-        ]
-      },
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Human decision: KEEP_CORE. Primary field is TOOLS / REPAIR / MAINTENANCE / FIXING; SERVICE is contextual."
+    },
+    {
+      "id": "move_feet",
+      "semantic_field": "walk / go on foot",
+      "classification_at_start_of_reconciliation": "CORE",
+      "final_classification": "CORE",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
         "EVERYDAY",
         "TRANSPORT",
         "NAVIGATION"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Broad walking/on-foot movement concept.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Broad walking/on-foot movement concept."
     },
     {
-      "current_id": "move_taxi",
-      "current_primary_semantics": "taxi",
-      "accepted_semantic_field": "taxi",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": []
-      },
-      "embodied_relevance": "MEDIUM",
-      "standalone_relevance": "MEDIUM",
-      "contextual_domains": [
+      "id": "move_taxi",
+      "semantic_field": "taxi",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL"
+      ],
+      "secondary_contexts": [
         "TRANSPORT",
         "TRAVEL",
         "CITY"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Transport-specific concept outside minimal Core.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "move_car",
-      "current_primary_semantics": "car",
-      "accepted_semantic_field": "car",
-      "current_classification_at_audit_start": "CORE",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": [
-          "packs/universal-v1.json",
-          "packs/road-wayfinding-v0.1.json"
-        ]
-      },
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Transport/Travel/City contextual concept; not minimal Core."
+    },
+    {
+      "id": "move_car",
+      "semantic_field": "car",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL"
+      ],
+      "secondary_contexts": [
         "TRANSPORT",
         "TRAVEL",
         "EVERYDAY"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "RECLASSIFY"
-      ],
-      "evidence_reason": "Transport-specific concept outside minimal Core after removal of historical travel bias.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "move_public",
-      "current_primary_semantics": "public transport",
-      "accepted_semantic_field": "public transport",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": [
-          "packs/universal-v1.json"
-        ]
-      },
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Transport/Travel/City contextual concept; not minimal Core."
+    },
+    {
+      "id": "move_public",
+      "semantic_field": "public transport",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL",
+        "VISUAL_REDESIGN_CANDIDATE"
+      ],
+      "secondary_contexts": [
         "TRANSPORT",
         "CITY",
         "TRAVEL"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Transport/city/travel concept outside minimal Core.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "place_disco",
-      "current_primary_semantics": "disco / club",
-      "accepted_semantic_field": "disco / club",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": []
-      },
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
-      "contextual_domains": [
-        "NIGHTLIFE",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "VISUAL_REDESIGN_CANDIDATE",
+      "visual_review_note": "Vehicle detail is dense at 24 px; transport contextual icon should be retested.",
+      "human_review_required": false,
+      "reason": "Transport/Travel/City contextual concept; not minimal Core."
+    },
+    {
+      "id": "place_disco",
+      "semantic_field": "disco / club",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL"
+      ],
+      "secondary_contexts": [
+        "CITY",
+        "TRAVEL",
         "LEISURE"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "paris_eiffel_tower",
-      "current_primary_semantics": "Eiffel Tower",
-      "accepted_semantic_field": "Eiffel Tower",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": [
-          "packs/city-paris-v0.1.json"
-        ]
-      },
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Tourism/nightlife/city contextual vocabulary; not minimal Core after historical travel-bias cleanup."
+    },
+    {
+      "id": "paris_eiffel_tower",
+      "semantic_field": "Eiffel Tower",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL"
+      ],
+      "secondary_contexts": [
         "PARIS",
         "CITY",
-        "TRAVEL",
-        "CULTURE"
+        "TRAVEL"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "embodied_relevance": "LOW",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Paris-specific contextual vocabulary; not general Core."
     },
     {
-      "current_id": "paris_arc_de_triomphe",
-      "current_primary_semantics": "Arc de Triomphe",
-      "accepted_semantic_field": "Arc de Triomphe",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": [
-          "packs/city-paris-v0.1.json"
-        ]
-      },
-      "embodied_relevance": "MEDIUM",
-      "standalone_relevance": "MEDIUM",
-      "contextual_domains": [
+      "id": "paris_arc_de_triomphe",
+      "semantic_field": "Arc de Triomphe",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL",
+        "VISUAL_REDESIGN_CANDIDATE"
+      ],
+      "secondary_contexts": [
         "PARIS",
         "CITY",
-        "TRAVEL",
-        "CULTURE"
+        "TRAVEL"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "embodied_relevance": "LOW",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "VISUAL_REDESIGN_CANDIDATE",
+      "visual_review_note": "Landmark form may need mass/readability retest in the Paris context pack.",
+      "human_review_required": false,
+      "reason": "Paris-specific contextual vocabulary; not general Core."
     },
     {
-      "current_id": "paris_louvre_pyramid",
-      "current_primary_semantics": "Louvre pyramid",
-      "accepted_semantic_field": "Louvre pyramid",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": [
-          "packs/city-paris-v0.1.json"
-        ]
-      },
-      "embodied_relevance": "MEDIUM",
-      "standalone_relevance": "MEDIUM",
-      "contextual_domains": [
+      "id": "paris_louvre_pyramid",
+      "semantic_field": "Louvre pyramid",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL"
+      ],
+      "secondary_contexts": [
         "PARIS",
         "CITY",
-        "TRAVEL",
-        "CULTURE"
+        "TRAVEL"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "embodied_relevance": "LOW",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Paris-specific contextual vocabulary; not general Core."
     },
     {
-      "current_id": "paris_notre_dame",
-      "current_primary_semantics": "Notre-Dame cathedral",
-      "accepted_semantic_field": "Notre-Dame cathedral",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": [
-          "packs/city-paris-v0.1.json"
-        ]
-      },
-      "embodied_relevance": "MEDIUM",
-      "standalone_relevance": "MEDIUM",
-      "contextual_domains": [
+      "id": "paris_notre_dame",
+      "semantic_field": "Notre-Dame cathedral",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL",
+        "VISUAL_REDESIGN_CANDIDATE"
+      ],
+      "secondary_contexts": [
         "PARIS",
         "CITY",
-        "TRAVEL",
-        "CULTURE"
+        "TRAVEL"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "embodied_relevance": "LOW",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "VISUAL_REDESIGN_CANDIDATE",
+      "visual_review_note": "Detailed landmark silhouette; Paris contextual icon should be retested at small size.",
+      "human_review_required": false,
+      "reason": "Paris-specific contextual vocabulary; not general Core."
     },
     {
-      "current_id": "paris_sacre_coeur",
-      "current_primary_semantics": "Sacre-Coeur basilica",
-      "accepted_semantic_field": "Sacre-Coeur basilica",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": [
-          "packs/city-paris-v0.1.json"
-        ]
-      },
-      "embodied_relevance": "MEDIUM",
-      "standalone_relevance": "MEDIUM",
-      "contextual_domains": [
+      "id": "paris_sacre_coeur",
+      "semantic_field": "Sacre-Coeur basilica",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL",
+        "VISUAL_REDESIGN_CANDIDATE"
+      ],
+      "secondary_contexts": [
         "PARIS",
         "CITY",
-        "TRAVEL",
-        "CULTURE"
+        "TRAVEL"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "embodied_relevance": "LOW",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "VISUAL_REDESIGN_CANDIDATE",
+      "visual_review_note": "Detailed landmark silhouette; Paris contextual icon should be retested at small size.",
+      "human_review_required": false,
+      "reason": "Paris-specific contextual vocabulary; not general Core."
     },
     {
-      "current_id": "paris_moulin_windmill",
-      "current_primary_semantics": "Paris windmill cabaret landmark",
-      "accepted_semantic_field": "Paris windmill cabaret landmark",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": [
-          "packs/city-paris-v0.1.json"
-        ]
-      },
-      "embodied_relevance": "MEDIUM",
-      "standalone_relevance": "MEDIUM",
-      "contextual_domains": [
+      "id": "paris_moulin_windmill",
+      "semantic_field": "Paris windmill cabaret landmark",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL",
+        "VISUAL_REDESIGN_CANDIDATE"
+      ],
+      "secondary_contexts": [
         "PARIS",
-        "NIGHTLIFE",
-        "CULTURE"
+        "CITY",
+        "TRAVEL"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "embodied_relevance": "LOW",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "VISUAL_REDESIGN_CANDIDATE",
+      "visual_review_note": "Detailed landmark silhouette; Paris contextual icon should be retested at small size.",
+      "human_review_required": false,
+      "reason": "Paris-specific contextual vocabulary; not general Core."
     },
     {
-      "current_id": "paris_croissant",
-      "current_primary_semantics": "croissant",
-      "accepted_semantic_field": "croissant",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": [
-          "packs/city-paris-v0.1.json"
-        ]
-      },
-      "embodied_relevance": "MEDIUM",
-      "standalone_relevance": "MEDIUM",
-      "contextual_domains": [
+      "id": "paris_croissant",
+      "semantic_field": "croissant",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL"
+      ],
+      "secondary_contexts": [
         "PARIS",
-        "FOOD",
-        "CULTURE"
+        "CITY",
+        "TRAVEL"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Paris-specific food/culture symbol in the Paris context, not generic food Core.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "embodied_relevance": "LOW",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Paris-specific contextual vocabulary; not general Core."
     },
     {
-      "current_id": "move_boat",
-      "current_primary_semantics": "boat transport",
-      "accepted_semantic_field": "boat transport",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": [
-          "packs/city-paris-v0.1.json"
-        ]
-      },
-      "embodied_relevance": "MEDIUM",
-      "standalone_relevance": "MEDIUM",
-      "contextual_domains": [
+      "id": "move_boat",
+      "semantic_field": "boat transport",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL",
+        "LEGACY_CONTEXTUAL"
+      ],
+      "secondary_contexts": [
         "TRANSPORT",
         "TRAVEL",
         "WATER"
       ],
-      "semantic_overlap": "move_watercraft",
-      "composable_alternative": "move_watercraft for broad water transport",
-      "id_semantic_mismatch": "compatibility subtype",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "LEGACY_CONTEXTUAL"
-      ],
-      "evidence_reason": "Keep as legacy contextual subtype; defer compatibility decision.",
-      "human_decision_status": "DEFERRED_TO_COMPATIBILITY_AUDIT"
-    },
-    {
-      "current_id": "place_catacombs",
-      "current_primary_semantics": "catacombs",
-      "accepted_semantic_field": "catacombs",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": [
-          "packs/city-paris-v0.1.json"
-        ]
-      },
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "Narrower historical/recreational/travel-oriented subtype under Travel/Maritime; `move_watercraft` is the accepted broad parent. Final deprecation/alias decision is deferred.",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "LEGACY_CONTEXTUAL: narrower historical/recreational/travel-oriented boat subtype. move_watercraft is accepted as the broad hierarchy parent; final compatibility decision deferred."
+    },
+    {
+      "id": "place_catacombs",
+      "semantic_field": "catacombs",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL",
+        "VISUAL_REDESIGN_CANDIDATE"
+      ],
+      "secondary_contexts": [
+        "PARIS",
+        "CITY",
+        "TRAVEL"
+      ],
+      "embodied_relevance": "LOW",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "VISUAL_REDESIGN_CANDIDATE",
+      "visual_review_note": "Skull cluster is dense at small size; contextual Paris asset should be retested before broad reuse.",
+      "human_review_required": false,
+      "reason": "Paris-specific contextual vocabulary; not general Core."
+    },
+    {
+      "id": "place_theme_park",
+      "semantic_field": "theme park",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL",
+        "VISUAL_REDESIGN_CANDIDATE"
+      ],
+      "secondary_contexts": [
         "CITY",
         "TRAVEL",
         "LEISURE"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "place_theme_park",
-      "current_primary_semantics": "theme park",
-      "accepted_semantic_field": "theme park",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": [
-          "packs/city-paris-v0.1.json"
-        ]
-      },
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
-      "contextual_domains": [
-        "LEISURE",
-        "TRAVEL"
-      ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "VISUAL_REDESIGN_CANDIDATE",
+      "visual_review_note": "Detailed amusement-park/city artwork; 24 px readability and older generation style should be retested.",
+      "human_review_required": false,
+      "reason": "Tourism/nightlife/city contextual vocabulary; not minimal Core after historical travel-bias cleanup."
     },
     {
-      "current_id": "place_airport",
-      "current_primary_semantics": "airport",
-      "accepted_semantic_field": "airport",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": [
-          "packs/city-paris-v0.1.json"
-        ]
-      },
-      "embodied_relevance": "MEDIUM",
-      "standalone_relevance": "MEDIUM",
-      "contextual_domains": [
+      "id": "place_airport",
+      "semantic_field": "airport",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL"
+      ],
+      "secondary_contexts": [
         "TRANSPORT",
-        "TRAVEL"
+        "TRAVEL",
+        "CITY"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "place_art_gallery",
-      "current_primary_semantics": "art gallery",
-      "accepted_semantic_field": "art gallery",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": [
-          "packs/city-paris-v0.1.json"
-        ]
-      },
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
-      "contextual_domains": [
-        "CULTURE",
-        "LEISURE",
-        "TRAVEL"
-      ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Transport/Travel/City contextual concept; not minimal Core."
     },
     {
-      "current_id": "place_fashion_shopping",
-      "current_primary_semantics": "fashion shopping",
-      "accepted_semantic_field": "fashion shopping",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": []
-      },
-      "embodied_relevance": "LOW",
-      "standalone_relevance": "LOW",
-      "contextual_domains": [
-        "RETAIL",
-        "CULTURE",
-        "TRAVEL"
+      "id": "place_art_gallery",
+      "semantic_field": "art gallery",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL",
+        "VISUAL_REDESIGN_CANDIDATE"
       ],
-      "semantic_overlap": "place_shop, item_clothing",
-      "composable_alternative": "place_shop + item_clothing",
-      "id_semantic_mismatch": "yes: lexicalized fashion shopping duplicates a composable reading",
-      "visual_consistency_status": "VISUAL_REDESIGN_CANDIDATE",
-      "proposed_disposition": [
+      "secondary_contexts": [
+        "CITY",
+        "TRAVEL",
+        "LEISURE"
+      ],
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "VISUAL_REDESIGN_CANDIDATE",
+      "visual_review_note": "Detailed/outlined exhibition-room artwork; visual mass and small-size clarity should be retested.",
+      "human_review_required": false,
+      "reason": "Tourism/nightlife/city contextual vocabulary; not minimal Core after historical travel-bias cleanup."
+    },
+    {
+      "id": "place_fashion_shopping",
+      "semantic_field": "fashion shopping",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL",
         "DEPRECATE_COMPOSABLE",
         "VISUAL_REDESIGN_CANDIDATE"
       ],
-      "evidence_reason": "Preserve legacy asset, remove from active recommendations, prefer composition.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "item_cigarette",
-      "current_primary_semantics": "cigarette / smoking",
-      "accepted_semantic_field": "cigarette / smoking",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": []
-      },
-      "embodied_relevance": "MEDIUM",
-      "standalone_relevance": "MEDIUM",
-      "contextual_domains": [
-        "NIGHTLIFE",
+      "secondary_contexts": [
         "RETAIL",
-        "HEALTH",
-        "LEGAL"
+        "CITY",
+        "TRAVEL"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Contextual nightlife/retail/health/legal item, not a specialized technical concept.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "embodied_relevance": "LOW",
+      "standalone_relevance": "LOW",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "Prefer `place_shop + item_clothing`; dedicated compound is no longer needed and old artwork diverges from newer morphology.",
+      "visual_review_status": "VISUAL_REDESIGN_CANDIDATE",
+      "visual_review_note": "Obsolete compound plus visually inconsistent older artwork; do not redesign until future visual-redesign pass decides whether legacy asset remains needed.",
+      "human_review_required": false,
+      "reason": "DEPRECATE_COMPOSABLE and VISUAL_REDESIGN_CANDIDATE: prefer place_shop + item_clothing; preserve only as legacy/history."
     },
     {
-      "current_id": "item_cannabis",
-      "current_primary_semantics": "cannabis / cannabis-related products",
-      "accepted_semantic_field": "cannabis / cannabis-related products",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": []
-      },
-      "embodied_relevance": "MEDIUM",
-      "standalone_relevance": "MEDIUM",
-      "contextual_domains": [
+      "id": "item_cigarette",
+      "semantic_field": "cigarette / smoking",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL"
+      ],
+      "secondary_contexts": [
         "NIGHTLIFE",
-        "RETAIL",
         "HEALTH",
-        "LEGAL"
+        "TRAVEL"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Contextual nightlife/retail/health/legal item, not a specialized technical concept.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "drink_beer",
-      "current_primary_semantics": "beer",
-      "accepted_semantic_field": "beer",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": []
-      },
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Adult practical communication / Health-Safety / Travel contextual concept; not Core."
+    },
+    {
+      "id": "item_cannabis",
+      "semantic_field": "cannabis / cannabis-related products",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL"
+      ],
+      "secondary_contexts": [
+        "NIGHTLIFE",
+        "HEALTH",
+        "LEGAL",
+        "TRAVEL"
+      ],
+      "embodied_relevance": "LOW",
+      "standalone_relevance": "LOW",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Adult practical communication / Health-Safety / Legal / Travel contextual concept; not Core."
+    },
+    {
+      "id": "drink_beer",
+      "semantic_field": "beer",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL"
+      ],
+      "secondary_contexts": [
         "NIGHTLIFE",
         "FOOD",
-        "LEGAL"
+        "TRAVEL"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Specific alcoholic-drink subtype; remains contextual and separate from migrated broad alcohol concept.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Adult practical communication / Food-Drink contextual concept; not Core."
     },
     {
-      "current_id": "love_heart",
-      "current_primary_semantics": "love / affection / romance",
-      "accepted_semantic_field": "love / affection / romance",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": []
-      },
-      "embodied_relevance": "MEDIUM",
-      "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "id": "love_heart",
+      "semantic_field": "love / affection / romance",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL"
+      ],
+      "secondary_contexts": [
         "SOCIAL",
         "EVERYDAY",
         "NARRATIVE"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Broad love/affection concept. HEART + PERSON and HEART + PERSON + MANY remain contextual compositions, not new lexical primitives.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Broad love/affection concept. HEART + PERSON and HEART + PERSON + MANY remain contextual compositions, not new lexical primitives."
     },
     {
-      "current_id": "item_condom",
-      "current_primary_semantics": "condom / safer-sex protection",
-      "accepted_semantic_field": "condom / safer-sex protection",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": []
-      },
-      "embodied_relevance": "MEDIUM",
-      "standalone_relevance": "MEDIUM",
-      "contextual_domains": [
+      "id": "item_condom",
+      "semantic_field": "condom / safer-sex protection",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL"
+      ],
+      "secondary_contexts": [
         "HEALTH",
         "SAFETY",
-        "NIGHTLIFE",
         "TRAVEL"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Contextual for now; safety/health/nightlife/travel use needs future evidence before Core.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "nature_flower",
-      "current_primary_semantics": "plant / vegetation / flower",
-      "accepted_semantic_field": "plant / vegetation / flower",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": []
-      },
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
-      "contextual_domains": [
-        "NATURE",
-        "SOCIAL",
-        "LEISURE",
-        "EVERYDAY"
-      ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Broad plant/vegetation/flower concept; do not force botanical precision or taxonomy completion.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Health/Safety/adult practical communication contextual concept; not Core."
     },
     {
-      "current_id": "eye_look",
-      "current_primary_semantics": "eye / look / see",
-      "accepted_semantic_field": "eye / look / see",
-      "current_classification_at_audit_start": "STANDALONE_CORE",
-      "proposed_classification": "STANDALONE_CORE",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": []
-      },
-      "embodied_relevance": "LOW",
+      "id": "nature_flower",
+      "semantic_field": "plant / vegetation / flower",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CORE",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
+        "NATURE",
+        "EVERYDAY",
+        "SOCIAL"
+      ],
+      "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Primary broad field is PLANT / VEGETATION / FLOWER contextually; do not force botanical precision."
+    },
+    {
+      "id": "eye_look",
+      "semantic_field": "eye / look / see",
+      "classification_at_start_of_reconciliation": "STANDALONE_CORE",
+      "final_classification": "STANDALONE_CORE",
+      "final_dispositions": [
+        "KEEP_STANDALONE_CORE"
+      ],
+      "secondary_contexts": [
         "STANDALONE",
         "PERCEPTION"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "item_clothing",
-      "current_primary_semantics": "clothing / garment",
-      "accepted_semantic_field": "clothing / garment",
-      "current_classification_at_audit_start": "STANDALONE_CORE",
-      "proposed_classification": "STANDALONE_CORE",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/city-paris-v0.1.json"
-        ]
-      },
       "embodied_relevance": "LOW",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Accepted classification retained or reconciled to human review decisions."
+    },
+    {
+      "id": "item_clothing",
+      "semantic_field": "clothing / garment",
+      "classification_at_start_of_reconciliation": "STANDALONE_CORE",
+      "final_classification": "STANDALONE_CORE",
+      "final_dispositions": [
+        "KEEP_STANDALONE_CORE"
+      ],
+      "secondary_contexts": [
         "STANDALONE",
         "EVERYDAY"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "comm_speak",
-      "current_primary_semantics": "speech / communication / oral or audible communication",
-      "accepted_semantic_field": "speech / communication / oral or audible communication",
-      "current_classification_at_audit_start": "STANDALONE_CORE",
-      "proposed_classification": "STANDALONE_CORE",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": []
-      },
       "embodied_relevance": "LOW",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
-        "STANDALONE",
-        "COMMUNICATION"
-      ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Accepted classification retained or reconciled to human review decisions."
     },
     {
-      "current_id": "comm_sound",
-      "current_primary_semantics": "sound / audible signal / music / audio",
-      "accepted_semantic_field": "sound / audible signal / music / audio",
-      "current_classification_at_audit_start": "STANDALONE_CORE",
-      "proposed_classification": "STANDALONE_CORE",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": []
-      },
-      "embodied_relevance": "LOW",
+      "id": "comm_speak",
+      "semantic_field": "speech / communication / oral or audible communication",
+      "classification_at_start_of_reconciliation": "STANDALONE_CORE",
+      "final_classification": "CORE",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
+        "COMMUNICATION",
+        "PEOPLE",
+        "PERCEPTION"
+      ],
+      "embodied_relevance": "MEDIUM",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
-        "STANDALONE",
-        "COMMUNICATION"
-      ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Primary field is SPEECH / COMMUNICATION / ORAL OR AUDIBLE COMMUNICATION; do not collapse into SOUND + TEXT."
     },
     {
-      "current_id": "media_text",
-      "current_primary_semantics": "text / written information",
-      "accepted_semantic_field": "text / written information",
-      "current_classification_at_audit_start": "STANDALONE_CORE",
-      "proposed_classification": "STANDALONE_CORE",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/road-wayfinding-v0.1.json"
-        ]
-      },
-      "embodied_relevance": "LOW",
-      "standalone_relevance": "HIGH",
-      "contextual_domains": [
-        "STANDALONE",
+      "id": "comm_sound",
+      "semantic_field": "sound / audible signal / music / what is heard",
+      "classification_at_start_of_reconciliation": "STANDALONE_CORE",
+      "final_classification": "CORE",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
+        "COMMUNICATION",
+        "PERCEPTION",
         "MEDIA"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Primary field is SOUND / AUDIBLE SIGNAL / MUSIC / WHAT IS HEARD."
     },
     {
-      "current_id": "media_image",
-      "current_primary_semantics": "image / picture / photo / drawing / visual representation",
-      "accepted_semantic_field": "image / picture / photo / drawing / visual representation",
-      "current_classification_at_audit_start": "STANDALONE_CORE",
-      "proposed_classification": "STANDALONE_CORE",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": []
-      },
-      "embodied_relevance": "LOW",
+      "id": "media_text",
+      "semantic_field": "text / written information",
+      "classification_at_start_of_reconciliation": "STANDALONE_CORE",
+      "final_classification": "CORE",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
+        "COMMUNICATION",
+        "MEDIA",
+        "EVERYDAY"
+      ],
+      "embodied_relevance": "MEDIUM",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
-        "STANDALONE",
-        "MEDIA"
-      ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Primary field is TEXT / WRITTEN INFORMATION; READ/WRITE/INFORMATION are contextual."
     },
     {
-      "current_id": "nature_sun",
-      "current_primary_semantics": "sun / daylight",
-      "accepted_semantic_field": "sun / daylight",
-      "current_classification_at_audit_start": "STANDALONE_CORE",
-      "proposed_classification": "STANDALONE_CORE",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": []
-      },
-      "embodied_relevance": "LOW",
+      "id": "media_image",
+      "semantic_field": "image / picture / photo / drawing / visual representation",
+      "classification_at_start_of_reconciliation": "STANDALONE_CORE",
+      "final_classification": "CORE",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
+        "COMMUNICATION",
+        "MEDIA",
+        "EVERYDAY"
+      ],
+      "embodied_relevance": "MEDIUM",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Primary field is IMAGE / PICTURE / PHOTO / DRAWING / PAINTING / VISUAL REPRESENTATION."
+    },
+    {
+      "id": "nature_sun",
+      "semantic_field": "sun / daylight",
+      "classification_at_start_of_reconciliation": "STANDALONE_CORE",
+      "final_classification": "STANDALONE_CORE",
+      "final_dispositions": [
+        "KEEP_STANDALONE_CORE"
+      ],
+      "secondary_contexts": [
         "STANDALONE",
         "NATURE",
         "TIME"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "embodied_relevance": "LOW",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Accepted classification retained or reconciled to human review decisions."
     },
     {
-      "current_id": "state_light",
-      "current_primary_semantics": "light / lighting / lamp",
-      "accepted_semantic_field": "light / lighting / lamp",
-      "current_classification_at_audit_start": "CORE",
-      "proposed_classification": "CORE",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json"
-        ]
-      },
-      "embodied_relevance": "HIGH",
-      "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "id": "state_light",
+      "semantic_field": "light / lighting / lamp",
+      "classification_at_start_of_reconciliation": "CORE",
+      "final_classification": "CORE",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
         "EVERYDAY",
         "INFRASTRUCTURE",
         "SAFETY"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Broad light/lighting concept.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "food_produce",
-      "current_primary_semantics": "fruit / vegetable / fresh produce",
-      "accepted_semantic_field": "fruit / vegetable / fresh produce",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": [
-          "packs/universal-v1.json"
-        ]
-      },
-      "embodied_relevance": "MEDIUM",
-      "standalone_relevance": "MEDIUM",
-      "contextual_domains": [
-        "FOOD",
-        "RETAIL",
-        "EVERYDAY"
-      ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Primary field is FRUIT / VEGETABLE / FRESH PRODUCE. Do not expand to PLANT.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "food_bakery",
-      "current_primary_semantics": "bread / baked food / baked goods / pastry",
-      "accepted_semantic_field": "bread / baked food / baked goods / pastry",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CORE",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json"
-        ]
-      },
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Broad light/lighting concept."
+    },
+    {
+      "id": "food_produce",
+      "semantic_field": "fruit / vegetable / fresh produce",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CORE",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
         "FOOD",
         "EVERYDAY",
         "RETAIL"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "RECLASSIFY"
-      ],
-      "evidence_reason": "Primary field is BREAD / BAKED FOOD / BAKED GOODS / PASTRY. Bakery/place reading is secondary.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "food_meat",
-      "current_primary_semantics": "meat / animal food / meat products",
-      "accepted_semantic_field": "meat / animal food / meat products",
-      "current_classification_at_audit_start": "NOT_PRESENT",
-      "proposed_classification": "CORE",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json"
-        ]
-      },
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Primary field is FRUIT / VEGETABLE / FRESH PRODUCE. Not PLANT."
+    },
+    {
+      "id": "food_bakery",
+      "semantic_field": "bread / baked food / baked goods / pastry",
+      "classification_at_start_of_reconciliation": "CORE",
+      "final_classification": "CORE",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
         "FOOD",
         "EVERYDAY",
         "RETAIL"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Human-accepted vocabulary gap: broad animal-food category analogous to produce and bakery; no narrower meat taxonomy added.",
-      "human_decision_status": "HUMAN_ACCEPTED_NEW_PRIMITIVE"
-    },
-    {
-      "current_id": "rel_greater",
-      "current_primary_semantics": "greater / more / comparative relation",
-      "accepted_semantic_field": "greater / more / comparative relation",
-      "current_classification_at_audit_start": "MECHANISM",
-      "proposed_classification": "MECHANISM",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json",
-          "packs/road-wayfinding-v0.1.json"
-        ]
-      },
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Primary field is BREAD / BAKED FOOD / BAKED GOODS / PASTRY. Bakery/place reading is secondary."
+    },
+    {
+      "id": "food_meat",
+      "semantic_field": "meat / animal food / meat products",
+      "classification_at_start_of_reconciliation": "CORE",
+      "final_classification": "CORE",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
+        "FOOD",
+        "EVERYDAY",
+        "RETAIL"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Human-accepted Architecture & Vocabulary Audit addition. Broad MEAT / ANIMAL FOOD / MEAT PRODUCTS primitive; do not split into steak, chicken, pork, beef, or drumstick without future context evidence."
+    },
+    {
+      "id": "rel_greater",
+      "semantic_field": "greater / more / comparative relation",
+      "classification_at_start_of_reconciliation": "MECHANISM",
+      "final_classification": "MECHANISM",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
         "NAVIGATION",
         "RELATION"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Comparative GREATER/MORE relation; rightward reading is contextual only, not a global arrow definition.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "rel_lesser",
-      "current_primary_semantics": "lesser / less / comparative relation",
-      "accepted_semantic_field": "lesser / less / comparative relation",
-      "current_classification_at_audit_start": "MECHANISM",
-      "proposed_classification": "MECHANISM",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json",
-          "packs/road-wayfinding-v0.1.json"
-        ]
-      },
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Comparative GREATER/MORE relation; rightward reading is contextual only, not a global arrow definition."
+    },
+    {
+      "id": "rel_lesser",
+      "semantic_field": "lesser / less / comparative relation",
+      "classification_at_start_of_reconciliation": "MECHANISM",
+      "final_classification": "MECHANISM",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
         "NAVIGATION",
         "RELATION"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Comparative LESSER/LESS relation; leftward reading is contextual only, not a global arrow definition.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Comparative LESSER/LESS relation; leftward reading is contextual only, not a global arrow definition."
     },
     {
-      "current_id": "body_mouth",
-      "current_primary_semantics": "mouth / oral intake",
-      "accepted_semantic_field": "mouth / oral intake",
-      "current_classification_at_audit_start": "STANDALONE_CORE",
-      "proposed_classification": "STANDALONE_CORE",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": []
-      },
-      "embodied_relevance": "LOW",
-      "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "id": "body_mouth",
+      "semantic_field": "mouth / oral intake",
+      "classification_at_start_of_reconciliation": "STANDALONE_CORE",
+      "final_classification": "STANDALONE_CORE",
+      "final_dispositions": [
+        "KEEP_STANDALONE_CORE"
+      ],
+      "secondary_contexts": [
         "STANDALONE",
         "BODY",
         "FOOD"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "rel_here",
-      "current_primary_semantics": "here / target / this location / reference point",
-      "accepted_semantic_field": "here / target / this location / reference point",
-      "current_classification_at_audit_start": "MECHANISM",
-      "proposed_classification": "MECHANISM",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json",
-          "packs/road-wayfinding-v0.1.json"
-        ]
-      },
-      "embodied_relevance": "HIGH",
-      "standalone_relevance": "HIGH",
-      "contextual_domains": [
-        "NAVIGATION",
-        "RELATION"
-      ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Broad here/target/reference-point operator; context determines exact reading.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "rel_up",
-      "current_primary_semantics": "up / above / higher / vertical relation",
-      "accepted_semantic_field": "up / above / higher / vertical relation",
-      "current_classification_at_audit_start": "MECHANISM",
-      "proposed_classification": "MECHANISM",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json",
-          "packs/road-wayfinding-v0.1.json"
-        ]
-      },
-      "embodied_relevance": "HIGH",
-      "standalone_relevance": "HIGH",
-      "contextual_domains": [
-        "NAVIGATION",
-        "RELATION"
-      ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "UP/DOWN vertical relation family member; not redefined as MORE/LESS for symmetry.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "rel_down",
-      "current_primary_semantics": "down / below / lower / vertical relation",
-      "accepted_semantic_field": "down / below / lower / vertical relation",
-      "current_classification_at_audit_start": "MECHANISM",
-      "proposed_classification": "MECHANISM",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json",
-          "packs/road-wayfinding-v0.1.json"
-        ]
-      },
-      "embodied_relevance": "HIGH",
-      "standalone_relevance": "HIGH",
-      "contextual_domains": [
-        "NAVIGATION",
-        "RELATION"
-      ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "UP/DOWN vertical relation family member; not redefined as MORE/LESS for symmetry.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "nature_moon",
-      "current_primary_semantics": "moon / night / nighttime",
-      "accepted_semantic_field": "moon / night / nighttime",
-      "current_classification_at_audit_start": "STANDALONE_CORE",
-      "proposed_classification": "STANDALONE_CORE",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": []
-      },
       "embodied_relevance": "LOW",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
-        "STANDALONE",
-        "NATURE",
-        "TIME"
-      ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted classification retained.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Accepted classification retained or reconciled to human review decisions."
     },
     {
-      "current_id": "surface_wavy",
-      "current_primary_semantics": "wavy / waves / unstable uneven or slippery surface",
-      "accepted_semantic_field": "wavy / waves / unstable uneven or slippery surface",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": [
-          "packs/universal-v1.json",
-          "packs/road-wayfinding-v0.1.json"
-        ]
-      },
-      "embodied_relevance": "MEDIUM",
+      "id": "rel_here",
+      "semantic_field": "here / target / this location / reference point",
+      "classification_at_start_of_reconciliation": "MECHANISM",
+      "final_classification": "MECHANISM",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
+        "NAVIGATION",
+        "RELATION"
+      ],
+      "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
-        "ROAD",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Broad here/target/reference-point operator; context determines exact reading."
+    },
+    {
+      "id": "rel_up",
+      "semantic_field": "up / above / higher / vertical relation",
+      "classification_at_start_of_reconciliation": "MECHANISM",
+      "final_classification": "MECHANISM",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
+        "NAVIGATION",
+        "RELATION"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "UP/DOWN vertical relation family member; not redefined as MORE/LESS for symmetry."
+    },
+    {
+      "id": "rel_down",
+      "semantic_field": "down / below / lower / vertical relation",
+      "classification_at_start_of_reconciliation": "MECHANISM",
+      "final_classification": "MECHANISM",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
+        "NAVIGATION",
+        "RELATION"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "UP/DOWN vertical relation family member; not redefined as MORE/LESS for symmetry."
+    },
+    {
+      "id": "nature_moon",
+      "semantic_field": "moon / night / nighttime",
+      "classification_at_start_of_reconciliation": "STANDALONE_CORE",
+      "final_classification": "CORE",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
+        "NATURE",
+        "TIME",
+        "EVERYDAY"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Primary field is MOON / NIGHT / NIGHTTIME. Do not add DAY merely for symmetry."
+    },
+    {
+      "id": "surface_wavy",
+      "semantic_field": "wavy / waves / instability / unevenness / slipperiness / irregular surface",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CORE",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
         "SURFACE",
         "SAFETY",
-        "WATER"
+        "WATER",
+        "ROAD"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Broad wavy/waves/unstable/uneven/slippery/irregular-surface concept supported by Road and Odyssey; not collapsed into WATER.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Broad WAVY / WAVES / INSTABILITY / UNEVENNESS / SLIPPERINESS / IRREGULAR SURFACE concept; water-surface reading is contextual and WATER remains separate."
     },
     {
-      "current_id": "state_dead",
-      "current_primary_semantics": "dead / death / not alive",
-      "accepted_semantic_field": "dead / death / not alive",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": [
-          "packs/universal-v1.json",
-          "packs/road-wayfinding-v0.1.json"
-        ]
-      },
-      "embodied_relevance": "MEDIUM",
-      "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "id": "state_dead",
+      "semantic_field": "dead / death / not alive",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL"
+      ],
+      "secondary_contexts": [
         "SAFETY",
         "HEALTH",
         "NARRATIVE",
         "ROAD",
         "INDUSTRIAL"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Accepted from Stress Test 02 as death/not-alive/deadly-contextual; cross-domain potential exists but current evidence does not justify Core.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "tech_ai",
-      "current_primary_semantics": "artificial intelligence / AI system",
-      "accepted_semantic_field": "artificial intelligence / AI system",
-      "current_classification_at_audit_start": "SPECIALIZED",
-      "proposed_classification": "SPECIALIZED",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": []
-      },
-      "embodied_relevance": "LOW",
-      "standalone_relevance": "LOW",
-      "contextual_domains": [
-        "TECH",
-        "SPECIALIZED",
-        "MACHINE_INTERFACE"
-      ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "AI/Machine/Technology context vocabulary; not minimal Core.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "action_conflict",
-      "current_primary_semantics": "conflict / war / aggression / fight / hostile action",
-      "accepted_semantic_field": "conflict / war / aggression / fight / hostile action",
-      "current_classification_at_audit_start": "CORE",
-      "proposed_classification": "CORE",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json"
-        ]
-      },
-      "embodied_relevance": "HIGH",
+      "embodied_relevance": "MEDIUM",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "confidence": "MEDIUM",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Accepted from Stress Test 02 as death/not-alive/deadly-contextual; cross-domain potential exists but current evidence does not justify Core."
+    },
+    {
+      "id": "tech_ai",
+      "semantic_field": "artificial intelligence / AI system",
+      "classification_at_start_of_reconciliation": "SPECIALIZED",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL"
+      ],
+      "secondary_contexts": [
+        "TECH",
+        "MACHINE_INTERFACE",
+        "COMMUNICATION"
+      ],
+      "embodied_relevance": "LOW",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "AI/Machine/Technology context vocabulary; not Core."
+    },
+    {
+      "id": "action_conflict",
+      "semantic_field": "conflict / war / aggression / fight / hostile action",
+      "classification_at_start_of_reconciliation": "CORE",
+      "final_classification": "CORE",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
         "NARRATIVE",
         "SAFETY",
         "CULTURE",
         "SOCIAL"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Broad conflict/war/aggression/fight/hostile action concept; distinct from qual_bad evaluation.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Human decision: KEEP_CORE. Broad CONFLICT / WAR / AGGRESSION / FIGHT / ATTACK / HOSTILE ACTION / VIOLENCE concept, distinct from BAD evaluation."
     },
     {
-      "current_id": "move_watercraft",
-      "current_primary_semantics": "boat / ship / generic watercraft transport",
-      "accepted_semantic_field": "boat / ship / generic watercraft transport",
-      "current_classification_at_audit_start": "CONTEXTUAL",
-      "proposed_classification": "CONTEXTUAL",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [],
-        "packs": []
-      },
-      "embodied_relevance": "MEDIUM",
-      "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "id": "move_watercraft",
+      "semantic_field": "boat / ship / generic watercraft transport",
+      "classification_at_start_of_reconciliation": "CONTEXTUAL",
+      "final_classification": "CONTEXTUAL",
+      "final_dispositions": [
+        "KEEP_CONTEXTUAL"
+      ],
+      "secondary_contexts": [
         "TRANSPORT",
         "TRAVEL",
         "WATER",
         "NARRATIVE"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Preferred broad watercraft / boat / ship / generic water transport concept; not minimal Core. Existing move_boat remains legacy contextual pending future compatibility review.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "embodied_relevance": "MEDIUM",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Human decision: KEEP_CONTEXTUAL. Preferred broad WATERCRAFT / BOAT / SHIP / GENERIC WATER TRANSPORT concept; do not promote to Core solely because broad."
     },
     {
-      "current_id": "qual_sacred",
-      "current_primary_semantics": "sacred / holy / divine / religious / ritual",
-      "accepted_semantic_field": "sacred / holy / divine / religious / ritual",
-      "current_classification_at_audit_start": "CORE",
-      "proposed_classification": "CORE",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json"
-        ]
-      },
-      "embodied_relevance": "HIGH",
-      "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "id": "qual_sacred",
+      "semantic_field": "sacred / holy / divine / religious",
+      "classification_at_start_of_reconciliation": "CORE",
+      "final_classification": "CORE",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
         "CULTURE",
         "NARRATIVE",
         "SOCIAL"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Broad sacred/holy/divine/religious concept; avoids separate GOD/PRIEST/TEMPLE primitives unless future contexts require them.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "nature_animal",
-      "current_primary_semantics": "animal / general land-animal category",
-      "accepted_semantic_field": "animal / general land-animal category",
-      "current_classification_at_audit_start": "CORE",
-      "proposed_classification": "CORE",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json"
-        ]
-      },
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
-        "EVERYDAY",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Human decision: KEEP_CORE. Broad SACRED / HOLY / DIVINE / RELIGIOUS / GOD-DIVINITY contextually / SACRED STATUS concept."
+    },
+    {
+      "id": "nature_animal",
+      "semantic_field": "animal / general land-animal category",
+      "classification_at_start_of_reconciliation": "CORE",
+      "final_classification": "CORE",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
         "NATURE",
+        "EVERYDAY",
         "FOOD",
         "NARRATIVE"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "General land-animal category; not rigorous taxonomy. Birds/fish/insects may emerge separately if real use creates pressure.",
-      "human_decision_status": "HUMAN_ACCEPTED"
-    },
-    {
-      "current_id": "nature_cloud",
-      "current_primary_semantics": "cloud / sky / air / atmospheric space",
-      "accepted_semantic_field": "cloud / sky / air / atmospheric space",
-      "current_classification_at_audit_start": "CORE",
-      "proposed_classification": "CORE",
-      "current_packs_profiles_after_cleanup": {
-        "profiles": [
-          "profiles/embodied-core-v0.1.json",
-          "profiles/standalone-core-v0.1.json"
-        ],
-        "packs": [
-          "packs/universal-core.json",
-          "packs/universal-v1.json"
-        ]
-      },
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
-      "contextual_domains": [
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Human decision: KEEP_CORE. General land-animal category; not scientific taxonomy. Birds/fish/insects may emerge later if needed."
+    },
+    {
+      "id": "nature_cloud",
+      "semantic_field": "cloud / sky / air / atmospheric space",
+      "classification_at_start_of_reconciliation": "CORE",
+      "final_classification": "CORE",
+      "final_dispositions": [
+        "KEEP_CORE"
+      ],
+      "secondary_contexts": [
         "NATURE",
         "WATER",
-        "NARRATIVE",
-        "TRAVEL"
+        "TRAVEL",
+        "NARRATIVE"
       ],
-      "semantic_overlap": "",
-      "composable_alternative": "",
-      "id_semantic_mismatch": "none",
-      "visual_consistency_status": "ACCEPTED_CURRENT_CANONICAL_ARTWORK",
-      "proposed_disposition": [
-        "KEEP"
-      ],
-      "evidence_reason": "Broad cloud/sky/air/atmospheric-space concept; do not add AIR/SKY/WEATHER merely for taxonomy.",
-      "human_decision_status": "HUMAN_ACCEPTED"
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH",
+      "semantic_migration_or_deprecation_note": "",
+      "visual_review_status": "NO_REDESIGN_FLAG_IN_THIS_PASS",
+      "visual_review_note": "",
+      "human_review_required": false,
+      "reason": "Human decision: KEEP_CORE. Broad CLOUD / SKY / AIR / ATMOSPHERIC SPACE / WEATHER context / OVERHEAD SKY CONTEXT."
     }
   ]
 }

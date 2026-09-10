@@ -23,6 +23,7 @@ This project uses milestone-style tags. The `-infra` suffix indicates a pre-icon
 - Added numeric notation validation and QA evidence for WAVY, DEAD, and numeric `50`.
 
 ### Vocabulary and phrase architecture
+- Reconciled the Architecture & Vocabulary Audit against human-accepted decisions: final dispositions now distinguish semantic migration, deprecate-composable compounds, legacy contextual vocabulary, Core/context/profile status, and future visual-redesign candidates. No SVG redesign, tag, release, or GitHub metadata change is implied.
 - Added `lexicon/vocabulary-classification.json` as the machine-readable source of truth for architectural role classification across all accepted ordinary canonical IDs, explicitly excluding the 11 entity-symbol examples.
 - Added `spec/VOCABULARY_CLASSIFICATION.md` and validation for the accepted distinction between Canonical Registry, Core Vocabulary, Standalone Core, Context Packs, Specialized vocabulary, Mechanisms, and Entity Registry.
 - Formalized phrase architecture in `spec/GRAMMAR.md`: bare tile / zero-intent, bare adjacency as contextual association, postfix scope for qualifiers/quantities/negation, additive numeric quantity expressions, relational-orientation operators, `rel_here` as reference, and one proposition per phrase line.

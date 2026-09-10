@@ -11,7 +11,7 @@ Pictiq separates five registries and selection layers:
 1. **Canonical Registry** — every accepted ordinary reusable tile in `lexicon/icon-index.json`; currently 83 IDs.
 2. **Core Vocabulary** — broad everyday primitives inside the canonical registry.
 3. **Standalone Core** — concepts that must often be explicit when the body, object, or live situation disappears.
-4. **Context Packs** — scenario-specific selections and additions such as Paris, nightlife, travel, retail, health, food, or infrastructure.
+4. **Context Packs** — scenario-specific selections and additions such as Paris, nightlife, travel, retail, health, food, technology, or infrastructure.
 5. **Entity Registry** — scoped visual proper names under `entities/`; these are not ordinary lexical icons and do not increase the Core count.
 
 Two principles control classification:
@@ -20,30 +20,36 @@ Two principles control classification:
 - **Complexity belongs to the context that requires it, not to Core.**
 - **Pictiq vocabulary is need-driven, not taxonomically symmetrical.**
 - **Vocabulary growth should follow real communication pressure, composition attempt, semantic compression, context-pack option, actual gap, and only then candidate primitive.**
-
-## Two independent axes
-
-Vocabulary generality and communication surface are separate axes.
-
-| Axis | Values | Purpose |
-| --- | --- | --- |
-| Vocabulary generality | MECHANISM, CORE, STANDALONE_CORE, CONTEXTUAL, SPECIALIZED | Classifies why a canonical tile belongs in the system. |
-| Communication surface | EMBODIED, STANDALONE | Classifies where the tile is useful or necessary. |
-
-A tile can be contextual and still useful in both embodied and standalone communication. A tile can be Standalone Core without becoming ordinary Core. Profiles select tiles for a communication surface; they do not redefine canonical meaning.
+- **Semantic migration is distinct from deprecation: a useful concept can survive while its primary meaning and future preferred ID change.**
+- **Deprecate composable compounds when ordinary composition expresses the useful meaning better than a dedicated lexical tile.**
 
 ## Counts
 
 | Role | Count |
 | --- | ---: |
 | MECHANISM | 16 |
-| CORE | 18 |
-| STANDALONE_CORE | 10 |
-| CONTEXTUAL | 38 |
-| SPECIALIZED | 1 |
+| CORE | 26 |
+| STANDALONE_CORE | 5 |
+| CONTEXTUAL | 36 |
+| SPECIALIZED | 0 |
 | Total ordinary canonical IDs | 83 |
 
 Entity symbols and numeric notation assets are excluded from these counts.
+
+## Reconciled disposition summary
+
+Disposition counts can overlap. See the full audit matrix in [`../docs/research/pictiq-architecture-vocabulary-audit-2026-09.md`](../docs/research/pictiq-architecture-vocabulary-audit-2026-09.md).
+
+| Disposition | Count |
+| --- | ---: |
+| KEEP_CORE | 42 |
+| KEEP_CONTEXTUAL | 36 |
+| KEEP_STANDALONE_CORE | 5 |
+| SEMANTIC_MIGRATION | 2 |
+| DEPRECATE_COMPOSABLE | 1 |
+| LEGACY_CONTEXTUAL | 1 |
+| VISUAL_REDESIGN_CANDIDATE | 12 |
+| HUMAN_REVIEW_REQUIRED | 0 |
 
 ## Classification table
 
@@ -64,57 +70,57 @@ Entity symbols and numeric notation assets are excluded from these counts.
 | `qty_5` | MECHANISM | EVERYDAY, QUANTITY | HIGH | HIGH | HIGH |  |
 | `qty_plus` | MECHANISM | EVERYDAY, QUANTITY | HIGH | HIGH | HIGH |  |
 | `qty_minus` | MECHANISM | EVERYDAY, QUANTITY | HIGH | HIGH | HIGH |  |
-| `money_coins` | CORE | EVERYDAY, PAYMENT, RETAIL | HIGH | HIGH | HIGH | Primary semantic field is MONEY / CURRENCY / PAYMENT VALUE. Cash/coins remain visual and contextual readings. |
-| `money_card` | CONTEXTUAL | PAYMENT, RETAIL, TRAVEL | MEDIUM | MEDIUM | HIGH | Specific payment instrument; useful canonical contextual vocabulary, not minimal Core. |
-| `money_atm_bank` | CONTEXTUAL | PAYMENT, TRAVEL, INFRASTRUCTURE | MEDIUM | MEDIUM | HIGH | Specific finance/infrastructure service, not minimal Core. |
-| `comm_wifi` | CONTEXTUAL | TECH, COMMUNICATION, TRAVEL, INFRASTRUCTURE | MEDIUM | MEDIUM | HIGH | Technology/infrastructure/travel concept; not minimal general Core. |
-| `comm_phone` | CONTEXTUAL | TECH, COMMUNICATION, EVERYDAY, TRAVEL | MEDIUM | MEDIUM | HIGH | Modern communication device/service; useful contextual vocabulary, not minimal Core. |
-| `power_plug` | CONTEXTUAL | TECH, TRAVEL, INFRASTRUCTURE, EVERYDAY | MEDIUM | MEDIUM | HIGH | Specific charging/outlet concept; distinct from power_energy and not minimal Core. |
-| `power_energy` | CORE | EVERYDAY, TECH, SAFETY, INFRASTRUCTURE | HIGH | HIGH | HIGH | Broad energy/electricity/power concept; not equivalent to power_plug. |
-| `need_toilet` | CONTEXTUAL | EVERYDAY, TRAVEL, INFRASTRUCTURE | MEDIUM | HIGH | HIGH | Everyday/public-facility/travel concept; useful canonical vocabulary but outside minimal Core. |
+| `money_coins` | CORE | EVERYDAY, PAYMENT, RETAIL | HIGH | HIGH | HIGH | Human decision: KEEP_CORE. Primary field is MONEY / CURRENCY / PAYMENT VALUE. |
+| `money_card` | CONTEXTUAL | PAYMENT, RETAIL, TRAVEL | MEDIUM | MEDIUM | HIGH | Specific card/payment-instrument concept; Finance/Travel/Commerce contextual vocabulary, not Core. |
+| `money_atm_bank` | CONTEXTUAL | PAYMENT, TRAVEL, INFRASTRUCTURE | MEDIUM | MEDIUM | HIGH | Specific ATM/bank infrastructure concept; Finance/Travel/Commerce contextual vocabulary, not Core. |
+| `comm_wifi` | CONTEXTUAL | TECH, COMMUNICATION, TRAVEL | MEDIUM | MEDIUM | HIGH | Technology/travel/modern-everyday contextual concept; not Core. |
+| `comm_phone` | CONTEXTUAL | TECH, COMMUNICATION, EVERYDAY, TRAVEL | MEDIUM | MEDIUM | HIGH | Technology/travel/modern-everyday contextual concept; not Core. |
+| `power_plug` | CONTEXTUAL | TECH, TRAVEL, INFRASTRUCTURE, EVERYDAY | MEDIUM | MEDIUM | HIGH | Technology/travel/infrastructure contextual concept; do not confuse POWER PLUG with ENERGY. |
+| `power_energy` | CORE | SAFETY, INFRASTRUCTURE, EVERYDAY, TECH | HIGH | HIGH | HIGH | Human decision: broad POWER / ENERGY remains separate and Core; not the same as power plug. |
+| `need_toilet` | CONTEXTUAL | EVERYDAY, TRAVEL, INFRASTRUCTURE | MEDIUM | HIGH | HIGH | Human decision: KEEP_CONTEXTUAL. Everyday/Public Facilities/Travel concept; preserve canonical asset. |
 | `need_water` | CORE | EVERYDAY, WATER, SAFETY | HIGH | HIGH | HIGH | Broad water/basic-need concept. |
 | `need_food` | CORE | EVERYDAY, FOOD, SAFETY | HIGH | HIGH | HIGH | Broad food/basic-need concept. |
-| `need_bar` | CONTEXTUAL | NIGHTLIFE, FOOD, LEGAL, TRAVEL | MEDIUM | MEDIUM | HIGH | SEMANTIC_MIGRATION: compatibility ID. Accepted primary semantics are ALCOHOL / ALCOHOLIC DRINK; BAR/venue is secondary. Preferred future ID candidate: drink_alcohol. Do not create a duplicate active concept. |
+| `need_bar` | CONTEXTUAL | NIGHTLIFE, TRAVEL, FOOD | MEDIUM | MEDIUM | HIGH | SEMANTIC_MIGRATION: accepted primary field ALCOHOL / ALCOHOLIC DRINK; secondary BAR / DRINKING VENUE / ALCOHOL SERVICE. Future preferred ID should be alcohol-oriented; retain need_bar as legacy alias/deprecated identifier. |
 | `safety_medical` | CORE | SAFETY, HEALTH, EVERYDAY | HIGH | HIGH | HIGH | Broad medical/safety concept. |
 | `safety_police` | CONTEXTUAL | SAFETY, LEGAL, CITY, TRAVEL | MEDIUM | HIGH | HIGH | Public safety/legal service concept; canonical contextual vocabulary rather than minimal Core. |
-| `place_hotel` | CORE | EVERYDAY, STANDALONE, TRAVEL, CITY | HIGH | HIGH | HIGH | SEMANTIC_MIGRATION: compatibility ID. Accepted primary semantics are HOME / SHELTER / SLEEPING PLACE / BUILDING; HOTEL/accommodation is secondary. Preferred future ID candidate: place_home. Do not create a duplicate active concept. |
-| `place_shop` | CONTEXTUAL | RETAIL, EVERYDAY, TRAVEL | MEDIUM | MEDIUM | HIGH | Generic shop remains useful commercial contextual vocabulary; not minimal Core merely because many compounds can use it. |
-| `place_landmark_park` | CONTEXTUAL | CITY, TRAVEL, LEISURE | MEDIUM | MEDIUM | HIGH |  |
-| `place_gas` | CONTEXTUAL | TRANSPORT, TRAVEL | MEDIUM | MEDIUM | HIGH |  |
-| `service_tools` | CORE | EVERYDAY, INFRASTRUCTURE | HIGH | HIGH | MEDIUM | Kept in Core for now; repair/help contexts are broad but should be reviewed with use evidence. |
+| `place_hotel` | CORE | EVERYDAY, TRAVEL, CITY | HIGH | HIGH | HIGH | SEMANTIC_MIGRATION: accepted primary field HOME / SHELTER / SLEEPING PLACE / BUILDING, HOMELAND contextually. Future preferred ID should be home-oriented; retain place_hotel as legacy alias/deprecated identifier. |
+| `place_shop` | CONTEXTUAL | RETAIL, EVERYDAY, TRAVEL | MEDIUM | MEDIUM | HIGH | Human decision: KEEP_CONTEXTUAL. Commercial/contextual vocabulary, not minimal Core. |
+| `place_landmark_park` | CONTEXTUAL | CITY, TRAVEL, LEISURE | MEDIUM | MEDIUM | HIGH | Tourism/nightlife/city contextual vocabulary; not minimal Core after historical travel-bias cleanup. |
+| `place_gas` | CONTEXTUAL | CITY, TRAVEL, LEISURE | MEDIUM | MEDIUM | HIGH | Tourism/nightlife/city contextual vocabulary; not minimal Core after historical travel-bias cleanup. |
+| `service_tools` | CORE | EVERYDAY, INFRASTRUCTURE, INDUSTRIAL | HIGH | HIGH | HIGH | Human decision: KEEP_CORE. Primary field is TOOLS / REPAIR / MAINTENANCE / FIXING; SERVICE is contextual. |
 | `move_feet` | CORE | EVERYDAY, TRANSPORT, NAVIGATION | HIGH | HIGH | HIGH | Broad walking/on-foot movement concept. |
-| `move_taxi` | CONTEXTUAL | TRANSPORT, TRAVEL, CITY | MEDIUM | MEDIUM | HIGH | Transport-specific concept outside minimal Core. |
-| `move_car` | CONTEXTUAL | TRANSPORT, TRAVEL, EVERYDAY | MEDIUM | MEDIUM | HIGH | Transport-specific concept outside minimal Core after removal of historical travel bias. |
-| `move_public` | CONTEXTUAL | TRANSPORT, CITY, TRAVEL | MEDIUM | MEDIUM | HIGH | Transport/city/travel concept outside minimal Core. |
-| `place_disco` | CONTEXTUAL | NIGHTLIFE, LEISURE | MEDIUM | MEDIUM | HIGH |  |
-| `paris_eiffel_tower` | CONTEXTUAL | PARIS, CITY, TRAVEL, CULTURE | MEDIUM | MEDIUM | HIGH |  |
-| `paris_arc_de_triomphe` | CONTEXTUAL | PARIS, CITY, TRAVEL, CULTURE | MEDIUM | MEDIUM | HIGH |  |
-| `paris_louvre_pyramid` | CONTEXTUAL | PARIS, CITY, TRAVEL, CULTURE | MEDIUM | MEDIUM | HIGH |  |
-| `paris_notre_dame` | CONTEXTUAL | PARIS, CITY, TRAVEL, CULTURE | MEDIUM | MEDIUM | HIGH |  |
-| `paris_sacre_coeur` | CONTEXTUAL | PARIS, CITY, TRAVEL, CULTURE | MEDIUM | MEDIUM | HIGH |  |
-| `paris_moulin_windmill` | CONTEXTUAL | PARIS, NIGHTLIFE, CULTURE | MEDIUM | MEDIUM | HIGH |  |
-| `paris_croissant` | CONTEXTUAL | PARIS, FOOD, CULTURE | MEDIUM | MEDIUM | HIGH | Paris-specific food/culture symbol in the Paris context, not generic food Core. |
-| `move_boat` | CONTEXTUAL | TRANSPORT, TRAVEL, WATER | MEDIUM | MEDIUM | HIGH | LEGACY_CONTEXTUAL: narrower/historical boat concept. move_watercraft is the preferred broad water-transport concept; preserve until future compatibility review. |
-| `place_catacombs` | CONTEXTUAL | CITY, TRAVEL, LEISURE | MEDIUM | MEDIUM | HIGH |  |
-| `place_theme_park` | CONTEXTUAL | LEISURE, TRAVEL | MEDIUM | MEDIUM | HIGH |  |
-| `place_airport` | CONTEXTUAL | TRANSPORT, TRAVEL | MEDIUM | MEDIUM | HIGH |  |
-| `place_art_gallery` | CONTEXTUAL | CULTURE, LEISURE, TRAVEL | MEDIUM | MEDIUM | HIGH |  |
-| `place_fashion_shopping` | CONTEXTUAL | RETAIL, CULTURE, TRAVEL | LOW | LOW | MEDIUM | DEPRECATE_COMPOSABLE / VISUAL_REDESIGN_CANDIDATE: prefer place_shop + item_clothing. Preserve historical evidence and compatibility; do not redesign unnecessary compound primitive now. |
-| `item_cigarette` | CONTEXTUAL | NIGHTLIFE, RETAIL, HEALTH, LEGAL | MEDIUM | MEDIUM | HIGH | Contextual nightlife/retail/health/legal item, not a specialized technical concept. |
-| `item_cannabis` | CONTEXTUAL | NIGHTLIFE, RETAIL, HEALTH, LEGAL | MEDIUM | MEDIUM | HIGH | Contextual nightlife/retail/health/legal item, not a specialized technical concept. |
-| `drink_beer` | CONTEXTUAL | NIGHTLIFE, FOOD, LEGAL | MEDIUM | MEDIUM | HIGH | Specific alcoholic-drink subtype; remains contextual and separate from migrated broad alcohol concept. |
+| `move_taxi` | CONTEXTUAL | TRANSPORT, TRAVEL, CITY | MEDIUM | MEDIUM | HIGH | Transport/Travel/City contextual concept; not minimal Core. |
+| `move_car` | CONTEXTUAL | TRANSPORT, TRAVEL, EVERYDAY | MEDIUM | MEDIUM | HIGH | Transport/Travel/City contextual concept; not minimal Core. |
+| `move_public` | CONTEXTUAL | TRANSPORT, CITY, TRAVEL | MEDIUM | MEDIUM | HIGH | Transport/Travel/City contextual concept; not minimal Core. |
+| `place_disco` | CONTEXTUAL | CITY, TRAVEL, LEISURE | MEDIUM | MEDIUM | HIGH | Tourism/nightlife/city contextual vocabulary; not minimal Core after historical travel-bias cleanup. |
+| `paris_eiffel_tower` | CONTEXTUAL | PARIS, CITY, TRAVEL | LOW | MEDIUM | HIGH | Paris-specific contextual vocabulary; not general Core. |
+| `paris_arc_de_triomphe` | CONTEXTUAL | PARIS, CITY, TRAVEL | LOW | MEDIUM | HIGH | Paris-specific contextual vocabulary; not general Core. |
+| `paris_louvre_pyramid` | CONTEXTUAL | PARIS, CITY, TRAVEL | LOW | MEDIUM | HIGH | Paris-specific contextual vocabulary; not general Core. |
+| `paris_notre_dame` | CONTEXTUAL | PARIS, CITY, TRAVEL | LOW | MEDIUM | HIGH | Paris-specific contextual vocabulary; not general Core. |
+| `paris_sacre_coeur` | CONTEXTUAL | PARIS, CITY, TRAVEL | LOW | MEDIUM | HIGH | Paris-specific contextual vocabulary; not general Core. |
+| `paris_moulin_windmill` | CONTEXTUAL | PARIS, CITY, TRAVEL | LOW | MEDIUM | HIGH | Paris-specific contextual vocabulary; not general Core. |
+| `paris_croissant` | CONTEXTUAL | PARIS, CITY, TRAVEL | LOW | MEDIUM | HIGH | Paris-specific contextual vocabulary; not general Core. |
+| `move_boat` | CONTEXTUAL | TRANSPORT, TRAVEL, WATER | MEDIUM | MEDIUM | HIGH | LEGACY_CONTEXTUAL: narrower historical/recreational/travel-oriented boat subtype. move_watercraft is accepted as the broad hierarchy parent; final compatibility decision deferred. |
+| `place_catacombs` | CONTEXTUAL | PARIS, CITY, TRAVEL | LOW | MEDIUM | HIGH | Paris-specific contextual vocabulary; not general Core. |
+| `place_theme_park` | CONTEXTUAL | CITY, TRAVEL, LEISURE | MEDIUM | MEDIUM | HIGH | Tourism/nightlife/city contextual vocabulary; not minimal Core after historical travel-bias cleanup. |
+| `place_airport` | CONTEXTUAL | TRANSPORT, TRAVEL, CITY | MEDIUM | MEDIUM | HIGH | Transport/Travel/City contextual concept; not minimal Core. |
+| `place_art_gallery` | CONTEXTUAL | CITY, TRAVEL, LEISURE | MEDIUM | MEDIUM | HIGH | Tourism/nightlife/city contextual vocabulary; not minimal Core after historical travel-bias cleanup. |
+| `place_fashion_shopping` | CONTEXTUAL | RETAIL, CITY, TRAVEL | LOW | LOW | HIGH | DEPRECATE_COMPOSABLE and VISUAL_REDESIGN_CANDIDATE: prefer place_shop + item_clothing; preserve only as legacy/history. |
+| `item_cigarette` | CONTEXTUAL | NIGHTLIFE, HEALTH, TRAVEL | MEDIUM | MEDIUM | HIGH | Adult practical communication / Health-Safety / Travel contextual concept; not Core. |
+| `item_cannabis` | CONTEXTUAL | NIGHTLIFE, HEALTH, LEGAL, TRAVEL | LOW | LOW | HIGH | Adult practical communication / Health-Safety / Legal / Travel contextual concept; not Core. |
+| `drink_beer` | CONTEXTUAL | NIGHTLIFE, FOOD, TRAVEL | MEDIUM | MEDIUM | HIGH | Adult practical communication / Food-Drink contextual concept; not Core. |
 | `love_heart` | CONTEXTUAL | SOCIAL, EVERYDAY, NARRATIVE | MEDIUM | HIGH | HIGH | Broad love/affection concept. HEART + PERSON and HEART + PERSON + MANY remain contextual compositions, not new lexical primitives. |
-| `item_condom` | CONTEXTUAL | HEALTH, SAFETY, NIGHTLIFE, TRAVEL | MEDIUM | MEDIUM | MEDIUM | Contextual for now; safety/health/nightlife/travel use needs future evidence before Core. |
-| `nature_flower` | CONTEXTUAL | NATURE, SOCIAL, LEISURE, EVERYDAY | MEDIUM | MEDIUM | HIGH | Broad plant/vegetation/flower concept; do not force botanical precision or taxonomy completion. |
+| `item_condom` | CONTEXTUAL | HEALTH, SAFETY, TRAVEL | MEDIUM | MEDIUM | HIGH | Health/Safety/adult practical communication contextual concept; not Core. |
+| `nature_flower` | CORE | NATURE, EVERYDAY, SOCIAL | HIGH | HIGH | HIGH | Primary broad field is PLANT / VEGETATION / FLOWER contextually; do not force botanical precision. |
 | `eye_look` | STANDALONE_CORE | STANDALONE, PERCEPTION | LOW | HIGH | HIGH |  |
 | `item_clothing` | STANDALONE_CORE | STANDALONE, EVERYDAY | LOW | HIGH | HIGH |  |
-| `comm_speak` | STANDALONE_CORE | STANDALONE, COMMUNICATION | LOW | HIGH | HIGH |  |
-| `comm_sound` | STANDALONE_CORE | STANDALONE, COMMUNICATION | LOW | HIGH | HIGH |  |
-| `media_text` | STANDALONE_CORE | STANDALONE, MEDIA | LOW | HIGH | HIGH |  |
-| `media_image` | STANDALONE_CORE | STANDALONE, MEDIA | LOW | HIGH | HIGH |  |
+| `comm_speak` | CORE | COMMUNICATION, PEOPLE, PERCEPTION | MEDIUM | HIGH | HIGH | Primary field is SPEECH / COMMUNICATION / ORAL OR AUDIBLE COMMUNICATION; do not collapse into SOUND + TEXT. |
+| `comm_sound` | CORE | COMMUNICATION, PERCEPTION, MEDIA | MEDIUM | HIGH | HIGH | Primary field is SOUND / AUDIBLE SIGNAL / MUSIC / WHAT IS HEARD. |
+| `media_text` | CORE | COMMUNICATION, MEDIA, EVERYDAY | MEDIUM | HIGH | HIGH | Primary field is TEXT / WRITTEN INFORMATION; READ/WRITE/INFORMATION are contextual. |
+| `media_image` | CORE | COMMUNICATION, MEDIA, EVERYDAY | MEDIUM | HIGH | HIGH | Primary field is IMAGE / PICTURE / PHOTO / DRAWING / PAINTING / VISUAL REPRESENTATION. |
 | `nature_sun` | STANDALONE_CORE | STANDALONE, NATURE, TIME | LOW | HIGH | HIGH |  |
 | `state_light` | CORE | EVERYDAY, INFRASTRUCTURE, SAFETY | HIGH | HIGH | HIGH | Broad light/lighting concept. |
-| `food_produce` | CONTEXTUAL | FOOD, RETAIL, EVERYDAY | MEDIUM | MEDIUM | HIGH | Primary field is FRUIT / VEGETABLE / FRESH PRODUCE. Do not expand to PLANT. |
+| `food_produce` | CORE | FOOD, EVERYDAY, RETAIL | HIGH | HIGH | HIGH | Primary field is FRUIT / VEGETABLE / FRESH PRODUCE. Not PLANT. |
 | `food_bakery` | CORE | FOOD, EVERYDAY, RETAIL | HIGH | HIGH | HIGH | Primary field is BREAD / BAKED FOOD / BAKED GOODS / PASTRY. Bakery/place reading is secondary. |
 | `food_meat` | CORE | FOOD, EVERYDAY, RETAIL | HIGH | HIGH | HIGH | Human-accepted Architecture & Vocabulary Audit addition. Broad MEAT / ANIMAL FOOD / MEAT PRODUCTS primitive; do not split into steak, chicken, pork, beef, or drumstick without future context evidence. |
 | `rel_greater` | MECHANISM | NAVIGATION, RELATION | HIGH | HIGH | HIGH | Comparative GREATER/MORE relation; rightward reading is contextual only, not a global arrow definition. |
@@ -123,19 +129,12 @@ Entity symbols and numeric notation assets are excluded from these counts.
 | `rel_here` | MECHANISM | NAVIGATION, RELATION | HIGH | HIGH | HIGH | Broad here/target/reference-point operator; context determines exact reading. |
 | `rel_up` | MECHANISM | NAVIGATION, RELATION | HIGH | HIGH | HIGH | UP/DOWN vertical relation family member; not redefined as MORE/LESS for symmetry. |
 | `rel_down` | MECHANISM | NAVIGATION, RELATION | HIGH | HIGH | HIGH | UP/DOWN vertical relation family member; not redefined as MORE/LESS for symmetry. |
-| `nature_moon` | STANDALONE_CORE | STANDALONE, NATURE, TIME | LOW | HIGH | HIGH |  |
-| `surface_wavy` | CONTEXTUAL | ROAD, SURFACE, SAFETY, WATER | MEDIUM | HIGH | HIGH | Broad wavy/waves/unstable/uneven/slippery/irregular-surface concept supported by Road and Odyssey; not collapsed into WATER. |
+| `nature_moon` | CORE | NATURE, TIME, EVERYDAY | HIGH | HIGH | HIGH | Primary field is MOON / NIGHT / NIGHTTIME. Do not add DAY merely for symmetry. |
+| `surface_wavy` | CORE | SURFACE, SAFETY, WATER, ROAD | HIGH | HIGH | HIGH | Broad WAVY / WAVES / INSTABILITY / UNEVENNESS / SLIPPERINESS / IRREGULAR SURFACE concept; water-surface reading is contextual and WATER remains separate. |
 | `state_dead` | CONTEXTUAL | SAFETY, HEALTH, NARRATIVE, ROAD, INDUSTRIAL | MEDIUM | HIGH | MEDIUM | Accepted from Stress Test 02 as death/not-alive/deadly-contextual; cross-domain potential exists but current evidence does not justify Core. |
-| `tech_ai` | SPECIALIZED | TECH, SPECIALIZED, MACHINE_INTERFACE | LOW | LOW | HIGH | AI/Machine/Technology context vocabulary; not minimal Core. |
-| `action_conflict` | CORE | NARRATIVE, SAFETY, CULTURE, SOCIAL | HIGH | HIGH | MEDIUM | Broad conflict/war/aggression/fight/hostile action concept; distinct from qual_bad evaluation. |
-| `move_watercraft` | CONTEXTUAL | TRANSPORT, TRAVEL, WATER, NARRATIVE | MEDIUM | HIGH | MEDIUM | Preferred broad watercraft / boat / ship / generic water transport concept; not minimal Core. Existing move_boat remains legacy contextual pending future compatibility review. |
-| `qual_sacred` | CORE | CULTURE, NARRATIVE, SOCIAL | HIGH | HIGH | MEDIUM | Broad sacred/holy/divine/religious concept; avoids separate GOD/PRIEST/TEMPLE primitives unless future contexts require them. |
-| `nature_animal` | CORE | EVERYDAY, NATURE, FOOD, NARRATIVE | HIGH | HIGH | MEDIUM | General land-animal category; not rigorous taxonomy. Birds/fish/insects may emerge separately if real use creates pressure. |
-| `nature_cloud` | CORE | NATURE, WATER, NARRATIVE, TRAVEL | HIGH | HIGH | MEDIUM | Broad cloud/sky/air/atmospheric-space concept; do not add AIR/SKY/WEATHER merely for taxonomy. |
-
-## Review queue
-
-- `move_boat` remains a legacy contextual subtype while `move_watercraft` is the preferred broad water-transport primitive. A later compatibility audit should decide whether to deprecate, alias, or retain both.
-- `place_fashion_shopping` is preserved for compatibility but should be removed from active recommendations in favor of `place_shop + item_clothing`; its artwork remains a visual redesign candidate if kept in any legacy context.
-- `service_tools` stays in Core for now with medium confidence; repair/help/service should be retested with use evidence before any future demotion.
-- No unresolved Stress Test 03 Stage 1 hypothesis is promoted here to normative grammar. The audit changes vocabulary classification and semantics only.
+| `tech_ai` | CONTEXTUAL | TECH, MACHINE_INTERFACE, COMMUNICATION | LOW | MEDIUM | HIGH | AI/Machine/Technology context vocabulary; not Core. |
+| `action_conflict` | CORE | NARRATIVE, SAFETY, CULTURE, SOCIAL | HIGH | HIGH | HIGH | Human decision: KEEP_CORE. Broad CONFLICT / WAR / AGGRESSION / FIGHT / ATTACK / HOSTILE ACTION / VIOLENCE concept, distinct from BAD evaluation. |
+| `move_watercraft` | CONTEXTUAL | TRANSPORT, TRAVEL, WATER, NARRATIVE | MEDIUM | MEDIUM | HIGH | Human decision: KEEP_CONTEXTUAL. Preferred broad WATERCRAFT / BOAT / SHIP / GENERIC WATER TRANSPORT concept; do not promote to Core solely because broad. |
+| `qual_sacred` | CORE | CULTURE, NARRATIVE, SOCIAL | HIGH | HIGH | HIGH | Human decision: KEEP_CORE. Broad SACRED / HOLY / DIVINE / RELIGIOUS / GOD-DIVINITY contextually / SACRED STATUS concept. |
+| `nature_animal` | CORE | NATURE, EVERYDAY, FOOD, NARRATIVE | HIGH | HIGH | HIGH | Human decision: KEEP_CORE. General land-animal category; not scientific taxonomy. Birds/fish/insects may emerge later if needed. |
+| `nature_cloud` | CORE | NATURE, WATER, TRAVEL, NARRATIVE | HIGH | HIGH | HIGH | Human decision: KEEP_CORE. Broad CLOUD / SKY / AIR / ATMOSPHERIC SPACE / WEATHER context / OVERHEAD SKY CONTEXT. |

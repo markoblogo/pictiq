@@ -725,15 +725,15 @@ How can Pictiq cleanly separate Canonical Registry, Core, Standalone Core, conte
 
 ### What happened
 
-The audit applied accepted architecture decisions to the ordinary vocabulary registry and profiles. It also accepted `food_meat` as a new broad Core primitive for meat / animal food / meat products, based on a supplied human-approved reference image. The addition fills a genuine broad food-category gap alongside `food_produce` and `food_bakery` without creating narrower meat taxa.
+The audit applied accepted architecture decisions to the ordinary vocabulary registry and profiles, then reconciled final dispositions against human review. It also accepted `food_meat` as a new broad Core primitive for meat / animal food / meat products, based on a supplied human-approved reference image. The addition fills a genuine broad food-category gap alongside `food_produce` and `food_bakery` without creating narrower meat taxa.
 
 ### Evidence
 
-[Architecture & Vocabulary Audit](../research/pictiq-architecture-vocabulary-audit-2026-09.md), [machine-readable audit matrix](../research/pictiq-architecture-vocabulary-audit-2026-09.json), [food_meat QA note](experiments/architecture-vocabulary-audit-food-meat-qa.md), [Vocabulary Classification](../../spec/VOCABULARY_CLASSIFICATION.md), and [`lexicon/vocabulary-classification.json`](../../lexicon/vocabulary-classification.json).
+[Architecture & Vocabulary Audit](../research/pictiq-architecture-vocabulary-audit-2026-09.md), [machine-readable audit matrix](../research/pictiq-architecture-vocabulary-audit-2026-09.json), [visual-redesign candidate queue](../research/pictiq-visual-redesign-candidates-2026-09.md), [food_meat QA note](experiments/architecture-vocabulary-audit-food-meat-qa.md), [vocabulary cleanup note](concepts/vocabulary-cleanup-after-stress-tests.md), [Vocabulary Classification](../../spec/VOCABULARY_CLASSIFICATION.md), and [`lexicon/vocabulary-classification.json`](../../lexicon/vocabulary-classification.json).
 
 ### Decision / outcome
 
-The ordinary canonical registry now contains 83 icons. Entity Symbols remain a separate registry. Numeric notation remains separate from pragmatic `qty_*` communication quantities. `move_boat` versus `move_watercraft` remains explicitly deferred to a compatibility audit. No unresolved Stress Test 03 hypothesis was promoted to normative grammar.
+The ordinary canonical registry remains at 83 icons. Entity Symbols remain a separate registry. Numeric notation remains separate from pragmatic `qty_*` communication quantities. `move_watercraft` is accepted as the broad water-transport concept while `move_boat` remains legacy contextual; final compatibility action remains deferred. No unresolved Stress Test 03 hypothesis was promoted to normative grammar.
 
 ### Why it matters
 

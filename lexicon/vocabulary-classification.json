@@ -9,7 +9,9 @@
     "Canonical does not mean Core.",
     "Complexity belongs to the context that requires it, not to Core.",
     "Pictiq vocabulary is need-driven, not taxonomically symmetrical.",
-    "Vocabulary growth should follow real communication pressure, composition attempt, semantic compression, context-pack option, actual gap, and only then candidate primitive."
+    "Vocabulary growth should follow real communication pressure, composition attempt, semantic compression, context-pack option, actual gap, and only then candidate primitive.",
+    "Semantic migration is distinct from deprecation: a useful concept can survive while its primary meaning and future preferred ID change.",
+    "Deprecate composable compounds when ordinary composition expresses the useful meaning better than a dedicated lexical tile."
   ],
   "axes": {
     "vocabulary_generality": [
@@ -260,7 +262,7 @@
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "note": "Primary semantic field is MONEY / CURRENCY / PAYMENT VALUE. Cash/coins remain visual and contextual readings."
+      "note": "Human decision: KEEP_CORE. Primary field is MONEY / CURRENCY / PAYMENT VALUE."
     },
     {
       "id": "money_card",
@@ -273,7 +275,7 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "note": "Specific payment instrument; useful canonical contextual vocabulary, not minimal Core."
+      "note": "Specific card/payment-instrument concept; Finance/Travel/Commerce contextual vocabulary, not Core."
     },
     {
       "id": "money_atm_bank",
@@ -286,7 +288,7 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "note": "Specific finance/infrastructure service, not minimal Core."
+      "note": "Specific ATM/bank infrastructure concept; Finance/Travel/Commerce contextual vocabulary, not Core."
     },
     {
       "id": "comm_wifi",
@@ -294,13 +296,12 @@
       "secondary_contexts": [
         "TECH",
         "COMMUNICATION",
-        "TRAVEL",
-        "INFRASTRUCTURE"
+        "TRAVEL"
       ],
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "note": "Technology/infrastructure/travel concept; not minimal general Core."
+      "note": "Technology/travel/modern-everyday contextual concept; not Core."
     },
     {
       "id": "comm_phone",
@@ -314,7 +315,7 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "note": "Modern communication device/service; useful contextual vocabulary, not minimal Core."
+      "note": "Technology/travel/modern-everyday contextual concept; not Core."
     },
     {
       "id": "power_plug",
@@ -328,21 +329,21 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "note": "Specific charging/outlet concept; distinct from power_energy and not minimal Core."
+      "note": "Technology/travel/infrastructure contextual concept; do not confuse POWER PLUG with ENERGY."
     },
     {
       "id": "power_energy",
       "primary_role": "CORE",
       "secondary_contexts": [
-        "EVERYDAY",
-        "TECH",
         "SAFETY",
-        "INFRASTRUCTURE"
+        "INFRASTRUCTURE",
+        "EVERYDAY",
+        "TECH"
       ],
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "note": "Broad energy/electricity/power concept; not equivalent to power_plug."
+      "note": "Human decision: broad POWER / ENERGY remains separate and Core; not the same as power plug."
     },
     {
       "id": "need_toilet",
@@ -355,7 +356,7 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "note": "Everyday/public-facility/travel concept; useful canonical vocabulary but outside minimal Core."
+      "note": "Human decision: KEEP_CONTEXTUAL. Everyday/Public Facilities/Travel concept; preserve canonical asset."
     },
     {
       "id": "need_water",
@@ -388,14 +389,13 @@
       "primary_role": "CONTEXTUAL",
       "secondary_contexts": [
         "NIGHTLIFE",
-        "FOOD",
-        "LEGAL",
-        "TRAVEL"
+        "TRAVEL",
+        "FOOD"
       ],
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "note": "SEMANTIC_MIGRATION: compatibility ID. Accepted primary semantics are ALCOHOL / ALCOHOLIC DRINK; BAR/venue is secondary. Preferred future ID candidate: drink_alcohol. Do not create a duplicate active concept."
+      "note": "SEMANTIC_MIGRATION: accepted primary field ALCOHOL / ALCOHOLIC DRINK; secondary BAR / DRINKING VENUE / ALCOHOL SERVICE. Future preferred ID should be alcohol-oriented; retain need_bar as legacy alias/deprecated identifier."
     },
     {
       "id": "safety_medical",
@@ -429,14 +429,13 @@
       "primary_role": "CORE",
       "secondary_contexts": [
         "EVERYDAY",
-        "STANDALONE",
         "TRAVEL",
         "CITY"
       ],
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "note": "SEMANTIC_MIGRATION: compatibility ID. Accepted primary semantics are HOME / SHELTER / SLEEPING PLACE / BUILDING; HOTEL/accommodation is secondary. Preferred future ID candidate: place_home. Do not create a duplicate active concept."
+      "note": "SEMANTIC_MIGRATION: accepted primary field HOME / SHELTER / SLEEPING PLACE / BUILDING, HOMELAND contextually. Future preferred ID should be home-oriented; retain place_hotel as legacy alias/deprecated identifier."
     },
     {
       "id": "place_shop",
@@ -449,7 +448,7 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "note": "Generic shop remains useful commercial contextual vocabulary; not minimal Core merely because many compounds can use it."
+      "note": "Human decision: KEEP_CONTEXTUAL. Commercial/contextual vocabulary, not minimal Core."
     },
     {
       "id": "place_landmark_park",
@@ -461,30 +460,34 @@
       ],
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
-      "confidence": "HIGH"
+      "confidence": "HIGH",
+      "note": "Tourism/nightlife/city contextual vocabulary; not minimal Core after historical travel-bias cleanup."
     },
     {
       "id": "place_gas",
       "primary_role": "CONTEXTUAL",
       "secondary_contexts": [
-        "TRANSPORT",
-        "TRAVEL"
+        "CITY",
+        "TRAVEL",
+        "LEISURE"
       ],
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
-      "confidence": "HIGH"
+      "confidence": "HIGH",
+      "note": "Tourism/nightlife/city contextual vocabulary; not minimal Core after historical travel-bias cleanup."
     },
     {
       "id": "service_tools",
       "primary_role": "CORE",
       "secondary_contexts": [
         "EVERYDAY",
-        "INFRASTRUCTURE"
+        "INFRASTRUCTURE",
+        "INDUSTRIAL"
       ],
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
-      "confidence": "MEDIUM",
-      "note": "Kept in Core for now; repair/help contexts are broad but should be reviewed with use evidence."
+      "confidence": "HIGH",
+      "note": "Human decision: KEEP_CORE. Primary field is TOOLS / REPAIR / MAINTENANCE / FIXING; SERVICE is contextual."
     },
     {
       "id": "move_feet",
@@ -510,7 +513,7 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "note": "Transport-specific concept outside minimal Core."
+      "note": "Transport/Travel/City contextual concept; not minimal Core."
     },
     {
       "id": "move_car",
@@ -523,7 +526,7 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "note": "Transport-specific concept outside minimal Core after removal of historical travel bias."
+      "note": "Transport/Travel/City contextual concept; not minimal Core."
     },
     {
       "id": "move_public",
@@ -536,18 +539,20 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "note": "Transport/city/travel concept outside minimal Core."
+      "note": "Transport/Travel/City contextual concept; not minimal Core."
     },
     {
       "id": "place_disco",
       "primary_role": "CONTEXTUAL",
       "secondary_contexts": [
-        "NIGHTLIFE",
+        "CITY",
+        "TRAVEL",
         "LEISURE"
       ],
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
-      "confidence": "HIGH"
+      "confidence": "HIGH",
+      "note": "Tourism/nightlife/city contextual vocabulary; not minimal Core after historical travel-bias cleanup."
     },
     {
       "id": "paris_eiffel_tower",
@@ -555,12 +560,12 @@
       "secondary_contexts": [
         "PARIS",
         "CITY",
-        "TRAVEL",
-        "CULTURE"
+        "TRAVEL"
       ],
-      "embodied_relevance": "MEDIUM",
+      "embodied_relevance": "LOW",
       "standalone_relevance": "MEDIUM",
-      "confidence": "HIGH"
+      "confidence": "HIGH",
+      "note": "Paris-specific contextual vocabulary; not general Core."
     },
     {
       "id": "paris_arc_de_triomphe",
@@ -568,12 +573,12 @@
       "secondary_contexts": [
         "PARIS",
         "CITY",
-        "TRAVEL",
-        "CULTURE"
+        "TRAVEL"
       ],
-      "embodied_relevance": "MEDIUM",
+      "embodied_relevance": "LOW",
       "standalone_relevance": "MEDIUM",
-      "confidence": "HIGH"
+      "confidence": "HIGH",
+      "note": "Paris-specific contextual vocabulary; not general Core."
     },
     {
       "id": "paris_louvre_pyramid",
@@ -581,12 +586,12 @@
       "secondary_contexts": [
         "PARIS",
         "CITY",
-        "TRAVEL",
-        "CULTURE"
+        "TRAVEL"
       ],
-      "embodied_relevance": "MEDIUM",
+      "embodied_relevance": "LOW",
       "standalone_relevance": "MEDIUM",
-      "confidence": "HIGH"
+      "confidence": "HIGH",
+      "note": "Paris-specific contextual vocabulary; not general Core."
     },
     {
       "id": "paris_notre_dame",
@@ -594,12 +599,12 @@
       "secondary_contexts": [
         "PARIS",
         "CITY",
-        "TRAVEL",
-        "CULTURE"
+        "TRAVEL"
       ],
-      "embodied_relevance": "MEDIUM",
+      "embodied_relevance": "LOW",
       "standalone_relevance": "MEDIUM",
-      "confidence": "HIGH"
+      "confidence": "HIGH",
+      "note": "Paris-specific contextual vocabulary; not general Core."
     },
     {
       "id": "paris_sacre_coeur",
@@ -607,37 +612,38 @@
       "secondary_contexts": [
         "PARIS",
         "CITY",
-        "TRAVEL",
-        "CULTURE"
+        "TRAVEL"
       ],
-      "embodied_relevance": "MEDIUM",
+      "embodied_relevance": "LOW",
       "standalone_relevance": "MEDIUM",
-      "confidence": "HIGH"
+      "confidence": "HIGH",
+      "note": "Paris-specific contextual vocabulary; not general Core."
     },
     {
       "id": "paris_moulin_windmill",
       "primary_role": "CONTEXTUAL",
       "secondary_contexts": [
         "PARIS",
-        "NIGHTLIFE",
-        "CULTURE"
+        "CITY",
+        "TRAVEL"
       ],
-      "embodied_relevance": "MEDIUM",
+      "embodied_relevance": "LOW",
       "standalone_relevance": "MEDIUM",
-      "confidence": "HIGH"
+      "confidence": "HIGH",
+      "note": "Paris-specific contextual vocabulary; not general Core."
     },
     {
       "id": "paris_croissant",
       "primary_role": "CONTEXTUAL",
       "secondary_contexts": [
         "PARIS",
-        "FOOD",
-        "CULTURE"
+        "CITY",
+        "TRAVEL"
       ],
-      "embodied_relevance": "MEDIUM",
+      "embodied_relevance": "LOW",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "note": "Paris-specific food/culture symbol in the Paris context, not generic food Core."
+      "note": "Paris-specific contextual vocabulary; not general Core."
     },
     {
       "id": "move_boat",
@@ -650,10 +656,23 @@
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "note": "LEGACY_CONTEXTUAL: narrower/historical boat concept. move_watercraft is the preferred broad water-transport concept; preserve until future compatibility review."
+      "note": "LEGACY_CONTEXTUAL: narrower historical/recreational/travel-oriented boat subtype. move_watercraft is accepted as the broad hierarchy parent; final compatibility decision deferred."
     },
     {
       "id": "place_catacombs",
+      "primary_role": "CONTEXTUAL",
+      "secondary_contexts": [
+        "PARIS",
+        "CITY",
+        "TRAVEL"
+      ],
+      "embodied_relevance": "LOW",
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH",
+      "note": "Paris-specific contextual vocabulary; not general Core."
+    },
+    {
+      "id": "place_theme_park",
       "primary_role": "CONTEXTUAL",
       "secondary_contexts": [
         "CITY",
@@ -662,82 +681,74 @@
       ],
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
-      "confidence": "HIGH"
-    },
-    {
-      "id": "place_theme_park",
-      "primary_role": "CONTEXTUAL",
-      "secondary_contexts": [
-        "LEISURE",
-        "TRAVEL"
-      ],
-      "embodied_relevance": "MEDIUM",
-      "standalone_relevance": "MEDIUM",
-      "confidence": "HIGH"
+      "confidence": "HIGH",
+      "note": "Tourism/nightlife/city contextual vocabulary; not minimal Core after historical travel-bias cleanup."
     },
     {
       "id": "place_airport",
       "primary_role": "CONTEXTUAL",
       "secondary_contexts": [
         "TRANSPORT",
-        "TRAVEL"
+        "TRAVEL",
+        "CITY"
       ],
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
-      "confidence": "HIGH"
+      "confidence": "HIGH",
+      "note": "Transport/Travel/City contextual concept; not minimal Core."
     },
     {
       "id": "place_art_gallery",
       "primary_role": "CONTEXTUAL",
       "secondary_contexts": [
-        "CULTURE",
-        "LEISURE",
-        "TRAVEL"
+        "CITY",
+        "TRAVEL",
+        "LEISURE"
       ],
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
-      "confidence": "HIGH"
+      "confidence": "HIGH",
+      "note": "Tourism/nightlife/city contextual vocabulary; not minimal Core after historical travel-bias cleanup."
     },
     {
       "id": "place_fashion_shopping",
       "primary_role": "CONTEXTUAL",
       "secondary_contexts": [
         "RETAIL",
-        "CULTURE",
+        "CITY",
         "TRAVEL"
       ],
       "embodied_relevance": "LOW",
       "standalone_relevance": "LOW",
-      "confidence": "MEDIUM",
-      "note": "DEPRECATE_COMPOSABLE / VISUAL_REDESIGN_CANDIDATE: prefer place_shop + item_clothing. Preserve historical evidence and compatibility; do not redesign unnecessary compound primitive now."
+      "confidence": "HIGH",
+      "note": "DEPRECATE_COMPOSABLE and VISUAL_REDESIGN_CANDIDATE: prefer place_shop + item_clothing; preserve only as legacy/history."
     },
     {
       "id": "item_cigarette",
       "primary_role": "CONTEXTUAL",
       "secondary_contexts": [
         "NIGHTLIFE",
-        "RETAIL",
         "HEALTH",
-        "LEGAL"
+        "TRAVEL"
       ],
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "note": "Contextual nightlife/retail/health/legal item, not a specialized technical concept."
+      "note": "Adult practical communication / Health-Safety / Travel contextual concept; not Core."
     },
     {
       "id": "item_cannabis",
       "primary_role": "CONTEXTUAL",
       "secondary_contexts": [
         "NIGHTLIFE",
-        "RETAIL",
         "HEALTH",
-        "LEGAL"
+        "LEGAL",
+        "TRAVEL"
       ],
-      "embodied_relevance": "MEDIUM",
-      "standalone_relevance": "MEDIUM",
+      "embodied_relevance": "LOW",
+      "standalone_relevance": "LOW",
       "confidence": "HIGH",
-      "note": "Contextual nightlife/retail/health/legal item, not a specialized technical concept."
+      "note": "Adult practical communication / Health-Safety / Legal / Travel contextual concept; not Core."
     },
     {
       "id": "drink_beer",
@@ -745,12 +756,12 @@
       "secondary_contexts": [
         "NIGHTLIFE",
         "FOOD",
-        "LEGAL"
+        "TRAVEL"
       ],
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "note": "Specific alcoholic-drink subtype; remains contextual and separate from migrated broad alcohol concept."
+      "note": "Adult practical communication / Food-Drink contextual concept; not Core."
     },
     {
       "id": "love_heart",
@@ -771,27 +782,25 @@
       "secondary_contexts": [
         "HEALTH",
         "SAFETY",
-        "NIGHTLIFE",
         "TRAVEL"
       ],
       "embodied_relevance": "MEDIUM",
       "standalone_relevance": "MEDIUM",
-      "confidence": "MEDIUM",
-      "note": "Contextual for now; safety/health/nightlife/travel use needs future evidence before Core."
+      "confidence": "HIGH",
+      "note": "Health/Safety/adult practical communication contextual concept; not Core."
     },
     {
       "id": "nature_flower",
-      "primary_role": "CONTEXTUAL",
+      "primary_role": "CORE",
       "secondary_contexts": [
         "NATURE",
-        "SOCIAL",
-        "LEISURE",
-        "EVERYDAY"
+        "EVERYDAY",
+        "SOCIAL"
       ],
-      "embodied_relevance": "MEDIUM",
-      "standalone_relevance": "MEDIUM",
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "note": "Broad plant/vegetation/flower concept; do not force botanical precision or taxonomy completion."
+      "note": "Primary broad field is PLANT / VEGETATION / FLOWER contextually; do not force botanical precision."
     },
     {
       "id": "eye_look",
@@ -817,47 +826,55 @@
     },
     {
       "id": "comm_speak",
-      "primary_role": "STANDALONE_CORE",
+      "primary_role": "CORE",
       "secondary_contexts": [
-        "STANDALONE",
-        "COMMUNICATION"
+        "COMMUNICATION",
+        "PEOPLE",
+        "PERCEPTION"
       ],
-      "embodied_relevance": "LOW",
+      "embodied_relevance": "MEDIUM",
       "standalone_relevance": "HIGH",
-      "confidence": "HIGH"
+      "confidence": "HIGH",
+      "note": "Primary field is SPEECH / COMMUNICATION / ORAL OR AUDIBLE COMMUNICATION; do not collapse into SOUND + TEXT."
     },
     {
       "id": "comm_sound",
-      "primary_role": "STANDALONE_CORE",
+      "primary_role": "CORE",
       "secondary_contexts": [
-        "STANDALONE",
-        "COMMUNICATION"
+        "COMMUNICATION",
+        "PERCEPTION",
+        "MEDIA"
       ],
-      "embodied_relevance": "LOW",
+      "embodied_relevance": "MEDIUM",
       "standalone_relevance": "HIGH",
-      "confidence": "HIGH"
+      "confidence": "HIGH",
+      "note": "Primary field is SOUND / AUDIBLE SIGNAL / MUSIC / WHAT IS HEARD."
     },
     {
       "id": "media_text",
-      "primary_role": "STANDALONE_CORE",
+      "primary_role": "CORE",
       "secondary_contexts": [
-        "STANDALONE",
-        "MEDIA"
+        "COMMUNICATION",
+        "MEDIA",
+        "EVERYDAY"
       ],
-      "embodied_relevance": "LOW",
+      "embodied_relevance": "MEDIUM",
       "standalone_relevance": "HIGH",
-      "confidence": "HIGH"
+      "confidence": "HIGH",
+      "note": "Primary field is TEXT / WRITTEN INFORMATION; READ/WRITE/INFORMATION are contextual."
     },
     {
       "id": "media_image",
-      "primary_role": "STANDALONE_CORE",
+      "primary_role": "CORE",
       "secondary_contexts": [
-        "STANDALONE",
-        "MEDIA"
+        "COMMUNICATION",
+        "MEDIA",
+        "EVERYDAY"
       ],
-      "embodied_relevance": "LOW",
+      "embodied_relevance": "MEDIUM",
       "standalone_relevance": "HIGH",
-      "confidence": "HIGH"
+      "confidence": "HIGH",
+      "note": "Primary field is IMAGE / PICTURE / PHOTO / DRAWING / PAINTING / VISUAL REPRESENTATION."
     },
     {
       "id": "nature_sun",
@@ -886,16 +903,16 @@
     },
     {
       "id": "food_produce",
-      "primary_role": "CONTEXTUAL",
+      "primary_role": "CORE",
       "secondary_contexts": [
         "FOOD",
-        "RETAIL",
-        "EVERYDAY"
+        "EVERYDAY",
+        "RETAIL"
       ],
-      "embodied_relevance": "MEDIUM",
-      "standalone_relevance": "MEDIUM",
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "note": "Primary field is FRUIT / VEGETABLE / FRESH PRODUCE. Do not expand to PLANT."
+      "note": "Primary field is FRUIT / VEGETABLE / FRESH PRODUCE. Not PLANT."
     },
     {
       "id": "food_bakery",
@@ -997,29 +1014,30 @@
     },
     {
       "id": "nature_moon",
-      "primary_role": "STANDALONE_CORE",
+      "primary_role": "CORE",
       "secondary_contexts": [
-        "STANDALONE",
         "NATURE",
-        "TIME"
+        "TIME",
+        "EVERYDAY"
       ],
-      "embodied_relevance": "LOW",
+      "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
-      "confidence": "HIGH"
+      "confidence": "HIGH",
+      "note": "Primary field is MOON / NIGHT / NIGHTTIME. Do not add DAY merely for symmetry."
     },
     {
       "id": "surface_wavy",
-      "primary_role": "CONTEXTUAL",
+      "primary_role": "CORE",
       "secondary_contexts": [
-        "ROAD",
         "SURFACE",
         "SAFETY",
-        "WATER"
+        "WATER",
+        "ROAD"
       ],
-      "embodied_relevance": "MEDIUM",
+      "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
-      "note": "Broad wavy/waves/unstable/uneven/slippery/irregular-surface concept supported by Road and Odyssey; not collapsed into WATER."
+      "note": "Broad WAVY / WAVES / INSTABILITY / UNEVENNESS / SLIPPERINESS / IRREGULAR SURFACE concept; water-surface reading is contextual and WATER remains separate."
     },
     {
       "id": "state_dead",
@@ -1038,16 +1056,16 @@
     },
     {
       "id": "tech_ai",
-      "primary_role": "SPECIALIZED",
+      "primary_role": "CONTEXTUAL",
       "secondary_contexts": [
         "TECH",
-        "SPECIALIZED",
-        "MACHINE_INTERFACE"
+        "MACHINE_INTERFACE",
+        "COMMUNICATION"
       ],
       "embodied_relevance": "LOW",
-      "standalone_relevance": "LOW",
+      "standalone_relevance": "MEDIUM",
       "confidence": "HIGH",
-      "note": "AI/Machine/Technology context vocabulary; not minimal Core."
+      "note": "AI/Machine/Technology context vocabulary; not Core."
     },
     {
       "id": "action_conflict",
@@ -1060,8 +1078,8 @@
       ],
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
-      "confidence": "MEDIUM",
-      "note": "Broad conflict/war/aggression/fight/hostile action concept; distinct from qual_bad evaluation."
+      "confidence": "HIGH",
+      "note": "Human decision: KEEP_CORE. Broad CONFLICT / WAR / AGGRESSION / FIGHT / ATTACK / HOSTILE ACTION / VIOLENCE concept, distinct from BAD evaluation."
     },
     {
       "id": "move_watercraft",
@@ -1073,9 +1091,9 @@
         "NARRATIVE"
       ],
       "embodied_relevance": "MEDIUM",
-      "standalone_relevance": "HIGH",
-      "confidence": "MEDIUM",
-      "note": "Preferred broad watercraft / boat / ship / generic water transport concept; not minimal Core. Existing move_boat remains legacy contextual pending future compatibility review."
+      "standalone_relevance": "MEDIUM",
+      "confidence": "HIGH",
+      "note": "Human decision: KEEP_CONTEXTUAL. Preferred broad WATERCRAFT / BOAT / SHIP / GENERIC WATER TRANSPORT concept; do not promote to Core solely because broad."
     },
     {
       "id": "qual_sacred",
@@ -1087,22 +1105,22 @@
       ],
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
-      "confidence": "MEDIUM",
-      "note": "Broad sacred/holy/divine/religious concept; avoids separate GOD/PRIEST/TEMPLE primitives unless future contexts require them."
+      "confidence": "HIGH",
+      "note": "Human decision: KEEP_CORE. Broad SACRED / HOLY / DIVINE / RELIGIOUS / GOD-DIVINITY contextually / SACRED STATUS concept."
     },
     {
       "id": "nature_animal",
       "primary_role": "CORE",
       "secondary_contexts": [
-        "EVERYDAY",
         "NATURE",
+        "EVERYDAY",
         "FOOD",
         "NARRATIVE"
       ],
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
-      "confidence": "MEDIUM",
-      "note": "General land-animal category; not rigorous taxonomy. Birds/fish/insects may emerge separately if real use creates pressure."
+      "confidence": "HIGH",
+      "note": "Human decision: KEEP_CORE. General land-animal category; not scientific taxonomy. Birds/fish/insects may emerge later if needed."
     },
     {
       "id": "nature_cloud",
@@ -1110,13 +1128,13 @@
       "secondary_contexts": [
         "NATURE",
         "WATER",
-        "NARRATIVE",
-        "TRAVEL"
+        "TRAVEL",
+        "NARRATIVE"
       ],
       "embodied_relevance": "HIGH",
       "standalone_relevance": "HIGH",
-      "confidence": "MEDIUM",
-      "note": "Broad cloud/sky/air/atmospheric-space concept; do not add AIR/SKY/WEATHER merely for taxonomy."
+      "confidence": "HIGH",
+      "note": "Human decision: KEEP_CORE. Broad CLOUD / SKY / AIR / ATMOSPHERIC SPACE / WEATHER context / OVERHEAD SKY CONTEXT."
     }
   ],
   "canonical_lexicon_version": "0.6.0"

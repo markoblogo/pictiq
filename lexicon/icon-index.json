@@ -501,9 +501,9 @@
         "alcohol",
         "alcoholic drink",
         "bar",
-        "drinks",
         "drinking venue",
-        "alcohol service"
+        "alcohol service",
+        "drinks"
       ],
       "tags_en": [
         "drinks",
@@ -565,7 +565,7 @@
         "building",
         "hotel",
         "accommodation",
-        "lodging",
+        "bedroom",
         "homeland"
       ],
       "tags_en": [
@@ -1238,7 +1238,7 @@
       "id": "comm_sound",
       "type": "icon",
       "category": "communication",
-      "meaning_en": "sound / audible signal / music / audio",
+      "meaning_en": "sound / audible signal / music / what is heard",
       "aliases_en": [
         "sound",
         "audio",
@@ -1576,7 +1576,7 @@
       "id": "surface_wavy",
       "type": "icon",
       "category": "surface",
-      "meaning_en": "wavy / waves / unstable uneven or slippery surface",
+      "meaning_en": "wavy / waves / instability / unevenness / slipperiness / irregular surface",
       "aliases_en": [
         "wavy",
         "waves",
@@ -1663,8 +1663,7 @@
         "fight",
         "attack",
         "hostile action",
-        "violent action",
-        "tension"
+        "violence"
       ],
       "tags_en": [
         "action",
@@ -1707,15 +1706,14 @@
       "id": "qual_sacred",
       "type": "operator",
       "category": "qualifier",
-      "meaning_en": "sacred / holy / divine / religious / ritual",
+      "meaning_en": "sacred / holy / divine / religious",
       "aliases_en": [
         "sacred",
         "holy",
         "divine",
         "religious",
         "ritual",
-        "god",
-        "divinity"
+        "sacred status"
       ],
       "tags_en": [
         "qualifier",
@@ -1737,10 +1735,10 @@
       "meaning_en": "animal / general land-animal category",
       "aliases_en": [
         "animal",
+        "animals",
         "land animal",
-        "mammal",
         "reptile",
-        "creature"
+        "mammal"
       ],
       "tags_en": [
         "nature",
@@ -1763,8 +1761,8 @@
         "cloud",
         "sky",
         "air",
-        "atmosphere",
         "weather",
+        "atmosphere",
         "overhead"
       ],
       "tags_en": [
