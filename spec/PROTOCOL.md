@@ -22,6 +22,8 @@ See the research notes:
 - Zero-intent: pointing at an object icon is a valid message by default (“this / need this / where is this”).
 - Meaning is amplified by punctuation tiles and context.
 - Some nouns may act as actions depending on context (transport = ride, coins = pay).
+- Pictiq translates semantic and practical function, not the surface form of the source language.
+- Pictiq preserves distinctions required for the intended meaning or action, not distinctions merely because a source language lexicalizes or grammaticalizes them.
 
 ### 1.1 Embodied and Standalone Communication
 
@@ -95,8 +97,9 @@ An absent lexical equivalent MUST NOT be treated automatically as a protocol def
 - **EMBODIED-OMITTABLE:** the embodied channel can supply the concept reliably enough that no tile is needed for that use.
 - **STANDALONE-GAP:** the concept is necessary when the message must work without the communicator or transient context, and existing tiles or composition do not preserve it honestly.
 - **OUT-OF-SCOPE:** explicit encoding would add language-specific grammar, excessive lexical breadth, or a concept without demonstrated independent Pictiq utility.
+- **INTENTIONAL_OMISSION:** source information is deliberately excluded because it does not materially contribute to the selected Pictiq representation. This is distinct from LOSSY, where a relevant attempted distinction is partly lost, and from GAP, where the meaning cannot currently be represented honestly enough.
 
-The states are analytical and may overlap. For example, visual attention can be EMBODIED-OMITTABLE when gaze or pointing is visible and still be a STANDALONE-GAP for an unattended accessibility cue.
+The states are analytical and may overlap. For example, visual attention can be EMBODIED-OMITTABLE when gaze or pointing is visible and still be a STANDALONE-GAP for an unattended accessibility cue. INTENTIONAL_OMISSION does not claim that omitted source information is intrinsically unimportant; it records a decision relative to the chosen Pictiq message or narrative frame.
 
 #### Relationship to Toki Pona
 
@@ -142,7 +145,7 @@ Numeric notation is an **ACCEPTED SHARED NOTATION MECHANISM** for exact written 
 
 #### Entity symbols
 
-An entity symbol is a unique visual identifier for a specific person, fictional character, organization, place, object, or other named entity within an explicit context. It behaves like a **visual proper name**. It differs from a generic lexical concept: a neutral person tile means “person / human participant,” while an entity symbol means “this specific identified entity.”
+An entity symbol is a unique visual identifier for a specific person, fictional character, organization, country, city, island, named place, named object, fictional location, or other named entity within an explicit context. It behaves like a **visual proper name**. It differs from a generic lexical concept: a neutral person tile means “person / human participant,” while an entity symbol means “this specific identified entity.”
 
 > Do not spell an identity when a symbol can identify it.
 
@@ -159,6 +162,13 @@ Governance requirements:
 - **Fictional, historical, and public-domain entities:** a project, translation, pack, or narrative MAY define a symbol canonical within that named context and version until explicitly revised.
 - **Scope:** identity MUST have an explicit namespace or context. No global first-claim registry is implied.
 - **Recognition:** a symbol SHOULD use distinctive, recognizable associations rather than an arbitrary abstract mark where practical. A tile rendering MUST pass normal perceptual QA.
+- **Gender neutrality:** entity symbols identify the specific entity but do not need to encode gender unless the scoped context materially requires it.
+
+#### Structural gender neutrality
+
+Pictiq does not encode gender by default. Generic `person_generic` means human/person, not man or woman.
+
+Do not create Core distinctions for man/woman, he/she, son/daughter, or husband/wife solely because a source language encodes them. Gender may be inferred from known entity identity, narrative context, external knowledge, or a specialized context where the distinction is materially required. If such a specialized domain exists, it should investigate contextual mechanisms rather than adding gender distinctions to Core by default.
 
 #### Embodied references
 

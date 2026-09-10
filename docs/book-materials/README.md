@@ -45,3 +45,4 @@ The [vocabulary architecture classification](concepts/vocabulary-architecture.md
 ## Current research threads
 
 - Road Wayfinding accepted additions: `surface_wavy`, `state_dead`, and partial numeric notation are recorded in [`experiments/road-wayfinding-stress-test.md`](experiments/road-wayfinding-stress-test.md) and [`../research/road-wayfinding-stress-test-v1.md`](../research/road-wayfinding-stress-test-v1.md).
+- Odyssey × Toki Pona × sitelen pona Stage 1 records narrative architecture findings, `INTENTIONAL_OMISSION`, structural gender neutrality, and Stage 2 entity/primitive candidates in [`experiments/odyssey-toki-pona-pictiq-stress-test.md`](experiments/odyssey-toki-pona-pictiq-stress-test.md) and [`../research/odyssey-toki-pona-pictiq-stress-test-03-stage-1.md`](../research/odyssey-toki-pona-pictiq-stress-test-03-stage-1.md).

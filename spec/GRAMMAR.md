@@ -127,7 +127,29 @@ Examples:
 
 `nature_sun` and `nature_moon` can combine with `time` to distinguish daylight and nighttime contexts: `time + nature_sun`, `time + nature_moon`. They are not a complete calendar or clock system.
 
-## 12. Multi-clause messages
+
+
+## 12. Narrative and dialogue hypotheses
+
+Sequential Pictiq frames may preserve event order: A, then B, then C. This does not make adjacency or visual sequence a strict universal causality operator. A preceding frame may support causal interpretation through narrative context, but Pictiq does not define `A → B` as “A causes B.” Do not add BECAUSE or CAUSE without separate evidence.
+
+Communication structure can carry some speech acts without a lexical tile naming the speech act. In dialogue context, `person_generic + punct_question` may pragmatically ask “who are you?”, and a following entity symbol may serve as the answer. `comm_speak + punct_question` may ask whether to talk, communicate, explain, or begin communication depending on context. Do not add WHO, I, YOU, NAME, ASK, ANSWER, or STRANGER solely to mirror a source-language dialogue form.
+
+Location and origin questions should first reuse existing reference/place/question structure. `rel_here + punct_question` may ask where/here/current place; `rel_here + punct_question`, a home/place context, or a following named-place entity may ask where home is or where someone is from. A following named-place entity symbol may serve as the answer. Do not add FROM or ORIGIN solely for this use.
+
+Clothing questions can be carried by `person_generic + item_clothing + punct_question`, or by `item_clothing + punct_question` in clear dialogue context. The exact source-language GIVE relation may be intentionally omitted when the narrative representation only needs the clothing relation.
+
+Relationship readings should remain contextual composition rather than new family lexemes by default. `love_heart + person_generic` may mean loved person, partner, beloved, or close relation; it does not formally mean husband/wife. `love_heart + person_generic + qty_5 + qty_plus` may mean family or loved group in context. `love_heart + person_generic + rel_lesser` is a hypothesis for child/descendant in family context; `rel_lesser` does not globally mean child.
+
+`power_energy` may be tested as a contextual intensifier with evaluative or emotional units, such as `love_heart + power_energy` or `qual_bad + power_energy`. This is not normative because `power_energy` also has literal energy/electricity readings. Repeating a symbol is not currently preferred as formal intensity grammar because repetition can imply intensity, plurality, multiple objects, or decoration.
+
+## 13. Semantic frames
+
+Composition meaning may emerge from the semantic frame of the whole group, not from pairwise dictionary substitution. For example, `ANIMAL + state_hot` can imply animal exposed to heat/fire, burning animal, sacrifice, or another contextual reading. `ANIMAL + need_food + state_hot` shifts the frame toward cooking, cooked animal food, or food preparation. Do not add COOK solely for this kind of case.
+
+`qual_bad` remains negative evaluation, attitude, or state. A deferred `CONFLICT` candidate would represent hostile action or active conflict. These are distinct: hostile attitude is not the same as hostile action.
+
+## 14. Multi-clause messages
 
 One semantic proposition or intention belongs on one phrase line. Natural-language multi-clause input SHOULD normally be decomposed into multiple Pictiq phrase lines.
 
@@ -144,12 +166,12 @@ Pictiq:
 
 Each line is a complete semantic unit.
 
-## 13. Phrase length guidance
+## 15. Phrase length guidance
 
 - Maximum allowed phrase length: 5 icons.
 - Recommended optimal phrase length: up to 3 icons.
 
-## 14. Phrase examples
+## 16. Phrase examples
 
 - `need_toilet + punct_question`
 - `safety_medical + punct_exclaim`

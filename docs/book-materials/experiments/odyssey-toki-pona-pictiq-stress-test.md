@@ -1,0 +1,46 @@
+# Odyssey × Toki Pona × sitelen pona × Pictiq Stress Test
+
+> Source artifact: [Pictiq Stress Test 03 Stage 1](../../research/odyssey-toki-pona-pictiq-stress-test-03-stage-1.md)  
+> Status: ARCHITECTURE / BOOK-MATERIALS RECORD  
+> Date: 2026-09-10
+
+## Starting question
+
+Can Pictiq carry narrative meaning from the Odyssey while being compared against English, Toki Pona, and sitelen pona without turning every source-language word or grammatical distinction into a new Pictiq tile?
+
+## What Stage 1 records
+
+Stage 1 used six manually reviewed semantic areas: return from war, gods and hostility, ship/sea/dark sky, Arete’s dialogue questions, food/survival/animal/cooking, and the Polyphemus eye-injury/homecoming block.
+
+The main architectural result is that Pictiq should translate semantic and practical function rather than surface form. It should preserve distinctions required for the narrative skeleton and selected reader action, while intentionally omitting details that do not materially affect that representation.
+
+## Book-use value
+
+This experiment is useful book material because it shows Pictiq moving beyond road signs and travel cards into narrative compression. The interesting finding is not that Pictiq can replace Homeric prose. It is that a visual protocol needs a defensible filter for what a narrative representation must preserve.
+
+## Accepted principles preserved
+
+- Pictiq does not encode gender by default.
+- Proper names belong to scoped Entity Symbols, not ordinary lexical tiles.
+- `INTENTIONAL_OMISSION` is different from `LOSSY` and `GAP`.
+- Communication structure can perform some speech acts without separate WHO/ASK/ANSWER tiles.
+- Whole semantic frames matter: `ANIMAL + FIRE` is not the same frame as `ANIMAL + FOOD + FIRE`.
+- Event order can be preserved by sequence without defining universal causality.
+
+## Stage 2 candidates
+
+Entity-symbol design candidates: Calypso, Poseidon, Zeus, Saturn, and Polyphemus.
+
+Ordinary primitive candidates: CONFLICT, WATERCRAFT, SACRED, ANIMAL, and CLOUD/SKY.
+
+These are design candidates only. No icons, registry entries, or canonical IDs were created in Stage 1.
+
+## Relationship to previous stress tests
+
+Stress Test 01 established Toki Pona and sitelen pona as comparative research systems, not direct ancestors or completion targets.
+
+Stress Test 02 showed that a road context can reuse broad primitives and shared notation, especially `surface_wavy`, `state_dead`, and numeric notation. Stress Test 03 gives `surface_wavy` and `state_dead` independent narrative evidence, while keeping their accepted classification unchanged.
+
+## Future work
+
+Stage 2 can design scoped Odyssey entity symbols and test deferred ordinary primitive candidates. A later visual comparison must use actual canonical Pictiq assets and must not invent fake sitelen pona glyphs or fake Pictiq icons.

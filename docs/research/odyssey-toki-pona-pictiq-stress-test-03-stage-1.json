@@ -1,0 +1,93 @@
+{
+  "id": "stress-test-03-odyssey-toki-pona-pictiq-stage-1",
+  "title": "Pictiq Stress Test 03: Odyssey × Toki Pona × sitelen pona × Pictiq — Stage 1",
+  "date": "2026-09-10",
+  "status": "RESEARCH / ARCHITECTURE STAGE 1",
+  "scope": {
+    "creates_svg_icons": false,
+    "creates_canonical_lexical_ids": false,
+    "modifies_existing_icon_geometry": false,
+    "adds_entity_registry_entries": false,
+    "creates_release_or_tag": false
+  },
+  "reviewed_semantic_areas": [
+    "return from war / Odysseus / Calypso",
+    "gods / Poseidon / hostility / homecoming",
+    "ship / sea / dark sky",
+    "Arete dialogue: who are you / where from / clothing",
+    "food / survival / animal / cooking",
+    "Poseidon / Polyphemus / eye injury / family relation / blocked homecoming"
+  ],
+  "principles": [
+    "Pictiq translates semantic and practical function, not source-language surface form.",
+    "Pictiq preserves distinctions required for intended meaning or action, not distinctions merely because a source language lexicalizes or grammaticalizes them.",
+    "Pictiq does not encode gender by default.",
+    "Communication structure can perform a speech act without a lexical tile naming that speech act.",
+    "The meaning of a Pictiq composition may emerge from the semantic frame of the whole group."
+  ],
+  "analysis_categories_added": [
+    {
+      "id": "INTENTIONAL_OMISSION",
+      "definition": "Source information deliberately excluded because it does not materially contribute to the selected Pictiq representation."
+    }
+  ],
+  "stage_2_entity_candidates": [
+    "Calypso",
+    "Poseidon",
+    "Zeus",
+    "Saturn",
+    "Polyphemus"
+  ],
+  "stage_2_ordinary_primitive_candidates": [
+    "CONFLICT",
+    "WATERCRAFT",
+    "SACRED",
+    "ANIMAL",
+    "CLOUD_SKY"
+  ],
+  "existing_cross_domain_evidence": {
+    "surface_wavy": [
+      "road surface irregularity",
+      "waves / sea surface"
+    ],
+    "state_dead": [
+      "road/safety danger",
+      "narrative death/survival"
+    ],
+    "parametric_color": [
+      "dark sea",
+      "dark cloud / dark sky"
+    ]
+  },
+  "deferred_or_rejected_from_stage_1": [
+    "WHO",
+    "I",
+    "YOU",
+    "NAME",
+    "ASK",
+    "ANSWER",
+    "STRANGER",
+    "FROM",
+    "ORIGIN",
+    "GIVE",
+    "BECAUSE",
+    "CAUSE",
+    "COOK",
+    "DINNER",
+    "STARVATION",
+    "HUNGER",
+    "DARK",
+    "BLACK",
+    "GREY",
+    "GOD",
+    "PRIEST",
+    "TEMPLE",
+    "DEER",
+    "mast",
+    "sail",
+    "hand",
+    "island",
+    "land",
+    "cave"
+  ]
+}

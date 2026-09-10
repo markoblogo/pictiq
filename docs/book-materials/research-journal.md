@@ -553,3 +553,29 @@ Pedestrian route/prohibition/crossing now use PERSON plus FEET/WALKING. Exact `5
 ### Method lesson
 
 Future stress tests should validate source meaning, validate Pictiq semantic mapping, obtain human acceptance, and only then create the final visual comparison.
+
+## 2026-09-10 — Odyssey × Toki Pona × sitelen pona × Pictiq Stage 1
+
+### Starting question
+
+Can Pictiq represent literary narrative meaning while being compared with English, Toki Pona, and sitelen pona without turning every source-language word or grammar distinction into a new tile?
+
+### What happened
+
+A Stage 1 architecture pass recorded findings from six manually reviewed Odyssey semantic areas: return from war, gods and hostility, ship/sea/dark sky, Arete dialogue, food/survival/cooking, and the Poseidon/Polyphemus eye-injury block.
+
+### Evidence
+
+[Stress Test 03 Stage 1](../research/odyssey-toki-pona-pictiq-stress-test-03-stage-1.md), [machine-readable summary](../research/odyssey-toki-pona-pictiq-stress-test-03-stage-1.json), and [book-materials experiment note](experiments/odyssey-toki-pona-pictiq-stress-test.md).
+
+### Decision / outcome
+
+The pass added no icons, no canonical lexical IDs, and no entity registry entries. It formalized semantic/practical translation over source surface form, `INTENTIONAL_OMISSION`, structural gender neutrality, narrative/entity-symbol implications, and Stage 2 candidates for later visual design.
+
+### Why it matters
+
+Narrative use exposes a different pressure than road signs. Pictiq needs a defensible filter for preserving characters, actions, relationships, locations, state changes, event order, and recurring narrative anchors while omitting details that do not materially affect the selected representation.
+
+### Possible future book use
+
+Use as a case study in translating narrative into protocol structure rather than into a visual word-for-word gloss.
