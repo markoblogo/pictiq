@@ -36,10 +36,26 @@ Prefer projects that advance both, but do not force immediate monetization when 
 2. Release from cleaned architecture.
 3. Shared Renderer / Generator layer.
 4. Composer.
-5. Public Pictiq site.
-6. Targeted stress tests / comparative research.
-7. AI/machine translation experiments.
-8. Physical Embodied experiments.
-9. Books, revised editions, and specialized publications.
+5. Public usable Pictiq site.
+6. Parallel post-Composer experiment program.
+7. Books, revised editions, and specialized publications.
 
 Specific ordering after Composer remains flexible.
+
+## Parallel post-Composer experiment program
+
+After Composer exists, several tracks can run in parallel rather than in a rigid sequence:
+
+- Tiny Language Protocol × Pictiq.
+- Pictiq Poetry / Visual Prosody.
+- Machine Mind × Pictiq.
+- Web/UI Stress Test.
+- Humanitarian/Emergency.
+- Maritime/Logistics.
+- Industrial instructions.
+- Kids/Narrative.
+- Physical Embodied experiments.
+
+Suggested priority logic: prefer cheap experiments that use the same tooling; experiments that test fundamentally different language properties; experiments with strong book/publication value; and experiments that expose vocabulary or grammar pressure. Pictiq Poetry qualifies because it tests expressivity under ambiguity and formal constraint, nearly the opposite pressure from road signs and procedural wayfinding.
+
+Book 1 does not need to wait for Poetry, Kids, Machine Mind, or every future experiment. Later experiments can feed revised editions, Book 2, specialized books, articles, posts, tools, vocabulary, grammar, context packs, and product ideas.

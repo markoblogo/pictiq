@@ -42,6 +42,7 @@ This structure better matches how Pictiq actually developed and avoids presentin
 
 - Web/UI navigation and browser/site translation.
 - Tiny Language Protocol × Pictiq.
+- Pictiq Poetry / Visual Prosody.
 - Machine Mind / AI intermediate representation.
 - Humanitarian/emergency communication.
 - Maritime/logistics and industrial instructions.
@@ -50,6 +51,6 @@ This structure better matches how Pictiq actually developed and avoids presentin
 
 ## Publication timing
 
-Book 1 can document the project after a meaningful architecture milestone. It does not have to wait for children’s-book experiments, VLM benchmarks, Composer, or all physical-format tests.
+Book 1 can document the project after a meaningful architecture milestone. It does not have to wait for Poetry, children’s-book experiments, VLM benchmarks, Composer, Machine Mind, or all physical-format tests.
 
 Later experiments can feed a revised edition, Book 2, specialized books, articles, talks, and public research notes.

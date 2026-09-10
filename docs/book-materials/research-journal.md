@@ -738,3 +738,29 @@ The ordinary canonical registry remains at 83 icons. Entity Symbols remain a sep
 ### Why it matters
 
 The audit preserves a minimal architecture while allowing the vocabulary to grow where real use exposes a gap. It records that Core is need-driven and asymmetric, rather than a taxonomy.
+
+## 2026-09-11 — Pictiq Poetry / Visual Prosody harvest
+
+### Starting question
+
+Can a visual language without sound support poetic form, and can poetry become a useful stress test for Pictiq's semantic compression rather than a claim that Pictiq can express everything?
+
+### What happened
+
+The supplied Russian Perplexity artifact `Pictiq-поэзия.md` was archived byte-for-byte under `research/inputs/perplexity-2026-09/` with SHA-256 recorded. A critical harvest separated Pictiq-specific findings, comparative artistic analogies, verification-required claims, source examples, and premature formal rules.
+
+### Evidence
+
+[Archived source](research/inputs/perplexity-2026-09/pictiq-poetry-ru.md), [critical harvest](research/pictiq-poetry-harvest-2026-09.md), [Visual Prosody concept note](concepts/visual-prosody.md), [poetry stress-test plan](research/pictiq-poetry-stress-test-plan.md), and [precedents verification backlog](research/poetry-precedents-verification-backlog.md).
+
+### Decision / outcome
+
+Pictiq Poetry / Visual Prosody is recorded as a post-Composer research track. It does not change grammar, vocabulary, icons, profiles, packs, notation, Entity Symbols, renderer, Composer, tags, releases, or roadmap commitments. The source's example Pictiq sequences are preserved only as source ideas, not accepted translations.
+
+### Why it matters
+
+Poetry tests almost the opposite pressure from road signs and wayfinding: expressivity under ambiguity and formal constraint. Because poetry often depends on connotation, atmosphere, metaphor, sound, rhythm, and deliberate under-specification, lossy or failed Pictiq renderings are first-class evidence. This is valuable future book material because it can show both unexpected expressive affordances and hard limits.
+
+### Open questions
+
+ASL poetry, handshape/movement/location rhyme, Clayton Valli, Apollinaire/Calligrammes, concrete poetry, Oulipo, renga conventions, haiku claims, and Pound/imagism/ideogram claims require separate verification before book/public use.

@@ -16,6 +16,7 @@ Every substantial experiment should record both product value and research value
 | Specialist feedback | DOMAIN-SPECIFIC FUTURE METHOD | What do AAC, safety, education, logistics, or other specialists see in a specific domain pack/use case? | Medium credibility/product fit. | Medium/high for domains. | When a concrete domain pack exists. | Specialist interviews are not proof of general comprehensibility. |
 | Physical-format experiments | FUTURE EMBODIED EXPERIMENTS | How do cards, stickers, posters, shirts, lighters/wrappers, emergency cards, service cards, and travel cards work in real environments? | Medium/high. | High for Embodied mode. | After cleaned assets and selected use case. | Do not start merchandise production from this backlog alone. |
 | Human-machine / Machine Mind experiments | FUTURE RESEARCH TRACK | Does Pictiq work best as final user language, inspectable intermediate representation, or both? | Medium. | High. | After renderer/composer and datasets. | Do not assume Pictiq beats natural language. |
+| Pictiq Poetry / Visual Prosody | POST-COMPOSER RESEARCH TRACK | What survives when poetic language is subjected to Pictiq semantic compression, and what native formal conventions emerge without sound? | Medium/high: strong essay/book/demo material if failures are reported honestly. | High: tests expressivity under ambiguity and formal constraint. | After Renderer / Generator and Composer. | Do not add poetry-specific grammar or icons; negative results are first-class. |
 
 ## Tiny Language Protocol × Pictiq
 
@@ -37,3 +38,7 @@ Potential comparison:
 - Pictiq IDs.
 
 Possible measures: token count, semantic preservation, ambiguity, deterministic parsing, reconstruction quality, cross-model consistency. A useful result may be that Pictiq works better as an inspectable intermediate representation, not as a replacement for natural language.
+
+## Pictiq Poetry / Visual Prosody
+
+Experiment/book direction only: test original Pictiq compositions and translations of short poetic forms after Composer exists. Compare SOURCE -> PICTIQ -> BACK-INTERPRETATION, recording `SURVIVED`, `COMPRESSED`, `INTENTIONAL_OMISSION`, `LOSSY`, `GAP`, and `UNTRANSLATABLE/STRUCTURALLY_INCOMPATIBLE`. Do not treat repeated tiles as automatic rhyme, and do not claim that tile-count forms reproduce natural-language meter.

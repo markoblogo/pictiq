@@ -16,7 +16,7 @@ Canonical Registry + Vocabulary Classification + Context Packs + Grammar / Compo
 
 -> Composer
 
--> Website / Browser translator / Books / Physical layouts / AI tools
+-> Website / Browser translator / Books / Physical layouts / AI tools / Constrained-writing tools
 
 ## Possible API input
 
@@ -40,3 +40,7 @@ The previous text-to-Pictiq RAG prototype showed that nearest-icon retrieval is 
 natural language -> semantic decomposition -> omission decision -> Pictiq concepts -> composition -> context pack -> rendering -> back-interpretation / validation.
 
 Cross-links: [text-to-Pictiq prototype](../experiments/text-to-pictiq-rag-prototype.md), [AI and machine backlog](../research/ai-machine-backlog.md), [human-machine shared symbols](human-machine-shared-symbols.md), [experimental methods backlog](../research/experimental-methods-backlog.md).
+
+## Constrained-writing tools
+
+A future Pictiq constrained-writing assistant can sit after Composer. It may take a theme, profile, number of lines, tiles per line, repetition constraint, terminal-tile constraint, palindrome constraint, or semantic-category constraint, then produce candidate Pictiq compositions for review. This is a tooling hypothesis only; poetry work should not interrupt renderer/generator and Composer work.

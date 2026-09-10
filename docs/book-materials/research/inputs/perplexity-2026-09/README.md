@@ -10,3 +10,4 @@ These files are archived byte-for-byte from supplied Perplexity research / ideat
 | `pictiq-book-structure-ru.md` | `Структура книги о Pictiq_ части и главы.md` | `5c28a12b8367fcdcc0b673f5da59f5aba4818bde9c7516bd5882a3195cc66ae5` |
 | `pictiq-kids-book-series-concept-ru.md` | `Концепция серии книг Pictiq для детей.md` | `8b918d9c2f4c17f3e1c0d0bea2bea80d37487d789f7c74cfeeef4420f45af335` |
 | `pictiq-topics-research-mini-projects-catalog-ru.md` | `Каталог тем, исследований и мини-проектов с Pictiq.md` | `012ddfec96f7e87896861466353fa6b91a99bcc8e25eed19314720dd1d6fc6a1` |
+| `pictiq-poetry-ru.md` | `Pictiq-поэзия.md` | `f2c1987dd79c851c5e5c491bfe3f6ed48ac9dedf43ef1f85906eadc914f61118` |
