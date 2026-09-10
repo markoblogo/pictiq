@@ -76,3 +76,23 @@ Stage 2B integrated five human-accepted scoped entity symbols from the supplied 
 The architectural finding is that entity symbols can be non-portrait associative visual proper names. They remain separate from ordinary vocabulary and do not change the 82-icon ordinary canonical registry.
 
 QA evidence: [`../../../build/qa/stress-test-03-stage-2b-entity-qa.png`](../../../build/qa/stress-test-03-stage-2b-entity-qa.png).
+
+## Final synthesis — closed Stress Test 03
+
+The closeout artifact uses the author-owned ODT manuscript, `/Volumes/Work/books archive/odyssey/OD-TP-kdp-layout-v1.odt`, as the source of truth for the exact English and Toki Pona passages. The supplied Amazon listing is preserved as publication context, but the closeout does not depend on live Amazon availability.
+
+Six manually reviewed fragments were fixed as the experiment set: return from war / Odysseus / Calypso; gods / Poseidon / hostility / homecoming; ship / sea / dark sky; Arete dialogue about identity, origin, and clothing; survival / food / animal / cooking; and Poseidon / Polyphemus / eye injury / kinship / blocked homecoming.
+
+The final artifact confirms the Stage 1 architectural findings and the Stage 2A/2B human-accepted additions without opening a new vocabulary audit. It treats Pictiq as a pragmatic visual protocol: preserve the distinction required for the decision or narrative skeleton, and omit source-language detail when it does not materially change the represented meaning.
+
+Key preserved findings:
+
+- Pictiq does not encode gender by default; gender appears only when a context needs it.
+- Entity Symbols handle scoped names and culturally loaded identity without adding their attributes as ordinary primitives.
+- `INTENTIONAL_OMISSION` is a positive classification when omission is part of the representation strategy.
+- Toki Pona and sitelen pona are comparative systems for this test, not ancestors or authorities for Pictiq.
+- sitelen pona publication assets must be rendered from the exact Toki Pona source through the same pipeline used in the published edition; the research artifact does not fake glyphs.
+
+Rejected or deferred vocabulary remains rejected or deferred. The closeout does not add GOD, ANGER, HOME, RETURN, CAVE, ASK, WHO, ANSWER, WIFE, HUSBAND, TRIDENT, SICKLE, CYCLOPS, ISLAND, SEA, SKY, DARK, STORM, or new mathematical notation. `move_boat` versus `move_watercraft` remains a future compatibility cleanup, not part of this closeout.
+
+Primary evidence: [final Stress Test 03 research artifact](../../research/odyssey-toki-pona-pictiq-stress-test-03.md) and [machine-readable summary](../../research/odyssey-toki-pona-pictiq-stress-test-03.json).

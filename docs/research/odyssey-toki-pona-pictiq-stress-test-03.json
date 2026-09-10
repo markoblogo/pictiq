@@ -1,0 +1,257 @@
+{
+  "id": "stress-test-03-odyssey-final",
+  "title": "Pictiq Stress Test 03: Odyssey × Toki Pona × sitelen pona × Pictiq",
+  "date": "2026-09-10",
+  "status": "FINAL_LOCAL_RESEARCH_ARTIFACT_HUMAN_ACCEPTED_STAGES",
+  "source_project": {
+    "title": "The Odyssey: Toki Pona Edition with Sitelen Pona",
+    "author_translator": "Anton Biletskyi-Volokh",
+    "amazon": "https://www.amazon.com/dp/B0HHSK3Y45",
+    "manuscript_path": "/Volumes/Work/books archive/odyssey/OD-TP-kdp-layout-v1.odt",
+    "manuscript_sha256": "ab373fc21f9a230dda230b7a4244546d48789bc13c8f909fa5c698ed21226c37",
+    "layers": [
+      "English reference text",
+      "Toki Pona translation",
+      "same Toki Pona rendered in sitelen pona"
+    ]
+  },
+  "historical_records": [
+    "docs/research/odyssey-toki-pona-pictiq-stress-test-03-stage-1.md",
+    "docs/research/odyssey-toki-pona-pictiq-stress-test-03-stage-2a.md",
+    "docs/research/odyssey-toki-pona-pictiq-stress-test-03-stage-2b.md"
+  ],
+  "cases": [
+    {
+      "id": "01-war-return-calypso",
+      "title": "Return from war / Odysseus / Calypso",
+      "en": "By now all the others who had escaped death in the war were safely home, free from battle and the sea. Odysseus alone still longed to return to his home and his wife. The goddess Calypso kept him in her deep caves, for she desired him as her husband.",
+      "tp": "tenpo ni la jan ante ale pi weka tan moli lon utala li kama sin tawa tomo ona. ona li weka tan utala li weka tan telo suli. taso jan Osite taso li awen lon ma weka. ona li wile mute e kama sin tawa tomo ona tawa meli ona. sewi Kalipso li awen e ona lon lupa ma suli ona. sewi ni li olin e jan Osite li wile e ona sama mije ona.",
+      "ids": [
+        [
+          "person_generic",
+          "qty_5",
+          "qty_plus",
+          "action_conflict",
+          "state_dead",
+          "logic_no"
+        ],
+        [
+          "entity:odysseus@literary",
+          "action_conflict",
+          "state_dead",
+          "logic_no"
+        ],
+        [
+          "entity:odysseus@literary",
+          "love_heart",
+          "person_generic"
+        ],
+        [
+          "entity:calypso@odyssey",
+          "entity:odysseus@literary",
+          "logic_no"
+        ]
+      ],
+      "back": "Many people survived conflict; Odysseus is alive after conflict, wants/keeps a loved-person relation in the narrative, and Calypso blocks or holds him in context.",
+      "survived": "survival after war, Odysseus as named entity, Calypso as named entity, spouse/love pressure, captivity/blocking pressure",
+      "compressed": "war/battle/conflict -> action_conflict; wife/husband -> loved person; cave/home detail not lexicalized",
+      "omitted": "deep cave description, desire-as-husband detail, exact home location/Ithaca in this case",
+      "gaps": "Exact HOME/RETURN/CAVE/PREVENT remain unresolved; no cave primitive added.",
+      "why": "The accepted review prioritizes narrative skeleton and relationship pressure over literal spouse/cave vocabulary."
+    },
+    {
+      "id": "02-gods-poseidon-hostility",
+      "title": "Gods / Poseidon / hostility / homecoming",
+      "en": "But when the year came in which the gods had decided that he should return to Ithaca, his troubles were still not over, even among his own people. All the gods felt pity for him except Poseidon, who remained angry with Odysseus until he finally reached his own land.",
+      "tp": "taso tenpo sike ni li kama. sewi ale li wile e ni: jan Osite o kama sin tawa ma Itaka. taso pakala ona li pini ala. lon poka jan ona kin la pakala li awen. sewi ale li pilin e pakala ona. taso sewi Poseton li awen pilin utala tawa jan Osite. pilin utala ni li awen tawa tenpo pi kama jan Osite lon ma mama ona.",
+      "ids": [
+        [
+          "qual_sacred",
+          "qty_5",
+          "qty_plus"
+        ],
+        [
+          "entity:poseidon@odyssey",
+          "qual_bad",
+          "power_energy",
+          "entity:odysseus@literary"
+        ],
+        [
+          "entity:poseidon@odyssey",
+          "action_conflict",
+          "entity:odysseus@literary"
+        ]
+      ],
+      "back": "The sacred/divine group wants Odysseus home in context, while Poseidon maintains strong hostility and active opposition toward Odysseus.",
+      "survived": "divine group, Poseidon, Odysseus, hostility, homecoming pressure",
+      "compressed": "gods -> sacred + many in narrative context; anger/fury -> bad + energy as contextual hypothesis; trouble not separately lexicalized",
+      "omitted": "Ithaca and “own people” details are not fully represented by existing IDs.",
+      "gaps": "ENERGY-as-intensifier remains hypothetical; HOME/RETURN exactness remains a gap.",
+      "why": "The review separates negative attitude from hostile action and avoids adding GOD or ANGER just for the Odyssey."
+    },
+    {
+      "id": "03-watercraft-wavy-cloud",
+      "title": "Ship / sea / dark sky",
+      "en": "When we had left the island and no other land was in sight, but only sky and sea, the son of Saturn raised a dark cloud over our ship and the sea grew dark beneath it.",
+      "tp": "“mi weka tan ma sike li ken lukin ala e ma ante, sewi en telo suli taso la sewi Suse, jan lili pi sewi Satuno, li pana e kon pimeja lon sewi pi tomo tawa telo mi. telo suli lon anpa ona li kama pimeja.”",
+      "ids": [
+        [
+          "move_watercraft",
+          "surface_wavy",
+          "nature_cloud"
+        ],
+        [
+          "nature_cloud",
+          "surface_wavy"
+        ],
+        [
+          "entity:zeus@odyssey",
+          "nature_cloud",
+          "move_watercraft"
+        ]
+      ],
+      "back": "A watercraft is at sea/wavy surface under cloud/sky; Zeus is the named actor associated with the dark cloud in the source context.",
+      "survived": "ship/watercraft, sea/waves, cloud/sky, Zeus/Saturn family reference via entity symbols",
+      "compressed": "ship -> move_watercraft; sea -> surface_wavy when surface/sea condition matters; sky/cloud -> nature_cloud",
+      "omitted": "island/land visibility, exact darkness if parametric COLOR is not rendered inline, mast/sail detail",
+      "gaps": "Parametric COLOR is accepted direction but not represented as ordinary icon ID; move_boat vs move_watercraft is deferred.",
+      "why": "The accepted review uses cross-domain wavy evidence and avoids adding DARK/SKY/ISLAND/LAND/MAST/SAIL."
+    },
+    {
+      "id": "04-arete-dialogue",
+      "title": "Arete dialogue: identity / origin / clothing",
+      "en": "“Who are you? Where do you come from? And who gave you those clothes?”",
+      "tp": "“sina jan seme? sina kama tan ma seme? jan seme li pana e len ni tawa sina?”",
+      "ids": [
+        [
+          "person_generic",
+          "punct_question"
+        ],
+        [
+          "rel_here",
+          "punct_question"
+        ],
+        [
+          "person_generic",
+          "item_clothing",
+          "punct_question"
+        ],
+        [
+          "entity:odysseus@literary"
+        ]
+      ],
+      "back": "The dialogue asks for identity, place/origin in context, and clothing explanation; Odysseus can answer with his entity symbol.",
+      "survived": "question frame, identity request, location/origin pressure, clothing topic",
+      "compressed": "who/you/name -> person + question in dialogue; from/origin -> here/place question; gave -> omitted unless action-relevant",
+      "omitted": "exact giver relation, politeness/formulaic dialogue framing",
+      "gaps": "No WHO/YOU/I/NAME/FROM/ORIGIN/GIVE primitives were added; named places may later need Entity Symbols.",
+      "why": "The communication situation itself carries ask/answer structure; adding metacommunication words would overfit one passage."
+    },
+    {
+      "id": "05-survival-food-animal-cooking",
+      "title": "Survival / food / animal / cooking",
+      "en": "As long as the corn and wine held out the men did not touch the cattle when they were hungry; when, however, they had eaten all there was in the ship, they were forced to go further afield, with hook and line, catching birds, and taking whatever they could lay their hands on, for they were starving.\n\nAnd indeed the gods began at once to show signs and wonders among us, for the hides of the cattle crawled about, and the joints upon the spits began to low like cows, and the meat, whether cooked or raw, kept on making a noise just as cows do.",
+      "tp": "“pan en telo nasa li awen lon tomo tawa telo la jan mi li luka ala e soweli mani lon pilin pi moku ala ona. taso moku ale lon tomo li pini la ona o alasa e moku lon ma, kepeken ilo pi kama jo e kala en linja, li kama jo e waso e ijo ale pi ken luka ona, tan ni: moku ala li pakala e ona.”\n\n“lon tenpo sama la sewi li open pana e sitelen nasa monsuta tawa mi. selo pi soweli mani li tawa sama ona li lon. kipisi moku lon palisa seli moku li open kalama sama soweli mani. moku soweli seli en moku soweli pi seli ala li awen pana e kalama sama soweli mani.”",
+      "ids": [
+        [
+          "person_generic",
+          "qty_5",
+          "qty_plus",
+          "state_dead",
+          "logic_no"
+        ],
+        [
+          "move_watercraft",
+          "need_food",
+          "need_water"
+        ],
+        [
+          "nature_animal",
+          "need_food",
+          "state_hot"
+        ]
+      ],
+      "back": "People survive or try not to die; the ship/watercraft carries food/water pressure; animal + food + heat frames cooked animal food/meat rather than merely an animal on fire.",
+      "survived": "survival pressure, food/drink, ship supplies, animal/cattle category, cooked/raw meat pressure",
+      "compressed": "cattle/species -> nature_animal unless taxonomy matters; hunger/starvation -> survival/food/death frame; cooking -> animal + food + hot/fire frame",
+      "omitted": "hand/washing, hooks/lines/birds details, ritual signs, exact cow/cattle taxonomy",
+      "gaps": "No COOK/HUNGER/STARVATION/HAND/WASH primitives added; species taxonomy deferred.",
+      "why": "The accepted review found FOOD necessary in the cooking frame and treated washing hands as intentional omission."
+    },
+    {
+      "id": "06-polyphemus-eye-kinship-homecoming",
+      "title": "Poseidon / Polyphemus / eye injury / kinship / blocked homecoming",
+      "en": "“Bear in mind, however, that Neptune is still furious with Ulysses for having blinded an eye of Polyphemus king of the Cyclopes. Polyphemus is son to Neptune by the nymph Thoosa, daughter to the sea-king Phorcys; therefore though he will not kill Ulysses outright, he torments him by preventing him from getting home.”",
+      "tp": "“taso o sona e ni: sewi Poseton li awen pilin utala mute tawa jan Osite. tan seme? jan Osite li pakala e oko wan pi jan Polupemo, jan lawa pi kulupu Siklope. jan Polupemo li jan lili pi sewi Poseton en sewi meli Tosa. sewi meli Tosa li jan lili pi sewi majuna Pokusa pi telo suli. sewi Poseton li wile ala moli e jan Osite. taso ona li pana e pakala tawa ona li awen e ona tan kama sin tawa tomo.”",
+      "ids": [
+        [
+          "entity:odysseus@literary",
+          "action_conflict",
+          "entity:polyphemus@odyssey",
+          "eye_look",
+          "qty_1",
+          "qty_minus"
+        ],
+        [
+          "entity:polyphemus@odyssey",
+          "love_heart",
+          "person_generic",
+          "rel_lesser",
+          "entity:poseidon@odyssey"
+        ],
+        [
+          "entity:poseidon@odyssey",
+          "state_dead",
+          "logic_no",
+          "entity:odysseus@literary"
+        ],
+        [
+          "entity:poseidon@odyssey",
+          "action_conflict",
+          "entity:odysseus@literary"
+        ]
+      ],
+      "back": "Odysseus harms or removes one eye of Polyphemus; Polyphemus is represented as a child/descendant relation in context; Poseidon does not kill Odysseus but acts against his homecoming.",
+      "survived": "agent, hostile action, patient, one-eye loss, kinship pressure, non-killing, hostile blocking",
+      "compressed": "blinding/injury -> eye + one + minus; son/daughter -> relationship + lesser in context; torment/prevent/return -> conflict/no-homecoming pressure",
+      "omitted": "Thoosa/Phorcys genealogy details beyond main kinship pressure, Cyclopes kingship, exact legal causal explanation",
+      "gaps": "No BLIND/INJURE/PREVENT/TORMENT/SON/DAUGHTER primitives added; rel_lesser is not globally CHILD.",
+      "why": "The accepted decomposition preserves the narrative action and relation without adding gendered or injury-specific vocabulary."
+    }
+  ],
+  "ordinary_primitives_added": [
+    "action_conflict",
+    "move_watercraft",
+    "qual_sacred",
+    "nature_animal",
+    "nature_cloud"
+  ],
+  "entity_symbols_added": [
+    "entity:poseidon@odyssey",
+    "entity:zeus@odyssey",
+    "entity:saturn@odyssey",
+    "entity:polyphemus@odyssey",
+    "entity:calypso@odyssey"
+  ],
+  "ordinary_canonical_count": 82,
+  "entity_symbol_count": 11,
+  "deferred": [
+    "move_boat vs move_watercraft",
+    "post-Odyssey Canonical Registry/Core audit",
+    "parametric COLOR prototype",
+    "ENERGY-as-intensifier grammar hypothesis",
+    "rel_lesser child/descendant hypothesis"
+  ],
+  "constraints_confirmed": {
+    "new_fragments_added": false,
+    "new_translation_made": false,
+    "fake_sitelen_pona_used": false,
+    "icons_modified": false,
+    "lexicon_modified": false,
+    "profiles_modified": false,
+    "packs_modified": false,
+    "entities_modified_in_this_closeout": false,
+    "tag_or_release_created": false,
+    "pushed": false
+  }
+}

@@ -14,6 +14,7 @@ This project uses milestone-style tags. The `-infra` suffix indicates a pre-icon
 - Integrated the five human-accepted Stage 2A ordinary primitives from the supplied reference sheet: `action_conflict`, `move_watercraft`, `qual_sacred`, `nature_animal`, and `nature_cloud`.
 - Bumped ordinary canonical lexicon metadata to `0.7.0`; the ordinary lexicon now has 82 icons. Entity symbols remain counted separately.
 - Added five human-accepted Stage 2B Odyssey Entity Symbols: `entity:poseidon@odyssey`, `entity:zeus@odyssey`, `entity:saturn@odyssey`, `entity:polyphemus@odyssey`, and `entity:calypso@odyssey`.
+- Closed Odyssey Stress Test 03 as a final research/book-materials artifact using the author-owned ODT source and six manually reviewed fragments. No protocol, grammar, lexicon, profile, pack, icon, entity, notation, tag, or release changes are part of the closeout.
 
 ### Road & Public Wayfinding findings
 - Accepted `surface_wavy` and `state_dead` as contextual ordinary canonical primitives emerging from Stress Test 02; ordinary canonical lexicon metadata is now `0.6.0` with 77 icons.

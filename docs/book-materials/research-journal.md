@@ -662,3 +662,31 @@ External claims about signage, emoji history, AAC systems, legal requirements, m
 ### Possible future book use
 
 Use for a chapter or essay on “what a visual language chooses not to encode,” plus future stress tests in situational AAC, humanitarian aid, workplace safety, maritime/logistics, public services, HoReCa/retail, mass events, and machine-readable Pictiq.
+
+## 2026-09-10 — Odyssey Stress Test 03 closeout
+
+### Starting question
+
+Can the accepted Odyssey × Toki Pona × sitelen pona work be closed as one durable research story using the exact author-owned ODT source, without expanding Pictiq architecture or starting a new vocabulary audit?
+
+### What happened
+
+A final research artifact and machine-readable summary were created for Stress Test 03. The closeout uses `/Volumes/Work/books archive/odyssey/OD-TP-kdp-layout-v1.odt` as the source manuscript, with SHA-256 `ab373fc21f9a230dda230b7a4244546d48789bc13c8f909fa5c698ed21226c37`. It preserves six manually reviewed semantic fragments and records exact Toki Pona passages from the manuscript.
+
+Because the repository does not own the published sitelen pona rendering pipeline, the artifact preserves exact publication instructions for sitelen pona instead of substituting fake glyphs.
+
+### Evidence
+
+[Final Stress Test 03 research artifact](../research/odyssey-toki-pona-pictiq-stress-test-03.md), [machine-readable summary](../research/odyssey-toki-pona-pictiq-stress-test-03.json), [Stage 1](../research/odyssey-toki-pona-pictiq-stress-test-03-stage-1.md), [Stage 2A](../research/odyssey-toki-pona-pictiq-stress-test-03-stage-2a.md), and [Stage 2B](../research/odyssey-toki-pona-pictiq-stress-test-03-stage-2b.md).
+
+### Decision / outcome
+
+Stress Test 03 is closed as research/book material. No new ordinary icons, Entity Symbols, numeric notation, Core membership, context packs, profiles, protocol rules, grammar rules, or release artifacts were created in the closeout.
+
+### Why it matters
+
+The closeout gives future books and essays one complete case study: a published Toki Pona/sitelen pona Odyssey can pressure-test Pictiq as a narrative visual protocol while preserving the distinction between semantic compression, intentional omission, entity identity, and real architectural gaps.
+
+### Open questions
+
+`move_boat` versus `move_watercraft` remains deferred. A future vocabulary audit may review ordinary/core classification, but this closeout did not start it.
