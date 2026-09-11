@@ -3,6 +3,36 @@
 Chronological notes reconstructed from repository evidence. Interpretive statements are marked as such; dates follow commit or release history when a separate event date is unavailable.
 
 
+## 2026-09-11 — Research Foundations Batch 03: evidence program, icon design, kids, entities, constrained writing
+
+### Starting question
+
+How should Pictiq preserve the latest broad research inputs as falsifiable evidence work instead of importing ideation into the accepted protocol?
+
+### What happened
+
+Five supplied Perplexity documents were archived byte-for-byte and critically harvested. The pass produced a central Evidence Program, a hostile-review note, icon-design research guidelines, a kids developmental experiment framework, an Entity Symbol research framework, and a constrained visual-writing framework.
+
+### Evidence
+
+[Batch 03 harvest](research/perplexity-research-foundations-batch-03-harvest-2026-09.md), [Evidence Program](research/pictiq-evidence-program.md), [Hostile Review](research/pictiq-hostile-review.md), [Icon Design Guidelines](concepts/icon-design-research-guidelines.md), [Kids Developmental Framework](research/kids-developmental-experiment-framework.md), [Entity Symbol Framework](concepts/entity-symbol-research-framework.md), and [Constrained Visual Writing Framework](concepts/constrained-visual-writing-framework.md).
+
+### Decision / outcome
+
+The pass creates research scaffolding only. No new vocabulary, grammar, schema, Composer behavior, Renderer behavior, profiles, packs, Entity Symbols, tags, releases, or normative protocol changes are introduced. Broad Perplexity ideation is temporarily closed for this phase; future research should be tied to a specific claim, experiment, design decision, verification question, failure, or book chapter need.
+
+### Why it matters
+
+Pictiq now has a clearer path from attractive claims to measurable risks, baselines, falsification conditions, and small useful experiments.
+
+### Open questions
+
+The highest-priority future tests remain grammar intuition, cross-cultural Core reading, broad primitive recovery, context sufficiency, and compression taxonomy reliability.
+
+### Possible future book use
+
+Use this batch to frame Pictiq as an evidence-seeking protocol: a design thesis whose value depends on tests, negative results, scoped claims, and comparison against text, translation, standard icons, emoji, forms, and structured data.
+
 
 ## 2026-09-11 — Research Foundations Batch 02: task-faithful compression and machine readability
 

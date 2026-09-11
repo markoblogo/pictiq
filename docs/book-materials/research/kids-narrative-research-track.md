@@ -48,3 +48,7 @@ The supplied Frith/logographic-reading discussion is preserved as `VERIFICATION 
 ## Product boundary
 
 Book 1 is not blocked by this track. Kids/narrative experiments can become later chapters, a revised edition, Book 2, specialized children’s books, or article material after evidence exists.
+
+## Developmental experiment framework
+
+Batch 03 adds a separate [Kids Developmental Experiment Framework](kids-developmental-experiment-framework.md). It preserves the distinction between image recognition, symbol use, sequence interpretation, sequence production, narrative inference, dialogue, and conventional literacy. The framework prepares future research only; no child study has been run.

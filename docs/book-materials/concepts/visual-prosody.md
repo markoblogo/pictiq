@@ -30,3 +30,7 @@ Visual prosody is an artistic layer on top of Pictiq. It must not be imported in
 ## Research question
 
 The useful question is not whether Pictiq can reproduce natural-language poetry. The useful question is what kinds of poetic form become possible when sound, inflection, and ordinary syntax are replaced by semantic compression, tile position, repetition, and layout.
+
+## Batch 03 constrained visual writing framework
+
+Batch 03 adds a separate [Constrained Visual Writing Framework](constrained-visual-writing-framework.md). The key research question shifts from “Can Pictiq translate verbal poetry?” to “What forms of writing become possible because Pictiq is constrained?” These ideas are expressive research concepts, not protocol semantics.
