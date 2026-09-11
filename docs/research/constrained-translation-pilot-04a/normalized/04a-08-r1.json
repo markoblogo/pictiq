@@ -1,0 +1,27 @@
+{
+  "contexts": [
+    "universal-core",
+    "universal-v1"
+  ],
+  "frames": [
+    {
+      "tokens": [
+        {
+          "id": "nature_animal",
+          "type": "icon"
+        },
+        {
+          "id": "need_food",
+          "type": "icon"
+        },
+        {
+          "id": "food_meat",
+          "type": "icon"
+        }
+      ]
+    }
+  ],
+  "pictiq": "1.1",
+  "profile": "standalone-core-v0.1",
+  "schema": "0.1"
+}

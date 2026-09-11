@@ -1,0 +1,22 @@
+{
+  "contexts": [
+    "universal-core"
+  ],
+  "frames": [
+    {
+      "tokens": [
+        {
+          "id": "qual_sacred",
+          "type": "icon"
+        },
+        {
+          "id": "place_home",
+          "type": "icon"
+        }
+      ]
+    }
+  ],
+  "pictiq": "1.1",
+  "profile": "standalone-core-v0.1",
+  "schema": "0.1"
+}

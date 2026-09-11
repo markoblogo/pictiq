@@ -1,0 +1,30 @@
+{
+  "contexts": [
+    "universal-core"
+  ],
+  "frames": [
+    {
+      "tokens": [
+        {
+          "id": "comm_sound",
+          "type": "icon"
+        },
+        {
+          "id": "qty_minus",
+          "type": "icon"
+        },
+        {
+          "id": "comm_speak",
+          "type": "icon"
+        },
+        {
+          "id": "logic_yes",
+          "type": "icon"
+        }
+      ]
+    }
+  ],
+  "pictiq": "1.1",
+  "profile": "standalone-core-v0.1",
+  "schema": "0.1"
+}

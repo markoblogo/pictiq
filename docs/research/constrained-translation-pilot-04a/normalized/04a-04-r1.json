@@ -1,0 +1,26 @@
+{
+  "contexts": [
+    "universal-core"
+  ],
+  "frames": [
+    {
+      "tokens": [
+        {
+          "id": "person_generic",
+          "type": "icon"
+        },
+        {
+          "id": "safety_medical",
+          "type": "icon"
+        },
+        {
+          "id": "punct_exclaim",
+          "type": "icon"
+        }
+      ]
+    }
+  ],
+  "pictiq": "1.1",
+  "profile": "standalone-core-v0.1",
+  "schema": "0.1"
+}

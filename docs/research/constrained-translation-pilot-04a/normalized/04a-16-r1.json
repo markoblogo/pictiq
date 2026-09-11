@@ -1,0 +1,34 @@
+{
+  "contexts": [
+    "universal-core",
+    "universal-v1"
+  ],
+  "frames": [
+    {
+      "tokens": [
+        {
+          "id": "place_home",
+          "type": "icon"
+        },
+        {
+          "id": "rel_here",
+          "type": "icon"
+        },
+        {
+          "id": "qual_good",
+          "type": "icon"
+        },
+        {
+          "id": "media_image",
+          "params": {
+            "color": "#0000ff"
+          },
+          "type": "icon"
+        }
+      ]
+    }
+  ],
+  "pictiq": "1.1",
+  "profile": "standalone-core-v0.1",
+  "schema": "0.1"
+}

@@ -1,0 +1,22 @@
+{
+  "contexts": [
+    "universal-core"
+  ],
+  "frames": [
+    {
+      "tokens": [
+        {
+          "id": "logic_no",
+          "type": "icon"
+        },
+        {
+          "id": "drink_alcohol",
+          "type": "icon"
+        }
+      ]
+    }
+  ],
+  "pictiq": "1.1",
+  "profile": "standalone-core-v0.1",
+  "schema": "0.1"
+}

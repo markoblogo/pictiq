@@ -1,0 +1,22 @@
+{
+  "contexts": [
+    "universal-core",
+    "universal-v1"
+  ],
+  "frames": [
+    {
+      "tokens": [
+        {
+          "id": "place_shop",
+          "type": "icon"
+        },
+        {
+          "id": "item_clothing",
+          "type": "icon"
+        }
+      ]
+    }
+  ],
+  "pictiq": "1.1",
+  "schema": "0.1"
+}

@@ -806,3 +806,14 @@ Result: The supplied Russian AI-test catalog was archived byte-for-byte and crit
 Boundary: No experiments were run. No external LLM APIs, agent loops, RAG demos, classifiers, MCP tools, prediction models, vocabulary changes, grammar changes, Renderer changes, Message Schema changes, icons, profiles, packs, Entity Symbols, tags, or releases were created. Old 52-icon examples and pre-v1.1.0 IDs are marked as outdated examples to rebuild before execution.
 
 Artifacts: [archived source](research/inputs/perplexity-2026-09/pictiq-ai-tests-experiments-mvp-catalog-ru.md), [critical harvest](research/pictiq-ai-experiments-harvest-2026-09.md), [machine experiments backlog](research/machine-experiments-backlog.md), [signaling game plan](research/pictiq-signaling-game-plan.md), [semantic boundary corpus plan](research/semantic-boundary-corpus-plan.md), and [AI experiment verification backlog](research/ai-experiment-verification-backlog.md).
+## 2026-09-11 — Constrained Translation Pilot Stress Test 04A
+
+Question: Can a modern LLM produce valid Pictiq Message JSON v0.1 directly from simple natural-language intents when constrained by the accepted Message Schema, current registries, compatibility metadata, and minimal grammar guidance?
+
+Result: The pilot ran 18 prewritten corpus cases with one OpenAI `gpt-5.1-2025-11-13` repeat. Raw model messages contained all 32 required semantic slots, but 13 of 18 outputs passed schema, registry, and Renderer v0.1 gates. Five invalid outputs copied the schema document `$id` into the message; seven cases added unjustified concepts. No legacy IDs were generated and no true vocabulary gap was found.
+
+Decision / outcome: `MESSAGE_SCHEMA_V0_1_SUFFICIENT_FOR_PILOT`. The observed pressure belongs to future generator discipline, validation, and possible repair/retry behavior in a Translator layer, not to accepted Message Schema v0.1. The RAG/TF-IDF baseline remains deferred.
+
+Boundary: No translator, Composer, RAG system, vocabulary, grammar, icon, renderer, profile, pack, Entity Symbol, tag, release, or product UI change was made.
+
+Artifacts: [pilot report](../research/constrained-translation-pilot-04a/README.md), [protocol](../research/constrained-translation-pilot-04a/protocol.md), [machine-readable results](../research/constrained-translation-pilot-04a/constrained-translation-pilot-04a.json), [human targets](../research/constrained-translation-pilot-04a/human-targets.json), [QA sheet](../research/constrained-translation-pilot-04a/qa-sheet.html), and [book-materials note](experiments/constrained-translation-pilot-04a.md).

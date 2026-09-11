@@ -1,0 +1,22 @@
+{
+  "contexts": [
+    "universal-core"
+  ],
+  "frames": [
+    {
+      "tokens": [
+        {
+          "id": "place_home",
+          "type": "icon"
+        },
+        {
+          "id": "punct_question",
+          "type": "icon"
+        }
+      ]
+    }
+  ],
+  "pictiq": "1.1",
+  "profile": "standalone-core-v0.1",
+  "schema": "0.1"
+}

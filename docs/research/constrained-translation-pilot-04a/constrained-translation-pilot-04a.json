@@ -1,0 +1,1989 @@
+{
+  "corpus_size": 18,
+  "metadata": {
+    "date": "2026-09-11",
+    "provider": "OpenAI",
+    "provider_guarantees_recorded": {
+      "enum_constraints": "not guaranteed by provider mode used; local validation required",
+      "nested_validation": "not guaranteed by provider mode used; local validation required",
+      "schema_conformance": "not guaranteed by strict=false; local schema and registry validation required",
+      "syntactic_json": "observed yes for this run"
+    },
+    "repeat_count": 1,
+    "replay_raw": true,
+    "requested_model": "gpt-5.1",
+    "structured_output_method": "Chat Completions response_format json_schema using spec/pictiq-message.schema.json with strict=false"
+  },
+  "results": [
+    {
+      "case_id": "04a-01",
+      "category": "DIRECT_BASIC",
+      "diagnostics": [
+        {
+          "input": "$id",
+          "level": "error",
+          "message": "Unexpected document property: $id",
+          "type": "unknown-id"
+        },
+        {
+          "input": "person_generic",
+          "level": "warning",
+          "location": "frames[0].tokens[0]",
+          "message": "Icon 'person_generic' is outside declared context pack(s).",
+          "type": "context-mismatch"
+        }
+      ],
+      "failure_classification": [
+        "MESSAGE_SCHEMA_FAILURE",
+        "REGISTRY_FAILURE",
+        "MODEL_INSTRUCTION_FAILURE",
+        "CONCEPT_SELECTION_FAILURE"
+      ],
+      "invalid_unjustified_concepts": [
+        "need_food",
+        "drink_alcohol"
+      ],
+      "missing_required_slots": [
+        "need_water"
+      ],
+      "model": "gpt-5.1-2025-11-13",
+      "model_message_json": {
+        "$id": "https://markoblogo.github.io/pictiq/spec/pictiq-message.schema.json",
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "person_generic",
+                "type": "icon"
+              },
+              {
+                "id": "need_water",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "normalized_message": null,
+      "normalized_message_path": null,
+      "omittable_details": [],
+      "optional_slots": [],
+      "parse_error": null,
+      "produced_slots": [],
+      "raw_missing_required_slots": [],
+      "raw_output_path": "docs/research/constrained-translation-pilot-04a/raw/04a-01-r1.json",
+      "raw_produced_slots": [
+        "need_water",
+        "person_generic"
+      ],
+      "raw_recovered_slots": [
+        "need_water"
+      ],
+      "raw_slot_recovery_count": 1,
+      "raw_unjustified_concepts": [
+        "person_generic"
+      ],
+      "recovered_slots": [],
+      "registry_valid": false,
+      "renderable": false,
+      "rendered_artifact": null,
+      "repeat": 1,
+      "required_slot_count": 1,
+      "required_slots": [
+        "need_water"
+      ],
+      "schema_errors": [
+        "unexpected property $id"
+      ],
+      "schema_valid": false,
+      "slot_recovery_count": 0,
+      "source_text": "I need water.",
+      "unjustified_concepts": [
+        "person_generic"
+      ]
+    },
+    {
+      "case_id": "04a-02",
+      "category": "DIRECT_BASIC",
+      "diagnostics": [
+        {
+          "input": "drink_alcohol",
+          "level": "warning",
+          "location": "frames[0].tokens[1]",
+          "message": "Icon 'drink_alcohol' is outside declared profile 'standalone-core-v0.1'.",
+          "type": "profile-mismatch"
+        },
+        {
+          "input": "drink_alcohol",
+          "level": "warning",
+          "location": "frames[0].tokens[1]",
+          "message": "Icon 'drink_alcohol' is outside declared context pack(s).",
+          "type": "context-mismatch"
+        }
+      ],
+      "failure_classification": [
+        "OK"
+      ],
+      "invalid_unjustified_concepts": [
+        "need_bar"
+      ],
+      "missing_required_slots": [],
+      "model": "gpt-5.1-2025-11-13",
+      "model_message_json": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "logic_no",
+                "type": "icon"
+              },
+              {
+                "id": "drink_alcohol",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "normalized_message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "logic_no",
+                "type": "icon"
+              },
+              {
+                "id": "drink_alcohol",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "normalized_message_path": "docs/research/constrained-translation-pilot-04a/normalized/04a-02-r1.json",
+      "omittable_details": [],
+      "optional_slots": [],
+      "parse_error": null,
+      "produced_slots": [
+        "drink_alcohol",
+        "logic_no"
+      ],
+      "raw_missing_required_slots": [],
+      "raw_output_path": "docs/research/constrained-translation-pilot-04a/raw/04a-02-r1.json",
+      "raw_produced_slots": [
+        "drink_alcohol",
+        "logic_no"
+      ],
+      "raw_recovered_slots": [
+        "drink_alcohol",
+        "logic_no"
+      ],
+      "raw_slot_recovery_count": 2,
+      "raw_unjustified_concepts": [],
+      "recovered_slots": [
+        "drink_alcohol",
+        "logic_no"
+      ],
+      "registry_valid": true,
+      "renderable": true,
+      "rendered_artifact": "docs/research/constrained-translation-pilot-04a/rendered/04a-02-r1.svg",
+      "repeat": 1,
+      "required_slot_count": 2,
+      "required_slots": [
+        "drink_alcohol",
+        "logic_no"
+      ],
+      "schema_errors": [],
+      "schema_valid": true,
+      "slot_recovery_count": 2,
+      "source_text": "No alcohol.",
+      "unjustified_concepts": []
+    },
+    {
+      "case_id": "04a-03",
+      "category": "DIRECT_BASIC",
+      "diagnostics": [],
+      "failure_classification": [
+        "OK"
+      ],
+      "invalid_unjustified_concepts": [
+        "place_hotel"
+      ],
+      "missing_required_slots": [],
+      "model": "gpt-5.1-2025-11-13",
+      "model_message_json": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "place_home",
+                "type": "icon"
+              },
+              {
+                "id": "punct_question",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "normalized_message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "place_home",
+                "type": "icon"
+              },
+              {
+                "id": "punct_question",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "normalized_message_path": "docs/research/constrained-translation-pilot-04a/normalized/04a-03-r1.json",
+      "omittable_details": [],
+      "optional_slots": [],
+      "parse_error": null,
+      "produced_slots": [
+        "place_home",
+        "punct_question"
+      ],
+      "raw_missing_required_slots": [],
+      "raw_output_path": "docs/research/constrained-translation-pilot-04a/raw/04a-03-r1.json",
+      "raw_produced_slots": [
+        "place_home",
+        "punct_question"
+      ],
+      "raw_recovered_slots": [
+        "place_home",
+        "punct_question"
+      ],
+      "raw_slot_recovery_count": 2,
+      "raw_unjustified_concepts": [],
+      "recovered_slots": [
+        "place_home",
+        "punct_question"
+      ],
+      "registry_valid": true,
+      "renderable": true,
+      "rendered_artifact": "docs/research/constrained-translation-pilot-04a/rendered/04a-03-r1.svg",
+      "repeat": 1,
+      "required_slot_count": 2,
+      "required_slots": [
+        "place_home",
+        "punct_question"
+      ],
+      "schema_errors": [],
+      "schema_valid": true,
+      "slot_recovery_count": 2,
+      "source_text": "Where is home?",
+      "unjustified_concepts": []
+    },
+    {
+      "case_id": "04a-04",
+      "category": "DIRECT_BASIC",
+      "diagnostics": [
+        {
+          "input": "person_generic",
+          "level": "warning",
+          "location": "frames[0].tokens[0]",
+          "message": "Icon 'person_generic' is outside declared context pack(s).",
+          "type": "context-mismatch"
+        }
+      ],
+      "failure_classification": [
+        "OK"
+      ],
+      "invalid_unjustified_concepts": [
+        "safety_police"
+      ],
+      "missing_required_slots": [],
+      "model": "gpt-5.1-2025-11-13",
+      "model_message_json": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "person_generic",
+                "type": "icon"
+              },
+              {
+                "id": "safety_medical",
+                "type": "icon"
+              },
+              {
+                "id": "punct_exclaim",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "normalized_message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "person_generic",
+                "type": "icon"
+              },
+              {
+                "id": "safety_medical",
+                "type": "icon"
+              },
+              {
+                "id": "punct_exclaim",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "normalized_message_path": "docs/research/constrained-translation-pilot-04a/normalized/04a-04-r1.json",
+      "omittable_details": [
+        "first-person pronoun"
+      ],
+      "optional_slots": [
+        "person_generic"
+      ],
+      "parse_error": null,
+      "produced_slots": [
+        "person_generic",
+        "punct_exclaim",
+        "safety_medical"
+      ],
+      "raw_missing_required_slots": [],
+      "raw_output_path": "docs/research/constrained-translation-pilot-04a/raw/04a-04-r1.json",
+      "raw_produced_slots": [
+        "person_generic",
+        "punct_exclaim",
+        "safety_medical"
+      ],
+      "raw_recovered_slots": [
+        "punct_exclaim",
+        "safety_medical"
+      ],
+      "raw_slot_recovery_count": 2,
+      "raw_unjustified_concepts": [],
+      "recovered_slots": [
+        "punct_exclaim",
+        "safety_medical"
+      ],
+      "registry_valid": true,
+      "renderable": true,
+      "rendered_artifact": "docs/research/constrained-translation-pilot-04a/rendered/04a-04-r1.svg",
+      "repeat": 1,
+      "required_slot_count": 2,
+      "required_slots": [
+        "safety_medical",
+        "punct_exclaim"
+      ],
+      "schema_errors": [],
+      "schema_valid": true,
+      "slot_recovery_count": 2,
+      "source_text": "I need medical help urgently.",
+      "unjustified_concepts": []
+    },
+    {
+      "case_id": "04a-05",
+      "category": "COMPOSITION",
+      "diagnostics": [],
+      "failure_classification": [
+        "OK"
+      ],
+      "invalid_unjustified_concepts": [
+        "place_fashion_shopping"
+      ],
+      "missing_required_slots": [],
+      "model": "gpt-5.1-2025-11-13",
+      "model_message_json": {
+        "contexts": [
+          "universal-core",
+          "universal-v1"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "place_shop",
+                "type": "icon"
+              },
+              {
+                "id": "item_clothing",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "schema": "0.1"
+      },
+      "normalized_message": {
+        "contexts": [
+          "universal-core",
+          "universal-v1"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "place_shop",
+                "type": "icon"
+              },
+              {
+                "id": "item_clothing",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "schema": "0.1"
+      },
+      "normalized_message_path": "docs/research/constrained-translation-pilot-04a/normalized/04a-05-r1.json",
+      "omittable_details": [
+        "article a"
+      ],
+      "optional_slots": [],
+      "parse_error": null,
+      "produced_slots": [
+        "item_clothing",
+        "place_shop"
+      ],
+      "raw_missing_required_slots": [],
+      "raw_output_path": "docs/research/constrained-translation-pilot-04a/raw/04a-05-r1.json",
+      "raw_produced_slots": [
+        "item_clothing",
+        "place_shop"
+      ],
+      "raw_recovered_slots": [
+        "item_clothing",
+        "place_shop"
+      ],
+      "raw_slot_recovery_count": 2,
+      "raw_unjustified_concepts": [],
+      "recovered_slots": [
+        "item_clothing",
+        "place_shop"
+      ],
+      "registry_valid": true,
+      "renderable": true,
+      "rendered_artifact": "docs/research/constrained-translation-pilot-04a/rendered/04a-05-r1.svg",
+      "repeat": 1,
+      "required_slot_count": 2,
+      "required_slots": [
+        "place_shop",
+        "item_clothing"
+      ],
+      "schema_errors": [],
+      "schema_valid": true,
+      "slot_recovery_count": 2,
+      "source_text": "A clothing shop.",
+      "unjustified_concepts": []
+    },
+    {
+      "case_id": "04a-06",
+      "category": "COMPOSITION",
+      "diagnostics": [],
+      "failure_classification": [
+        "OK"
+      ],
+      "invalid_unjustified_concepts": [
+        "paris_sacre_coeur"
+      ],
+      "missing_required_slots": [],
+      "model": "gpt-5.1-2025-11-13",
+      "model_message_json": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "qual_sacred",
+                "type": "icon"
+              },
+              {
+                "id": "place_home",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "normalized_message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "qual_sacred",
+                "type": "icon"
+              },
+              {
+                "id": "place_home",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "normalized_message_path": "docs/research/constrained-translation-pilot-04a/normalized/04a-06-r1.json",
+      "omittable_details": [
+        "building type unspecified"
+      ],
+      "optional_slots": [],
+      "parse_error": null,
+      "produced_slots": [
+        "place_home",
+        "qual_sacred"
+      ],
+      "raw_missing_required_slots": [],
+      "raw_output_path": "docs/research/constrained-translation-pilot-04a/raw/04a-06-r1.json",
+      "raw_produced_slots": [
+        "place_home",
+        "qual_sacred"
+      ],
+      "raw_recovered_slots": [
+        "place_home",
+        "qual_sacred"
+      ],
+      "raw_slot_recovery_count": 2,
+      "raw_unjustified_concepts": [],
+      "recovered_slots": [
+        "place_home",
+        "qual_sacred"
+      ],
+      "registry_valid": true,
+      "renderable": true,
+      "rendered_artifact": "docs/research/constrained-translation-pilot-04a/rendered/04a-06-r1.svg",
+      "repeat": 1,
+      "required_slot_count": 2,
+      "required_slots": [
+        "qual_sacred",
+        "place_home"
+      ],
+      "schema_errors": [],
+      "schema_valid": true,
+      "slot_recovery_count": 2,
+      "source_text": "A sacred building.",
+      "unjustified_concepts": []
+    },
+    {
+      "case_id": "04a-07",
+      "category": "COMPOSITION",
+      "diagnostics": [
+        {
+          "input": "person_generic",
+          "level": "warning",
+          "location": "frames[0].tokens[0]",
+          "message": "Icon 'person_generic' is outside declared context pack(s).",
+          "type": "context-mismatch"
+        },
+        {
+          "input": "love_heart",
+          "level": "warning",
+          "location": "frames[0].tokens[1]",
+          "message": "Icon 'love_heart' is outside declared profile 'standalone-core-v0.1'.",
+          "type": "profile-mismatch"
+        },
+        {
+          "input": "love_heart",
+          "level": "warning",
+          "location": "frames[0].tokens[1]",
+          "message": "Icon 'love_heart' is outside declared context pack(s).",
+          "type": "context-mismatch"
+        }
+      ],
+      "failure_classification": [
+        "OK"
+      ],
+      "invalid_unjustified_concepts": [],
+      "missing_required_slots": [],
+      "model": "gpt-5.1-2025-11-13",
+      "model_message_json": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "person_generic",
+                "type": "icon"
+              },
+              {
+                "id": "love_heart",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "normalized_message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "person_generic",
+                "type": "icon"
+              },
+              {
+                "id": "love_heart",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "normalized_message_path": "docs/research/constrained-translation-pilot-04a/normalized/04a-07-r1.json",
+      "omittable_details": [
+        "gender, relationship type"
+      ],
+      "optional_slots": [],
+      "parse_error": null,
+      "produced_slots": [
+        "love_heart",
+        "person_generic"
+      ],
+      "raw_missing_required_slots": [],
+      "raw_output_path": "docs/research/constrained-translation-pilot-04a/raw/04a-07-r1.json",
+      "raw_produced_slots": [
+        "love_heart",
+        "person_generic"
+      ],
+      "raw_recovered_slots": [
+        "love_heart",
+        "person_generic"
+      ],
+      "raw_slot_recovery_count": 2,
+      "raw_unjustified_concepts": [],
+      "recovered_slots": [
+        "love_heart",
+        "person_generic"
+      ],
+      "registry_valid": true,
+      "renderable": true,
+      "rendered_artifact": "docs/research/constrained-translation-pilot-04a/rendered/04a-07-r1.svg",
+      "repeat": 1,
+      "required_slot_count": 2,
+      "required_slots": [
+        "person_generic",
+        "love_heart"
+      ],
+      "schema_errors": [],
+      "schema_valid": true,
+      "slot_recovery_count": 2,
+      "source_text": "A loved person.",
+      "unjustified_concepts": []
+    },
+    {
+      "case_id": "04a-08",
+      "category": "COMPOSITION",
+      "diagnostics": [],
+      "failure_classification": [
+        "OK"
+      ],
+      "invalid_unjustified_concepts": [
+        "food_bakery",
+        "food_produce"
+      ],
+      "missing_required_slots": [],
+      "model": "gpt-5.1-2025-11-13",
+      "model_message_json": {
+        "contexts": [
+          "universal-core",
+          "universal-v1"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "nature_animal",
+                "type": "icon"
+              },
+              {
+                "id": "need_food",
+                "type": "icon"
+              },
+              {
+                "id": "food_meat",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "normalized_message": {
+        "contexts": [
+          "universal-core",
+          "universal-v1"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "nature_animal",
+                "type": "icon"
+              },
+              {
+                "id": "need_food",
+                "type": "icon"
+              },
+              {
+                "id": "food_meat",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "normalized_message_path": "docs/research/constrained-translation-pilot-04a/normalized/04a-08-r1.json",
+      "omittable_details": [
+        "like"
+      ],
+      "optional_slots": [
+        "need_food",
+        "nature_animal"
+      ],
+      "parse_error": null,
+      "produced_slots": [
+        "food_meat",
+        "nature_animal",
+        "need_food"
+      ],
+      "raw_missing_required_slots": [],
+      "raw_output_path": "docs/research/constrained-translation-pilot-04a/raw/04a-08-r1.json",
+      "raw_produced_slots": [
+        "food_meat",
+        "nature_animal",
+        "need_food"
+      ],
+      "raw_recovered_slots": [
+        "food_meat"
+      ],
+      "raw_slot_recovery_count": 1,
+      "raw_unjustified_concepts": [],
+      "recovered_slots": [
+        "food_meat"
+      ],
+      "registry_valid": true,
+      "renderable": true,
+      "rendered_artifact": "docs/research/constrained-translation-pilot-04a/rendered/04a-08-r1.svg",
+      "repeat": 1,
+      "required_slot_count": 1,
+      "required_slots": [
+        "food_meat"
+      ],
+      "schema_errors": [],
+      "schema_valid": true,
+      "slot_recovery_count": 1,
+      "source_text": "Animal food, like meat.",
+      "unjustified_concepts": []
+    },
+    {
+      "case_id": "04a-09",
+      "category": "NEGATION_EVALUATION",
+      "diagnostics": [],
+      "failure_classification": [
+        "CONCEPT_SELECTION_FAILURE"
+      ],
+      "invalid_unjustified_concepts": [
+        "logic_no",
+        "qty_minus"
+      ],
+      "missing_required_slots": [],
+      "model": "gpt-5.1-2025-11-13",
+      "model_message_json": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "need_food",
+                "type": "icon"
+              },
+              {
+                "id": "qual_bad",
+                "type": "icon"
+              },
+              {
+                "id": "logic_no",
+                "type": "icon"
+              },
+              {
+                "id": "qty_minus",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "normalized_message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "need_food",
+                "type": "icon"
+              },
+              {
+                "id": "qual_bad",
+                "type": "icon"
+              },
+              {
+                "id": "logic_no",
+                "type": "icon"
+              },
+              {
+                "id": "qty_minus",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "normalized_message_path": "docs/research/constrained-translation-pilot-04a/normalized/04a-09-r1.json",
+      "omittable_details": [
+        "the nuance not unavailable"
+      ],
+      "optional_slots": [],
+      "parse_error": null,
+      "produced_slots": [
+        "logic_no",
+        "need_food",
+        "qty_minus",
+        "qual_bad"
+      ],
+      "raw_missing_required_slots": [],
+      "raw_output_path": "docs/research/constrained-translation-pilot-04a/raw/04a-09-r1.json",
+      "raw_produced_slots": [
+        "logic_no",
+        "need_food",
+        "qty_minus",
+        "qual_bad"
+      ],
+      "raw_recovered_slots": [
+        "need_food",
+        "qual_bad"
+      ],
+      "raw_slot_recovery_count": 2,
+      "raw_unjustified_concepts": [
+        "logic_no",
+        "qty_minus"
+      ],
+      "recovered_slots": [
+        "need_food",
+        "qual_bad"
+      ],
+      "registry_valid": true,
+      "renderable": true,
+      "rendered_artifact": "docs/research/constrained-translation-pilot-04a/rendered/04a-09-r1.svg",
+      "repeat": 1,
+      "required_slot_count": 2,
+      "required_slots": [
+        "need_food",
+        "qual_bad"
+      ],
+      "schema_errors": [],
+      "schema_valid": true,
+      "slot_recovery_count": 2,
+      "source_text": "The food is bad, not unavailable.",
+      "unjustified_concepts": [
+        "logic_no",
+        "qty_minus"
+      ]
+    },
+    {
+      "case_id": "04a-10",
+      "category": "NEGATION_EVALUATION",
+      "diagnostics": [],
+      "failure_classification": [
+        "CONCEPT_SELECTION_FAILURE"
+      ],
+      "invalid_unjustified_concepts": [
+        "logic_no",
+        "qual_bad"
+      ],
+      "missing_required_slots": [],
+      "model": "gpt-5.1-2025-11-13",
+      "model_message_json": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "comm_sound",
+                "type": "icon"
+              },
+              {
+                "id": "qty_minus",
+                "type": "icon"
+              },
+              {
+                "id": "comm_speak",
+                "type": "icon"
+              },
+              {
+                "id": "logic_yes",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "normalized_message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "comm_sound",
+                "type": "icon"
+              },
+              {
+                "id": "qty_minus",
+                "type": "icon"
+              },
+              {
+                "id": "comm_speak",
+                "type": "icon"
+              },
+              {
+                "id": "logic_yes",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "normalized_message_path": "docs/research/constrained-translation-pilot-04a/normalized/04a-10-r1.json",
+      "omittable_details": [
+        "please"
+      ],
+      "optional_slots": [],
+      "parse_error": null,
+      "produced_slots": [
+        "comm_sound",
+        "comm_speak",
+        "logic_yes",
+        "qty_minus"
+      ],
+      "raw_missing_required_slots": [],
+      "raw_output_path": "docs/research/constrained-translation-pilot-04a/raw/04a-10-r1.json",
+      "raw_produced_slots": [
+        "comm_sound",
+        "comm_speak",
+        "logic_yes",
+        "qty_minus"
+      ],
+      "raw_recovered_slots": [
+        "comm_sound",
+        "qty_minus"
+      ],
+      "raw_slot_recovery_count": 2,
+      "raw_unjustified_concepts": [
+        "comm_speak",
+        "logic_yes"
+      ],
+      "recovered_slots": [
+        "comm_sound",
+        "qty_minus"
+      ],
+      "registry_valid": true,
+      "renderable": true,
+      "rendered_artifact": "docs/research/constrained-translation-pilot-04a/rendered/04a-10-r1.svg",
+      "repeat": 1,
+      "required_slot_count": 2,
+      "required_slots": [
+        "comm_sound",
+        "qty_minus"
+      ],
+      "schema_errors": [],
+      "schema_valid": true,
+      "slot_recovery_count": 2,
+      "source_text": "Less noise, please.",
+      "unjustified_concepts": [
+        "comm_speak",
+        "logic_yes"
+      ]
+    },
+    {
+      "case_id": "04a-11",
+      "category": "NUMBER",
+      "diagnostics": [
+        {
+          "input": "$id",
+          "level": "error",
+          "message": "Unexpected document property: $id",
+          "type": "unknown-id"
+        }
+      ],
+      "failure_classification": [
+        "MESSAGE_SCHEMA_FAILURE",
+        "REGISTRY_FAILURE",
+        "MODEL_INSTRUCTION_FAILURE"
+      ],
+      "invalid_unjustified_concepts": [
+        "qty_5",
+        "qty_plus",
+        "qty_minus",
+        "qty_1",
+        "qty_2"
+      ],
+      "missing_required_slots": [
+        "number:50"
+      ],
+      "model": "gpt-5.1-2025-11-13",
+      "model_message_json": {
+        "$id": "https://markoblogo.github.io/pictiq/spec/pictiq-message.schema.json",
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "number",
+                "value": 50
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "normalized_message": null,
+      "normalized_message_path": null,
+      "omittable_details": [
+        "speed limit as road convention"
+      ],
+      "optional_slots": [
+        "move_car"
+      ],
+      "parse_error": null,
+      "produced_slots": [],
+      "raw_missing_required_slots": [],
+      "raw_output_path": "docs/research/constrained-translation-pilot-04a/raw/04a-11-r1.json",
+      "raw_produced_slots": [
+        "number:50"
+      ],
+      "raw_recovered_slots": [
+        "number:50"
+      ],
+      "raw_slot_recovery_count": 1,
+      "raw_unjustified_concepts": [],
+      "recovered_slots": [],
+      "registry_valid": false,
+      "renderable": false,
+      "rendered_artifact": null,
+      "repeat": 1,
+      "required_slot_count": 1,
+      "required_slots": [
+        "number:50"
+      ],
+      "schema_errors": [
+        "unexpected property $id"
+      ],
+      "schema_valid": false,
+      "slot_recovery_count": 0,
+      "source_text": "Speed limit 50.",
+      "unjustified_concepts": []
+    },
+    {
+      "case_id": "04a-12",
+      "category": "NUMBER",
+      "diagnostics": [
+        {
+          "input": "$id",
+          "level": "error",
+          "message": "Unexpected document property: $id",
+          "type": "unknown-id"
+        },
+        {
+          "input": "person_generic",
+          "level": "warning",
+          "location": "frames[0].tokens[0]",
+          "message": "Icon 'person_generic' is outside declared context pack(s).",
+          "type": "context-mismatch"
+        }
+      ],
+      "failure_classification": [
+        "MESSAGE_SCHEMA_FAILURE",
+        "REGISTRY_FAILURE",
+        "MODEL_INSTRUCTION_FAILURE",
+        "CONCEPT_SELECTION_FAILURE"
+      ],
+      "invalid_unjustified_concepts": [
+        "number:2"
+      ],
+      "missing_required_slots": [
+        "need_water",
+        "qty_2"
+      ],
+      "model": "gpt-5.1-2025-11-13",
+      "model_message_json": {
+        "$id": "https://markoblogo.github.io/pictiq/spec/pictiq-message.schema.json",
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "person_generic",
+                "type": "icon"
+              },
+              {
+                "id": "need_water",
+                "type": "icon"
+              },
+              {
+                "id": "qty_2",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "normalized_message": null,
+      "normalized_message_path": null,
+      "omittable_details": [
+        "first-person pronoun"
+      ],
+      "optional_slots": [],
+      "parse_error": null,
+      "produced_slots": [],
+      "raw_missing_required_slots": [],
+      "raw_output_path": "docs/research/constrained-translation-pilot-04a/raw/04a-12-r1.json",
+      "raw_produced_slots": [
+        "need_water",
+        "person_generic",
+        "qty_2"
+      ],
+      "raw_recovered_slots": [
+        "need_water",
+        "qty_2"
+      ],
+      "raw_slot_recovery_count": 2,
+      "raw_unjustified_concepts": [
+        "person_generic"
+      ],
+      "recovered_slots": [],
+      "registry_valid": false,
+      "renderable": false,
+      "rendered_artifact": null,
+      "repeat": 1,
+      "required_slot_count": 2,
+      "required_slots": [
+        "need_water",
+        "qty_2"
+      ],
+      "schema_errors": [
+        "unexpected property $id"
+      ],
+      "schema_valid": false,
+      "slot_recovery_count": 0,
+      "source_text": "I need two waters.",
+      "unjustified_concepts": [
+        "person_generic"
+      ]
+    },
+    {
+      "case_id": "04a-13",
+      "category": "ENTITY",
+      "diagnostics": [
+        {
+          "input": "$id",
+          "level": "error",
+          "message": "Unexpected document property: $id",
+          "type": "unknown-id"
+        },
+        {
+          "input": "move_watercraft",
+          "level": "warning",
+          "location": "frames[0].tokens[1]",
+          "message": "Icon 'move_watercraft' is outside declared profile 'standalone-core-v0.1'.",
+          "type": "profile-mismatch"
+        },
+        {
+          "input": "move_watercraft",
+          "level": "warning",
+          "location": "frames[0].tokens[1]",
+          "message": "Icon 'move_watercraft' is outside declared context pack(s).",
+          "type": "context-mismatch"
+        }
+      ],
+      "failure_classification": [
+        "MESSAGE_SCHEMA_FAILURE",
+        "REGISTRY_FAILURE",
+        "MODEL_INSTRUCTION_FAILURE"
+      ],
+      "invalid_unjustified_concepts": [
+        "person_generic"
+      ],
+      "missing_required_slots": [
+        "entity:poseidon@odyssey",
+        "move_watercraft"
+      ],
+      "model": "gpt-5.1-2025-11-13",
+      "model_message_json": {
+        "$id": "https://markoblogo.github.io/pictiq/spec/pictiq-message.schema.json",
+        "contexts": [
+          "universal-core",
+          "odyssey"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "entity:poseidon@odyssey",
+                "type": "entity"
+              },
+              {
+                "id": "move_watercraft",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "normalized_message": null,
+      "normalized_message_path": null,
+      "omittable_details": [
+        "mythological explanation"
+      ],
+      "optional_slots": [
+        "surface_wavy"
+      ],
+      "parse_error": null,
+      "produced_slots": [],
+      "raw_missing_required_slots": [],
+      "raw_output_path": "docs/research/constrained-translation-pilot-04a/raw/04a-13-r1.json",
+      "raw_produced_slots": [
+        "entity:poseidon@odyssey",
+        "move_watercraft"
+      ],
+      "raw_recovered_slots": [
+        "entity:poseidon@odyssey",
+        "move_watercraft"
+      ],
+      "raw_slot_recovery_count": 2,
+      "raw_unjustified_concepts": [],
+      "recovered_slots": [],
+      "registry_valid": false,
+      "renderable": false,
+      "rendered_artifact": null,
+      "repeat": 1,
+      "required_slot_count": 2,
+      "required_slots": [
+        "entity:poseidon@odyssey",
+        "move_watercraft"
+      ],
+      "schema_errors": [
+        "unexpected property $id"
+      ],
+      "schema_valid": false,
+      "slot_recovery_count": 0,
+      "source_text": "Poseidon and watercraft.",
+      "unjustified_concepts": []
+    },
+    {
+      "case_id": "04a-14",
+      "category": "ENTITY",
+      "diagnostics": [
+        {
+          "input": "eye_look",
+          "level": "warning",
+          "location": "frames[0].tokens[1]",
+          "message": "Icon 'eye_look' is outside declared context pack(s).",
+          "type": "context-mismatch"
+        },
+        {
+          "input": "person_generic",
+          "level": "warning",
+          "location": "frames[0].tokens[2]",
+          "message": "Icon 'person_generic' is outside declared context pack(s).",
+          "type": "context-mismatch"
+        }
+      ],
+      "failure_classification": [
+        "OK"
+      ],
+      "invalid_unjustified_concepts": [
+        "entity:poseidon@odyssey"
+      ],
+      "missing_required_slots": [],
+      "model": "gpt-5.1-2025-11-13",
+      "model_message_json": {
+        "contexts": [
+          "universal-core",
+          "odyssey",
+          "narrative"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "entity:polyphemus@odyssey",
+                "type": "entity"
+              },
+              {
+                "id": "eye_look",
+                "type": "icon"
+              },
+              {
+                "id": "person_generic",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "normalized_message": {
+        "contexts": [
+          "universal-core",
+          "odyssey",
+          "narrative"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "entity:polyphemus@odyssey",
+                "type": "entity"
+              },
+              {
+                "id": "eye_look",
+                "type": "icon"
+              },
+              {
+                "id": "person_generic",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "normalized_message_path": "docs/research/constrained-translation-pilot-04a/normalized/04a-14-r1.json",
+      "omittable_details": [
+        "verb inflection"
+      ],
+      "optional_slots": [],
+      "parse_error": null,
+      "produced_slots": [
+        "entity:polyphemus@odyssey",
+        "eye_look",
+        "person_generic"
+      ],
+      "raw_missing_required_slots": [],
+      "raw_output_path": "docs/research/constrained-translation-pilot-04a/raw/04a-14-r1.json",
+      "raw_produced_slots": [
+        "entity:polyphemus@odyssey",
+        "eye_look",
+        "person_generic"
+      ],
+      "raw_recovered_slots": [
+        "entity:polyphemus@odyssey",
+        "eye_look",
+        "person_generic"
+      ],
+      "raw_slot_recovery_count": 3,
+      "raw_unjustified_concepts": [],
+      "recovered_slots": [
+        "entity:polyphemus@odyssey",
+        "eye_look",
+        "person_generic"
+      ],
+      "registry_valid": true,
+      "renderable": true,
+      "rendered_artifact": "docs/research/constrained-translation-pilot-04a/rendered/04a-14-r1.svg",
+      "repeat": 1,
+      "required_slot_count": 3,
+      "required_slots": [
+        "entity:polyphemus@odyssey",
+        "eye_look",
+        "person_generic"
+      ],
+      "schema_errors": [],
+      "schema_valid": true,
+      "slot_recovery_count": 3,
+      "source_text": "Polyphemus sees a person.",
+      "unjustified_concepts": []
+    },
+    {
+      "case_id": "04a-15",
+      "category": "CONTEXT_POLYSEMY",
+      "diagnostics": [
+        {
+          "input": "$id",
+          "level": "error",
+          "message": "Unexpected document property: $id",
+          "type": "unknown-id"
+        }
+      ],
+      "failure_classification": [
+        "MESSAGE_SCHEMA_FAILURE",
+        "REGISTRY_FAILURE",
+        "MODEL_INSTRUCTION_FAILURE"
+      ],
+      "invalid_unjustified_concepts": [
+        "state_hot"
+      ],
+      "missing_required_slots": [
+        "punct_exclaim",
+        "surface_wavy"
+      ],
+      "model": "gpt-5.1-2025-11-13",
+      "model_message_json": {
+        "$id": "https://markoblogo.github.io/pictiq/spec/pictiq-message.schema.json",
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "punct_exclaim",
+                "type": "icon"
+              },
+              {
+                "id": "surface_wavy",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "normalized_message": null,
+      "normalized_message_path": null,
+      "omittable_details": [
+        "separate slippery vs wavy distinction"
+      ],
+      "optional_slots": [],
+      "parse_error": null,
+      "produced_slots": [],
+      "raw_missing_required_slots": [],
+      "raw_output_path": "docs/research/constrained-translation-pilot-04a/raw/04a-15-r1.json",
+      "raw_produced_slots": [
+        "punct_exclaim",
+        "surface_wavy"
+      ],
+      "raw_recovered_slots": [
+        "punct_exclaim",
+        "surface_wavy"
+      ],
+      "raw_slot_recovery_count": 2,
+      "raw_unjustified_concepts": [],
+      "recovered_slots": [],
+      "registry_valid": false,
+      "renderable": false,
+      "rendered_artifact": null,
+      "repeat": 1,
+      "required_slot_count": 2,
+      "required_slots": [
+        "surface_wavy",
+        "punct_exclaim"
+      ],
+      "schema_errors": [
+        "unexpected property $id"
+      ],
+      "schema_valid": false,
+      "slot_recovery_count": 0,
+      "source_text": "Caution: wavy slippery surface.",
+      "unjustified_concepts": []
+    },
+    {
+      "case_id": "04a-16",
+      "category": "INTENTIONAL_OMISSION",
+      "diagnostics": [],
+      "failure_classification": [
+        "CONCEPT_SELECTION_FAILURE"
+      ],
+      "invalid_unjustified_concepts": [
+        "place_hotel",
+        "media_image"
+      ],
+      "missing_required_slots": [],
+      "model": "gpt-5.1-2025-11-13",
+      "model_message_json": {
+        "contexts": [
+          "universal-core",
+          "universal-v1"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "place_home",
+                "type": "icon"
+              },
+              {
+                "id": "rel_here",
+                "type": "icon"
+              },
+              {
+                "id": "qual_good",
+                "type": "icon"
+              },
+              {
+                "id": "media_image",
+                "params": {
+                  "color": "#0000ff"
+                },
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "normalized_message": {
+        "contexts": [
+          "universal-core",
+          "universal-v1"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "place_home",
+                "type": "icon"
+              },
+              {
+                "id": "rel_here",
+                "type": "icon"
+              },
+              {
+                "id": "qual_good",
+                "type": "icon"
+              },
+              {
+                "id": "media_image",
+                "params": {
+                  "color": "#0000ff"
+                },
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "normalized_message_path": "docs/research/constrained-translation-pilot-04a/normalized/04a-16-r1.json",
+      "omittable_details": [
+        "beautiful",
+        "blue",
+        "old",
+        "city center",
+        "hotel-specific distinction"
+      ],
+      "optional_slots": [
+        "qual_good",
+        "place_landmark_park"
+      ],
+      "parse_error": null,
+      "produced_slots": [
+        "media_image",
+        "place_home",
+        "qual_good",
+        "rel_here"
+      ],
+      "raw_missing_required_slots": [],
+      "raw_output_path": "docs/research/constrained-translation-pilot-04a/raw/04a-16-r1.json",
+      "raw_produced_slots": [
+        "media_image",
+        "place_home",
+        "qual_good",
+        "rel_here"
+      ],
+      "raw_recovered_slots": [
+        "place_home"
+      ],
+      "raw_slot_recovery_count": 1,
+      "raw_unjustified_concepts": [
+        "media_image",
+        "rel_here"
+      ],
+      "recovered_slots": [
+        "place_home"
+      ],
+      "registry_valid": true,
+      "renderable": true,
+      "rendered_artifact": "docs/research/constrained-translation-pilot-04a/rendered/04a-16-r1.svg",
+      "repeat": 1,
+      "required_slot_count": 1,
+      "required_slots": [
+        "place_home"
+      ],
+      "schema_errors": [],
+      "schema_valid": true,
+      "slot_recovery_count": 1,
+      "source_text": "A beautiful blue hotel near the old city center.",
+      "unjustified_concepts": [
+        "media_image",
+        "rel_here"
+      ]
+    },
+    {
+      "case_id": "04a-17",
+      "category": "BOUNDARY",
+      "diagnostics": [
+        {
+          "input": "person_generic",
+          "level": "warning",
+          "location": "frames[0].tokens[0]",
+          "message": "Icon 'person_generic' is outside declared context pack(s).",
+          "type": "context-mismatch"
+        }
+      ],
+      "failure_classification": [
+        "CONCEPT_SELECTION_FAILURE"
+      ],
+      "invalid_unjustified_concepts": [
+        "comm_speak"
+      ],
+      "missing_required_slots": [],
+      "model": "gpt-5.1-2025-11-13",
+      "model_message_json": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "person_generic",
+                "type": "icon"
+              },
+              {
+                "id": "need_food",
+                "type": "icon"
+              },
+              {
+                "id": "rel_here",
+                "type": "icon"
+              },
+              {
+                "id": "punct_question",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "normalized_message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "person_generic",
+                "type": "icon"
+              },
+              {
+                "id": "need_food",
+                "type": "icon"
+              },
+              {
+                "id": "rel_here",
+                "type": "icon"
+              },
+              {
+                "id": "punct_question",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "normalized_message_path": "docs/research/constrained-translation-pilot-04a/normalized/04a-17-r1.json",
+      "omittable_details": [
+        "polite indirect wording",
+        "maybe"
+      ],
+      "optional_slots": [
+        "rel_here"
+      ],
+      "parse_error": null,
+      "produced_slots": [
+        "need_food",
+        "person_generic",
+        "punct_question",
+        "rel_here"
+      ],
+      "raw_missing_required_slots": [],
+      "raw_output_path": "docs/research/constrained-translation-pilot-04a/raw/04a-17-r1.json",
+      "raw_produced_slots": [
+        "need_food",
+        "person_generic",
+        "punct_question",
+        "rel_here"
+      ],
+      "raw_recovered_slots": [
+        "need_food",
+        "punct_question"
+      ],
+      "raw_slot_recovery_count": 2,
+      "raw_unjustified_concepts": [
+        "person_generic"
+      ],
+      "recovered_slots": [
+        "need_food",
+        "punct_question"
+      ],
+      "registry_valid": true,
+      "renderable": true,
+      "rendered_artifact": "docs/research/constrained-translation-pilot-04a/rendered/04a-17-r1.svg",
+      "repeat": 1,
+      "required_slot_count": 2,
+      "required_slots": [
+        "need_food",
+        "punct_question"
+      ],
+      "schema_errors": [],
+      "schema_valid": true,
+      "slot_recovery_count": 2,
+      "source_text": "Could you maybe point me toward food?",
+      "unjustified_concepts": [
+        "person_generic"
+      ]
+    },
+    {
+      "case_id": "04a-18",
+      "category": "BOUNDARY",
+      "diagnostics": [],
+      "failure_classification": [
+        "CONCEPT_SELECTION_FAILURE"
+      ],
+      "invalid_unjustified_concepts": [
+        "state_dead"
+      ],
+      "missing_required_slots": [],
+      "model": "gpt-5.1-2025-11-13",
+      "model_message_json": {
+        "contexts": [
+          "universal-core",
+          "narrative"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "place_home",
+                "type": "icon"
+              },
+              {
+                "id": "action_conflict",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "normalized_message": {
+        "contexts": [
+          "universal-core",
+          "narrative"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "place_home",
+                "type": "icon"
+              },
+              {
+                "id": "action_conflict",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "normalized_message_path": "docs/research/constrained-translation-pilot-04a/normalized/04a-18-r1.json",
+      "omittable_details": [
+        "metaphorical source if context is figurative"
+      ],
+      "optional_slots": [
+        "rel_here",
+        "punct_exclaim"
+      ],
+      "parse_error": null,
+      "produced_slots": [
+        "action_conflict",
+        "place_home"
+      ],
+      "raw_missing_required_slots": [],
+      "raw_output_path": "docs/research/constrained-translation-pilot-04a/raw/04a-18-r1.json",
+      "raw_produced_slots": [
+        "action_conflict",
+        "place_home"
+      ],
+      "raw_recovered_slots": [
+        "action_conflict"
+      ],
+      "raw_slot_recovery_count": 1,
+      "raw_unjustified_concepts": [
+        "place_home"
+      ],
+      "recovered_slots": [
+        "action_conflict"
+      ],
+      "registry_valid": true,
+      "renderable": true,
+      "rendered_artifact": "docs/research/constrained-translation-pilot-04a/rendered/04a-18-r1.svg",
+      "repeat": 1,
+      "required_slot_count": 1,
+      "required_slots": [
+        "action_conflict"
+      ],
+      "schema_errors": [],
+      "schema_valid": true,
+      "slot_recovery_count": 1,
+      "source_text": "This place is a battlefield.",
+      "unjustified_concepts": [
+        "place_home"
+      ]
+    }
+  ],
+  "summary": {
+    "intentional_omission_cases": 0,
+    "legacy_id_cases": 0,
+    "model_instruction_failure_cases": 5,
+    "raw_recovered_slots": 32,
+    "recovered_slots": 24,
+    "registry_valid": 13,
+    "renderable": 13,
+    "required_slots": 32,
+    "runs": 18,
+    "schema_valid": 13,
+    "true_vocabulary_gap_candidates": 0,
+    "unjustified_concept_cases": 7
+  }
+}

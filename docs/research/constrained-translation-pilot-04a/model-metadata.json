@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-11",
+  "provider": "OpenAI",
+  "provider_guarantees_recorded": {
+    "enum_constraints": "not guaranteed by provider mode used; local validation required",
+    "nested_validation": "not guaranteed by provider mode used; local validation required",
+    "schema_conformance": "not guaranteed by strict=false; local schema and registry validation required",
+    "syntactic_json": "observed yes for this run"
+  },
+  "repeat_count": 1,
+  "replay_raw": true,
+  "requested_model": "gpt-5.1",
+  "structured_output_method": "Chat Completions response_format json_schema using spec/pictiq-message.schema.json with strict=false"
+}

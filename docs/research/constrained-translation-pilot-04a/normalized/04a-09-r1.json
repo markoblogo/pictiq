@@ -1,0 +1,30 @@
+{
+  "contexts": [
+    "universal-core"
+  ],
+  "frames": [
+    {
+      "tokens": [
+        {
+          "id": "need_food",
+          "type": "icon"
+        },
+        {
+          "id": "qual_bad",
+          "type": "icon"
+        },
+        {
+          "id": "logic_no",
+          "type": "icon"
+        },
+        {
+          "id": "qty_minus",
+          "type": "icon"
+        }
+      ]
+    }
+  ],
+  "pictiq": "1.1",
+  "profile": "standalone-core-v0.1",
+  "schema": "0.1"
+}

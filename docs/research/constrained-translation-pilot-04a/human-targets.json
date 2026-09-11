@@ -1,0 +1,312 @@
+{
+  "targets": [
+    {
+      "category": "DIRECT_BASIC",
+      "id": "04a-01",
+      "invalid_unjustified": [
+        "need_food",
+        "drink_alcohol"
+      ],
+      "omittable_details": [],
+      "optional_slots": [],
+      "required_slots": [
+        "need_water"
+      ],
+      "source": "I need water."
+    },
+    {
+      "category": "DIRECT_BASIC",
+      "id": "04a-02",
+      "invalid_unjustified": [
+        "need_bar"
+      ],
+      "omittable_details": [],
+      "optional_slots": [],
+      "required_slots": [
+        "drink_alcohol",
+        "logic_no"
+      ],
+      "source": "No alcohol."
+    },
+    {
+      "category": "DIRECT_BASIC",
+      "id": "04a-03",
+      "invalid_unjustified": [
+        "place_hotel"
+      ],
+      "omittable_details": [],
+      "optional_slots": [],
+      "required_slots": [
+        "place_home",
+        "punct_question"
+      ],
+      "source": "Where is home?"
+    },
+    {
+      "category": "DIRECT_BASIC",
+      "id": "04a-04",
+      "invalid_unjustified": [
+        "safety_police"
+      ],
+      "omittable_details": [
+        "first-person pronoun"
+      ],
+      "optional_slots": [
+        "person_generic"
+      ],
+      "required_slots": [
+        "safety_medical",
+        "punct_exclaim"
+      ],
+      "source": "I need medical help urgently."
+    },
+    {
+      "category": "COMPOSITION",
+      "id": "04a-05",
+      "invalid_unjustified": [
+        "place_fashion_shopping"
+      ],
+      "omittable_details": [
+        "article a"
+      ],
+      "optional_slots": [],
+      "required_slots": [
+        "place_shop",
+        "item_clothing"
+      ],
+      "source": "A clothing shop."
+    },
+    {
+      "category": "COMPOSITION",
+      "id": "04a-06",
+      "invalid_unjustified": [
+        "paris_sacre_coeur"
+      ],
+      "omittable_details": [
+        "building type unspecified"
+      ],
+      "optional_slots": [],
+      "required_slots": [
+        "qual_sacred",
+        "place_home"
+      ],
+      "source": "A sacred building."
+    },
+    {
+      "category": "COMPOSITION",
+      "id": "04a-07",
+      "invalid_unjustified": [],
+      "omittable_details": [
+        "gender, relationship type"
+      ],
+      "optional_slots": [],
+      "required_slots": [
+        "person_generic",
+        "love_heart"
+      ],
+      "source": "A loved person."
+    },
+    {
+      "category": "COMPOSITION",
+      "id": "04a-08",
+      "invalid_unjustified": [
+        "food_bakery",
+        "food_produce"
+      ],
+      "omittable_details": [
+        "like"
+      ],
+      "optional_slots": [
+        "need_food",
+        "nature_animal"
+      ],
+      "required_slots": [
+        "food_meat"
+      ],
+      "source": "Animal food, like meat."
+    },
+    {
+      "category": "NEGATION_EVALUATION",
+      "id": "04a-09",
+      "invalid_unjustified": [
+        "logic_no",
+        "qty_minus"
+      ],
+      "omittable_details": [
+        "the nuance not unavailable"
+      ],
+      "optional_slots": [],
+      "required_slots": [
+        "need_food",
+        "qual_bad"
+      ],
+      "source": "The food is bad, not unavailable."
+    },
+    {
+      "category": "NEGATION_EVALUATION",
+      "id": "04a-10",
+      "invalid_unjustified": [
+        "logic_no",
+        "qual_bad"
+      ],
+      "omittable_details": [
+        "please"
+      ],
+      "optional_slots": [],
+      "required_slots": [
+        "comm_sound",
+        "qty_minus"
+      ],
+      "source": "Less noise, please."
+    },
+    {
+      "category": "NUMBER",
+      "id": "04a-11",
+      "invalid_unjustified": [
+        "qty_5",
+        "qty_plus",
+        "qty_minus",
+        "qty_1",
+        "qty_2"
+      ],
+      "omittable_details": [
+        "speed limit as road convention"
+      ],
+      "optional_slots": [
+        "move_car"
+      ],
+      "required_slots": [
+        "number:50"
+      ],
+      "source": "Speed limit 50."
+    },
+    {
+      "category": "NUMBER",
+      "id": "04a-12",
+      "invalid_unjustified": [
+        "number:2"
+      ],
+      "omittable_details": [
+        "first-person pronoun"
+      ],
+      "optional_slots": [],
+      "required_slots": [
+        "need_water",
+        "qty_2"
+      ],
+      "source": "I need two waters."
+    },
+    {
+      "category": "ENTITY",
+      "id": "04a-13",
+      "invalid_unjustified": [
+        "person_generic"
+      ],
+      "omittable_details": [
+        "mythological explanation"
+      ],
+      "optional_slots": [
+        "surface_wavy"
+      ],
+      "required_slots": [
+        "entity:poseidon@odyssey",
+        "move_watercraft"
+      ],
+      "source": "Poseidon and watercraft."
+    },
+    {
+      "category": "ENTITY",
+      "id": "04a-14",
+      "invalid_unjustified": [
+        "entity:poseidon@odyssey"
+      ],
+      "omittable_details": [
+        "verb inflection"
+      ],
+      "optional_slots": [],
+      "required_slots": [
+        "entity:polyphemus@odyssey",
+        "eye_look",
+        "person_generic"
+      ],
+      "source": "Polyphemus sees a person."
+    },
+    {
+      "category": "CONTEXT_POLYSEMY",
+      "id": "04a-15",
+      "invalid_unjustified": [
+        "state_hot"
+      ],
+      "omittable_details": [
+        "separate slippery vs wavy distinction"
+      ],
+      "optional_slots": [],
+      "required_slots": [
+        "surface_wavy",
+        "punct_exclaim"
+      ],
+      "source": "Caution: wavy slippery surface."
+    },
+    {
+      "category": "INTENTIONAL_OMISSION",
+      "id": "04a-16",
+      "invalid_unjustified": [
+        "place_hotel",
+        "media_image"
+      ],
+      "omittable_details": [
+        "beautiful",
+        "blue",
+        "old",
+        "city center",
+        "hotel-specific distinction"
+      ],
+      "optional_slots": [
+        "qual_good",
+        "place_landmark_park"
+      ],
+      "required_slots": [
+        "place_home"
+      ],
+      "source": "A beautiful blue hotel near the old city center."
+    },
+    {
+      "category": "BOUNDARY",
+      "id": "04a-17",
+      "invalid_unjustified": [
+        "comm_speak"
+      ],
+      "omittable_details": [
+        "polite indirect wording",
+        "maybe"
+      ],
+      "optional_slots": [
+        "rel_here"
+      ],
+      "required_slots": [
+        "need_food",
+        "punct_question"
+      ],
+      "source": "Could you maybe point me toward food?"
+    },
+    {
+      "category": "BOUNDARY",
+      "id": "04a-18",
+      "invalid_unjustified": [
+        "state_dead"
+      ],
+      "omittable_details": [
+        "metaphorical source if context is figurative"
+      ],
+      "optional_slots": [
+        "rel_here",
+        "punct_exclaim"
+      ],
+      "required_slots": [
+        "action_conflict"
+      ],
+      "source": "This place is a battlefield."
+    }
+  ],
+  "version": "04A"
+}

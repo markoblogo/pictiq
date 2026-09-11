@@ -1,0 +1,35 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "annotations": [],
+        "content": "{\"schema\":\"0.1\",\"pictiq\":\"1.1\",\"profile\":\"standalone-core-v0.1\",\"contexts\":[\"universal-core\"],\"frames\":[{\"tokens\":[{\"type\":\"icon\",\"id\":\"comm_sound\"},{\"type\":\"icon\",\"id\":\"qty_minus\"},{\"type\":\"icon\",\"id\":\"comm_speak\"},{\"type\":\"icon\",\"id\":\"logic_yes\"}]}]}",
+        "refusal": null,
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1789122826,
+  "id": "chatcmpl-EMsriaU51miceKu8cygvkjju5a3OV",
+  "model": "gpt-5.1-2025-11-13",
+  "object": "chat.completion",
+  "service_tier": "default",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 92,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens": 2664,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 2432
+    },
+    "total_tokens": 2756
+  }
+}

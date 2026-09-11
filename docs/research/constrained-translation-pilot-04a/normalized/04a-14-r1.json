@@ -1,0 +1,28 @@
+{
+  "contexts": [
+    "universal-core",
+    "odyssey",
+    "narrative"
+  ],
+  "frames": [
+    {
+      "tokens": [
+        {
+          "id": "entity:polyphemus@odyssey",
+          "type": "entity"
+        },
+        {
+          "id": "eye_look",
+          "type": "icon"
+        },
+        {
+          "id": "person_generic",
+          "type": "icon"
+        }
+      ]
+    }
+  ],
+  "pictiq": "1.1",
+  "profile": "standalone-core-v0.1",
+  "schema": "0.1"
+}
