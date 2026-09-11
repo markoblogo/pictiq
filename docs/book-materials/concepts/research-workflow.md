@@ -69,3 +69,7 @@ After Composer exists, several tracks can run in parallel rather than in a rigid
 Suggested priority logic: prefer cheap experiments that use the same tooling; experiments that test fundamentally different language properties; experiments with strong book/publication value; and experiments that expose vocabulary or grammar pressure. Pictiq Poetry qualifies because it tests expressivity under ambiguity and formal constraint, nearly the opposite pressure from road signs and procedural wayfinding.
 
 Book 1 does not need to wait for Poetry, Kids, Machine Mind, or every future experiment. Later experiments can feed revised editions, Book 2, specialized books, articles, posts, tools, vocabulary, grammar, context packs, and product ideas.
+
+## Composer milestone note
+
+Composer v0.1 Interaction Spec is the handoff from research/tooling architecture to implementation. It should be treated as a gated design artifact: implement only after preserving the source-of-truth rules, Renderer parity requirement, no-AI boundary, and Human Authoring Stress Test 04B plan.

@@ -826,3 +826,14 @@ Result: All five inputs were archived byte-for-byte with SHA-256 records. The cr
 Decision / outcome: These materials become book/research foundations only. They update comparative positioning, human-testing methodology, polysemy decision language, and Context Pack hypotheses without changing Pictiq protocol, grammar, vocabulary, icons, packs, profiles, Entity Symbols, numeric notation, Message Schema, Renderer, Composer, tags, releases, or public claims.
 
 Artifacts: [master harvest](research/perplexity-research-foundations-harvest-2026-09.md), [compositional systems comparison](research/compositional-visual-systems-comparison.md), [context economy concept](concepts/context-economy-and-common-ground.md), [human testing methodology](research/human-testing-methodology.md), [human experiments backlog](research/human-experiments-backlog.md), [polysemy decision framework](concepts/polysemy-decision-framework.md), [Context Pack architecture hypotheses](concepts/context-pack-architecture-hypotheses.md), [book-safe claims and verification backlog](research/book-safe-claims-and-verification-backlog.md), and [archived inputs](research/inputs/perplexity-2026-09/README.md).
+## 2026-09-11 — Composer v0.1 Interaction and Architecture Spec
+
+Question: What is the smallest useful Pictiq Composer before implementation begins?
+
+Result: Composer v0.1 is specified as a human authoring interface for constructing valid Pictiq Messages without manual JSON, shorthand, SVG, or repository editing. The minimum loop is browse/search palette, add/reorder/delete tokens and frames, edit supported number/color parameters, preview through Renderer, inspect diagnostics, and export JSON, shorthand, or SVG. It is explicitly not an AI translator, second renderer, vector editor, publishing app, account system, or cloud workspace.
+
+Architecture decision: Composer consumes canonical repository data and uses Renderer v0.1 as the visual source of truth. The current public site is static GitHub Pages while Renderer v0.1 is Python, so public implementation cannot simply run the Python Renderer in the browser. A future implementation must choose an explicit renderer bridge or browser-compatible adapter and pass parity tests; approximate duplicate rendering is not acceptable.
+
+Decision / outcome: Specification only. No Composer UI, schema change, renderer change, vocabulary change, grammar change, icon change, AI, RAG, account system, persistence, tag, release, or push is created by this pass. The next planned step is Composer v0.1 implementation, followed by Stress Test 04B — Human Authoring / Composer Usability.
+
+Artifacts: [Composer spec](../../spec/PICTIQ_COMPOSER.md), [Composer architecture note](concepts/composer-v0.1-architecture.md), and [Stress Test 04B plan](research/composer-human-authoring-stress-test-04b.md).

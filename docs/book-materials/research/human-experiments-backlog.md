@@ -58,3 +58,7 @@ A future matrix can reuse the same semantic corpus, Pictiq Message representatio
 | AI | HUMAN | Tests whether AI-authored Pictiq is useful and not over-specific. |
 
 This is a high-value future research direction, not an implementation task now.
+
+## Composer-specific pilot
+
+See also: [Stress Test 04B — Human Authoring / Composer Usability Plan](composer-human-authoring-stress-test-04b.md). 04B is the first Composer-dependent pilot and should run before larger crowdsourced translation or human signaling studies.

@@ -48,3 +48,7 @@ Cross-links: [text-to-Pictiq prototype](../experiments/text-to-pictiq-rag-protot
 ## Constrained-writing tools
 
 A future Pictiq constrained-writing assistant can sit after Composer. It may take a theme, profile, number of lines, tiles per line, repetition constraint, terminal-tile constraint, palindrome constraint, or semantic-category constraint, then produce candidate Pictiq compositions for review. This is a tooling hypothesis only; poetry work should not interrupt renderer/generator and Composer work.
+
+## Composer v0.1 specification
+
+The next planned surface is specified in [Pictiq Composer v0.1](../../../spec/PICTIQ_COMPOSER.md). Composer should consume canonical repository data and Renderer output rather than owning a separate vocabulary or approximate renderer. Because the current public site is static GitHub Pages while Renderer v0.1 is Python, the implementation must choose an explicit renderer bridge and pass parity tests.
