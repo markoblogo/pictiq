@@ -3,6 +3,37 @@
 Chronological notes reconstructed from repository evidence. Interpretive statements are marked as such; dates follow commit or release history when a separate event date is unavailable.
 
 
+
+## 2026-09-11 — Research Foundations Batch 02: task-faithful compression and machine readability
+
+### Starting question
+
+How should Pictiq evaluate semantic compression, inspectable intermediate representations, machine readability, Web/UI use, logistics, and humanitarian boundaries without importing speculative grammar or vocabulary?
+
+### What happened
+
+Six supplied Perplexity research documents were archived byte-for-byte and critically harvested. The pass preserved task-faithful compression, a six-state preservation taxonomy, an inspectable-IR hypothesis, Action Receipt as a product hypothesis, machine-readability levels, Web/UI stress-test candidates, logistics/maritime scope boundaries, and humanitarian/emergency professional boundaries.
+
+### Evidence
+
+[Batch 02 harvest](research/perplexity-research-foundations-batch-02-harvest-2026-09.md), [Semantic Compression Framework](concepts/semantic-compression-framework.md), [Inspectable IR hypothesis](concepts/pictiq-inspectable-ir-hypothesis.md), [Machine Readability Levels](concepts/machine-readability-levels.md), [Web/UI stress-test plan](research/web-ui-pictiq-stress-test-plan.md), [Logistics/maritime stress-test plan](research/logistics-maritime-pictiq-stress-test-plan.md), and [Humanitarian/emergency stress-test plan](research/humanitarian-emergency-pictiq-stress-test-plan.md).
+
+### Decision / outcome
+
+The pass created research frameworks and future stress-test plans only. Message Schema v0.1 remains accepted for pilots: document → frames → flat ordered tokens.
+
+### Why it matters
+
+Pictiq can treat compression, machine readability, and professional authority as measurable research dimensions without prematurely redesigning Core, grammar, or Composer.
+
+### Open questions
+
+Future tests must verify external precedent claims, rebuild candidate corpora with current registry assets, and decide empirically whether UI/logistics/humanitarian cases justify new context packs or grammar pressure.
+
+### Possible future book use
+
+Use as a chapter bridge from visual-language theory to testable engineering practice: what a small protocol can compress, what it must mark as loss, and when it must hand off to text, linked data, or professionals.
+
 ## 2026-09-11 — Browser Renderer parity as a Composer prerequisite
 
 ### Starting question
