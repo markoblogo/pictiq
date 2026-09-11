@@ -203,3 +203,15 @@ Validates Pictiq Message Format v0.1 JSON fixtures against the local schema shap
 ```bash
 python3 tools/validate_message_schema.py
 ```
+
+
+## pictiq_render.py
+
+Renders or normalizes Pictiq Message Format v0.1 JSON and Pictiq Shorthand v0.1 inputs. The renderer uses current repository registries and canonical SVG assets; it does not translate natural language, infer missing vocabulary, group tokens, or choose semantic layout.
+
+```bash
+python3 tools/pictiq_render.py render examples/renderer/basic-water-question.pictiq --output build/qa/renderer-v0.1/basic-water-question.svg
+python3 tools/pictiq_render.py normalize examples/renderer/legacy-normalization.pictiq --output build/qa/renderer-v0.1/legacy-normalization.normalized.json
+```
+
+Diagnostics are emitted as JSON lines on stderr. Errors stop rendering; warnings preserve deterministic output.

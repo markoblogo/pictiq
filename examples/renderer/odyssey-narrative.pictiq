@@ -1,0 +1,7 @@
+!profile standalone
+!context odyssey
+
+@poseidon power_energy @odysseus
+entity:polyphemus@odyssey eye_look punct_exclaim
+@odysseus move_watercraft surface_wavy
+nature_cloud{color:#555555}

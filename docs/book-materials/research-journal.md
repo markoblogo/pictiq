@@ -786,3 +786,13 @@ The architecture now separates LANGUAGE, MESSAGE REPRESENTATION, AUTHORING SYNTA
 ### Why it matters
 
 This gives the next Renderer / Generator layer a stable target while preventing fuzzy translation, layout options, or poetry needs from leaking into the canonical semantic message. It also preserves compatibility normalization after v1.1.0: legacy input may normalize to preferred IDs, but new canonical JSON stores current IDs.
+
+## 2026-09-11 — Pictiq Renderer v0.1
+
+Question: Can the post-v1.1.0 message representation become an executable renderer without changing the accepted language, vocabulary, profiles, packs, icons, numeric notation, or Entity Symbol registries?
+
+Result: Renderer v0.1 was implemented as a deterministic local SVG renderer for canonical Pictiq Message Format v0.1 JSON and Pictiq Shorthand v0.1 inputs. It parses shorthand, normalizes supported legacy IDs, resolves scoped Entity Symbols, validates against current registries, renders numeric `50`, supports the COLOR parameter, and produces flat frame rows from actual canonical assets.
+
+Boundary: The renderer does not translate natural language, infer vocabulary, perform fuzzy matching, generate poetry, choose semantic layouts, implement grouping, redraw icons, or alter grammar. `move_boat` remains deferred and is not silently migrated to `move_watercraft`. Numeric notation remains separate from pragmatic `qty_*` quantities.
+
+Artifacts: [Renderer README](../renderer/README.md), [Renderer implementation note](concepts/renderer-v0.1-implementation.md), [renderer examples](../../examples/renderer/), [renderer QA outputs](../../build/qa/renderer-v0.1/), and [renderer tests](../../tests/test_renderer.py).

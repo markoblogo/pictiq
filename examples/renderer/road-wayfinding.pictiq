@@ -1,0 +1,5 @@
+!context road-wayfinding-v0.1
+surface_wavy punct_exclaim
+rel_greater
+person_generic move_feet logic_no
+50

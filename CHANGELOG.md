@@ -6,6 +6,9 @@ This project uses milestone-style tags. The `-infra` suffix indicates a pre-icon
 
 ## Unreleased
 
+### Renderer
+- Implemented Pictiq Renderer v0.1 for canonical JSON and Shorthand v0.1 inputs, including registry-aware validation, legacy ID normalization, scoped Entity Symbol resolution, numeric `50` rendering, COLOR parameter rendering, deterministic flat SVG layout, CLI/API entry points, real-case fixtures, tests, and renderer QA outputs. No grammar, vocabulary, profile, pack, icon, Entity Symbol, tag, or release changes are included.
+
 ### Message representation
 - Added specification-only Pictiq Message Format v0.1, Pictiq Shorthand v0.1, JSON Schema, valid/invalid fixtures, and fixture validation. This separates language, message representation, authoring syntax, rendering, and translation without implementing renderer, generator, Composer, AI translation, or grammar changes.
 
