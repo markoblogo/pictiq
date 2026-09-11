@@ -1,0 +1,1010 @@
+[
+  {
+    "label": "empty-640",
+    "viewport": {
+      "w": 640,
+      "h": 900
+    },
+    "bodyScrollWidth": 640,
+    "horizontalOverflow": false,
+    "palette": {
+      "x": 12,
+      "y": 96,
+      "w": 616,
+      "h": 793,
+      "bottom": 889
+    },
+    "workspace": {
+      "x": 12,
+      "y": 901,
+      "w": 616,
+      "h": 355,
+      "bottom": 1256
+    },
+    "preview": {
+      "x": 12,
+      "y": 1268,
+      "w": 616,
+      "h": 311,
+      "bottom": 1579
+    },
+    "shell": {
+      "x": 0,
+      "y": 84,
+      "w": 640,
+      "h": 1507,
+      "bottom": 1591
+    },
+    "scroll": {
+      "x": 25,
+      "y": 456,
+      "w": 590,
+      "h": 420,
+      "bottom": 876
+    },
+    "firstPaletteCard": {
+      "x": 25,
+      "y": 489,
+      "w": 587,
+      "h": 50,
+      "bottom": 539
+    },
+    "firstPaletteVisible": true,
+    "visiblePaletteCards": 8,
+    "tokenCount": 0,
+    "frameCount": 1,
+    "previewHasSvg": false,
+    "codeClosed": true,
+    "importClosed": true,
+    "contexts": [
+      "Paris\ncity-paris-v0.1",
+      "Road / Wayfinding\nroad-wayfinding-v0.1",
+      "Core\nuniversal-core",
+      "Universal\nuniversal-v1",
+      "Narrative\nnarrative",
+      "Odyssey\nodyssey"
+    ],
+    "profileLabel": "Standalone",
+    "specialText": "Special\n50"
+  },
+  {
+    "label": "empty-768",
+    "viewport": {
+      "w": 768,
+      "h": 900
+    },
+    "bodyScrollWidth": 768,
+    "horizontalOverflow": false,
+    "palette": {
+      "x": 12,
+      "y": 96,
+      "w": 744,
+      "h": 793,
+      "bottom": 889
+    },
+    "workspace": {
+      "x": 12,
+      "y": 901,
+      "w": 744,
+      "h": 355,
+      "bottom": 1256
+    },
+    "preview": {
+      "x": 12,
+      "y": 1268,
+      "w": 744,
+      "h": 311,
+      "bottom": 1579
+    },
+    "shell": {
+      "x": 0,
+      "y": 84,
+      "w": 768,
+      "h": 1507,
+      "bottom": 1591
+    },
+    "scroll": {
+      "x": 25,
+      "y": 456,
+      "w": 718,
+      "h": 420,
+      "bottom": 876
+    },
+    "firstPaletteCard": {
+      "x": 25,
+      "y": 489,
+      "w": 715,
+      "h": 50,
+      "bottom": 539
+    },
+    "firstPaletteVisible": true,
+    "visiblePaletteCards": 8,
+    "tokenCount": 0,
+    "frameCount": 1,
+    "previewHasSvg": false,
+    "codeClosed": true,
+    "importClosed": true,
+    "contexts": [
+      "Paris\ncity-paris-v0.1",
+      "Road / Wayfinding\nroad-wayfinding-v0.1",
+      "Core\nuniversal-core",
+      "Universal\nuniversal-v1",
+      "Narrative\nnarrative",
+      "Odyssey\nodyssey"
+    ],
+    "profileLabel": "Standalone",
+    "specialText": "Special\n50"
+  },
+  {
+    "label": "empty-1024",
+    "viewport": {
+      "w": 1024,
+      "h": 900
+    },
+    "bodyScrollWidth": 1024,
+    "horizontalOverflow": false,
+    "palette": {
+      "x": 12,
+      "y": 96,
+      "w": 1000,
+      "h": 793,
+      "bottom": 889
+    },
+    "workspace": {
+      "x": 12,
+      "y": 901,
+      "w": 1000,
+      "h": 355,
+      "bottom": 1256
+    },
+    "preview": {
+      "x": 12,
+      "y": 1268,
+      "w": 1000,
+      "h": 311,
+      "bottom": 1579
+    },
+    "shell": {
+      "x": 0,
+      "y": 84,
+      "w": 1024,
+      "h": 1507,
+      "bottom": 1591
+    },
+    "scroll": {
+      "x": 25,
+      "y": 456,
+      "w": 974,
+      "h": 420,
+      "bottom": 876
+    },
+    "firstPaletteCard": {
+      "x": 25,
+      "y": 489,
+      "w": 971,
+      "h": 50,
+      "bottom": 539
+    },
+    "firstPaletteVisible": true,
+    "visiblePaletteCards": 8,
+    "tokenCount": 0,
+    "frameCount": 1,
+    "previewHasSvg": false,
+    "codeClosed": true,
+    "importClosed": true,
+    "contexts": [
+      "Paris\ncity-paris-v0.1",
+      "Road / Wayfinding\nroad-wayfinding-v0.1",
+      "Core\nuniversal-core",
+      "Universal\nuniversal-v1",
+      "Narrative\nnarrative",
+      "Odyssey\nodyssey"
+    ],
+    "profileLabel": "Standalone",
+    "specialText": "Special\n50"
+  },
+  {
+    "label": "empty-1280",
+    "viewport": {
+      "w": 1280,
+      "h": 900
+    },
+    "bodyScrollWidth": 1280,
+    "horizontalOverflow": false,
+    "palette": {
+      "x": 12,
+      "y": 96,
+      "w": 345,
+      "h": 798,
+      "bottom": 894
+    },
+    "workspace": {
+      "x": 369,
+      "y": 96,
+      "w": 517,
+      "h": 798,
+      "bottom": 894
+    },
+    "preview": {
+      "x": 898,
+      "y": 96,
+      "w": 370,
+      "h": 798,
+      "bottom": 894
+    },
+    "shell": {
+      "x": 0,
+      "y": 84,
+      "w": 1280,
+      "h": 822,
+      "bottom": 906
+    },
+    "scroll": {
+      "x": 25,
+      "y": 456,
+      "w": 319,
+      "h": 425,
+      "bottom": 881
+    },
+    "firstPaletteCard": {
+      "x": 25,
+      "y": 489,
+      "w": 316,
+      "h": 50,
+      "bottom": 539
+    },
+    "firstPaletteVisible": true,
+    "visiblePaletteCards": 8,
+    "tokenCount": 0,
+    "frameCount": 1,
+    "previewHasSvg": false,
+    "codeClosed": true,
+    "importClosed": true,
+    "contexts": [
+      "Paris\ncity-paris-v0.1",
+      "Road / Wayfinding\nroad-wayfinding-v0.1",
+      "Core\nuniversal-core",
+      "Universal\nuniversal-v1",
+      "Narrative\nnarrative",
+      "Odyssey\nodyssey"
+    ],
+    "profileLabel": "Standalone",
+    "specialText": "Special\n50"
+  },
+  {
+    "label": "empty-1440",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "bodyScrollWidth": 1440,
+    "horizontalOverflow": false,
+    "palette": {
+      "x": 12,
+      "y": 96,
+      "w": 390,
+      "h": 798,
+      "bottom": 894
+    },
+    "workspace": {
+      "x": 414,
+      "y": 96,
+      "w": 585,
+      "h": 798,
+      "bottom": 894
+    },
+    "preview": {
+      "x": 1010,
+      "y": 96,
+      "w": 418,
+      "h": 798,
+      "bottom": 894
+    },
+    "shell": {
+      "x": 0,
+      "y": 84,
+      "w": 1440,
+      "h": 822,
+      "bottom": 906
+    },
+    "scroll": {
+      "x": 25,
+      "y": 456,
+      "w": 364,
+      "h": 425,
+      "bottom": 881
+    },
+    "firstPaletteCard": {
+      "x": 25,
+      "y": 489,
+      "w": 361,
+      "h": 50,
+      "bottom": 539
+    },
+    "firstPaletteVisible": true,
+    "visiblePaletteCards": 8,
+    "tokenCount": 0,
+    "frameCount": 1,
+    "previewHasSvg": false,
+    "codeClosed": true,
+    "importClosed": true,
+    "contexts": [
+      "Paris\ncity-paris-v0.1",
+      "Road / Wayfinding\nroad-wayfinding-v0.1",
+      "Core\nuniversal-core",
+      "Universal\nuniversal-v1",
+      "Narrative\nnarrative",
+      "Odyssey\nodyssey"
+    ],
+    "profileLabel": "Standalone",
+    "specialText": "Special\n50"
+  },
+  {
+    "label": "desktop-empty-screenshot",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "bodyScrollWidth": 1440,
+    "horizontalOverflow": false,
+    "palette": {
+      "x": 12,
+      "y": 96,
+      "w": 390,
+      "h": 798,
+      "bottom": 894
+    },
+    "workspace": {
+      "x": 414,
+      "y": 96,
+      "w": 585,
+      "h": 798,
+      "bottom": 894
+    },
+    "preview": {
+      "x": 1010,
+      "y": 96,
+      "w": 418,
+      "h": 798,
+      "bottom": 894
+    },
+    "shell": {
+      "x": 0,
+      "y": 84,
+      "w": 1440,
+      "h": 822,
+      "bottom": 906
+    },
+    "scroll": {
+      "x": 25,
+      "y": 456,
+      "w": 364,
+      "h": 425,
+      "bottom": 881
+    },
+    "firstPaletteCard": {
+      "x": 25,
+      "y": 489,
+      "w": 361,
+      "h": 50,
+      "bottom": 539
+    },
+    "firstPaletteVisible": true,
+    "visiblePaletteCards": 8,
+    "tokenCount": 0,
+    "frameCount": 1,
+    "previewHasSvg": false,
+    "codeClosed": true,
+    "importClosed": true,
+    "contexts": [
+      "Paris\ncity-paris-v0.1",
+      "Road / Wayfinding\nroad-wayfinding-v0.1",
+      "Core\nuniversal-core",
+      "Universal\nuniversal-v1",
+      "Narrative\nnarrative",
+      "Odyssey\nodyssey"
+    ],
+    "profileLabel": "Standalone",
+    "specialText": "Special\n50"
+  },
+  {
+    "label": "desktop-water-question",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "bodyScrollWidth": 1440,
+    "horizontalOverflow": false,
+    "palette": {
+      "x": 12,
+      "y": 96,
+      "w": 390,
+      "h": 798,
+      "bottom": 894
+    },
+    "workspace": {
+      "x": 414,
+      "y": 96,
+      "w": 585,
+      "h": 798,
+      "bottom": 894
+    },
+    "preview": {
+      "x": 1010,
+      "y": 96,
+      "w": 418,
+      "h": 798,
+      "bottom": 894
+    },
+    "shell": {
+      "x": 0,
+      "y": 84,
+      "w": 1440,
+      "h": 822,
+      "bottom": 906
+    },
+    "scroll": {
+      "x": 25,
+      "y": 456,
+      "w": 364,
+      "h": 425,
+      "bottom": 881
+    },
+    "firstPaletteCard": {
+      "x": 25,
+      "y": 489,
+      "w": 361,
+      "h": 50,
+      "bottom": 539
+    },
+    "firstPaletteVisible": true,
+    "visiblePaletteCards": 1,
+    "tokenCount": 2,
+    "frameCount": 1,
+    "previewHasSvg": true,
+    "codeClosed": true,
+    "importClosed": true,
+    "contexts": [
+      "Paris\ncity-paris-v0.1",
+      "Road / Wayfinding\nroad-wayfinding-v0.1",
+      "Core\nuniversal-core",
+      "Universal\nuniversal-v1",
+      "Narrative\nnarrative",
+      "Odyssey\nodyssey"
+    ],
+    "profileLabel": "Standalone",
+    "specialText": "Special\n50"
+  },
+  {
+    "label": "narrow-water-question",
+    "viewport": {
+      "w": 640,
+      "h": 900
+    },
+    "bodyScrollWidth": 640,
+    "horizontalOverflow": false,
+    "palette": {
+      "x": 12,
+      "y": 96,
+      "w": 616,
+      "h": 593,
+      "bottom": 689
+    },
+    "workspace": {
+      "x": 12,
+      "y": 701,
+      "w": 616,
+      "h": 508,
+      "bottom": 1210
+    },
+    "preview": {
+      "x": 12,
+      "y": 1222,
+      "w": 616,
+      "h": 454,
+      "bottom": 1676
+    },
+    "shell": {
+      "x": 0,
+      "y": 84,
+      "w": 640,
+      "h": 1603,
+      "bottom": 1688
+    },
+    "scroll": {
+      "x": 25,
+      "y": 456,
+      "w": 590,
+      "h": 220,
+      "bottom": 676
+    },
+    "firstPaletteCard": {
+      "x": 25,
+      "y": 489,
+      "w": 587,
+      "h": 50,
+      "bottom": 539
+    },
+    "firstPaletteVisible": true,
+    "visiblePaletteCards": 1,
+    "tokenCount": 2,
+    "frameCount": 1,
+    "previewHasSvg": true,
+    "codeClosed": true,
+    "importClosed": true,
+    "contexts": [
+      "Paris\ncity-paris-v0.1",
+      "Road / Wayfinding\nroad-wayfinding-v0.1",
+      "Core\nuniversal-core",
+      "Universal\nuniversal-v1",
+      "Narrative\nnarrative",
+      "Odyssey\nodyssey"
+    ],
+    "profileLabel": "Standalone",
+    "specialText": "Special\n50"
+  },
+  {
+    "label": "desktop-home",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "bodyScrollWidth": 1440,
+    "horizontalOverflow": false,
+    "palette": {
+      "x": 12,
+      "y": 96,
+      "w": 390,
+      "h": 798,
+      "bottom": 894
+    },
+    "workspace": {
+      "x": 414,
+      "y": 96,
+      "w": 585,
+      "h": 798,
+      "bottom": 894
+    },
+    "preview": {
+      "x": 1010,
+      "y": 96,
+      "w": 418,
+      "h": 798,
+      "bottom": 894
+    },
+    "shell": {
+      "x": 0,
+      "y": 84,
+      "w": 1440,
+      "h": 822,
+      "bottom": 906
+    },
+    "scroll": {
+      "x": 25,
+      "y": 456,
+      "w": 364,
+      "h": 425,
+      "bottom": 881
+    },
+    "firstPaletteCard": {
+      "x": 25,
+      "y": 489,
+      "w": 361,
+      "h": 58,
+      "bottom": 547
+    },
+    "firstPaletteVisible": true,
+    "visiblePaletteCards": 1,
+    "tokenCount": 1,
+    "frameCount": 1,
+    "previewHasSvg": true,
+    "codeClosed": true,
+    "importClosed": true,
+    "contexts": [
+      "Paris\ncity-paris-v0.1",
+      "Road / Wayfinding\nroad-wayfinding-v0.1",
+      "Core\nuniversal-core",
+      "Universal\nuniversal-v1",
+      "Narrative\nnarrative",
+      "Odyssey\nodyssey"
+    ],
+    "profileLabel": "Standalone",
+    "specialText": "Special\n50"
+  },
+  {
+    "label": "search-water",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "bodyScrollWidth": 1440,
+    "horizontalOverflow": false,
+    "palette": {
+      "x": 12,
+      "y": 96,
+      "w": 390,
+      "h": 798,
+      "bottom": 894
+    },
+    "workspace": {
+      "x": 414,
+      "y": 96,
+      "w": 585,
+      "h": 798,
+      "bottom": 894
+    },
+    "preview": {
+      "x": 1010,
+      "y": 96,
+      "w": 418,
+      "h": 798,
+      "bottom": 894
+    },
+    "shell": {
+      "x": 0,
+      "y": 84,
+      "w": 1440,
+      "h": 822,
+      "bottom": 906
+    },
+    "scroll": {
+      "x": 25,
+      "y": 456,
+      "w": 364,
+      "h": 425,
+      "bottom": 881
+    },
+    "firstPaletteCard": {
+      "x": 25,
+      "y": 489,
+      "w": 361,
+      "h": 50,
+      "bottom": 539
+    },
+    "firstPaletteVisible": true,
+    "visiblePaletteCards": 4,
+    "tokenCount": 1,
+    "frameCount": 1,
+    "previewHasSvg": true,
+    "codeClosed": true,
+    "importClosed": true,
+    "contexts": [
+      "Paris\ncity-paris-v0.1",
+      "Road / Wayfinding\nroad-wayfinding-v0.1",
+      "Core\nuniversal-core",
+      "Universal\nuniversal-v1",
+      "Narrative\nnarrative",
+      "Odyssey\nodyssey"
+    ],
+    "profileLabel": "Standalone",
+    "specialText": "Special\n50"
+  },
+  {
+    "label": "entity-poseidon",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "bodyScrollWidth": 1440,
+    "horizontalOverflow": false,
+    "palette": {
+      "x": 12,
+      "y": 96,
+      "w": 390,
+      "h": 798,
+      "bottom": 894
+    },
+    "workspace": {
+      "x": 414,
+      "y": 96,
+      "w": 585,
+      "h": 798,
+      "bottom": 894
+    },
+    "preview": {
+      "x": 1010,
+      "y": 96,
+      "w": 418,
+      "h": 798,
+      "bottom": 894
+    },
+    "shell": {
+      "x": 0,
+      "y": 84,
+      "w": 1440,
+      "h": 822,
+      "bottom": 906
+    },
+    "scroll": {
+      "x": 25,
+      "y": 456,
+      "w": 364,
+      "h": 425,
+      "bottom": 881
+    },
+    "firstPaletteCard": null,
+    "firstPaletteVisible": false,
+    "visiblePaletteCards": 0,
+    "tokenCount": 2,
+    "frameCount": 1,
+    "previewHasSvg": true,
+    "codeClosed": true,
+    "importClosed": true,
+    "contexts": [
+      "Paris\ncity-paris-v0.1",
+      "Road / Wayfinding\nroad-wayfinding-v0.1",
+      "Core\nuniversal-core",
+      "Universal\nuniversal-v1",
+      "Narrative\nnarrative",
+      "Odyssey\nodyssey"
+    ],
+    "profileLabel": "Standalone",
+    "specialText": "Special\n50"
+  },
+  {
+    "label": "number-50",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "bodyScrollWidth": 1440,
+    "horizontalOverflow": false,
+    "palette": {
+      "x": 12,
+      "y": 96,
+      "w": 390,
+      "h": 798,
+      "bottom": 894
+    },
+    "workspace": {
+      "x": 414,
+      "y": 96,
+      "w": 585,
+      "h": 798,
+      "bottom": 894
+    },
+    "preview": {
+      "x": 1010,
+      "y": 96,
+      "w": 418,
+      "h": 798,
+      "bottom": 894
+    },
+    "shell": {
+      "x": 0,
+      "y": 84,
+      "w": 1440,
+      "h": 822,
+      "bottom": 906
+    },
+    "scroll": {
+      "x": 25,
+      "y": 456,
+      "w": 364,
+      "h": 425,
+      "bottom": 881
+    },
+    "firstPaletteCard": {
+      "x": 25,
+      "y": 489,
+      "w": 361,
+      "h": 50,
+      "bottom": 539
+    },
+    "firstPaletteVisible": true,
+    "visiblePaletteCards": 8,
+    "tokenCount": 1,
+    "frameCount": 1,
+    "previewHasSvg": true,
+    "codeClosed": true,
+    "importClosed": true,
+    "contexts": [
+      "Paris\ncity-paris-v0.1",
+      "Road / Wayfinding\nroad-wayfinding-v0.1",
+      "Core\nuniversal-core",
+      "Universal\nuniversal-v1",
+      "Narrative\nnarrative",
+      "Odyssey\nodyssey"
+    ],
+    "profileLabel": "Standalone",
+    "specialText": "Special\n50"
+  },
+  {
+    "label": "multi-frame",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "bodyScrollWidth": 1440,
+    "horizontalOverflow": false,
+    "palette": {
+      "x": 12,
+      "y": 96,
+      "w": 390,
+      "h": 798,
+      "bottom": 894
+    },
+    "workspace": {
+      "x": 414,
+      "y": 96,
+      "w": 585,
+      "h": 798,
+      "bottom": 894
+    },
+    "preview": {
+      "x": 1010,
+      "y": 96,
+      "w": 418,
+      "h": 798,
+      "bottom": 894
+    },
+    "shell": {
+      "x": 0,
+      "y": 84,
+      "w": 1440,
+      "h": 822,
+      "bottom": 906
+    },
+    "scroll": {
+      "x": 25,
+      "y": 456,
+      "w": 364,
+      "h": 425,
+      "bottom": 881
+    },
+    "firstPaletteCard": {
+      "x": 25,
+      "y": 489,
+      "w": 361,
+      "h": 50,
+      "bottom": 539
+    },
+    "firstPaletteVisible": true,
+    "visiblePaletteCards": 1,
+    "tokenCount": 2,
+    "frameCount": 2,
+    "previewHasSvg": true,
+    "codeClosed": true,
+    "importClosed": true,
+    "contexts": [
+      "Paris\ncity-paris-v0.1",
+      "Road / Wayfinding\nroad-wayfinding-v0.1",
+      "Core\nuniversal-core",
+      "Universal\nuniversal-v1",
+      "Narrative\nnarrative",
+      "Odyssey\nodyssey"
+    ],
+    "profileLabel": "Standalone",
+    "specialText": "Special\n50"
+  },
+  {
+    "label": "road-fixture",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "bodyScrollWidth": 1440,
+    "horizontalOverflow": false,
+    "palette": {
+      "x": 12,
+      "y": 96,
+      "w": 390,
+      "h": 798,
+      "bottom": 894
+    },
+    "workspace": {
+      "x": 414,
+      "y": 96,
+      "w": 585,
+      "h": 798,
+      "bottom": 894
+    },
+    "preview": {
+      "x": 1010,
+      "y": 96,
+      "w": 418,
+      "h": 798,
+      "bottom": 894
+    },
+    "shell": {
+      "x": 0,
+      "y": 84,
+      "w": 1440,
+      "h": 822,
+      "bottom": 906
+    },
+    "scroll": {
+      "x": 25,
+      "y": 456,
+      "w": 364,
+      "h": 425,
+      "bottom": 881
+    },
+    "firstPaletteCard": {
+      "x": 25,
+      "y": 489,
+      "w": 361,
+      "h": 50,
+      "bottom": 539
+    },
+    "firstPaletteVisible": true,
+    "visiblePaletteCards": 8,
+    "tokenCount": 7,
+    "frameCount": 4,
+    "previewHasSvg": true,
+    "codeClosed": true,
+    "importClosed": true,
+    "contexts": [
+      "Paris\ncity-paris-v0.1",
+      "Road / Wayfinding\nroad-wayfinding-v0.1",
+      "Core\nuniversal-core",
+      "Universal\nuniversal-v1",
+      "Narrative\nnarrative",
+      "Odyssey\nodyssey"
+    ],
+    "profileLabel": "Standalone",
+    "specialText": "Special\n50"
+  },
+  {
+    "label": "odyssey-fixture",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "bodyScrollWidth": 1440,
+    "horizontalOverflow": false,
+    "palette": {
+      "x": 12,
+      "y": 96,
+      "w": 390,
+      "h": 798,
+      "bottom": 894
+    },
+    "workspace": {
+      "x": 414,
+      "y": 96,
+      "w": 585,
+      "h": 798,
+      "bottom": 894
+    },
+    "preview": {
+      "x": 1010,
+      "y": 96,
+      "w": 418,
+      "h": 798,
+      "bottom": 894
+    },
+    "shell": {
+      "x": 0,
+      "y": 84,
+      "w": 1440,
+      "h": 822,
+      "bottom": 906
+    },
+    "scroll": {
+      "x": 25,
+      "y": 456,
+      "w": 364,
+      "h": 425,
+      "bottom": 881
+    },
+    "firstPaletteCard": null,
+    "firstPaletteVisible": false,
+    "visiblePaletteCards": 0,
+    "tokenCount": 10,
+    "frameCount": 4,
+    "previewHasSvg": true,
+    "codeClosed": true,
+    "importClosed": true,
+    "contexts": [
+      "Paris\ncity-paris-v0.1",
+      "Road / Wayfinding\nroad-wayfinding-v0.1",
+      "Core\nuniversal-core",
+      "Universal\nuniversal-v1",
+      "Narrative\nnarrative",
+      "Odyssey\nodyssey"
+    ],
+    "profileLabel": "Standalone",
+    "specialText": "Special\n50"
+  }
+]

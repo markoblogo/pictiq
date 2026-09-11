@@ -8,12 +8,12 @@
   </head>
   <body>
     <header class="topbar">
-      <div>
+      <div class="top-title">
         <a href="../" class="back">← Lexicon</a>
-        <h1>Pictiq Composer v0.1</h1>
-        <p>Browse tiles, build frames, preview with the browser Renderer, export canonical Pictiq.</p>
+        <h1>Pictiq Composer <span>v0.1</span></h1>
+        <p>Build frames, preview Pictiq, export when ready.</p>
       </div>
-      <div class="top-actions">
+      <div class="top-actions" aria-label="Composer actions">
         <button id="newMessage" type="button">New</button>
         <button id="undo" type="button">Undo</button>
         <button id="redo" type="button">Redo</button>
@@ -23,66 +23,72 @@
     <main class="composer-shell">
       <section class="panel palette" aria-labelledby="palette-title">
         <h2 id="palette-title">Palette</h2>
-        <div class="control-row">
+        <div class="palette-controls">
           <label>Profile
             <select id="profile"></select>
           </label>
+          <fieldset class="contexts">
+            <legend>Vocabulary</legend>
+            <div id="contexts"></div>
+          </fieldset>
+          <label>Search
+            <input id="search" type="search" placeholder="water, no, road, poseidon…" autocomplete="off" />
+          </label>
+          <div class="quick-add" aria-label="Special tokens">
+            <span>Special</span>
+            <button id="addNumber" type="button" title="Numeric Notation currently supports 50">50</button>
+          </div>
         </div>
-        <fieldset class="contexts">
-          <legend>Contexts</legend>
-          <div id="contexts"></div>
-        </fieldset>
-        <label>Search
-          <input id="search" type="search" placeholder="water, no, road, poseidon…" autocomplete="off" />
-        </label>
-        <div class="quick-add">
-          <button id="addNumber" type="button">Add number 50</button>
+        <div class="palette-scroll" aria-label="Available Pictiq tiles">
+          <h3>Ordinary concepts</h3>
+          <div id="paletteItems" class="palette-items" aria-live="polite"></div>
+          <h3>Entity Symbols</h3>
+          <div id="entityItems" class="palette-items entity-list"></div>
         </div>
-        <h3>Ordinary concepts</h3>
-        <div id="paletteItems" class="palette-items" aria-live="polite"></div>
-        <h3>Entity Symbols</h3>
-        <div id="entityItems" class="palette-items entity-list"></div>
       </section>
 
       <section class="panel workspace" aria-labelledby="workspace-title">
         <h2 id="workspace-title">Message workspace</h2>
         <div class="workspace-actions">
           <button id="addFrame" type="button">Add frame</button>
-          <button id="clearFrame" type="button">Clear frame</button>
-          <button id="deleteFrame" type="button">Delete frame</button>
+          <button id="clearFrame" type="button">Clear</button>
+          <button id="deleteFrame" type="button">Delete</button>
         </div>
         <div id="frames" class="frames"></div>
 
         <section class="inspector" aria-labelledby="inspector-title">
           <h3 id="inspector-title">Inspector</h3>
-          <div id="inspectorBody">Select a token.</div>
+          <div id="inspectorBody">Choose a tile from the palette to start.</div>
         </section>
 
-        <section aria-labelledby="import-title">
-          <h3 id="import-title">Import</h3>
-          <textarea id="importText" rows="6" spellcheck="false" placeholder='Paste Pictiq Message JSON or .pictiq shorthand here'></textarea>
+        <details class="import-panel">
+          <summary>Import</summary>
+          <textarea id="importText" rows="4" spellcheck="false" placeholder='Paste Pictiq Message JSON or .pictiq shorthand here'></textarea>
           <div class="control-row">
             <button id="importJson" type="button">Import JSON</button>
             <button id="importShorthand" type="button">Import .pictiq</button>
           </div>
-        </section>
+        </details>
       </section>
 
       <section class="panel preview" aria-labelledby="preview-title">
         <h2 id="preview-title">Renderer preview</h2>
         <div id="diagnostics" class="diagnostics" aria-live="polite"></div>
         <div id="previewSvg" class="preview-box" role="img" aria-label="Pictiq Renderer preview"></div>
-        <div class="exports">
-          <button id="copyJson" type="button">Copy JSON</button>
-          <button id="downloadJson" type="button">Download JSON</button>
-          <button id="copyShorthand" type="button">Copy .pictiq</button>
-          <button id="downloadShorthand" type="button">Download .pictiq</button>
-          <button id="downloadSvg" type="button">Download SVG</button>
-        </div>
-        <h3>Canonical JSON</h3>
-        <pre id="jsonOut" tabindex="0"></pre>
-        <h3>Shorthand</h3>
-        <pre id="shorthandOut" tabindex="0"></pre>
+        <details class="export-panel">
+          <summary>Export / inspect</summary>
+          <div class="exports">
+            <button id="copyJson" type="button">Copy JSON</button>
+            <button id="downloadJson" type="button">Download JSON</button>
+            <button id="copyShorthand" type="button">Copy .pictiq</button>
+            <button id="downloadShorthand" type="button">Download .pictiq</button>
+            <button id="downloadSvg" type="button">Download SVG</button>
+          </div>
+          <h3>Canonical JSON</h3>
+          <pre id="jsonOut" tabindex="0"></pre>
+          <h3>Shorthand</h3>
+          <pre id="shorthandOut" tabindex="0"></pre>
+        </details>
       </section>
     </main>
 

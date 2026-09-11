@@ -10,6 +10,23 @@ let lastRender = null;
 const $ = (id) => document.getElementById(id);
 const els = Object.fromEntries(['profile','contexts','search','paletteItems','entityItems','frames','inspectorBody','diagnostics','previewSvg','jsonOut','shorthandOut','importText'].map((id) => [id, $(id)]));
 
+const PROFILE_LABELS = {
+  'standalone-core-v0.1': 'Standalone',
+  embodied: 'Embodied',
+  standalone: 'Standalone',
+};
+const CONTEXT_LABELS = {
+  'city-paris-v0.1': 'Paris',
+  'road-wayfinding-v0.1': 'Road / Wayfinding',
+  'universal-core': 'Core',
+  'universal-v1': 'Universal',
+  narrative: 'Narrative',
+  odyssey: 'Odyssey',
+};
+
+export function displayProfileLabel(id) { return PROFILE_LABELS[id] || String(id || '').replace(/-v\d+(?:\.\d+)*$/, '').replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()); }
+export function displayContextLabel(id) { return CONTEXT_LABELS[id] || String(id || '').replace(/-v\d+(?:\.\d+)*$/, '').replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()); }
+
 function clone(v) { return structuredClone(v); }
 function escapeHtml(s) { return String(s ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 function pushHistory() { undoStack.push(clone(state)); if (undoStack.length > 50) undoStack.shift(); redoStack = []; }
@@ -31,10 +48,14 @@ function addToken(token) { mutate(() => { currentFrame().tokens.push(clone(token
 
 function renderProfileContexts() {
   if (!els.profile.options.length) {
-    for (const id of Object.keys(DATA.profiles)) els.profile.add(new Option(id.replace('-core-v0.1',''), id));
+    for (const id of Object.keys(DATA.profiles)) els.profile.add(new Option(displayProfileLabel(id), id));
   }
-  els.profile.value = state.message.profile || 'standalone-core-v0.1';
-  els.contexts.innerHTML = [...CONTEXTS].map((id) => `<label><input type="checkbox" value="${escapeHtml(id)}" ${state.message.contexts?.includes(id) ? 'checked' : ''}> ${escapeHtml(id)}</label>`).join('');
+  const profileValue = state.message.profile || 'standalone-core-v0.1';
+  if (![...els.profile.options].some((option) => option.value === profileValue)) {
+    els.profile.add(new Option(displayProfileLabel(profileValue), profileValue));
+  }
+  els.profile.value = profileValue;
+  els.contexts.innerHTML = [...CONTEXTS].map((id) => `<label title="${escapeHtml(id)}"><input type="checkbox" value="${escapeHtml(id)}" ${state.message.contexts?.includes(id) ? 'checked' : ''}> <span class="context-name">${escapeHtml(displayContextLabel(id))}</span><span class="context-id">${escapeHtml(id)}</span></label>`).join('');
 }
 
 function renderPalette() {
@@ -85,7 +106,7 @@ function renderFrames() {
 
 function renderInspector() {
   const token = currentFrame()?.tokens[state.selectedToken];
-  if (!token) { els.inspectorBody.textContent = 'Select a token.'; return; }
+  if (!token) { els.inspectorBody.textContent = 'Choose a tile from the palette to start.'; return; }
   if (token.type === 'icon') {
     const entry = iconById[token.id] || {};
     els.inspectorBody.innerHTML = `
@@ -107,6 +128,15 @@ function renderInspector() {
 
 function renderPreview() {
   const compact = compactMessage(state.message);
+  const hasTokens = state.message.frames?.some((frame) => frame.tokens?.length);
+  if (!hasTokens) {
+    els.diagnostics.innerHTML = '<div class="diag ok">Empty message. Choose a tile from the palette to start.</div>';
+    els.previewSvg.innerHTML = '<p class="palette-gloss">Your Pictiq message preview will appear here.</p>';
+    els.jsonOut.textContent = JSON.stringify(compact, null, 2);
+    els.shorthandOut.textContent = '';
+    lastRender = null;
+    return;
+  }
   const normalized = normalizeAndValidateMessage(compact);
   const shownDiagnostics = [...(state.importDiagnostics || []), ...normalized.diagnostics];
   state.diagnostics = shownDiagnostics;
@@ -130,7 +160,7 @@ function renderPreview() {
 function render() { renderProfileContexts(); renderPalette(); renderFrames(); renderInspector(); renderPreview(); }
 
 function setImported(result) {
-  if (result.message) mutate(() => { state.message = messageForEditing(result.message); state.selectedFrame = 0; state.selectedToken = null; state.importDiagnostics = result.diagnostics; });
+  if (result.message) mutate(() => { state.message = messageForEditing(result.message); state.selectedFrame = 0; state.selectedToken = null; state.importDiagnostics = result.diagnostics; document.querySelector('.import-panel').open = false; });
   else { state.importDiagnostics = result.diagnostics; render(); }
 }
 

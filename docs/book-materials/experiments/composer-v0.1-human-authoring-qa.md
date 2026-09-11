@@ -28,3 +28,10 @@ Open the static Composer at [`../../composer/`](../../composer/).
 ## Non-results
 
 This checklist does not claim usability success, accessibility compliance, cross-cultural comprehension, or Stress Test 04B completion. It is the acceptance gate for whether the implementation is ready for human authoring tests.
+
+
+## Human Acceptance Fix Pass 1
+
+First human acceptance failed before authoring because the desktop Composer palette did not present tiles immediately and the three-panel layout gave Palette, Workspace, and Preview equal visual weight. Fix Pass 1 keeps Composer v0.1 architecture unchanged while making the Message Workspace the visual center, bounding desktop panels to the viewport, making the vocabulary area predictably scrollable, moving import/export/code into compact disclosure controls, and showing human-facing labels for profiles/context packs while retaining canonical IDs.
+
+QA artifacts: [`../../research/composer-v0.1-acceptance-fix-pass-1/composer-v0.1-acceptance-fix-pass-1-qa.md`](../../research/composer-v0.1-acceptance-fix-pass-1/composer-v0.1-acceptance-fix-pass-1-qa.md).
