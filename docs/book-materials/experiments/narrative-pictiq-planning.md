@@ -4,7 +4,7 @@
 
 ## Research question
 
-Can readers infer and gradually learn Pictiq when characters think or communicate through tiles inside a narrative?
+Can readers infer useful meaning from Pictiq-like tiles when characters think or communicate inside a narrative, before the reader is taught Pictiq as a named system?
 
 ## Observations to collect
 

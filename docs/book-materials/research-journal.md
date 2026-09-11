@@ -949,3 +949,13 @@ Result: A small 04B kit is prepared with participant instructions, fixed task co
 Decision / outcome: Experiment kit only. No participant data, simulated users, Composer change, vocabulary change, grammar change, Message Schema change, Renderer change, icon change, tag, release, or push is implied by the kit. Stress Test 04B remains **NOT RUN** until real participants use Composer.
 
 Artifacts: [04B experiment kit](../research/composer-human-authoring-04b/README.md).
+
+## 2026-09-11 — Research and deployment policy pass
+
+Question: How should Pictiq organize research evidence, deployment priorities, publication milestones, and the next zero-training stress test after Composer creator acceptance?
+
+Result: The project phase model now distinguishes Phase I language/infrastructure build, Phase II pressure/deployment/publication, and Phase III synthesis/book work. The zero-training entry principle is recorded as a design objective and falsifiable hypothesis, not a proven fact. Formal human studies are preserved as targeted evidence, while 04B is explicitly ready, non-blocking, and run when an opportunity exists. Product deployments are framed as solving another product's problem with Pictiq as a secondary communication layer.
+
+Decision / outcome: Strategy/research documentation only. No Composer code, vocabulary, grammar, Message Schema, Shorthand, Renderer, icon, Entity Symbol, Context Pack, tag, release, external model call, Stress Test 04B run, or Stress Test 05 run changed in this pass.
+
+Artifacts: [Zero-Training Entry Principle](concepts/zero-training-entry.md), [Research and Evidence Policy](research/pictiq-research-and-evidence-policy.md), [Deployment Roadmap](planning/deployment-roadmap.md), [Publication Milestones](planning/publication-milestones.md), and [Stress Test 05 plan](research/stress-test-05-zero-training-visual-comprehension.md).

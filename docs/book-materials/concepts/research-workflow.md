@@ -34,24 +34,36 @@ For every proposed mini-project, keep two fields separate:
 
 Prefer projects that advance both, but do not force immediate monetization when the research value is high.
 
+## Project phase model
+
+### Phase I — Build the language / infrastructure
+
+Status: substantially complete, but not permanently frozen.
+
+Includes vocabulary, grammar, architecture, audit, Message Format, Renderer, Composer, and the first basic machine experiment.
+
+### Phase II — Pressure + deployment + publication
+
+Status: active.
+
+Includes cross-model experiments, domain stress tests, secondary-product deployments, public artifacts/posts, real-world feedback, and targeted formal tests when a specific claim requires them.
+
+### Phase III — Synthesis / book
+
+Includes content freeze, claims verification, manuscript, technical review, publication, and later editions based on subsequent evidence.
+
 ## Current broad sequence
 
-1. Architecture & Vocabulary Audit / cleanup.
-2. Release from cleaned architecture.
-3. Shared Renderer / Generator layer.
-4. Stress Test 04A — CLOSED / ACCEPTED.
-5. Composer v0.1 Interaction Spec.
-6. Composer v0.1 implementation.
-7. Composer v0.1 creator acceptance — PASSED.
-8. Stress Test 04B experiment-kit preparation.
-9. Tiny external human-authoring pilot.
-10. Evidence-based fixes only if required.
-11. Composer release.
-12. Stress Test 05 Grammar Intuition / Compositional Learnability.
-13. Parallel post-Composer experiment program.
-14. Books, revised editions, and specialized publications.
+1. Composer v0.1 creator acceptance — PASSED.
+2. Stress Test 04B — READY / NON-BLOCKING / RUN WHEN OPPORTUNITY EXISTS.
+3. Composer release decision, informed by 04B if available but not automatically blocked by it.
+4. Deployment/product pilots where Pictiq is a secondary communication layer.
+5. Cross-model and domain stress tests.
+6. Stress Test 05 — Zero-Training Visual Comprehension & Cross-Model Signaling.
+7. Publication milestones and public artifacts when evidence is strong enough.
+8. Books, revised editions, and specialized publications.
 
-Specific ordering after Composer remains flexible. Larger machine-experiment tracks remain active but should not interrupt Composer v0.1 unless a future pilot exposes a blocking architecture issue.
+Specific ordering after Composer remains flexible. Formal human studies are targeted evidence rather than the default development gate. They should not block deployment products, machine experiments, domain stress tests, or book work unless a concrete claim genuinely depends on them.
 
 ## Parallel post-Composer experiment program
 
@@ -77,3 +89,7 @@ Book 1 does not need to wait for Poetry, Kids, Machine Mind, or every future exp
 ## Composer milestone note
 
 Composer v0.1 Interaction Spec is the handoff from research/tooling architecture to implementation. It should be treated as a gated design artifact: implement only after preserving the source-of-truth rules, Renderer parity requirement, no-AI boundary, and Human Authoring Stress Test 04B plan.
+
+## Publication milestone prompt
+
+For substantial future work, explicitly ask: **Is this a publication milestone?** If yes, record a possible headline or angle, evidence/artifacts, screenshots or figures, appropriate channels, and whether publication should happen now or enter the backlog. See [Publication Milestones](../planning/publication-milestones.md).
