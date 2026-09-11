@@ -1,0 +1,6 @@
+!profile standalone
+!context odyssey
+
+@poseidon qual_bad power_energy @odysseus
+@odysseus place_home logic_no
+entity:polyphemus@odyssey punct_exclaim

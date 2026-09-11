@@ -1,0 +1,1 @@
+{"schema":"0.1","pictiq":"1.1","contexts":["road-wayfinding-v0.1"],"frames":[{"tokens":[{"type":"icon","id":"move_car"},{"type":"number","value":50}]}]}

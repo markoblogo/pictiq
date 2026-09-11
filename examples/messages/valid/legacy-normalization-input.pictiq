@@ -1,0 +1,4 @@
+# Shorthand source only. A normalizer should emit drink_alcohol and place_home.
+!profile standalone
+need_bar punct_question
+place_hotel comm_wifi

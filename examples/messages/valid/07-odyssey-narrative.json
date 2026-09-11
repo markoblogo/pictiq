@@ -1,0 +1,1 @@
+{"schema":"0.1","pictiq":"1.1","profile":"standalone","contexts":["narrative","odyssey"],"frames":[{"tokens":[{"type":"entity","id":"entity:poseidon@odyssey"},{"type":"icon","id":"power_energy"},{"type":"entity","id":"entity:odysseus@literary"}]},{"tokens":[{"type":"entity","id":"entity:odysseus@literary"},{"type":"icon","id":"move_watercraft"},{"type":"icon","id":"logic_no"}]}]}

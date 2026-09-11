@@ -764,3 +764,25 @@ Poetry tests almost the opposite pressure from road signs and wayfinding: expres
 ### Open questions
 
 ASL poetry, handshape/movement/location rhyme, Clayton Valli, Apollinaire/Calligrammes, concrete poetry, Oulipo, renga conventions, haiku claims, and Pound/imagism/ideogram claims require separate verification before book/public use.
+
+## 2026-09-11 — Pictiq Message Format and Shorthand v0.1
+
+### Starting question
+
+What stable machine/human representation should future Renderer, Generator API, Composer, website, translators, books, and AI tools share without changing Pictiq grammar or starting implementation?
+
+### What happened
+
+The project added specification-only Pictiq Message Format v0.1 and Pictiq Shorthand v0.1. Canonical interchange is JSON. Shorthand is a human authoring syntax that normalizes into typed JSON tokens. Valid and invalid fixtures were added for future parser/validator work.
+
+### Evidence
+
+[Pictiq Message Format v0.1](../../spec/PICTIQ_MESSAGE_SCHEMA.md), [JSON Schema](../../spec/pictiq-message.schema.json), [Pictiq Shorthand v0.1](../../spec/PICTIQ_SHORTHAND.md), [message fixtures](../../examples/messages/), and [Message Representation Layers](concepts/message-representation-layers.md).
+
+### Decision / outcome
+
+The architecture now separates LANGUAGE, MESSAGE REPRESENTATION, AUTHORING SYNTAX, RENDERING, and TRANSLATION. v0.1 supports flat frames with explicit `icon`, `entity`, and `number` tokens, plus token-local COLOR parameters. Grouping, syntax trees, semantic graphs, 2D semantic layout, poetry-specific layout, and AI translation remain deferred.
+
+### Why it matters
+
+This gives the next Renderer / Generator layer a stable target while preventing fuzzy translation, layout options, or poetry needs from leaking into the canonical semantic message. It also preserves compatibility normalization after v1.1.0: legacy input may normalize to preferred IDs, but new canonical JSON stores current IDs.

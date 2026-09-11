@@ -62,6 +62,8 @@ Printable PDF: [`docs/overview/pictiq-core-grid.pdf`](docs/overview/pictiq-core-
 - Icon drawing brief (RU): `spec/ICON_DEFINITIONS.ru.md`
 - Style spec: `spec/ICON_SPEC.md`
 - Grammar spec: `spec/GRAMMAR.md`
+- Message Format: `spec/PICTIQ_MESSAGE_SCHEMA.md` and `spec/pictiq-message.schema.json`
+- Human shorthand: `spec/PICTIQ_SHORTHAND.md`
 - Numeric notation: `spec/NUMERIC_NOTATION.md` and `notation/numeric/index.json`
 - Silhouette input rules: `spec/SILHOUETTE_INPUTS.md`
 - Logo and branding assets: `branding/`
@@ -114,6 +116,7 @@ Pictiq currently scales through five distinct layers: the 83-identifier ordinary
 - `tools/validate_lexicon.py` validates lexicon metadata, packs, profiles, SVG references, and i18n data.
 - `tools/validate_vocabulary_classification.py` validates vocabulary role classification against the canonical lexicon and separate entity registry.
 - `tools/validate_numeric_notation.py` validates the numeric notation registry and path-based digit/number SVG assets.
+- `tools/validate_message_schema.py` validates Pictiq Message Format v0.1 JSON fixtures.
 - `tools/validate_svg.py` validates canonical SVG rules, including the standard viewBox and `currentColor` use.
 - `tools/validate_entities.py` validates scoped entity-symbol metadata and SVG assets.
 - Layout generators produce wallet cards, luggage tags, phone lockscreens, lighter artwork, and documentation overviews from content profiles.

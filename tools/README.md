@@ -195,3 +195,11 @@ Follow the [Visual QA Protocol](../spec/ICON_SPEC.md#visual-qa-protocol) and rec
 results in the change/PR. A missing required layout remains pending. Generating a
 sheet is neither an automated recognition test nor perceptual acceptance. Run both
 structural validators independently before visual QA.
+
+## validate_message_schema.py
+
+Validates Pictiq Message Format v0.1 JSON fixtures against the local schema shape and current registries. It does not implement Shorthand parsing, rendering, Composer, or AI translation.
+
+```bash
+python3 tools/validate_message_schema.py
+```
