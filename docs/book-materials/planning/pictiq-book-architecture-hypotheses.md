@@ -54,3 +54,15 @@ This structure better matches how Pictiq actually developed and avoids presentin
 Book 1 can document the project after a meaningful architecture milestone. It does not have to wait for Poetry, children’s-book experiments, VLM benchmarks, Composer, Machine Mind, or all physical-format tests.
 
 Later experiments can feed a revised edition, Book 2, specialized books, articles, talks, and public research notes.
+
+## Research foundations added 2026-09
+
+The five research-foundation inputs add several book-safe themes without finalizing chapter titles or sequence:
+
+- Pictiq among visual languages: Blissymbolics, SignWriting, military symbology, AAC, emoji, wayfinding, visual DSLs, Icono / IKON.
+- Small vocabulary, not first grammar: Pictiq should avoid false novelty claims and position itself among compositional precedents.
+- Context does part of the work: deixis, common ground, relevance, embodied communication, and declared context frames.
+- When context fails: cross-cultural interpretation, migration/tourism, safety, AAC-adjacent use, and testing/training needs.
+- Polysemy as compression: broad semantic roots, contextual repair, ambiguity cost, and split/contextualize criteria.
+- How do we know an icon works: recognition, comprehension, context-of-use, production, and communication success are distinct tests.
+- Growing without bloating Core: Context Packs, profiles, localization, compatibility, and future manifest hypotheses.

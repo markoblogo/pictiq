@@ -21,6 +21,10 @@ Every substantial Pictiq experiment should end with a short archived record cont
 
 Record negative results with the same care as successful results. Failed visual designs, ambiguous comprehension, bad translations, unusable layouts, low public interest, and rejected vocabulary candidates are useful research outputs.
 
+## Experiment construct labels
+
+Future Pictiq experiments should explicitly identify what they test: ICON RECOGNITION, ICON COMPREHENSION, COMPOSITION COMPREHENSION, PRODUCTION, CONTEXT-OF-USE, or COMMUNICATION SUCCESS. This prevents vague claims such as “icon comprehension” when a test only measured recognition, naming, or visual appeal.
+
 ## Product / research distinction
 
 For every proposed mini-project, keep two fields separate:
