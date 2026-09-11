@@ -35,10 +35,11 @@ Prefer projects that advance both, but do not force immediate monetization when 
 1. Architecture & Vocabulary Audit / cleanup.
 2. Release from cleaned architecture.
 3. Shared Renderer / Generator layer.
-4. Composer.
-5. Public usable Pictiq site.
-6. Parallel post-Composer experiment program.
-7. Books, revised editions, and specialized publications.
+4. Small post-Renderer machine pilots if they expose renderer/message issues: constrained JSON generation, symbolic reconstruction, tiny signaling game.
+5. Composer.
+6. Public usable Pictiq site.
+7. Parallel post-Composer experiment program.
+8. Books, revised editions, and specialized publications.
 
 Specific ordering after Composer remains flexible.
 
@@ -49,6 +50,9 @@ After Composer exists, several tracks can run in parallel rather than in a rigid
 - Tiny Language Protocol × Pictiq.
 - Pictiq Poetry / Visual Prosody.
 - Machine Mind × Pictiq.
+- Machine Comprehension Benchmark.
+- Pictiq Signaling Game.
+- Semantic Boundary Corpus.
 - Web/UI Stress Test.
 - Humanitarian/Emergency.
 - Maritime/Logistics.

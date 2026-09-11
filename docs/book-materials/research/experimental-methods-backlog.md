@@ -42,3 +42,7 @@ Possible measures: token count, semantic preservation, ambiguity, deterministic 
 ## Pictiq Poetry / Visual Prosody
 
 Experiment/book direction only: test original Pictiq compositions and translations of short poetic forms after Composer exists. Compare SOURCE -> PICTIQ -> BACK-INTERPRETATION, recording `SURVIVED`, `COMPRESSED`, `INTENTIONAL_OMISSION`, `LOSSY`, `GAP`, and `UNTRANSLATABLE/STRUCTURALLY_INCOMPATIBLE`. Do not treat repeated tiles as automatic rhyme, and do not claim that tile-count forms reproduce natural-language meter.
+
+## Post-Renderer machine experiment program
+
+The [Machine Experiments Backlog](machine-experiments-backlog.md) turns the earlier Machine Mind row into five concrete research tracks after Renderer v0.1: Machine Comprehension, Constrained Translation, Signaling Game, Semantic Boundary Corpus, and Machine Interface Experiments. Early pilots may test constrained JSON generation, symbolic reconstruction, and a tiny signaling game; broad public/human/composer-dependent work remains post-Composer.

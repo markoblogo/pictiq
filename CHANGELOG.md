@@ -13,6 +13,7 @@ This project uses milestone-style tags. The `-infra` suffix indicates a pre-icon
 - Added specification-only Pictiq Message Format v0.1, Pictiq Shorthand v0.1, JSON Schema, valid/invalid fixtures, and fixture validation. This separates language, message representation, authoring syntax, rendering, and translation without implementing renderer, generator, Composer, AI translation, or grammar changes.
 
 ### Research archive
+- Archived and critically harvested a supplied Russian Pictiq AI experiments catalog into a post-Renderer machine research program, including constrained generation, machine comprehension, signaling game, semantic boundary, machine-interface, and verification backlogs. No experiments, normative language changes, push, tag, or release are included.
 - Harvested three Perplexity inclusive-design and application-domain inputs into book-materials research, with originals archived byte-for-byte, SHA-256 recorded, external-claim verification backlog, application-domain radar, and identity-neutral substrate notes. No normative architecture, lexicon, icon, profile, pack, or entity registry changes are implied.
 - Archived three Perplexity book/kids/experiment planning inputs byte-for-byte and added critical harvest, book-architecture hypotheses, kids/narrative research track, experimental-methods backlog, tooling-architecture note, and research-workflow note. No normative architecture, lexicon, icon, profile, pack, entity, tag, or release changes are implied.
 

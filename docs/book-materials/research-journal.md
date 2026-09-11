@@ -796,3 +796,13 @@ Result: Renderer v0.1 was implemented as a deterministic local SVG renderer for 
 Boundary: The renderer does not translate natural language, infer vocabulary, perform fuzzy matching, generate poetry, choose semantic layouts, implement grouping, redraw icons, or alter grammar. `move_boat` remains deferred and is not silently migrated to `move_watercraft`. Numeric notation remains separate from pragmatic `qty_*` quantities.
 
 Artifacts: [Renderer README](../renderer/README.md), [Renderer implementation note](concepts/renderer-v0.1-implementation.md), [renderer examples](../../examples/renderer/), [renderer QA outputs](../../build/qa/renderer-v0.1/), and [renderer tests](../../tests/test_renderer.py).
+
+## 2026-09-11 — Pictiq AI experiments catalog harvest
+
+Question: Which supplied AI/Machine Mind ideas become useful experiment tracks after Renderer v0.1, and which claims must remain hypotheses until tested?
+
+Result: The supplied Russian AI-test catalog was archived byte-for-byte and critically harvested into a structured machine experiment program. The result preserves five tracks: Machine Comprehension Benchmark, Constrained Translation Benchmark, Pictiq Signaling Game, Semantic Boundary Corpus, and Machine Interface Experiments.
+
+Boundary: No experiments were run. No external LLM APIs, agent loops, RAG demos, classifiers, MCP tools, prediction models, vocabulary changes, grammar changes, Renderer changes, Message Schema changes, icons, profiles, packs, Entity Symbols, tags, or releases were created. Old 52-icon examples and pre-v1.1.0 IDs are marked as outdated examples to rebuild before execution.
+
+Artifacts: [archived source](research/inputs/perplexity-2026-09/pictiq-ai-tests-experiments-mvp-catalog-ru.md), [critical harvest](research/pictiq-ai-experiments-harvest-2026-09.md), [machine experiments backlog](research/machine-experiments-backlog.md), [signaling game plan](research/pictiq-signaling-game-plan.md), [semantic boundary corpus plan](research/semantic-boundary-corpus-plan.md), and [AI experiment verification backlog](research/ai-experiment-verification-backlog.md).

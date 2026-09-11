@@ -33,3 +33,8 @@ This backlog records possible research directions. It is not an implementation r
 ## 2026-09-10 methods connection
 
 The [Experimental Methods Backlog](experimental-methods-backlog.md) adds two future tracks that should connect to this file rather than duplicate it: VLM recognition after the visual consistency audit, and Machine Mind comparisons across natural language, compressed natural language, Toki Pona, and Pictiq IDs. Treat Pictiq as a possible inspectable intermediate representation until evidence shows otherwise.
+## 2026-09-11 machine experiment program
+
+The [Pictiq AI Experiments harvest](pictiq-ai-experiments-harvest-2026-09.md) refines a supplied experiment catalog into five tracks: Machine Comprehension, Constrained Translation, Signaling Game, Semantic Boundary Corpus, and Machine Interface Experiments. The operational backlog now lives in [Machine Experiments Backlog](machine-experiments-backlog.md), with dedicated plans for [Pictiq Signaling Game](pictiq-signaling-game-plan.md), [Semantic Boundary Corpus](semantic-boundary-corpus-plan.md), and [AI Experiment Verification](ai-experiment-verification-backlog.md).
+
+This update corrects older 52-icon and pre-v1.1.0 examples. Future experiments must use the current audited registry, Message Schema v0.1, Shorthand v0.1, Renderer v0.1 outputs where relevant, and semantic-slot metrics. No experiment is run or accepted as product scope by this backlog.
