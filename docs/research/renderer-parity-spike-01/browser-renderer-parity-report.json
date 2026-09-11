@@ -19,8 +19,8 @@
       "entity_behavior_equal": true,
       "structural_parity_result": "PASS",
       "byte_equal": true,
-      "python_elapsed_ms": 0.494,
-      "browser_elapsed_ms": 0.385,
+      "python_elapsed_ms": null,
+      "browser_elapsed_ms": null,
       "notes": []
     },
     {
@@ -37,8 +37,8 @@
       "entity_behavior_equal": true,
       "structural_parity_result": "PASS",
       "byte_equal": true,
-      "python_elapsed_ms": 0.658,
-      "browser_elapsed_ms": 0.417,
+      "python_elapsed_ms": null,
+      "browser_elapsed_ms": null,
       "notes": []
     },
     {
@@ -55,8 +55,8 @@
       "entity_behavior_equal": true,
       "structural_parity_result": "PASS",
       "byte_equal": true,
-      "python_elapsed_ms": 0.723,
-      "browser_elapsed_ms": 0.777,
+      "python_elapsed_ms": null,
+      "browser_elapsed_ms": null,
       "notes": []
     },
     {
@@ -73,8 +73,8 @@
       "entity_behavior_equal": true,
       "structural_parity_result": "PASS",
       "byte_equal": true,
-      "python_elapsed_ms": 0.709,
-      "browser_elapsed_ms": 0.505,
+      "python_elapsed_ms": null,
+      "browser_elapsed_ms": null,
       "notes": []
     },
     {
@@ -91,8 +91,8 @@
       "entity_behavior_equal": true,
       "structural_parity_result": "PASS",
       "byte_equal": true,
-      "python_elapsed_ms": 0.877,
-      "browser_elapsed_ms": 0.434,
+      "python_elapsed_ms": null,
+      "browser_elapsed_ms": null,
       "notes": []
     },
     {
@@ -109,8 +109,8 @@
       "entity_behavior_equal": true,
       "structural_parity_result": "PASS",
       "byte_equal": true,
-      "python_elapsed_ms": 0.771,
-      "browser_elapsed_ms": 1.056,
+      "python_elapsed_ms": null,
+      "browser_elapsed_ms": null,
       "notes": []
     },
     {
@@ -127,8 +127,8 @@
       "entity_behavior_equal": true,
       "structural_parity_result": "PASS",
       "byte_equal": true,
-      "python_elapsed_ms": 0.594,
-      "browser_elapsed_ms": 0.304,
+      "python_elapsed_ms": null,
+      "browser_elapsed_ms": null,
       "notes": []
     },
     {
@@ -145,8 +145,8 @@
       "entity_behavior_equal": true,
       "structural_parity_result": "PASS",
       "byte_equal": true,
-      "python_elapsed_ms": 1.378,
-      "browser_elapsed_ms": 0.459,
+      "python_elapsed_ms": null,
+      "browser_elapsed_ms": null,
       "notes": []
     },
     {
@@ -163,8 +163,8 @@
       "entity_behavior_equal": true,
       "structural_parity_result": "PASS",
       "byte_equal": true,
-      "python_elapsed_ms": 0.876,
-      "browser_elapsed_ms": 0.482,
+      "python_elapsed_ms": null,
+      "browser_elapsed_ms": null,
       "notes": []
     },
     {
@@ -181,14 +181,14 @@
       "entity_behavior_equal": true,
       "structural_parity_result": "PASS",
       "byte_equal": true,
-      "python_elapsed_ms": 1.027,
-      "browser_elapsed_ms": 0.501,
+      "python_elapsed_ms": null,
+      "browser_elapsed_ms": null,
       "notes": []
     }
   ],
   "performance": {
     "browser_manifest_size_bytes": 347366,
-    "browser_total_elapsed_ms": 5.32,
-    "python_total_elapsed_ms": 8.107
+    "browser_total_elapsed_ms": null,
+    "python_total_elapsed_ms": null
   }
 }

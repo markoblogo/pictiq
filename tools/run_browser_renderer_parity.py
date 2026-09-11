@@ -193,8 +193,8 @@ def main() -> int:
             'entity_behavior_equal': True if not flags['entity'] else all('entity:' in t['id'] for t in br_tokens if t['type'] == 'entity') and py_tokens == br_tokens,
             'structural_parity_result': 'PASS' if root_size(py_svg) == root_size(br_svg) and py_tokens == br_tokens else 'FAIL',
             'byte_equal': py_svg == br_svg,
-            'python_elapsed_ms': round(py_elapsed, 3),
-            'browser_elapsed_ms': round(br_elapsed, 3),
+            'python_elapsed_ms': None,
+            'browser_elapsed_ms': None,
             'notes': [],
         }
         results.append(row)
@@ -208,8 +208,8 @@ def main() -> int:
         'fixtures': results,
         'performance': {
             'browser_manifest_size_bytes': manifest_size,
-            'browser_total_elapsed_ms': round(sum(r['browser_elapsed_ms'] for r in results), 3),
-            'python_total_elapsed_ms': round(sum(r['python_elapsed_ms'] for r in results), 3),
+            'browser_total_elapsed_ms': None,
+            'python_total_elapsed_ms': None,
         },
     }
     REPORT_JSON.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
@@ -231,9 +231,8 @@ def main() -> int:
         '',
         'Performance snapshot:',
         '',
-        f'- Browser total render time for fixture corpus: {report["performance"]["browser_total_elapsed_ms"]} ms under Node.',
-        f'- Python total render time for fixture corpus: {report["performance"]["python_total_elapsed_ms"]} ms.',
-        '- Measurements are a spike smoke check, not a benchmark.',
+        '- Render latency is measured during local spike work, but committed parity reports omit runtime timings to remain deterministic.',
+        '- Performance testing remains a smoke check, not a benchmark.',
     ]
     REPORT_MD.write_text('\n'.join(lines) + '\n', encoding='utf-8')
     write_qa(qa_rows)

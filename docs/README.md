@@ -35,3 +35,7 @@ Open:
 
 The UI exposes only locales shipped in `docs/lexicon/i18n/` (`en`, `es`, `fr`). If `lexicon/i18n/{lang}.json` exists, it will be loaded and will override
 `meaning_en`, `aliases_en`, and (if provided) `tags_en` and `examples` for matching icon ids.
+
+## Composer
+
+The static Composer v0.1 candidate is available at [`composer/`](composer/). It is a human authoring surface for Message v0.1 and uses the browser Renderer for preview/export.

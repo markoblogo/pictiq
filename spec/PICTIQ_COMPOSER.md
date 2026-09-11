@@ -1,6 +1,6 @@
 # Pictiq Composer v0.1 — Interaction and Architecture Specification
 
-> Status: implementation specification / not implemented
+> Status: implementation specification / v0.1 static implementation candidate available
 > Target: Pictiq Message Format v0.1, Pictiq Shorthand v0.1, Renderer v0.1
 > Rule: this specification does not change Pictiq grammar, Message Schema, Renderer, vocabulary, icons, profiles, packs, Entity Symbols, or numeric notation.
 
@@ -286,3 +286,9 @@ Composer v0.1 is intended to become the first broadly usable authoring surface f
 WRITE -> EDIT -> SEE -> EXPORT.
 
 No marketing pages, accounts, community features, sharing networks, marketplace functionality, AI translation, or natural-language translation are part of v0.1.
+
+## Implementation note — Composer v0.1 candidate
+
+The static implementation candidate lives at [`../docs/composer/`](../docs/composer/). It uses vanilla JavaScript / ES modules, generated canonical data, and the accepted Browser Renderer module. Composer state is edited as Message v0.1: document → frames → flat ordered tokens.
+
+Browser preview and SVG export use Renderer output. JSON and shorthand import normalize through the Composer adapter before editing; legacy IDs export as preferred current IDs. The implementation does not add AI, vocabulary, grammar, grouping, semantic frames, cloud state, accounts, or new numeric/color behavior.

@@ -21,6 +21,5 @@
 
 Performance snapshot:
 
-- Browser total render time for fixture corpus: 5.32 ms under Node.
-- Python total render time for fixture corpus: 8.107 ms.
-- Measurements are a spike smoke check, not a benchmark.
+- Render latency is measured during local spike work, but committed parity reports omit runtime timings to remain deterministic.
+- Performance testing remains a smoke check, not a benchmark.

@@ -12,6 +12,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
       - name: Validate lexicon and packs
         run: python tools/validate_lexicon.py
       - name: Validate vocabulary profiles
@@ -31,5 +34,9 @@ jobs:
         run: python tools/validate_entities.py
       - name: Validate Pages artifact
         run: python tools/validate_pages_artifact.py
+      - name: Validate generated browser artifacts
+        run: python tools/validate_generated_browser_assets.py
+      - name: Validate Browser/Python Renderer parity
+        run: python tools/run_browser_renderer_parity.py
       - name: Test visual QA evidence tooling
         run: python -m unittest discover -s tests -v

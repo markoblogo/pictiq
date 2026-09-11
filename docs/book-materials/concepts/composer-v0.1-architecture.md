@@ -34,3 +34,9 @@ Composer should be compact and work-like: palette, workspace, preview. It should
 ## Book value
 
 Composer is the moment Pictiq stops being only a documented protocol plus rendered examples and becomes a usable writing surface. It will also create the conditions for Human Authoring Stress Test 04B and later human/AI signaling comparisons.
+
+## Implementation candidate
+
+Composer v0.1 now has a static implementation candidate at [`../../composer/`](../../composer/). It keeps the accepted architecture: human palette selection edits canonical Message v0.1 state, validation/normalization happens before rendering, and preview/export SVG comes from the Browser Renderer. The implementation uses generated repository data instead of a manually duplicated frontend vocabulary.
+
+This candidate prepares Stress Test 04B but does not run it. Automated tests cover core state transitions, imports, exports, diagnostics, shorthand serialization, Renderer preview/export semantics, generated-data freshness, and Browser/Python Renderer parity.
