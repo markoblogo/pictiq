@@ -57,3 +57,12 @@ Keyboard fallbacks are documented for v0.1: focused tiles support `Alt+ArrowLeft
 QA artifacts: [`../../research/composer-v0.1-acceptance-fix-pass-3/composer-v0.1-acceptance-fix-pass-3-qa.md`](../../research/composer-v0.1-acceptance-fix-pass-3/composer-v0.1-acceptance-fix-pass-3-qa.md).
 
 This pass still does not claim completed usability validation, mobile/touch drag support, or Stress Test 04B completion.
+
+
+## Creator acceptance result
+
+Composer v0.1 creator acceptance: **PASSED**. Acceptance followed the initial implementation, Acceptance Fix Pass 1, Acceptance Fix Pass 2, Acceptance Fix Pass 3, and manual Safari/local-HTTP use.
+
+Accepted current state: Composer v0.1 interaction model, Browser Renderer architecture with parity guardrails, direct-manipulation Workspace, compact Palette/header, visual COLOR controls, import/export, number `50`, Entity Symbols, and local Undo/Redo. No blocking creator-facing UX issue is currently known.
+
+This is **CREATOR / SOFTWARE ACCEPTANCE**, not external-user usability validation. **Stress Test 04B — Human Authoring / Composer Usability remains NOT RUN.**

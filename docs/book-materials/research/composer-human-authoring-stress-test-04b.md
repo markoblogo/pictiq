@@ -62,6 +62,6 @@ Composer enables later human experiments:
 Composer-generated Message JSON should use the same canonical representation as AI-generated Message JSON. That enables future HUMAN AUTHORING vs AI GENERATION comparisons without changing Renderer or Message representation.
 ## Composer v0.1 implementation readiness note
 
-Composer v0.1 now has a static implementation candidate at [`../../composer/`](../../composer/) with palette, message workspace, browser Renderer preview, diagnostics, JSON import/export, `.pictiq` import/export, SVG export, number `50`, token-local COLOR, Entity Symbols, legacy normalization warnings, and local undo/redo.
+Composer v0.1 has passed creator/software acceptance after the initial implementation, Acceptance Fix Pass 1, Acceptance Fix Pass 2, Acceptance Fix Pass 3, and manual Safari/local-HTTP use. The accepted implementation includes a compact Palette, direct-manipulation Message Workspace, tile and Frame drag/reorder, cross-Frame tile movement, contextual delete controls, bottom `+` Frame creation, compact header, visual COLOR controls, native color picker, EyeDropper where supported, HEX precision input, live Browser Renderer preview, import/export, and Browser/Python Renderer parity.
 
-Stress Test 04B is still **not run**. The next step is human usability review using the [Composer v0.1 QA checklist](../experiments/composer-v0.1-human-authoring-qa.md). Do not manufacture usability results from automated tests.
+Stress Test 04B is still **not run**. The next step is to prepare the 04B experiment kit for a tiny external human-authoring pilot. Do not manufacture usability results from creator acceptance or automated tests.

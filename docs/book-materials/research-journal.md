@@ -929,3 +929,13 @@ Architecture decision: Composer consumes canonical repository data and uses Rend
 Decision / outcome: Specification only. No Composer UI, schema change, renderer change, vocabulary change, grammar change, icon change, AI, RAG, account system, persistence, tag, release, or push is created by this pass. The next planned step is Composer v0.1 implementation, followed by Stress Test 04B — Human Authoring / Composer Usability.
 
 Artifacts: [Composer spec](../../spec/PICTIQ_COMPOSER.md), [Composer architecture note](concepts/composer-v0.1-architecture.md), and [Stress Test 04B plan](research/composer-human-authoring-stress-test-04b.md).
+
+## 2026-09-11 — Composer v0.1 creator acceptance
+
+Question: Is the current Composer v0.1 implementation accepted as a creator-facing authoring surface before external human-authoring testing?
+
+Result: Composer v0.1 creator acceptance: **PASSED**. Acceptance followed the initial implementation, Acceptance Fix Pass 1, Acceptance Fix Pass 2, Acceptance Fix Pass 3, and manual Safari/local-HTTP use. The accepted state includes compact Palette, direct-manipulation Message Workspace, drag/reorder tiles and Frames, cross-Frame tile movement, contextual delete controls, bottom `+` Frame creation, compact header, visual COLOR controls, native color picker, EyeDropper where supported, HEX precision input, live Browser Renderer preview, import/export, and Browser/Python Renderer parity.
+
+Decision / outcome: Creator/software acceptance only. No external-user usability validation is claimed. Stress Test 04B remains **NOT RUN** and the next step is to prepare the 04B experiment kit for a tiny external human-authoring pilot. Research Foundations Batch 01–03 remain research scaffolding and do not change protocol, grammar, vocabulary, icons, packs, profiles, Entity Symbols, numeric notation, Message Schema, Renderer semantics, Composer semantics, tags, or releases.
+
+Artifacts: [Composer architecture note](concepts/composer-v0.1-architecture.md), [Composer QA checklist](experiments/composer-v0.1-human-authoring-qa.md), [Stress Test 04B plan](research/composer-human-authoring-stress-test-04b.md), [Pass 1 QA](../research/composer-v0.1-acceptance-fix-pass-1/composer-v0.1-acceptance-fix-pass-1-qa.md), [Pass 2 QA](../research/composer-v0.1-acceptance-fix-pass-2/composer-v0.1-acceptance-fix-pass-2-qa.md), and [Pass 3 QA](../research/composer-v0.1-acceptance-fix-pass-3/composer-v0.1-acceptance-fix-pass-3-qa.md).

@@ -42,10 +42,14 @@ Prefer projects that advance both, but do not force immediate monetization when 
 4. Stress Test 04A — CLOSED / ACCEPTED.
 5. Composer v0.1 Interaction Spec.
 6. Composer v0.1 implementation.
-7. Human-authoring stress test.
-8. Public usable Pictiq surface.
-9. Parallel post-Composer experiment program.
-10. Books, revised editions, and specialized publications.
+7. Composer v0.1 creator acceptance — PASSED.
+8. Stress Test 04B experiment-kit preparation.
+9. Tiny external human-authoring pilot.
+10. Evidence-based fixes only if required.
+11. Composer release.
+12. Stress Test 05 Grammar Intuition / Compositional Learnability.
+13. Parallel post-Composer experiment program.
+14. Books, revised editions, and specialized publications.
 
 Specific ordering after Composer remains flexible. Larger machine-experiment tracks remain active but should not interrupt Composer v0.1 unless a future pilot exposes a blocking architecture issue.
 

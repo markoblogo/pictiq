@@ -1,8 +1,8 @@
 # Composer v0.1 Architecture Note
 
-> Status: book-material / implementation-planning note
+> Status: book-material / accepted creator-facing implementation note
 > Source spec: [`../../../spec/PICTIQ_COMPOSER.md`](../../../spec/PICTIQ_COMPOSER.md)
-> Rule: no Composer implementation is created by this note.
+> Rule: this note records Composer v0.1 creator/software acceptance; it does not claim external-user usability validation or Stress Test 04B results.
 
 Composer v0.1 is the next engineering milestone after Message Format v0.1, Shorthand v0.1, Renderer v0.1, and Stress Test 04A. Its purpose is not translation. Its purpose is human authoring: can a person make a valid Pictiq message without editing JSON, shorthand, SVG, or repository files?
 
@@ -40,3 +40,12 @@ Composer is the moment Pictiq stops being only a documented protocol plus render
 Composer v0.1 now has a static implementation candidate at [`../../composer/`](../../composer/). It keeps the accepted architecture: human palette selection edits canonical Message v0.1 state, validation/normalization happens before rendering, and preview/export SVG comes from the Browser Renderer. The implementation uses generated repository data instead of a manually duplicated frontend vocabulary.
 
 This candidate prepares Stress Test 04B but does not run it. Automated tests cover core state transitions, imports, exports, diagnostics, shorthand serialization, Renderer preview/export semantics, generated-data freshness, and Browser/Python Renderer parity.
+
+
+## Creator acceptance status
+
+Composer v0.1 creator acceptance: **PASSED**. Acceptance followed the initial implementation, Acceptance Fix Pass 1, Acceptance Fix Pass 2, Acceptance Fix Pass 3, and manual Safari use through local HTTP rather than `file://`.
+
+The accepted creator-facing state includes the static Composer route, canonical repository data loading, Browser Renderer preview/export, Browser/Python Renderer parity guardrails, direct-manipulation Message Workspace, compact Palette, compact desktop header, visual COLOR controls, number `50`, Entity Symbols, import/export, and local Undo/Redo.
+
+This is **CREATOR / SOFTWARE ACCEPTANCE** only. It does not claim external-user usability validation. **Stress Test 04B — Human Authoring / Composer Usability remains NOT RUN.** Composer is ready for 04B experiment-kit preparation, not a formal Composer release.
