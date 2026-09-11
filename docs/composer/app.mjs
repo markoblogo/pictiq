@@ -10,6 +10,8 @@ let lastRender = null;
 const $ = (id) => document.getElementById(id);
 const els = Object.fromEntries(['profile','contexts','search','paletteItems','entityItems','frames','inspectorBody','diagnostics','previewSvg','jsonOut','shorthandOut','importText'].map((id) => [id, $(id)]));
 
+const COLOR_SWATCHES = ['#000000', '#D32F2F', '#F57C00', '#FBC02D', '#388E3C', '#1976D2', '#7B1FA2', '#616161'];
+
 const PROFILE_LABELS = {
   'standalone-core-v0.1': 'Standalone',
   embodied: 'Embodied',
@@ -90,16 +92,19 @@ function renderFrames() {
         </div>
       </div>
       <div class="tokens">
-        ${frame.tokens.length ? frame.tokens.map((token, tokenIndex) => `
-          <article class="token ${frameIndex === state.selectedFrame && tokenIndex === state.selectedToken ? 'selected' : ''}">
-            <button type="button" data-select-token="${frameIndex}:${tokenIndex}" aria-label="Select ${escapeHtml(tokenLabel(token))}">${assetSvgForToken(token)}</button>
-            <div class="token-name">${escapeHtml(tokenLabel(token))}</div>
-            <div class="token-actions">
-              <button type="button" data-token-left="${frameIndex}:${tokenIndex}" aria-label="Move token left">←</button>
-              <button type="button" data-token-right="${frameIndex}:${tokenIndex}" aria-label="Move token right">→</button>
-              <button type="button" data-token-delete="${frameIndex}:${tokenIndex}" aria-label="Delete token">×</button>
+        ${frame.tokens.length ? frame.tokens.map((token, tokenIndex) => {
+          const label = tokenLabel(token);
+          const id = token.type === 'number' ? String(token.value) : token.id;
+          const tooltip = `${label} · ${id}`;
+          return `
+          <article class="token ${frameIndex === state.selectedFrame && tokenIndex === state.selectedToken ? 'selected' : ''}" title="${escapeHtml(tooltip)}">
+            <button type="button" data-select-token="${frameIndex}:${tokenIndex}" aria-label="Select ${escapeHtml(tooltip)}">${assetSvgForToken(token)}<span class="sr-only">${escapeHtml(tooltip)}</span></button>
+            <div class="token-actions" aria-label="Token controls">
+              <button type="button" data-token-left="${frameIndex}:${tokenIndex}" aria-label="Move ${escapeHtml(label)} left">←</button>
+              <button type="button" data-token-right="${frameIndex}:${tokenIndex}" aria-label="Move ${escapeHtml(label)} right">→</button>
+              <button type="button" data-token-delete="${frameIndex}:${tokenIndex}" aria-label="Delete ${escapeHtml(label)}">×</button>
             </div>
-          </article>`).join('') : '<p class="palette-gloss">Add tiles from the palette.</p>'}
+          </article>`; }).join('') : '<p class="palette-gloss">Add tiles from the palette.</p>'}
       </div>
     </section>`).join('');
 }
@@ -109,15 +114,40 @@ function renderInspector() {
   if (!token) { els.inspectorBody.textContent = 'Choose a tile from the palette to start.'; return; }
   if (token.type === 'icon') {
     const entry = iconById[token.id] || {};
+    const currentColor = token.params?.color || '#000000';
+    const swatches = COLOR_SWATCHES.map((color) => `<button class="color-swatch" type="button" data-color-swatch="${color}" title="Use ${color}" aria-label="Use color ${color}" style="--swatch:${color}"></button>`).join('');
     els.inspectorBody.innerHTML = `
       <p><strong>${escapeHtml(entry.meaning_en || token.id)}</strong><br><code>${escapeHtml(token.id)}</code></p>
-      <label>COLOR parameter <input id="colorParam" type="text" value="${escapeHtml(token.params?.color || '#000000')}" pattern="#[0-9A-Fa-f]{6}"></label>
-      <button id="clearColor" type="button">Clear color parameter</button>`;
-    $('colorParam').addEventListener('change', (event) => mutate(() => {
-      const value = event.target.value.trim();
-      if (value && value !== '#000000') token.params = { color: value }; else delete token.params;
-    }));
-    $('clearColor').addEventListener('click', () => mutate(() => delete token.params));
+      <details class="color-editor">
+        <summary>Color <span class="color-chip" style="--swatch:${escapeHtml(currentColor)}"></span>${token.params?.color ? escapeHtml(currentColor) : 'Default'}</summary>
+        <div class="color-tools" aria-label="Color controls">
+          <div class="color-swatches" aria-label="Quick color swatches">${swatches}</div>
+          <label>Custom <input id="colorPicker" type="color" value="${escapeHtml(currentColor)}"></label>
+          <label>HEX <input id="colorParam" type="text" value="${escapeHtml(currentColor)}" pattern="#[0-9A-Fa-f]{6}"></label>
+          <div class="control-row color-actions">
+            <button id="resetColor" type="button">Default</button>
+            ${'EyeDropper' in window ? '<button id="eyeDropper" type="button">Eyedropper</button>' : ''}
+          </div>
+          <p class="palette-gloss">Swatches are authoring shortcuts, not semantic Pictiq colors.</p>
+        </div>
+      </details>`;
+    function applyColor(value) {
+      const color = String(value || '').trim();
+      if (!/^#[0-9A-Fa-f]{6}$/.test(color)) return render();
+      mutate(() => {
+        if (color.toLowerCase() === '#000000') delete token.params;
+        else token.params = { color: color.toUpperCase() };
+      });
+    }
+    $('colorParam').addEventListener('change', (event) => applyColor(event.target.value));
+    $('colorPicker').addEventListener('change', (event) => applyColor(event.target.value));
+    for (const swatch of els.inspectorBody.querySelectorAll('[data-color-swatch]')) swatch.addEventListener('click', () => applyColor(swatch.dataset.colorSwatch));
+    $('resetColor').addEventListener('click', () => mutate(() => delete token.params));
+    const eyedropper = $('eyeDropper');
+    if (eyedropper) eyedropper.addEventListener('click', async () => {
+      try { const result = await new EyeDropper().open(); applyColor(result.sRGBHex); }
+      catch { /* user cancelled or browser blocked the picker */ }
+    });
   } else if (token.type === 'number') {
     els.inspectorBody.innerHTML = `<p><strong>Number</strong></p><label>Value <input id="numberValue" type="number" min="0" max="9999" value="${token.value}"></label><p class="palette-gloss">Current numeric notation supports 50.</p>`;
     $('numberValue').addEventListener('change', (event) => mutate(() => { token.value = Number(event.target.value); }));

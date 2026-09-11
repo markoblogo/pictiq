@@ -32,12 +32,20 @@ normalized = normalizeAndValidateMessage(compactMessage(state.message));
 assert.ok(normalized.diagnostics.some((d) => d.type === 'invalid-number' && d.level === 'error'));
 state.message.frames[1].tokens[0].value = 50;
 
-state.message.frames[1].tokens.push({ type: 'icon', id: 'nature_cloud', params: { color: '#555555' } });
+state.message.frames[1].tokens.push({ type: 'icon', id: 'nature_cloud', params: { color: '#3A6F8F' } });
 normalized = normalizeAndValidateMessage(compactMessage(state.message));
 noErrors(normalized);
+let serializedJson = JSON.stringify(normalized.message);
+assert.ok(serializedJson.includes('#3A6F8F'));
 const svg = renderPictiqMessage(normalized.message).svg;
 assert.ok(svg.includes('data-id="50"'));
-assert.ok(svg.includes('color="#555555"'));
+assert.ok(svg.includes('color="#3A6F8F"'));
+delete state.message.frames[1].tokens[1].params;
+normalized = normalizeAndValidateMessage(compactMessage(state.message));
+noErrors(normalized);
+serializedJson = JSON.stringify(normalized.message);
+assert.ok(!serializedJson.includes('params'));
+state.message.frames[1].tokens[1].params = { color: '#555555' };
 
 let imported = parseJsonText('{"schema":"0.1","pictiq":"1.1","frames":[{"tokens":[{"type":"icon","id":"need_bar"}]}]}');
 noErrors(imported);

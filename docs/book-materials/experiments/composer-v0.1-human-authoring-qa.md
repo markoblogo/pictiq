@@ -35,3 +35,13 @@ This checklist does not claim usability success, accessibility compliance, cross
 First human acceptance failed before authoring because the desktop Composer palette did not present tiles immediately and the three-panel layout gave Palette, Workspace, and Preview equal visual weight. Fix Pass 1 keeps Composer v0.1 architecture unchanged while making the Message Workspace the visual center, bounding desktop panels to the viewport, making the vocabulary area predictably scrollable, moving import/export/code into compact disclosure controls, and showing human-facing labels for profiles/context packs while retaining canonical IDs.
 
 QA artifacts: [`../../research/composer-v0.1-acceptance-fix-pass-1/composer-v0.1-acceptance-fix-pass-1-qa.md`](../../research/composer-v0.1-acceptance-fix-pass-1/composer-v0.1-acceptance-fix-pass-1-qa.md).
+
+## Human Acceptance Fix Pass 2
+
+Second human acceptance review found three UI issues after Pass 1: Message Workspace tokens still carried visible semantic labels that consumed composition space, the desktop header used too much vertical space, and COLOR editing was too text-field-oriented for ordinary authoring.
+
+Fix Pass 2 keeps the Composer v0.1 architecture and language unchanged. Workspace tokens are now compact icon-first controls with reorder/delete actions and accessible labels/tooltips retained outside the visual surface. The desktop header is a compact single row when space allows, while narrow layouts can wrap and hide the subtitle. COLOR editing now offers quick swatches, a native browser color picker, feature-detected EyeDropper support, secondary HEX precision input, and a Default reset that removes token-local `params.color`.
+
+QA artifacts: [`../../research/composer-v0.1-acceptance-fix-pass-2/composer-v0.1-acceptance-fix-pass-2-qa.md`](../../research/composer-v0.1-acceptance-fix-pass-2/composer-v0.1-acceptance-fix-pass-2-qa.md).
+
+This pass still does not claim completed usability validation or Stress Test 04B completion.

@@ -1,0 +1,497 @@
+[
+  {
+    "label": "desktop-water-question",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 46,
+      "bottom": 46
+    },
+    "palette": {
+      "x": 12,
+      "y": 58,
+      "w": 390,
+      "h": 798,
+      "bottom": 856
+    },
+    "workspace": {
+      "x": 414,
+      "y": 58,
+      "w": 585,
+      "h": 798,
+      "bottom": 856
+    },
+    "previewPanel": {
+      "x": 1010,
+      "y": 58,
+      "w": 418,
+      "h": 798,
+      "bottom": 856
+    },
+    "firstPaletteVisible": true,
+    "tokenCount": 2,
+    "frameCount": 1,
+    "tokenBox": {
+      "x": 445,
+      "y": 196,
+      "w": 62,
+      "h": 100,
+      "bottom": 297
+    },
+    "tokenNameVisible": false,
+    "tokenTitle": "water · need_water",
+    "previewHasSvg": true,
+    "exportClosed": true,
+    "importClosed": true,
+    "horizontalOverflow": false,
+    "colorEditor": true,
+    "eyedropperAvailable": true,
+    "json": "{\n  \"schema\": \"0.1\",\n  \"pictiq\": \"1.1\",\n  \"profile\": \"standalone-core-v0.1\",\n  \"contexts\": [\n    \"universal-core\"\n  ],\n  \"frames\": [\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"need_water\"\n        },\n        {\n          \"type\": \"icon\",\n          \"id\": \"punct_question\"\n        }\n      ]\n    }\n  ]\n}",
+    "swatchCount": 8
+  },
+  {
+    "label": "desktop-five-token-frame",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 46,
+      "bottom": 46
+    },
+    "palette": {
+      "x": 12,
+      "y": 58,
+      "w": 390,
+      "h": 798,
+      "bottom": 856
+    },
+    "workspace": {
+      "x": 414,
+      "y": 58,
+      "w": 585,
+      "h": 798,
+      "bottom": 856
+    },
+    "previewPanel": {
+      "x": 1010,
+      "y": 58,
+      "w": 418,
+      "h": 798,
+      "bottom": 856
+    },
+    "firstPaletteVisible": true,
+    "tokenCount": 5,
+    "frameCount": 1,
+    "tokenBox": {
+      "x": 445,
+      "y": 196,
+      "w": 62,
+      "h": 100,
+      "bottom": 297
+    },
+    "tokenNameVisible": false,
+    "tokenTitle": "water · need_water",
+    "previewHasSvg": true,
+    "exportClosed": true,
+    "importClosed": true,
+    "horizontalOverflow": false,
+    "colorEditor": true,
+    "eyedropperAvailable": true,
+    "json": "{\n  \"schema\": \"0.1\",\n  \"pictiq\": \"1.1\",\n  \"profile\": \"standalone-core-v0.1\",\n  \"contexts\": [\n    \"universal-core\"\n  ],\n  \"frames\": [\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"need_water\"\n        },\n        {\n          \"type\": \"icon\",\n          \"id\": \"punct_question\"\n        },\n        {\n          \"type\": \"icon\",\n          \"id\": \"logic_yes\"\n        },\n        {\n          \"type\": \"icon\",\n          \"id\": \"state_cold\"\n        },\n        {\n          \"type\": \"icon\",\n          \"id\": \"food_meat\"\n        }\n      ]\n    }\n  ]\n}",
+    "swatchCount": 8
+  },
+  {
+    "label": "desktop-three-frame-message",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 46,
+      "bottom": 46
+    },
+    "palette": {
+      "x": 12,
+      "y": 58,
+      "w": 390,
+      "h": 798,
+      "bottom": 856
+    },
+    "workspace": {
+      "x": 414,
+      "y": 58,
+      "w": 585,
+      "h": 798,
+      "bottom": 856
+    },
+    "previewPanel": {
+      "x": 1010,
+      "y": 58,
+      "w": 418,
+      "h": 798,
+      "bottom": 856
+    },
+    "firstPaletteVisible": true,
+    "tokenCount": 6,
+    "frameCount": 3,
+    "tokenBox": {
+      "x": 445,
+      "y": 196,
+      "w": 62,
+      "h": 100,
+      "bottom": 297
+    },
+    "tokenNameVisible": false,
+    "tokenTitle": "water · need_water",
+    "previewHasSvg": true,
+    "exportClosed": true,
+    "importClosed": true,
+    "horizontalOverflow": false,
+    "colorEditor": true,
+    "eyedropperAvailable": true,
+    "json": "{\n  \"schema\": \"0.1\",\n  \"pictiq\": \"1.1\",\n  \"profile\": \"standalone-core-v0.1\",\n  \"contexts\": [\n    \"universal-core\"\n  ],\n  \"frames\": [\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"need_water\"\n        },\n        {\n          \"type\": \"icon\",\n          \"id\": \"punct_question\"\n        }\n      ]\n    },\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"place_home\"\n        },\n        {\n          \"type\": \"icon\",\n          \"id\": \"logic_no\"\n        }\n      ]\n    },\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"surface_wavy\"\n        },\n        {\n          \"type\": \"icon\",\n          \"id\": \"punct_exclaim\"\n        }\n      ]\n    }\n  ]\n}",
+    "swatchCount": 8
+  },
+  {
+    "label": "color-control-expanded",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 46,
+      "bottom": 46
+    },
+    "palette": {
+      "x": 12,
+      "y": 58,
+      "w": 390,
+      "h": 798,
+      "bottom": 856
+    },
+    "workspace": {
+      "x": 414,
+      "y": 58,
+      "w": 585,
+      "h": 798,
+      "bottom": 856
+    },
+    "previewPanel": {
+      "x": 1010,
+      "y": 58,
+      "w": 418,
+      "h": 798,
+      "bottom": 856
+    },
+    "firstPaletteVisible": true,
+    "tokenCount": 1,
+    "frameCount": 1,
+    "tokenBox": {
+      "x": 445,
+      "y": 196,
+      "w": 62,
+      "h": 100,
+      "bottom": 297
+    },
+    "tokenNameVisible": false,
+    "tokenTitle": "cloud / sky / air / atmospheric space · nature_cloud",
+    "previewHasSvg": true,
+    "exportClosed": true,
+    "importClosed": true,
+    "horizontalOverflow": false,
+    "colorEditor": true,
+    "eyedropperAvailable": true,
+    "json": "{\n  \"schema\": \"0.1\",\n  \"pictiq\": \"1.1\",\n  \"profile\": \"standalone-core-v0.1\",\n  \"contexts\": [\n    \"universal-core\"\n  ],\n  \"frames\": [\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"nature_cloud\"\n        }\n      ]\n    }\n  ]\n}",
+    "swatchCount": 8
+  },
+  {
+    "label": "color-swatch-blue",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 46,
+      "bottom": 46
+    },
+    "palette": {
+      "x": 12,
+      "y": 58,
+      "w": 390,
+      "h": 798,
+      "bottom": 856
+    },
+    "workspace": {
+      "x": 414,
+      "y": 58,
+      "w": 585,
+      "h": 798,
+      "bottom": 856
+    },
+    "previewPanel": {
+      "x": 1010,
+      "y": 58,
+      "w": 418,
+      "h": 798,
+      "bottom": 856
+    },
+    "firstPaletteVisible": true,
+    "tokenCount": 1,
+    "frameCount": 1,
+    "tokenBox": {
+      "x": 445,
+      "y": 196,
+      "w": 62,
+      "h": 100,
+      "bottom": 297
+    },
+    "tokenNameVisible": false,
+    "tokenTitle": "cloud / sky / air / atmospheric space · nature_cloud",
+    "previewHasSvg": true,
+    "exportClosed": true,
+    "importClosed": true,
+    "horizontalOverflow": false,
+    "colorEditor": true,
+    "eyedropperAvailable": true,
+    "json": "{\n  \"schema\": \"0.1\",\n  \"pictiq\": \"1.1\",\n  \"profile\": \"standalone-core-v0.1\",\n  \"contexts\": [\n    \"universal-core\"\n  ],\n  \"frames\": [\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"nature_cloud\",\n          \"params\": {\n            \"color\": \"#1976D2\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+    "swatchCount": 8
+  },
+  {
+    "label": "color-picker-green",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 46,
+      "bottom": 46
+    },
+    "palette": {
+      "x": 12,
+      "y": 58,
+      "w": 390,
+      "h": 798,
+      "bottom": 856
+    },
+    "workspace": {
+      "x": 414,
+      "y": 58,
+      "w": 585,
+      "h": 798,
+      "bottom": 856
+    },
+    "previewPanel": {
+      "x": 1010,
+      "y": 58,
+      "w": 418,
+      "h": 798,
+      "bottom": 856
+    },
+    "firstPaletteVisible": true,
+    "tokenCount": 1,
+    "frameCount": 1,
+    "tokenBox": {
+      "x": 445,
+      "y": 196,
+      "w": 62,
+      "h": 100,
+      "bottom": 297
+    },
+    "tokenNameVisible": false,
+    "tokenTitle": "cloud / sky / air / atmospheric space · nature_cloud",
+    "previewHasSvg": true,
+    "exportClosed": true,
+    "importClosed": true,
+    "horizontalOverflow": false,
+    "colorEditor": true,
+    "eyedropperAvailable": true,
+    "json": "{\n  \"schema\": \"0.1\",\n  \"pictiq\": \"1.1\",\n  \"profile\": \"standalone-core-v0.1\",\n  \"contexts\": [\n    \"universal-core\"\n  ],\n  \"frames\": [\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"nature_cloud\",\n          \"params\": {\n            \"color\": \"#388E3C\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+    "swatchCount": 8
+  },
+  {
+    "label": "color-hex-custom",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 46,
+      "bottom": 46
+    },
+    "palette": {
+      "x": 12,
+      "y": 58,
+      "w": 390,
+      "h": 798,
+      "bottom": 856
+    },
+    "workspace": {
+      "x": 414,
+      "y": 58,
+      "w": 585,
+      "h": 798,
+      "bottom": 856
+    },
+    "previewPanel": {
+      "x": 1010,
+      "y": 58,
+      "w": 418,
+      "h": 798,
+      "bottom": 856
+    },
+    "firstPaletteVisible": true,
+    "tokenCount": 1,
+    "frameCount": 1,
+    "tokenBox": {
+      "x": 445,
+      "y": 196,
+      "w": 62,
+      "h": 100,
+      "bottom": 297
+    },
+    "tokenNameVisible": false,
+    "tokenTitle": "cloud / sky / air / atmospheric space · nature_cloud",
+    "previewHasSvg": true,
+    "exportClosed": true,
+    "importClosed": true,
+    "horizontalOverflow": false,
+    "colorEditor": true,
+    "eyedropperAvailable": true,
+    "json": "{\n  \"schema\": \"0.1\",\n  \"pictiq\": \"1.1\",\n  \"profile\": \"standalone-core-v0.1\",\n  \"contexts\": [\n    \"universal-core\"\n  ],\n  \"frames\": [\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"nature_cloud\",\n          \"params\": {\n            \"color\": \"#3A6F8F\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+    "swatchCount": 8
+  },
+  {
+    "label": "color-reset-default",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 46,
+      "bottom": 46
+    },
+    "palette": {
+      "x": 12,
+      "y": 58,
+      "w": 390,
+      "h": 798,
+      "bottom": 856
+    },
+    "workspace": {
+      "x": 414,
+      "y": 58,
+      "w": 585,
+      "h": 798,
+      "bottom": 856
+    },
+    "previewPanel": {
+      "x": 1010,
+      "y": 58,
+      "w": 418,
+      "h": 798,
+      "bottom": 856
+    },
+    "firstPaletteVisible": true,
+    "tokenCount": 1,
+    "frameCount": 1,
+    "tokenBox": {
+      "x": 445,
+      "y": 196,
+      "w": 62,
+      "h": 100,
+      "bottom": 297
+    },
+    "tokenNameVisible": false,
+    "tokenTitle": "cloud / sky / air / atmospheric space · nature_cloud",
+    "previewHasSvg": true,
+    "exportClosed": true,
+    "importClosed": true,
+    "horizontalOverflow": false,
+    "colorEditor": true,
+    "eyedropperAvailable": true,
+    "json": "{\n  \"schema\": \"0.1\",\n  \"pictiq\": \"1.1\",\n  \"profile\": \"standalone-core-v0.1\",\n  \"contexts\": [\n    \"universal-core\"\n  ],\n  \"frames\": [\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"nature_cloud\"\n        }\n      ]\n    }\n  ]\n}",
+    "swatchCount": 8
+  },
+  {
+    "label": "narrow-water-question",
+    "viewport": {
+      "w": 640,
+      "h": 900
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 640,
+      "h": 84,
+      "bottom": 84
+    },
+    "palette": {
+      "x": 12,
+      "y": 96,
+      "w": 616,
+      "h": 593,
+      "bottom": 689
+    },
+    "workspace": {
+      "x": 12,
+      "y": 701,
+      "w": 616,
+      "h": 419,
+      "bottom": 1121
+    },
+    "previewPanel": {
+      "x": 12,
+      "y": 1133,
+      "w": 616,
+      "h": 454,
+      "bottom": 1586
+    },
+    "firstPaletteVisible": true,
+    "tokenCount": 2,
+    "frameCount": 1,
+    "tokenBox": {
+      "x": 43,
+      "y": 840,
+      "w": 62,
+      "h": 100,
+      "bottom": 940
+    },
+    "tokenNameVisible": false,
+    "tokenTitle": "water · need_water",
+    "previewHasSvg": true,
+    "exportClosed": true,
+    "importClosed": true,
+    "horizontalOverflow": false,
+    "colorEditor": true,
+    "eyedropperAvailable": true,
+    "json": "{\n  \"schema\": \"0.1\",\n  \"pictiq\": \"1.1\",\n  \"profile\": \"standalone-core-v0.1\",\n  \"contexts\": [\n    \"universal-core\"\n  ],\n  \"frames\": [\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"need_water\"\n        },\n        {\n          \"type\": \"icon\",\n          \"id\": \"punct_question\"\n        }\n      ]\n    }\n  ]\n}",
+    "swatchCount": 8
+  }
+]
