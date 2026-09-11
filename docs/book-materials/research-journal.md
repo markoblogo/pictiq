@@ -939,3 +939,13 @@ Result: Composer v0.1 creator acceptance: **PASSED**. Acceptance followed the in
 Decision / outcome: Creator/software acceptance only. No external-user usability validation is claimed. Stress Test 04B remains **NOT RUN** and the next step is to prepare the 04B experiment kit for a tiny external human-authoring pilot. Research Foundations Batch 01–03 remain research scaffolding and do not change protocol, grammar, vocabulary, icons, packs, profiles, Entity Symbols, numeric notation, Message Schema, Renderer semantics, Composer semantics, tags, or releases.
 
 Artifacts: [Composer architecture note](concepts/composer-v0.1-architecture.md), [Composer QA checklist](experiments/composer-v0.1-human-authoring-qa.md), [Stress Test 04B plan](research/composer-human-authoring-stress-test-04b.md), [Pass 1 QA](../research/composer-v0.1-acceptance-fix-pass-1/composer-v0.1-acceptance-fix-pass-1-qa.md), [Pass 2 QA](../research/composer-v0.1-acceptance-fix-pass-2/composer-v0.1-acceptance-fix-pass-2-qa.md), and [Pass 3 QA](../research/composer-v0.1-acceptance-fix-pass-3/composer-v0.1-acceptance-fix-pass-3-qa.md).
+
+## 2026-09-11 — Stress Test 04B experiment kit
+
+Question: What minimal reproducible kit is needed before testing whether unfamiliar adults can author simple valid Pictiq messages in Composer v0.1?
+
+Result: A small 04B kit is prepared with participant instructions, fixed task corpus, experimenter script, observer sheet, semantic targets, debrief, and machine-readable results template. It uses the public Composer route and current accepted vocabulary only.
+
+Decision / outcome: Experiment kit only. No participant data, simulated users, Composer change, vocabulary change, grammar change, Message Schema change, Renderer change, icon change, tag, release, or push is implied by the kit. Stress Test 04B remains **NOT RUN** until real participants use Composer.
+
+Artifacts: [04B experiment kit](../research/composer-human-authoring-04b/README.md).

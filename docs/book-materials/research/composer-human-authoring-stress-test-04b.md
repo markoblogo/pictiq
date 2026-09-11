@@ -65,3 +65,10 @@ Composer-generated Message JSON should use the same canonical representation as 
 Composer v0.1 has passed creator/software acceptance after the initial implementation, Acceptance Fix Pass 1, Acceptance Fix Pass 2, Acceptance Fix Pass 3, and manual Safari/local-HTTP use. The accepted implementation includes a compact Palette, direct-manipulation Message Workspace, tile and Frame drag/reorder, cross-Frame tile movement, contextual delete controls, bottom `+` Frame creation, compact header, visual COLOR controls, native color picker, EyeDropper where supported, HEX precision input, live Browser Renderer preview, import/export, and Browser/Python Renderer parity.
 
 Stress Test 04B is still **not run**. The next step is to prepare the 04B experiment kit for a tiny external human-authoring pilot. Do not manufacture usability results from creator acceptance or automated tests.
+
+
+## Experiment kit status
+
+The first reproducible 04B experiment kit is prepared at [`../../research/composer-human-authoring-04b/README.md`](../../research/composer-human-authoring-04b/README.md). It fixes the initial pilot at one unscored training task, eight scored tasks, a participant script, experimenter guide, observer sheet, semantic targets, debrief questions, and a machine-readable results template.
+
+The kit contains no participant data. Stress Test 04B remains **NOT RUN** until real participants use Composer.

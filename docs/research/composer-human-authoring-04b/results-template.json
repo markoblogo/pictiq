@@ -1,0 +1,54 @@
+{
+  "experiment": "pictiq-stress-test-04b-human-authoring-composer-usability",
+  "status": "template_only_no_results",
+  "composer": {
+    "version": "0.1",
+    "url": "https://markoblogo.github.io/pictiq/composer/"
+  },
+  "environment": {
+    "pictiq_version": "",
+    "date": "",
+    "browser": "",
+    "device_class": "",
+    "profile": "",
+    "contexts": []
+  },
+  "participant": {
+    "participant_id": "P__",
+    "prior_pictiq_experience": "none|brief|detailed",
+    "computer_comfort": "low|medium|high",
+    "languages_used": [],
+    "recording_consent": "none|screen|audio|screen_audio"
+  },
+  "tasks": [
+    {
+      "task_id": "T1",
+      "source_intent": "",
+      "started_at": "",
+      "completed_at": "",
+      "duration_seconds": null,
+      "completed": null,
+      "valid_message": null,
+      "required_slots": [],
+      "recovered_slots": [],
+      "time_to_first_valid_message_seconds": null,
+      "number_of_corrections": null,
+      "help_required": null,
+      "interventions": [],
+      "friction_codes": [],
+      "final_message": null,
+      "export_success": null,
+      "confidence": null,
+      "observer_notes": ""
+    }
+  ],
+  "debrief": {
+    "easiest_part": "",
+    "confusing_part": "",
+    "symbol_finding_clarity": "",
+    "frame_clarity": "",
+    "expected_but_unavailable": "",
+    "participant_explanation_optional": ""
+  },
+  "decision_outcome": "READY_FOR_RELEASE|FIX_BEFORE_RELEASE|LANGUAGE_PRESSURE_OBSERVED|INCONCLUSIVE|not_assessed"
+}
