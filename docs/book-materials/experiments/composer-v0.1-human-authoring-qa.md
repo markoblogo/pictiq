@@ -45,3 +45,15 @@ Fix Pass 2 keeps the Composer v0.1 architecture and language unchanged. Workspac
 QA artifacts: [`../../research/composer-v0.1-acceptance-fix-pass-2/composer-v0.1-acceptance-fix-pass-2-qa.md`](../../research/composer-v0.1-acceptance-fix-pass-2/composer-v0.1-acceptance-fix-pass-2-qa.md).
 
 This pass still does not claim completed usability validation or Stress Test 04B completion.
+
+## Human Acceptance Fix Pass 3
+
+Third human acceptance review found one concentrated issue: persistent structural controls still consumed Workspace area and made Composer feel like a technical structure editor rather than a surface for arranging Pictiq symbols.
+
+Fix Pass 3 changes Workspace interaction to direct manipulation while preserving the same canonical flat Message structure. The Workspace header no longer carries persistent Add/Clear/Delete controls. Frames can be dragged by their header, deleted through a small contextual `×`, and appended through a compact bottom `+`. Workspace tiles can be dragged within a Frame or across Frames, and their delete action is now a hover/focus/selection overlay instead of a permanent action row.
+
+Keyboard fallbacks are documented for v0.1: focused tiles support `Alt+ArrowLeft` / `Alt+ArrowRight` and Delete/Backspace; focused Frame headers support `Alt+ArrowUp` / `Alt+ArrowDown` and Delete/Backspace. This preserves a functional non-pointer path without adding persistent visual arrow controls.
+
+QA artifacts: [`../../research/composer-v0.1-acceptance-fix-pass-3/composer-v0.1-acceptance-fix-pass-3-qa.md`](../../research/composer-v0.1-acceptance-fix-pass-3/composer-v0.1-acceptance-fix-pass-3-qa.md).
+
+This pass still does not claim completed usability validation, mobile/touch drag support, or Stress Test 04B completion.

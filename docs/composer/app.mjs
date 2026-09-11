@@ -1,11 +1,13 @@
 import { renderPictiqMessage } from '../renderer/browser-renderer.mjs';
-import { CONTEXTS, DATA, compactMessage, entityEntries, iconById, iconEntries, initialState, messageForEditing, normalizeAndValidateMessage, parseJsonText, parseShorthandText, searchPalette, serializeShorthand, tokenLabel } from './composer-core.mjs';
+import { CONTEXTS, DATA, addFrame, compactMessage, deleteFrameAt, deleteTokenAt, entityEntries, iconById, iconEntries, initialState, messageForEditing, moveFrame, moveToken, normalizeAndValidateMessage, parseJsonText, parseShorthandText, searchPalette, serializeShorthand, tokenLabel } from './composer-core.mjs';
 import { PICTIQ_BROWSER_ASSETS } from '../renderer/generated/pictiq-browser-assets.mjs';
 
 let state = initialState(); state.importDiagnostics = [];
 let undoStack = [];
 let redoStack = [];
 let lastRender = null;
+let dragState = null;
+let pendingScrollFrame = null;
 
 const $ = (id) => document.getElementById(id);
 const els = Object.fromEntries(['profile','contexts','search','paletteItems','entityItems','frames','inspectorBody','diagnostics','previewSvg','jsonOut','shorthandOut','importText'].map((id) => [id, $(id)]));
@@ -83,30 +85,104 @@ function renderPalette() {
 
 function renderFrames() {
   els.frames.innerHTML = state.message.frames.map((frame, frameIndex) => `
-    <section class="frame ${frameIndex === state.selectedFrame ? 'active' : ''}" data-frame="${frameIndex}">
-      <div class="frame-head">
-        <button type="button" data-select-frame="${frameIndex}">Frame ${frameIndex + 1}</button>
-        <div class="frame-actions">
-          <button type="button" data-frame-up="${frameIndex}" aria-label="Move frame ${frameIndex + 1} up">↑</button>
-          <button type="button" data-frame-down="${frameIndex}" aria-label="Move frame ${frameIndex + 1} down">↓</button>
-        </div>
+    <section class="frame ${frameIndex === state.selectedFrame ? 'active' : ''}" data-frame="${frameIndex}" data-frame-drop="${frameIndex}">
+      <div class="frame-head" draggable="true" data-drag-frame="${frameIndex}" tabindex="0" role="button" aria-label="Frame ${frameIndex + 1}. Drag to reorder. Use Alt plus arrow keys to move.">
+        <span>Frame ${frameIndex + 1}</span>
+        <button class="frame-delete" type="button" data-frame-delete="${frameIndex}" aria-label="Delete frame ${frameIndex + 1}" title="Delete frame">×</button>
       </div>
-      <div class="tokens">
+      <div class="tokens" data-token-drop-frame="${frameIndex}" aria-label="Frame ${frameIndex + 1} tokens. Drop tiles here.">
         ${frame.tokens.length ? frame.tokens.map((token, tokenIndex) => {
           const label = tokenLabel(token);
           const id = token.type === 'number' ? String(token.value) : token.id;
           const tooltip = `${label} · ${id}`;
           return `
-          <article class="token ${frameIndex === state.selectedFrame && tokenIndex === state.selectedToken ? 'selected' : ''}" title="${escapeHtml(tooltip)}">
-            <button type="button" data-select-token="${frameIndex}:${tokenIndex}" aria-label="Select ${escapeHtml(tooltip)}">${assetSvgForToken(token)}<span class="sr-only">${escapeHtml(tooltip)}</span></button>
-            <div class="token-actions" aria-label="Token controls">
-              <button type="button" data-token-left="${frameIndex}:${tokenIndex}" aria-label="Move ${escapeHtml(label)} left">←</button>
-              <button type="button" data-token-right="${frameIndex}:${tokenIndex}" aria-label="Move ${escapeHtml(label)} right">→</button>
-              <button type="button" data-token-delete="${frameIndex}:${tokenIndex}" aria-label="Delete ${escapeHtml(label)}">×</button>
-            </div>
-          </article>`; }).join('') : '<p class="palette-gloss">Add tiles from the palette.</p>'}
+          <article class="token ${frameIndex === state.selectedFrame && tokenIndex === state.selectedToken ? 'selected' : ''}" draggable="true" data-drag-token="${frameIndex}:${tokenIndex}" title="${escapeHtml(tooltip)}">
+            <button class="token-select" type="button" data-select-token="${frameIndex}:${tokenIndex}" aria-label="Select ${escapeHtml(tooltip)}. Drag to reorder. Use arrow keys to move, Delete to remove.">${assetSvgForToken(token)}<span class="sr-only">${escapeHtml(tooltip)}</span></button>
+            <button class="token-delete" type="button" data-token-delete="${frameIndex}:${tokenIndex}" aria-label="Delete ${escapeHtml(label)}" title="Delete tile">×</button>
+          </article>`; }).join('') : '<p class="palette-gloss empty-frame-note">Drop tiles here or add from the Palette.</p>'}
       </div>
     </section>`).join('');
+}
+
+function selectFrame(frameIndex) {
+  state.selectedFrame = frameIndex;
+  state.selectedToken = null;
+  render();
+}
+
+function deleteFrame(frameIndex) {
+  mutate(() => {
+    state.selectedFrame = deleteFrameAt(state.message, frameIndex);
+    state.selectedToken = null;
+  });
+}
+
+function addFinalFrame() {
+  mutate(() => {
+    state.selectedFrame = addFrame(state.message);
+    state.selectedToken = null;
+    pendingScrollFrame = state.selectedFrame;
+  });
+}
+
+function reorderFrame(fromFrame, toFrame) {
+  mutate(() => {
+    state.selectedFrame = moveFrame(state.message, fromFrame, toFrame);
+    state.selectedToken = null;
+  });
+}
+
+function removeToken(frameIndex, tokenIndex) {
+  mutate(() => {
+    const next = deleteTokenAt(state.message, frameIndex, tokenIndex);
+    state.selectedFrame = next.frameIndex;
+    state.selectedToken = next.tokenIndex;
+  });
+}
+
+function moveSelectedToken(fromFrame, fromToken, toFrame, toToken) {
+  mutate(() => {
+    const next = moveToken(state.message, fromFrame, fromToken, toFrame, toToken);
+    state.selectedFrame = next.frameIndex;
+    state.selectedToken = next.tokenIndex;
+  });
+}
+
+function tokenDropIndex(container, clientX) {
+  const tokens = [...container.querySelectorAll('.token:not(.dragging)')];
+  const after = tokens.findIndex((token) => clientX < token.getBoundingClientRect().left + token.getBoundingClientRect().width / 2);
+  return after === -1 ? tokens.length : after;
+}
+
+function clearDragFeedback() {
+  document.querySelectorAll('.drop-before,.drop-after,.frame-drop-before,.frame-drop-after').forEach((node) => node.classList.remove('drop-before','drop-after','frame-drop-before','frame-drop-after'));
+}
+
+function clearDraggingState() {
+  document.querySelectorAll('.dragging').forEach((node) => node.classList.remove('dragging'));
+}
+
+function applyTokenDropFeedback(container, clientX) {
+  clearDragFeedback();
+  container.classList.add('drop-after');
+  const tokens = [...container.querySelectorAll('.token:not(.dragging)')];
+  const index = tokenDropIndex(container, clientX);
+  const marker = tokens[index] || tokens[index - 1];
+  if (marker) marker.classList.add(tokens[index] ? 'drop-before' : 'drop-after');
+}
+
+function frameDropIndex(frame, clientY) {
+  const target = Number(frame.dataset.frameDrop);
+  const rect = frame.getBoundingClientRect();
+  let to = target + (clientY > rect.top + rect.height / 2 ? 1 : 0);
+  if (dragState?.type === 'frame' && dragState.fromFrame < to) to -= 1;
+  return Math.max(0, Math.min(to, state.message.frames.length - 1));
+}
+
+function applyFrameDropFeedback(frame, clientY) {
+  clearDragFeedback();
+  const rect = frame.getBoundingClientRect();
+  frame.classList.add(clientY > rect.top + rect.height / 2 ? 'frame-drop-after' : 'frame-drop-before');
 }
 
 function renderInspector() {
@@ -187,7 +263,14 @@ function renderPreview() {
   els.shorthandOut.textContent = serializeShorthand(normalized.message).text;
 }
 
-function render() { renderProfileContexts(); renderPalette(); renderFrames(); renderInspector(); renderPreview(); }
+function render() {
+  renderProfileContexts(); renderPalette(); renderFrames(); renderInspector(); renderPreview();
+  if (pendingScrollFrame !== null) {
+    const target = els.frames.querySelector(`[data-frame="${pendingScrollFrame}"]`);
+    if (target) target.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    pendingScrollFrame = null;
+  }
+}
 
 function setImported(result) {
   if (result.message) mutate(() => { state.message = messageForEditing(result.message); state.selectedFrame = 0; state.selectedToken = null; state.importDiagnostics = result.diagnostics; document.querySelector('.import-panel').open = false; });
@@ -195,25 +278,97 @@ function setImported(result) {
 }
 
 document.addEventListener('click', (event) => {
+  const frameHead = event.target.closest?.('[data-drag-frame]');
+  if (frameHead && !event.target.closest('button')) selectFrame(Number(frameHead.dataset.dragFrame));
   const target = event.target.closest('button'); if (!target) return;
   if (target.dataset.addIcon) addToken({ type: 'icon', id: target.dataset.addIcon });
   if (target.dataset.addEntity) addToken({ type: 'entity', id: target.dataset.addEntity });
-  if (target.dataset.selectFrame) { state.selectedFrame = Number(target.dataset.selectFrame); state.selectedToken = null; render(); }
   if (target.dataset.selectToken) { const [f,t] = target.dataset.selectToken.split(':').map(Number); selectToken(f,t); }
-  if (target.dataset.tokenDelete) mutate(() => { const [f,t] = target.dataset.tokenDelete.split(':').map(Number); state.message.frames[f].tokens.splice(t,1); state.selectedFrame=f; state.selectedToken=null; });
-  if (target.dataset.tokenLeft) mutate(() => { const [f,t] = target.dataset.tokenLeft.split(':').map(Number); if (t>0) [state.message.frames[f].tokens[t-1], state.message.frames[f].tokens[t]]=[state.message.frames[f].tokens[t], state.message.frames[f].tokens[t-1]]; state.selectedFrame=f; state.selectedToken=Math.max(0,t-1); });
-  if (target.dataset.tokenRight) mutate(() => { const [f,t] = target.dataset.tokenRight.split(':').map(Number); const a=state.message.frames[f].tokens; if (t<a.length-1) [a[t+1], a[t]]=[a[t], a[t+1]]; state.selectedFrame=f; state.selectedToken=Math.min(a.length-1,t+1); });
-  if (target.dataset.frameUp) mutate(() => { const f=Number(target.dataset.frameUp); if (f>0) [state.message.frames[f-1], state.message.frames[f]]=[state.message.frames[f], state.message.frames[f-1]]; state.selectedFrame=Math.max(0,f-1); state.selectedToken=null; });
-  if (target.dataset.frameDown) mutate(() => { const f=Number(target.dataset.frameDown); if (f<state.message.frames.length-1) [state.message.frames[f+1], state.message.frames[f]]=[state.message.frames[f], state.message.frames[f+1]]; state.selectedFrame=Math.min(state.message.frames.length-1,f+1); state.selectedToken=null; });
+  if (target.dataset.tokenDelete) { const [f,t] = target.dataset.tokenDelete.split(':').map(Number); removeToken(f,t); }
+  if (target.dataset.frameDelete) deleteFrame(Number(target.dataset.frameDelete));
 });
+
+document.addEventListener('keydown', (event) => {
+  const tokenButton = event.target.closest?.('[data-select-token]');
+  if (tokenButton) {
+    const [f,t] = tokenButton.dataset.selectToken.split(':').map(Number);
+    if (event.key === 'Delete' || event.key === 'Backspace') { event.preventDefault(); removeToken(f,t); return; }
+    if (event.altKey && event.key === 'ArrowLeft') { event.preventDefault(); moveSelectedToken(f,t,f,Math.max(0,t - 1)); return; }
+    if (event.altKey && event.key === 'ArrowRight') { event.preventDefault(); moveSelectedToken(f,t,f,Math.min(state.message.frames[f].tokens.length - 1,t + 1)); return; }
+  }
+  const frameHead = event.target.closest?.('[data-drag-frame]');
+  if (frameHead) {
+    const f = Number(frameHead.dataset.dragFrame);
+    if (event.altKey && event.key === 'ArrowUp') { event.preventDefault(); reorderFrame(f, Math.max(0, f - 1)); return; }
+    if (event.altKey && event.key === 'ArrowDown') { event.preventDefault(); reorderFrame(f, Math.min(state.message.frames.length - 1, f + 1)); return; }
+    if (event.key === 'Delete' || event.key === 'Backspace') { event.preventDefault(); deleteFrame(f); }
+  }
+});
+
+document.addEventListener('dragstart', (event) => {
+  const token = event.target.closest?.('[data-drag-token]');
+  const frame = event.target.closest?.('[data-drag-frame]');
+  if (token) {
+    const [f,t] = token.dataset.dragToken.split(':').map(Number);
+    dragState = { type: 'token', fromFrame: f, fromToken: t };
+    event.dataTransfer.effectAllowed = 'move';
+    event.dataTransfer.setData('text/plain', `token:${f}:${t}`);
+    token.classList.add('dragging');
+    return;
+  }
+  if (frame && !event.target.closest('button')) {
+    const f = Number(frame.dataset.dragFrame);
+    dragState = { type: 'frame', fromFrame: f };
+    event.dataTransfer.effectAllowed = 'move';
+    event.dataTransfer.setData('text/plain', `frame:${f}`);
+    frame.closest('.frame')?.classList.add('dragging');
+  }
+});
+
+document.addEventListener('dragover', (event) => {
+  if (!dragState) return;
+  if (dragState.type === 'token') {
+    const container = event.target.closest?.('[data-token-drop-frame]');
+    if (!container) return;
+    event.preventDefault();
+    event.dataTransfer.dropEffect = 'move';
+    applyTokenDropFeedback(container, event.clientX);
+  } else if (dragState.type === 'frame') {
+    const frame = event.target.closest?.('[data-frame-drop]');
+    if (!frame) return;
+    event.preventDefault();
+    event.dataTransfer.dropEffect = 'move';
+    applyFrameDropFeedback(frame, event.clientY);
+  }
+});
+
+document.addEventListener('drop', (event) => {
+  if (!dragState) return;
+  if (dragState.type === 'token') {
+    const container = event.target.closest?.('[data-token-drop-frame]');
+    if (!container) return;
+    event.preventDefault();
+    const toFrame = Number(container.dataset.tokenDropFrame);
+    const toToken = tokenDropIndex(container, event.clientX);
+    moveSelectedToken(dragState.fromFrame, dragState.fromToken, toFrame, toToken);
+  } else if (dragState.type === 'frame') {
+    const frame = event.target.closest?.('[data-frame-drop]');
+    if (!frame) return;
+    event.preventDefault();
+    reorderFrame(dragState.fromFrame, frameDropIndex(frame, event.clientY));
+  }
+  dragState = null;
+  clearDragFeedback();
+  clearDraggingState();
+});
+
+document.addEventListener('dragend', () => { dragState = null; clearDragFeedback(); clearDraggingState(); });
 
 els.profile.addEventListener('change', () => mutate(() => { state.message.profile = els.profile.value; }));
 els.contexts.addEventListener('change', () => mutate(() => { state.message.contexts = [...els.contexts.querySelectorAll('input:checked')].map((x) => x.value); }));
 els.search.addEventListener('input', renderPalette);
 $('addNumber').addEventListener('click', () => addToken({ type: 'number', value: 50 }));
-$('addFrame').addEventListener('click', () => mutate(() => { state.message.frames.push({ tokens: [] }); state.selectedFrame = state.message.frames.length - 1; state.selectedToken = null; }));
-$('clearFrame').addEventListener('click', () => mutate(() => { currentFrame().tokens = []; state.selectedToken = null; }));
-$('deleteFrame').addEventListener('click', () => mutate(() => { if (state.message.frames.length > 1) state.message.frames.splice(state.selectedFrame, 1); else state.message.frames = [{ tokens: [] }]; state.selectedFrame = Math.max(0, state.selectedFrame - 1); state.selectedToken = null; }));
+$('addFrame').addEventListener('click', addFinalFrame);
 $('newMessage').addEventListener('click', () => { if (confirm('Start a new message?')) mutate(() => { state = initialState(); state.importDiagnostics = []; }); });
 $('undo').addEventListener('click', () => { if (!undoStack.length) return; redoStack.push(clone(state)); state = undoStack.pop(); render(); });
 $('redo').addEventListener('click', () => { if (!redoStack.length) return; undoStack.push(clone(state)); state = redoStack.pop(); render(); });

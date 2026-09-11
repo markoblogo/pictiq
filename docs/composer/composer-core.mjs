@@ -164,6 +164,53 @@ export function normalizeAndValidateMessage(data) {
   return diagnostics.some((d) => d.level === 'error') ? { message: null, diagnostics } : { message: normalized, diagnostics };
 }
 
+
+export function clampIndex(index, length) {
+  return Math.max(0, Math.min(Number(index) || 0, Math.max(0, length - 1)));
+}
+
+export function addFrame(message) {
+  message.frames.push({ tokens: [] });
+  return message.frames.length - 1;
+}
+
+export function deleteFrameAt(message, frameIndex) {
+  if (message.frames.length <= 1) {
+    message.frames = [{ tokens: [] }];
+    return 0;
+  }
+  const from = clampIndex(frameIndex, message.frames.length);
+  message.frames.splice(from, 1);
+  return Math.min(from, message.frames.length - 1);
+}
+
+export function moveFrame(message, fromFrame, toFrame) {
+  if (message.frames.length < 2) return clampIndex(fromFrame, message.frames.length);
+  const from = clampIndex(fromFrame, message.frames.length);
+  const to = clampIndex(toFrame, message.frames.length);
+  if (from === to) return to;
+  const [frame] = message.frames.splice(from, 1);
+  message.frames.splice(to, 0, frame);
+  return to;
+}
+
+export function deleteTokenAt(message, frameIndex, tokenIndex) {
+  const frame = message.frames[frameIndex];
+  if (!frame?.tokens?.length) return { frameIndex, tokenIndex: null };
+  frame.tokens.splice(tokenIndex, 1);
+  return { frameIndex, tokenIndex: frame.tokens.length ? Math.min(tokenIndex, frame.tokens.length - 1) : null };
+}
+
+export function moveToken(message, fromFrame, fromToken, toFrame, toToken) {
+  const source = message.frames[fromFrame];
+  const target = message.frames[toFrame];
+  if (!source || !target || !source.tokens[fromToken]) return { frameIndex: fromFrame, tokenIndex: fromToken };
+  const [token] = source.tokens.splice(fromToken, 1);
+  const insertion = Math.max(0, Math.min(Number(toToken) || 0, target.tokens.length));
+  target.tokens.splice(insertion, 0, token);
+  return { frameIndex: toFrame, tokenIndex: insertion };
+}
+
 export function parseJsonText(text) {
   try {
     return normalizeAndValidateMessage(JSON.parse(text));

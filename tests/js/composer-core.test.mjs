@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import assert from 'node:assert/strict';
 import { renderPictiqMessage } from '../../docs/renderer/browser-renderer.mjs';
-import { compactMessage, initialState, normalizeAndValidateMessage, parseJsonText, parseShorthandText, searchPalette, serializeShorthand } from '../../docs/composer/composer-core.mjs';
+import { addFrame, compactMessage, deleteFrameAt, deleteTokenAt, initialState, moveFrame, moveToken, normalizeAndValidateMessage, parseJsonText, parseShorthandText, searchPalette, serializeShorthand } from '../../docs/composer/composer-core.mjs';
 
 function same(a, b) { assert.deepEqual(a, b); }
 function noErrors(result) { assert.equal(result.diagnostics.filter((d) => d.level === 'error').length, 0, JSON.stringify(result.diagnostics)); }
@@ -46,6 +46,51 @@ noErrors(normalized);
 serializedJson = JSON.stringify(normalized.message);
 assert.ok(!serializedJson.includes('params'));
 state.message.frames[1].tokens[1].params = { color: '#555555' };
+
+
+let direct = initialState();
+direct.message.frames[0].tokens.push(
+  { type: 'icon', id: 'need_water' },
+  { type: 'icon', id: 'punct_question' },
+  { type: 'icon', id: 'logic_yes' },
+);
+let moved = moveToken(direct.message, 0, 0, 0, 2);
+assert.equal(moved.frameIndex, 0);
+assert.equal(moved.tokenIndex, 2);
+same(direct.message.frames[0].tokens.map((token) => token.id), ['punct_question','logic_yes','need_water']);
+moved = moveToken(direct.message, 0, 2, 0, 0);
+same(direct.message.frames[0].tokens.map((token) => token.id), ['need_water','punct_question','logic_yes']);
+addFrame(direct.message);
+direct.message.frames[1].tokens.push(
+  { type: 'icon', id: 'nature_cloud', params: { color: '#3A6F8F' } },
+  { type: 'entity', id: 'entity:poseidon@odyssey' },
+  { type: 'number', value: 50 },
+);
+moved = moveToken(direct.message, 0, 1, 1, 1);
+assert.equal(moved.frameIndex, 1);
+assert.equal(moved.tokenIndex, 1);
+same(direct.message.frames[0].tokens.map((token) => token.id), ['need_water','logic_yes']);
+same(direct.message.frames[1].tokens.map((token) => token.type === 'number' ? token.value : token.id), ['nature_cloud','punct_question','entity:poseidon@odyssey',50]);
+assert.equal(direct.message.frames[1].tokens[0].params.color, '#3A6F8F');
+assert.equal(direct.message.frames[1].tokens[2].id, 'entity:poseidon@odyssey');
+assert.equal(direct.message.frames[1].tokens[3].value, 50);
+let deleted = deleteTokenAt(direct.message, 1, 1);
+assert.equal(deleted.frameIndex, 1);
+assert.equal(deleted.tokenIndex, 1);
+same(direct.message.frames[1].tokens.map((token) => token.type === 'number' ? token.value : token.id), ['nature_cloud','entity:poseidon@odyssey',50]);
+addFrame(direct.message);
+direct.message.frames[2].tokens.push({ type: 'icon', id: 'surface_wavy' });
+assert.equal(moveFrame(direct.message, 2, 0), 0);
+same(direct.message.frames.map((frame) => frame.tokens[0]?.id || frame.tokens[0]?.value), ['surface_wavy','need_water','nature_cloud']);
+assert.equal(deleteFrameAt(direct.message, 1), 1);
+assert.equal(direct.message.frames.length, 2);
+let one = initialState();
+one.message.frames[0].tokens.push({ type: 'icon', id: 'need_water' });
+assert.equal(deleteFrameAt(one.message, 0), 0);
+assert.equal(one.message.frames.length, 1);
+assert.equal(one.message.frames[0].tokens.length, 0);
+normalized = normalizeAndValidateMessage(compactMessage(direct.message));
+noErrors(normalized);
 
 let imported = parseJsonText('{"schema":"0.1","pictiq":"1.1","frames":[{"tokens":[{"type":"icon","id":"need_bar"}]}]}');
 noErrors(imported);

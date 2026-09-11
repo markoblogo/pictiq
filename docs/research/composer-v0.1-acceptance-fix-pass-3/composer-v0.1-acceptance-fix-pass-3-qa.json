@@ -1,0 +1,667 @@
+[
+  {
+    "label": "three-tiles-initial",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 46,
+      "bottom": 46
+    },
+    "frameCount": 1,
+    "tokenCount": 3,
+    "workspaceActionsVisible": false,
+    "frameDeleteCount": 1,
+    "addFrameText": "+",
+    "tokenActionRows": 0,
+    "tokenDeleteVisible": "0",
+    "tokenNameVisible": false,
+    "previewHasSvg": true,
+    "horizontalOverflow": false,
+    "selectedTitle": "yes · logic_yes",
+    "json": "{\n  \"schema\": \"0.1\",\n  \"pictiq\": \"1.1\",\n  \"profile\": \"standalone-core-v0.1\",\n  \"contexts\": [\n    \"universal-core\"\n  ],\n  \"frames\": [\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"need_water\"\n        },\n        {\n          \"type\": \"icon\",\n          \"id\": \"punct_question\"\n        },\n        {\n          \"type\": \"icon\",\n          \"id\": \"logic_yes\"\n        }\n      ]\n    }\n  ]\n}",
+    "frames": [
+      [
+        "need_water",
+        "punct_question",
+        "logic_yes"
+      ]
+    ]
+  },
+  {
+    "label": "three-tiles-drag-1-to-3",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 46,
+      "bottom": 46
+    },
+    "frameCount": 1,
+    "tokenCount": 3,
+    "workspaceActionsVisible": false,
+    "frameDeleteCount": 1,
+    "addFrameText": "+",
+    "tokenActionRows": 0,
+    "tokenDeleteVisible": "0",
+    "tokenNameVisible": false,
+    "previewHasSvg": true,
+    "horizontalOverflow": false,
+    "selectedTitle": "water · need_water",
+    "json": "{\n  \"schema\": \"0.1\",\n  \"pictiq\": \"1.1\",\n  \"profile\": \"standalone-core-v0.1\",\n  \"contexts\": [\n    \"universal-core\"\n  ],\n  \"frames\": [\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"punct_question\"\n        },\n        {\n          \"type\": \"icon\",\n          \"id\": \"logic_yes\"\n        },\n        {\n          \"type\": \"icon\",\n          \"id\": \"need_water\"\n        }\n      ]\n    }\n  ]\n}",
+    "frames": [
+      [
+        "punct_question",
+        "logic_yes",
+        "need_water"
+      ]
+    ]
+  },
+  {
+    "label": "three-tiles-drag-back",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 46,
+      "bottom": 46
+    },
+    "frameCount": 1,
+    "tokenCount": 3,
+    "workspaceActionsVisible": false,
+    "frameDeleteCount": 1,
+    "addFrameText": "+",
+    "tokenActionRows": 0,
+    "tokenDeleteVisible": "1",
+    "tokenNameVisible": false,
+    "previewHasSvg": true,
+    "horizontalOverflow": false,
+    "selectedTitle": "water · need_water",
+    "json": "{\n  \"schema\": \"0.1\",\n  \"pictiq\": \"1.1\",\n  \"profile\": \"standalone-core-v0.1\",\n  \"contexts\": [\n    \"universal-core\"\n  ],\n  \"frames\": [\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"need_water\"\n        },\n        {\n          \"type\": \"icon\",\n          \"id\": \"punct_question\"\n        },\n        {\n          \"type\": \"icon\",\n          \"id\": \"logic_yes\"\n        }\n      ]\n    }\n  ]\n}",
+    "frames": [
+      [
+        "need_water",
+        "punct_question",
+        "logic_yes"
+      ]
+    ]
+  },
+  {
+    "label": "cross-frame-b-between-c-d",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 46,
+      "bottom": 46
+    },
+    "frameCount": 2,
+    "tokenCount": 4,
+    "workspaceActionsVisible": false,
+    "frameDeleteCount": 2,
+    "addFrameText": "+",
+    "tokenActionRows": 0,
+    "tokenDeleteVisible": "0",
+    "tokenNameVisible": false,
+    "previewHasSvg": true,
+    "horizontalOverflow": false,
+    "selectedTitle": "question · punct_question",
+    "json": "{\n  \"schema\": \"0.1\",\n  \"pictiq\": \"1.1\",\n  \"profile\": \"standalone-core-v0.1\",\n  \"contexts\": [\n    \"universal-core\"\n  ],\n  \"frames\": [\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"need_water\"\n        }\n      ]\n    },\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"logic_yes\"\n        },\n        {\n          \"type\": \"icon\",\n          \"id\": \"punct_question\"\n        },\n        {\n          \"type\": \"icon\",\n          \"id\": \"logic_no\"\n        }\n      ]\n    }\n  ]\n}",
+    "frames": [
+      [
+        "need_water"
+      ],
+      [
+        "logic_yes",
+        "punct_question",
+        "logic_no"
+      ]
+    ]
+  },
+  {
+    "label": "tile-hover-delete",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 46,
+      "bottom": 46
+    },
+    "frameCount": 1,
+    "tokenCount": 2,
+    "workspaceActionsVisible": false,
+    "frameDeleteCount": 1,
+    "addFrameText": "+",
+    "tokenActionRows": 0,
+    "tokenDeleteVisible": "1",
+    "tokenNameVisible": false,
+    "previewHasSvg": true,
+    "horizontalOverflow": false,
+    "selectedTitle": "question · punct_question",
+    "json": "{\n  \"schema\": \"0.1\",\n  \"pictiq\": \"1.1\",\n  \"profile\": \"standalone-core-v0.1\",\n  \"contexts\": [\n    \"universal-core\"\n  ],\n  \"frames\": [\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"need_water\"\n        },\n        {\n          \"type\": \"icon\",\n          \"id\": \"punct_question\"\n        }\n      ]\n    }\n  ]\n}",
+    "frames": [
+      [
+        "need_water",
+        "punct_question"
+      ]
+    ]
+  },
+  {
+    "label": "tile-delete",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 46,
+      "bottom": 46
+    },
+    "frameCount": 1,
+    "tokenCount": 1,
+    "workspaceActionsVisible": false,
+    "frameDeleteCount": 1,
+    "addFrameText": "+",
+    "tokenActionRows": 0,
+    "tokenDeleteVisible": "1",
+    "tokenNameVisible": false,
+    "previewHasSvg": true,
+    "horizontalOverflow": false,
+    "selectedTitle": "question · punct_question",
+    "json": "{\n  \"schema\": \"0.1\",\n  \"pictiq\": \"1.1\",\n  \"profile\": \"standalone-core-v0.1\",\n  \"contexts\": [\n    \"universal-core\"\n  ],\n  \"frames\": [\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"punct_question\"\n        }\n      ]\n    }\n  ]\n}",
+    "frames": [
+      [
+        "punct_question"
+      ]
+    ]
+  },
+  {
+    "label": "tile-delete-undo",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 46,
+      "bottom": 46
+    },
+    "frameCount": 1,
+    "tokenCount": 2,
+    "workspaceActionsVisible": false,
+    "frameDeleteCount": 1,
+    "addFrameText": "+",
+    "tokenActionRows": 0,
+    "tokenDeleteVisible": "1",
+    "tokenNameVisible": false,
+    "previewHasSvg": true,
+    "horizontalOverflow": false,
+    "selectedTitle": "question · punct_question",
+    "json": "{\n  \"schema\": \"0.1\",\n  \"pictiq\": \"1.1\",\n  \"profile\": \"standalone-core-v0.1\",\n  \"contexts\": [\n    \"universal-core\"\n  ],\n  \"frames\": [\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"need_water\"\n        },\n        {\n          \"type\": \"icon\",\n          \"id\": \"punct_question\"\n        }\n      ]\n    }\n  ]\n}",
+    "frames": [
+      [
+        "need_water",
+        "punct_question"
+      ]
+    ]
+  },
+  {
+    "label": "frame-3-above-frame-1",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 46,
+      "bottom": 46
+    },
+    "frameCount": 3,
+    "tokenCount": 3,
+    "workspaceActionsVisible": false,
+    "frameDeleteCount": 3,
+    "addFrameText": "+",
+    "tokenActionRows": 0,
+    "tokenDeleteVisible": "0",
+    "tokenNameVisible": false,
+    "previewHasSvg": true,
+    "horizontalOverflow": false,
+    "selectedTitle": "",
+    "json": "{\n  \"schema\": \"0.1\",\n  \"pictiq\": \"1.1\",\n  \"profile\": \"standalone-core-v0.1\",\n  \"contexts\": [\n    \"universal-core\"\n  ],\n  \"frames\": [\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"logic_yes\"\n        }\n      ]\n    },\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"need_water\"\n        }\n      ]\n    },\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"punct_question\"\n        }\n      ]\n    }\n  ]\n}",
+    "frames": [
+      [
+        "logic_yes"
+      ],
+      [
+        "need_water"
+      ],
+      [
+        "punct_question"
+      ]
+    ]
+  },
+  {
+    "label": "frame-delete-middle",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 46,
+      "bottom": 46
+    },
+    "frameCount": 2,
+    "tokenCount": 2,
+    "workspaceActionsVisible": false,
+    "frameDeleteCount": 2,
+    "addFrameText": "+",
+    "tokenActionRows": 0,
+    "tokenDeleteVisible": "0",
+    "tokenNameVisible": false,
+    "previewHasSvg": true,
+    "horizontalOverflow": false,
+    "selectedTitle": "",
+    "json": "{\n  \"schema\": \"0.1\",\n  \"pictiq\": \"1.1\",\n  \"profile\": \"standalone-core-v0.1\",\n  \"contexts\": [\n    \"universal-core\"\n  ],\n  \"frames\": [\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"logic_yes\"\n        }\n      ]\n    },\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"punct_question\"\n        }\n      ]\n    }\n  ]\n}",
+    "frames": [
+      [
+        "logic_yes"
+      ],
+      [
+        "punct_question"
+      ]
+    ]
+  },
+  {
+    "label": "frame-delete-undo",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 46,
+      "bottom": 46
+    },
+    "frameCount": 3,
+    "tokenCount": 3,
+    "workspaceActionsVisible": false,
+    "frameDeleteCount": 3,
+    "addFrameText": "+",
+    "tokenActionRows": 0,
+    "tokenDeleteVisible": "0",
+    "tokenNameVisible": false,
+    "previewHasSvg": true,
+    "horizontalOverflow": false,
+    "selectedTitle": "",
+    "json": "{\n  \"schema\": \"0.1\",\n  \"pictiq\": \"1.1\",\n  \"profile\": \"standalone-core-v0.1\",\n  \"contexts\": [\n    \"universal-core\"\n  ],\n  \"frames\": [\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"logic_yes\"\n        }\n      ]\n    },\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"need_water\"\n        }\n      ]\n    },\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"punct_question\"\n        }\n      ]\n    }\n  ]\n}",
+    "frames": [
+      [
+        "logic_yes"
+      ],
+      [
+        "need_water"
+      ],
+      [
+        "punct_question"
+      ]
+    ]
+  },
+  {
+    "label": "frame-add-bottom-plus",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 46,
+      "bottom": 46
+    },
+    "frameCount": 4,
+    "tokenCount": 3,
+    "workspaceActionsVisible": false,
+    "frameDeleteCount": 4,
+    "addFrameText": "+",
+    "tokenActionRows": 0,
+    "tokenDeleteVisible": "0",
+    "tokenNameVisible": false,
+    "previewHasSvg": true,
+    "horizontalOverflow": false,
+    "selectedTitle": "",
+    "json": "{\n  \"schema\": \"0.1\",\n  \"pictiq\": \"1.1\",\n  \"profile\": \"standalone-core-v0.1\",\n  \"contexts\": [\n    \"universal-core\"\n  ],\n  \"frames\": [\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"logic_yes\"\n        }\n      ]\n    },\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"need_water\"\n        }\n      ]\n    },\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"punct_question\"\n        }\n      ]\n    }\n  ]\n}",
+    "frames": [
+      [
+        "logic_yes"
+      ],
+      [
+        "need_water"
+      ],
+      [
+        "punct_question"
+      ]
+    ]
+  },
+  {
+    "label": "color-token-cross-frame-preserved",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 46,
+      "bottom": 46
+    },
+    "frameCount": 2,
+    "tokenCount": 1,
+    "workspaceActionsVisible": false,
+    "frameDeleteCount": 2,
+    "addFrameText": "+",
+    "tokenActionRows": 0,
+    "tokenDeleteVisible": "1",
+    "tokenNameVisible": false,
+    "previewHasSvg": true,
+    "horizontalOverflow": false,
+    "selectedTitle": "cloud / sky / air / atmospheric space · nature_cloud",
+    "json": "{\n  \"schema\": \"0.1\",\n  \"pictiq\": \"1.1\",\n  \"profile\": \"standalone-core-v0.1\",\n  \"contexts\": [\n    \"universal-core\"\n  ],\n  \"frames\": [\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"nature_cloud\",\n          \"params\": {\n            \"color\": \"#3A6F8F\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+    "frames": [
+      [
+        "nature_cloud"
+      ]
+    ]
+  },
+  {
+    "label": "entity-cross-frame-preserved",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 46,
+      "bottom": 46
+    },
+    "frameCount": 2,
+    "tokenCount": 1,
+    "workspaceActionsVisible": false,
+    "frameDeleteCount": 2,
+    "addFrameText": "+",
+    "tokenActionRows": 0,
+    "tokenDeleteVisible": "1",
+    "tokenNameVisible": false,
+    "previewHasSvg": true,
+    "horizontalOverflow": false,
+    "selectedTitle": "Poseidon · entity:poseidon@odyssey",
+    "json": "{\n  \"schema\": \"0.1\",\n  \"pictiq\": \"1.1\",\n  \"profile\": \"standalone-core-v0.1\",\n  \"contexts\": [\n    \"universal-core\"\n  ],\n  \"frames\": [\n    {\n      \"tokens\": [\n        {\n          \"type\": \"entity\",\n          \"id\": \"entity:poseidon@odyssey\"\n        }\n      ]\n    }\n  ]\n}",
+    "frames": [
+      [
+        "entity:poseidon@odyssey"
+      ]
+    ]
+  },
+  {
+    "label": "number-cross-frame-preserved",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 46,
+      "bottom": 46
+    },
+    "frameCount": 2,
+    "tokenCount": 2,
+    "workspaceActionsVisible": false,
+    "frameDeleteCount": 2,
+    "addFrameText": "+",
+    "tokenActionRows": 0,
+    "tokenDeleteVisible": "1",
+    "tokenNameVisible": false,
+    "previewHasSvg": true,
+    "horizontalOverflow": false,
+    "selectedTitle": "50 · 50",
+    "json": "{\n  \"schema\": \"0.1\",\n  \"pictiq\": \"1.1\",\n  \"profile\": \"standalone-core-v0.1\",\n  \"contexts\": [\n    \"universal-core\"\n  ],\n  \"frames\": [\n    {\n      \"tokens\": [\n        {\n          \"type\": \"number\",\n          \"value\": 50\n        }\n      ]\n    },\n    {\n      \"tokens\": [\n        {\n          \"type\": \"entity\",\n          \"id\": \"entity:poseidon@odyssey\"\n        }\n      ]\n    }\n  ]\n}",
+    "frames": [
+      [
+        50
+      ],
+      [
+        "entity:poseidon@odyssey"
+      ]
+    ]
+  },
+  {
+    "label": "keyboard-token-move-left",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 46,
+      "bottom": 46
+    },
+    "frameCount": 1,
+    "tokenCount": 2,
+    "workspaceActionsVisible": false,
+    "frameDeleteCount": 1,
+    "addFrameText": "+",
+    "tokenActionRows": 0,
+    "tokenDeleteVisible": "1",
+    "tokenNameVisible": false,
+    "previewHasSvg": true,
+    "horizontalOverflow": false,
+    "selectedTitle": "question · punct_question",
+    "json": "{\n  \"schema\": \"0.1\",\n  \"pictiq\": \"1.1\",\n  \"profile\": \"standalone-core-v0.1\",\n  \"contexts\": [\n    \"universal-core\"\n  ],\n  \"frames\": [\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"punct_question\"\n        },\n        {\n          \"type\": \"icon\",\n          \"id\": \"need_water\"\n        }\n      ]\n    }\n  ]\n}",
+    "frames": [
+      [
+        "punct_question",
+        "need_water"
+      ]
+    ]
+  },
+  {
+    "label": "keyboard-token-delete",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 46,
+      "bottom": 46
+    },
+    "frameCount": 1,
+    "tokenCount": 1,
+    "workspaceActionsVisible": false,
+    "frameDeleteCount": 1,
+    "addFrameText": "+",
+    "tokenActionRows": 0,
+    "tokenDeleteVisible": "1",
+    "tokenNameVisible": false,
+    "previewHasSvg": true,
+    "horizontalOverflow": false,
+    "selectedTitle": "water · need_water",
+    "json": "{\n  \"schema\": \"0.1\",\n  \"pictiq\": \"1.1\",\n  \"profile\": \"standalone-core-v0.1\",\n  \"contexts\": [\n    \"universal-core\"\n  ],\n  \"frames\": [\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"need_water\"\n        }\n      ]\n    }\n  ]\n}",
+    "frames": [
+      [
+        "need_water"
+      ]
+    ]
+  },
+  {
+    "label": "keyboard-frame-move-up",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 46,
+      "bottom": 46
+    },
+    "frameCount": 2,
+    "tokenCount": 2,
+    "workspaceActionsVisible": false,
+    "frameDeleteCount": 2,
+    "addFrameText": "+",
+    "tokenActionRows": 0,
+    "tokenDeleteVisible": "0",
+    "tokenNameVisible": false,
+    "previewHasSvg": true,
+    "horizontalOverflow": false,
+    "selectedTitle": "",
+    "json": "{\n  \"schema\": \"0.1\",\n  \"pictiq\": \"1.1\",\n  \"profile\": \"standalone-core-v0.1\",\n  \"contexts\": [\n    \"universal-core\"\n  ],\n  \"frames\": [\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"logic_yes\"\n        }\n      ]\n    },\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"need_water\"\n        }\n      ]\n    }\n  ]\n}",
+    "frames": [
+      [
+        "logic_yes"
+      ],
+      [
+        "need_water"
+      ]
+    ]
+  },
+  {
+    "label": "keyboard-frame-delete",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 46,
+      "bottom": 46
+    },
+    "frameCount": 1,
+    "tokenCount": 1,
+    "workspaceActionsVisible": false,
+    "frameDeleteCount": 1,
+    "addFrameText": "+",
+    "tokenActionRows": 0,
+    "tokenDeleteVisible": "0",
+    "tokenNameVisible": false,
+    "previewHasSvg": true,
+    "horizontalOverflow": false,
+    "selectedTitle": "",
+    "json": "{\n  \"schema\": \"0.1\",\n  \"pictiq\": \"1.1\",\n  \"profile\": \"standalone-core-v0.1\",\n  \"contexts\": [\n    \"universal-core\"\n  ],\n  \"frames\": [\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"need_water\"\n        }\n      ]\n    }\n  ]\n}",
+    "frames": [
+      [
+        "need_water"
+      ]
+    ]
+  },
+  {
+    "label": "keyboard-add-frame",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 46,
+      "bottom": 46
+    },
+    "frameCount": 2,
+    "tokenCount": 1,
+    "workspaceActionsVisible": false,
+    "frameDeleteCount": 2,
+    "addFrameText": "+",
+    "tokenActionRows": 0,
+    "tokenDeleteVisible": "0",
+    "tokenNameVisible": false,
+    "previewHasSvg": true,
+    "horizontalOverflow": false,
+    "selectedTitle": "",
+    "json": "{\n  \"schema\": \"0.1\",\n  \"pictiq\": \"1.1\",\n  \"profile\": \"standalone-core-v0.1\",\n  \"contexts\": [\n    \"universal-core\"\n  ],\n  \"frames\": [\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"need_water\"\n        }\n      ]\n    }\n  ]\n}",
+    "frames": [
+      [
+        "need_water"
+      ]
+    ]
+  },
+  {
+    "label": "narrow-direct-manipulation",
+    "viewport": {
+      "w": 900,
+      "h": 900
+    },
+    "header": {
+      "x": 0,
+      "y": -77,
+      "w": 900,
+      "h": 46,
+      "bottom": -31
+    },
+    "frameCount": 2,
+    "tokenCount": 3,
+    "workspaceActionsVisible": false,
+    "frameDeleteCount": 2,
+    "addFrameText": "+",
+    "tokenActionRows": 0,
+    "tokenDeleteVisible": "0",
+    "tokenNameVisible": false,
+    "previewHasSvg": true,
+    "horizontalOverflow": false,
+    "selectedTitle": "yes · logic_yes",
+    "json": "{\n  \"schema\": \"0.1\",\n  \"pictiq\": \"1.1\",\n  \"profile\": \"standalone-core-v0.1\",\n  \"contexts\": [\n    \"universal-core\"\n  ],\n  \"frames\": [\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"need_water\"\n        },\n        {\n          \"type\": \"icon\",\n          \"id\": \"punct_question\"\n        }\n      ]\n    },\n    {\n      \"tokens\": [\n        {\n          \"type\": \"icon\",\n          \"id\": \"logic_yes\"\n        }\n      ]\n    }\n  ]\n}",
+    "frames": [
+      [
+        "need_water",
+        "punct_question"
+      ],
+      [
+        "logic_yes"
+      ]
+    ]
+  }
+]
