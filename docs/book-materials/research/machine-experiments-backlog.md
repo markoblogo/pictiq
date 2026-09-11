@@ -39,7 +39,7 @@ Compare:
 
 Metrics: schema validity, canonical-ID validity, semantic-slot preservation, incorrect concept selection, unnecessary vocabulary, intentional-omission quality, consistency across repeated runs, and latency/cost where useful.
 
-Completed pilot: [Constrained Translation Pilot 04A](../experiments/constrained-translation-pilot-04a.md) ran the first small LLM-to-Pictiq-Message condition after Renderer v0.1. It found `MESSAGE_SCHEMA_V0_1_SUFFICIENT_FOR_PILOT`, with generator/validation friction as the next concern rather than a schema change.
+Completed pilot: [Constrained Translation Pilot 04A](../experiments/constrained-translation-pilot-04a.md) is CLOSED / ACCEPTED. It ran the first small LLM-to-Pictiq-Message condition after Renderer v0.1. It found `MESSAGE_SCHEMA_V0_1_SUFFICIENT_FOR_PILOT`, with generator/validation friction as the next concern rather than a schema change. The immediate engineering path is Composer v0.1 before larger translation benchmarks.
 
 ## Track C: Pictiq Signaling Game
 

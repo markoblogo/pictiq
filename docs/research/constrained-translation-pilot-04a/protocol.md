@@ -1,6 +1,6 @@
 # Constrained Translation Pilot Stress Test 04A Protocol
 
-> Status: executed pilot protocol
+> Status: CLOSED / ACCEPTED pilot protocol
 > Date: 2026-09-11
 > Boundary: no translator implementation, no vocabulary change, no grammar change, no renderer change, no RAG primary condition.
 
@@ -58,3 +58,7 @@ Verdict: `MESSAGE_SCHEMA_V0_1_SUFFICIENT_FOR_PILOT`.
 ## RAG baseline
 
 The RAG/TF-IDF baseline is deferred. The old prototype was not used in the primary condition and was not rebuilt in this pass.
+
+## Closure
+
+Human review accepted Stress Test 04A. Message Schema v0.1 was sufficient for the pilot, and no blocking schema, vocabulary, or grammar issue was found before Composer development. The immediate path is Composer v0.1 Interaction Spec, Composer v0.1 implementation, human-authoring stress test, then a public usable Pictiq surface.

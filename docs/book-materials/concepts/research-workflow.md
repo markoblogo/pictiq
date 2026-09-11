@@ -35,13 +35,15 @@ Prefer projects that advance both, but do not force immediate monetization when 
 1. Architecture & Vocabulary Audit / cleanup.
 2. Release from cleaned architecture.
 3. Shared Renderer / Generator layer.
-4. Small post-Renderer machine pilots if they expose renderer/message issues: constrained JSON generation, symbolic reconstruction, tiny signaling game.
-5. Composer.
-6. Public usable Pictiq site.
-7. Parallel post-Composer experiment program.
-8. Books, revised editions, and specialized publications.
+4. Stress Test 04A — CLOSED / ACCEPTED.
+5. Composer v0.1 Interaction Spec.
+6. Composer v0.1 implementation.
+7. Human-authoring stress test.
+8. Public usable Pictiq surface.
+9. Parallel post-Composer experiment program.
+10. Books, revised editions, and specialized publications.
 
-Specific ordering after Composer remains flexible.
+Specific ordering after Composer remains flexible. Larger machine-experiment tracks remain active but should not interrupt Composer v0.1 unless a future pilot exposes a blocking architecture issue.
 
 ## Parallel post-Composer experiment program
 

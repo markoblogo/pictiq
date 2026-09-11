@@ -18,6 +18,10 @@ Canonical Registry + Vocabulary Classification + Context Packs + Grammar / Compo
 
 -> Website / Browser translator / Books / Physical layouts / AI tools / Constrained-writing tools
 
+## Immediate path after Stress Test 04A
+
+Constrained Translation Pilot 04A is closed and accepted. The immediate path is Composer v0.1 Interaction Spec -> Composer v0.1 implementation -> human-authoring stress test -> public usable Pictiq surface. Composer should start from accepted Message Format, Shorthand, Renderer, registries, and validation behavior rather than from a new translator or RAG implementation.
+
 ## Possible API input
 
 - Ordered ordinary icon IDs.

@@ -1,6 +1,6 @@
 # Constrained Translation Pilot Stress Test 04A
 
-> Status: executed machine-facing pilot
+> Status: CLOSED / ACCEPTED machine-facing pilot
 > Date: 2026-09-11
 > Primary artifact: [`../../research/constrained-translation-pilot-04a/README.md`](../../research/constrained-translation-pilot-04a/README.md)
 
@@ -29,6 +29,12 @@ This preserves the architecture split introduced in v1.1.1:
 ## Book value
 
 This is useful book material because it shows a concrete difference between a visual protocol and an AI translator. A stable symbolic message format can be a good target even when a model sometimes produces invalid or over-specific messages. Failures become evidence about translation and generator design rather than evidence against the core protocol.
+
+## Closure
+
+Human review accepted the pilot. Message Schema v0.1 was sufficient for the pilot, and no blocking schema, vocabulary, or grammar issue was found before Composer development. The next major engineering step remains Composer v0.1, starting with the Composer v0.1 Interaction Spec.
+
+The methodological finding is that understanding a source message and successfully expressing that understanding through a constrained formal representation are different problems. In this small run, all tested source semantic slots appeared in raw model output, while only 24 of 32 survived into renderable normalized Pictiq outputs.
 
 ## Boundary
 
