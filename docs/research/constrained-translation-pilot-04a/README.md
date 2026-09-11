@@ -1,9 +1,15 @@
 # Constrained Translation Pilot Stress Test 04A
 
-> Status: pilot results / research artifact  
-> Date: 2026-09-11  
-> Provider/model: OpenAI / gpt-5.1-2025-11-13  
+> Status: CLOSED / ACCEPTED research artifact
+> Date: 2026-09-11
+> Provider/model: OpenAI / gpt-5.1-2025-11-13
 > Boundary: no RAG, no translator implementation, no Composer, no vocabulary/grammar/icon/schema/renderer change.
+
+## Human review closure
+
+Human review accepted the pilot as a conservative research result. Message Schema v0.1 was sufficient for the pilot. The pilot found no blocking schema, vocabulary, or grammar issue before Composer development.
+
+This finding does not claim that LLMs understand Pictiq, that Pictiq is complete, that RAG is unnecessary, or that 32/32 raw semantic-slot recovery generalizes beyond this 18-case, one-model, one-repeat corpus. Understanding a source message and successfully expressing that understanding through a constrained formal representation are different problems.
 
 ## Research question
 

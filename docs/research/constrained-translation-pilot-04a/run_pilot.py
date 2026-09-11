@@ -197,6 +197,8 @@ def main() -> int:
             "nested_validation": "not guaranteed by provider mode used; local validation required",
         },
         "replay_raw": REPLAY_RAW,
+        "human_review_status": "CLOSED / ACCEPTED",
+        "human_review_conclusion": "Message Schema v0.1 was sufficient for the pilot; no blocking schema, vocabulary, or grammar issue was found before Composer development.",
     }
     results = []
     for case in corpus:
@@ -292,10 +294,16 @@ def write_report(payload: dict[str, Any]) -> None:
         rows.append(f"| {r['case_id']} | {r['category']} | {'yes' if r['schema_valid'] else 'no'} | {'yes' if r['registry_valid'] else 'no'} | {'yes' if r['renderable'] else 'no'} | raw {r['raw_slot_recovery_count']}/{r['required_slot_count']}; rendered {r['slot_recovery_count']}/{r['required_slot_count']} | {', '.join(r['unjustified_concepts']) or '-'} | {', '.join(r['failure_classification'])} |")
     text = f"""# Constrained Translation Pilot Stress Test 04A
 
-> Status: pilot results / research artifact  
-> Date: {payload['metadata']['date']}  
-> Provider/model: {payload['metadata']['provider']} / {payload['results'][0]['model'] if payload['results'] else payload['metadata']['requested_model']}  
+> Status: CLOSED / ACCEPTED research artifact
+> Date: {payload['metadata']['date']}
+> Provider/model: {payload['metadata']['provider']} / {payload['results'][0]['model'] if payload['results'] else payload['metadata']['requested_model']}
 > Boundary: no RAG, no translator implementation, no Composer, no vocabulary/grammar/icon/schema/renderer change.
+
+## Human review closure
+
+Human review accepted the pilot as a conservative research result. Message Schema v0.1 was sufficient for the pilot. The pilot found no blocking schema, vocabulary, or grammar issue before Composer development.
+
+This finding does not claim that LLMs understand Pictiq, that Pictiq is complete, that RAG is unnecessary, or that 32/32 raw semantic-slot recovery generalizes beyond this 18-case, one-model, one-repeat corpus. Understanding a source message and successfully expressing that understanding through a constrained formal representation are different problems.
 
 ## Research question
 
