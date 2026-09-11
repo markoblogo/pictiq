@@ -259,7 +259,7 @@ Do not silently duplicate SVG composition logic in frontend code. Future impleme
 | C. Shared/generated rendering data plus minimal browser renderer | May reduce drift if geometry/registry data are generated from repository source. | Still needs browser rendering logic and parity tests. |
 | D. Pyodide/browser Python bridge | Keeps Python logic closer to source. | Heavy bundle and file-loading complexity; likely too large for a first compact Composer. |
 
-Smallest likely public path: a static Composer using repository JSON/SVG data and a browser-compatible renderer adapter, gated by parity tests against Renderer v0.1 before publication. This is a future implementation decision, not an implementation in this task.
+Technical Spike 01 validated the smallest likely public path: a static Composer can use a browser-compatible renderer adapter with generated canonical SVG/data assets, gated by parity tests against Python Renderer v0.1. The accepted architecture is `ACCEPT_WITH_GUARDRAILS`: the browser renderer may be a secondary implementation only when canonical data is generated from repository sources and parity tests remain part of validation.
 
 ## Renderer parity requirement
 

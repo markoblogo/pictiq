@@ -2,6 +2,37 @@
 
 Chronological notes reconstructed from repository evidence. Interpretive statements are marked as such; dates follow commit or release history when a separate event date is unavailable.
 
+
+## 2026-09-11 — Browser Renderer parity as a Composer prerequisite
+
+### Starting question
+
+Can Pictiq support a browser-side Renderer for Composer preview without turning browser JavaScript into a second drifting interpretation of the language?
+
+### What happened
+
+Technical Spike 01 implemented a minimal browser renderer candidate that accepts canonical normalized Pictiq Message JSON, consumes a generated manifest derived from canonical registries and SVG assets, and compares its output against Python Renderer v0.1. The parity corpus used ten accepted fixtures covering ordinary icons, water/question, alcohol/home/no, multi-frame layout, normalized legacy input, Numeric Notation `50`, token-local COLOR, Entity Symbols, road/wayfinding, and Odyssey narrative cases.
+
+### Evidence
+
+[Browser Renderer parity contract](../renderer/browser-renderer-parity.md), [machine-readable parity report](../research/renderer-parity-spike-01/browser-renderer-parity-report.json), [human-readable parity report](../research/renderer-parity-spike-01/browser-renderer-parity-report.md), and [visual QA sheet](../research/renderer-parity-spike-01/browser-renderer-parity-qa.svg).
+
+### Decision / outcome
+
+Verdict: **ACCEPT_WITH_GUARDRAILS**. A browser secondary renderer is viable for static Composer preview if it consumes generated canonical data and remains gated by parity tests against Python Renderer v0.1.
+
+### Why it matters
+
+Pictiq separates language semantics from implementation language. The Renderer behavior becomes a conformance target rather than a single-runtime lock-in.
+
+### Open questions
+
+Future Composer implementation still needs the shared normalization/validation boundary, asset-size strategy, and human UI testing. This spike did not implement Composer.
+
+### Possible future book use
+
+Use as an engineering case study for how a visual protocol becomes interoperable across runtimes without letting multiple implementations redefine semantics.
+
 ## 2026-08-26 — Handbook v1 as project entry point
 
 ### Starting question

@@ -1,0 +1,14 @@
+{
+  "frames": [
+    {
+      "tokens": [
+        {
+          "id": "action_conflict",
+          "type": "icon"
+        }
+      ]
+    }
+  ],
+  "pictiq": "1.1",
+  "schema": "0.1"
+}

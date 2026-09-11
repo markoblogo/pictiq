@@ -1,0 +1,18 @@
+{
+  "frames": [
+    {
+      "tokens": [
+        {
+          "id": "need_water",
+          "type": "icon"
+        },
+        {
+          "id": "punct_question",
+          "type": "icon"
+        }
+      ]
+    }
+  ],
+  "pictiq": "1.1",
+  "schema": "0.1"
+}

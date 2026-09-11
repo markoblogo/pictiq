@@ -1,0 +1,25 @@
+{
+  "contexts": [
+    "odyssey"
+  ],
+  "frames": [
+    {
+      "tokens": [
+        {
+          "id": "entity:poseidon@odyssey",
+          "type": "entity"
+        },
+        {
+          "id": "entity:odysseus@literary",
+          "type": "entity"
+        },
+        {
+          "id": "entity:polyphemus@odyssey",
+          "type": "entity"
+        }
+      ]
+    }
+  ],
+  "pictiq": "1.1",
+  "schema": "0.1"
+}

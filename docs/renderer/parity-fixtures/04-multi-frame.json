@@ -1,0 +1,30 @@
+{
+  "frames": [
+    {
+      "tokens": [
+        {
+          "id": "money_card",
+          "type": "icon"
+        },
+        {
+          "id": "logic_no",
+          "type": "icon"
+        }
+      ]
+    },
+    {
+      "tokens": [
+        {
+          "id": "money_coins",
+          "type": "icon"
+        },
+        {
+          "id": "logic_yes",
+          "type": "icon"
+        }
+      ]
+    }
+  ],
+  "pictiq": "1.1",
+  "schema": "0.1"
+}

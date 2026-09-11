@@ -1,0 +1,17 @@
+{
+  "frames": [
+    {
+      "tokens": [
+        {
+          "id": "nature_cloud",
+          "params": {
+            "color": "#555555"
+          },
+          "type": "icon"
+        }
+      ]
+    }
+  ],
+  "pictiq": "1.1",
+  "schema": "0.1"
+}

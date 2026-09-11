@@ -1,0 +1,69 @@
+{
+  "contexts": [
+    "odyssey"
+  ],
+  "frames": [
+    {
+      "tokens": [
+        {
+          "id": "entity:poseidon@odyssey",
+          "type": "entity"
+        },
+        {
+          "id": "power_energy",
+          "type": "icon"
+        },
+        {
+          "id": "entity:odysseus@literary",
+          "type": "entity"
+        }
+      ]
+    },
+    {
+      "tokens": [
+        {
+          "id": "entity:polyphemus@odyssey",
+          "type": "entity"
+        },
+        {
+          "id": "eye_look",
+          "type": "icon"
+        },
+        {
+          "id": "punct_exclaim",
+          "type": "icon"
+        }
+      ]
+    },
+    {
+      "tokens": [
+        {
+          "id": "entity:odysseus@literary",
+          "type": "entity"
+        },
+        {
+          "id": "move_watercraft",
+          "type": "icon"
+        },
+        {
+          "id": "surface_wavy",
+          "type": "icon"
+        }
+      ]
+    },
+    {
+      "tokens": [
+        {
+          "id": "nature_cloud",
+          "params": {
+            "color": "#555555"
+          },
+          "type": "icon"
+        }
+      ]
+    }
+  ],
+  "pictiq": "1.1",
+  "profile": "standalone",
+  "schema": "0.1"
+}

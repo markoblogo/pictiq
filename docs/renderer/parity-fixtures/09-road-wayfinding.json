@@ -1,0 +1,53 @@
+{
+  "contexts": [
+    "road-wayfinding-v0.1"
+  ],
+  "frames": [
+    {
+      "tokens": [
+        {
+          "id": "surface_wavy",
+          "type": "icon"
+        },
+        {
+          "id": "punct_exclaim",
+          "type": "icon"
+        }
+      ]
+    },
+    {
+      "tokens": [
+        {
+          "id": "rel_greater",
+          "type": "icon"
+        }
+      ]
+    },
+    {
+      "tokens": [
+        {
+          "id": "person_generic",
+          "type": "icon"
+        },
+        {
+          "id": "move_feet",
+          "type": "icon"
+        },
+        {
+          "id": "logic_no",
+          "type": "icon"
+        }
+      ]
+    },
+    {
+      "tokens": [
+        {
+          "type": "number",
+          "value": 50
+        }
+      ]
+    }
+  ],
+  "pictiq": "1.1",
+  "schema": "0.1"
+}

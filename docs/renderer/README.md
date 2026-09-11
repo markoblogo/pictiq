@@ -127,3 +127,9 @@ The first QA collection is generated from real renderer output in [`../../build/
 - `odyssey-narrative.svg`
 
 The fixtures live in [`../../examples/renderer/`](../../examples/renderer/).
+
+## Browser parity spike
+
+Technical Spike 01 tested a browser-side secondary renderer for future Composer preview. The parity contract is documented in [`browser-renderer-parity.md`](browser-renderer-parity.md). The browser candidate lives in [`browser-renderer.mjs`](browser-renderer.mjs) and consumes the generated canonical asset manifest [`generated/pictiq-browser-assets.mjs`](generated/pictiq-browser-assets.mjs).
+
+The spike verdict is `ACCEPT_WITH_GUARDRAILS`: browser rendering is viable under static GitHub Pages only when canonical data is generated from repository sources and automated parity tests compare it against Python Renderer v0.1. The spike does not implement Composer UI.
