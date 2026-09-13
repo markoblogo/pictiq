@@ -96,3 +96,44 @@ Pictiq may be integrated into:
 - a future Pictiq popular-science book.
 
 Pictiq does not need to be the primary subject in every product.
+
+## Current high-level tracks
+
+### Active / can proceed without human recruitment
+
+- Composer release.
+- Web/UI Stress Test.
+- Logistics / Maritime Stress Test.
+- Inspectable Action Receipt.
+- Cross-model AI tests when practical.
+- Publication milestones.
+- Book evidence and content mapping.
+
+### Opportunistic creative deployments
+
+- Children's picture book with secondary Pictiq layer.
+- LitRPG / comic Pictiq inserts.
+- Tourist / scenario products.
+- Gastronomic France.
+- Child cross-language communication aid.
+- Showbook / flipbook.
+
+Children's products are not primarily "Learn Pictiq." They are picture books where Pictiq may act as a secondary symbolic layer for thought, speech, action, desire, or dialogue. The research hypothesis remains IMAGE -> STRUCTURED SYMBOLS -> LATER CONVENTIONAL WRITING, without claiming proven literacy benefit.
+
+### Deferred human track
+
+- Stress Test 04B.
+- Pictiq Games / Human Communication Lab.
+- Formal comprehension studies.
+- Cross-cultural human tests.
+
+These deferred human tracks must not block active development.
+
+## Immediate active roadmap
+
+1. Close this planning pass.
+2. Publish pending research docs if appropriate.
+3. Release Composer v0.1.
+4. Run Web/UI Stress Test.
+5. Continue non-human, domain, and machine work.
+6. Return to human/game tracks when practical.

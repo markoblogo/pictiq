@@ -59,9 +59,11 @@ Includes content freeze, claims verification, manuscript, technical review, publ
 3. Composer release decision, informed by 04B if available but not automatically blocked by it.
 4. Deployment/product pilots where Pictiq is a secondary communication layer.
 5. Cross-model and domain stress tests.
-6. Stress Test 05 — Zero-Training Visual Comprehension & Cross-Model Signaling.
-7. Publication milestones and public artifacts when evidence is strong enough.
-8. Books, revised editions, and specialized publications.
+6. Web/UI, logistics/maritime, inspectable-action, and other non-human/domain work.
+7. Stress Test 05 — Zero-Training Visual Comprehension & Cross-Model Signaling.
+8. Publication milestones and public artifacts when evidence is strong enough.
+9. Human/game tracks, including Stress Test 04B and Pictiq Games, when time, participants, and venue exist.
+10. Books, revised editions, and specialized publications.
 
 Specific ordering after Composer remains flexible. Formal human studies are targeted evidence rather than the default development gate. They should not block deployment products, machine experiments, domain stress tests, or book work unless a concrete claim genuinely depends on them.
 
@@ -81,6 +83,7 @@ After Composer exists, several tracks can run in parallel rather than in a rigid
 - Industrial instructions.
 - Kids/Narrative.
 - Physical Embodied experiments.
+- Pictiq Games / Human Communication Lab.
 
 Suggested priority logic: prefer cheap experiments that use the same tooling; experiments that test fundamentally different language properties; experiments with strong book/publication value; and experiments that expose vocabulary or grammar pressure. Pictiq Poetry qualifies because it tests expressivity under ambiguity and formal constraint, nearly the opposite pressure from road signs and procedural wayfinding.
 

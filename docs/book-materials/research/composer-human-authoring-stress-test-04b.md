@@ -72,3 +72,9 @@ Stress Test 04B is still **not run**. The experiment kit is ready and may be use
 The first reproducible 04B experiment kit is prepared at [`../../research/composer-human-authoring-04b/README.md`](../../research/composer-human-authoring-04b/README.md). It fixes the initial pilot at one unscored training task, eight scored tasks, a participant script, experimenter guide, observer sheet, semantic targets, debrief questions, and a machine-readable results template.
 
 The kit contains no participant data. Stress Test 04B remains **NOT RUN** until real participants use Composer. Current roadmap interpretation: **READY / NON-BLOCKING / RUN WHEN OPPORTUNITY EXISTS**.
+
+## Relation to game-based human communication sessions
+
+Pictiq Games / Human Communication Lab is a separate deferred track. 04B tests whether people can author valid Pictiq messages in Composer. Game sessions would test communication behavior: pointing, selecting, combining, gesture, interpretation, repair, repeat play, and emergent conventions.
+
+Game sessions may eventually provide more naturalistic and higher-volume human communication observations, but they do not replace this Composer usability plan. Both remain non-blocking and should run when practical opportunities exist.

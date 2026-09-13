@@ -3,6 +3,37 @@
 Chronological notes reconstructed from repository evidence. Interpretive statements are marked as such; dates follow commit or release history when a separate event date is unavailable.
 
 
+## 2026-09-13 — Pictiq Games / Human Communication Lab planning
+
+### Starting question
+
+How can Pictiq preserve game-based human communication research as a high-value future track without making human recruitment a blocker for active development?
+
+### What happened
+
+A deferred Pictiq Games / Human Communication Lab track was documented. The pass framed three prototype families: an open vocabulary communication board, embodied Pictiq / Crocodile, and constrained-hand communication under vocabulary scarcity. It also recorded semantic-slot scoring, emergent-convention observation, physical-first prototyping, digital-later options, commercial-product boundaries, and the relationship to Stress Test 04B.
+
+### Evidence
+
+[Pictiq Games / Human Communication Lab](research/pictiq-games-human-communication-lab.md), [Deployment Roadmap](planning/deployment-roadmap.md), [Publication Milestones](planning/publication-milestones.md), and [Stress Test 04B plan](research/composer-human-authoring-stress-test-04b.md).
+
+### Decision / outcome
+
+The track is **DEFERRED / NON-BLOCKING / PLANNED**. It is planning/book material only. No game, printable deck, digital game, vocabulary, context pack, grammar, Message Schema, Renderer behavior, Composer behavior, icon, tag, release, human session, or AI experiment was created.
+
+### Why it matters
+
+Games can test zero-training entry, semantic compression, repair, embodied communication, and emergent conventions in a naturalistic way. They may also become a commercial product if a mechanic proves enjoyable, but commercialization remains optional and evidence-dependent.
+
+### Open questions
+
+Which physical prototype should be tried first, what target corpus should be used, and what minimum session evidence is enough to justify repeat-play or digital exploration?
+
+### Possible future book use
+
+Use as a chapter or essay seed about communication as play: constraint, improvisation, emergent conventions, and when a research instrument becomes a game.
+
+
 ## 2026-09-11 — Research Foundations Batch 03: evidence program, icon design, kids, entities, constrained writing
 
 ### Starting question
