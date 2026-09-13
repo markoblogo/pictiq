@@ -6,6 +6,16 @@ This project uses milestone-style tags. The `-infra` suffix indicates a pre-icon
 
 ## Unreleased
 
+## v1.2.0 — 2026-09-13
+
+### Composer v0.1
+- Released Composer v0.1 as the first public human authoring surface for Pictiq.
+- Composer supports Palette -> Workspace -> Browser Renderer preview -> JSON / `.pictiq` / SVG export.
+- Includes direct manipulation of tiles and Frames, profile/context filtering, Entity Symbols, numeric `50`, token-local COLOR controls, and legacy normalization.
+- Keeps Browser/Python Renderer parity as the preview/export guardrail and runs as a static GitHub Pages app with no AI/LLM dependency.
+- Creator/software acceptance is PASSED. Stress Test 04B remains READY / NON-BLOCKING / NOT RUN. Zero-training entry remains a design objective and unproven hypothesis.
+- No vocabulary, grammar, Message Schema semantics, Renderer semantics, canonical icon geometry, context pack, profile, Entity Symbol, or numeric notation semantic changes are included in this release.
+
 ### Renderer
 - Implemented Pictiq Renderer v0.1 for canonical JSON and Shorthand v0.1 inputs, including registry-aware validation, legacy ID normalization, scoped Entity Symbol resolution, numeric `50` rendering, COLOR parameter rendering, deterministic flat SVG layout, CLI/API entry points, real-case fixtures, tests, and renderer QA outputs. No grammar, vocabulary, profile, pack, icon, Entity Symbol, tag, or release changes are included.
 

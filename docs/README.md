@@ -38,4 +38,4 @@ The UI exposes only locales shipped in `docs/lexicon/i18n/` (`en`, `es`, `fr`). 
 
 ## Composer
 
-The static Composer v0.1 candidate is available at [`composer/`](composer/). It is a human authoring surface for Message v0.1 and uses the browser Renderer for preview/export.
+The released Composer v0.1 static app is available at [`composer/`](composer/). It is a human authoring surface for Message v0.1 and uses the browser Renderer for preview/export.

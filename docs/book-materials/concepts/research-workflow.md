@@ -54,9 +54,9 @@ Includes content freeze, claims verification, manuscript, technical review, publ
 
 ## Current broad sequence
 
-1. Composer v0.1 creator acceptance — PASSED.
-2. Stress Test 04B — READY / NON-BLOCKING / RUN WHEN OPPORTUNITY EXISTS.
-3. Composer release decision, informed by 04B if available but not automatically blocked by it.
+1. Composer v0.1 — RELEASED. Creator/software acceptance: PASSED.
+2. Stress Test 04B — READY / NON-BLOCKING / NOT RUN / RUN WHEN OPPORTUNITY EXISTS.
+3. Composer milestone publication.
 4. Deployment/product pilots where Pictiq is a secondary communication layer.
 5. Cross-model and domain stress tests.
 6. Web/UI, logistics/maritime, inspectable-action, and other non-human/domain work.

@@ -3,6 +3,37 @@
 Chronological notes reconstructed from repository evidence. Interpretive statements are marked as such; dates follow commit or release history when a separate event date is unavailable.
 
 
+## 2026-09-13 — Composer v0.1 release
+
+### Starting question
+
+Can Composer v0.1 be marked as a formal public release while preserving the distinction between creator/software acceptance and unrun external human usability research?
+
+### What happened
+
+Composer v0.1 was prepared as release `v1.2.0`: the first public human authoring surface for Pictiq. Release status documentation now distinguishes Composer release, creator acceptance, pending Stress Test 04B, and the zero-training hypothesis.
+
+### Evidence
+
+[Composer v0.1 release note](../../releases/v1.2.0.md), [Composer architecture note](concepts/composer-v0.1-architecture.md), [Publication Milestones](planning/publication-milestones.md), and [Deployment Roadmap](planning/deployment-roadmap.md).
+
+### Decision / outcome
+
+Composer v0.1 is **RELEASED** as a public authoring tool after validation and publication. Creator/software acceptance is **PASSED**. Stress Test 04B remains **READY / NON-BLOCKING / NOT RUN**. No external-user usability, cross-cultural comprehension, or zero-training proof is claimed.
+
+### Why it matters
+
+Pictiq is no longer only a protocol, renderer, and examples. It now has a public writing surface: Palette -> Workspace -> Preview -> Export.
+
+### Open questions
+
+The next editorial task is to prepare the Composer milestone publication. The next research/product tasks remain Web/UI Stress Test, non-human/domain/machine research, opportunistic deployments, and later human/game tracks when practical.
+
+### Possible future book use
+
+Use as the transition point from visual protocol to usable writing instrument: a visual language becomes more interesting when someone can actually write in it.
+
+
 ## 2026-09-13 — Pictiq Games / Human Communication Lab planning
 
 ### Starting question

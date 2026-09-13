@@ -101,7 +101,7 @@ Pictiq does not need to be the primary subject in every product.
 
 ### Active / can proceed without human recruitment
 
-- Composer release.
+- Composer v0.1 release — RELEASED.
 - Web/UI Stress Test.
 - Logistics / Maritime Stress Test.
 - Inspectable Action Receipt.
@@ -131,9 +131,9 @@ These deferred human tracks must not block active development.
 
 ## Immediate active roadmap
 
-1. Close this planning pass.
-2. Publish pending research docs if appropriate.
-3. Release Composer v0.1.
-4. Run Web/UI Stress Test.
-5. Continue non-human, domain, and machine work.
-6. Return to human/game tracks when practical.
+1. Composer v0.1 — RELEASED.
+2. Prepare Composer milestone publication.
+3. Run Web/UI Stress Test.
+4. Continue non-human, domain, and machine work.
+5. Pursue opportunistic deployments.
+6. Return to 04B, games, and formal human tracks when practical.

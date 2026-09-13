@@ -49,7 +49,7 @@ If yes, record:
 | Odyssey Stress Test | What happens when Homer is translated into a tiny visual language? | Public post, book material, figures. | Candidate. |
 | Message / Renderer | How a collection of pictograms became a machine-readable protocol. | Technical post, repo artifact, book architecture chapter. | Candidate. |
 | Stress Test 04A | An AI understood the source semantics better than it could express them through a constrained visual protocol. Preserve exact limitations. | Research post, book material. | Candidate. |
-| Composer v0.1 | Pictiq can now be written without touching JSON or GitHub. | Demo post, screenshots, project-site note. | Candidate after 04B/decision. |
+| Composer v0.1 | A visual language becomes much more interesting when you can actually write in it. | Demo post, screenshots, project-site note, book material. | Completed publication milestone; editorial publication remains a separate next task. |
 | Browser Renderer parity | One visual protocol, two rendering runtimes, one conformance contract. | Technical post, repo artifact. | Candidate. |
 | Pictiq Games / Human Communication Lab | We turned a visual language into a game to see whether people could communicate without learning it. | Article, session report, figures, book material. | Future candidate after playable prototype, first real session, surprising behavior, repeat-play evidence, or commercial prototype. |
 | Stress Test 05 | Can AI read a visual language it has never seen before? | Medium/Substack article, technical appendix, book material, figures. | Likely milestone when run. |

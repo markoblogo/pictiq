@@ -49,3 +49,7 @@ Composer v0.1 creator acceptance: **PASSED**. Acceptance followed the initial im
 The accepted creator-facing state includes the static Composer route, canonical repository data loading, Browser Renderer preview/export, Browser/Python Renderer parity guardrails, direct-manipulation Message Workspace, compact Palette, compact desktop header, visual COLOR controls, number `50`, Entity Symbols, import/export, and local Undo/Redo.
 
 This is **CREATOR / SOFTWARE ACCEPTANCE** only. It does not claim external-user usability validation. **Stress Test 04B — Human Authoring / Composer Usability remains NOT RUN.** Composer is ready for 04B experiment-kit preparation, not a formal Composer release.
+
+## Release status
+
+Pictiq Composer v0.1 is **RELEASED** in `v1.2.0`. Creator/software acceptance remains **PASSED**. Stress Test 04B remains **READY / NON-BLOCKING / NOT RUN**. Zero-training entry remains a design objective and unproven hypothesis, not a proven usability or comprehension result.
