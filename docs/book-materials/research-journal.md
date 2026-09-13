@@ -3,6 +3,41 @@
 Chronological notes reconstructed from repository evidence. Interpretive statements are marked as such; dates follow commit or release history when a separate event date is unavailable.
 
 
+## 2026-09-13 — Composer publication closure and Web/UI stress test
+
+### Starting question
+
+Can the Composer v0.1 publication milestone be closed, and what does a current-vocabulary Web/UI stress test reveal without adding new concepts?
+
+### What happened
+
+The Composer milestone publication was recorded as published on Medium and Substack under the title **Pictiq Can Now Be Written, Not Just Viewed**. The related release is `v1.2.0`, with Composer public at https://markoblogo.github.io/pictiq/composer/. LinkedIn remains optional, not a blocker.
+
+A 24-case Web/UI stress test was then run against current Pictiq. The corpus was frozen before encoding and covered navigation, state/status, actions, access/system, and content/communication. Twenty-one cases produced current-Pictiq Message JSON and Renderer SVG output; three remained true gaps.
+
+### Evidence
+
+Composer publication links: Medium https://abvcreative.medium.com/pictiq-can-now-be-written-not-just-viewed-bea970f09f00 and Substack https://abvx.substack.com/p/pictiq-can-now-be-written-not-just. Web/UI artifacts: [report](../research/web-ui-stress-test-2026-09/README.md), [machine-readable results](../research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json), and [visual QA sheet](../research/web-ui-stress-test-2026-09/web-ui-stress-test-qa.svg).
+
+### Decision / outcome
+
+Composer publication milestone: **PUBLISHED** on Medium and Substack.
+
+Web/UI stress test verdict: useful pressure, not a proposal to implement a Web/UI context pack yet. The result is `PUBLICATION_MILESTONE_CANDIDATE` with the possible angle **Can 83 Visual Symbols Describe a Modern Software Interface?**
+
+### Why it matters
+
+The Web/UI test distinguishes failure to copy a conventional software glyph from failure to express semantic intent. Current Pictiq handles some UI meanings as direct or contextual compositions, but digital process, persistence, archive, permission, and abstract configuration concepts create real pressure.
+
+### Open questions
+
+Which pressures deserve context-pack candidates rather than Core additions? Should Web/UI be tested next through a real interface screen, an Action Receipt, or a larger corpus with human interpretation?
+
+### Possible future book use
+
+Use this as a chapter section on visual language under software-interface pressure: when a glyph is a learned convention, when a semantic primitive is missing, and why short expressions can be more dangerous than long ones when they are overloaded.
+
+
 ## 2026-09-13 — Composer v0.1 release
 
 ### Starting question

@@ -1,0 +1,1052 @@
+{
+  "title": "Web/UI Pictiq Stress Test 2026-09",
+  "status": "CLOSED_LOCAL_RESULTS_FOR_REVIEW",
+  "pictiq_release": "v1.2.0",
+  "message_schema": "0.1",
+  "ordinary_canonical_count": 83,
+  "entity_symbol_count": 11,
+  "method": "Frozen 24-case Web/UI semantic corpus encoded with current Pictiq only; no vocabulary, grammar, schema, icon, renderer, Composer, or context-pack changes.",
+  "publication_milestone_verdict": "PUBLICATION_MILESTONE_CANDIDATE",
+  "suggested_editorial_angle": "Can 83 Visual Symbols Describe a Modern Software Interface?",
+  "cases": [
+    {
+      "case_id": "WEBUI-01",
+      "category": "NAVIGATION",
+      "source_intent": "Back to previous screen or step",
+      "minimal_semantic_target": "Return to prior step/history",
+      "required_slots": [
+        "PREVIOUS_OR_BACK",
+        "NAVIGATION"
+      ],
+      "optional_information": [
+        "whether browser history or workflow step"
+      ],
+      "relevant_context": "Header/back-control context",
+      "pictiq_representation": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_lesser"
+              }
+            ]
+          }
+        ]
+      },
+      "pictiq_shorthand": "rel_lesser",
+      "token_count": 1,
+      "frame_count": 1,
+      "contextual_dependency": "Header/back-control context",
+      "compression_classification": "CONTEXT-SUFFICIENT",
+      "practical_outcome": "WORKS_ONLY_WITH_STRONG_CONTEXT",
+      "zero_training_observation": "LEARNED_CONVENTION_LIKELY_REQUIRED",
+      "gap_status": "UI_SPECIFIC_CONVENTION",
+      "pressure_notes": "direction/navigation ambiguity",
+      "analysis_notes": "Uses left/lesser relation as current best approximation; lacks explicit history/return.",
+      "message_file": "messages/WEBUI-01.json",
+      "rendered_svg": "rendered/WEBUI-01.svg"
+    },
+    {
+      "case_id": "WEBUI-02",
+      "category": "NAVIGATION",
+      "source_intent": "Forward / next step",
+      "minimal_semantic_target": "Move to next step or forward history",
+      "required_slots": [
+        "NEXT_OR_FORWARD",
+        "NAVIGATION"
+      ],
+      "optional_information": [
+        "submit vs carousel vs browser history"
+      ],
+      "relevant_context": "Wizard/header context",
+      "pictiq_representation": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_greater"
+              }
+            ]
+          }
+        ]
+      },
+      "pictiq_shorthand": "rel_greater",
+      "token_count": 1,
+      "frame_count": 1,
+      "contextual_dependency": "Wizard/header context",
+      "compression_classification": "CONTEXT-SUFFICIENT",
+      "practical_outcome": "WORKS_ONLY_WITH_STRONG_CONTEXT",
+      "zero_training_observation": "LEARNED_CONVENTION_LIKELY_REQUIRED",
+      "gap_status": "UI_SPECIFIC_CONVENTION",
+      "pressure_notes": "direction/navigation ambiguity",
+      "analysis_notes": "Right/greater works as directional cue but not as explicit workflow-next.",
+      "message_file": "messages/WEBUI-02.json",
+      "rendered_svg": "rendered/WEBUI-02.svg"
+    },
+    {
+      "case_id": "WEBUI-03",
+      "category": "NAVIGATION",
+      "source_intent": "Home/start/dashboard",
+      "minimal_semantic_target": "Go to main/home screen",
+      "required_slots": [
+        "MAIN_DESTINATION"
+      ],
+      "optional_information": [
+        "physical home vs app start vs dashboard"
+      ],
+      "relevant_context": "App navigation bar",
+      "pictiq_representation": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "place_home"
+              }
+            ]
+          }
+        ]
+      },
+      "pictiq_shorthand": "place_home",
+      "token_count": 1,
+      "frame_count": 1,
+      "contextual_dependency": "App navigation bar",
+      "compression_classification": "LOSSY",
+      "practical_outcome": "AMBIGUOUS",
+      "zero_training_observation": "CONTEXT_DEPENDENT",
+      "gap_status": "CONTEXTUAL_PRESSURE",
+      "pressure_notes": "home physical vs UI-start",
+      "analysis_notes": "Existing HOME is broad and context can recover app-start, but without UI context it reads as shelter/home.",
+      "message_file": "messages/WEBUI-03.json",
+      "rendered_svg": "rendered/WEBUI-03.svg"
+    },
+    {
+      "case_id": "WEBUI-04",
+      "category": "NAVIGATION",
+      "source_intent": "Close/cancel dialog",
+      "minimal_semantic_target": "Dismiss current surface without accepting",
+      "required_slots": [
+        "DISMISS_OR_CANCEL",
+        "CURRENT_SURFACE"
+      ],
+      "optional_information": [
+        "whether changes are discarded"
+      ],
+      "relevant_context": "Dialog/modal context",
+      "pictiq_representation": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "logic_no"
+              }
+            ]
+          }
+        ]
+      },
+      "pictiq_shorthand": "logic_no",
+      "token_count": 1,
+      "frame_count": 1,
+      "contextual_dependency": "Dialog/modal context",
+      "compression_classification": "LOSSY",
+      "practical_outcome": "AMBIGUOUS",
+      "zero_training_observation": "CONTEXT_DEPENDENT",
+      "gap_status": "CONTEXTUAL_PRESSURE",
+      "pressure_notes": "cancel vs no vs denied",
+      "analysis_notes": "NO can express refusal/cancel only with strong UI context; close/dismiss is not explicit.",
+      "message_file": "messages/WEBUI-04.json",
+      "rendered_svg": "rendered/WEBUI-04.svg"
+    },
+    {
+      "case_id": "WEBUI-05",
+      "category": "STATE",
+      "source_intent": "Selected item",
+      "minimal_semantic_target": "This option is selected",
+      "required_slots": [
+        "THIS_OPTION",
+        "SELECTED"
+      ],
+      "optional_information": [
+        "one vs many selection"
+      ],
+      "relevant_context": "Choice list context",
+      "pictiq_representation": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_here"
+              },
+              {
+                "type": "icon",
+                "id": "logic_yes"
+              }
+            ]
+          }
+        ]
+      },
+      "pictiq_shorthand": "rel_here logic_yes",
+      "token_count": 2,
+      "frame_count": 1,
+      "contextual_dependency": "Choice list context",
+      "compression_classification": "PRESERVED_BY_COMPOSITION",
+      "practical_outcome": "WORKS_WITH_COMPOSITION",
+      "zero_training_observation": "CONTEXT_DEPENDENT",
+      "gap_status": "COMPOSITIONALLY_EXPRESSIBLE",
+      "pressure_notes": "selection state",
+      "analysis_notes": "HERE + YES can mark current selected item but selection requires UI location.",
+      "message_file": "messages/WEBUI-05.json",
+      "rendered_svg": "rendered/WEBUI-05.svg"
+    },
+    {
+      "case_id": "WEBUI-06",
+      "category": "STATE",
+      "source_intent": "Active/current page",
+      "minimal_semantic_target": "Current page or active tab",
+      "required_slots": [
+        "CURRENT_LOCATION",
+        "ACTIVE_STATE"
+      ],
+      "optional_information": [
+        "focus vs selected vs active"
+      ],
+      "relevant_context": "Navigation tab context",
+      "pictiq_representation": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_here"
+              }
+            ]
+          }
+        ]
+      },
+      "pictiq_shorthand": "rel_here",
+      "token_count": 1,
+      "frame_count": 1,
+      "contextual_dependency": "Navigation tab context",
+      "compression_classification": "PRESERVED_EXPLICITLY",
+      "practical_outcome": "WORKS_AS_IS",
+      "zero_training_observation": "LIKELY_TRANSPARENT",
+      "gap_status": "COMPOSITIONALLY_EXPRESSIBLE",
+      "pressure_notes": "current state",
+      "analysis_notes": "rel_here is a strong current-location marker in UI context.",
+      "message_file": "messages/WEBUI-06.json",
+      "rendered_svg": "rendered/WEBUI-06.svg"
+    },
+    {
+      "case_id": "WEBUI-07",
+      "category": "STATE",
+      "source_intent": "Disabled control",
+      "minimal_semantic_target": "Control cannot be used now",
+      "required_slots": [
+        "CANNOT_USE",
+        "CONTROL"
+      ],
+      "optional_information": [
+        "reason for disabled state"
+      ],
+      "relevant_context": "Button/control context",
+      "pictiq_representation": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "logic_no"
+              }
+            ]
+          }
+        ]
+      },
+      "pictiq_shorthand": "logic_no",
+      "token_count": 1,
+      "frame_count": 1,
+      "contextual_dependency": "Button/control context",
+      "compression_classification": "LOSSY",
+      "practical_outcome": "WORKS_ONLY_WITH_STRONG_CONTEXT",
+      "zero_training_observation": "CONTEXT_DEPENDENT",
+      "gap_status": "CONTEXTUAL_PRESSURE",
+      "pressure_notes": "disabled vs permission denied vs unavailable",
+      "analysis_notes": "NO marks non-availability but cannot distinguish disabled from denial, outage, missing input, or policy.",
+      "message_file": "messages/WEBUI-07.json",
+      "rendered_svg": "rendered/WEBUI-07.svg"
+    },
+    {
+      "case_id": "WEBUI-08",
+      "category": "STATE",
+      "source_intent": "Loading / processing",
+      "minimal_semantic_target": "System is working; wait",
+      "required_slots": [
+        "PROCESSING",
+        "WAIT"
+      ],
+      "optional_information": [
+        "progress amount",
+        "cancel availability"
+      ],
+      "relevant_context": "Loading indicator context",
+      "pictiq_representation": null,
+      "pictiq_shorthand": null,
+      "token_count": 0,
+      "frame_count": 0,
+      "contextual_dependency": "Loading indicator context",
+      "compression_classification": "GAP",
+      "practical_outcome": "GAP",
+      "zero_training_observation": "UNCLEAR",
+      "gap_status": "GAP",
+      "pressure_notes": "process/wait state",
+      "analysis_notes": "Current vocabulary lacks wait/loading/process/progress. time alone would be misleading.",
+      "message_file": null,
+      "rendered_svg": null
+    },
+    {
+      "case_id": "WEBUI-09",
+      "category": "STATE",
+      "source_intent": "Empty state / no content",
+      "minimal_semantic_target": "There is no item/result/content here",
+      "required_slots": [
+        "NONE_OR_EMPTY",
+        "CONTENT_SCOPE"
+      ],
+      "optional_information": [
+        "whether no results, no permission, or first use"
+      ],
+      "relevant_context": "Blank state or list context",
+      "pictiq_representation": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "qty_minus"
+              }
+            ]
+          }
+        ]
+      },
+      "pictiq_shorthand": "qty_minus",
+      "token_count": 1,
+      "frame_count": 1,
+      "contextual_dependency": "Blank state or list context",
+      "compression_classification": "LOSSY",
+      "practical_outcome": "POOR_FIT",
+      "zero_training_observation": "UNCLEAR",
+      "gap_status": "CONTEXTUAL_PRESSURE",
+      "pressure_notes": "none/empty state",
+      "analysis_notes": "Minus/less can suggest absence but does not clearly mean empty content.",
+      "message_file": "messages/WEBUI-09.json",
+      "rendered_svg": "rendered/WEBUI-09.svg"
+    },
+    {
+      "case_id": "WEBUI-10",
+      "category": "STATE",
+      "source_intent": "Success/completed",
+      "minimal_semantic_target": "Operation succeeded",
+      "required_slots": [
+        "SUCCESS_OR_DONE"
+      ],
+      "optional_information": [
+        "what succeeded"
+      ],
+      "relevant_context": "Toast/result context",
+      "pictiq_representation": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "logic_yes"
+              },
+              {
+                "type": "icon",
+                "id": "qual_good"
+              }
+            ]
+          }
+        ]
+      },
+      "pictiq_shorthand": "logic_yes qual_good",
+      "token_count": 2,
+      "frame_count": 1,
+      "contextual_dependency": "Toast/result context",
+      "compression_classification": "PRESERVED_BY_COMPOSITION",
+      "practical_outcome": "WORKS_WITH_COMPOSITION",
+      "zero_training_observation": "LIKELY_TRANSPARENT",
+      "gap_status": "COMPOSITIONALLY_EXPRESSIBLE",
+      "pressure_notes": "success vs selected yes",
+      "analysis_notes": "YES + GOOD gives positive completion but needs context for operation scope.",
+      "message_file": "messages/WEBUI-10.json",
+      "rendered_svg": "rendered/WEBUI-10.svg"
+    },
+    {
+      "case_id": "WEBUI-11",
+      "category": "STATE",
+      "source_intent": "Error/failure",
+      "minimal_semantic_target": "Something failed or is bad and needs attention",
+      "required_slots": [
+        "FAILURE_OR_ERROR",
+        "ATTENTION"
+      ],
+      "optional_information": [
+        "cause",
+        "repair action"
+      ],
+      "relevant_context": "Error state context",
+      "pictiq_representation": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "qual_bad"
+              },
+              {
+                "type": "icon",
+                "id": "punct_exclaim"
+              }
+            ]
+          }
+        ]
+      },
+      "pictiq_shorthand": "qual_bad punct_exclaim",
+      "token_count": 2,
+      "frame_count": 1,
+      "contextual_dependency": "Error state context",
+      "compression_classification": "PRESERVED_BY_COMPOSITION",
+      "practical_outcome": "WORKS_WITH_COMPOSITION",
+      "zero_training_observation": "LIKELY_TRANSPARENT",
+      "gap_status": "COMPOSITIONALLY_EXPRESSIBLE",
+      "pressure_notes": "error cause missing",
+      "analysis_notes": "Bad + urgent marks problem, but not machine error type.",
+      "message_file": "messages/WEBUI-11.json",
+      "rendered_svg": "rendered/WEBUI-11.svg"
+    },
+    {
+      "case_id": "WEBUI-12",
+      "category": "ACTION",
+      "source_intent": "Save changes",
+      "minimal_semantic_target": "Preserve current work/data",
+      "required_slots": [
+        "PERSIST_OR_KEEP",
+        "CURRENT_WORK"
+      ],
+      "optional_information": [
+        "local save vs cloud sync vs autosave"
+      ],
+      "relevant_context": "Editor/form context",
+      "pictiq_representation": null,
+      "pictiq_shorthand": null,
+      "token_count": 0,
+      "frame_count": 0,
+      "contextual_dependency": "Editor/form context",
+      "compression_classification": "GAP",
+      "practical_outcome": "GAP",
+      "zero_training_observation": "UNCLEAR",
+      "gap_status": "GAP",
+      "pressure_notes": "persistence/storage action",
+      "analysis_notes": "No current primitive for save/keep/record/storage; checkmark would overstate completion.",
+      "message_file": null,
+      "rendered_svg": null
+    },
+    {
+      "case_id": "WEBUI-13",
+      "category": "ACTION",
+      "source_intent": "Publish/send message",
+      "minimal_semantic_target": "Transmit or publish current content",
+      "required_slots": [
+        "SEND_OR_PUBLISH",
+        "CONTENT"
+      ],
+      "optional_information": [
+        "private send vs public publish"
+      ],
+      "relevant_context": "Composer/editor context",
+      "pictiq_representation": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "media_text"
+              },
+              {
+                "type": "icon",
+                "id": "comm_speak"
+              }
+            ]
+          }
+        ]
+      },
+      "pictiq_shorthand": "media_text comm_speak",
+      "token_count": 2,
+      "frame_count": 1,
+      "contextual_dependency": "Composer/editor context",
+      "compression_classification": "LOSSY",
+      "practical_outcome": "AMBIGUOUS",
+      "zero_training_observation": "CONTEXT_DEPENDENT",
+      "gap_status": "CONTEXTUAL_PRESSURE",
+      "pressure_notes": "send vs publish vs speak",
+      "analysis_notes": "Text + speak/communication can imply communicative content but not the action of sending/publishing.",
+      "message_file": "messages/WEBUI-13.json",
+      "rendered_svg": "rendered/WEBUI-13.svg"
+    },
+    {
+      "case_id": "WEBUI-14",
+      "category": "ACTION",
+      "source_intent": "Delete item",
+      "minimal_semantic_target": "Remove item, possibly destructive",
+      "required_slots": [
+        "REMOVE",
+        "ITEM"
+      ],
+      "optional_information": [
+        "permanent vs reversible",
+        "which item"
+      ],
+      "relevant_context": "Item/action menu context",
+      "pictiq_representation": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "logic_no"
+              },
+              {
+                "type": "icon",
+                "id": "state_dead"
+              }
+            ]
+          }
+        ]
+      },
+      "pictiq_shorthand": "logic_no state_dead",
+      "token_count": 2,
+      "frame_count": 1,
+      "contextual_dependency": "Item/action menu context",
+      "compression_classification": "PRESERVED_BY_COMPOSITION",
+      "practical_outcome": "WORKS_WITH_COMPOSITION",
+      "zero_training_observation": "CONTEXT_DEPENDENT",
+      "gap_status": "CONTEXTUAL_PRESSURE",
+      "pressure_notes": "delete vs archive vs close",
+      "analysis_notes": "NO + DEAD can signal removal/destruction but is strong and context-dependent.",
+      "message_file": "messages/WEBUI-14.json",
+      "rendered_svg": "rendered/WEBUI-14.svg"
+    },
+    {
+      "case_id": "WEBUI-15",
+      "category": "ACTION",
+      "source_intent": "Archive item",
+      "minimal_semantic_target": "Move item out of active view but retain it",
+      "required_slots": [
+        "REMOVE_FROM_ACTIVE_VIEW",
+        "RETAIN"
+      ],
+      "optional_information": [
+        "where archived",
+        "restore path"
+      ],
+      "relevant_context": "Mail/task/list context",
+      "pictiq_representation": null,
+      "pictiq_shorthand": null,
+      "token_count": 0,
+      "frame_count": 0,
+      "contextual_dependency": "Mail/task/list context",
+      "compression_classification": "GAP",
+      "practical_outcome": "GAP",
+      "zero_training_observation": "UNCLEAR",
+      "gap_status": "GAP",
+      "pressure_notes": "archive/retain hidden state",
+      "analysis_notes": "Current vocabulary cannot preserve remove-from-view + keep distinction.",
+      "message_file": null,
+      "rendered_svg": null
+    },
+    {
+      "case_id": "WEBUI-16",
+      "category": "ACTION",
+      "source_intent": "Edit content",
+      "minimal_semantic_target": "Modify existing content",
+      "required_slots": [
+        "CHANGE_OR_MODIFY",
+        "CONTENT"
+      ],
+      "optional_information": [
+        "which field",
+        "permission"
+      ],
+      "relevant_context": "Text/image editor context",
+      "pictiq_representation": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "media_text"
+              },
+              {
+                "type": "icon",
+                "id": "service_tools"
+              }
+            ]
+          }
+        ]
+      },
+      "pictiq_shorthand": "media_text service_tools",
+      "token_count": 2,
+      "frame_count": 1,
+      "contextual_dependency": "Text/image editor context",
+      "compression_classification": "LOSSY",
+      "practical_outcome": "POOR_FIT",
+      "zero_training_observation": "CONTEXT_DEPENDENT",
+      "gap_status": "CONTEXTUAL_PRESSURE",
+      "pressure_notes": "edit/change action",
+      "analysis_notes": "Text + tools suggests work on text but does not clearly mean edit.",
+      "message_file": "messages/WEBUI-16.json",
+      "rendered_svg": "rendered/WEBUI-16.svg"
+    },
+    {
+      "case_id": "WEBUI-17",
+      "category": "ACTION",
+      "source_intent": "Undo / restore previous state",
+      "minimal_semantic_target": "Reverse last action or restore prior state",
+      "required_slots": [
+        "REVERSE_LAST_ACTION",
+        "PREVIOUS_STATE"
+      ],
+      "optional_information": [
+        "redo history",
+        "scope"
+      ],
+      "relevant_context": "Editor history context",
+      "pictiq_representation": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_lesser"
+              },
+              {
+                "type": "icon",
+                "id": "time"
+              }
+            ]
+          }
+        ]
+      },
+      "pictiq_shorthand": "rel_lesser time",
+      "token_count": 2,
+      "frame_count": 1,
+      "contextual_dependency": "Editor history context",
+      "compression_classification": "LOSSY",
+      "practical_outcome": "POOR_FIT",
+      "zero_training_observation": "LEARNED_CONVENTION_LIKELY_REQUIRED",
+      "gap_status": "CONTEXTUAL_PRESSURE",
+      "pressure_notes": "temporal/action history",
+      "analysis_notes": "Previous + time approximates past, not undo/restore.",
+      "message_file": "messages/WEBUI-17.json",
+      "rendered_svg": "rendered/WEBUI-17.svg"
+    },
+    {
+      "case_id": "WEBUI-18",
+      "category": "ACCESS_SYSTEM",
+      "source_intent": "Login/access",
+      "minimal_semantic_target": "Person has or requests access",
+      "required_slots": [
+        "PERSON",
+        "ACCESS_ALLOWED"
+      ],
+      "optional_information": [
+        "authentication vs authorization"
+      ],
+      "relevant_context": "Login or account context",
+      "pictiq_representation": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "person_generic"
+              },
+              {
+                "type": "icon",
+                "id": "logic_yes"
+              }
+            ]
+          }
+        ]
+      },
+      "pictiq_shorthand": "person_generic logic_yes",
+      "token_count": 2,
+      "frame_count": 1,
+      "contextual_dependency": "Login or account context",
+      "compression_classification": "LOSSY",
+      "practical_outcome": "AMBIGUOUS",
+      "zero_training_observation": "CONTEXT_DEPENDENT",
+      "gap_status": "CONTEXTUAL_PRESSURE",
+      "pressure_notes": "identity/access",
+      "analysis_notes": "Person + yes can mean user accepted/present; does not encode login/authentication.",
+      "message_file": "messages/WEBUI-18.json",
+      "rendered_svg": "rendered/WEBUI-18.svg"
+    },
+    {
+      "case_id": "WEBUI-19",
+      "category": "ACCESS_SYSTEM",
+      "source_intent": "Permission denied",
+      "minimal_semantic_target": "User cannot do action because permission is missing",
+      "required_slots": [
+        "PERSON",
+        "CANNOT",
+        "PERMISSION_OR_ACCESS"
+      ],
+      "optional_information": [
+        "reason",
+        "owner",
+        "request path"
+      ],
+      "relevant_context": "Restricted action context",
+      "pictiq_representation": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "person_generic"
+              },
+              {
+                "type": "icon",
+                "id": "logic_no"
+              }
+            ]
+          }
+        ]
+      },
+      "pictiq_shorthand": "person_generic logic_no",
+      "token_count": 2,
+      "frame_count": 1,
+      "contextual_dependency": "Restricted action context",
+      "compression_classification": "LOSSY",
+      "practical_outcome": "WORKS_ONLY_WITH_STRONG_CONTEXT",
+      "zero_training_observation": "CONTEXT_DEPENDENT",
+      "gap_status": "CONTEXTUAL_PRESSURE",
+      "pressure_notes": "permission denied vs no",
+      "analysis_notes": "Person + no indicates denial but lacks role/policy/action scope.",
+      "message_file": "messages/WEBUI-19.json",
+      "rendered_svg": "rendered/WEBUI-19.svg"
+    },
+    {
+      "case_id": "WEBUI-20",
+      "category": "ACCESS_SYSTEM",
+      "source_intent": "Settings/preferences",
+      "minimal_semantic_target": "Open or edit configuration/options",
+      "required_slots": [
+        "CONFIGURE_OR_SETTINGS"
+      ],
+      "optional_information": [
+        "system vs account vs object settings"
+      ],
+      "relevant_context": "App toolbar/menu context",
+      "pictiq_representation": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "service_tools"
+              }
+            ]
+          }
+        ]
+      },
+      "pictiq_shorthand": "service_tools",
+      "token_count": 1,
+      "frame_count": 1,
+      "contextual_dependency": "App toolbar/menu context",
+      "compression_classification": "LOSSY",
+      "practical_outcome": "AMBIGUOUS",
+      "zero_training_observation": "LEARNED_CONVENTION_LIKELY_REQUIRED",
+      "gap_status": "UI_SPECIFIC_CONVENTION",
+      "pressure_notes": "gear/settings convention",
+      "analysis_notes": "Tools is close to maintenance/repair, not abstract preferences/configuration.",
+      "message_file": "messages/WEBUI-20.json",
+      "rendered_svg": "rendered/WEBUI-20.svg"
+    },
+    {
+      "case_id": "WEBUI-21",
+      "category": "ACCESS_SYSTEM",
+      "source_intent": "Download",
+      "minimal_semantic_target": "Receive a file/data from system",
+      "required_slots": [
+        "RECEIVE_OR_MOVE_DOWN",
+        "FILE_OR_CONTENT"
+      ],
+      "optional_information": [
+        "from where",
+        "destination"
+      ],
+      "relevant_context": "File/action toolbar context",
+      "pictiq_representation": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_down"
+              },
+              {
+                "type": "icon",
+                "id": "media_text"
+              }
+            ]
+          }
+        ]
+      },
+      "pictiq_shorthand": "rel_down media_text",
+      "token_count": 2,
+      "frame_count": 1,
+      "contextual_dependency": "File/action toolbar context",
+      "compression_classification": "PRESERVED_BY_COMPOSITION",
+      "practical_outcome": "WORKS_ONLY_WITH_STRONG_CONTEXT",
+      "zero_training_observation": "LEARNED_CONVENTION_LIKELY_REQUIRED",
+      "gap_status": "UI_SPECIFIC_CONVENTION",
+      "pressure_notes": "download arrow convention",
+      "analysis_notes": "Down + text approximates download only because UI convention maps down to receive.",
+      "message_file": "messages/WEBUI-21.json",
+      "rendered_svg": "rendered/WEBUI-21.svg"
+    },
+    {
+      "case_id": "WEBUI-22",
+      "category": "ACCESS_SYSTEM",
+      "source_intent": "Upload",
+      "minimal_semantic_target": "Send a file/data to system",
+      "required_slots": [
+        "SEND_OR_MOVE_UP",
+        "FILE_OR_CONTENT"
+      ],
+      "optional_information": [
+        "destination",
+        "publication vs storage"
+      ],
+      "relevant_context": "File/action toolbar context",
+      "pictiq_representation": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_up"
+              },
+              {
+                "type": "icon",
+                "id": "media_text"
+              }
+            ]
+          }
+        ]
+      },
+      "pictiq_shorthand": "rel_up media_text",
+      "token_count": 2,
+      "frame_count": 1,
+      "contextual_dependency": "File/action toolbar context",
+      "compression_classification": "PRESERVED_BY_COMPOSITION",
+      "practical_outcome": "WORKS_ONLY_WITH_STRONG_CONTEXT",
+      "zero_training_observation": "LEARNED_CONVENTION_LIKELY_REQUIRED",
+      "gap_status": "UI_SPECIFIC_CONVENTION",
+      "pressure_notes": "upload arrow convention",
+      "analysis_notes": "Up + text approximates upload by convention, not explicit transfer.",
+      "message_file": "messages/WEBUI-22.json",
+      "rendered_svg": "rendered/WEBUI-22.svg"
+    },
+    {
+      "case_id": "WEBUI-23",
+      "category": "CONTENT_COMM",
+      "source_intent": "Text content",
+      "minimal_semantic_target": "Text/written content",
+      "required_slots": [
+        "TEXT_CONTENT"
+      ],
+      "optional_information": [
+        "editable vs read-only"
+      ],
+      "relevant_context": "Content-type picker",
+      "pictiq_representation": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "media_text"
+              }
+            ]
+          }
+        ]
+      },
+      "pictiq_shorthand": "media_text",
+      "token_count": 1,
+      "frame_count": 1,
+      "contextual_dependency": "Content-type picker",
+      "compression_classification": "PRESERVED_EXPLICITLY",
+      "practical_outcome": "WORKS_AS_IS",
+      "zero_training_observation": "LIKELY_TRANSPARENT",
+      "gap_status": "COMPOSITIONALLY_EXPRESSIBLE",
+      "pressure_notes": "direct content primitive",
+      "analysis_notes": "Direct hit.",
+      "message_file": "messages/WEBUI-23.json",
+      "rendered_svg": "rendered/WEBUI-23.svg"
+    },
+    {
+      "case_id": "WEBUI-24",
+      "category": "CONTENT_COMM",
+      "source_intent": "Notification/message alert",
+      "minimal_semantic_target": "There is an important message/notification",
+      "required_slots": [
+        "MESSAGE_OR_COMMUNICATION",
+        "ATTENTION"
+      ],
+      "optional_information": [
+        "sender",
+        "priority",
+        "read/unread"
+      ],
+      "relevant_context": "Notification center context",
+      "pictiq_representation": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "comm_speak"
+              },
+              {
+                "type": "icon",
+                "id": "punct_exclaim"
+              }
+            ]
+          }
+        ]
+      },
+      "pictiq_shorthand": "comm_speak punct_exclaim",
+      "token_count": 2,
+      "frame_count": 1,
+      "contextual_dependency": "Notification center context",
+      "compression_classification": "PRESERVED_BY_COMPOSITION",
+      "practical_outcome": "WORKS_WITH_COMPOSITION",
+      "zero_training_observation": "CONTEXT_DEPENDENT",
+      "gap_status": "CONTEXTUAL_PRESSURE",
+      "pressure_notes": "message vs alert vs speech",
+      "analysis_notes": "Communication + urgent can signal notification but not unread/message object exactly.",
+      "message_file": "messages/WEBUI-24.json",
+      "rendered_svg": "rendered/WEBUI-24.svg"
+    }
+  ],
+  "summary": {
+    "corpus_size": 24,
+    "category_counts": {
+      "NAVIGATION": 4,
+      "STATE": 7,
+      "ACTION": 6,
+      "ACCESS_SYSTEM": 5,
+      "CONTENT_COMM": 2
+    },
+    "compression_counts": {
+      "CONTEXT-SUFFICIENT": 2,
+      "LOSSY": 10,
+      "PRESERVED_BY_COMPOSITION": 7,
+      "PRESERVED_EXPLICITLY": 2,
+      "GAP": 3
+    },
+    "practical_outcome_counts": {
+      "WORKS_ONLY_WITH_STRONG_CONTEXT": 6,
+      "AMBIGUOUS": 5,
+      "WORKS_WITH_COMPOSITION": 5,
+      "WORKS_AS_IS": 2,
+      "GAP": 3,
+      "POOR_FIT": 3
+    },
+    "zero_training_counts": {
+      "LEARNED_CONVENTION_LIKELY_REQUIRED": 6,
+      "CONTEXT_DEPENDENT": 10,
+      "LIKELY_TRANSPARENT": 4,
+      "UNCLEAR": 4
+    },
+    "gap_status_counts": {
+      "UI_SPECIFIC_CONVENTION": 5,
+      "CONTEXTUAL_PRESSURE": 11,
+      "COMPOSITIONALLY_EXPRESSIBLE": 5,
+      "GAP": 3
+    },
+    "true_gap_count": 3,
+    "message_case_count": 21,
+    "token_cost": {
+      "min_non_gap": 1,
+      "max_non_gap": 2,
+      "average_non_gap": 1.57,
+      "all_non_gap_one_frame": true
+    },
+    "potential_core_candidates": [],
+    "potential_web_ui_context_candidates": [
+      "WAIT / LOADING / PROCESSING",
+      "SAVE / KEEP / RECORD",
+      "ARCHIVE / RETAIN BUT HIDE",
+      "SETTINGS / CONFIGURATION"
+    ],
+    "not_recommended_for_addition_now": [
+      "UPLOAD / DOWNLOAD",
+      "floppy-disk SAVE glyph",
+      "gear SETTINGS glyph",
+      "hamburger MENU glyph",
+      "selected/active as separate Core primitive"
+    ],
+    "publication_milestone_verdict": "PUBLICATION_MILESTONE_CANDIDATE",
+    "suggested_editorial_angle": "Can 83 Visual Symbols Describe a Modern Software Interface?"
+  }
+}

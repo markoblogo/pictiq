@@ -41,6 +41,23 @@ If yes, record:
 - appropriate channels;
 - whether publication should happen now or enter backlog.
 
+
+## Milestone closure workflow
+
+For every substantial future Pictiq result ask: **IS THIS A PUBLICATION MILESTONE?**
+
+If yes, explicitly record:
+
+- milestone;
+- possible editorial angle;
+- supporting artifacts/data;
+- useful illustrations;
+- Medium/Substack suitability;
+- LinkedIn suitability;
+- status: `CANDIDATE`, `READY`, `PUBLISHED`, or `DEFERRED`.
+
+LinkedIn is optional unless a task explicitly requires it. Missing LinkedIn publication should not block milestone closure.
+
 ## Seed backlog
 
 | Candidate milestone | Possible angle | Potential outputs | Status |
@@ -49,7 +66,8 @@ If yes, record:
 | Odyssey Stress Test | What happens when Homer is translated into a tiny visual language? | Public post, book material, figures. | Candidate. |
 | Message / Renderer | How a collection of pictograms became a machine-readable protocol. | Technical post, repo artifact, book architecture chapter. | Candidate. |
 | Stress Test 04A | An AI understood the source semantics better than it could express them through a constrained visual protocol. Preserve exact limitations. | Research post, book material. | Candidate. |
-| Composer v0.1 | A visual language becomes much more interesting when you can actually write in it. | Demo post, screenshots, project-site note, book material. | Completed publication milestone; editorial publication remains a separate next task. |
+| Composer v0.1 | Pictiq Can Now Be Written, Not Just Viewed. | Release `v1.2.0`, Composer public URL, screenshots/article figures, project history. Medium and Substack suitable; LinkedIn optional later. | `PUBLISHED` on Medium and Substack, 2026-09-13. Medium: https://abvcreative.medium.com/pictiq-can-now-be-written-not-just-viewed-bea970f09f00. Substack: https://abvx.substack.com/p/pictiq-can-now-be-written-not-just. |
 | Browser Renderer parity | One visual protocol, two rendering runtimes, one conformance contract. | Technical post, repo artifact. | Candidate. |
 | Pictiq Games / Human Communication Lab | We turned a visual language into a game to see whether people could communicate without learning it. | Article, session report, figures, book material. | Future candidate after playable prototype, first real session, surprising behavior, repeat-play evidence, or commercial prototype. |
+| Web/UI Stress Test | Can 83 Visual Symbols Describe a Modern Software Interface? | Stress-test report, machine-readable corpus/results, visual QA sheet, book material. Medium/Substack candidate; LinkedIn optional if article exists. | `PUBLICATION_MILESTONE_CANDIDATE`; human review needed before article. |
 | Stress Test 05 | Can AI read a visual language it has never seen before? | Medium/Substack article, technical appendix, book material, figures. | Likely milestone when run. |
