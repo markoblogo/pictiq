@@ -1,1 +1,18 @@
-{"schema":"0.1","pictiq":"1.1","frames":[{"tokens":[{"type":"icon","id":"qty_minus"}]}]}
+{
+  "schema": "0.1",
+  "pictiq": "1.1",
+  "frames": [
+    {
+      "tokens": [
+        {
+          "type": "icon",
+          "id": "logic_no"
+        },
+        {
+          "type": "icon",
+          "id": "media_text"
+        }
+      ]
+    }
+  ]
+}

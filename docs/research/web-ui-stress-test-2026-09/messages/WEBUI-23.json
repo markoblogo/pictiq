@@ -1,1 +1,14 @@
-{"schema":"0.1","pictiq":"1.1","frames":[{"tokens":[{"type":"icon","id":"media_text"}]}]}
+{
+  "schema": "0.1",
+  "pictiq": "1.1",
+  "frames": [
+    {
+      "tokens": [
+        {
+          "type": "icon",
+          "id": "media_text"
+        }
+      ]
+    }
+  ]
+}

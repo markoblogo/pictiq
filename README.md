@@ -70,6 +70,7 @@ Printable PDF: [`docs/overview/pictiq-core-grid.pdf`](docs/overview/pictiq-core-
 - Logo and branding assets: `branding/`
 - Lexicon registry: `lexicon/icon-index.json`
 - Vocabulary classification: `lexicon/vocabulary-classification.json` and `spec/VOCABULARY_CLASSIFICATION.md`
+- Vocabulary governance: `spec/VOCABULARY_GOVERNANCE.md` records NEED-BEFORE-VOCABULARY and DEFERRED_UNTIL_NEEDED.
 - Entity-symbol registry: `entities/entity-index.json`
 - Packs: `packs/universal-core.json`, `packs/universal-v1.json`
 - Static dictionary site (GitHub Pages): `docs/`

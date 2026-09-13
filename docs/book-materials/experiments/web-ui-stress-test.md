@@ -1,51 +1,43 @@
 # Web/UI Pictiq Stress Test
 
-> Source artifact: [Web/UI Pictiq Stress Test 2026-09](../../research/web-ui-stress-test-2026-09/README.md)  
-> Status: local results for human review  
-> Boundary: original test made no vocabulary, grammar, Message Schema, Renderer, Composer, icon, Entity Symbol, Numeric Notation, profile, pack, or Context Pack change.
-> Post-review update: `action_change` was later accepted as a broader Core CHANGE primitive; the remaining Web/UI concepts are still unreconciled.
-
-## Question
-
-How well can current Pictiq represent common modern software/UI meanings without adding vocabulary during the test?
-
-## What the test reveals
-
-Software interfaces are already partial visual languages, but many UI icons are learned conventions rather than direct semantic drawings. The stress test therefore asked whether Pictiq could represent the intent, not whether it could copy conventional UI glyphs such as a floppy disk, gear, cloud arrow, or hamburger menu.
-
-The 24-case frozen corpus produced a mixed result:
-
-- direct or near-direct successes exist for current location, text content, success, and error/attention;
-- many cases are possible only with strong UI context;
-- several short compositions are technically renderable but too broad for reliable standalone UI meaning;
-- three true gaps appeared: loading/processing, save/persistence, and archive/retain-but-hide.
+> Source artifact: [Web/UI Pictiq Stress Test 2026-09](../../research/web-ui-stress-test-2026-09/README.md)
+> Status: human semantic reconciliation complete
+> Boundary: research/governance only; no Web/UI Context Pack and no new vocabulary beyond accepted `action_change`.
 
 ## Main lesson
 
-The cost problem is not mostly long sequences. The harder problem is overloaded short sequences. `logic_no`, `logic_yes`, `rel_here`, `rel_up`, `rel_down`, `rel_greater`, and `rel_lesser` are useful primitives, but UI contexts make them carry too many possible meanings.
+Domain stress tests should not mechanically generate vocabulary. Human review eliminated several apparent gaps through context, polysemy, and composition.
 
-## Conventional glyphs vs semantic representation
+The reconciled result keeps Pictiq small:
 
-Pictiq should not add concepts merely to reproduce familiar software glyphs. The useful pressure comes from semantic gaps:
+- loading / processing -> `time`;
+- save / download -> contextual down + content;
+- publish / upload -> contextual up + content;
+- settings -> tools;
+- empty -> no + relevant content;
+- notification -> communication + attention.
 
-- process / wait / progress;
-- persistence / save / record;
-- archive / hidden-but-retained state;
-- permission and role scope;
-- edit/configure as abstract actions.
+The one accepted addition was `action_change`, because Web/UI EDIT pressure exposed a broader universal CHANGE / TRANSFORM / MODIFY primitive.
 
-Upload/download are weaker candidates because the current up/down relation plus content can approximate them in a UI context, though mainly as a learned convention.
+## Governance lesson
 
-## Post-review accepted primitive
+The review formalized **NEED-BEFORE-VOCABULARY**: existing primitive -> composition -> context -> polysemy -> intentional omission -> only then consider a new symbol. “We may need it later” is not enough.
 
-`WEBUI-16` originally exposed pressure around EDIT. Human semantic review reframed the gap as broader CHANGE / TRANSFORM / MODIFY / BECOME DIFFERENT. The accepted Core primitive is `action_change`; edit, recycle, exchange, and replacement are contextual uses only.
+`DEFERRED_UNTIL_NEEDED` is a planning status, not a vocabulary classification. Current deferred concepts are archive, IT/system, and video.
 
-This pass does not resolve loading, save, archive, settings, IT/system, video, upload/download, notification, or permission/access.
+## Reconciled counts
+
+- PRESERVED_EXPLICITLY: 2
+- PRESERVED_BY_COMPOSITION: 10
+- CONTEXT-SUFFICIENT: 11
+- INTENTIONAL_OMISSION: 0
+- LOSSY: 1
+- GAP: 0
 
 ## Publication status
 
-Publication milestone verdict: `PUBLICATION_MILESTONE_CANDIDATE`.
+Publication milestone verdict: `PUBLICATION_MILESTONE_CANDIDATE / READY_FOR_EDITORIAL_DEVELOPMENT_AFTER_HUMAN_APPROVAL`.
 
-Possible editorial angle: **Can 83 Visual Symbols Describe a Modern Software Interface?**
+Possible editorial angle: **What a Visual Language Learns When You Make It Describe Software**.
 
-Do not publish from this note directly. First preserve human review of the corpus, classifications, and figure choices.
+Do not publish from this note directly; preserve it as book/research material.

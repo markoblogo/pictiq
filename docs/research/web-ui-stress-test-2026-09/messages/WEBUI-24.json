@@ -1,1 +1,18 @@
-{"schema":"0.1","pictiq":"1.1","frames":[{"tokens":[{"type":"icon","id":"comm_speak"},{"type":"icon","id":"punct_exclaim"}]}]}
+{
+  "schema": "0.1",
+  "pictiq": "1.1",
+  "frames": [
+    {
+      "tokens": [
+        {
+          "type": "icon",
+          "id": "comm_speak"
+        },
+        {
+          "type": "icon",
+          "id": "punct_exclaim"
+        }
+      ]
+    }
+  ]
+}

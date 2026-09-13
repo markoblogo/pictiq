@@ -88,7 +88,7 @@ This section is normative. The accepted vocabulary architecture separates five l
 
 Vocabulary generality and communication surface are independent axes. Generality is classified as `MECHANISM`, `CORE`, `STANDALONE_CORE`, `CONTEXTUAL`, or `SPECIALIZED`. Communication surface is classified as `EMBODIED` or `STANDALONE`. Profiles select vocabulary for a surface; they do not redefine canonical meaning or turn every selected tile into Core.
 
-The authoritative machine-readable classification is [`../lexicon/vocabulary-classification.json`](../lexicon/vocabulary-classification.json), with a human-readable mirror in [Vocabulary Classification](VOCABULARY_CLASSIFICATION.md). `icon-index.json` remains the semantic registry; classification metadata MUST NOT duplicate or rewrite lexical meaning.
+The authoritative machine-readable classification is [`../lexicon/vocabulary-classification.json`](../lexicon/vocabulary-classification.json), with a human-readable mirror in [Vocabulary Classification](VOCABULARY_CLASSIFICATION.md). `icon-index.json` remains the semantic registry; classification metadata MUST NOT duplicate or rewrite lexical meaning. Vocabulary additions are governed by [Vocabulary Governance](VOCABULARY_GOVERNANCE.md), including NEED-BEFORE-VOCABULARY and DEFERRED_UNTIL_NEEDED.
 
 #### Absence states
 

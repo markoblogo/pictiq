@@ -33,9 +33,15 @@ The Web/UI test distinguishes failure to copy a conventional software glyph from
 
 Which pressures deserve context-pack candidates rather than Core additions? Should Web/UI be tested next through a real interface screen, an Action Receipt, or a larger corpus with human interpretation?
 
+### Human semantic reconciliation update
+
+Human review closed the Web/UI semantic pass. Several apparent gaps were reclassified as context/polysemy/composition: loading uses `time`, save/download uses contextual down, publish/upload uses contextual up, settings uses `service_tools`, and empty/notification states compose from existing primitives. `Archive` remains an unresolved composition candidate and is `DEFERRED_UNTIL_NEEDED`; IT/system and video are also deferred.
+
+The review formalized **NEED-BEFORE-VOCABULARY**: existing primitive -> composition -> context -> polysemy -> intentional omission -> only then consider a new symbol. The only Core addition from the cycle is `action_change`, because EDIT pressure exposed a broader CHANGE / TRANSFORM / MODIFY primitive.
+
 ### Possible future book use
 
-Use this as a chapter section on visual language under software-interface pressure: when a glyph is a learned convention, when a semantic primitive is missing, and why short expressions can be more dangerous than long ones when they are overloaded.
+Use this as a chapter section on visual language under software-interface pressure: when a glyph is a learned convention, when context/polysemy eliminates an apparent gap, when a domain pressure reveals a universal primitive, and why minimal vocabulary requires active resistance to speculative additions.
 
 
 ## 2026-09-13 — Composer v0.1 release
