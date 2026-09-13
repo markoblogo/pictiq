@@ -58,10 +58,19 @@ If yes, explicitly record:
 
 LinkedIn is optional unless a task explicitly requires it. Missing LinkedIn publication should not block milestone closure.
 
+## Public chronology
+
+01. **Pictiq Public Introduction — PUBLISHED** — Medium + Substack. Title: **I Built a Tiny Visual Protocol for When Words Are Too Much**. Substack: https://abvx.substack.com/p/i-built-a-tiny-visual-protocol-for. Medium: https://abvcreative.medium.com/i-built-a-tiny-visual-protocol-for-when-words-are-too-much-9c86ac61bd73.
+02. **Composer / Public Authoring — PUBLISHED** — Medium + Substack. Title: **Pictiq Can Now Be Written, Not Just Viewed**. Medium: https://abvcreative.medium.com/pictiq-can-now-be-written-not-just-viewed-bea970f09f00. Substack: https://abvx.substack.com/p/pictiq-can-now-be-written-not-just.
+03. **Web/UI Stress Test — PUBLICATION_MILESTONE_CANDIDATE / READY_FOR_EDITORIAL_DEVELOPMENT_AFTER_HUMAN_APPROVAL** — current reconciled research milestone. Suggested angle: **What a Visual Language Learns When You Make It Describe Software**.
+
+The public-introduction article is a completed historical publication milestone. It is not treated here as new research evidence and does not retroactively change project conclusions.
+
 ## Seed backlog
 
 | Candidate milestone | Possible angle | Potential outputs | Status |
 | --- | --- | --- | --- |
+| Pictiq Public Introduction | I Built a Tiny Visual Protocol for When Words Are Too Much. | Historical public introduction article. Medium and Substack publication records only; article contents are not copied into the repository. | `PUBLISHED` on Medium and Substack. Substack: https://abvx.substack.com/p/i-built-a-tiny-visual-protocol-for. Medium: https://abvcreative.medium.com/i-built-a-tiny-visual-protocol-for-when-words-are-too-much-9c86ac61bd73. |
 | Architecture & Vocabulary Audit | Why we made a visual language smaller instead of larger. | Repo artifact, public post, book chapter. | Candidate. |
 | Odyssey Stress Test | What happens when Homer is translated into a tiny visual language? | Public post, book material, figures. | Candidate. |
 | Message / Renderer | How a collection of pictograms became a machine-readable protocol. | Technical post, repo artifact, book architecture chapter. | Candidate. |

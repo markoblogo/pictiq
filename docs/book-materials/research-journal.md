@@ -3,6 +3,41 @@
 Chronological notes reconstructed from repository evidence. Interpretive statements are marked as such; dates follow commit or release history when a separate event date is unavailable.
 
 
+## Historical publication milestone — Pictiq Public Introduction
+
+### Starting question
+
+What was the first public introduction of Pictiq before the Composer/public-authoring milestone?
+
+### What happened
+
+The earlier Pictiq public-introduction article is now recorded as a completed historical publication milestone: **PICTIQ PUBLIC INTRODUCTION — PUBLISHED**.
+
+Title: **I Built a Tiny Visual Protocol for When Words Are Too Much**.
+
+### Evidence
+
+Substack: https://abvx.substack.com/p/i-built-a-tiny-visual-protocol-for.
+
+Medium: https://abvcreative.medium.com/i-built-a-tiny-visual-protocol-for-when-words-are-too-much-9c86ac61bd73.
+
+### Decision / outcome
+
+Public chronology now records:
+
+1. Pictiq Public Introduction — **PUBLISHED** — Medium + Substack.
+2. Composer / Public Authoring — **PUBLISHED** — Medium + Substack.
+3. Web/UI Stress Test — current publication-milestone candidate from the reconciliation pass.
+
+### Boundary
+
+The article contents are not copied into the repository. This historical record is not treated as new evidence and does not retroactively change research conclusions.
+
+### Possible future book use
+
+Use as public-history context: the project had a general public introduction before the Composer milestone made authoring publicly usable.
+
+
 ## 2026-09-13 — Composer publication closure and Web/UI stress test
 
 ### Starting question
