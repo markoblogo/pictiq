@@ -2,7 +2,7 @@
   "schema_version": "0.1.0",
   "status": "ACCEPTED VOCABULARY ARCHITECTURE CLASSIFICATION SOURCE OF TRUTH",
   "canonical_lexicon": "lexicon/icon-index.json",
-  "ordinary_canonical_icon_count": 83,
+  "ordinary_canonical_icon_count": 84,
   "entity_registry": "entities/entity-index.json",
   "entity_registry_policy": "Entity symbols are excluded from ordinary vocabulary classification.",
   "principles": [
@@ -1082,6 +1082,22 @@
       "note": "Human decision: KEEP_CORE. Broad CONFLICT / WAR / AGGRESSION / FIGHT / ATTACK / HOSTILE ACTION / VIOLENCE concept, distinct from BAD evaluation."
     },
     {
+      "id": "action_change",
+      "primary_role": "CORE",
+      "secondary_contexts": [
+        "EVERYDAY",
+        "COMMUNICATION",
+        "MACHINE_INTERFACE",
+        "MEDIA",
+        "RETAIL",
+        "NARRATIVE"
+      ],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH",
+      "note": "Human-accepted Web/UI stress-test follow-up. Broad CHANGE / TRANSFORM / MODIFY / BECOME DIFFERENT primitive; edit, recycle, exchange, and replacement remain contextual readings, not the primary canonical concept."
+    },
+    {
       "id": "move_watercraft",
       "primary_role": "CONTEXTUAL",
       "secondary_contexts": [
@@ -1137,5 +1153,5 @@
       "note": "Human decision: KEEP_CORE. Broad CLOUD / SKY / AIR / ATMOSPHERIC SPACE / WEATHER context / OVERHEAD SKY CONTEXT."
     }
   ],
-  "canonical_lexicon_version": "0.8.0"
+  "canonical_lexicon_version": "0.8.1"
 }

@@ -2,7 +2,8 @@
 
 > Source artifact: [Web/UI Pictiq Stress Test 2026-09](../../research/web-ui-stress-test-2026-09/README.md)  
 > Status: local results for human review  
-> Boundary: no vocabulary, grammar, Message Schema, Renderer, Composer, icon, Entity Symbol, Numeric Notation, profile, pack, or Context Pack change.
+> Boundary: original test made no vocabulary, grammar, Message Schema, Renderer, Composer, icon, Entity Symbol, Numeric Notation, profile, pack, or Context Pack change.
+> Post-review update: `action_change` was later accepted as a broader Core CHANGE primitive; the remaining Web/UI concepts are still unreconciled.
 
 ## Question
 
@@ -34,6 +35,12 @@ Pictiq should not add concepts merely to reproduce familiar software glyphs. The
 - edit/configure as abstract actions.
 
 Upload/download are weaker candidates because the current up/down relation plus content can approximate them in a UI context, though mainly as a learned convention.
+
+## Post-review accepted primitive
+
+`WEBUI-16` originally exposed pressure around EDIT. Human semantic review reframed the gap as broader CHANGE / TRANSFORM / MODIFY / BECOME DIFFERENT. The accepted Core primitive is `action_change`; edit, recycle, exchange, and replacement are contextual uses only.
+
+This pass does not resolve loading, save, archive, settings, IT/system, video, upload/download, notification, or permission/access.
 
 ## Publication status
 

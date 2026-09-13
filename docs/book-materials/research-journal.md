@@ -23,11 +23,11 @@ Composer publication links: Medium https://abvcreative.medium.com/pictiq-can-now
 
 Composer publication milestone: **PUBLISHED** on Medium and Substack.
 
-Web/UI stress test verdict: useful pressure, not a proposal to implement a Web/UI context pack yet. The result is `PUBLICATION_MILESTONE_CANDIDATE` with the possible angle **Can 83 Visual Symbols Describe a Modern Software Interface?**
+Web/UI stress test verdict: useful pressure, not a proposal to implement a Web/UI context pack yet. The result is `PUBLICATION_MILESTONE_CANDIDATE` with the possible angle **Can 83 Visual Symbols Describe a Modern Software Interface?** Post-review semantic review accepted one broader Core primitive, `action_change`, for CHANGE / TRANSFORM / MODIFY / BECOME DIFFERENT; it did not reconcile the remaining Web/UI concepts.
 
 ### Why it matters
 
-The Web/UI test distinguishes failure to copy a conventional software glyph from failure to express semantic intent. Current Pictiq handles some UI meanings as direct or contextual compositions, but digital process, persistence, archive, permission, and abstract configuration concepts create real pressure.
+The Web/UI test distinguishes failure to copy a conventional software glyph from failure to express semantic intent. Current Pictiq handles some UI meanings as direct or contextual compositions. `WEBUI-16` exposed a broader CHANGE gap that became `action_change`; digital process, persistence, archive, permission, and abstract configuration remain real pressure.
 
 ### Open questions
 

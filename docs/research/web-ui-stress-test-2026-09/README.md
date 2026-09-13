@@ -1,7 +1,8 @@
 # Web/UI Pictiq Stress Test 2026-09
 > Status: LOCAL RESULTS FOR HUMAN REVIEW  
 > Pictiq release: v1.2.0  
-> Boundary: language pressure test only; no vocabulary, grammar, Message Schema, Renderer, Composer, icon, Entity Symbol, Numeric Notation, profile, pack, or Context Pack changes.
+> Boundary: original language pressure test only; no vocabulary, grammar, Message Schema, Renderer, Composer, icon, Entity Symbol, Numeric Notation, profile, pack, or Context Pack changes were made during the test.
+> Post-review update: `action_change` was later accepted as a broader Core CHANGE primitive exposed by `WEBUI-16`, without reconciling the remaining Web/UI concepts.
 ## Research question
 
 How well can current Pictiq represent common modern software/UI meanings without adding vocabulary during the test?
@@ -166,6 +167,10 @@ Current Pictiq can express several broad UI meanings with one or two tokens, but
 ## UI convention vs general meaning
 
 Several failures are not failures to copy a conventional glyph. Pictiq does not need to reproduce floppy-disk save, gear settings, cloud-arrow upload/download, or hamburger-menu conventions. The question is whether it can express the semantic intent. In this corpus, the hardest cases are genuine semantic gaps around persistence, processing, archive, and configuration, not merely missing familiar UI drawings.
+
+## Post-review vocabulary outcome
+
+Human semantic review of `WEBUI-16` found that the missing concept was broader than a Web/UI-specific EDIT icon. `action_change` is accepted as a Core primitive for change / transform / modify / become different. Edit, recycle, exchange, and replacement remain contextual readings. This update does not reconcile loading, save, archive, settings, IT/system, video, upload/download, notification, or permission/access.
 
 ## Limitations
 

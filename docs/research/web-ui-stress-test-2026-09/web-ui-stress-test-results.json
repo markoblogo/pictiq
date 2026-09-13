@@ -1048,5 +1048,17 @@
     ],
     "publication_milestone_verdict": "PUBLICATION_MILESTONE_CANDIDATE",
     "suggested_editorial_angle": "Can 83 Visual Symbols Describe a Modern Software Interface?"
-  }
+  },
+  "post_review_updates": [
+    {
+      "date": "2026-09-13",
+      "id": "action_change",
+      "decision": "ACCEPTED_CORE_PRIMITIVE",
+      "trigger_case": "WEBUI-16",
+      "rationale": "Human semantic review found a broader CHANGE / TRANSFORM / MODIFY / BECOME DIFFERENT primitive rather than a Web/UI-specific EDIT icon.",
+      "scope": "Does not reconcile loading, save, archive, settings, IT/system, video, upload/download, notification, or permission/access.",
+      "ordinary_canonical_count_after_update": 84,
+      "entity_symbol_count_after_update": 11
+    }
+  ]
 }

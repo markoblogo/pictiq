@@ -1,5 +1,5 @@
 {
-  "version": "0.8.0",
+  "version": "0.8.1",
   "language": "en",
   "icons": [
     {
@@ -1714,6 +1714,34 @@
         "action_conflict",
         "person_generic + action_conflict + person_generic",
         "qual_bad + power_energy + action_conflict"
+      ]
+    },
+    {
+      "id": "action_change",
+      "type": "icon",
+      "category": "action",
+      "meaning_en": "change / transform / modify",
+      "aliases_en": [
+        "change",
+        "transform",
+        "modify",
+        "become different",
+        "transition",
+        "edit",
+        "exchange",
+        "replace",
+        "recycle"
+      ],
+      "tags_en": [
+        "action",
+        "change",
+        "transformation",
+        "core"
+      ],
+      "examples": [
+        "action_change",
+        "person_generic + action_change",
+        "media_text + action_change"
       ]
     },
     {

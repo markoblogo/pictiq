@@ -70,7 +70,7 @@ The palette exposes human-facing concept information:
 - short semantic gloss;
 - optional secondary ID/debug details.
 
-The palette should be task-sized, not a dump of all 83 ordinary identifiers plus all Entity Symbols.
+The palette should be task-sized, not a dump of all 84 ordinary identifiers plus all Entity Symbols.
 
 Minimum palette groups:
 
