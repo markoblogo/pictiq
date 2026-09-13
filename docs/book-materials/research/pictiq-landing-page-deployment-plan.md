@@ -249,3 +249,33 @@ Deferred concepts remain unchanged:
 - Video: `DEFERRED_UNTIL_NEEDED`.
 
 Human acceptance status: PENDING.
+
+## English source baseline and translation architecture — 2026-09-13
+
+Status: `Pictiq English Landing v0.1 — CREATOR ACCEPTANCE PASSED`.
+
+The accepted English landing is now the semantic/source baseline for future translation work:
+
+`ENGLISH_SOURCE_BASELINE_V0_1`
+
+Accepted source structure:
+
+1. Header.
+2. Hero / About.
+3. Book.
+4. Composer.
+5. Lexicon.
+6. Publications.
+7. Footer.
+
+This acceptance is distinct from production deployment, custom-domain launch, Pictiq translation-layer acceptance, and formal external usability evidence. Minor copy/style fixes remain possible, but the future Pictiq translation should not silently rewrite the English source simply to make translation easier.
+
+The translation architecture and pressure methodology are defined in [Landing Translation Architecture v0.1](../concepts/landing-translation-architecture.md). The core question for the next phase is: **Can Pictiq explain Pictiq?**
+
+Immediate next translation work should begin with Header/Hero only, proceed block by block, preserve accessibility and text fallbacks, and apply NEED-BEFORE-VOCABULARY before recording any vocabulary-pressure candidate.
+
+Publication status: `PUBLICATION MILESTONE CANDIDATE`, not READY. Possible future angle: `Can a Visual Language Explain Itself?`.
+
+Deferred vocabulary remains unchanged: Archive, IT/System/Server, and Video are `DEFERRED_UNTIL_NEEDED`.
+
+No EN/PICTIQ switch, Pictiq translation layer, custom domain, DNS, vocabulary, Context Pack, grammar, Message Schema, Renderer, Composer, tag, release, or push was created in this architecture pass.

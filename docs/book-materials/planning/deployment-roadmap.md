@@ -133,9 +133,16 @@ These deferred human tracks must not block active development.
 
 1. Web/UI reconciliation + CHANGE — PUBLISHED TO MAIN.
 2. Web/UI publication milestone — READY / BACKLOG.
-3. Simple Pictiq landing-page deployment/stress test — NEXT.
-4. Review actual vocabulary pressure.
-5. Decide whether any vocabulary change is justified.
-6. Continue non-human, domain, machine, and deployment work.
+3. English Landing v0.1 — CREATOR ACCEPTANCE PASSED.
+4. EN -> PICTIQ translation architecture/methodology — CURRENT TASK.
+5. Translate Header/Hero first.
+6. Human review.
+7. Translate the next accepted block, continuing block by block.
+8. Integrate the EN | PICTIQ switch only after enough accepted translated blocks exist.
+9. Full responsive/accessibility QA.
+10. Production/legal/privacy review.
+11. Configure `pictiq.abvx.xyz` only after review.
+12. Public launch.
+13. Observe real use and feedback.
 
-Human/game tracks remain non-blocking. Composer v0.1 remains RELEASED as the current public authoring surface.
+Human/game tracks remain non-blocking. Composer v0.1 remains RELEASED as the current public authoring surface. The accepted English landing is `ENGLISH_SOURCE_BASELINE_V0_1`; future translation work should not silently rewrite it to make translation easier.

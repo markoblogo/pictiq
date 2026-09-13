@@ -3,6 +3,37 @@
 Chronological notes reconstructed from repository evidence. Interpretive statements are marked as such; dates follow commit or release history when a separate event date is unavailable.
 
 
+## 2026-09-13 — English landing accepted and translation architecture defined
+
+### Starting question
+
+After creator acceptance of the English landing, how should Pictiq plan the future EN -> PICTIQ version without turning it into word-for-word icon substitution or speculative vocabulary expansion?
+
+### What happened
+
+`Pictiq English Landing v0.1 — CREATOR ACCEPTANCE PASSED` is recorded. The accepted English page becomes `ENGLISH_SOURCE_BASELINE_V0_1` for future translation work. The accepted block structure is Header, Hero/About, Book, Composer, Lexicon, Publications, and Footer.
+
+A translation architecture note defines four layers: source content, semantic intent, Pictiq representation, and rendered UI. It also defines translation units, a pressure-log schema, compression and UI-fit classifications, text fallback policy, accessibility requirements, and the future deterministic `EN | [Pictiq symbol]` switch. The recommended implementation path is same-DOM/shared semantic content with alternate rendered representation for the first Header/Hero work.
+
+### Evidence
+
+[Landing deployment plan](research/pictiq-landing-page-deployment-plan.md), [Landing Translation Architecture v0.1](concepts/landing-translation-architecture.md), [Deployment Roadmap](planning/deployment-roadmap.md), and [Publication Milestones](planning/publication-milestones.md).
+
+### Decision / outcome
+
+The next work is block-by-block translation, starting with Header/Hero, followed by human review. No full-page translation, EN/PICTIQ switch, automatic LLM translator, vocabulary addition, context pack, grammar change, Message Schema change, Renderer change, Composer change, custom domain, tag, release, or push is made by this pass.
+
+Publication status: **PUBLICATION MILESTONE CANDIDATE**, not READY. Possible future angle: **Can a Visual Language Explain Itself?** Promote only after the Pictiq version produces substantive translation results.
+
+### Boundary
+
+Archive, IT/System/Server, and Video remain `DEFERRED_UNTIL_NEEDED`. The Pictiq logo remains a special unframed proper-name mark, not evidence that arbitrary ordinary words can be rendered as custom marks.
+
+### Possible future book use
+
+Use this as the moment where Pictiq stops describing external domains and tests whether it can describe its own public interface while preserving zero-training entry and accessibility.
+
+
 ## 2026-09-13 — Web/UI work published and landing-page stress test planned
 
 ### Starting question
