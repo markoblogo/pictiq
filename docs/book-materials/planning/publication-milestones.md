@@ -27,6 +27,43 @@ For every significant future milestone, evaluate three possible outputs:
 
 Potential public channels include Medium, Substack, LinkedIn, GitHub, and the project site. This document does not automate publication.
 
+## Status model
+
+Publication significance and publication timing are separate.
+
+Significance status:
+
+- `CANDIDATE` — may become an article/post after more review or stronger framing.
+- `READY` — substantial enough for public editorial work.
+- `NOT_PUBLICATION_WORTHY` — useful internally but not a distinct public story.
+
+Editorial status:
+
+- `BACKLOG` — keep as a publishable story, but do not publish now.
+- `SCHEDULED` — assigned to a future publication window.
+- `PUBLISHED` — already published.
+- `DEFERRED` — intentionally postponed.
+
+A result becoming `PUBLICATION MILESTONE: READY` does not mean it must be published immediately.
+
+## Default editorial cadence
+
+Pictiq milestone posts should normally be published no more frequently than once per 7 days.
+
+Purpose: avoid spamming the audience, give each substantial result time to circulate, maintain editorial quality, prevent rapid project progress from producing excessive public posting, and allow several READY milestones to accumulate in a publication backlog.
+
+This is a default editorial cadence, not an absolute prohibition. Exceptions may be made for genuinely time-sensitive developments, external events, major releases, or publication opportunities where delay would materially reduce relevance. Do not automatically schedule anything.
+
+Medium + Substack versions of the same milestone count as one publication event for cadence purposes. Optional LinkedIn adaptation of the same milestone also belongs to the same publication event, not a separate weekly slot. The cadence applies to distinct substantive Pictiq stories or milestones.
+
+## Future publication signal
+
+At closure of every substantial future milestone explicitly report:
+
+`PUBLICATION MILESTONE: <status>`
+
+If the significance status is `READY`, also record: editorial angle, supporting artifacts, useful illustrations, Medium/Substack suitability, LinkedIn suitability, earliest sensible publication window based on cadence, and whether it should outrank existing backlog items. Do not automatically publish.
+
 ## Future-work prompt
 
 For substantial future work, ask:
@@ -58,11 +95,13 @@ If yes, explicitly record:
 
 LinkedIn is optional unless a task explicitly requires it. Missing LinkedIn publication should not block milestone closure.
 
-## Public chronology
+## Ordered publication backlog / chronology
 
-01. **Pictiq Public Introduction — PUBLISHED** — Medium + Substack. Title: **I Built a Tiny Visual Protocol for When Words Are Too Much**. Substack: https://abvx.substack.com/p/i-built-a-tiny-visual-protocol-for. Medium: https://abvcreative.medium.com/i-built-a-tiny-visual-protocol-for-when-words-are-too-much-9c86ac61bd73.
-02. **Composer / Public Authoring — PUBLISHED** — Medium + Substack. Title: **Pictiq Can Now Be Written, Not Just Viewed**. Medium: https://abvcreative.medium.com/pictiq-can-now-be-written-not-just-viewed-bea970f09f00. Substack: https://abvx.substack.com/p/pictiq-can-now-be-written-not-just.
-03. **Web/UI Stress Test — PUBLICATION_MILESTONE_CANDIDATE / READY_FOR_EDITORIAL_DEVELOPMENT_AFTER_HUMAN_APPROVAL** — current reconciled research milestone. Suggested angle: **What a Visual Language Learns When You Make It Describe Software**.
+| # | Milestone | Significance status | Editorial status | Public title / angle | Channels / notes |
+| ---: | --- | --- | --- | --- | --- |
+| 01 | Pictiq Public Introduction | READY | PUBLISHED | `I Built a Tiny Visual Protocol for When Words Are Too Much` | Medium + Substack. Substack: https://abvx.substack.com/p/i-built-a-tiny-visual-protocol-for. Medium: https://abvcreative.medium.com/i-built-a-tiny-visual-protocol-for-when-words-are-too-much-9c86ac61bd73. |
+| 02 | Composer / Public Authoring | READY | PUBLISHED | `Pictiq Can Now Be Written, Not Just Viewed` | Medium + Substack. Medium: https://abvcreative.medium.com/pictiq-can-now-be-written-not-just-viewed-bea970f09f00. Substack: https://abvx.substack.com/p/pictiq-can-now-be-written-not-just. |
+| 03 | Web/UI Stress Test | READY | BACKLOG | `What a Visual Language Learns When You Make It Describe Software` or `Can 84 Visual Symbols Describe a Modern Software Interface?` | Human-reconciled report, machine-readable corpus/results, visual QA sheet, NEED-BEFORE-VOCABULARY rule. Do not publish now merely because it is READY. |
 
 The public-introduction article is a completed historical publication milestone. It is not treated here as new research evidence and does not retroactively change project conclusions.
 
@@ -78,5 +117,5 @@ The public-introduction article is a completed historical publication milestone.
 | Composer v0.1 | Pictiq Can Now Be Written, Not Just Viewed. | Release `v1.2.0`, Composer public URL, screenshots/article figures, project history. Medium and Substack suitable; LinkedIn optional later. | `PUBLISHED` on Medium and Substack, 2026-09-13. Medium: https://abvcreative.medium.com/pictiq-can-now-be-written-not-just-viewed-bea970f09f00. Substack: https://abvx.substack.com/p/pictiq-can-now-be-written-not-just. |
 | Browser Renderer parity | One visual protocol, two rendering runtimes, one conformance contract. | Technical post, repo artifact. | Candidate. |
 | Pictiq Games / Human Communication Lab | We turned a visual language into a game to see whether people could communicate without learning it. | Article, session report, figures, book material. | Future candidate after playable prototype, first real session, surprising behavior, repeat-play evidence, or commercial prototype. |
-| Web/UI Stress Test | What a Visual Language Learns When You Make It Describe Software | Human-reconciled stress-test report, machine-readable corpus/results, visual QA sheet, book material, and NEED-BEFORE-VOCABULARY rule. Medium/Substack candidate; LinkedIn optional if article exists. | `PUBLICATION_MILESTONE_CANDIDATE / READY_FOR_EDITORIAL_DEVELOPMENT_AFTER_HUMAN_APPROVAL`; do not publish directly from raw report. |
+| Web/UI Stress Test | What a Visual Language Learns When You Make It Describe Software | Human-reconciled stress-test report, machine-readable corpus/results, visual QA sheet, book material, and NEED-BEFORE-VOCABULARY rule. Medium/Substack suitable; LinkedIn optional if article exists. | Significance `READY`; editorial `BACKLOG`. Do not publish now merely because it is ready. |
 | Stress Test 05 | Can AI read a visual language it has never seen before? | Medium/Substack article, technical appendix, book material, figures. | Likely milestone when run. |

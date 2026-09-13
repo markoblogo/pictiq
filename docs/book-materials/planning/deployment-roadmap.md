@@ -131,9 +131,11 @@ These deferred human tracks must not block active development.
 
 ## Immediate active roadmap
 
-1. Composer v0.1 — RELEASED.
-2. Prepare Composer milestone publication.
-3. Run Web/UI Stress Test.
-4. Continue non-human, domain, and machine work.
-5. Pursue opportunistic deployments.
-6. Return to 04B, games, and formal human tracks when practical.
+1. Web/UI reconciliation + CHANGE — PUBLISHED TO MAIN.
+2. Web/UI publication milestone — READY / BACKLOG.
+3. Simple Pictiq landing-page deployment/stress test — NEXT.
+4. Review actual vocabulary pressure.
+5. Decide whether any vocabulary change is justified.
+6. Continue non-human, domain, machine, and deployment work.
+
+Human/game tracks remain non-blocking. Composer v0.1 remains RELEASED as the current public authoring surface.

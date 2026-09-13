@@ -3,6 +3,37 @@
 Chronological notes reconstructed from repository evidence. Interpretive statements are marked as such; dates follow commit or release history when a separate event date is unavailable.
 
 
+## 2026-09-13 — Web/UI work published and landing-page stress test planned
+
+### Starting question
+
+Can the completed Web/UI work be published to `main`, while separating publication readiness from immediate posting and preparing the next concrete deployment stress test?
+
+### What happened
+
+The Web/UI Stress Test, `action_change` Core primitive, human semantic reconciliation, and public-introduction milestone record were published to `main`. Publication planning now separates milestone significance from editorial timing, adds a default 7-day editorial cadence, and treats Medium + Substack versions of the same milestone as one publication event.
+
+A simple Pictiq landing-page deployment/stress-test plan was added as the next concrete Web/UI artifact. The plan freezes the current 84 ordinary primitives, keeps archive / IT-system-server / video deferred until needed, and uses NEED-BEFORE-VOCABULARY as the gate before any future vocabulary proposal.
+
+### Evidence
+
+[Publication Milestones](planning/publication-milestones.md), [Deployment Roadmap](planning/deployment-roadmap.md), and [Pictiq Landing Page Deployment / Stress Test Plan](research/pictiq-landing-page-deployment-plan.md).
+
+### Decision / outcome
+
+Web/UI publication milestone: significance **READY**, editorial status **BACKLOG**. Do not publish it immediately just because it is ready.
+
+Immediate roadmap: Web/UI work published to main; landing-page deployment/stress test is next; review actual pressure before any vocabulary change.
+
+### Boundary
+
+No vocabulary, grammar, Message Schema, Shorthand grammar, Renderer, Composer, Entity Symbol, Numeric Notation, tag, release, or Web/UI Context Pack change was made by the planning pass.
+
+### Possible future book use
+
+Use this as the transition from abstract Web/UI corpus pressure to concrete product/interface pressure: a small visual language should earn new words from real use, not from speculative completeness.
+
+
 ## Historical publication milestone — Pictiq Public Introduction
 
 ### Starting question
