@@ -138,7 +138,7 @@ The Core protocol and the first Pictiq Handbook are published. The lexicon, cont
 
 - [toki-pona-translator](https://toki.abvx.xyz/) — Links to the optional Toki Pona crosswalk without changing the canonical protocol. Current release: `sitelen-layer-static-v0.1.1`.
 - [AGENTS.md_generator](https://agentsmd.abvx.xyz/) — Keeps repository guidance and machine-readable context current. Current release: `v0.5.1`.
-- [abvx-shortener](https://go.abvx.xyz/) — Uses stable short links for public campaigns and QR destinations. Current release: `v0.3.1`.
+- [abvx-shortener](https://go.abvx.xyz/) — Uses stable short links for public campaigns and QR destinations. Current release: `v0.4.0`.
 - [abvx-agent-skills](https://abvx.xyz/work/abvx-agent-skills) — Uses shared, reviewable agent capabilities during maintenance. Current release: `v0.15.0`.
 
 _This block is generated from the reviewed ABVX ecosystem registry._
