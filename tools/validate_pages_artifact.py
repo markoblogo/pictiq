@@ -17,6 +17,7 @@ def require(path: str) -> Path:
 require("index.html")
 require("app.js")
 require("style.css")
+require("entities/entity-index.json")
 require("composer/index.html")
 require("composer/app.mjs")
 require("composer/composer-core.mjs")
@@ -29,6 +30,9 @@ data = json.loads(require("lexicon/icon-index.json").read_text())
 ids = [entry["id"] for entry in data["icons"]]
 for icon_id in ids:
     require(f"lexicon/svg/{icon_id}.svg")
+entities = json.loads(require("entities/entity-index.json").read_text())
+for entity in entities.get("symbols", []):
+    require(entity["icon_path"])
 for lang in ("fr", "es"):
     require(f"lexicon/i18n/{lang}.json")
 
@@ -38,7 +42,7 @@ for ref in re.findall(r'(?:href|src)="([^"]+)"', html):
         continue
     require(ref.split("?", 1)[0].lstrip("./"))
 app = (ROOT / "app.js").read_text()
-for ref in ("./lexicon/icon-index.json", "./lexicon/i18n/", "./lexicon/svg/" ):
+for ref in ("./lexicon/icon-index.json", "./entities/entity-index.json", "./lexicon/i18n/", "./lexicon/svg/" ):
     if ref not in app:
         raise SystemExit(f"missing runtime reference: {ref}")
 composer = (ROOT / "composer" / "app.mjs").read_text()
@@ -48,4 +52,4 @@ for ref in ("../renderer/browser-renderer.mjs", "./composer-core.mjs", "../rende
 composer_core = (ROOT / "composer" / "composer-core.mjs").read_text()
 if "semantic" in composer_core.lower() and "embedding" in composer_core.lower():
     raise SystemExit("Composer core appears to include forbidden AI/semantic-search language")
-print(f"OK: Pages artifact contains {len(ids)} icons, Composer static app, compatibility metadata, i18n en/es/fr, and local app assets")
+print(f"OK: Pages artifact contains {len(ids)} icons, {len(entities.get('symbols', []))} Entity Symbols, Composer static app, compatibility metadata, i18n en/es/fr, and local app assets")

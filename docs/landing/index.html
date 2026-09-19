@@ -8,6 +8,8 @@
       name="description"
       content="Pictiq is an open visual language built from a small vocabulary of reusable symbols."
     />
+    <link rel="icon" href="./assets/pictiq-logo.svg" type="image/svg+xml" />
+    <script>if (new URLSearchParams(location.search).get("mode") === "pictiq") document.documentElement.dataset.mode = "pictiq";</script>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -25,8 +27,15 @@
         <a href="#publications">Publications</a>
         <a href="https://github.com/markoblogo/pictiq">GitHub ↗</a>
       </nav>
+      <nav class="pictiq-nav" aria-label="Pictiq sections" hidden>
+        <a href="#pictiq-about" aria-label="About"><img src="../lexicon/svg/punct_question.svg" alt="" /></a>
+        <a href="#pictiq-book" aria-label="Handbook"><img src="../lexicon/svg/media_text.svg" alt="" /></a>
+        <a href="#pictiq-composer" aria-label="Composer"><img src="../lexicon/svg/action_combine.svg" alt="" /></a>
+        <a href="#pictiq-publications" aria-label="Publications"><img src="../lexicon/svg/comm_speak.svg" alt="" /></a>
+        <a href="https://github.com/markoblogo/pictiq" aria-label="GitHub"><img src="./assets/entity/github__platform.svg" alt="" /></a>
+      </nav>
       <div class="language-mode" aria-label="Language mode">
-        <button type="button" class="mode-button" data-mode="en" aria-label="English mode" aria-pressed="true">EN</button>
+        <button type="button" class="mode-button mode-english" data-mode="en" aria-label="English mode" aria-pressed="true"><span class="mode-en-label">EN</span><img src="./assets/entity/english__language.svg" alt="" /></button>
         <span aria-hidden="true">|</span>
         <button type="button" class="mode-button mode-symbol" data-mode="pictiq" aria-label="Pictiq mode" aria-pressed="false"><img src="./assets/pictiq-logo.svg" alt="" /></button>
       </div>
@@ -49,8 +58,8 @@
             <a href="#book">Learn more ↓</a>
           </div>
           <dl class="metrics" aria-label="Current project metrics">
-            <div><dt>Ordinary primitives</dt><dd>84</dd></div>
-            <div><dt>Entity Symbols</dt><dd>11</dd></div>
+            <div><dt>Ordinary primitives</dt><dd data-metric="ordinary">87</dd></div>
+            <div><dt>Entity Symbols</dt><dd data-metric="entities">16</dd></div>
             <div><dt>Project</dt><dd>Open source</dd></div>
           </dl>
         </div>
@@ -120,7 +129,7 @@
 
       <section id="lexicon" class="plain-section shell" aria-labelledby="lexicon-title">
         <p class="eyebrow">Lexicon</p>
-        <h2 id="lexicon-title">84 symbols. More meanings.</h2>
+        <h2 id="lexicon-title"><span data-metric="ordinary">87</span> symbols. More meanings.</h2>
         <div class="editorial-text">
           <p>
             Pictiq deliberately keeps the vocabulary small. New meanings are preferably expressed through
@@ -178,23 +187,22 @@
     <main id="pictiq-view" class="pictiq-view mode-view" hidden>
       <section class="pictiq-hero shell" aria-labelledby="pictiq-title">
         <div class="pictiq-copy">
-          <p class="eyebrow"><span class="sequence" aria-label="Good, visual, communication, combine"><img src="../lexicon/svg/qual_good.svg" alt="" /><img src="../lexicon/svg/media_image.svg" alt="" /><img src="../lexicon/svg/comm_speak.svg" alt="" /><img src="../lexicon/svg/action_combine.svg" alt="" /></span></p>
-          <h1 id="pictiq-title">SMALL · VISUAL · COMMUNICATION</h1>
-          <p class="lead">Pictiq combines visual concepts into useful messages. Begin with a small language.</p>
-          <div class="text-actions"><a href="https://github.com/markoblogo/pictiq" aria-label="Open GitHub"><img class="action-symbol" src="./assets/entity/github__platform.svg" alt="" />GitHub ↗</a><a href="#pictiq-book" aria-label="Learn more"><img class="action-symbol" src="../lexicon/svg/punct_question.svg" alt="" />Learn more ↓</a></div>
+          <h1 id="pictiq-title" class="pictiq-statement" aria-label="Small visual communication"><span class="sequence sequence-hero"><img src="../lexicon/svg/rel_lesser.svg" alt="" /><img src="../lexicon/svg/media_image.svg" alt="" /><img src="../lexicon/svg/comm_speak.svg" alt="" /></span></h1>
+          <div class="pictiq-secondary" aria-label="Pictiq small information combine"><img src="./assets/pictiq-logo.svg" alt="" /><img src="../lexicon/svg/rel_lesser.svg" alt="" /><img src="../lexicon/svg/media_text.svg" alt="" /><img src="../lexicon/svg/action_combine.svg" alt="" /></div>
+          <div class="symbol-actions" aria-label="Primary links"><a href="https://github.com/markoblogo/pictiq" aria-label="Open GitHub"><img src="./assets/entity/github__platform.svg" alt="" /></a><a href="#pictiq-book" aria-label="Learn more"><img src="../lexicon/svg/punct_question.svg" alt="" /></a></div>
         </div>
-        <a class="cover-link" href="https://raw.githubusercontent.com/markoblogo/pictiq/main/books/handbook-v1/pictiq-handbook-v1.0.pdf"><img src="https://raw.githubusercontent.com/markoblogo/pictiq/main/books/handbook-v1/cover.png" alt="Pictiq handbook cover" /></a>
+        <a class="cover-link" href="https://raw.githubusercontent.com/markoblogo/pictiq/main/books/handbook-v1/pictiq-handbook-v1.0.pdf" aria-label="Open Pictiq handbook PDF"><img src="https://raw.githubusercontent.com/markoblogo/pictiq/main/books/handbook-v1/cover.png" alt="Pictiq handbook cover" /></a>
       </section>
 
-      <section class="plain-section shell" aria-labelledby="pictiq-about-title"><span class="eyebrow">About</span><h2 id="pictiq-about-title"><span class="sequence" aria-label="Pictiq, small"><img src="./assets/pictiq-logo.svg" alt="Pictiq" /><img src="../lexicon/svg/rel_lesser.svg" alt="Small" /></span></h2><div class="editorial-text"><p>Pictiq stays small on purpose.</p><p class="sequence-label">SMALL · INFORMATION · COMBINE</p></div></section>
+      <section id="pictiq-about" class="pictiq-section pictiq-about shell" aria-labelledby="pictiq-about-title"><h2 id="pictiq-about-title" class="pictiq-statement" aria-label="Pictiq small"><span class="sequence sequence-section"><img src="./assets/pictiq-logo.svg" alt="" /><img src="../lexicon/svg/rel_lesser.svg" alt="" /></span></h2><div class="pictiq-secondary" aria-label="Information combine"><img src="../lexicon/svg/media_text.svg" alt="" /><img src="../lexicon/svg/action_combine.svg" alt="" /></div></section>
 
-      <section id="pictiq-book" class="split-section shell" aria-labelledby="pictiq-book-title"><div class="section-media book-media"><img src="https://raw.githubusercontent.com/markoblogo/pictiq/main/books/handbook-v1/cover.png" alt="Pictiq handbook cover" /></div><div class="section-copy"><p class="eyebrow">BOOK · INFORMATION</p><h2 id="pictiq-book-title">VISUAL INFORMATION · SMALL COMMUNICATION</h2><div class="text-actions"><a href="https://raw.githubusercontent.com/markoblogo/pictiq/main/books/handbook-v1/pictiq-handbook-v1.0.pdf"><img class="action-symbol" src="./assets/entity/pdf__format.svg" alt="" />PDF ↗</a><a href="https://raw.githubusercontent.com/markoblogo/pictiq/main/books/handbook-v1/pictiq-handbook-v1.0.epub">EPUB ↗</a><a href="https://github.com/markoblogo/pictiq/tree/main/books/handbook-v1"><img class="action-symbol" src="./assets/entity/github__platform.svg" alt="" />View book on GitHub ↗</a></div></div></section>
+      <section id="pictiq-book" class="pictiq-section pictiq-book shell" aria-labelledby="pictiq-book-title"><div class="section-media book-media"><img src="https://raw.githubusercontent.com/markoblogo/pictiq/main/books/handbook-v1/cover.png" alt="Pictiq handbook cover" /></div><div class="section-copy"><h2 id="pictiq-book-title" class="pictiq-statement" aria-label="Pictiq visual information small communication"><span class="sequence sequence-section"><img src="./assets/pictiq-logo.svg" alt="" /><img src="../lexicon/svg/media_image.svg" alt="" /><img src="../lexicon/svg/media_text.svg" alt="" /><img src="../lexicon/svg/rel_lesser.svg" alt="" /><img src="../lexicon/svg/comm_speak.svg" alt="" /></span></h2><div class="symbol-actions" aria-label="Book links"><a href="https://raw.githubusercontent.com/markoblogo/pictiq/main/books/handbook-v1/pictiq-handbook-v1.0.pdf" aria-label="Download handbook PDF"><img src="./assets/entity/pdf__format.svg" alt="" /></a><a href="https://github.com/markoblogo/pictiq/tree/main/books/handbook-v1" aria-label="View handbook on GitHub"><img src="./assets/entity/github__platform.svg" alt="" /></a></div></div></section>
 
-      <section class="split-section shell" aria-labelledby="pictiq-composer-title"><div class="section-copy"><p class="eyebrow"><span class="sequence" aria-label="Write Pictiq"><img src="../lexicon/svg/action_write.svg" alt="" /><img src="./assets/pictiq-logo.svg" alt="Pictiq" /></span></p><h2 id="pictiq-composer-title">WRITE PICTIQ.</h2><p class="sequence-label">VISUAL · COMMUNICATION · COMBINE</p><div class="text-actions"><a href="../composer/" aria-label="Open Composer"><img class="action-symbol" src="../lexicon/svg/action_combine.svg" alt="" />Open Composer ↗</a></div></div><div class="composer-sample" role="img" aria-label="Water and question"><div class="message-row"><span class="sample-tile"><img src="../lexicon/svg/need_water.svg" alt="" /></span><span class="sample-tile"><img src="../lexicon/svg/punct_question.svg" alt="" /></span></div></div></section>
+      <section id="pictiq-composer" class="pictiq-section pictiq-composer shell" aria-labelledby="pictiq-composer-title"><div class="section-copy"><h2 id="pictiq-composer-title" class="pictiq-statement" aria-label="Write Pictiq"><span class="sequence sequence-section"><img src="../lexicon/svg/action_write.svg" alt="" /><img src="./assets/pictiq-logo.svg" alt="" /></span></h2><div class="pictiq-secondary" aria-label="Visual communication combine"><img src="../lexicon/svg/media_image.svg" alt="" /><img src="../lexicon/svg/comm_speak.svg" alt="" /><img src="../lexicon/svg/action_combine.svg" alt="" /></div><div class="symbol-actions" aria-label="Open Composer"><a href="../composer/" aria-label="Open Composer"><img src="../lexicon/svg/action_combine.svg" alt="" /></a></div></div><div class="composer-sample" role="img" aria-label="Water and question"><div class="message-row"><span class="sample-tile"><img src="../lexicon/svg/need_water.svg" alt="" /></span><span class="sample-tile"><img src="../lexicon/svg/punct_question.svg" alt="" /></span></div></div></section>
 
-      <section class="plain-section shell" aria-labelledby="pictiq-publications-title"><span class="eyebrow"><span class="sequence" aria-label="Write and communicate"><img src="../lexicon/svg/action_write.svg" alt="" /><img src="../lexicon/svg/comm_speak.svg" alt="" /></span></span><h2 id="pictiq-publications-title">PUBLIC NOTES.</h2><div class="publication-list"><article><h3>PERSON · WRITE · SMALL · VISUAL COMMUNICATION</h3><div class="text-actions"><a href="https://abvcreative.medium.com/i-built-a-tiny-visual-protocol-for-when-words-are-too-much-9c86ac61bd73"><img class="action-symbol" src="./assets/entity/medium__platform.svg" alt="" />Medium ↗</a><a href="https://abvx.substack.com/p/i-built-a-tiny-visual-protocol-for"><img class="action-symbol" src="./assets/entity/substack__platform.svg" alt="" />Substack ↗</a></div></article><article><h3>PICTIQ · WRITE</h3><div class="text-actions"><a href="https://abvcreative.medium.com/pictiq-can-now-be-written-not-just-viewed-bea970f09f00"><img class="action-symbol" src="./assets/entity/medium__platform.svg" alt="" />Medium ↗</a><a href="https://abvx.substack.com/p/pictiq-can-now-be-written-not-just"><img class="action-symbol" src="./assets/entity/substack__platform.svg" alt="" />Substack ↗</a></div></article></div></section>
+      <section id="pictiq-publications" class="pictiq-section pictiq-publications shell" aria-labelledby="pictiq-publications-title"><h2 id="pictiq-publications-title" class="pictiq-statement" aria-label="Write and communication"><span class="sequence sequence-section"><img src="../lexicon/svg/action_write.svg" alt="" /><img src="../lexicon/svg/comm_speak.svg" alt="" /></span></h2><div class="publication-list"><article><h3 class="pictiq-statement" aria-label="Author writes small visual communication"><span class="sequence sequence-article"><img src="../entities/svg/anton-biletskyi-volokh__personal.svg" alt="" /><img src="../lexicon/svg/action_write.svg" alt="" /><img src="../lexicon/svg/rel_lesser.svg" alt="" /><img src="../lexicon/svg/media_image.svg" alt="" /><img src="../lexicon/svg/comm_speak.svg" alt="" /></span></h3><div class="symbol-actions" aria-label="Publication on Medium and Substack"><a href="https://abvcreative.medium.com/i-built-a-tiny-visual-protocol-for-when-words-are-too-much-9c86ac61bd73" aria-label="Read on Medium"><img src="./assets/entity/medium__platform.svg" alt="" /></a><a href="https://abvx.substack.com/p/i-built-a-tiny-visual-protocol-for" aria-label="Read on Substack"><img src="./assets/entity/substack__platform.svg" alt="" /></a></div></article><article><h3 class="pictiq-statement" aria-label="Pictiq writes"><span class="sequence sequence-article"><img src="./assets/pictiq-logo.svg" alt="" /><img src="../lexicon/svg/action_write.svg" alt="" /></span></h3><div class="symbol-actions" aria-label="Publication on Medium and Substack"><a href="https://abvcreative.medium.com/pictiq-can-now-be-written-not-just-viewed-bea970f09f00" aria-label="Read on Medium"><img src="./assets/entity/medium__platform.svg" alt="" /></a><a href="https://abvx.substack.com/p/pictiq-can-now-be-written-not-just" aria-label="Read on Substack"><img src="./assets/entity/substack__platform.svg" alt="" /></a></div></article></div></section>
 
-      <footer class="footer"><div class="footer-inner shell"><div class="footer-brand"><img src="./assets/pictiq-logo.svg" alt="Pictiq" /><span>© 2026 Anton Biletskyi-Volokh</span></div><nav aria-label="Pictiq footer links"><a href="https://github.com/markoblogo/pictiq">GitHub</a><a href="../composer/">Composer</a><a href="#pictiq-book">Book</a></nav></div></footer>
+      <footer class="footer"><div class="footer-inner shell"><div class="footer-brand" aria-label="Pictiq and Anton Biletskyi-Volokh"><img src="./assets/pictiq-logo.svg" alt="" /><img src="../entities/svg/anton-biletskyi-volokh__personal.svg" alt="" /></div><nav aria-label="Pictiq footer links"><a href="https://github.com/markoblogo/pictiq" aria-label="GitHub"><img src="./assets/entity/github__platform.svg" alt="" /></a><a href="../composer/" aria-label="Composer"><img src="../lexicon/svg/action_combine.svg" alt="" /></a><a href="#pictiq-book" aria-label="Handbook"><img src="../lexicon/svg/media_text.svg" alt="" /></a></nav></div></footer>
     </main>
 
     <script src="./landing.js"></script>

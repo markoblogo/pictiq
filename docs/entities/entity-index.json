@@ -1,0 +1,402 @@
+{
+  "schema_version": "0.1",
+  "status": "OFFICIAL PICTIQ PROJECT ENTITY-SYMBOL EXAMPLES / ACCEPTED / NOT CORE LEXICON",
+  "symbols": [
+    {
+      "id": "entity:anton-biletskyi-volokh@personal",
+      "namespace": "personal",
+      "slug": "anton-biletskyi-volokh__personal",
+      "display_name": "Anton Biletskyi-Volokh",
+      "entity_type": "person",
+      "entity_class": "living_person",
+      "aliases": [
+        "Anton",
+        "Anton Biletskyi",
+        "Anton Biletskyi-Volokh"
+      ],
+      "authority": "self-defined",
+      "provenance": {
+        "source": "self-supplied personal logo adapted to Pictiq framing",
+        "source_crop_path": "inputs/silhouettes/entity-symbols/anton-biletskyi-volokh__personal.png",
+        "visual_source": "approved personal-icons reference image supplied for this pilot"
+      },
+      "icon_path": "entities/svg/anton-biletskyi-volokh__personal.svg",
+      "status": "ACCEPTED_OFFICIAL_PICTIQ_PROJECT_EXAMPLE",
+      "visual_cues": [
+        "self-supplied monogram/logo"
+      ],
+      "governance": "A living person's self-defined symbol has preferred authority where practical.",
+      "notes": "Technical adaptation preserves the supplied logo geometry and converts meaningful non-background components to monochrome black."
+    },
+    {
+      "id": "entity:odysseus@literary",
+      "namespace": "literary",
+      "slug": "odysseus__literary",
+      "display_name": "Odysseus",
+      "entity_type": "person",
+      "entity_class": "literary_entity",
+      "aliases": [
+        "Odysseus",
+        "Ulysses"
+      ],
+      "authority": "project-scoped associative example",
+      "provenance": {
+        "source": "approved generated associative reference symbol",
+        "source_crop_path": "inputs/silhouettes/entity-symbols/odysseus__literary.png",
+        "visual_source": "approved personal-icons reference image supplied for this pilot"
+      },
+      "icon_path": "entities/svg/odysseus__literary.svg",
+      "status": "ACCEPTED_OFFICIAL_PICTIQ_PROJECT_EXAMPLE",
+      "visual_cues": [
+        "ancient traveler head",
+        "head covering",
+        "beard",
+        "waves"
+      ],
+      "governance": "Project-scoped literary example; does not claim universal ownership of Odysseus representation.",
+      "notes": "Waves are associative identification cues, not lexical semantics for sea or travel."
+    },
+    {
+      "id": "entity:william-shakespeare@historical",
+      "namespace": "historical",
+      "slug": "william-shakespeare__historical",
+      "display_name": "William Shakespeare",
+      "entity_type": "person",
+      "entity_class": "historical_literary_entity",
+      "aliases": [
+        "William Shakespeare",
+        "Shakespeare"
+      ],
+      "authority": "project-scoped associative example",
+      "provenance": {
+        "source": "approved generated associative reference symbol",
+        "source_crop_path": "inputs/silhouettes/entity-symbols/william-shakespeare__historical.png",
+        "visual_source": "approved personal-icons reference image supplied for this pilot"
+      },
+      "icon_path": "entities/svg/william-shakespeare__historical.svg",
+      "status": "ACCEPTED_OFFICIAL_PICTIQ_PROJECT_EXAMPLE",
+      "visual_cues": [
+        "bald head silhouette",
+        "side hair",
+        "moustache",
+        "collar"
+      ],
+      "governance": "Project-scoped historical/literary example; reusable inside Pictiq demos after visual acceptance.",
+      "notes": "The symbol identifies the named entity; it does not encode writing, books, or English literature as lexical concepts."
+    },
+    {
+      "id": "entity:albert-einstein@historical",
+      "namespace": "historical",
+      "slug": "albert-einstein__historical",
+      "display_name": "Albert Einstein",
+      "entity_type": "person",
+      "entity_class": "historical_entity",
+      "aliases": [
+        "Albert Einstein",
+        "Einstein"
+      ],
+      "authority": "project-scoped associative example",
+      "provenance": {
+        "source": "approved generated associative reference symbol",
+        "source_crop_path": "inputs/silhouettes/entity-symbols/albert-einstein__historical.png",
+        "visual_source": "approved personal-icons reference image supplied for this pilot"
+      },
+      "icon_path": "entities/svg/albert-einstein__historical.svg",
+      "status": "ACCEPTED_OFFICIAL_PICTIQ_PROJECT_EXAMPLE",
+      "visual_cues": [
+        "wild hair",
+        "simplified face",
+        "moustache"
+      ],
+      "governance": "Project-scoped historical example; does not use formulas or scientific notation as identity text.",
+      "notes": "Hair is an associative identification cue, not the symbol's lexical meaning."
+    },
+    {
+      "id": "entity:leonardo-da-vinci@historical",
+      "namespace": "historical",
+      "slug": "leonardo-da-vinci__historical",
+      "display_name": "Leonardo da Vinci",
+      "entity_type": "person",
+      "entity_class": "historical_entity",
+      "aliases": [
+        "Leonardo",
+        "Leonardo da Vinci",
+        "da Vinci"
+      ],
+      "authority": "project-scoped associative example",
+      "provenance": {
+        "source": "approved generated associative reference symbol",
+        "source_crop_path": "inputs/silhouettes/entity-symbols/leonardo-da-vinci__historical.png",
+        "visual_source": "approved personal-icons reference image supplied for this pilot"
+      },
+      "icon_path": "entities/svg/leonardo-da-vinci__historical.svg",
+      "status": "ACCEPTED_OFFICIAL_PICTIQ_PROJECT_EXAMPLE",
+      "visual_cues": [
+        "head covering",
+        "long hair",
+        "long beard"
+      ],
+      "governance": "Project-scoped historical example; avoids external artworks or readable text.",
+      "notes": "The symbol identifies Leonardo da Vinci; it does not encode art, invention, or a specific artwork."
+    },
+    {
+      "id": "entity:siddhartha-gautama-buddha@historical",
+      "namespace": "historical",
+      "slug": "siddhartha-gautama-buddha__historical",
+      "display_name": "Buddha / Siddhartha Gautama",
+      "entity_type": "person",
+      "entity_class": "historical_entity",
+      "aliases": [
+        "Buddha",
+        "Siddhartha Gautama",
+        "Gautama Buddha"
+      ],
+      "authority": "project-scoped associative example",
+      "provenance": {
+        "source": "approved generated associative reference symbol",
+        "source_crop_path": "inputs/silhouettes/entity-symbols/siddhartha-gautama-buddha__historical.png",
+        "visual_source": "approved personal-icons reference image supplied for this pilot"
+      },
+      "icon_path": "entities/svg/siddhartha-gautama-buddha__historical.svg",
+      "status": "ACCEPTED_OFFICIAL_PICTIQ_PROJECT_EXAMPLE",
+      "visual_cues": [
+        "calm face",
+        "topknot",
+        "forehead mark",
+        "ear shapes"
+      ],
+      "governance": "Project-scoped historical example subject to correct entity naming and respectful contextual use.",
+      "notes": "The symbol identifies the named entity; it is not a tile for Buddhism, religion, meditation, peace, or teaching."
+    },
+    {
+      "id": "entity:poseidon@odyssey",
+      "namespace": "odyssey",
+      "slug": "poseidon__odyssey",
+      "display_name": "Poseidon",
+      "entity_type": "mythological_entity",
+      "entity_class": "odyssey_mythological_entity",
+      "aliases": [
+        "Poseidon"
+      ],
+      "authority": "project-scoped associative example",
+      "provenance": {
+        "source": "human-accepted Odyssey Stage 2B associative reference symbol",
+        "source_crop_path": "inputs/silhouettes/entity-symbols/poseidon__odyssey.png",
+        "visual_source": "accepted mythological-entities Odyssey Stage 2B reference sheet supplied for this pass"
+      },
+      "icon_path": "entities/svg/poseidon__odyssey.svg",
+      "status": "ACCEPTED_OFFICIAL_PICTIQ_PROJECT_EXAMPLE",
+      "visual_cues": [
+        "trident",
+        "waves",
+        "sea association"
+      ],
+      "governance": "Project-scoped Odyssey example; identifies the named entity inside the Odyssey namespace and does not create ordinary lexical primitives from its visual associations.",
+      "notes": "God of the sea, storms, and earthquakes in the Odyssey context. The trident and waves are associative identity cues, not ordinary lexical primitives."
+    },
+    {
+      "id": "entity:zeus@odyssey",
+      "namespace": "odyssey",
+      "slug": "zeus__odyssey",
+      "display_name": "Zeus",
+      "entity_type": "mythological_entity",
+      "entity_class": "odyssey_mythological_entity",
+      "aliases": [
+        "Zeus"
+      ],
+      "authority": "project-scoped associative example",
+      "provenance": {
+        "source": "human-accepted Odyssey Stage 2B associative reference symbol",
+        "source_crop_path": "inputs/silhouettes/entity-symbols/zeus__odyssey.png",
+        "visual_source": "accepted mythological-entities Odyssey Stage 2B reference sheet supplied for this pass"
+      },
+      "icon_path": "entities/svg/zeus__odyssey.svg",
+      "status": "ACCEPTED_OFFICIAL_PICTIQ_PROJECT_EXAMPLE",
+      "visual_cues": [
+        "cloud",
+        "lightning",
+        "sky association"
+      ],
+      "governance": "Project-scoped Odyssey example; identifies the named entity inside the Odyssey namespace and does not create ordinary lexical primitives from its visual associations.",
+      "notes": "King of the gods in the Odyssey context. Cloud and lightning cues identify Zeus; they do not add generic god, thunder, or storm primitives."
+    },
+    {
+      "id": "entity:saturn@odyssey",
+      "namespace": "odyssey",
+      "slug": "saturn__odyssey",
+      "display_name": "Saturn",
+      "entity_type": "mythological_entity",
+      "entity_class": "odyssey_mythological_entity",
+      "aliases": [
+        "Saturn",
+        "Cronus",
+        "Kronos"
+      ],
+      "authority": "project-scoped associative example",
+      "provenance": {
+        "source": "human-accepted Odyssey Stage 2B associative reference symbol",
+        "source_crop_path": "inputs/silhouettes/entity-symbols/saturn__odyssey.png",
+        "visual_source": "accepted mythological-entities Odyssey Stage 2B reference sheet supplied for this pass"
+      },
+      "icon_path": "entities/svg/saturn__odyssey.svg",
+      "status": "ACCEPTED_OFFICIAL_PICTIQ_PROJECT_EXAMPLE",
+      "visual_cues": [
+        "crescent sickle",
+        "celestial disc"
+      ],
+      "governance": "Project-scoped Odyssey example; identifies the named entity inside the Odyssey namespace and does not create ordinary lexical primitives from its visual associations.",
+      "notes": "Mythological/cultural entity used for time/harvest association in the Odyssey research set. The sickle and disc are identity cues, not separate lexical symbols."
+    },
+    {
+      "id": "entity:polyphemus@odyssey",
+      "namespace": "odyssey",
+      "slug": "polyphemus__odyssey",
+      "display_name": "Polyphemus",
+      "entity_type": "mythological_entity",
+      "entity_class": "odyssey_mythological_entity",
+      "aliases": [
+        "Polyphemus"
+      ],
+      "authority": "project-scoped associative example",
+      "provenance": {
+        "source": "human-accepted Odyssey Stage 2B associative reference symbol",
+        "source_crop_path": "inputs/silhouettes/entity-symbols/polyphemus__odyssey.png",
+        "visual_source": "accepted mythological-entities Odyssey Stage 2B reference sheet supplied for this pass"
+      },
+      "icon_path": "entities/svg/polyphemus__odyssey.svg",
+      "status": "ACCEPTED_OFFICIAL_PICTIQ_PROJECT_EXAMPLE",
+      "visual_cues": [
+        "single eye",
+        "cave-like mass"
+      ],
+      "governance": "Project-scoped Odyssey example; identifies the named entity inside the Odyssey namespace and does not create ordinary lexical primitives from its visual associations.",
+      "notes": "The cyclops encountered by Odysseus. The one-eye/cave silhouette identifies this named entity, not a general CYCLOPS or CAVE primitive."
+    },
+    {
+      "id": "entity:calypso@odyssey",
+      "namespace": "odyssey",
+      "slug": "calypso__odyssey",
+      "display_name": "Calypso",
+      "entity_type": "mythological_entity",
+      "entity_class": "odyssey_mythological_entity",
+      "aliases": [
+        "Calypso"
+      ],
+      "authority": "project-scoped associative example",
+      "provenance": {
+        "source": "human-accepted Odyssey Stage 2B associative reference symbol",
+        "source_crop_path": "inputs/silhouettes/entity-symbols/calypso__odyssey.png",
+        "visual_source": "accepted mythological-entities Odyssey Stage 2B reference sheet supplied for this pass"
+      },
+      "icon_path": "entities/svg/calypso__odyssey.svg",
+      "status": "ACCEPTED_OFFICIAL_PICTIQ_PROJECT_EXAMPLE",
+      "visual_cues": [
+        "sea cave",
+        "waves",
+        "island/ocean association"
+      ],
+      "governance": "Project-scoped Odyssey example; identifies the named entity inside the Odyssey namespace and does not create ordinary lexical primitives from its visual associations.",
+      "notes": "The nymph associated with keeping Odysseus on her island. Cave and waves identify this named entity, not generic island, woman, cave, or sea tiles."
+    },
+    {
+      "id": "entity:github@landing",
+      "namespace": "landing",
+      "slug": "github__landing",
+      "display_name": "GitHub",
+      "entity_type": "organization",
+      "entity_class": "named_platform",
+      "aliases": ["GitHub"],
+      "authority": "project-scoped associative example",
+      "provenance": {
+        "source": "human-approved landing Entity Symbol proposal sheet",
+        "source_crop_path": "inputs/silhouettes/entity-symbols/github__platform.png",
+        "visual_source": "approved GitHub/Octocat silhouette from supplied landing entity sheet"
+      },
+      "icon_path": "entities/svg/github__platform.svg",
+      "status": "ACCEPTED_OFFICIAL_PICTIQ_PROJECT_EXAMPLE",
+      "visual_cues": ["GitHub/Octocat-style silhouette"],
+      "governance": "Landing-scoped named platform identifier; not an ordinary code, repository, software, or developer primitive.",
+      "notes": "The silhouette identifies GitHub as a named platform only."
+    },
+    {
+      "id": "entity:english@landing",
+      "namespace": "landing",
+      "slug": "english__landing",
+      "display_name": "English",
+      "entity_type": "language",
+      "entity_class": "named_language_identifier",
+      "aliases": ["English", "English language"],
+      "authority": "project-scoped associative example",
+      "provenance": {
+        "source": "human-approved landing Entity Symbol proposal sheet",
+        "source_crop_path": "inputs/silhouettes/entity-symbols/english__language.png",
+        "visual_source": "approved Union Jack / UK flag visual from supplied landing entity sheet"
+      },
+      "icon_path": "entities/svg/english__language.svg",
+      "status": "ACCEPTED_OFFICIAL_PICTIQ_PROJECT_EXAMPLE",
+      "visual_cues": ["Union Jack / UK flag"],
+      "governance": "Landing-scoped named language identifier; not a generic language, country, communication, or person primitive.",
+      "notes": "The flag identifies the English-language mode on the landing."
+    },
+    {
+      "id": "entity:pdf@landing",
+      "namespace": "landing",
+      "slug": "pdf__landing",
+      "display_name": "PDF",
+      "entity_type": "file_format",
+      "entity_class": "named_technical_format",
+      "aliases": ["PDF", "Portable Document Format"],
+      "authority": "project-scoped associative example",
+      "provenance": {
+        "source": "human-approved landing Entity Symbol proposal sheet",
+        "source_crop_path": "inputs/silhouettes/entity-symbols/pdf__format.png",
+        "visual_source": "approved PDF-file visual from supplied landing entity sheet"
+      },
+      "icon_path": "entities/svg/pdf__format.svg",
+      "status": "ACCEPTED_OFFICIAL_PICTIQ_PROJECT_EXAMPLE",
+      "visual_cues": ["PDF document mark"],
+      "governance": "Landing-scoped exact technical format identifier; not a generic document, text, book, or download primitive.",
+      "notes": "Use with a download action where useful; exact format labels may remain textual."
+    },
+    {
+      "id": "entity:medium@landing",
+      "namespace": "landing",
+      "slug": "medium__landing",
+      "display_name": "Medium",
+      "entity_type": "organization",
+      "entity_class": "named_publication_platform",
+      "aliases": ["Medium"],
+      "authority": "project-scoped associative example",
+      "provenance": {
+        "source": "human-approved landing Entity Symbol proposal sheet",
+        "source_crop_path": "inputs/silhouettes/entity-symbols/medium__platform.png",
+        "visual_source": "approved Medium visual from supplied landing entity sheet"
+      },
+      "icon_path": "entities/svg/medium__platform.svg",
+      "status": "ACCEPTED_OFFICIAL_PICTIQ_PROJECT_EXAMPLE",
+      "visual_cues": ["Medium wordmark geometry"],
+      "governance": "Landing-scoped named publication platform identifier; not a generic publication, article, writing, or communication primitive.",
+      "notes": "The approved abstract mark identifies Medium as a named platform."
+    },
+    {
+      "id": "entity:substack@landing",
+      "namespace": "landing",
+      "slug": "substack__landing",
+      "display_name": "Substack",
+      "entity_type": "organization",
+      "entity_class": "named_publication_platform",
+      "aliases": ["Substack"],
+      "authority": "project-scoped associative example",
+      "provenance": {
+        "source": "human-approved landing Entity Symbol proposal sheet",
+        "source_crop_path": "inputs/silhouettes/entity-symbols/substack__platform.png",
+        "visual_source": "approved Substack visual from supplied landing entity sheet"
+      },
+      "icon_path": "entities/svg/substack__platform.svg",
+      "status": "ACCEPTED_OFFICIAL_PICTIQ_PROJECT_EXAMPLE",
+      "visual_cues": ["Substack bookmark mark"],
+      "governance": "Landing-scoped named publication platform identifier; not a generic newsletter, publication, writing, or communication primitive.",
+      "notes": "The approved mark identifies Substack as a named platform."
+    }
+  ]
+}

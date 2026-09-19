@@ -3,6 +3,28 @@
   const pictiqView = document.getElementById('pictiq-view');
   const modeButtons = [...document.querySelectorAll('[data-mode]')];
   const nav = document.querySelector('.nav');
+  const pictiqNav = document.querySelector('.pictiq-nav');
+
+  async function hydrateMetrics() {
+    try {
+      const [lexiconResponse, entityResponse] = await Promise.all([
+        fetch('../lexicon/icon-index.json', { cache: 'no-store' }),
+        fetch('../entities/entity-index.json', { cache: 'no-store' }),
+      ]);
+      if (!lexiconResponse.ok || !entityResponse.ok) return;
+      const [lexicon, entities] = await Promise.all([lexiconResponse.json(), entityResponse.json()]);
+      const counts = {
+        ordinary: Array.isArray(lexicon.icons) ? lexicon.icons.length : null,
+        entities: Array.isArray(entities.symbols) ? entities.symbols.length : null,
+      };
+      document.querySelectorAll('[data-metric]').forEach((node) => {
+        const value = counts[node.dataset.metric];
+        if (Number.isInteger(value)) node.textContent = String(value);
+      });
+    } catch (_) {
+      // Checked-in counts remain the safe static fallback for offline viewing.
+    }
+  }
 
   function setMode(mode, { updateUrl = true } = {}) {
     const pictiq = mode === 'pictiq';
@@ -10,6 +32,7 @@
     englishView.hidden = pictiq;
     pictiqView.hidden = !pictiq;
     if (nav) nav.hidden = pictiq;
+    if (pictiqNav) pictiqNav.hidden = !pictiq;
     modeButtons.forEach((button) => {
       const active = button.dataset.mode === (pictiq ? 'pictiq' : 'en');
       button.setAttribute('aria-pressed', String(active));
@@ -26,6 +49,7 @@
 
   modeButtons.forEach((button) => button.addEventListener('click', () => setMode(button.dataset.mode)));
   setMode(new URLSearchParams(window.location.search).get('mode') === 'pictiq' ? 'pictiq' : 'en', { updateUrl: false });
+  hydrateMetrics();
 
   const card = document.querySelector('.book-tilt');
   if (!card || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;

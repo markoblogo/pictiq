@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><clipPath id="icon-clip"><rect x="2" y="2" width="28" height="28" rx="3.8" ry="3.8" /></clipPath></defs><g id="frame"><rect x="1" y="1" width="30" height="30" rx="4.8" ry="4.8" stroke="currentColor" stroke-width="2" fill="none" /></g><g id="icon" clip-path="url(#icon-clip)"><g id="shape_saturn__odyssey" transform="translate(6.400749 5.000000) scale(0.082397)"><g transform="translate(0.000000,267.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
+<path d="M1325 2543 c-273 -14 -534 -98 -749 -241 -155 -103 -319 -297 -386 -458 -54 -130 -65 -187 -64 -329 1 -118 4 -139 32 -225 78 -236 258 -442 487 -557 85 -43 214 -82 296 -89 l70 -7 93 -121 c51 -67 132 -176 181 -243 95 -132 122 -153 195 -153 102 0 180 100 151 195 -7 23 -287 411 -378 523 -11 14 -41 28 -78 37 -86 22 -230 94 -297 149 -114 93 -203 228 -249 376 -31 97 -33 298 -5 400 89 326 373 601 725 703 118 34 111 48 -24 40z" />
+<path d="M1628 2225 c-79 -21 -138 -55 -204 -118 -188 -175 -196 -451 -19 -636 209 -220 550 -193 729 56 57 80 79 161 74 274 -4 81 -10 107 -36 163 -37 79 -130 181 -200 219 -99 54 -239 71 -344 42z" />
+</g>
+</g></g></svg>
