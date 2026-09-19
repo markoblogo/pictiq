@@ -309,3 +309,11 @@ This is a functioning self-referential landing experiment, not proof of universa
 The final import workflow is: human-approved source → faithful reconstruction → source-relative fitting → visual QA → human acceptance → canonicalization → public/generated synchronization. Earlier calibration and forensic work remains preserved research history. The Inspo pilot remains a design-reference finding: approach the landing as a type specimen / glyph system / visual-system specimen that functions as a website, not as a conventional SaaS landing decorated with icons.
 
 `Can a Visual Language Explain Itself?` is now **PUBLICATION MILESTONE: READY / BACKLOG**. Its earliest normal publication date is 2026-09-20 because Composer / Public Authoring was published on 2026-09-13 under the default seven-day cadence. This record does not publish an article.
+
+## Production custom-domain configuration — 2026-09-19
+
+Status: **DOMAIN CONFIGURED / PROPAGATION PENDING**.
+
+GitHub Pages is configured with `pictiq.abvx.xyz` through the committed `docs/CNAME`; its root now serves the English landing, with `?mode=pictiq`, `/composer/`, `/lexicon/`, and legacy `/landing/` retained. Cloudflare contains exactly one new DNS-only CNAME: `pictiq.abvx.xyz` → `markoblogo.github.io` (TTL Auto). No existing DNS record was changed.
+
+At the recorded verification time, GitHub Pages had accepted the custom domain and redirected its project URL to it, while Cloudflare's authoritative DNS endpoint still returned NXDOMAIN for the new hostname. HTTPS is therefore not yet verified and this deployment record must not be read as a completed public-domain launch. No tag or release was created.
