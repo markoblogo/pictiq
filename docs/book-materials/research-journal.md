@@ -1188,3 +1188,25 @@ and the implementation record is in
 This is an implementation/visual-alignment record only. It does not merge Entity
 Symbols into ordinary vocabulary or change grammar, Message Schema, Shorthand,
 Renderer semantics, Composer behavior, Numeric Notation, packs, or profiles.
+## 2026-09-19 — Pictiq Landing Translation v0.1 implementation
+
+The first complete human-reviewed reference translation was implemented locally
+as a static `EN | Pictiq` mode switch. English remains the accepted baseline;
+Pictiq mode is intentionally shorter and uses canonical SVG sequences, compact
+semantic headings, exact technical text fallbacks, and accepted landing Entity
+Symbols. The Lexicon remains an English/reference destination and is omitted
+from Pictiq-mode navigation and content.
+
+The switch is deterministic and linkable at `docs/landing/?mode=pictiq`, uses
+keyboard-accessible buttons with explicit labels, and preserves approximate
+scroll position. No runtime AI translation, vocabulary expansion, grammar,
+notation, pack, Renderer, Composer, or Message Schema change was made. The
+current frozen counts remain 87 ordinary primitives and 16 Entity Symbols.
+
+Analytical zero-training statuses and the implementation pressure log are
+recorded in [landing translation findings](research/landing-translation-findings-2026-09.md);
+the implementation and QA matrix are in [Landing Translation v0.1](../research/landing-translation-v0.1/README.md).
+
+Recommendation: keep **Can a Visual Language Explain Itself?** as a publication
+milestone **CANDIDATE** until human visual/semantic review of both modes is
+complete. Successful rendering alone does not promote it to READY.

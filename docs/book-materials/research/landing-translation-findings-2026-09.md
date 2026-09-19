@@ -1,6 +1,6 @@
 # Landing translation findings — 2026-09
 
-> Status: accepted research and book-material record; the Pictiq landing translation itself remains unimplemented.
+> Status: human-reviewed reference translation implemented locally; pending visual and semantic acceptance. No publication status is promoted by this pass.
 
 ## Source and pressure
 
@@ -37,5 +37,18 @@ Shorter goal-first messages may reduce decoding burden for a receiver with no pr
 
 The short/long/high/low arrow notation idea remains a `DEFERRED NOTATION HYPOTHESIS`; current landing work can use `SMALL + COMMUNICATION` for short messages. Entity-symbol pressure was observed for Composer, GitHub, English/England, PDF, EPUB, Medium, and Substack. These are candidates for a dedicated Entity Symbol pass, not additions here.
 
-The landing translation/deployment remains `PUBLICATION MILESTONE CANDIDATE`, with the possible angle **Can a Visual Language Explain Itself?** It is not READY and no translation layer is implemented.
+The landing translation/deployment remains `PUBLICATION MILESTONE CANDIDATE`, with the possible angle **Can a Visual Language Explain Itself?** Rendering is substantive and linkable, but READY remains a human-review decision.
 
+## Implemented translation pressure log
+
+| English source | Semantic intent | Pictiq representation | Context / omission / fallback | Compression | Outcome | Zero-training observation | Vocabulary pressure | Final decision |
+|---|---|---|---|---|---|---|---|---|
+| Hero meta and headline | small visual communication | `qual_good + media_image + comm_speak + action_combine`; `rel_lesser + media_image + comm_speak` | Rhetorical “when words are too much” omitted | compressed | short identity and purpose | likely transparent with context | none | implemented |
+| Hero description | visual concepts combine into useful messages | `media_image + comm_speak + action_combine` | machines/systems/protocol omitted | compressed | functional explanation | context-dependent | none | implemented |
+| About | small by design | Pictiq mark + `rel_lesser` | Explanatory paragraphs omitted | intentional omission | concise principle | context-dependent | none | implemented |
+| Zero-training claim | begin with minimal prior learning | compact text fallback | No canonical zero rendering added; no claim of proven comprehension | text fallback | avoids overclaim | unclear | `0 + action_learn` pressure candidate | omitted from visible Pictiq mode |
+| Book | visual information for short communication | text fallback + PDF Entity Symbol | EPUB remains text fallback; exact URLs retained | compressed | preserves useful download actions | context-dependent | none | implemented |
+| Composer | write/combine Pictiq messages | `action_write` + Pictiq mark; `action_combine` action | browser/workspace/vocabulary omitted | compressed | direct authoring path | context-dependent | none | implemented |
+| Lexicon | English reference destination | omitted from Pictiq navigation and page | English mode retains full Lexicon | intentional omission | keeps Pictiq mode short | learned convention likely required | none | implemented |
+| Publications | public notes and project writing | `action_write + comm_speak`; Medium/Substack Entity Symbols | full article titles compressed; links and labels retained | compressed | publication destinations remain actionable | context-dependent | none | implemented |
+| Footer | identity, author, year, essential links | logo + textual fallback | legal/static note omitted | intentional omission | keeps metadata precise | likely transparent | none | implemented |

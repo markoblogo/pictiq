@@ -1,4 +1,32 @@
 (() => {
+  const englishView = document.getElementById('english-view');
+  const pictiqView = document.getElementById('pictiq-view');
+  const modeButtons = [...document.querySelectorAll('[data-mode]')];
+  const nav = document.querySelector('.nav');
+
+  function setMode(mode, { updateUrl = true } = {}) {
+    const pictiq = mode === 'pictiq';
+    const y = window.scrollY;
+    englishView.hidden = pictiq;
+    pictiqView.hidden = !pictiq;
+    if (nav) nav.hidden = pictiq;
+    modeButtons.forEach((button) => {
+      const active = button.dataset.mode === (pictiq ? 'pictiq' : 'en');
+      button.setAttribute('aria-pressed', String(active));
+    });
+    document.documentElement.dataset.mode = pictiq ? 'pictiq' : 'en';
+    if (updateUrl) {
+      const url = new URL(window.location.href);
+      if (pictiq) url.searchParams.set('mode', 'pictiq');
+      else url.searchParams.delete('mode');
+      window.history.replaceState({}, '', url);
+    }
+    window.requestAnimationFrame(() => window.scrollTo({ top: y, behavior: 'auto' }));
+  }
+
+  modeButtons.forEach((button) => button.addEventListener('click', () => setMode(button.dataset.mode)));
+  setMode(new URLSearchParams(window.location.search).get('mode') === 'pictiq' ? 'pictiq' : 'en', { updateUrl: false });
+
   const card = document.querySelector('.book-tilt');
   if (!card || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
