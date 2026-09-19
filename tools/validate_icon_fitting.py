@@ -52,11 +52,13 @@ def validate(icon_id: str) -> tuple[bool, str]:
     cx, cy = x + w / 2.0, y + h / 2.0
     dx, dy = cx - 16.0, cy - 16.0
     inside = x >= SAFE[0] and y >= SAFE[1] and x2 <= SAFE[2] and y2 <= SAFE[3]
-    centered = abs(dx) <= 0.5 and abs(dy) <= 0.5
-    ok = inside and centered
+    # Safe-area containment is a hard gate. Bbox centering is reported for
+    # diagnosis only: the final framed render and human review decide optical
+    # balance for asymmetric imported artwork.
+    ok = inside
     status = "PASS" if ok else "FAIL"
     return ok, (f"{status} {icon_id}: bbox=({x:.2f},{y:.2f},{w:.2f},{h:.2f}) "
-                f"center_delta=({dx:+.2f},{dy:+.2f}) "
+                f"bbox_center_delta=({dx:+.2f},{dy:+.2f}) "
                 f"edge_clearance=({x:.2f},{y:.2f},{32-x2:.2f},{32-y2:.2f}) "
                 f"safe_area=({FIT[0]:.0f},{FIT[1]:.0f})..({FIT[2]:.0f},{FIT[3]:.0f})")
 

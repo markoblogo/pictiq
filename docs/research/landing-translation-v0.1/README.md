@@ -50,22 +50,26 @@ primitives** and **16 Entity Symbols**.
 The analytical zero-training statuses and the full pressure log are recorded in
 [`landing-translation-findings-2026-09.md`](../../book-materials/research/landing-translation-findings-2026-09.md).
 
-## Final visual rhythm and optical-fit review
+## Imported-icon human visual correction
 
-Status: **READY FOR HUMAN VISUAL REVIEW**. Pictiq mode uses an independent
-960 px content system (280 px cover exception in the hero), with a token gap
-below message gap, below action gap, below section gap. The frozen semantic
-order is unchanged.
+Status: **READY FOR HUMAN VISUAL REVIEW**. This correction pass changes only
+whole-symbol placement and proportional size inside canonical frames. Landing
+layout, translations, visual-language sequences, ordinary vocabulary, Entity
+Symbol inventory, grammar, and notation remain unchanged.
 
-Rendered optical references: `punct_question`, `need_water`, `comm_speak`, and
-`logic_yes`. The audit compares each landing icon at 96 px, 64 px, and 40 px.
-The approved artwork was not redrawn. The preceding geometry pass translated
-only the imported Entity artwork: GitHub `(+1.984375, -0.081341)`, English
-`(-0.984375, -0.943329)`, PDF `(-0.921875, -0.497395)`, Medium
-`(-0.031250, -0.772518)`, and Substack `(-0.015625, -0.983506)` canonical
-units; all use scale `1.0`.
+The reviewed sources are `action_combine`, `action_learn`, `action_write`, and
+the GitHub, English, PDF, Medium, and Substack Entity Symbols. Each source has
+a preserved pre-correction tile and a final tile in the human QA sheet. The
+sheet compares equal-size framed reference/imported/reference tiles, enlarged
+final tiles, mandatory before/after tiles, and landing-scale examples.
 
-- [Optical QA sheet](optical-fit-qa.svg)
-- Run `python3 tools/make_landing_optical_qa.py` to regenerate it.
-- Run `python3 tools/validate_imported_icon_geometry.py` for rendered foreground,
-  clipping, and Pages-mirror checks.
+The earlier bbox-led offsets are superseded by the whole-symbol optical
+corrections recorded in the canonical SVGs. Safety validators check clipping,
+safe-area containment, broken transforms, and Pages copies; visual acceptance
+remains human review of the final framed tile.
+
+- [Imported icon clipping root-cause repair](imported-icon-human-correction-review.md) and [large human QA](imported-icon-human-correction-qa.html)
+- [Earlier geometry sheet](optical-fit-qa.svg)
+- Run `python3 tools/make_landing_optical_qa.py` to regenerate the human sheet.
+- Run `python3 tools/validate_imported_icon_geometry.py` for rendered hard-safety
+  and Pages-mirror checks.

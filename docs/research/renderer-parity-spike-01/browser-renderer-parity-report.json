@@ -3,7 +3,7 @@
   "verdict": "ACCEPT_WITH_GUARDRAILS",
   "comparison_level": "functional/structural parity; byte equality recorded but not required",
   "manifest": "docs/renderer/generated/pictiq-browser-assets.mjs",
-  "manifest_size_bytes": 363194,
+  "manifest_size_bytes": 362604,
   "fixtures": [
     {
       "fixture_id": "01-ordinary-icon",
@@ -187,7 +187,7 @@
     }
   ],
   "performance": {
-    "browser_manifest_size_bytes": 363194,
+    "browser_manifest_size_bytes": 362604,
     "browser_total_elapsed_ms": null,
     "python_total_elapsed_ms": null
   }

@@ -1,21 +1,20 @@
 #!/usr/bin/env python3
-"""Generate a rendered-size comparison sheet for landing icon optical review."""
-from __future__ import annotations
-import base64
+"""Create source-linked HTML QA for imported Pictiq icons without rasterization."""
 from pathlib import Path
-ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/'docs/research/landing-translation-v0.1/optical-fit-qa.svg'
-AUDITED=[('action_combine','icons/svg/action_combine.svg'),('action_learn','icons/svg/action_learn.svg'),('action_write','icons/svg/action_write.svg'),('github','entities/svg/github__platform.svg'),('english','entities/svg/english__language.svg'),('pdf','entities/svg/pdf__format.svg'),('medium','entities/svg/medium__platform.svg'),('substack','entities/svg/substack__platform.svg'),('Pictiq glyph','docs/landing/assets/pictiq-logo.svg')]
-REFERENCES=[('question','icons/svg/punct_question.svg'),('water','icons/svg/need_water.svg'),('speak','icons/svg/comm_speak.svg'),('yes','icons/svg/logic_yes.svg')]
-def uri(rel): return 'data:image/svg+xml;base64,'+base64.b64encode((ROOT/rel).read_bytes()).decode()
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / 'docs/research/landing-translation-v0.1/imported-icon-human-correction-qa.html'
+ITEMS = [
+ ('Approved source', 'action-combine-approved-source.png', 'Supplied complete reference crop'),
+ ('Canonical foreground', 'forensic/action-combine-canonical-foreground.svg', 'Normalized canonical path, no frame'),
+ ('Final framed tile', '../../lexicon/svg/action_combine.svg', 'Exact Pages lexicon asset'),
+ ('Final landing render', '../../lexicon/svg/action_combine.svg', 'Exact landing img asset at landing scale'),
+]
 def main():
- p=['<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="980" viewBox="0 0 1200 980"><rect width="100%" height="100%" fill="white"/>','<style>text{font-family:Arial,sans-serif;fill:#101114}.small{font-size:13px;fill:#5f6670}.head{font-size:28px;font-weight:700}</style>','<text x="40" y="50" class="head">Pictiq Landing optical-fit QA</text><text x="40" y="76" class="small">Foreground compared at landing hierarchy sizes; references remain unchanged.</text>']
- p.append('<text x="400" y="114" class="small">primary 96 px</text><text x="580" y="114" class="small">secondary 64 px</text><text x="720" y="114" class="small">navigation 40 px</text><text x="910" y="114" class="small">reference set 40 px</text>')
- for i,(name,rel) in enumerate(AUDITED):
-  y=150+i*88; p.append(f'<text x="40" y="{y+38}" font-size="16">{name}</text>')
-  for x,size in ((410,96),(600,64),(740,40)):
-   p.append(f'<image x="{x}" y="{y+(96-size)/2}" width="{size}" height="{size}" href="{uri(rel)}"/>')
-  for j,(_,ref) in enumerate(REFERENCES): p.append(f'<image x="{900+j*56}" y="{y+24}" width="40" height="40" href="{uri(ref)}"/>')
-  p.append(f'<line x1="40" y1="{y+82}" x2="1160" y2="{y+82}" stroke="#d7dce2"/>')
- p.append('</svg>'); OUT.write_text(''.join(p)); print(f'OK: wrote {OUT.relative_to(ROOT)}')
-if __name__=='__main__': main()
+    cards = []
+    for name, path, detail in ITEMS:
+        extra = ' landing' if name == 'Final landing render' else ''
+        cards.append(f'<section class="card"><div class="label">{name}</div><div class="tile{extra}"><img src="{path}" alt="{name}"></div><div class="detail">{detail}</div></section>')
+    OUT.write_text('''<!doctype html><meta charset="utf-8"><title>Pictiq imported icon QA</title><style>
+body{margin:0;padding:48px;background:#f7f7f5;color:#101114;font:16px/1.4 system-ui,sans-serif}h1{margin:0 0 8px;font-size:30px}.note{max-width:920px;color:#505866}.grid{display:grid;grid-template-columns:repeat(4,minmax(180px,1fr));gap:18px;margin-top:32px}.card{background:#fff;border:1px solid #d6d9de;border-radius:12px;padding:18px}.tile{aspect-ratio:1;display:grid;place-items:center;margin:12px 0;border:1px solid #e1e3e6;border-radius:8px;background:white}.tile img{width:100%;height:100%;object-fit:contain}.landing{width:96px;height:96px;border:0}.label{font-weight:750}.detail{color:#5c6470;font-size:14px}@media(max-width:800px){.grid{grid-template-columns:1fr 1fr}}</style><main><h1>Imported icon QA — complete silhouette check</h1><p class="note">The four views use direct SVG/PNG assets. This sheet intentionally does not rasterize SVG through ImageMagick: that legacy path omitted the frame stroke and was removed from acceptance evidence.</p><div class="grid">''' + ''.join(cards) + '''</div><p class="note">For the complete A–G diagnostic and pixel-edge record, see <a href="forensic/action-combine-pipeline-forensic.html">pipeline forensic</a>.</p></main>''')
+    print(f'OK: wrote {OUT.relative_to(ROOT)}')
+if __name__ == '__main__': main()

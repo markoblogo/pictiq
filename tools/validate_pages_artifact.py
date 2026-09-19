@@ -29,10 +29,16 @@ compatibility = require("lexicon/compatibility.json")
 data = json.loads(require("lexicon/icon-index.json").read_text())
 ids = [entry["id"] for entry in data["icons"]]
 for icon_id in ids:
-    require(f"lexicon/svg/{icon_id}.svg")
+    page_icon = require(f"lexicon/svg/{icon_id}.svg")
+    canonical_icon = ROOT.parent / "icons" / "svg" / f"{icon_id}.svg"
+    if not canonical_icon.is_file() or page_icon.read_bytes() != canonical_icon.read_bytes():
+        raise SystemExit(f"stale Pages lexicon SVG: {icon_id}")
 entities = json.loads(require("entities/entity-index.json").read_text())
 for entity in entities.get("symbols", []):
-    require(entity["icon_path"])
+    page_entity = require(entity["icon_path"])
+    canonical_entity = ROOT.parent / entity["icon_path"]
+    if not canonical_entity.is_file() or page_entity.read_bytes() != canonical_entity.read_bytes():
+        raise SystemExit(f"stale Pages Entity SVG: {entity['id']}")
 for lang in ("fr", "es"):
     require(f"lexicon/i18n/{lang}.json")
 
