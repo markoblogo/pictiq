@@ -1210,3 +1210,41 @@ the implementation and QA matrix are in [Landing Translation v0.1](../research/l
 Recommendation: keep **Can a Visual Language Explain Itself?** as a publication
 milestone **CANDIDATE** until human visual/semantic review of both modes is
 complete. Successful rendering alone does not promote it to READY.
+
+## 2026-09-19 — Inspo design-reference pilot recorded
+
+### Starting question
+
+Can external design-reference tooling help research a symbol-first Pictiq
+landing without reducing it to a conventional landing-page template?
+
+### What happened
+
+An external Inspo MCP v0.1.16 `lite` pilot compared generic recommendation with
+targeted reference searches against the current Pictiq landing. Generic
+recommendation was a poor fit for this distinctive product because it favoured
+SaaS/agency/marquee-hero conventions and a dark presentation. Targeted searches
+for type specimen, glyph system, and ecosystem index were useful: they exposed
+transferable structure while preserving Pictiq's black-and-white glyph identity.
+Lazyweb independently supported the direction with a bounded reference set.
+
+### Evidence and boundary
+
+[Pilot record](research/pictiq-inspo-design-reference-pilot-2026-09.md).
+This is design-reference workflow evidence only, not evidence of usability,
+comprehension, zero-training success, translation correctness, or language
+semantics. No production Pictiq file changed in the pilot.
+
+### Decision / outcome
+
+Use precise structural reference searches, inspect individual references, take
+one transferable principle, and reject template copying. Inspo remains optional;
+a dedicated ABVX skill is deferred until two additional real UI pilots establish
+a repeatable workflow. The pilot supports but does not create a new publication
+milestone; *Can a Visual Language Explain Itself?* remains governed by its
+existing cadence and landing-acceptance state.
+
+### Possible future book use
+
+Pictiq interface development can be an experiment in how distinctive visual
+systems find structural analogies without borrowing somebody else's identity.

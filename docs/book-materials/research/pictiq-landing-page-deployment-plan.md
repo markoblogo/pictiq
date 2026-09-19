@@ -283,3 +283,15 @@ No EN/PICTIQ switch, Pictiq translation layer, custom domain, DNS, vocabulary, C
 ## Landing semantic findings and Core additions — 2026-09-19
 
 The subsequent first complete manual semantic pass over the accepted landing produced genuine cross-domain pressure for three approved ordinary Core primitives: `action_combine`, `action_learn`, and `action_write`. The current registry is therefore 87 ordinary icons; the earlier 84-icon figures above remain historical baseline values for the pre-findings deployment plan. The landing translation itself remains unimplemented and the publication milestone remains a candidate. See [Landing Translation Findings](landing-translation-findings-2026-09.md) and the [Core primitive QA sheet](../../research/landing-translation-2026-09/qa-sheet.html).
+
+## Design-reference research note — 2026-09-19
+
+An external Inspo/Lazyweb reference-selection pilot supports using type-specimen,
+glyph-system, icon-system, symbol-index, ecosystem-index, visual-language
+specimen, or wayfinding-system searches for this distinctive surface. The
+landing should be treated as a visual-system specimen that also functions as a
+website, not as a generic landing page decorated with icons. References inform
+structure, scale, rhythm, grouping, and information architecture only; they do
+not prescribe Pictiq symbols, palette, semantics, geometry, or behaviour. See
+[Inspo design-reference pilot](pictiq-inspo-design-reference-pilot-2026-09.md).
+This is deployment guidance, not a usability result or implementation change.
