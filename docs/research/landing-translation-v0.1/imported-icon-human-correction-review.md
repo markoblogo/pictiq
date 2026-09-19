@@ -1,35 +1,26 @@
-# Imported icon clipping — root-cause repair
+# Imported SVG coordinate repair
 
-`action_combine` was traced from the supplied complete reference through the
-canonical SVG, Pages copy, Browser Renderer asset, landing use, and legacy QA.
-The foreground was complete in the source/vector/canonical path. The actual
-landing defect was a **stale Pages copy**: `docs/lexicon/svg/action_combine.svg`
-(and the corresponding LEARN and WRITE copies) did not match the canonical SVG
-after the prior local transform change.
+Direct browser raster measurement found a coordinate bug in the prior imported
+SVG correction. The prior optical transform was flattened into a single matrix,
+but its incorrect displacement and scaling were preserved. For
+`action_combine`, direct 1024-pixel semantic-foreground measurement was
+`(152,156,793,788)`, centre `(472.5,472)`, instead of the intended safe-area
+centre `(512,512)`.
 
-The legacy SVG QA rasterizer was independently invalid: its ImageMagick path
-omitted the frame stroke. It is removed from acceptance evidence. This is not a
-canonical clipping defect.
+The repair derives one replacement matrix per asset from the measured rendered
+foreground: preserve the approved silhouette and current proportional scale,
+then solve the matrix translation so the final foreground centre equals the
+canonical safe-area centre. `action_combine` also uses a 20-unit maximum extent
+(90.9% of the 22-unit fitting width). No new outer offset or transform chain was
+added.
 
-## Classification
+The earlier Pages-copy mismatch for COMBINE / LEARN / WRITE was a separate
+stale-asset fault and remains protected by exact canonical-to-Pages validation.
+Source extraction, canonical viewBox, frame clip, and landing CSS did not lose
+approved geometry.
 
-| Asset | Classification | Evidence |
-| --- | --- | --- |
-| `action_combine` | `STALE_ASSET` | Canonical foreground complete; Pages asset was stale. |
-| `action_learn` | `STALE_ASSET` | Same unsynchronized lexicon-copy path. |
-| `action_write` | `STALE_ASSET` | Same unsynchronized lexicon-copy path. |
-| GitHub | `NO_PROBLEM` | Landing asset was current; transform stack normalized. |
-| English | `NO_PROBLEM` | Landing asset was current; transform stack normalized. |
-| PDF | `NO_PROBLEM` | Landing asset was current; transform stack normalized. |
-| Medium | `NO_PROBLEM` | Landing asset was current; transform stack normalized. |
-| Substack | `NO_PROBLEM` | Landing asset was current; transform stack normalized. |
-
-The existing `clipPath` continues to protect only the foreground inside the
-canonical frame. Pixel-edge measurements for COMBINE retain positive space on
-all sides, so no frame, CSS, or source cropping repair was required.
-
+- [Coordinate audit and accepted-reference comparison](imported-svg-coordinate-audit.md)
+- [Raw 1024-pixel action_combine diagnostic](forensic/action-combine-raw-coordinate-diagnostic.svg)
 - [Large human QA](imported-icon-human-correction-qa.html)
-- [A–G pipeline forensic](forensic/action-combine-pipeline-forensic.html)
-- Run `python3 tools/make_landing_optical_qa.py` to regenerate the human sheet.
-- Run `python3 tools/validate_imported_icon_geometry.py` for normalized-transform,
-  clipping, safe-area, and exact Pages-mirror checks.
+- Run `python3 tools/validate_imported_icon_geometry.py` for centre, containment,
+  normalized-transform, and exact Pages-mirror regression checks.

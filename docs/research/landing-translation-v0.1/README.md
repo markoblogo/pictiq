@@ -58,18 +58,13 @@ layout, translations, visual-language sequences, ordinary vocabulary, Entity
 Symbol inventory, grammar, and notation remain unchanged.
 
 The reviewed sources are `action_combine`, `action_learn`, `action_write`, and
-the GitHub, English, PDF, Medium, and Substack Entity Symbols. Each source has
-a preserved pre-correction tile and a final tile in the human QA sheet. The
-sheet compares equal-size framed reference/imported/reference tiles, enlarged
-final tiles, mandatory before/after tiles, and landing-scale examples.
+the GitHub, English, PDF, Medium, and Substack Entity Symbols. The final QA
+uses direct source-linked assets; the coordinate audit separately records raw
+browser-raster measurements for their semantic foregrounds.
 
-The earlier bbox-led offsets are superseded by the whole-symbol optical
-corrections recorded in the canonical SVGs. Safety validators check clipping,
-safe-area containment, broken transforms, and Pages copies; visual acceptance
-remains human review of the final framed tile.
+The prior bbox-led correction is superseded by a direct-browser coordinate audit. It fixes a preserved matrix displacement rather than applying another optical offset.
 
-- [Imported icon clipping root-cause repair](imported-icon-human-correction-review.md) and [large human QA](imported-icon-human-correction-qa.html)
-- [Earlier geometry sheet](optical-fit-qa.svg)
-- Run `python3 tools/make_landing_optical_qa.py` to regenerate the human sheet.
-- Run `python3 tools/validate_imported_icon_geometry.py` for rendered hard-safety
-  and Pages-mirror checks.
+- [Imported SVG coordinate audit](imported-svg-coordinate-audit.md)
+- [Raw 1024-pixel action_combine diagnostic](forensic/action-combine-raw-coordinate-diagnostic.svg)
+- [Large human QA](imported-icon-human-correction-qa.html)
+- Run `python3 tools/validate_imported_icon_geometry.py` for centre, safe-area, normalized-transform, and Pages-mirror checks.
