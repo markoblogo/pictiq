@@ -1168,3 +1168,23 @@ The pass also formalized three normative communication principles in the protoco
 Machine/Computer, Browser, Workspace, Project, System, Symbol, New, Archive, Video, and IT/Server remain deferred under NEED-BEFORE-VOCABULARY. Short/long/high/low notation remains a deferred hypothesis. Entity-symbol candidates (Composer, GitHub, English/England, PDF, EPUB, Medium, Substack) are recorded for a later dedicated pass. The landing translation/deployment remains a publication-milestone candidate, not READY.
 
 Evidence: [landing translation findings](research/landing-translation-findings-2026-09.md), [QA sheet](../research/landing-translation-2026-09/qa-sheet.html), [landing translation architecture](concepts/landing-translation-architecture.md), and [normative protocol](../../spec/PROTOCOL.md).
+## 2026-09-19 — Landing Entity Symbols and Lexicon visual alignment
+
+The accepted landing proposal was reconciled as five new scoped Entity Symbols:
+`entity:github@landing`, `entity:english@landing`, `entity:pdf@landing`,
+`entity:medium@landing`, and `entity:substack@landing`. Composer and EPUB remain
+rejected/deferred. The ordinary canonical registry is unchanged at 87; the
+separate Entity Symbol registry is now 16.
+
+The public Lexicon was aligned with the white landing visual family while
+preserving search, language selection, technical IDs, book links, and navigation
+back to the landing page. Exact technical identifiers may remain textual when
+pictographic translation adds complexity without materially improving
+communication. The visual evidence is in
+[`Landing Entity Symbols QA`](../research/landing-entity-symbols-2026-09/qa-sheet.html)
+and the implementation record is in
+[`Landing Entity Symbols + Lexicon visual alignment`](../research/landing-entity-symbols-2026-09/README.md).
+
+This is an implementation/visual-alignment record only. It does not merge Entity
+Symbols into ordinary vocabulary or change grammar, Message Schema, Shorthand,
+Renderer semantics, Composer behavior, Numeric Notation, packs, or profiles.

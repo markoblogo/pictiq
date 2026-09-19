@@ -34,7 +34,8 @@ def main() -> None:
 
     cell_w, cell_h = 620, 270
     columns = 2
-    sheet = Image.new("RGB", (cell_w * columns, cell_h * 3), "white")
+    rows = (len(registry) + columns - 1) // columns
+    sheet = Image.new("RGB", (cell_w * columns, cell_h * rows), "white")
     draw = ImageDraw.Draw(sheet)
 
     for index, symbol in enumerate(registry):

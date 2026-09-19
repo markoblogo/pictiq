@@ -297,6 +297,106 @@
       ],
       "governance": "Project-scoped Odyssey example; identifies the named entity inside the Odyssey namespace and does not create ordinary lexical primitives from its visual associations.",
       "notes": "The nymph associated with keeping Odysseus on her island. Cave and waves identify this named entity, not generic island, woman, cave, or sea tiles."
+    },
+    {
+      "id": "entity:github@landing",
+      "namespace": "landing",
+      "slug": "github__landing",
+      "display_name": "GitHub",
+      "entity_type": "organization",
+      "entity_class": "named_platform",
+      "aliases": ["GitHub"],
+      "authority": "project-scoped associative example",
+      "provenance": {
+        "source": "human-approved landing Entity Symbol proposal sheet",
+        "source_crop_path": "inputs/silhouettes/entity-symbols/github__platform.png",
+        "visual_source": "approved GitHub/Octocat silhouette from supplied landing entity sheet"
+      },
+      "icon_path": "entities/svg/github__platform.svg",
+      "status": "ACCEPTED_OFFICIAL_PICTIQ_PROJECT_EXAMPLE",
+      "visual_cues": ["GitHub/Octocat-style silhouette"],
+      "governance": "Landing-scoped named platform identifier; not an ordinary code, repository, software, or developer primitive.",
+      "notes": "The silhouette identifies GitHub as a named platform only."
+    },
+    {
+      "id": "entity:english@landing",
+      "namespace": "landing",
+      "slug": "english__landing",
+      "display_name": "English",
+      "entity_type": "language",
+      "entity_class": "named_language_identifier",
+      "aliases": ["English", "English language"],
+      "authority": "project-scoped associative example",
+      "provenance": {
+        "source": "human-approved landing Entity Symbol proposal sheet",
+        "source_crop_path": "inputs/silhouettes/entity-symbols/english__language.png",
+        "visual_source": "approved Union Jack / UK flag visual from supplied landing entity sheet"
+      },
+      "icon_path": "entities/svg/english__language.svg",
+      "status": "ACCEPTED_OFFICIAL_PICTIQ_PROJECT_EXAMPLE",
+      "visual_cues": ["Union Jack / UK flag"],
+      "governance": "Landing-scoped named language identifier; not a generic language, country, communication, or person primitive.",
+      "notes": "The flag identifies the English-language mode on the landing."
+    },
+    {
+      "id": "entity:pdf@landing",
+      "namespace": "landing",
+      "slug": "pdf__landing",
+      "display_name": "PDF",
+      "entity_type": "file_format",
+      "entity_class": "named_technical_format",
+      "aliases": ["PDF", "Portable Document Format"],
+      "authority": "project-scoped associative example",
+      "provenance": {
+        "source": "human-approved landing Entity Symbol proposal sheet",
+        "source_crop_path": "inputs/silhouettes/entity-symbols/pdf__format.png",
+        "visual_source": "approved PDF-file visual from supplied landing entity sheet"
+      },
+      "icon_path": "entities/svg/pdf__format.svg",
+      "status": "ACCEPTED_OFFICIAL_PICTIQ_PROJECT_EXAMPLE",
+      "visual_cues": ["PDF document mark"],
+      "governance": "Landing-scoped exact technical format identifier; not a generic document, text, book, or download primitive.",
+      "notes": "Use with a download action where useful; exact format labels may remain textual."
+    },
+    {
+      "id": "entity:medium@landing",
+      "namespace": "landing",
+      "slug": "medium__landing",
+      "display_name": "Medium",
+      "entity_type": "organization",
+      "entity_class": "named_publication_platform",
+      "aliases": ["Medium"],
+      "authority": "project-scoped associative example",
+      "provenance": {
+        "source": "human-approved landing Entity Symbol proposal sheet",
+        "source_crop_path": "inputs/silhouettes/entity-symbols/medium__platform.png",
+        "visual_source": "approved Medium visual from supplied landing entity sheet"
+      },
+      "icon_path": "entities/svg/medium__platform.svg",
+      "status": "ACCEPTED_OFFICIAL_PICTIQ_PROJECT_EXAMPLE",
+      "visual_cues": ["Medium wordmark geometry"],
+      "governance": "Landing-scoped named publication platform identifier; not a generic publication, article, writing, or communication primitive.",
+      "notes": "The approved abstract mark identifies Medium as a named platform."
+    },
+    {
+      "id": "entity:substack@landing",
+      "namespace": "landing",
+      "slug": "substack__landing",
+      "display_name": "Substack",
+      "entity_type": "organization",
+      "entity_class": "named_publication_platform",
+      "aliases": ["Substack"],
+      "authority": "project-scoped associative example",
+      "provenance": {
+        "source": "human-approved landing Entity Symbol proposal sheet",
+        "source_crop_path": "inputs/silhouettes/entity-symbols/substack__platform.png",
+        "visual_source": "approved Substack visual from supplied landing entity sheet"
+      },
+      "icon_path": "entities/svg/substack__platform.svg",
+      "status": "ACCEPTED_OFFICIAL_PICTIQ_PROJECT_EXAMPLE",
+      "visual_cues": ["Substack bookmark mark"],
+      "governance": "Landing-scoped named publication platform identifier; not a generic newsletter, publication, writing, or communication primitive.",
+      "notes": "The approved mark identifies Substack as a named platform."
     }
   ]
 }

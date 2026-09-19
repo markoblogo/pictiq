@@ -66,6 +66,8 @@ The [Pictiq Poetry harvest](research/pictiq-poetry-harvest-2026-09.md), [Visual 
 
 The [landing translation findings](research/landing-translation-findings-2026-09.md) preserve the first complete manual semantic pass over the accepted English landing. It records the accepted Core pressure for `action_combine`, `action_learn`, and `action_write`, the Meaning-Before-Wording / Priority-First / Functional Sufficiency principles, intentional omission, progressive clarification, and the boundary between practical and literary translation. The landing translation itself remains unimplemented.
 
+The [Landing Entity Symbols + Lexicon alignment record](../research/landing-entity-symbols-2026-09/README.md) archives the five accepted named symbols used by the landing (GitHub, English, PDF, Medium, and Substack) and the separate public Lexicon presentation. It does not merge Entity Symbols into ordinary vocabulary.
+
 ## Current research threads
 
 - Road Wayfinding accepted additions: `surface_wavy`, `state_dead`, and partial numeric notation are recorded in [`experiments/road-wayfinding-stress-test.md`](experiments/road-wayfinding-stress-test.md) and [`../research/road-wayfinding-stress-test-v1.md`](../research/road-wayfinding-stress-test-v1.md).

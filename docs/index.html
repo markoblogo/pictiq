@@ -10,8 +10,10 @@
     <header class="top">
       <div class="wrap">
         <div class="brand">
+          <div class="kicker">PICTIQ VISUAL LANGUAGE</div>
           <div class="title">Pictiq Lexicon</div>
-          <div class="sub">Search the icon dictionary (static)</div>
+          <div class="sub">A small visual language for big ideas.</div>
+          <a class="back-link" href="./landing/">← Back to landing</a>
         </div>
 
         <div class="controls">
@@ -51,14 +53,21 @@
       </section>
 
       <div class="status">
-        <div id="meta" class="meta">Loading…</div>
         <div class="hint">
           <div id="hint"></div>
           <div>Negation: <code>X + logic_no</code>. As a physical shortcut, you can draw the diagonal slash with a marker on fabric.</div>
         </div>
       </div>
 
-      <section id="results" class="grid" aria-live="polite"></section>
+      <section aria-labelledby="ordinary-title">
+        <div class="section-heading"><div><div class="eyebrow">Ordinary vocabulary</div><h2 id="ordinary-title">Canonical icons</h2></div><div id="meta" class="meta">Loading…</div></div>
+        <section id="results" class="grid" aria-live="polite"></section>
+      </section>
+      <section class="entity-section" aria-labelledby="entity-title">
+        <div class="section-heading"><div><div class="eyebrow">Named entities</div><h2 id="entity-title">Entity Symbols</h2></div><div class="meta">Specific platforms, formats, and identifiers</div></div>
+        <p class="entity-note">Entity Symbols remain a separate registry from reusable ordinary vocabulary.</p>
+        <section id="entities" class="grid entity-grid"></section>
+      </section>
     </main>
 
     <footer class="foot wrap">

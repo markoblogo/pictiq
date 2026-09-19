@@ -52,7 +52,13 @@ def main() -> int:
         namespace = entity_id.rsplit("@", 1)[1]
         if symbol.get("namespace") != namespace:
             errors.append(f"{loc}: namespace does not match id suffix")
-        allowed_entity_types = {"person", "mythological_entity"}
+        allowed_entity_types = {
+            "person",
+            "mythological_entity",
+            "organization",
+            "language",
+            "file_format",
+        }
         if symbol.get("entity_type") not in allowed_entity_types:
             errors.append(f"{loc}: unsupported entity_type: {symbol.get('entity_type')}")
         if not symbol.get("aliases"):

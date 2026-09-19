@@ -1,6 +1,7 @@
 /* Fully static lexicon search (no build step). */
 
 const INDEX_URL = "./lexicon/icon-index.json";
+const ENTITY_INDEX_URL = "./entities/entity-index.json";
 const I18N_URL = (lang) => `./lexicon/i18n/${lang}.json`;
 
 const $q = document.getElementById("q");
@@ -8,8 +9,10 @@ const $lang = document.getElementById("lang");
 const $meta = document.getElementById("meta");
 const $hint = document.getElementById("hint");
 const $results = document.getElementById("results");
+const $entities = document.getElementById("entities");
 
 let baseIndex = null; // { icons: [...] }
+let entityIndex = null; // { symbols: [...] }
 let translations = null; // normalized map: { [id]: { meaning_en?, aliases_en?, tags_en?, examples? } }
 
 function norm(s) {
@@ -89,6 +92,18 @@ function card(entry) {
   `;
 }
 
+function entityCard(entry) {
+  const aliases = Array.isArray(entry.aliases) ? entry.aliases.slice(0, 3) : [];
+  return `
+    <article class="card entity-card">
+      <div class="row"><img class="icon" src="./${escapeHtml(entry.icon_path)}" alt="" loading="lazy" /><div class="id">${escapeHtml(entry.id)}</div></div>
+      <div class="meaning">${escapeHtml(entry.display_name || entry.id)}</div>
+      <div class="tags">${aliases.map((t) => `<span class="tag">${escapeHtml(t)}</span>`).join("")}</div>
+      <div class="examples"><div class="ex">${escapeHtml(entry.description || entry.entity_type || "Named entity")}</div></div>
+    </article>
+  `;
+}
+
 function escapeHtml(s) {
   return (s ?? "").toString().replace(/[&<>"']/g, (c) => {
     switch (c) {
@@ -117,6 +132,8 @@ function render() {
 
   $meta.textContent = `${filtered.length} / ${icons.length} icons`;
   $results.innerHTML = filtered.map(card).join("");
+  const symbols = entityIndex && Array.isArray(entityIndex.symbols) ? entityIndex.symbols : [];
+  $entities.innerHTML = symbols.map(entityCard).join("");
 }
 
 async function loadIndex() {
@@ -126,6 +143,8 @@ async function loadIndex() {
   if (!res.ok) throw new Error(`failed to load index: ${res.status}`);
   const data = await res.json();
   baseIndex = data;
+  const entitiesRes = await fetch(ENTITY_INDEX_URL, { cache: "no-store" });
+  if (entitiesRes.ok) entityIndex = await entitiesRes.json();
   render();
 }
 
