@@ -66,7 +66,7 @@ The [Pictiq Poetry harvest](research/pictiq-poetry-harvest-2026-09.md), [Visual 
 
 The [landing translation findings](research/landing-translation-findings-2026-09.md) preserve the first complete manual semantic pass over the accepted English landing. It records the accepted Core pressure for `action_combine`, `action_learn`, and `action_write`, the Meaning-Before-Wording / Priority-First / Functional Sufficiency principles, intentional omission, progressive clarification, and the boundary between practical and literary translation.
 
-The [Pictiq Landing Translation v0.1 implementation record](../research/landing-translation-v0.1/README.md) records the local human-reviewed reference translation and linkable `?mode=pictiq` switch. It keeps the English baseline intact, omits the Lexicon only in Pictiq mode, and introduces no vocabulary or protocol changes.
+The [Pictiq Landing Translation v0.1 implementation record](../research/landing-translation-v0.1/README.md) records the creator-accepted reference translation and linkable `?mode=pictiq` switch. The Pictiq mode has zero visible natural-language UI text, while hidden accessibility text remains. It keeps the English baseline intact, omits the Lexicon only in Pictiq mode, and introduces no vocabulary or protocol changes; it is not external human-comprehension evidence.
 
 The [Landing Entity Symbols + Lexicon alignment record](../research/landing-entity-symbols-2026-09/README.md) archives the five accepted named symbols used by the landing (GitHub, English, PDF, Medium, and Substack) and the separate public Lexicon presentation. It does not merge Entity Symbols into ordinary vocabulary.
 

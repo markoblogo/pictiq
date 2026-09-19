@@ -146,3 +146,16 @@ These deferred human tracks must not block active development.
 13. Observe real use and feedback.
 
 Human/game tracks remain non-blocking. Composer v0.1 remains RELEASED as the current public authoring surface. The accepted English landing is `ENGLISH_SOURCE_BASELINE_V0_1`; future translation work should not silently rewrite it to make translation easier.
+
+## Landing v0.1 acceptance closure — 2026-09-19
+
+English Landing v0.1 and the Pictiq translation are **CREATOR ACCEPTED** and ready for public deployment verification. Once production verification completes, landing implementation and visual polish cease to be the active development track.
+
+Immediate active work then returns to:
+
+1. non-human, domain, and machine Pictiq research;
+2. real deployments and use cases;
+3. cross-model comprehension work;
+4. opportunistic creative deployments.
+
+The human/game track remains deferred and non-blocking. The landing result is a self-referential implementation result, not external human-comprehension evidence.

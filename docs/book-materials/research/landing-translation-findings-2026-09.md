@@ -1,6 +1,6 @@
 # Landing translation findings — 2026-09
 
-> Status: human-reviewed reference translation implemented locally; pending visual and semantic acceptance. No publication status is promoted by this pass.
+> Status: **IMPLEMENTED / CREATOR ACCEPTED / READY FOR PUBLIC DEPLOYMENT**. Publication milestone is READY / BACKLOG; no article is published by this record.
 
 ## Source and pressure
 
@@ -37,7 +37,7 @@ Shorter goal-first messages may reduce decoding burden for a receiver with no pr
 
 The short/long/high/low arrow notation idea remains a `DEFERRED NOTATION HYPOTHESIS`; current landing work can use `SMALL + COMMUNICATION` for short messages. Entity-symbol pressure was observed for Composer, GitHub, English/England, PDF, EPUB, Medium, and Substack. These are candidates for a dedicated Entity Symbol pass, not additions here.
 
-The landing translation/deployment remains `PUBLICATION MILESTONE CANDIDATE`, with the possible angle **Can a Visual Language Explain Itself?** Rendering is substantive and linkable, but READY remains a human-review decision.
+The landing translation/deployment is now `PUBLICATION MILESTONE: READY / BACKLOG`, with the possible angle **Can a Visual Language Explain Itself?** Creator acceptance covers a functioning, linkable, visible-text-free Pictiq mode. Under the default seven-day cadence, 2026-09-20 is the earliest normal publication date after the Composer milestone on 2026-09-13; this does not publish an article.
 
 ## Implemented translation pressure log
 

@@ -1,7 +1,6 @@
 # Pictiq Landing Translation v0.1
 
-Status: **visible-text-free acceptance fix implemented locally; READY FOR HUMAN REVIEW**. Publication remains a
-milestone candidate and is not promoted by implementation alone.
+Status: **IMPLEMENTED / CREATOR ACCEPTED / READY FOR PUBLIC DEPLOYMENT**. `Pictiq Landing v0.1 — CREATOR ACCEPTANCE PASSED`.
 
 The landing now has a deterministic static mode switch:
 
@@ -52,7 +51,7 @@ The analytical zero-training statuses and the full pressure log are recorded in
 
 ## Imported-icon human visual correction
 
-Status: **READY FOR HUMAN VISUAL REVIEW**. This correction pass changes only
+Status: **HUMAN VISUAL ACCEPTANCE PASSED**. This correction pass changes only
 whole-symbol placement and proportional size inside canonical frames. Landing
 layout, translations, visual-language sequences, ordinary vocabulary, Entity
 Symbol inventory, grammar, and notation remain unchanged.

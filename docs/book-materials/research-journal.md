@@ -1248,3 +1248,27 @@ existing cadence and landing-acceptance state.
 
 Pictiq interface development can be an experiment in how distinctive visual
 systems find structural analogies without borrowing somebody else's identity.
+
+## 2026-09-19 — Landing v0.1 creator acceptance and public-deployment readiness
+
+### What happened
+
+Creator review accepted the English Landing v0.1, the Pictiq Landing Translation v0.1, the EN / PICTIQ switch, the visible-text-free Pictiq mode, the current Pictiq-native layout, the light Lexicon, Composer integration, and the reconstructed imported artwork: `action_combine`, `action_learn`, `action_write`, GitHub, English, PDF, Medium, and Substack.
+
+`Pictiq Landing v0.1 — CREATOR ACCEPTANCE PASSED`.
+
+`Imported Reconstructed Artwork — HUMAN VISUAL ACCEPTANCE PASSED`.
+
+The Pictiq mode contains **ZERO VISIBLE NATURAL-LANGUAGE UI TEXT**. It uses ordinary canonical symbols, Entity Symbols, visual composition, artifacts, and layout/navigation. Hidden accessibility text remains available. The handbook cover is an external visual artifact with printed text, not landing UI text.
+
+### Result and boundary
+
+The accepted Pictiq mode demonstrates that the current system can construct a complete symbol-only version of its own project landing page. It does **not** establish universal comprehension, zero-training comprehension, cross-cultural comprehension, usability for arbitrary users, or superiority over natural language. Formal human studies remain deferred and non-blocking.
+
+The translation result preserves Meaning-Before-Wording, Priority-First Communication, Functional Sufficiency, Need-Before-Vocabulary, intentional omission distinct from LOSSY/GAP, and substantially shorter task-focused messages where appropriate. The icon-import workflow remains: human-approved source → faithful reconstruction → source-relative fitting → visual QA → human acceptance → canonicalization → public/generated synchronization. Earlier fitting and forensic artifacts remain research history.
+
+### Publication and next track
+
+`Can a Visual Language Explain Itself? — PUBLICATION MILESTONE: READY` with editorial status **BACKLOG**. The Composer public-authoring milestone was published on 2026-09-13, so the default seven-day cadence makes 2026-09-20 the earliest normal publication date for this distinct milestone. No article is written or published by this record.
+
+Landing delivery moves out of the active development track after production verification. The next active work returns to non-human/domain/machine research, real deployments/use cases, and cross-model comprehension. Creative deployments are opportunistic; the human/game track remains deferred and non-blocking.

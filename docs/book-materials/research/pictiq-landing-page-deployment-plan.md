@@ -295,3 +295,17 @@ structure, scale, rhythm, grouping, and information architecture only; they do
 not prescribe Pictiq symbols, palette, semantics, geometry, or behaviour. See
 [Inspo design-reference pilot](pictiq-inspo-design-reference-pilot-2026-09.md).
 This is deployment guidance, not a usability result or implementation change.
+
+## Creator acceptance and public-deployment readiness — 2026-09-19
+
+Status: **IMPLEMENTED / CREATOR ACCEPTED / READY FOR PUBLIC DEPLOYMENT**.
+
+`Pictiq Landing v0.1 — CREATOR ACCEPTANCE PASSED` and `Imported Reconstructed Artwork — HUMAN VISUAL ACCEPTANCE PASSED`.
+
+The accepted Pictiq mode is a complete symbol-only rendering of the project landing page with **ZERO VISIBLE NATURAL-LANGUAGE UI TEXT**. It uses canonical ordinary symbols, Entity Symbols, composition, linked visual artifacts, and layout/navigation; accessibility labels remain hidden support rather than visible UI. Printed text on the handbook cover remains external artifact content and is excluded from the UI-text result.
+
+This is a functioning self-referential landing experiment, not proof of universal, zero-training, cross-cultural, or arbitrary-user comprehension, and not proof of superiority to natural language. Formal human studies remain deferred and non-blocking. Translation principles remain Meaning-Before-Wording, Priority-First Communication, Functional Sufficiency, Need-Before-Vocabulary, intentional omission distinct from LOSSY/GAP, and task-first semantic compression.
+
+The final import workflow is: human-approved source → faithful reconstruction → source-relative fitting → visual QA → human acceptance → canonicalization → public/generated synchronization. Earlier calibration and forensic work remains preserved research history. The Inspo pilot remains a design-reference finding: approach the landing as a type specimen / glyph system / visual-system specimen that functions as a website, not as a conventional SaaS landing decorated with icons.
+
+`Can a Visual Language Explain Itself?` is now **PUBLICATION MILESTONE: READY / BACKLOG**. Its earliest normal publication date is 2026-09-20 because Composer / Public Authoring was published on 2026-09-13 under the default seven-day cadence. This record does not publish an article.
