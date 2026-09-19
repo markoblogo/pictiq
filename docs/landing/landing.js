@@ -5,11 +5,13 @@
   const nav = document.querySelector('.nav');
   const pictiqNav = document.querySelector('.pictiq-nav');
 
+  const assetRoot = /\/landing\/?$/.test(location.pathname) ? '..' : '.';
+
   async function hydrateMetrics() {
     try {
       const [lexiconResponse, entityResponse] = await Promise.all([
-        fetch('../lexicon/icon-index.json', { cache: 'no-store' }),
-        fetch('../entities/entity-index.json', { cache: 'no-store' }),
+        fetch(`${assetRoot}/lexicon/icon-index.json`, { cache: 'no-store' }),
+        fetch(`${assetRoot}/entities/entity-index.json`, { cache: 'no-store' }),
       ]);
       if (!lexiconResponse.ok || !entityResponse.ok) return;
       const [lexicon, entities] = await Promise.all([lexiconResponse.json(), entityResponse.json()]);

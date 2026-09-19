@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pictiq Lexicon</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="wrap">
+        <div class="brand">
+          <div class="kicker">PICTIQ VISUAL LANGUAGE</div>
+          <div class="title">Pictiq Lexicon</div>
+          <div class="sub">A small visual language for big ideas.</div>
+          <a class="back-link" href="../">← Back to landing</a>
+        </div>
+
+        <div class="controls">
+          <label class="field">
+            <span class="label">Search</span>
+            <input id="q" type="search" placeholder="toilet, wifi, payment, urgent..." autocomplete="off" />
+          </label>
+
+          <label class="field">
+            <span class="label">Language</span>
+            <select id="lang">
+              <option value="en" selected>en</option>
+              <option value="es">es</option>
+              <option value="fr">fr</option>
+            </select>
+          </label>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="handbook" aria-labelledby="handbook-title">
+        <a class="handbook-art" href="https://github.com/markoblogo/pictiq/tree/main/books/handbook-v1">
+          <img src="https://raw.githubusercontent.com/markoblogo/pictiq/main/books/handbook-v1/promo.png" alt="Pictiq Handbook v1.0 promotional artwork" />
+        </a>
+        <div class="handbook-copy">
+          <div class="eyebrow">Published handbook</div>
+          <h1 id="handbook-title">Pictiq Handbook v1.0</h1>
+          <p><strong>Pictiq: A Visual Protocol for Short Messages</strong><br />by Anton Biletskyi-Volokh</p>
+          <div class="handbook-actions">
+            <a href="../composer/">Open Composer v0.1</a>
+            <a href="https://raw.githubusercontent.com/markoblogo/pictiq/main/books/handbook-v1/pictiq-handbook-v1.0.pdf">Download PDF</a>
+            <a href="https://raw.githubusercontent.com/markoblogo/pictiq/main/books/handbook-v1/pictiq-handbook-v1.0.epub">Download EPUB</a>
+            <a href="https://github.com/markoblogo/pictiq/tree/main/books/handbook-v1">View on GitHub</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="status">
+        <div class="hint">
+          <div id="hint"></div>
+          <div>Negation: <code>X + logic_no</code>. As a physical shortcut, you can draw the diagonal slash with a marker on fabric.</div>
+        </div>
+      </div>
+
+      <section aria-labelledby="ordinary-title">
+        <div class="section-heading"><div><div class="eyebrow">Ordinary vocabulary</div><h2 id="ordinary-title">Canonical icons</h2></div><div id="meta" class="meta">Loading…</div></div>
+        <section id="results" class="grid" aria-live="polite"></section>
+      </section>
+      <section class="entity-section" aria-labelledby="entity-title">
+        <div class="section-heading"><div><div class="eyebrow">Named entities</div><h2 id="entity-title">Entity Symbols</h2></div><div class="meta">Specific platforms, formats, and identifiers</div></div>
+        <p class="entity-note">Entity Symbols remain a separate registry from reusable ordinary vocabulary.</p>
+        <section id="entities" class="grid entity-grid"></section>
+      </section>
+    </main>
+
+    <footer class="foot wrap">
+      <span>Data: <code>lexicon/icon-index.json</code></span>
+      <span class="sep">•</span>
+      <span>Protocol: <code>spec/</code></span>
+    </footer>
+
+    <script src="../app.js"></script>
+  </body>
+</html>

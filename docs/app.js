@@ -1,8 +1,10 @@
 /* Fully static lexicon search (no build step). */
 
-const INDEX_URL = "./lexicon/icon-index.json";
-const ENTITY_INDEX_URL = "./entities/entity-index.json";
-const I18N_URL = (lang) => `./lexicon/i18n/${lang}.json`;
+const atLexiconRoute = /\/lexicon\/?$/.test(location.pathname);
+const assetRoot = atLexiconRoute ? '..' : '.';
+const INDEX_URL = `${assetRoot}/lexicon/icon-index.json`;
+const ENTITY_INDEX_URL = `${assetRoot}/entities/entity-index.json`;
+const I18N_URL = (lang) => `${assetRoot}/lexicon/i18n/${lang}.json`;
 
 const $q = document.getElementById("q");
 const $lang = document.getElementById("lang");
@@ -82,7 +84,7 @@ function card(entry) {
   return `
     <article class="card">
       <div class="row">
-        <img class="icon" src="./lexicon/svg/${encodeURIComponent(e.id)}.svg" alt="" loading="lazy" />
+        <img class="icon" src="${assetRoot}/lexicon/svg/${encodeURIComponent(e.id)}.svg" alt="" loading="lazy" />
         <div class="id">${escapeHtml(e.id)}</div>
       </div>
       <div class="meaning">${escapeHtml(e.meaning_en || "")}</div>
@@ -96,7 +98,7 @@ function entityCard(entry) {
   const aliases = Array.isArray(entry.aliases) ? entry.aliases.slice(0, 3) : [];
   return `
     <article class="card entity-card">
-      <div class="row"><img class="icon" src="./${escapeHtml(entry.icon_path)}" alt="" loading="lazy" /><div class="id">${escapeHtml(entry.id)}</div></div>
+      <div class="row"><img class="icon" src="${assetRoot}/${escapeHtml(entry.icon_path)}" alt="" loading="lazy" /><div class="id">${escapeHtml(entry.id)}</div></div>
       <div class="meaning">${escapeHtml(entry.display_name || entry.id)}</div>
       <div class="tags">${aliases.map((t) => `<span class="tag">${escapeHtml(t)}</span>`).join("")}</div>
       <div class="examples"><div class="ex">${escapeHtml(entry.description || entry.entity_type || "Named entity")}</div></div>

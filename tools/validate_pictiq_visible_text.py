@@ -8,6 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 LANDING = ROOT / "docs" / "landing" / "index.html"
+ROOT_LANDING = ROOT / "docs" / "index.html"
 STYLE = ROOT / "docs" / "landing" / "style.css"
 SCRIPT = ROOT / "docs" / "landing" / "landing.js"
 
@@ -34,11 +35,15 @@ class PictiqTextAudit(HTMLParser):
 
 
 def main() -> int:
-    parser = PictiqTextAudit()
-    parser.feed(LANDING.read_text(encoding="utf-8"))
     errors = []
-    if parser.visible_text:
-        errors.append("Pictiq mode contains visible text nodes: " + ", ".join(repr(item) for item in parser.visible_text))
+    for landing in (ROOT_LANDING, LANDING):
+        parser = PictiqTextAudit()
+        parser.feed(landing.read_text(encoding="utf-8"))
+        if parser.visible_text:
+            errors.append(
+                f"{landing.relative_to(ROOT)} Pictiq mode contains visible text nodes: "
+                + ", ".join(repr(item) for item in parser.visible_text)
+            )
 
     style = STYLE.read_text(encoding="utf-8")
     script = SCRIPT.read_text(encoding="utf-8")
@@ -56,7 +61,7 @@ def main() -> int:
 
     if errors:
         raise SystemExit("\n".join(f"ERROR: {error}" for error in errors))
-    print("OK: Pictiq landing mode has zero visible natural-language text nodes")
+    print("OK: root and legacy Pictiq landing modes have zero visible natural-language text nodes")
     return 0
 
 
