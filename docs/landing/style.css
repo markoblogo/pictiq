@@ -258,3 +258,21 @@ p { color:var(--muted); }
   .pictiq-secondary img { width:40px; height:40px; }
   .pictiq-section { padding:28px 0; }
 }
+
+/* Final Pictiq-only rhythm: sentence, response, action, then section. */
+.pictiq-hero { grid-template-columns:minmax(0, 1fr) 280px; gap:48px; padding:36px 0; }
+.pictiq-copy { gap:14px; }
+.pictiq-copy .symbol-actions { margin-top:2px; }
+.pictiq-section { padding:30px 0; }
+.pictiq-about { min-height:0; }
+.pictiq-book { grid-template-columns:250px minmax(0, 1fr); gap:42px; }
+.pictiq-book .symbol-actions { margin-top:14px; }
+.pictiq-composer { gap:36px; }
+.pictiq-composer .symbol-actions { margin-top:14px; }
+.pictiq-publications .publication-list { margin-top:14px; }
+.pictiq-publications .publication-list article { gap:16px; padding:12px 0; }
+.pictiq-view .footer-inner { min-height:56px; padding:9px 0; gap:10px 18px; }
+@media (max-width: 820px) {
+  .pictiq-hero, .pictiq-book, .pictiq-composer { gap:22px; }
+  .pictiq-section { padding:24px 0; }
+}

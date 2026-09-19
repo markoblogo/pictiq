@@ -49,3 +49,23 @@ primitives** and **16 Entity Symbols**.
 
 The analytical zero-training statuses and the full pressure log are recorded in
 [`landing-translation-findings-2026-09.md`](../../book-materials/research/landing-translation-findings-2026-09.md).
+
+## Final visual rhythm and optical-fit review
+
+Status: **READY FOR HUMAN VISUAL REVIEW**. Pictiq mode uses an independent
+960 px content system (280 px cover exception in the hero), with a token gap
+below message gap, below action gap, below section gap. The frozen semantic
+order is unchanged.
+
+Rendered optical references: `punct_question`, `need_water`, `comm_speak`, and
+`logic_yes`. The audit compares each landing icon at 96 px, 64 px, and 40 px.
+The approved artwork was not redrawn. The preceding geometry pass translated
+only the imported Entity artwork: GitHub `(+1.984375, -0.081341)`, English
+`(-0.984375, -0.943329)`, PDF `(-0.921875, -0.497395)`, Medium
+`(-0.031250, -0.772518)`, and Substack `(-0.015625, -0.983506)` canonical
+units; all use scale `1.0`.
+
+- [Optical QA sheet](optical-fit-qa.svg)
+- Run `python3 tools/make_landing_optical_qa.py` to regenerate it.
+- Run `python3 tools/validate_imported_icon_geometry.py` for rendered foreground,
+  clipping, and Pages-mirror checks.
