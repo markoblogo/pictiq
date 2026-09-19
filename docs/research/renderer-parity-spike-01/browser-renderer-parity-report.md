@@ -3,7 +3,7 @@
 - Status: **PASS**
 - Architecture verdict: **ACCEPT_WITH_GUARDRAILS**
 - Comparison level: functional/structural parity; byte equality recorded but not required
-- Generated asset manifest: `docs/renderer/generated/pictiq-browser-assets.mjs` (362604 bytes)
+- Generated asset manifest: `docs/renderer/generated/pictiq-browser-assets.mjs` (360340 bytes)
 - QA sheet: `docs/research/renderer-parity-spike-01/browser-renderer-parity-qa.svg`
 
 | Fixture | Dimensions | Tokens/layout | Assets/byte | Color | Numeric | Entity | Result |

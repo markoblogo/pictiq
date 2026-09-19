@@ -1,0 +1,414 @@
+{
+  "method": "HUMAN-APPROVED SOURCE \u2192 foreground extraction \u2192 proportional source-relative candidate \u2192 overlay/difference \u2192 human review",
+  "icons": [
+    {
+      "canonical_id": "action_combine",
+      "source_path": "clw.png",
+      "current_path": "icons/svg/action_combine.svg",
+      "classification": "RECONSTRUCTION_DIRECTION_ACCEPTED",
+      "reconstruction_required": true,
+      "source_frame_inner_px": {
+        "left": 49,
+        "top": 39,
+        "right": 336,
+        "bottom": 295
+      },
+      "source_foreground_px": {
+        "left": 77,
+        "top": 64,
+        "right": 306,
+        "bottom": 270
+      },
+      "source_ratios": {
+        "foreground_width_ratio": 0.8006993006993007,
+        "foreground_height_ratio": 0.803921568627451,
+        "left_clearance_ratio": 0.0944055944055944,
+        "right_clearance_ratio": 0.1048951048951049,
+        "top_clearance_ratio": 0.09803921568627451,
+        "bottom_clearance_ratio": 0.09803921568627451
+      },
+      "candidate_ratios": {
+        "foreground_width_ratio": 0.8006993006993006,
+        "foreground_height_ratio": 0.7167832167832168,
+        "left_clearance_ratio": 0.09965034965034965,
+        "right_clearance_ratio": 0.09965034965034977,
+        "top_clearance_ratio": 0.14160839160839164,
+        "bottom_clearance_ratio": 0.14160839160839153
+      },
+      "candidate_path": "combine/candidate.svg",
+      "notes": "Reused the existing RECONSTRUCTION_DIRECTION_ACCEPTED approved-source candidate and its source-relative measurements; not re-vectorized in this pass.",
+      "current_ratios": {
+        "foreground_width_ratio": 0.936,
+        "foreground_height_ratio": 0.915,
+        "left_clearance_ratio": 0.055,
+        "right_clearance_ratio": 0.009,
+        "top_clearance_ratio": 0.067,
+        "bottom_clearance_ratio": 0.018
+      },
+      "current_foreground_bbox_1024": {
+        "left": 199,
+        "top": 207,
+        "right": 858,
+        "bottom": 851
+      }
+    },
+    {
+      "canonical_id": "action_learn",
+      "source_path": "clw.png",
+      "current_path": "icons/svg/action_learn.svg",
+      "classification": "RECONSTRUCTION_REQUIRED",
+      "reconstruction_required": true,
+      "source_frame_inner_px": {
+        "left": 142,
+        "top": 39,
+        "right": 430,
+        "bottom": 296
+      },
+      "source_foreground_px": {
+        "left": 190,
+        "top": 61,
+        "right": 381,
+        "bottom": 266
+      },
+      "source_ratios": {
+        "foreground_width_ratio": 0.663,
+        "foreground_height_ratio": 0.798,
+        "left_clearance_ratio": 0.167,
+        "right_clearance_ratio": 0.17,
+        "top_clearance_ratio": 0.086,
+        "bottom_clearance_ratio": 0.117
+      },
+      "candidate_ratios": {
+        "foreground_width_ratio": 0.663,
+        "foreground_height_ratio": 0.712,
+        "left_clearance_ratio": 0.168,
+        "right_clearance_ratio": 0.168,
+        "top_clearance_ratio": 0.144,
+        "bottom_clearance_ratio": 0.144
+      },
+      "candidate_path": "learn/candidate.svg",
+      "notes": "Foreground traced directly from approved sheet; source frame/presentation materials excluded. One uniform final transform; no canonical asset modified.",
+      "current_ratios": {
+        "foreground_width_ratio": 0.757,
+        "foreground_height_ratio": 0.909,
+        "left_clearance_ratio": 0.143,
+        "right_clearance_ratio": 0.099,
+        "top_clearance_ratio": 0.07,
+        "bottom_clearance_ratio": 0.021
+      },
+      "current_foreground_bbox_1024": {
+        "left": 261,
+        "top": 209,
+        "right": 794,
+        "bottom": 849
+      }
+    },
+    {
+      "canonical_id": "action_write",
+      "source_path": "clw.png",
+      "current_path": "icons/svg/action_write.svg",
+      "classification": "RECONSTRUCTION_REQUIRED",
+      "reconstruction_required": true,
+      "source_frame_inner_px": {
+        "left": 189,
+        "top": 39,
+        "right": 476,
+        "bottom": 296
+      },
+      "source_foreground_px": {
+        "left": 228,
+        "top": 60,
+        "right": 435,
+        "bottom": 266
+      },
+      "source_ratios": {
+        "foreground_width_ratio": 0.721,
+        "foreground_height_ratio": 0.802,
+        "left_clearance_ratio": 0.136,
+        "right_clearance_ratio": 0.143,
+        "top_clearance_ratio": 0.082,
+        "bottom_clearance_ratio": 0.117
+      },
+      "candidate_ratios": {
+        "foreground_width_ratio": 0.721,
+        "foreground_height_ratio": 0.718,
+        "left_clearance_ratio": 0.139,
+        "right_clearance_ratio": 0.139,
+        "top_clearance_ratio": 0.141,
+        "bottom_clearance_ratio": 0.141
+      },
+      "candidate_path": "write/candidate.svg",
+      "notes": "Foreground traced directly from approved sheet; source frame/presentation materials excluded. One uniform final transform; no canonical asset modified.",
+      "current_ratios": {
+        "foreground_width_ratio": 0.768,
+        "foreground_height_ratio": 0.906,
+        "left_clearance_ratio": 0.139,
+        "right_clearance_ratio": 0.092,
+        "top_clearance_ratio": 0.087,
+        "bottom_clearance_ratio": 0.007
+      },
+      "current_foreground_bbox_1024": {
+        "left": 258,
+        "top": 221,
+        "right": 799,
+        "bottom": 859
+      }
+    },
+    {
+      "canonical_id": "github__platform",
+      "source_path": "\u0438\u043c\u0435\u043d\u04303.png",
+      "current_path": "docs/entities/svg/github__platform.svg",
+      "classification": "RECONSTRUCTION_REQUIRED",
+      "reconstruction_required": true,
+      "source_frame_inner_px": {
+        "left": 39,
+        "top": 25,
+        "right": 246,
+        "bottom": 211
+      },
+      "source_foreground_px": {
+        "left": 68,
+        "top": 45,
+        "right": 202,
+        "bottom": 195
+      },
+      "source_ratios": {
+        "foreground_width_ratio": 0.647,
+        "foreground_height_ratio": 0.806,
+        "left_clearance_ratio": 0.14,
+        "right_clearance_ratio": 0.213,
+        "top_clearance_ratio": 0.108,
+        "bottom_clearance_ratio": 0.086
+      },
+      "candidate_ratios": {
+        "foreground_width_ratio": 0.647,
+        "foreground_height_ratio": 0.725,
+        "left_clearance_ratio": 0.176,
+        "right_clearance_ratio": 0.176,
+        "top_clearance_ratio": 0.138,
+        "bottom_clearance_ratio": 0.138
+      },
+      "candidate_path": "github/candidate.svg",
+      "notes": "Foreground traced directly from approved sheet; source frame/presentation materials excluded. One uniform final transform; no canonical asset modified.",
+      "current_ratios": {
+        "foreground_width_ratio": 0.751,
+        "foreground_height_ratio": 0.845,
+        "left_clearance_ratio": 0.149,
+        "right_clearance_ratio": 0.099,
+        "top_clearance_ratio": 0.101,
+        "bottom_clearance_ratio": 0.054
+      },
+      "current_foreground_bbox_1024": {
+        "left": 265,
+        "top": 231,
+        "right": 794,
+        "bottom": 826
+      }
+    },
+    {
+      "canonical_id": "english__language",
+      "source_path": "\u0438\u043c\u0435\u043d\u04303.png",
+      "current_path": "docs/entities/svg/english__language.svg",
+      "classification": "RECONSTRUCTION_REQUIRED",
+      "reconstruction_required": true,
+      "source_frame_inner_px": {
+        "left": 42,
+        "top": 25,
+        "right": 249,
+        "bottom": 211
+      },
+      "source_foreground_px": {
+        "left": 68,
+        "top": 64,
+        "right": 222,
+        "bottom": 179
+      },
+      "source_ratios": {
+        "foreground_width_ratio": 0.744,
+        "foreground_height_ratio": 0.618,
+        "left_clearance_ratio": 0.126,
+        "right_clearance_ratio": 0.13,
+        "top_clearance_ratio": 0.21,
+        "bottom_clearance_ratio": 0.172
+      },
+      "candidate_ratios": {
+        "foreground_width_ratio": 0.744,
+        "foreground_height_ratio": 0.556,
+        "left_clearance_ratio": 0.128,
+        "right_clearance_ratio": 0.128,
+        "top_clearance_ratio": 0.222,
+        "bottom_clearance_ratio": 0.222
+      },
+      "candidate_path": "english/candidate.svg",
+      "notes": "Foreground traced directly from approved sheet; source frame/presentation materials excluded. One uniform final transform; no canonical asset modified.",
+      "current_ratios": {
+        "foreground_width_ratio": 0.759,
+        "foreground_height_ratio": 0.575,
+        "left_clearance_ratio": 0.142,
+        "right_clearance_ratio": 0.099,
+        "top_clearance_ratio": 0.234,
+        "bottom_clearance_ratio": 0.19
+      },
+      "current_foreground_bbox_1024": {
+        "left": 260,
+        "top": 325,
+        "right": 794,
+        "bottom": 730
+      }
+    },
+    {
+      "canonical_id": "pdf__format",
+      "source_path": "\u0438\u043c\u0435\u043d\u04303.png",
+      "current_path": "docs/entities/svg/pdf__format.svg",
+      "classification": "RECONSTRUCTION_REQUIRED",
+      "reconstruction_required": true,
+      "source_frame_inner_px": {
+        "left": 47,
+        "top": 25,
+        "right": 254,
+        "bottom": 211
+      },
+      "source_foreground_px": {
+        "left": 97,
+        "top": 50,
+        "right": 204,
+        "bottom": 189
+      },
+      "source_ratios": {
+        "foreground_width_ratio": 0.517,
+        "foreground_height_ratio": 0.747,
+        "left_clearance_ratio": 0.242,
+        "right_clearance_ratio": 0.242,
+        "top_clearance_ratio": 0.134,
+        "bottom_clearance_ratio": 0.118
+      },
+      "candidate_ratios": {
+        "foreground_width_ratio": 0.517,
+        "foreground_height_ratio": 0.671,
+        "left_clearance_ratio": 0.242,
+        "right_clearance_ratio": 0.242,
+        "top_clearance_ratio": 0.164,
+        "bottom_clearance_ratio": 0.164
+      },
+      "candidate_path": "pdf/candidate.svg",
+      "notes": "Foreground traced directly from approved sheet; source frame/presentation materials excluded. One uniform final transform; no canonical asset modified.",
+      "current_ratios": {
+        "foreground_width_ratio": 0.636,
+        "foreground_height_ratio": 0.835,
+        "left_clearance_ratio": 0.206,
+        "right_clearance_ratio": 0.158,
+        "top_clearance_ratio": 0.105,
+        "bottom_clearance_ratio": 0.06
+      },
+      "current_foreground_bbox_1024": {
+        "left": 305,
+        "top": 234,
+        "right": 753,
+        "bottom": 822
+      }
+    },
+    {
+      "canonical_id": "medium__platform",
+      "source_path": "\u0438\u043c\u0435\u043d\u04303.png",
+      "current_path": "docs/entities/svg/medium__platform.svg",
+      "classification": "RECONSTRUCTION_REQUIRED",
+      "reconstruction_required": true,
+      "source_frame_inner_px": {
+        "left": 56,
+        "top": 26,
+        "right": 267,
+        "bottom": 214
+      },
+      "source_foreground_px": {
+        "left": 79,
+        "top": 73,
+        "right": 243,
+        "bottom": 168
+      },
+      "source_ratios": {
+        "foreground_width_ratio": 0.777,
+        "foreground_height_ratio": 0.505,
+        "left_clearance_ratio": 0.109,
+        "right_clearance_ratio": 0.114,
+        "top_clearance_ratio": 0.25,
+        "bottom_clearance_ratio": 0.245
+      },
+      "candidate_ratios": {
+        "foreground_width_ratio": 0.777,
+        "foreground_height_ratio": 0.45,
+        "left_clearance_ratio": 0.111,
+        "right_clearance_ratio": 0.111,
+        "top_clearance_ratio": 0.275,
+        "bottom_clearance_ratio": 0.275
+      },
+      "candidate_path": "medium/candidate.svg",
+      "notes": "Foreground traced directly from approved sheet; source frame/presentation materials excluded. One uniform final transform; no canonical asset modified.",
+      "current_ratios": {
+        "foreground_width_ratio": 0.936,
+        "foreground_height_ratio": 0.561,
+        "left_clearance_ratio": 0.054,
+        "right_clearance_ratio": 0.01,
+        "top_clearance_ratio": 0.243,
+        "bottom_clearance_ratio": 0.196
+      },
+      "current_foreground_bbox_1024": {
+        "left": 198,
+        "top": 331,
+        "right": 857,
+        "bottom": 726
+      }
+    },
+    {
+      "canonical_id": "substack__platform",
+      "source_path": "\u0438\u043c\u0435\u043d\u04303.png",
+      "current_path": "docs/entities/svg/substack__platform.svg",
+      "classification": "RECONSTRUCTION_REQUIRED",
+      "reconstruction_required": true,
+      "source_frame_inner_px": {
+        "left": 54,
+        "top": 26,
+        "right": 268,
+        "bottom": 213
+      },
+      "source_foreground_px": {
+        "left": 111,
+        "top": 57,
+        "right": 209,
+        "bottom": 182
+      },
+      "source_ratios": {
+        "foreground_width_ratio": 0.458,
+        "foreground_height_ratio": 0.668,
+        "left_clearance_ratio": 0.266,
+        "right_clearance_ratio": 0.276,
+        "top_clearance_ratio": 0.166,
+        "bottom_clearance_ratio": 0.166
+      },
+      "candidate_ratios": {
+        "foreground_width_ratio": 0.458,
+        "foreground_height_ratio": 0.584,
+        "left_clearance_ratio": 0.271,
+        "right_clearance_ratio": 0.271,
+        "top_clearance_ratio": 0.208,
+        "bottom_clearance_ratio": 0.208
+      },
+      "candidate_path": "substack/candidate.svg",
+      "notes": "Foreground traced directly from approved sheet; source frame/presentation materials excluded. One uniform final transform; no canonical asset modified.",
+      "current_ratios": {
+        "foreground_width_ratio": 0.533,
+        "foreground_height_ratio": 0.663,
+        "left_clearance_ratio": 0.259,
+        "right_clearance_ratio": 0.209,
+        "top_clearance_ratio": 0.189,
+        "bottom_clearance_ratio": 0.148
+      },
+      "current_foreground_bbox_1024": {
+        "left": 342,
+        "top": 293,
+        "right": 717,
+        "bottom": 760
+      }
+    }
+  ],
+  "governance": "Do not assume an existing vector preserves approved artwork. Re-extract from the approved source when visual comparison shows divergence. Do not use repeated scale/translate compensation as a substitute for reconstruction."
+}

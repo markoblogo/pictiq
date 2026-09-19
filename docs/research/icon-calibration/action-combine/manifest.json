@@ -1,0 +1,76 @@
+{
+  "title": "Pictiq action_combine human art-direction calibration",
+  "status": "human-selection-pending",
+  "canonical_source": "../../../../icons/svg/action_combine.svg",
+  "approved_source": "../../landing-translation-v0.1/action-combine-approved-source.png",
+  "frame": "each candidate retains the frozen canonical outer frame; only canonical_action_combine transform differs",
+  "safe_area": {
+    "x": 5,
+    "y": 5,
+    "width": 22,
+    "height": 22
+  },
+  "candidates": [
+    {
+      "id": "A",
+      "scale": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "transform": "matrix(0.010065606 0 0 -0.010065606 5.887021621 25.875348412)",
+      "purpose": "current"
+    },
+    {
+      "id": "B",
+      "scale": 0.97,
+      "x": 0.0,
+      "y": 0.0,
+      "transform": "matrix(0.009763638 0 0 -0.009763638 6.190410972 25.579087960)",
+      "purpose": "scale-down"
+    },
+    {
+      "id": "C",
+      "scale": 1.03,
+      "x": 0.0,
+      "y": 0.0,
+      "transform": "matrix(0.010367574 0 0 -0.010367574 5.583632270 26.171608864)",
+      "purpose": "scale-up"
+    },
+    {
+      "id": "D",
+      "scale": 1.0,
+      "x": -0.65,
+      "y": 0.0,
+      "transform": "matrix(0.010065606 0 0 -0.010065606 5.237021621 25.875348412)",
+      "purpose": "left"
+    },
+    {
+      "id": "E",
+      "scale": 1.0,
+      "x": 0.65,
+      "y": 0.0,
+      "transform": "matrix(0.010065606 0 0 -0.010065606 6.537021621 25.875348412)",
+      "purpose": "right"
+    },
+    {
+      "id": "F",
+      "scale": 1.03,
+      "x": -0.55,
+      "y": 0.2,
+      "transform": "matrix(0.010367574 0 0 -0.010367574 5.033632270 26.371608864)",
+      "purpose": "upscale-left-down"
+    },
+    {
+      "id": "G",
+      "scale": 0.97,
+      "x": -0.55,
+      "y": 0.2,
+      "transform": "matrix(0.009763638 0 0 -0.009763638 5.640410972 25.779087960)",
+      "purpose": "downscale-left-down"
+    }
+  ],
+  "landing_preview": {
+    "context": "Pictiq desktop secondary sequence",
+    "pixel_size": 56,
+    "source_rule": "docs/landing/style.css .pictiq-secondary img clamp(44px, 3.8vw, 56px)"
+  }
+}

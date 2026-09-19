@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="510" viewBox="0 0 620 510"><rect width="620" height="510" fill="#fff"/><image href="approved-source-foreground-red.png" width="620" height="510"/><g transform="matrix(1 0 0 -1 0 510)" fill="#2269c9" fill-opacity=".52" stroke="none"><path d="M273 434 l-1 0 0 -20 0 -20 -10 0 -10 0 -2 -1 -2 -1 0 -2 0 -3 10
+-12 11 -12 5 -7 5 -7 2 0 3 0 2 3 2 3 13 16 14 16 0 2 0 3 -1 1 -1 1 -11 0
+-11 0 0 21 0 20 -9 0 -9 0 0 -1z M213 360 l-1 -2 0 -10 0 -10 -22 0 -22 0 0
+-9 0 -8 22 -1 22 0 0 -10 0 -9 1 -2 1 -2 3 0 2 0 20 15 21 16 0 1 0 2 -20 15
+-20 15 -3 1 -3 0 -1 -2z M325 347 l-20 -16 0 -2 0 -2 19 -15 20 -15 3 0 3 0 0
+2 1 1 0 10 0 10 23 0 23 0 0 9 0 9 -23 0 -23 0 0 11 0 11 -1 1 -1 1 -2 0 -2 0
+-20 -15z M263 290 l-15 -18 0 -3 1 -2 11 -1 12 0 0 -18 1 -18 9 0 9 0 0 18 0
+18 12 0 12 1 0 2 0 3 -8 10 -9 10 -7 8 -7 9 -3 0 -2 0 -16 -19z" /></g><text x="22" y="34" font-family="Arial" font-size="18" font-weight="700" fill="#111">Silhouette difference: red = source only · blue = vector only · purple = shared area</text></svg>

@@ -1,45 +1,38 @@
 # Canonical icon fitting standard
 
-`APPROVED SHAPE IS IMMUTABLE; PLACEMENT IS NOT.`
-
 Human-approved artwork keeps its silhouette, proportions, topology, direction,
-and components. Source-sheet coordinates, crop boundaries, presentation frames,
-and export canvases are never canonical coordinates.
+and source-relative composition through canonicalization.
 
-The mandatory import workflow is:
+## Normative workflow for approved external artwork
 
-`APPROVED SKETCH → CANONICAL SVG`
+1. Start with the **human-approved source**.
+2. Isolate only the semantic foreground; remove labels, presentation frames,
+   shadows, dividers, and mockup material.
+3. Faithfully reconstruct/vectorize that foreground.
+4. Fit it proportionally inside the canonical `0 0 32 32` Pictiq frame using
+   the source foreground-to-frame relationship as the initial target.
+5. Produce overlay and difference QA when extraction is uncertain.
+6. Obtain human visual review and acceptance.
+7. Canonicalize the accepted artwork, then synchronize Pages, renderer, and
+   Composer artifacts.
 
-1. Isolate the approved symbol and remove labels, frames, shadows, and
-   background.
-2. Calculate the true tight bounding box of visible symbol geometry.
-3. Normalize its origin and preserve aspect ratio.
-4. Fit proportionally into the canonical safe area and center the visible
-   geometry horizontally and vertically.
-5. Add the canonical frame, then validate bounds and clipping.
-6. Review large, 64 px, and 24 px renders in the final framed tile.
-7. Apply a small whole-symbol optical position or proportional-size correction when the final tile still looks unbalanced.
-8. Obtain human visual acceptance.
+Geometric centering, bounding boxes, and validators are hard-safety tools.
+They can detect clipping, malformed SVG, unsafe extents, stale public copies,
+or transform-stack regressions. They do not override a human-approved,
+source-relative composition.
 
-The canonical tile is `32 × 32`. The established safe area is the inner
-`24 × 24` box at `(4, 4)`. Imported artwork uses a conservative fitting box
-of `22 × 22` at `(5, 5)`; a smaller result is expected when aspect ratio leaves
-unused space. The outer rounded-square frame is presentation structure and is
-never included in the artwork bounding box.
+Repeated bbox centering, optical matrix compensation, and placement variants
+built on an already-divergent vector are not substitutes for returning to the
+approved source.
 
-Geometric fitting is necessary but not sufficient. The final decision is made from
-approved artwork inside the final framed tile: the artwork must have balanced
-visual mass, breathing room, and perceived size alongside established Pictiq
-icons. A mathematically centered bounding box is not visual acceptance.
+## Technical bounds
 
-The complete workflow is: approved artwork → geometry isolation → geometric
-fitting → safe-area validation → final framed rendering → optical position
-adjustment → optical size adjustment → human visual acceptance. Optical
-correction is allowed only as a small whole-symbol translation or proportional
-scale change; independent X/Y stretching is prohibited. The reason is recorded.
+Canonical tiles use `viewBox="0 0 32 32"` and the shared rounded frame. The
+hard safe area is `(4,4)` through `(28,28)`. A typical fitting area is
+`(5,5)` through `(27,27)`, but it is guidance rather than a reason to alter an
+accepted source-relative fit. Canonical foreground uses one normalized group
+with, at most, one final transform.
 
-Validators are hard safety constraints, not final aesthetic acceptance. They
-catch clipping, out-of-bounds geometry, Pages/canonical mismatches, and broken
-transforms. `tools/validate_icon_fitting.py` remains the repeatable geometry
-report; human review remains the acceptance source for imported artwork.
-
+`tools/validate_icon_fitting.py` and
+`tools/validate_imported_icon_geometry.py` report geometry and enforce only
+hard safety; human visual review remains the acceptance source.

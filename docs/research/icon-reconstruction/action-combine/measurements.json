@@ -1,0 +1,61 @@
+{
+  "approved_source": "docs/research/landing-translation-v0.1/action-combine-approved-source.png",
+  "source_measurements_px": {
+    "frame_inner": {
+      "left": 140,
+      "right": 426,
+      "top": 50,
+      "bottom": 305
+    },
+    "foreground": {
+      "left": 167,
+      "right": 396,
+      "top": 75,
+      "bottom": 280
+    }
+  },
+  "source_ratios": {
+    "foreground_width_ratio": 0.8006993006993007,
+    "foreground_height_ratio": 0.803921568627451,
+    "left_clearance_ratio": 0.0944055944055944,
+    "right_clearance_ratio": 0.1048951048951049,
+    "top_clearance_ratio": 0.09803921568627451,
+    "bottom_clearance_ratio": 0.09803921568627451
+  },
+  "candidate": {
+    "file": "action-combine-reconstructed-candidate.svg",
+    "transform": "matrix(0.097902097902 0 0 -0.097902097902 -11.559440559441 48.552447552448)",
+    "foreground_bbox_viewbox": {
+      "left": 4.79020979020979,
+      "top": 5.965034965034966,
+      "right": 27.209790209790206,
+      "bottom": 26.034965034965037
+    },
+    "ratios": {
+      "foreground_width_ratio": 0.8006993006993006,
+      "foreground_height_ratio": 0.7167832167832168,
+      "left_clearance_ratio": 0.09965034965034965,
+      "right_clearance_ratio": 0.09965034965034977,
+      "top_clearance_ratio": 0.14160839160839164,
+      "bottom_clearance_ratio": 0.14160839160839153
+    }
+  },
+  "old_canonical": {
+    "file": "old-current-canonical.svg",
+    "foreground_bbox_viewbox": {
+      "left": 6.0,
+      "top": 6.15625,
+      "right": 26.0,
+      "bottom": 25.84375
+    },
+    "ratios": {
+      "foreground_width_ratio": 0.7142857142857143,
+      "foreground_height_ratio": 0.703125,
+      "left_clearance_ratio": 0.14285714285714285,
+      "right_clearance_ratio": 0.14285714285714285,
+      "top_clearance_ratio": 0.1484375,
+      "bottom_clearance_ratio": 0.1484375
+    }
+  },
+  "fit_note": "Source raster frame is visibly non-square (286 \u00d7 255 interior). Candidate uses one uniform source-to-canonical scale; no X/Y distortion is applied. Horizontal source clearance determines the transfer and vertical composition is centred."
+}
