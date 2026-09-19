@@ -8,7 +8,7 @@ Pictiq separates seven layers:
 
 **Canonical Registry != Core Vocabulary != Standalone Core != Context Packs != Specialized Vocabulary != Entity Registry != Legacy/Deprecated compatibility.**
 
-1. **Canonical Registry** — every accepted ordinary reusable tile in `lexicon/icon-index.json`; currently 83 active/retained ordinary identifiers.
+1. **Canonical Registry** — every accepted ordinary reusable tile in `lexicon/icon-index.json`; currently 87 active/retained ordinary identifiers.
 2. **Core Vocabulary** — broad everyday primitives inside the canonical registry.
 3. **Standalone Core** — concepts that must often be explicit when the body, object, or live situation disappears.
 4. **Context Packs** — scenario-specific selections such as Paris, nightlife, travel, retail, health, food, technology, or infrastructure.
@@ -30,12 +30,12 @@ Two principles control classification:
 | Role | Count |
 | --- | ---: |
 | MECHANISM | 16 |
-| CORE | 26 |
+| CORE | 30 |
 | STANDALONE_CORE | 5 |
 | CONTEXTUAL | 36 |
 | SPECIALIZED | 0 |
-| Active ordinary semantic concepts | 82 |
-| Retained ordinary identifiers in canonical registry | 83 |
+| Active ordinary semantic concepts | 86 |
+| Retained ordinary identifiers in canonical registry | 87 |
 
 Entity symbols and numeric notation assets are excluded from these counts. `place_fashion_shopping` is retained as a deprecated compatibility identifier, so the active semantic concept count and retained ordinary identifier count differ by one.
 
@@ -45,7 +45,7 @@ Disposition counts can overlap.
 
 | Disposition | Count |
 | --- | ---: |
-| KEEP_CORE | 42 |
+| KEEP_CORE | 45 |
 | KEEP_CONTEXTUAL | 36 |
 | KEEP_STANDALONE_CORE | 5 |
 | SEMANTIC_MIGRATION | 2 |

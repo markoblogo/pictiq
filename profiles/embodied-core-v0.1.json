@@ -48,7 +48,10 @@
     "action_change",
     "qual_sacred",
     "nature_animal",
-    "nature_cloud"
+    "nature_cloud",
+    "action_combine",
+    "action_learn",
+    "action_write"
   ],
   "omitted_concepts": {
     "person_generic": "A present person can point to self or another participant.",

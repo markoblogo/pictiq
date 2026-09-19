@@ -2,7 +2,7 @@
   "schema_version": "0.1.0",
   "status": "ACCEPTED VOCABULARY ARCHITECTURE CLASSIFICATION SOURCE OF TRUTH",
   "canonical_lexicon": "lexicon/icon-index.json",
-  "ordinary_canonical_icon_count": 84,
+  "ordinary_canonical_icon_count": 87,
   "entity_registry": "entities/entity-index.json",
   "entity_registry_policy": "Entity symbols are excluded from ordinary vocabulary classification.",
   "principles": [
@@ -1151,6 +1151,33 @@
       "standalone_relevance": "HIGH",
       "confidence": "HIGH",
       "note": "Human decision: KEEP_CORE. Broad CLOUD / SKY / AIR / ATMOSPHERIC SPACE / WEATHER context / OVERHEAD SKY CONTEXT."
+    },
+    {
+      "id": "action_combine",
+      "primary_role": "CORE",
+      "secondary_contexts": ["EVERYDAY", "COMMUNICATION", "NARRATIVE", "TECH", "MEDIA"],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH",
+      "note": "Human-accepted landing translation pressure. Broad COMBINE / JOIN / COMPOSE / ASSEMBLE concept; software merge remains contextual."
+    },
+    {
+      "id": "action_learn",
+      "primary_role": "CORE",
+      "secondary_contexts": ["EVERYDAY", "COMMUNICATION", "NARRATIVE", "SOCIAL"],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH",
+      "note": "Human-accepted landing translation pressure. Broad LEARN / STUDY / PRACTICE / TRAIN concept; not a school, sport, or education-specific icon."
+    },
+    {
+      "id": "action_write",
+      "primary_role": "CORE",
+      "secondary_contexts": ["EVERYDAY", "COMMUNICATION", "MEDIA", "NARRATIVE"],
+      "embodied_relevance": "HIGH",
+      "standalone_relevance": "HIGH",
+      "confidence": "HIGH",
+      "note": "Human-accepted landing translation pressure. Action of creating written information; distinct from media_text as the text object/result."
     }
   ],
   "canonical_lexicon_version": "0.8.1"

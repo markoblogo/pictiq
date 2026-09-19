@@ -1159,3 +1159,12 @@ Result: The project phase model now distinguishes Phase I language/infrastructur
 Decision / outcome: Strategy/research documentation only. No Composer code, vocabulary, grammar, Message Schema, Shorthand, Renderer, icon, Entity Symbol, Context Pack, tag, release, external model call, Stress Test 04B run, or Stress Test 05 run changed in this pass.
 
 Artifacts: [Zero-Training Entry Principle](concepts/zero-training-entry.md), [Research and Evidence Policy](research/pictiq-research-and-evidence-policy.md), [Deployment Roadmap](planning/deployment-roadmap.md), [Publication Milestones](planning/publication-milestones.md), and [Stress Test 05 plan](research/stress-test-05-zero-training-visual-comprehension.md).
+## 2026-09-19 — Landing translation pressure adds three Core actions
+
+The first complete manual semantic review of the accepted English landing produced real vocabulary pressure for `action_combine`, `action_learn`, and `action_write`. Human-approved artwork from the supplied reference sheet was extracted and packaged as canonical ordinary SVGs. The three concepts are broader than Web/UI labels and are accepted as Core; `media_text` remains the written-information object/result, while `action_write` is the act of creating it.
+
+The pass also formalized three normative communication principles in the protocol: MEANING-BEFORE-WORDING, PRIORITY-FIRST COMMUNICATION, and FUNCTIONAL SUFFICIENCY. Their relationship is `Meaning before wording. Priority before background. Sufficiency before completeness.` This preserves the existing semantic-compression distinction between intentional omission and meaningful loss. `TOILET + punct_question` and `NEED + WATER` remain concise practical examples; identity, history, apology, quantity, payment, or reason can be added only when needed.
+
+Machine/Computer, Browser, Workspace, Project, System, Symbol, New, Archive, Video, and IT/Server remain deferred under NEED-BEFORE-VOCABULARY. Short/long/high/low notation remains a deferred hypothesis. Entity-symbol candidates (Composer, GitHub, English/England, PDF, EPUB, Medium, Substack) are recorded for a later dedicated pass. The landing translation/deployment remains a publication-milestone candidate, not READY.
+
+Evidence: [landing translation findings](research/landing-translation-findings-2026-09.md), [QA sheet](../research/landing-translation-2026-09/qa-sheet.html), [landing translation architecture](concepts/landing-translation-architecture.md), and [normative protocol](../../spec/PROTOCOL.md).

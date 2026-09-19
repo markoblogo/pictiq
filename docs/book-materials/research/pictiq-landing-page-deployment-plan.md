@@ -279,3 +279,7 @@ Publication status: `PUBLICATION MILESTONE CANDIDATE`, not READY. Possible futur
 Deferred vocabulary remains unchanged: Archive, IT/System/Server, and Video are `DEFERRED_UNTIL_NEEDED`.
 
 No EN/PICTIQ switch, Pictiq translation layer, custom domain, DNS, vocabulary, Context Pack, grammar, Message Schema, Renderer, Composer, tag, release, or push was created in this architecture pass.
+
+## Landing semantic findings and Core additions — 2026-09-19
+
+The subsequent first complete manual semantic pass over the accepted landing produced genuine cross-domain pressure for three approved ordinary Core primitives: `action_combine`, `action_learn`, and `action_write`. The current registry is therefore 87 ordinary icons; the earlier 84-icon figures above remain historical baseline values for the pre-findings deployment plan. The landing translation itself remains unimplemented and the publication milestone remains a candidate. See [Landing Translation Findings](landing-translation-findings-2026-09.md) and the [Core primitive QA sheet](../../research/landing-translation-2026-09/qa-sheet.html).

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>Pictiq landing translation — Core primitive QA</title>
+<style>
+body { font: 16px system-ui, sans-serif; margin: 32px; color: #111; background: #fff; }
+table { border-collapse: collapse; width: 100%; max-width: 1100px; }
+th, td { border: 1px solid #bbb; padding: 14px; text-align: center; vertical-align: middle; }
+th { background: #f3f3f3; }
+.icon { display: block; margin: 0 auto 8px; }
+.large { width: 192px; height: 192px; }
+.px64 { width: 64px; height: 64px; }
+.px24 { width: 24px; height: 24px; }
+.neighbors img { width: 48px; height: 48px; margin: 4px; }
+small { color: #555; }
+</style>
+<h1>Landing translation — approved Core primitive QA</h1>
+<p>Actual canonical SVGs, extracted from the human-approved reference sheet and packaged with the current Pictiq frame. Review large, 64 px, and 24 px renders at 100% zoom.</p>
+<table>
+<thead><tr><th>Primitive</th><th>Canonical</th><th>64 px</th><th>24 px</th><th>Meaning / comparison</th></tr></thead>
+<tbody>
+<tr><th><code>action_combine</code></th><td><img class="icon large" src="../../lexicon/svg/action_combine.svg" alt="combine canonical"></td><td><img class="icon px64" src="../../lexicon/svg/action_combine.svg" alt="combine 64 px"></td><td><img class="icon px24" src="../../lexicon/svg/action_combine.svg" alt="combine 24 px"></td><td>combine / join / compose / assemble<br><span class="neighbors"><img src="../../lexicon/svg/action_change.svg" alt="change"><img src="../../lexicon/svg/rel_greater.svg" alt="greater"></span><br><small>comparison: action_change, rel_greater</small></td></tr>
+<tr><th><code>action_learn</code></th><td><img class="icon large" src="../../lexicon/svg/action_learn.svg" alt="learn canonical"></td><td><img class="icon px64" src="../../lexicon/svg/action_learn.svg" alt="learn 64 px"></td><td><img class="icon px24" src="../../lexicon/svg/action_learn.svg" alt="learn 24 px"></td><td>learn / study / practice / train<br><span class="neighbors"><img src="../../lexicon/svg/person_generic.svg" alt="person"><img src="../../lexicon/svg/media_text.svg" alt="text"></span><br><small>comparison: person_generic, media_text</small></td></tr>
+<tr><th><code>action_write</code></th><td><img class="icon large" src="../../lexicon/svg/action_write.svg" alt="write canonical"></td><td><img class="icon px64" src="../../lexicon/svg/action_write.svg" alt="write 64 px"></td><td><img class="icon px24" src="../../lexicon/svg/action_write.svg" alt="write 24 px"></td><td>write / create written information<br><span class="neighbors"><img src="../../lexicon/svg/media_text.svg" alt="text"><img src="../../lexicon/svg/media_image.svg" alt="image"></span><br><small>comparison: media_text, media_image</small></td></tr>
+</tbody>
+</table>
+<p><small>QA artifact only. Human visual acceptance remains the decision gate; generation and structural validation do not establish perceptual acceptance.</small></p>
+</html>

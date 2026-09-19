@@ -53,7 +53,10 @@
     "action_change",
     "qual_sacred",
     "nature_animal",
-    "nature_cloud"
+    "nature_cloud",
+    "action_combine",
+    "action_learn",
+    "action_write"
   ],
   "missing_candidates": [
     "meat_animal_food"

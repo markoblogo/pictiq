@@ -45,7 +45,7 @@ A free 95-page illustrated field guide covering:
 ## Canonical overview
 
 Point to a tile. Add `punct_question` to ask, `punct_exclaim` for urgency, and `logic_no` to negate.
-The current canonical registry contains **84 ordinary icons**, including lexical tiles, evaluation modifiers, quantities, relational operators, `surface_wavy`, `state_dead`, the five accepted Odyssey Stress Test 03 Stage 2A primitives, the post-audit `food_meat` primitive, and the accepted Core `action_change` primitive. Canonical does not mean Core: the accepted classification separates Core, Standalone Core, Contextual, Specialized, and Mechanism roles.
+The current canonical registry contains **87 ordinary icons**, including lexical tiles, evaluation modifiers, quantities, relational operators, `surface_wavy`, `state_dead`, the five accepted Odyssey Stress Test 03 Stage 2A primitives, the post-audit `food_meat` primitive, the accepted Core `action_change` primitive, and the landing-driven Core actions `action_combine`, `action_learn`, and `action_write`. Canonical does not mean Core: the accepted classification separates Core, Standalone Core, Contextual, Specialized, and Mechanism roles.
 
 <p align="center">
   <img src="docs/overview/pictiq-core-grid.png" alt="Pictiq core overview grid" width="900" />
@@ -90,7 +90,7 @@ Meaning may enter a message through [lexical tiles, modifiers/operators, paramet
 
 The single canonical lexicon can be selected through an [Embodied Profile](spec/PROFILES.md#embodied-profile) for person-present communication or a [Standalone Profile](spec/PROFILES.md#standalone-profile) for durable/remote communication. Context packs layer on either profile; they are not separate icon libraries.
 
-Pictiq currently scales through five distinct layers: the 83-identifier ordinary canonical registry, the 82 active ordinary semantic concepts retained after compatibility cleanup, Core vocabulary, context packs/profiles, and the 11-example entity registry for specific named entities or visual proper names. Entity registry growth does not increase the ordinary vocabulary count.
+Pictiq currently scales through five distinct layers: the 87-identifier ordinary canonical registry, the 86 active ordinary semantic concepts retained after compatibility cleanup, Core vocabulary, context packs/profiles, and the 11-example entity registry for specific named entities or visual proper names. Entity registry growth does not increase the ordinary vocabulary count.
 
 ### Research
 - [Toki Pona interoperability research](https://github.com/markoblogo/toki-pona-translator) compares the 120-word Toki Pona core vocabulary, sitelen pona, sitelen emoji, and the current Pictiq lexicon as a semantic and interoperability stress test—not as evidence of historical influence or lexical equivalence.

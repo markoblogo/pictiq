@@ -1843,6 +1843,84 @@
         "nature_cloud + surface_wavy",
         "nature_cloud + state_light"
       ]
+    },
+    {
+      "id": "action_combine",
+      "type": "icon",
+      "category": "action",
+      "meaning_en": "combine / join / compose / assemble",
+      "aliases_en": [
+        "combine",
+        "join",
+        "compose",
+        "assemble",
+        "bring together",
+        "merge"
+      ],
+      "tags_en": [
+        "action",
+        "combine",
+        "join",
+        "compose",
+        "assemble"
+      ],
+      "examples": [
+        "action_combine",
+        "action_combine + food_produce",
+        "action_combine + media_text"
+      ]
+    },
+    {
+      "id": "action_learn",
+      "type": "icon",
+      "category": "action",
+      "meaning_en": "learn / study / practice / train",
+      "aliases_en": [
+        "learn",
+        "study",
+        "practice",
+        "train",
+        "acquire knowledge",
+        "acquire skill"
+      ],
+      "tags_en": [
+        "action",
+        "learn",
+        "study",
+        "practice",
+        "knowledge",
+        "skill"
+      ],
+      "examples": [
+        "action_learn",
+        "person_generic + action_learn",
+        "action_learn + media_text"
+      ]
+    },
+    {
+      "id": "action_write",
+      "type": "icon",
+      "category": "action",
+      "meaning_en": "write / create written information",
+      "aliases_en": [
+        "write",
+        "writing",
+        "author",
+        "record in writing",
+        "create text"
+      ],
+      "tags_en": [
+        "action",
+        "write",
+        "writing",
+        "author",
+        "text"
+      ],
+      "examples": [
+        "action_write",
+        "person_generic + action_write",
+        "action_write + media_text"
+      ]
     }
   ]
 }

@@ -25,6 +25,18 @@ See the research notes:
 - Pictiq translates semantic and practical function, not the surface form of the source language.
 - Pictiq preserves distinctions required for the intended meaning or action, not distinctions merely because a source language lexicalizes or grammaticalizes them.
 
+### Meaning, priority, and sufficiency
+
+These communication principles are normative for practical Pictiq translation and authoring:
+
+- **MEANING-BEFORE-WORDING:** Pictiq translates communicative meaning, not source wording. A representation should preserve the meaning required for successful communication rather than reproduce every word, rhetorical device, or explanatory layer.
+- **PRIORITY-FIRST COMMUNICATION:** begin with the sender's highest-priority actionable meaning. Background, identity, explanation, justification, and secondary detail are added only when they become necessary for successful communication.
+- **FUNCTIONAL SUFFICIENCY:** a message is sufficiently complete when the receiver has enough meaning to respond or act appropriately for the communication goal. Exact natural-language reconstruction is not always required; clarification may add detail interactively.
+
+These principles do not permit distortion of essential meaning. They formalize progressive communication: `Meaning before wording. Priority before background. Sufficiency before completeness.` Information may be intentionally omitted when it is rhetorical, redundant, recoverable from context, explanatory but unnecessary for the goal, or irrelevant to the intended action. `INTENTIONAL_OMISSION` remains distinct from `LOSSY` and `GAP` in the semantic-compression framework.
+
+The principles apply to practical or functional communication. Literary and poetic translation remains a separate research track and may preserve narrative order, rhetorical form, or atmosphere when those are the task.
+
 ### 1.1 Embodied and Standalone Communication
 
 This section is normative. **Embodied Communication** is a live exchange in which a person can use their body, voice, gaze, pointing, a visible object, and the shared physical situation together with Pictiq. **Standalone Communication** is a durable or remote artifact—such as a sign, printed card, sticker, screen, or unattended instruction—that must remain understandable when the author is absent.
