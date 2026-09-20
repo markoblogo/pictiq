@@ -1,5 +1,7 @@
 # Result-integrity record
 
+**Pilot status:** `INVALID / PARTIAL FOR PRIMARY STRESS TEST 07 INFERENCE`
+
 ## Collection scope
 
 Five supplied model transcripts were archived byte-for-byte on 2026-09-20. They contain the six blind interpretations and practical responses in their assigned order, except Mistral, which ends before `07C-B` after a service-limit message. No supplied transcript contains the pre-registered micro-learning or learned-transfer phases.

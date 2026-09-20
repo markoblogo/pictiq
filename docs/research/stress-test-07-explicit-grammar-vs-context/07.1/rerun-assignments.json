@@ -1,0 +1,15 @@
+{
+  "schema": "pictiq-stress-test-07.1-rerun-assignments-v0.1",
+  "status": "PREPARED_NOT_EXECUTED",
+  "orders": {
+    "ORDER_1": ["07A-A", "07B-B", "07C-A", "07A-B", "07B-A", "07C-B"],
+    "ORDER_2": ["07A-B", "07B-A", "07C-B", "07A-A", "07B-B", "07C-A"]
+  },
+  "panel": [
+    {"run_id": "07.1-chatgpt", "system_product": "ChatGPT", "order": "ORDER_1", "status": "UNRUN"},
+    {"run_id": "07.1-claude", "system_product": "Claude", "order": "ORDER_2", "status": "UNRUN"},
+    {"run_id": "07.1-gemini", "system_product": "Gemini", "order": "ORDER_1", "status": "UNRUN"},
+    {"run_id": "07.1-copilot", "system_product": "Microsoft Copilot", "order": "ORDER_2", "status": "UNRUN"},
+    {"run_id": "07.1-mistral", "system_product": "Mistral", "order": "ORDER_1", "status": "UNRUN"}
+  ]
+}

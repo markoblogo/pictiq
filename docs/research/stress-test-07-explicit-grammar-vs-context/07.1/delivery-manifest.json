@@ -1,0 +1,166 @@
+{
+  "schema": "pictiq-stress-test-07.1-raster-delivery-v0.1",
+  "status": "PREPARED_NOT_EXECUTED",
+  "delivery_format": "PNG",
+  "dimensions": {
+    "width": 1872,
+    "height": 768
+  },
+  "metadata_policy": "Pillow re-encoded RGBA PNG; no EXIF, XMP, comments, profiles, source references, or text chunks.",
+  "primary": [
+    {
+      "delivery_filename": "stimulus-01.png",
+      "stimulus_id": "07B-B",
+      "condition": "B",
+      "source_svg": "stimuli/07B-B.svg",
+      "source_svg_sha256": "0bf86d85d12353f0b8938b15a7e15b665a68e1aa5e363c124931c8f808f95ff3",
+      "delivery_png": "delivery/primary/stimulus-01.png",
+      "delivery_png_sha256": "a5dadd22662eade5fde4198eab6b1f78ee7ec3a2901a206ac0beec73ddabaf12",
+      "intended_meaning": "Is water available?",
+      "dimensions": "1872x768"
+    },
+    {
+      "delivery_filename": "stimulus-02.png",
+      "stimulus_id": "07A-A",
+      "condition": "A",
+      "source_svg": "stimuli/07A-A.svg",
+      "source_svg_sha256": "7b367eda11608af85c41118cb0ec57ec57b7a735fd7959f6bae140aada79b741",
+      "delivery_png": "delivery/primary/stimulus-02.png",
+      "delivery_png_sha256": "edeb299d69688a3f50e2468bbe5f189f30af870f2b810c26d93b3911427b2bdd",
+      "intended_meaning": "Three bottles/units of water",
+      "dimensions": "1872x768"
+    },
+    {
+      "delivery_filename": "stimulus-03.png",
+      "stimulus_id": "07C-B",
+      "condition": "B",
+      "source_svg": "stimuli/07C-B.svg",
+      "source_svg_sha256": "3fbdf2c1b2e1ba60fa0470cb3aae6bb3ab65eeee8e60b68c0be52d6a129c3abf",
+      "delivery_png": "delivery/primary/stimulus-03.png",
+      "delivery_png_sha256": "4caf5a1b6b8f692f73c6a17ec279c27aeeb620a4106ece6c49df6e459e020e12",
+      "intended_meaning": "Where is the toilet?",
+      "dimensions": "1872x768"
+    },
+    {
+      "delivery_filename": "stimulus-04.png",
+      "stimulus_id": "07B-A",
+      "condition": "A",
+      "source_svg": "stimuli/07B-A.svg",
+      "source_svg_sha256": "e31dfdcbc27842edaf73a713cdf4e186e3e8b16285312ff48b4f282ddea43e0f",
+      "delivery_png": "delivery/primary/stimulus-04.png",
+      "delivery_png_sha256": "0891c7610f93d3c784532d90b96a2a8f76c6085359400b4e388ab4652bac0026",
+      "intended_meaning": "Is water available?",
+      "dimensions": "1872x768"
+    },
+    {
+      "delivery_filename": "stimulus-05.png",
+      "stimulus_id": "07C-A",
+      "condition": "A",
+      "source_svg": "stimuli/07C-A.svg",
+      "source_svg_sha256": "d0d5211a51f8b6916bbd882d8d2ab7b36b4d433b00c260c9dc9060d801495e54",
+      "delivery_png": "delivery/primary/stimulus-05.png",
+      "delivery_png_sha256": "80fe677e67bb418d54877b98c3df4c0f4d4f210f6baeeb62d3da4f894ca5cfda",
+      "intended_meaning": "Where is the toilet?",
+      "dimensions": "1872x768"
+    },
+    {
+      "delivery_filename": "stimulus-06.png",
+      "stimulus_id": "07A-B",
+      "condition": "B",
+      "source_svg": "stimuli/07A-B.svg",
+      "source_svg_sha256": "568a986385c5e53177add2dc1984365bd1e0499bbc2329c9dbd1576a57933610",
+      "delivery_png": "delivery/primary/stimulus-06.png",
+      "delivery_png_sha256": "ec9ae9448dcbe3de3d977be7083039ec3cde95382f2dc27e7e615b0b5fc2f75e",
+      "intended_meaning": "Three bottles/units of water",
+      "dimensions": "1872x768"
+    }
+  ],
+  "transfer": [
+    {
+      "delivery_filename": "transfer-01.png",
+      "stimulus_id": "07T-B-A",
+      "condition": "A",
+      "source_svg": "transfer-stimuli/07T-B-A.svg",
+      "source_svg_sha256": "24a594de3e33fd4cdead73eca0d1ec28770b85d018cd5fde5189014f56702441",
+      "delivery_png": "delivery/transfer/transfer-01.png",
+      "delivery_png_sha256": "7f127b2db7e24e71e5e900636ccc80deb937c52f9968e3d87ccc4122fb074e9f",
+      "intended_meaning": "Transfer: availability",
+      "dimensions": "1872x768"
+    },
+    {
+      "delivery_filename": "transfer-02.png",
+      "stimulus_id": "07T-A-B",
+      "condition": "B",
+      "source_svg": "transfer-stimuli/07T-A-B.svg",
+      "source_svg_sha256": "469d9b7658a3d309f4a9fefe7fa7b11463df89db2169857d2abb7db5e4cde44f",
+      "delivery_png": "delivery/transfer/transfer-02.png",
+      "delivery_png_sha256": "fca46b36e7ef3d0c3d697c4f180ea037ebf50de6b20b27468d64eea509c0c2c9",
+      "intended_meaning": "Transfer: quantity",
+      "dimensions": "1872x768"
+    },
+    {
+      "delivery_filename": "transfer-03.png",
+      "stimulus_id": "07T-C-A",
+      "condition": "A",
+      "source_svg": "transfer-stimuli/07T-C-A.svg",
+      "source_svg_sha256": "6ad8d888c03fd6c0e9c0648999b6dd04405f93be6cc66dfcce71fc243e67d2cf",
+      "delivery_png": "delivery/transfer/transfer-03.png",
+      "delivery_png_sha256": "47da9baad23800c0c58e1c559ac853dbaa05e6a955ad5b142945a1e4e531d5a8",
+      "intended_meaning": "Transfer: location",
+      "dimensions": "1872x768"
+    },
+    {
+      "delivery_filename": "transfer-04.png",
+      "stimulus_id": "07T-A-A",
+      "condition": "A",
+      "source_svg": "transfer-stimuli/07T-A-A.svg",
+      "source_svg_sha256": "56f0a235ff9a715df471f0d5da54295fa5627806c436aa52fa0cc49aa595934b",
+      "delivery_png": "delivery/transfer/transfer-04.png",
+      "delivery_png_sha256": "39d4a85ea25c9d454d1269a1b66e56ced203950a049ef62f2d3450200487b320",
+      "intended_meaning": "Transfer: quantity",
+      "dimensions": "1872x768"
+    },
+    {
+      "delivery_filename": "transfer-05.png",
+      "stimulus_id": "07T-C-B",
+      "condition": "B",
+      "source_svg": "transfer-stimuli/07T-C-B.svg",
+      "source_svg_sha256": "8367e4685a06375489adaa51816826f702691ce06e14c1bf118803df9b682365",
+      "delivery_png": "delivery/transfer/transfer-05.png",
+      "delivery_png_sha256": "429079673a4721fb7abd270f45c1801528ec9fd8878c5ce5b24599f2b9eaa4c3",
+      "intended_meaning": "Transfer: location",
+      "dimensions": "1872x768"
+    },
+    {
+      "delivery_filename": "transfer-06.png",
+      "stimulus_id": "07T-B-B",
+      "condition": "B",
+      "source_svg": "transfer-stimuli/07T-B-B.svg",
+      "source_svg_sha256": "b72864dc5884afda40ddf8bdc0bca25b11f627bc9e9dd3760057a1bd834eea26",
+      "delivery_png": "delivery/transfer/transfer-06.png",
+      "delivery_png_sha256": "2b54a4dd92623133be64bb9875fa4b8cfc4759c125aa8f7e2383a6b8ad8d012e",
+      "intended_meaning": "Transfer: availability",
+      "dimensions": "1872x768"
+    }
+  ],
+  "frozen_inputs": [
+    {
+      "source": "blind-prompt.md",
+      "sha256": "08a1ee4b41b05ac277db9dcba92d1adac7a654132540d59cacd55580cdfc73af",
+      "delivery": "frozen-inputs/blind-prompt.md",
+      "delivery_sha256": "08a1ee4b41b05ac277db9dcba92d1adac7a654132540d59cacd55580cdfc73af"
+    },
+    {
+      "source": "practical-task-prompts.md",
+      "sha256": "784933359889ba944d83b934799dc886ab5163dd3c1c6debdd2f69e04be2cda3",
+      "delivery": "frozen-inputs/practical-task-prompts.md",
+      "delivery_sha256": "784933359889ba944d83b934799dc886ab5163dd3c1c6debdd2f69e04be2cda3"
+    }
+  ],
+  "micro_learning_guide": {
+    "source": "micro-learning-guide.md",
+    "source_sha256": "049bc2edf9e09a0e77489b90e754e63c17503d7e31605467eb2a6d305687ea1a",
+    "delivery": "frozen-inputs/guide-01.md",
+    "delivery_sha256": "049bc2edf9e09a0e77489b90e754e63c17503d7e31605467eb2a6d305687ea1a"
+  }
+}

@@ -172,4 +172,4 @@ The five supplied cross-model transcripts have been analyzed, but they describe 
 
 ## Stress Test 07 — prepared experiment — 2026-09-20
 
-`Stress Test 07 — Explicit Grammar vs Contextual Compression` is **PREPARED / FROZEN / NOT YET EXECUTED**. It is a controlled research follow-up to 05, 06 and 06B, not a production or vocabulary track. The frozen package isolates quantity, availability and location-question mechanisms and awaits separate manual AI/human testing. No production/landing work is reopened.
+`Stress Test 07 — Explicit Grammar vs Contextual Compression` has an **INVALID / PARTIAL PILOT**: SVG source exposure, one delivery mismatch, and missing learning/transfer phases prevent a primary inference. `Stress Test 07.1` is **PREPARED / NOT EXECUTED** with the frozen design delivered only through neutral, metadata-free PNGs. It remains a controlled research follow-up to 05, 06 and 06B; no production or vocabulary track is reopened.

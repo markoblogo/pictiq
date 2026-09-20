@@ -2,7 +2,7 @@
 
 ## Status
 
-This is a **partial Phase 1–2 collection**, not a completed Stress Test 07 result. The frozen protocol requires blind interpretation, practical action, micro-learning and learned transfer. The supplied material ends after the blind/practical sequence.
+This is a **partial Phase 1–2 collection**, not a completed Stress Test 07 result. The frozen protocol requires blind interpretation, practical action, micro-learning and learned transfer. The supplied material ends after the blind/practical sequence. **Pilot status:** `INVALID / PARTIAL FOR PRIMARY STRESS TEST 07 INFERENCE`.
 
 Three of five runs were source-exposed. The remaining two are treated as exploratory visual evidence only; ChatGPT's `07C-A` reports a no-smoking sign, incompatible with the frozen toilet-plus-question stimulus, so that observation is excluded for that item.
 

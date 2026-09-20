@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Pictiq Stress Test 07.1 delivery log entry",
+  "type": "object",
+  "required": ["system_product", "visible_model_label", "date", "run_id", "order", "neutral_filename", "stimulus_id", "png_sha256", "thumbnail_visually_verified", "first_response_captured", "contamination_observed", "status"],
+  "properties": {
+    "system_product": {"type": "string"},
+    "visible_model_label": {"type": "string"},
+    "date": {"type": "string", "format": "date"},
+    "run_id": {"type": "string"},
+    "order": {"enum": ["ORDER_1", "ORDER_2"]},
+    "neutral_filename": {"type": "string", "pattern": "^(stimulus|transfer)-[0-9]{2}\\.png$"},
+    "stimulus_id": {"type": "string"},
+    "png_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "thumbnail_visually_verified": {"type": "boolean"},
+    "first_response_captured": {"type": "boolean"},
+    "contamination_observed": {"type": "boolean"},
+    "status": {"enum": ["DELIVERED", "DELIVERY_FAILURE", "CONTAMINATED", "COMPLETE"]},
+    "notes": {"type": "string"}
+  },
+  "additionalProperties": false
+}
