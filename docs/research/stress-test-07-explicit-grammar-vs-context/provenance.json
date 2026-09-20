@@ -1,0 +1,51 @@
+{
+  "schema": "pictiq-stress-test-07-provenance-v0.1",
+  "status": "PREPARED_FROZEN_NOT_EXECUTED",
+  "generated_date": "2026-09-20",
+  "pictiq_commit": "b03233d72626a11d15f88677dd17c54755a7399f",
+  "normative_specs": [
+    "spec/PROTOCOL.md",
+    "spec/GRAMMAR.md",
+    "spec/NUMERIC_NOTATION.md",
+    "spec/PICTIQ_MESSAGE_SCHEMA.md",
+    "spec/PROFILES.md"
+  ],
+  "vocabulary_counts": {
+    "ordinary_canonical": 87,
+    "entity_symbols": 16
+  },
+  "primary_stimulus_sha256": {
+    "07A-A": "7b367eda11608af85c41118cb0ec57ec57b7a735fd7959f6bae140aada79b741",
+    "07A-B": "568a986385c5e53177add2dc1984365bd1e0499bbc2329c9dbd1576a57933610",
+    "07B-A": "e31dfdcbc27842edaf73a713cdf4e186e3e8b16285312ff48b4f282ddea43e0f",
+    "07B-B": "0bf86d85d12353f0b8938b15a7e15b665a68e1aa5e363c124931c8f808f95ff3",
+    "07C-A": "d0d5211a51f8b6916bbd882d8d2ab7b36b4d433b00c260c9dc9060d801495e54",
+    "07C-B": "3fbdf2c1b2e1ba60fa0470cb3aae6bb3ab65eeee8e60b68c0be52d6a129c3abf"
+  },
+  "transfer_stimulus_sha256": {
+    "07T-A-A": "56f0a235ff9a715df471f0d5da54295fa5627806c436aa52fa0cc49aa595934b",
+    "07T-A-B": "469d9b7658a3d309f4a9fefe7fa7b11463df89db2169857d2abb7db5e4cde44f",
+    "07T-B-A": "24a594de3e33fd4cdead73eca0d1ec28770b85d018cd5fde5189014f56702441",
+    "07T-B-B": "b72864dc5884afda40ddf8bdc0bca25b11f627bc9e9dd3760057a1bd834eea26",
+    "07T-C-A": "6ad8d888c03fd6c0e9c0648999b6dd04405f93be6cc66dfcce71fc243e67d2cf",
+    "07T-C-B": "8367e4685a06375489adaa51816826f702691ce06e14c1bf118803df9b682365"
+  },
+  "prompt_and_guide_sha256": {
+    "blind-prompt.md": "08a1ee4b41b05ac277db9dcba92d1adac7a654132540d59cacd55580cdfc73af",
+    "practical-task-prompts.md": "784933359889ba944d83b934799dc886ab5163dd3c1c6debdd2f69e04be2cda3",
+    "micro-learning-guide.md": "049bc2edf9e09a0e77489b90e754e63c17503d7e31605467eb2a6d305687ea1a",
+    "coding-rules.md": "72c2d9f5a70af2898c7ab981c6b9fceb6fa98a1f4cb600c26d8bc8ce4774c6d7",
+    "randomization.md": "4e4f9445260bc4a64bdfc7d3bbdec25f0bcb8d1b0cb100c2c57e6eeaf7929748"
+  },
+  "condition_classification": {
+    "A": "normative Pictiq",
+    "B": "experimental / non-Pictiq"
+  },
+  "experimental_mechanisms": {
+    "literal_quantity_marks": "each mark means one unit",
+    "QUESTION_SCOPE": "question hook inside a scope border applies to the bounded group",
+    "AVAILABLE": "circled check means available",
+    "WHERE": "target/crosshair means location requested"
+  },
+  "confirmation": "Experimental B mechanisms are not Pictiq vocabulary and are absent from the canonical registry, Message Schema and Renderer."
+}

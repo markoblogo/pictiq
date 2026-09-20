@@ -1309,3 +1309,7 @@ Artifacts: [Stress Test 06 package](../research/stress-test-06-generative-symbol
 ## 2026-09-20 — Stress Test 06B: Independent Visual Protocol Design
 
 Three supplied, independently prompted AI protocol-design transcripts were archived and analyzed with Phase D Pictiq comparison excluded from convergence counts. The shared finding is a design tension rather than an adoption decision: a smaller primitive set may transfer complexity into conventions that recipients must infer or learn. The research package proposes a controlled Stress Test 07 contrasting Pictiq contextual mechanisms with explicit grammar. No Pictiq vocabulary, grammar, numeric notation, profiles, assets, or production site changed.
+
+## 2026-09-20 — Stress Test 07: Explicit Grammar vs Contextual Compression
+
+Stress Test 07 is **PREPARED / FROZEN / NOT YET EXECUTED**. Six blinded primary SVG stimuli and six transfer stimuli compare current Pictiq contextual quantity/question mechanisms with narrowly defined experimental alternatives. The package pre-registers practical-success and exactness coding before collection. It does not change Pictiq vocabulary, grammar, numeric notation, renderer, Composer, or production artifacts.

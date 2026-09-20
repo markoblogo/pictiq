@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Pictiq Stress Test 07 result",
+  "type": "object",
+  "required": ["experiment_id", "participant", "date", "order", "stimulus_sha256", "phase", "first_response"],
+  "properties": {
+    "experiment_id": {"enum": ["07A-A", "07A-B", "07B-A", "07B-B", "07C-A", "07C-B", "07T-A-A", "07T-A-B", "07T-B-A", "07T-B-B", "07T-C-A", "07T-C-B"]},
+    "participant": {"type": "string"},
+    "model_label": {"type": "string"},
+    "date": {"type": "string", "format": "date"},
+    "order": {"enum": ["ORDER_1", "ORDER_2"]},
+    "stimulus_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "phase": {"enum": ["blind", "practical_task", "learned_transfer"]},
+    "first_response": {"type": "string"},
+    "confidence": {"type": ["string", "number", "null"]},
+    "ambiguity": {"type": ["string", "null"]},
+    "codes": {"type": "array", "items": {"type": "string"}},
+    "contamination": {"enum": ["NONE_REPORTED", "POSSIBLE_PRIOR_KNOWLEDGE", "CONFIRMED_PRIOR_KNOWLEDGE"]},
+    "response_time_seconds": {"type": ["number", "null"]}
+  },
+  "additionalProperties": false
+}

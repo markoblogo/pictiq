@@ -169,3 +169,7 @@ This is not a new publication event. Preserve the existing milestone cadence: `C
 ## Stress Test 05 results-analysis next gate — 2026-09-20
 
 The five supplied cross-model transcripts have been analyzed, but they describe an alternate image containing additive practical-quantity tiles rather than the published frozen 05A PNG/JSON. Before more model runs or any publication decision, reconcile the evidence against one hash-identified stimulus, verbatim prompt, and Handbook version. This is a methodology/documentation gate; it does not justify a vocabulary, grammar, Numeric Notation, icon, Renderer, Composer, landing, or production change.
+
+## Stress Test 07 — prepared experiment — 2026-09-20
+
+`Stress Test 07 — Explicit Grammar vs Contextual Compression` is **PREPARED / FROZEN / NOT YET EXECUTED**. It is a controlled research follow-up to 05, 06 and 06B, not a production or vocabulary track. The frozen package isolates quantity, availability and location-question mechanisms and awaits separate manual AI/human testing. No production/landing work is reopened.

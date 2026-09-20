@@ -1,0 +1,141 @@
+{
+  "schema": "pictiq-stress-test-07-stimulus-manifest-v0.1",
+  "status": "FROZEN_NOT_EXECUTED",
+  "pictiq_commit": "b03233d72626a11d15f88677dd17c54755a7399f",
+  "primary_stimuli": [
+    {
+      "experiment_id": "07A-A",
+      "comparison": "quantity",
+      "condition": "A",
+      "classification": "NORMATIVE_PICTIQ",
+      "intended_meaning": "Three bottles/units of water",
+      "visual_mechanism": "need_water + qty_1 + qty_2; postfix quantity is additive",
+      "tokens": [
+        "need_water",
+        "qty_1",
+        "qty_2"
+      ],
+      "expected_practical_interpretation": "expect three water bottles/units",
+      "exact_semantic_interpretation": "three units of water",
+      "source": "spec/GRAMMAR.md \u00a78",
+      "sha256": "7b367eda11608af85c41118cb0ec57ec57b7a735fd7959f6bae140aada79b741"
+    },
+    {
+      "experiment_id": "07A-B",
+      "comparison": "quantity",
+      "condition": "B",
+      "classification": "EXPERIMENTAL_NON_PICTIQ",
+      "intended_meaning": "Three bottles/units of water",
+      "visual_mechanism": "three directly countable identical dots beside the canonical need_water tile",
+      "tokens": [
+        "canonical need_water",
+        "experimental literal quantity marks \u00d73"
+      ],
+      "expected_practical_interpretation": "expect three water bottles/units",
+      "exact_semantic_interpretation": "three units of water",
+      "source": "Stress Test 07 frozen experimental mechanism",
+      "sha256": "568a986385c5e53177add2dc1984365bd1e0499bbc2329c9dbd1576a57933610"
+    },
+    {
+      "experiment_id": "07B-A",
+      "comparison": "availability",
+      "condition": "A",
+      "classification": "NORMATIVE_PICTIQ",
+      "intended_meaning": "Is water available?",
+      "visual_mechanism": "need_water + terminal punct_question",
+      "tokens": [
+        "need_water",
+        "punct_question"
+      ],
+      "expected_practical_interpretation": "answer or act on water availability",
+      "exact_semantic_interpretation": "ask whether water is available/held",
+      "source": "spec/GRAMMAR.md \u00a7\u00a71,3",
+      "sha256": "e31dfdcbc27842edaf73a713cdf4e186e3e8b16285312ff48b4f282ddea43e0f"
+    },
+    {
+      "experiment_id": "07B-B",
+      "comparison": "availability",
+      "condition": "B",
+      "classification": "EXPERIMENTAL_NON_PICTIQ",
+      "intended_meaning": "Is water available?",
+      "visual_mechanism": "experimental question-scope border applied to canonical need_water plus experimental circled availability check",
+      "tokens": [
+        "canonical need_water",
+        "experimental QUESTION_SCOPE",
+        "experimental AVAILABLE"
+      ],
+      "expected_practical_interpretation": "answer or act on water availability",
+      "exact_semantic_interpretation": "QUESTION[AVAILABLE(WATER)]",
+      "source": "Stress Test 07 frozen experimental mechanism",
+      "sha256": "0bf86d85d12353f0b8938b15a7e15b665a68e1aa5e363c124931c8f808f95ff3"
+    },
+    {
+      "experiment_id": "07C-A",
+      "comparison": "location",
+      "condition": "A",
+      "classification": "NORMATIVE_PICTIQ",
+      "intended_meaning": "Where is the toilet?",
+      "visual_mechanism": "need_toilet + terminal punct_question",
+      "tokens": [
+        "need_toilet",
+        "punct_question"
+      ],
+      "expected_practical_interpretation": "indicate or show toilet location",
+      "exact_semantic_interpretation": "ask for toilet location",
+      "source": "spec/GRAMMAR.md \u00a7\u00a71,3,12",
+      "sha256": "d0d5211a51f8b6916bbd882d8d2ab7b36b4d433b00c260c9dc9060d801495e54"
+    },
+    {
+      "experiment_id": "07C-B",
+      "comparison": "location",
+      "condition": "B",
+      "classification": "EXPERIMENTAL_NON_PICTIQ",
+      "intended_meaning": "Where is the toilet?",
+      "visual_mechanism": "experimental question-scope border applied to canonical need_toilet plus experimental target WHERE mark",
+      "tokens": [
+        "canonical need_toilet",
+        "experimental QUESTION_SCOPE",
+        "experimental WHERE"
+      ],
+      "expected_practical_interpretation": "indicate or show toilet location",
+      "exact_semantic_interpretation": "QUESTION[TOILET + WHERE]",
+      "source": "Stress Test 07 frozen experimental mechanism",
+      "sha256": "3fbdf2c1b2e1ba60fa0470cb3aae6bb3ab65eeee8e60b68c0be52d6a129c3abf"
+    }
+  ],
+  "transfer_stimuli": [
+    {
+      "experiment_id": "07T-A-A",
+      "sha256": "56f0a235ff9a715df471f0d5da54295fa5627806c436aa52fa0cc49aa595934b",
+      "purpose": "new learned-performance transfer stimulus; condition maps to its primary comparison"
+    },
+    {
+      "experiment_id": "07T-A-B",
+      "sha256": "469d9b7658a3d309f4a9fefe7fa7b11463df89db2169857d2abb7db5e4cde44f",
+      "purpose": "new learned-performance transfer stimulus; condition maps to its primary comparison"
+    },
+    {
+      "experiment_id": "07T-B-A",
+      "sha256": "24a594de3e33fd4cdead73eca0d1ec28770b85d018cd5fde5189014f56702441",
+      "purpose": "new learned-performance transfer stimulus; condition maps to its primary comparison"
+    },
+    {
+      "experiment_id": "07T-B-B",
+      "sha256": "b72864dc5884afda40ddf8bdc0bca25b11f627bc9e9dd3760057a1bd834eea26",
+      "purpose": "new learned-performance transfer stimulus; condition maps to its primary comparison"
+    },
+    {
+      "experiment_id": "07T-C-A",
+      "sha256": "6ad8d888c03fd6c0e9c0648999b6dd04405f93be6cc66dfcce71fc243e67d2cf",
+      "purpose": "new learned-performance transfer stimulus; condition maps to its primary comparison"
+    },
+    {
+      "experiment_id": "07T-C-B",
+      "sha256": "8367e4685a06375489adaa51816826f702691ce06e14c1bf118803df9b682365",
+      "purpose": "new learned-performance transfer stimulus; condition maps to its primary comparison"
+    }
+  ],
+  "participant_images_unlabelled": true,
+  "review_sheet": "review-sheets/primary-review.svg",
+  "review_sheet_not_for_blind_testing": true
+}
