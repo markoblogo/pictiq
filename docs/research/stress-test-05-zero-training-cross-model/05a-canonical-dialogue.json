@@ -1,0 +1,27 @@
+{
+  "schema": "0.1",
+  "pictiq": "1.1",
+  "contexts": ["universal-v1"],
+  "frames": [
+    {"tokens": [
+      {"type": "icon", "id": "need_water"},
+      {"type": "icon", "id": "punct_question"}
+    ]},
+    {"tokens": [
+      {"type": "icon", "id": "logic_yes"},
+      {"type": "icon", "id": "state_cold"},
+      {"type": "icon", "id": "need_water"},
+      {"type": "icon", "id": "money_coins"}
+    ]},
+    {"tokens": [
+      {"type": "icon", "id": "need_water"},
+      {"type": "icon", "id": "qty_plus"},
+      {"type": "icon", "id": "money_card"},
+      {"type": "icon", "id": "punct_question"}
+    ]},
+    {"tokens": [
+      {"type": "icon", "id": "logic_yes"},
+      {"type": "icon", "id": "money_coins"}
+    ]}
+  ]
+}

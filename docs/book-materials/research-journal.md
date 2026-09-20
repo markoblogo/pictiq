@@ -1272,3 +1272,17 @@ The translation result preserves Meaning-Before-Wording, Priority-First Communic
 `Can a Visual Language Explain Itself? — PUBLICATION MILESTONE: READY` with editorial status **BACKLOG**. The Composer public-authoring milestone was published on 2026-09-13, so the default seven-day cadence makes 2026-09-20 the earliest normal publication date for this distinct milestone. No article is written or published by this record.
 
 Landing delivery moves out of the active development track after production verification. The next active work returns to non-human/domain/machine research, real deployments/use cases, and cross-model comprehension. Creative deployments are opportunistic; the human/game track remains deferred and non-blocking.
+
+## 2026-09-20 — Production deployment closure and Stress Test 05 preparation
+
+### Production closure
+
+The creator-accepted Pictiq Landing v0.1 is live at `https://pictiq.abvx.xyz/`. The production root, Pictiq query mode, Composer, and Lexicon are live over HTTPS. The production SEO / LLMO / project-discoverability pass is complete: canonical metadata, structured data, social metadata, `robots.txt`, `sitemap.xml`, `llms.txt`, and favicon are deployed. The separate ABVX OS workflow also lists Pictiq as a project, production site, and free Handbook resource.
+
+Final deployment statuses: `Pictiq Landing v0.1 — CREATOR ACCEPTED / PRODUCTION LIVE`; `Pictiq Production Site — SEO / LLMO / PROJECT DISCOVERABILITY COMPLETE`.
+
+No new publication milestone is created. `Can a Visual Language Explain Itself? — PUBLICATION MILESTONE READY` remains `READY / BACKLOG` under the existing cadence.
+
+### Stress Test 05 preparation
+
+A fixed four-frame dialogue, direct renderer output, blind PNG, verbatim blind/production/repair prompts, frozen Handbook guide reference, panel ledger, and unpopulated semantic-slot result schema are ready at [Stress Test 05 package](../research/stress-test-05-zero-training-cross-model/README.md). The test preserves only current vocabulary and records exact-quantity/container/price omissions rather than changing the language. No external AI call, test result, ranking, vocabulary change, grammar change, icon change, landing change, tag, or release was made.

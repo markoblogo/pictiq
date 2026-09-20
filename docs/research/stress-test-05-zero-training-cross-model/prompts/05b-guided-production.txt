@@ -1,0 +1,14 @@
+You now have the guide for the visual communication system used in the
+previous image.
+
+Using only the rules and symbols available in that guide, encode this message:
+
+'I need a taxi to the train station. There are two people and three bags. How
+much will it cost?'
+
+Do not invent new symbols. Prefer composition and context over creating a new
+concept. If some meaning cannot be represented exactly, preserve the most
+important practical meaning and explicitly tell me what you omitted.
+
+First provide your proposed visual-symbol sequence. Then briefly explain how
+you constructed it.

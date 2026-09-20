@@ -1,11 +1,12 @@
 # Pictiq Landing Translation v0.1
 
-Status: **IMPLEMENTED / CREATOR ACCEPTED / READY FOR PUBLIC DEPLOYMENT**. `Pictiq Landing v0.1 — CREATOR ACCEPTANCE PASSED`.
+Status: **IMPLEMENTED / CREATOR ACCEPTED / PRODUCTION LIVE**. `Pictiq Landing v0.1 — CREATOR ACCEPTED / PRODUCTION LIVE`.
 
 The landing now has a deterministic static mode switch:
 
-- English: `/landing/`
-- Pictiq: `/landing/?mode=pictiq`
+- English: `https://pictiq.abvx.xyz/`
+- Pictiq: `https://pictiq.abvx.xyz/?mode=pictiq`
+- Retained legacy route: `/landing/` and `/landing/?mode=pictiq`
 
 The switch uses `URLSearchParams` and `history.replaceState`, so the Pictiq mode
 is linkable and reloadable on static hosting. It preserves the approximate
@@ -67,3 +68,11 @@ The prior bbox-led correction is superseded by a direct-browser coordinate audit
 - [Raw 1024-pixel action_combine diagnostic](forensic/action-combine-raw-coordinate-diagnostic.svg)
 - [Large human QA](imported-icon-human-correction-qa.html)
 - Run `python3 tools/validate_imported_icon_geometry.py` for centre, safe-area, normalized-transform, and Pages-mirror checks.
+
+## Production closure — 2026-09-20
+
+The accepted landing is live at `https://pictiq.abvx.xyz/`; the English root and Pictiq query mode load over HTTPS. The production discoverability surface now includes canonical metadata, JSON-LD, `robots.txt`, `sitemap.xml`, `llms.txt`, favicon, and working Composer/Lexicon routes. Pictiq is also listed through the separate ABVX OS workflow as a project, production site, and free Handbook resource.
+
+`Pictiq Production Site — SEO / LLMO / PROJECT DISCOVERABILITY COMPLETE`.
+
+This closure does not create another publication milestone. `Can a Visual Language Explain Itself? — PUBLICATION MILESTONE READY` remains `READY / BACKLOG` under the existing cadence.

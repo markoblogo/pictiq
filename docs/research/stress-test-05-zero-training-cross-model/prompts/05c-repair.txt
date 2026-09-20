@@ -1,0 +1,7 @@
+Compare this intended meaning with your original interpretation.
+
+Without inventing new symbols, would you change the original visual encoding
+to make the intended meaning easier to understand on first exposure?
+
+If yes, show the revised encoding and explain only the changes you consider
+necessary.

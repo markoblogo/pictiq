@@ -1,0 +1,73 @@
+{
+  "contexts": [
+    "universal-v1"
+  ],
+  "frames": [
+    {
+      "tokens": [
+        {
+          "id": "need_water",
+          "type": "icon"
+        },
+        {
+          "id": "punct_question",
+          "type": "icon"
+        }
+      ]
+    },
+    {
+      "tokens": [
+        {
+          "id": "logic_yes",
+          "type": "icon"
+        },
+        {
+          "id": "state_cold",
+          "type": "icon"
+        },
+        {
+          "id": "need_water",
+          "type": "icon"
+        },
+        {
+          "id": "money_coins",
+          "type": "icon"
+        }
+      ]
+    },
+    {
+      "tokens": [
+        {
+          "id": "need_water",
+          "type": "icon"
+        },
+        {
+          "id": "qty_plus",
+          "type": "icon"
+        },
+        {
+          "id": "money_card",
+          "type": "icon"
+        },
+        {
+          "id": "punct_question",
+          "type": "icon"
+        }
+      ]
+    },
+    {
+      "tokens": [
+        {
+          "id": "logic_yes",
+          "type": "icon"
+        },
+        {
+          "id": "money_coins",
+          "type": "icon"
+        }
+      ]
+    }
+  ],
+  "pictiq": "1.1",
+  "schema": "0.1"
+}

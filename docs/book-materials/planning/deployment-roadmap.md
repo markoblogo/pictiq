@@ -159,3 +159,9 @@ Immediate active work then returns to:
 4. opportunistic creative deployments.
 
 The human/game track remains deferred and non-blocking. The landing result is a self-referential implementation result, not external human-comprehension evidence.
+
+## Production closure — 2026-09-20
+
+The Pictiq landing delivery is closed as a deployment track. `https://pictiq.abvx.xyz/` is live over HTTPS; root English mode, `?mode=pictiq`, Composer, and Lexicon are public. The production SEO / LLMO / project-discoverability pass is complete. Pictiq is also listed through the separate ABVX OS workflow as a project, production site, and free Handbook resource.
+
+This is not a new publication event. Preserve the existing milestone cadence: `Can a Visual Language Explain Itself?` remains `READY / BACKLOG`. The next prepared research activity is Stress Test 05 manual cross-model execution; Stress Test 04B remains deferred and non-blocking.

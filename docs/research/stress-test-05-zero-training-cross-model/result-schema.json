@@ -1,0 +1,38 @@
+{
+  "schema": "pictiq-stress-test-05-result-v0.1",
+  "status": "TEMPLATE_NOT_POPULATED",
+  "run": {
+    "system": null,
+    "product_model_label_visible_in_ui": null,
+    "date": null,
+    "new_conversation": null,
+    "web_search_avoided_or_disabled": null,
+    "first_response_captured_before_follow_up": null
+  },
+  "blind_decoding": {
+    "dialogue_interpretation": null,
+    "symbol_interpretations": null,
+    "stated_confidence": null,
+    "ambiguity_noted": null,
+    "overall_dialogue_structure_recovered": null,
+    "turn_boundaries_recovered": null,
+    "possible_prior_knowledge_contamination_event": null
+  },
+  "semantic_slots": {
+    "WATER": null,
+    "QUESTION_AVAILABILITY": null,
+    "YES": null,
+    "COLD": null,
+    "SALE": null,
+    "QUANTITY_3": null,
+    "BOTTLE_UNIT": null,
+    "CARD_PAYMENT": null,
+    "YES_CONFIRMATION": null,
+    "PRICE_6": null,
+    "LOCAL_CURRENCY": null
+  },
+  "allowed_slot_classifications": ["CORRECT", "APPROXIMATE", "INFERRED_FROM_CONTEXT", "OMITTED", "WRONG", "HALLUCINATED"],
+  "guided_production": {"response": null, "omissions_reported": null},
+  "repair": {"response": null, "suggestions": null},
+  "notes": null
+}

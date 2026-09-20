@@ -317,3 +317,15 @@ Status: **DOMAIN CONFIGURED / PROPAGATION PENDING**.
 GitHub Pages is configured with `pictiq.abvx.xyz` through the committed `docs/CNAME`; its root now serves the English landing, with `?mode=pictiq`, `/composer/`, `/lexicon/`, and legacy `/landing/` retained. Cloudflare contains exactly one new DNS-only CNAME: `pictiq.abvx.xyz` → `markoblogo.github.io` (TTL Auto). No existing DNS record was changed.
 
 At the recorded verification time, GitHub Pages had accepted the custom domain and redirected its project URL to it, while Cloudflare's authoritative DNS endpoint still returned NXDOMAIN for the new hostname. HTTPS is therefore not yet verified and this deployment record must not be read as a completed public-domain launch. No tag or release was created.
+
+## Production closure — 2026-09-20
+
+This historical plan is closed. The creator-accepted landing is live at `https://pictiq.abvx.xyz/`, with the English root and `?mode=pictiq` as production surfaces. The production discoverability pass is complete. The separate ABVX OS workflow now lists Pictiq as a project, production site, and free Handbook resource.
+
+Final statuses:
+
+- `Pictiq Landing v0.1 — CREATOR ACCEPTED / PRODUCTION LIVE`
+- `Pictiq Production Site — SEO / LLMO / PROJECT DISCOVERABILITY COMPLETE`
+- `Can a Visual Language Explain Itself? — PUBLICATION MILESTONE READY`
+
+No new publication milestone is created by deployment closure.
