@@ -1,0 +1,38 @@
+{
+  "schema": "pictiq-stress-test-06b-dataset-v0.1",
+  "status": "ANALYZED",
+  "contamination_boundary": {
+    "independent_phases": [
+      "A: initial architecture",
+      "B: self-critique",
+      "C: v0.2 revision"
+    ],
+    "excluded_from_convergence": [
+      "D: post-reveal Pictiq comparison"
+    ]
+  },
+  "systems": [
+    {
+      "system": "ChatGPT",
+      "source": "evidence/source-transcripts/chatgpt-06b.md",
+      "sha256": "32b5ece720eeacbc37ef5daa926034ecef7aa8e2cf369fad5ca96e90d7d0ec5a",
+      "initial_core": 22,
+      "final_core": 23
+    },
+    {
+      "system": "Claude",
+      "source": "evidence/source-transcripts/claude-06b.md",
+      "sha256": "40ff40d30f16b53e86d09193c92e7fb93408f7dafc720b00ce449e8b4c4baa93",
+      "initial_core": 36,
+      "final_core": 32
+    },
+    {
+      "system": "Gemini",
+      "source": "evidence/source-transcripts/gemini-06b.md",
+      "sha256": "1cae36390d37d79363f61378b62f127c46b22a65c755c70b436cf7d67510fc58",
+      "initial_core": 28,
+      "final_core": 23
+    }
+  ],
+  "note": "Supplied transcripts only; no model rerun or new research."
+}

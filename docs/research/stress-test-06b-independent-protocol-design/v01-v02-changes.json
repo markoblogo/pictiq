@@ -1,0 +1,44 @@
+{
+  "schema": "pictiq-stress-test-06b-v01-v02-v0.1",
+  "status": "ANALYZED",
+  "systems": [
+    {
+      "system": "ChatGPT",
+      "v01_core": 22,
+      "v02_core": 23,
+      "directions": [
+        "narrow overloaded PRESENT to AVAILABLE",
+        "remove generic EXCHANGE and UNKNOWN",
+        "add explicit QUESTION, WHERE and SALE",
+        "scope operators with frames",
+        "restrict arrow to physical transfer",
+        "add safety redundancy"
+      ]
+    },
+    {
+      "system": "Claude",
+      "v01_core": 36,
+      "v02_core": 32,
+      "directions": [
+        "replace mood tabs with header strip",
+        "reduce ring/hand/line-style overload",
+        "narrow contact, containment and arrow rules",
+        "replace number system with digit tiles",
+        "make actor/reply rules explicit",
+        "specify wire format"
+      ]
+    },
+    {
+      "system": "Gemini",
+      "v01_core": 28,
+      "v02_core": 23,
+      "directions": [
+        "separate frame classes more visibly",
+        "redraw several low-resolution metaphors",
+        "separate NEGATE from PROHIBIT",
+        "anchor modifiers with connectors",
+        "replace tally strategy with digits/pips"
+      ]
+    }
+  ]
+}

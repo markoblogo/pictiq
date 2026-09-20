@@ -1305,3 +1305,7 @@ Five supplied generative-product result sets were archived and analyzed without 
 The analysis distinguishes declared design from rendered realization. ChatGPT explicitly intended six coin units but its rendered grouped coins do not make six reliably countable at 24–32 px. This, alongside the Stress Test 05 quantity evidence, is a cross-experiment numeric-notation research pressure, not an implementation request. The next step is a controlled quantity study with fixed visual stimuli and blind/guided conditions. No Pictiq language, production asset, tag, release, or external model call changed.
 
 Artifacts: [Stress Test 06 package](../research/stress-test-06-generative-symbol-convergence/README.md) and [book-material record](research/stress-test-06-generative-symbol-convergence.md).
+
+## 2026-09-20 — Stress Test 06B: Independent Visual Protocol Design
+
+Three supplied, independently prompted AI protocol-design transcripts were archived and analyzed with Phase D Pictiq comparison excluded from convergence counts. The shared finding is a design tension rather than an adoption decision: a smaller primitive set may transfer complexity into conventions that recipients must infer or learn. The research package proposes a controlled Stress Test 07 contrasting Pictiq contextual mechanisms with explicit grammar. No Pictiq vocabulary, grammar, numeric notation, profiles, assets, or production site changed.

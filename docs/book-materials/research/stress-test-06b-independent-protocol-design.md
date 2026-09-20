@@ -1,0 +1,5 @@
+# Stress Test 06B — Independent Visual Protocol Design
+
+Three independently prompted AI systems were asked to design a compact practical visual protocol before Pictiq was disclosed. They converged on limited vocabularies, composition, deterministic machine representation, controlled growth and explicit dialogue operators. Their own critiques then exposed the counter-pressure: reducing primitives often moves complexity into learned spatial grammar, operator scope, numerals and layout conventions.
+
+The book-safe finding is a research question, not a claim of human performance: *How small can a visual language be before its grammar becomes the hard part?* Pictiq’s contrasting hypothesis is that context, embodiment, bounded flat phrases and action-relevant polysemy can reduce explicit grammar without preventing task success. The next step is controlled human testing of one mechanism at a time. See the complete [06B package](../../research/stress-test-06b-independent-protocol-design/README.md).

@@ -1,0 +1,58 @@
+{
+  "schema": "pictiq-stress-test-06b-convergence-v0.1",
+  "status": "ANALYZED",
+  "rule": "Counts use Phase A-C only; Phase D is excluded.",
+  "themes": [
+    {
+      "theme": "limited core plus composition",
+      "count": "3/3",
+      "strength": "strong"
+    },
+    {
+      "theme": "machine-readable canonical structure",
+      "count": "3/3",
+      "strength": "strong"
+    },
+    {
+      "theme": "controlled vocabulary growth",
+      "count": "3/3",
+      "strength": "strong"
+    },
+    {
+      "theme": "explicit question/affirmation/negation",
+      "count": "3/3",
+      "strength": "strong"
+    },
+    {
+      "theme": "context or repair for ambiguity",
+      "count": "3/3",
+      "strength": "strong"
+    },
+    {
+      "theme": "exact numbers separate from small quantities",
+      "count": "2/3",
+      "strength": "strong",
+      "note": "Gemini proposed a unified base-ten tally system rather than a separate layer."
+    },
+    {
+      "theme": "semantic graph or AST as canonical representation",
+      "count": "3/3",
+      "strength": "strong"
+    },
+    {
+      "theme": "spatial containment grammar",
+      "count": "3/3",
+      "strength": "moderate"
+    },
+    {
+      "theme": "explicit REQUEST / AVAILABLE / WHERE",
+      "count": "2/3",
+      "strength": "moderate"
+    },
+    {
+      "theme": "safety redundancy rule",
+      "count": "1/3",
+      "strength": "hypothesis"
+    }
+  ]
+}
