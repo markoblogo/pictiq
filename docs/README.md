@@ -1,6 +1,6 @@
 # Docs (GitHub Pages)
 
-This folder is the published GitHub Pages artifact for the static lexicon dictionary (no build step).
+This folder is the published static site artifact for [pictiq.abvx.xyz](https://pictiq.abvx.xyz/) (no build step). The production root is the English landing; `?mode=pictiq` activates Pictiq mode. The [Composer](composer/) and [Lexicon](lexicon/) are canonical public routes.
 
 Note on negation:
 - Primary form is token-based: `X + logic_no`.

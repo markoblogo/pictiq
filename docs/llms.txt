@@ -1,0 +1,27 @@
+# Pictiq
+
+> Pictiq is an open visual language for short, composable messages across language barriers.
+
+Pictiq uses framed canonical SVG tiles, composition, context packs, numeric notation, and a separate Entity Symbols registry. It is a project in active development, not a replacement for natural language or an empirically proven universal language.
+
+## Primary resources
+
+- Site: https://pictiq.abvx.xyz/
+- Pictiq mode: https://pictiq.abvx.xyz/?mode=pictiq
+- Composer: https://pictiq.abvx.xyz/composer/
+- Lexicon: https://pictiq.abvx.xyz/lexicon/
+- Source and specifications: https://github.com/markoblogo/pictiq
+- Handbook: https://github.com/markoblogo/pictiq/tree/main/books/handbook-v1
+
+## Project facts
+
+- 87 ordinary canonical icons and 16 separate Entity Symbols.
+- Canonical SVG assets use a stable fitting standard and currentColor-compatible artwork.
+- Pictiq Message Format v0.1 and Pictiq Shorthand v0.1 provide structured message interchange.
+- The browser Composer creates and exports short visual messages from canonical project assets.
+
+## Scope and limitations
+
+- Context may resolve intentionally broad symbols; Pictiq preserves distinctions required for a decision, not every source-language distinction.
+- Research findings, experiments, and deferred hypotheses are documented in the repository and should not be treated as settled evidence.
+- Source assets and documentation are licensed under CC BY-NC 4.0; commercial use requires a separate agreement.

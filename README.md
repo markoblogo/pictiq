@@ -11,6 +11,14 @@ Pictiq is designed for pointing, quick signs, stickers, portable communication s
 
 All lexicon words are designed as framed tiles (rounded-square frame). The Pictiq logo is not a tile.
 
+## Project site
+
+- English landing: [pictiq.abvx.xyz](https://pictiq.abvx.xyz/)
+- Pictiq mode: [pictiq.abvx.xyz/?mode=pictiq](https://pictiq.abvx.xyz/?mode=pictiq)
+- [Composer](https://pictiq.abvx.xyz/composer/) — build, preview, and export short Pictiq messages
+- [Lexicon](https://pictiq.abvx.xyz/lexicon/) — browse canonical ordinary concepts and separate Entity Symbols
+- [Free handbook](books/handbook-v1/README.md) — PDF and EPUB files
+
 ## Pictiq Handbook v1.0
 
 <p align="center">

@@ -32,6 +32,8 @@ jobs:
         run: python tools/validate_svg.py
       - name: Validate entity symbols
         run: python tools/validate_entities.py
+      - name: Validate site discoverability
+        run: python tools/validate_site_discoverability.py
       - name: Validate Pages artifact
         run: python tools/validate_pages_artifact.py
       - name: Validate generated browser artifacts
