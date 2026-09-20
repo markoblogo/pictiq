@@ -1,3 +1,4 @@
 *.pdf binary
 
 docs/book-materials/research/inputs/perplexity-2026-09/pictiq-ai-tests-experiments-mvp-catalog-ru.md -whitespace
+docs/research/stress-test-07-explicit-grammar-vs-context/results/raw/*.md -whitespace

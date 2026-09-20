@@ -1,0 +1,28 @@
+{
+  "schema": "pictiq-stress-test-07-partial-coding-v0.1",
+  "status": "PARTIAL_PHASE_1_2_NOT_COMPLETE",
+  "included_for_exploratory_visual_analysis": ["gemini", "gpt"],
+  "excluded_from_blind_comprehension_scoring": ["claude", "copilot", "mistral"],
+  "runs": [
+    {"participant":"claude","order":"ORDER_2","items_completed":6,"blindness":"SOURCE_EXPOSED","reason":"Explicit SVG labels/source geometry used.","scoring_use":"FORMAT_DIAGNOSTIC_ONLY"},
+    {"participant":"copilot","order":"ORDER_2","items_completed":6,"blindness":"SOURCE_EXPOSED","reason":"Quotes data-id and shape identifiers.","scoring_use":"FORMAT_DIAGNOSTIC_ONLY"},
+    {"participant":"gemini","order":"ORDER_1","items_completed":6,"blindness":"BLIND_CANDIDATE","scoring_use":"EXPLORATORY"},
+    {"participant":"gpt","order":"ORDER_1","items_completed":6,"blindness":"BLIND_CANDIDATE","scoring_use":"EXPLORATORY_WITH_07C_A_EXCLUDED","exclusions":{"07C-A":"Reported no-smoking sign is incompatible with frozen toilet/question visual; delivery or render mismatch."}},
+    {"participant":"mistral","order":"ORDER_1","items_completed":5,"blindness":"SOURCE_EXPOSED","reason":"Explicit data-id use; 07C-B absent after service limit.","scoring_use":"FORMAT_DIAGNOSTIC_ONLY"}
+  ],
+  "exploratory_item_codes": [
+    {"participant":"gpt","experiment_id":"07A-A","semantic":"INCORRECT","practical":"INCORRECT","codes":["QUANTITY_DECODING_ERROR"],"summary":"Interprets two bottles."},
+    {"participant":"gemini","experiment_id":"07A-A","semantic":"PARTIAL","practical":"INCORRECT","codes":["QUANTITY_DECODING_ERROR"],"summary":"Reads phases 1 and 2; three only conditionally cumulative."},
+    {"participant":"gpt","experiment_id":"07A-B","semantic":"EXACT","practical":"PRACTICALLY_CORRECT","codes":["EXACTLY_CORRECT"],"summary":"Reads and expects three bottles."},
+    {"participant":"gemini","experiment_id":"07A-B","semantic":"INCORRECT","practical":"INCORRECT","codes":["QUANTITY_DECODING_ERROR","HALLUCINATED_RELATION"],"summary":"Reads thought/ellipsis/loading; expects one or pending quantity."},
+    {"participant":"gpt","experiment_id":"07B-A","semantic":"PARTIAL","practical":"PARTIAL","codes":["AVAILABILITY_NOT_RECOVERED"],"summary":"Water yes/no question, read as need/want."},
+    {"participant":"gemini","experiment_id":"07B-A","semantic":"PARTIAL","practical":"PARTIAL","codes":["AVAILABILITY_NOT_RECOVERED"],"summary":"Water question with offer/request/inventory alternatives."},
+    {"participant":"gpt","experiment_id":"07B-B","semantic":"PARTIAL","practical":"PARTIAL","codes":["AVAILABILITY_NOT_RECOVERED"],"summary":"Question plus yes; subject not recovered."},
+    {"participant":"gemini","experiment_id":"07B-B","semantic":"PARTIAL","practical":"PARTIAL","codes":["AVAILABILITY_NOT_RECOVERED"],"summary":"Bottle question/approved; availability remains unresolved."},
+    {"participant":"gemini","experiment_id":"07C-A","semantic":"PARTIAL","practical":"PRACTICALLY_CORRECT","codes":["LOCATION_NOT_RECOVERED","CONTEXTUALLY_CORRECT"],"summary":"Toilet inquiry includes location among several readings; would give directions in that context."},
+    {"participant":"gpt","experiment_id":"07C-A","semantic":"EXCLUDED","practical":"EXCLUDED","codes":["NO_INTERPRETATION"],"summary":"Reported a no-smoking sign, incompatible with frozen stimulus."},
+    {"participant":"gpt","experiment_id":"07C-B","semantic":"EXACT","practical":"PRACTICALLY_CORRECT","codes":["EXACTLY_CORRECT"],"summary":"Where is the toilet; would give directions."},
+    {"participant":"gemini","experiment_id":"07C-B","semantic":"EXACT","practical":"PRACTICALLY_CORRECT","codes":["EXACTLY_CORRECT"],"summary":"Toilet location/navigation query; would guide."}
+  ],
+  "missing_phases": ["micro_learning", "learned_transfer"]
+}
