@@ -1,0 +1,101 @@
+The image uses a small vocabulary of pictograms, with each semantic unit placed inside a rounded-square tile. The four horizontal rows correspond directly to the four turns of the dialogue.
+
+The distinct symbols I created are:
+
+Symbol
+
+Intended meaning
+
+Visual metaphor
+
+Person with open/upturned hand
+
+Request / asking
+
+A person extending a hand is a familiar gesture for asking or requesting something.
+
+Bottle with droplet
+
+Water / bottled water
+
+The bottle establishes the physical item; the droplet identifies its contents as water.
+
+Question mark
+
+Question / “do you?” / “can I?”
+
+Conventional punctuation used pictographically to mark uncertainty or a question.
+
+Person giving thumbs-up
+
+Yes / affirmative
+
+Thumbs-up is a widely recognizable affirmative gesture.
+
+Snowflake
+
+Cold
+
+A conventional symbol for low temperature.
+
+Open hand with coin above it
+
+For sale / payment / exchange for money
+
+Money being offered or received by a hand suggests a commercial transaction.
+
+Open hand
+
+Please / request
+
+Used as a requesting or receiving gesture.
+
+Payment card with contactless waves
+
+Card payment
+
+The card shape plus contactless waves identifies electronic/card payment.
+
+Stack of coins
+
+Currency / price
+
+Coins are a generic representation of money without specifying a particular currency.
+
+There is deliberate reuse. For example, the same bottle-with-droplet symbol appears whenever bottled water is meant, the same thumbs-up represents “yes,” and the same card symbol represents card payment.
+
+The specific concepts were represented as follows:
+
+Water: a bottle containing a prominent droplet. I chose the compound image rather than a droplet alone because the later request concerns bottles specifically. This lets one reusable symbol carry “bottled water” throughout the exchange.
+
+Question: a question-mark tile placed after the concept being questioned. So the first row is essentially [request/ask] [water] [?], while the third ends [card payment] [?].
+
+Yes: the person giving a thumbs-up. The same affirmative symbol appears at the beginning of B's two responses.
+
+Cold: a snowflake following the water bottle. The composition [water] [snowflake] means “cold water.” The snowflake itself therefore does not mean “cold water”; it modifies the preceding object.
+
+For sale: an open hand with a coin above it. In the context [water] [cold] [money/exchange], it means that the water is commercially available rather than merely present.
+
+Three bottles: three copies of the same water-bottle pictogram are shown together. No numeral or special “three” glyph was introduced.
+
+Card payment: a conventional rectangular payment card with contactless waves. In the third row it is followed by the question symbol, producing the practical meaning “Card payment?” In the fourth row, the affirmative gesture followed by the same card symbol means “Yes, card payment.”
+
+Six units of currency: a stack/collection of coin-like discs is used to indicate the price. The intended quantity is represented through the count of coin units rather than through an Arabic numeral.
+
+Several meanings depend on composition rather than dedicated symbols. “Cold water” is WATER + COLD. “Do you have water?” is approximated through REQUEST/ASK + WATER + QUESTION rather than creating a specialized HAVE symbol. “For sale” is inferred from WATER + MONEY/EXCHANGE. “Card payment?” is CARD + QUESTION. “Yes, card payment” is YES + CARD. This compositional approach was intended to keep the vocabulary small and reusable.
+
+“Please” is also not represented linguistically in the strict sense. The open-hand/request gesture in the third row carries some of its pragmatic function, making the sequence read approximately as “three bottles, please” rather than encoding a separate politeness word.
+
+I intentionally did not attempt to encode every grammatical feature of the English. In particular, there is no dedicated symbol for “have,” “there are,” “for,” “of,” or other grammatical machinery. The system prioritizes the transactional information: water wanted, water available, cold, purchasable, quantity, payment method, and price.
+
+There is also no explicit symbol for a particular local currency. The coins deliberately mean generic monetary units. This avoids inventing a currency sign or implying euros, dollars, etc.
+
+The quantities deserve one important clarification.
+
+For 3, the image uses direct repetition: there are three bottle pictograms inside the relevant tile. Thus quantity is iconic:
+
+bottle + bottle + bottle → three bottles
+
+For 6, I intended the coin stack to encode six currency units through six visible coin/disc units, rather than introducing a numeral “6.” This follows the same general principle as the three bottles: quantity is conveyed by visual multiplicity.
+
+There is, however, a weakness in the generated image: the coin-stack drawing is considerably less unambiguous than the three-bottle representation. Because the coins overlap and are grouped into stacks, a viewer may not reliably count exactly six at 24–32 px. So the intended encoding is “six individual currency units,” but the rendering does not communicate that quantity as robustly as the explicit repetition of three bottles does.

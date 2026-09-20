@@ -1,0 +1,36 @@
+{
+  "schema": "pictiq-stress-test-06-composition-analysis-v0.1",
+  "findings": [
+    {
+      "meaning": "cold water",
+      "tendency": "MODIFIER COMPOSITION",
+      "evidence": "ChatGPT, Gemini, Copilot, and Ideogram use snowflake near water/bottle."
+    },
+    {
+      "meaning": "for sale",
+      "tendency": "COMMERCIAL CONTEXT",
+      "evidence": "Hand+coin, storefront, or coins; no shared dedicated SALE glyph."
+    },
+    {
+      "meaning": "card-payment question",
+      "tendency": "CONTEXTUAL INFERENCE + familiar card metaphor",
+      "evidence": "Card/terminal is reused; question marking varies."
+    },
+    {
+      "meaning": "three bottles",
+      "tendency": "OBJECT REPETITION",
+      "evidence": "ChatGPT and Gemini; Copilot specifies both bottle repetition and dots."
+    },
+    {
+      "meaning": "price six",
+      "tendency": "UNIT REPETITION / UNARY MARKING",
+      "evidence": "Gemini proposes six coins; Copilot six dots; ChatGPT intends six coin units but renders overlapping stacks."
+    },
+    {
+      "meaning": "request/politeness",
+      "tendency": "GESTURAL INTENT / OMISSION",
+      "evidence": "Hand/person gesture or question mark; please and grammar are omitted."
+    }
+  ],
+  "meaning_before_wording": "All textual explainers omit articles, have/there are, local qualifier, and most politeness. This aligns with Pictiq's Meaning-Before-Wording, Priority-First Communication, and Functional Sufficiency as a convergence observation only."
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "pictiq-stress-test-06-quantity-strategies-v0.1",
+  "systems": {
+    "ChatGPT": {
+      "three": "OBJECT REPETITION / GROUPED OBJECT: three bottle pictograms",
+      "six": "GROUPED MONEY: coin stacks intended as six units",
+      "rendered_issue": "The supplied Phase 2 explanation itself says six is not reliably countable at 24\u201332 px."
+    },
+    "Gemini": {
+      "three": "OBJECT REPETITION: repeated bottles",
+      "six": "UNIT REPETITION: repeated coin tokens",
+      "rendered_issue": "Six coin tiles are visually countable in Phase 1 but consume substantial row space."
+    },
+    "Microsoft Copilot": {
+      "three": "UNARY / TALLY MARKS: three dots, plus bottle repetition",
+      "six": "UNARY / TALLY MARKS: six dots plus coin",
+      "rendered_issue": "Textual design only; no raster output to verify."
+    },
+    "Ideogram": {
+      "three": "GROUPED OBJECT / OTHER: bottles appear, exact count varies by sample",
+      "six": "GROUPED MONEY / WRITTEN SYMBOL LEAKAGE: coin clusters and $/\u20ac/currency signs, not a stable countable six",
+      "rendered_issue": "No consistent quantity grammar across four samples."
+    },
+    "Leonardo.Ai": {
+      "three": "OTHER / NOT INTERPRETABLE",
+      "six": "OTHER / NOT INTERPRETABLE",
+      "rendered_issue": "Malformed pseudo-writing and vessels prevent quantity analysis."
+    },
+    "Pictiq": {
+      "three": "ADDITIVE QUANTITY COMPOSITION: qty_2 + qty_1 under current grammar",
+      "six": "ADDITIVE QUANTITY COMPOSITION: qty_5 + qty_1 under current grammar",
+      "note": "Exact written numerals remain a separate Numeric Notation layer."
+    }
+  },
+  "finding": "ChatGPT and Gemini independently prefer direct iconic repetition rather than Pictiq's compact additive quantity expression. This is research pressure, not a change request."
+}

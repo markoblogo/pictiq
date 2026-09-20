@@ -1,0 +1,40 @@
+{
+  "schema": "pictiq-stress-test-06-constraint-compliance-v0.1",
+  "systems": {
+    "ChatGPT": {
+      "words_or_labels": "none visible",
+      "arabic_numerals": "none",
+      "tile_structure": "mostly present; grouped multi-bottle tile departs from one concept per tile",
+      "recurring_identity": "mostly stable",
+      "rendered_vs_claimed": "six coins claimed but overlapping stacks are not reliably countable"
+    },
+    "Gemini": {
+      "words_or_labels": "none visible",
+      "arabic_numerals": "none",
+      "tile_structure": "consistent rounded tiles",
+      "recurring_identity": "stable across phase 1 and 3",
+      "rendered_vs_claimed": "direct bottle and coin repetition is visibly present"
+    },
+    "Microsoft Copilot": {
+      "words_or_labels": "textual description only",
+      "arabic_numerals": "none in proposed visual",
+      "tile_structure": "claimed only",
+      "recurring_identity": "claimed only",
+      "rendered_vs_claimed": "not visually testable"
+    },
+    "Ideogram": {
+      "words_or_labels": "no prose labels, but $, \u20ac, and ? appear",
+      "arabic_numerals": "none",
+      "tile_structure": "inconsistent grouping and colored/non-black treatment",
+      "recurring_identity": "partial; Phase 3 changes layout and drops recurring speaker tiles",
+      "rendered_vs_claimed": "no explanation supplied"
+    },
+    "Leonardo.Ai": {
+      "words_or_labels": "text leakage and pseudo-writing",
+      "arabic_numerals": "not the primary failure",
+      "tile_structure": "absent",
+      "recurring_identity": "not established",
+      "rendered_vs_claimed": "not applicable"
+    }
+  }
+}

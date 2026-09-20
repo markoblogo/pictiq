@@ -1,0 +1,40 @@
+{
+  "schema": "pictiq-stress-test-06-reuse-analysis-v0.1",
+  "systems": {
+    "ChatGPT": {
+      "classification": "MOSTLY REUSED",
+      "water": "same bottle-plus-droplet family",
+      "bottle": "reused",
+      "cold": "reused snowflake",
+      "request": "person/hand family retained but simplified",
+      "card": "reused",
+      "quantity": "changes from three bottles and stacked coins to grouped two bottles; exact count remains weak"
+    },
+    "Gemini": {
+      "classification": "STRICT REUSE",
+      "water": "waves and bottles retained",
+      "bottle": "reused",
+      "cold": "reused snowflake",
+      "request": "speaker/open-hand retained",
+      "card": "terminal/card retained",
+      "quantity": "two bottles visibly repeat established bottle glyph"
+    },
+    "Microsoft Copilot": {
+      "classification": "NOT COMPARABLE",
+      "reason": "textual reuse description without generated image"
+    },
+    "Ideogram": {
+      "classification": "PARTIAL REDESIGN",
+      "water": "bottle/snowflake/card recur",
+      "bottle": "mostly retained",
+      "cold": "retained",
+      "request": "speaker/request structure does not persist",
+      "card": "retained",
+      "quantity": "new grouped layouts and colored output prevent strict protocol reuse"
+    },
+    "Leonardo.Ai": {
+      "classification": "NOT COMPARABLE",
+      "reason": "no Phase 3"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "schema": "pictiq-stress-test-06-task-completion-v0.1",
+  "systems": {
+    "ChatGPT": {
+      "completion": "FULL THREE-PHASE COMPLETION",
+      "image_generation": "available",
+      "reasoning": "available",
+      "reuse": "MOSTLY REUSED",
+      "constraint_compliance": "partial: rendered six coins are not reliably countable"
+    },
+    "Gemini": {
+      "completion": "FULL THREE-PHASE COMPLETION",
+      "image_generation": "available",
+      "reasoning": "available",
+      "reuse": "STRICT REUSE",
+      "constraint_compliance": "partial: one output uses repeated object/money tiles and speaker markers, but visually meets core tile constraints"
+    },
+    "Microsoft Copilot": {
+      "completion": "TEXTUAL DESIGN ONLY",
+      "image_generation": "not available in this run",
+      "reasoning": "available",
+      "reuse": "textually specified only",
+      "constraint_compliance": "text describes a compliant design; no visual verification possible"
+    },
+    "Ideogram": {
+      "completion": "IMAGE GENERATION ONLY",
+      "image_generation": "four samples in each of phases 1 and 3",
+      "reasoning": "not available",
+      "reuse": "PARTIAL REDESIGN",
+      "constraint_compliance": "partial: colored output, currency signs and inconsistent framing/grouping"
+    },
+    "Leonardo.Ai": {
+      "completion": "GENERATION / INSTRUCTION FAILURE",
+      "image_generation": "one image",
+      "reasoning": "not useful",
+      "reuse": "not available",
+      "constraint_compliance": "failed: pseudo-writing, non-tile illustration, malformed structure"
+    }
+  },
+  "note": "Completion is not a semantic-quality rank."
+}

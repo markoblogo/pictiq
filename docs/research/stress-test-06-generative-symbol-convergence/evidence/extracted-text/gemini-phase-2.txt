@@ -1,0 +1,99 @@
+Here is the explanation of the visual communication system designed for the dialogue:
+
+1. Distinct Recurring Symbols, Meanings, and Metaphors
+
+Person Profile Icon
+
+Meaning: Speaker / Person / Turn-taking actor.
+
+Visual Metaphor: A classic silhouette profile of a head, universally recognized in signage to represent a human speaker or participant in a dialogue.
+
+Open Hand / Reaching Hand
+
+Meaning: Request / Question / "Do you have...?"
+
+Visual Metaphor: An open palm facing outward or upward, a cross-cultural gesture for asking, requesting, or offering.
+
+Water Waves
+
+Meaning: Water / Liquid.
+
+Visual Metaphor: Three parallel wavy lines, standard pictographic convention for water or liquids.
+
+Thumbs Up
+
+Meaning: Affirmation / "Yes" / Agreement.
+
+Visual Metaphor: The standard global physical gesture indicating approval, confirmation, or an affirmative answer.
+
+Snowflake
+
+Meaning: Cold / Refrigerated / Chilled.
+
+Visual Metaphor: A standard, easily readable geometric snowflake icon used globally on appliances and packaging to signify cold temperature.
+
+Storefront / Canopy
+
+Meaning: Shop / Market / Available for sale.
+
+Visual Metaphor: A classic shop awning silhouette, instantly signifying commercial retail or goods available for purchase.
+
+Water Bottle
+
+Meaning: Bottle / Unit of liquid container.
+
+Visual Metaphor: A simple outline of a standard ribbed plastic water bottle.
+
+Credit Card / Terminal
+
+Meaning: Card payment / Electronic payment.
+
+Visual Metaphor: A payment terminal or card silhouette, directly referencing standard POS (point of sale) point-of-purchase iconography.
+
+Coin / Round Token
+
+Meaning: Unit of local currency / Money.
+
+Visual Metaphor: A simple round coin with an inner rim, universally signaling physical currency without relying on specific regional currency symbols (e.g., $, €, ¥).
+
+2. How Specific Concepts Were Represented
+
+Water: Represented by the wavy lines tile (and combined with the bottle shape for bottled water).
+
+Question: Represented by the open-hand tile preceding the item (asking/requesting gesture) combined with sequence context.
+
+Yes: Represented by the thumbs-up tile.
+
+Cold: Represented by the snowflake tile.
+
+For sale: Represented by the storefront icon tile.
+
+Three bottles: Represented by repeating the bottle symbol across individual tiles (1 bottle tile + 1 bottle tile + 1 bottle tile, or grouped across tiles).
+
+Card payment: Represented by the credit card / payment terminal tile.
+
+Six units of currency: Represented by six identical coin tiles placed in sequence.
+
+3. Meanings Requiring Composition or Context
+
+Asking a question ("Do you have...?"): Created by combining [Speaker Profile] + [Open Hand] + [Water Waves]. The open hand in front of the object converts the statement "water" into an inquiry or request for water.
+
+"For sale": Derived by placing the [Storefront] symbol alongside [Water] and [Cold], placing the item in a commercial context rather than requiring a dedicated "sale" verb.
+
+"Card payment?": Expressed by placing [Bottle tiles] (the items requested) followed by [Credit Card], using position to imply "paying for these with card."
+
+4. Omitted Linguistic Details
+
+Politeness markers ("please"): Omitted, as practical transaction signs prioritize direct semantic units over pragmatic fluff.
+
+Grammatical links & articles ("Do you...", "of local...", "for"): Omitted completely in favor of direct concept-mapping.
+
+Literal distinction between "water" and "bottled water" in Line 1: Line 1 presents generic water/liquid, which is refined to packaged bottle units in Line 3.
+
+5. Representation of Quantities (3 and 6)
+
+To completely avoid Arabic numerals ($3$, $6$) or written numbers while maintaining a strict single-concept-per-tile design:
+
+Quantity 3 (Three bottles): Expressed through tally repetition. Three consecutive bottle tiles are shown sequentially ($1 + 1 + 1$).
+
+Quantity 6 (Six units of currency): Expressed similarly via visual 1:1 correspondence. Six consecutive coin tiles ($1 + 1 + 1 + 1 + 1 + 1$) are displayed across the row to represent the exact amount of six currency units.

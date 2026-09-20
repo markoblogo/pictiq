@@ -1297,3 +1297,11 @@ A material provenance limitation was found: the transcripts describe an alternat
 Current grammar already defines additive pragmatic quantities; Handbook v1.0 did not make that rule explicit. This is a handbook/documentation candidate. No vocabulary, grammar, Numeric Notation, icon, Renderer, Composer, handbook, landing, Message Schema, tag, release, or production-site asset was changed by this analysis.
 
 Artifacts: [Stress Test 05 results package](../research/stress-test-05-zero-training-cross-model/README.md) and [book-material record](research/stress-test-05-cross-model-analysis.md).
+
+## 2026-09-20 — Stress Test 06 generative symbol convergence
+
+Five supplied generative-product result sets were archived and analyzed without new generation. Independent outputs converge most clearly on snowflake for cold, bottle/container for bottled water, card/terminal for card payment, and coin/currency for money. Quantity strategies diverge: direct object/unit repetition, unary dots, and Pictiq's compact additive practical quantities.
+
+The analysis distinguishes declared design from rendered realization. ChatGPT explicitly intended six coin units but its rendered grouped coins do not make six reliably countable at 24–32 px. This, alongside the Stress Test 05 quantity evidence, is a cross-experiment numeric-notation research pressure, not an implementation request. The next step is a controlled quantity study with fixed visual stimuli and blind/guided conditions. No Pictiq language, production asset, tag, release, or external model call changed.
+
+Artifacts: [Stress Test 06 package](../research/stress-test-06-generative-symbol-convergence/README.md) and [book-material record](research/stress-test-06-generative-symbol-convergence.md).

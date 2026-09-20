@@ -1,0 +1,93 @@
+{
+  "schema": "pictiq-stress-test-06-symbol-convergence-v0.1",
+  "concepts": [
+    {
+      "concept": "water",
+      "independent": {
+        "ChatGPT": "bottle + droplet",
+        "Gemini": "waves; later bottle",
+        "Copilot": "droplet",
+        "Ideogram": "droplet and/or bottle, sample-dependent",
+        "Leonardo": "malformed vessels"
+      },
+      "convergence": "DIVERGENT: container and liquid metaphors recur, but no single stable choice"
+    },
+    {
+      "concept": "question/request",
+      "independent": {
+        "ChatGPT": "question mark plus requesting person/hand",
+        "Gemini": "open hand plus speaker",
+        "Copilot": "question mark",
+        "Ideogram": "question mark in samples",
+        "Leonardo": "pseudo-text/question-like marks"
+      },
+      "convergence": "MODERATE: familiar interrogative or gestural request"
+    },
+    {
+      "concept": "yes",
+      "independent": {
+        "ChatGPT": "person thumbs-up",
+        "Gemini": "thumbs-up",
+        "Copilot": "check",
+        "Ideogram": "check",
+        "Leonardo": "insufficient"
+      },
+      "convergence": "MODERATE: affirmation gesture/check family"
+    },
+    {
+      "concept": "cold",
+      "independent": {
+        "ChatGPT": "snowflake",
+        "Gemini": "snowflake",
+        "Copilot": "snowflake",
+        "Ideogram": "snowflake in samples",
+        "Leonardo": "insufficient"
+      },
+      "convergence": "STRONG: snowflake (4/4 interpretable systems)"
+    },
+    {
+      "concept": "commercial availability",
+      "independent": {
+        "ChatGPT": "hand + coin",
+        "Gemini": "storefront",
+        "Copilot": "coins",
+        "Ideogram": "currency/context, unstable",
+        "Leonardo": "insufficient"
+      },
+      "convergence": "DIVERGENT"
+    },
+    {
+      "concept": "bottle",
+      "independent": {
+        "ChatGPT": "bottle",
+        "Gemini": "bottle",
+        "Copilot": "bottle",
+        "Ideogram": "bottle in reuse samples",
+        "Leonardo": "malformed containers"
+      },
+      "convergence": "STRONG: bottle/container (4/4 interpretable systems)"
+    },
+    {
+      "concept": "card payment",
+      "independent": {
+        "ChatGPT": "contactless card",
+        "Gemini": "payment terminal/card",
+        "Copilot": "striped card",
+        "Ideogram": "card",
+        "Leonardo": "insufficient"
+      },
+      "convergence": "STRONG: card/terminal (4/4 interpretable systems)"
+    },
+    {
+      "concept": "money/currency",
+      "independent": {
+        "ChatGPT": "coin discs/stacks",
+        "Gemini": "round coin tokens",
+        "Copilot": "overlapping coins",
+        "Ideogram": "coin/currency signs, unstable",
+        "Leonardo": "insufficient"
+      },
+      "convergence": "STRONG: coin/currency family (4/4 interpretable systems)"
+    }
+  ]
+}

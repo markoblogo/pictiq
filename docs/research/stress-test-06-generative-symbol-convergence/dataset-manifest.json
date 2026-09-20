@@ -1,0 +1,48 @@
+{
+  "schema": "pictiq-stress-test-06-dataset-v0.1",
+  "status": "ANALYZED",
+  "systems": [
+    {
+      "system": "ChatGPT",
+      "phases": {
+        "1": "image",
+        "2": "text",
+        "3": "image"
+      }
+    },
+    {
+      "system": "Gemini",
+      "phases": {
+        "1": "image",
+        "2": "text",
+        "3": "image"
+      }
+    },
+    {
+      "system": "Microsoft Copilot",
+      "phases": {
+        "1": "textual design",
+        "2": "text",
+        "3": "textual reuse"
+      }
+    },
+    {
+      "system": "Ideogram",
+      "phases": {
+        "1": "four image samples",
+        "2": "not available",
+        "3": "four image samples"
+      }
+    },
+    {
+      "system": "Leonardo.Ai",
+      "phases": {
+        "1": "one weak image",
+        "2": "not available",
+        "3": "not available"
+      }
+    }
+  ],
+  "evidence_manifest": "evidence/README.md",
+  "note": "Supplied sources only; no new generation."
+}
