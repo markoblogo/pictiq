@@ -1286,3 +1286,14 @@ No new publication milestone is created. `Can a Visual Language Explain Itself? 
 ### Stress Test 05 preparation
 
 A fixed four-frame dialogue, direct renderer output, blind PNG, verbatim blind/production/repair prompts, frozen Handbook guide reference, panel ledger, and unpopulated semantic-slot result schema are ready at [Stress Test 05 package](../research/stress-test-05-zero-training-cross-model/README.md). The test preserves only current vocabulary and records exact-quantity/container/price omissions rather than changing the language. No external AI call, test result, ranking, vocabulary change, grammar change, icon change, landing change, tag, or release was made.
+
+
+## 2026-09-20 — Stress Test 05 supplied-result analysis
+
+Five supplied transcripts (ChatGPT, Claude, Gemini, Mistral, Microsoft Copilot) were archived and analyzed without any new external AI call. The analysis separates visual recognition, dialogue structure, blind semantics, guided production, and repair quality; it does not rank systems.
+
+A material provenance limitation was found: the transcripts describe an alternate dialogue image with `qty_2 + qty_1` and `qty_5 + qty_1`, while the published frozen 05A artifact intentionally uses `qty_plus` and omits exact numbers. The result set is therefore preserved as exploratory alternate-stimulus evidence, not presented as a verified execution of the frozen protocol. The immediate action is methodological reconciliation before more runs, not a language change.
+
+Current grammar already defines additive pragmatic quantities; Handbook v1.0 did not make that rule explicit. This is a handbook/documentation candidate. No vocabulary, grammar, Numeric Notation, icon, Renderer, Composer, handbook, landing, Message Schema, tag, release, or production-site asset was changed by this analysis.
+
+Artifacts: [Stress Test 05 results package](../research/stress-test-05-zero-training-cross-model/README.md) and [book-material record](research/stress-test-05-cross-model-analysis.md).

@@ -1,0 +1,41 @@
+{
+  "schema": "pictiq-stress-test-05-repair-analysis-v0.1",
+  "systems": {
+    "chatgpt": [
+      {
+        "suggestion": "Make consecutive quantity tiles additive in the guide, with 2+1=3 and 5+1=6.",
+        "classification": "DOCUMENTATION SUGGESTION",
+        "assessment": "Valid against current GRAMMAR.md; handbook version gap."
+      }
+    ],
+    "claude": [
+      {
+        "suggestion": "Clarify whether adjacent tally-like quantity tiles form numbers and whether the five-mark tile is a number.",
+        "classification": "DOCUMENTATION SUGGESTION",
+        "assessment": "Useful: its blind ambiguity is traceable to this absent handbook rule."
+      }
+    ],
+    "gemini": [
+      {
+        "suggestion": "Use three repeated bottle symbols and place money before quantity.",
+        "classification": "INTERESTING HYPOTHESIS",
+        "assessment": "A testable visual alternative; it does not repair the frozen canonical 05A and should not be adopted without a controlled comparison."
+      }
+    ],
+    "mistral": [
+      {
+        "suggestion": "Use qty_3 and replace glyphs with claimed standard equivalents.",
+        "classification": "PROTOCOL-VIOLATING",
+        "assessment": "qty_3 is not current vocabulary and the premise follows water-glyph misrecognition."
+      }
+    ],
+    "microsoft_copilot": [
+      {
+        "suggestion": "Use qty_minus for cold, qty_5 for bags, and punct_exclaim for yes.",
+        "classification": "PROTOCOL-VIOLATING",
+        "assessment": "Reassigns established quantity/punctuation semantics and follows visual misrecognition."
+      }
+    ]
+  },
+  "finding": "The only directly actionable repair pressure is handbook/documentation clarification. No repair is implemented by this analysis."
+}

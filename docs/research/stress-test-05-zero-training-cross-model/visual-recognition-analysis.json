@@ -1,0 +1,73 @@
+{
+  "schema": "pictiq-stress-test-05-visual-recognition-analysis-v0.1",
+  "status": "ANALYZED_WITH_STIMULUS_PROVENANCE_LIMITATION",
+  "glyphs": [
+    "water bottle",
+    "question mark",
+    "yes/check",
+    "snowflake",
+    "money",
+    "card",
+    "qty_1",
+    "qty_2",
+    "qty_5"
+  ],
+  "systems": {
+    "chatgpt": {
+      "water bottle": "bottled item/product, possibly a drink",
+      "question mark": "question",
+      "yes/check": "yes/confirmation",
+      "snowflake": "cold/chilled",
+      "money": "price/cost/payment",
+      "card": "card payment",
+      "qty_1": "quantity/amount; exact value uncertain",
+      "qty_2": "quantity/amount; exact value uncertain",
+      "qty_5": "quantity/amount; exact value uncertain"
+    },
+    "claude": {
+      "water bottle": "water/drink/bottle",
+      "question mark": "sentence-final question",
+      "yes/check": "affirmation",
+      "snowflake": "cold/chilled",
+      "money": "money/cash/price",
+      "card": "card payment",
+      "qty_1": "one/counter",
+      "qty_2": "two/counter",
+      "qty_5": "barcode/scan or five-tally ambiguous"
+    },
+    "gemini": {
+      "water bottle": "bottled drink",
+      "question mark": "inquiry",
+      "yes/check": "yes/availability",
+      "snowflake": "cold/chilled",
+      "money": "money/price/transaction",
+      "card": "credit-card payment",
+      "qty_1": "one",
+      "qty_2": "two",
+      "qty_5": "five"
+    },
+    "mistral": {
+      "water bottle": "pencil/pen",
+      "question mark": "question",
+      "yes/check": "agreement/confirmation",
+      "snowflake": "cold/winter/frozen",
+      "money": "money/cost/payment",
+      "card": "payment cards",
+      "qty_1": "one or separator",
+      "qty_2": "pause/stop/interruption",
+      "qty_5": "plurality/list (reported as three bars)"
+    },
+    "microsoft_copilot": {
+      "water bottle": "pencil/creation",
+      "question mark": "question",
+      "yes/check": "confirmation",
+      "snowflake": "cold/frozen/inactive",
+      "money": "money/value/payment",
+      "card": "payment method",
+      "qty_1": "vertical bar/barrier",
+      "qty_2": "vertical bar/punctuation-like separator",
+      "qty_5": "barcode/product"
+    }
+  },
+  "finding": "The water glyph and tally-like quantity tiles create the decisive recognition split. Question, check, money, and card were recognized across all five transcripts."
+}

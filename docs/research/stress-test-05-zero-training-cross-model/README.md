@@ -82,3 +82,32 @@ Also record stated confidence, noted ambiguity, recovered dialogue structure, re
 - Findings apply only to these specific products/runs on their recorded dates.
 - Results cannot prove universal human comprehension.
 - Stress Test 05 is not a publication milestone until runs are collected and analyzed.
+
+
+## Results analysis — supplied five-transcript set
+
+**Status:** `CROSS-MODEL ANALYSIS COMPLETE / READY FOR HUMAN REVIEW`.
+
+Five supplied transcripts (ChatGPT, Claude, Gemini, Mistral, Microsoft Copilot) have been retained and analyzed. DeepSeek remains excluded because no comparable usable run was supplied. This analysis does not make a model ranking, create an aggregate score, alter the frozen prompt/stimulus, or change Pictiq production assets.
+
+### Critical provenance finding
+
+The supplied transcripts and screenshot describe a different visual dialogue from the frozen 05A JSON and PNG in this directory. The supplied runs include `qty_2 + qty_1` and `qty_5 + qty_1`; the frozen 05A uses `qty_plus` and intentionally omits exact quantity and price. See [evidence provenance](evidence/README.md).
+
+The transcripts therefore remain valuable as an **alternate-stimulus exploratory set**, but cannot be presented as a verified result of the published frozen 05A experiment. A future replication must bind each run to the exact PNG hash, prompt, and guide version before more models are added.
+
+### Results artifacts
+
+- [Method](method.md)
+- [Primary evidence manifest](evidence/README.md)
+- [Blind semantic slots](blind-slot-analysis.json)
+- [Visual recognition analysis](visual-recognition-analysis.json)
+- [Guided production analysis](guided-production-analysis.json)
+- [Repair analysis](repair-analysis.json)
+- [Model profiles](model-profiles.md)
+- [Cross-model findings](cross-model-findings.md)
+- [Limitations](limitations.md)
+
+### Current protocol / handbook finding
+
+Current [`spec/GRAMMAR.md`](../../../spec/GRAMMAR.md) defines additive consecutive quantity tiles, including `qty_1 + qty_2 = 3`. Handbook v1.0, the supplied guide, does not make that rule explicit. This is a **HANDBOOK VERSION GAP / documentation clarification candidate**, not evidence for new numeric notation or new vocabulary. The existing frozen 05A intentionally avoids that mechanism, so the supplied quantity results cannot evaluate its frozen design.

@@ -165,3 +165,7 @@ The human/game track remains deferred and non-blocking. The landing result is a 
 The Pictiq landing delivery is closed as a deployment track. `https://pictiq.abvx.xyz/` is live over HTTPS; root English mode, `?mode=pictiq`, Composer, and Lexicon are public. The production SEO / LLMO / project-discoverability pass is complete. Pictiq is also listed through the separate ABVX OS workflow as a project, production site, and free Handbook resource.
 
 This is not a new publication event. Preserve the existing milestone cadence: `Can a Visual Language Explain Itself?` remains `READY / BACKLOG`. The next prepared research activity is Stress Test 05 manual cross-model execution; Stress Test 04B remains deferred and non-blocking.
+
+## Stress Test 05 results-analysis next gate — 2026-09-20
+
+The five supplied cross-model transcripts have been analyzed, but they describe an alternate image containing additive practical-quantity tiles rather than the published frozen 05A PNG/JSON. Before more model runs or any publication decision, reconcile the evidence against one hash-identified stimulus, verbatim prompt, and Handbook version. This is a methodology/documentation gate; it does not justify a vocabulary, grammar, Numeric Notation, icon, Renderer, Composer, landing, or production change.

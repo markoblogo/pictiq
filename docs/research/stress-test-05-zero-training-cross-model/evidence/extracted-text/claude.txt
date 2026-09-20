@@ -1,0 +1,120 @@
+1. Line-by-line reading
+
+My best overall reading is a short transaction at a kiosk/shop counter, with the two speakers alternating lines (Line 1 = A, Line 2 = B, Line 3 = A, Line 4 = B).
+
+Line 1 — bottle + question mark
+ "A bottle/drink of water?" — either a request ("Do you have water?") or an offer ("Would you like a bottle?"). The question mark is clearly the interrogative marker, so this line is a question about the bottle.
+
+Line 2 — check + bottle + snowflake + coins
+ "Yes — a cold bottle — [and it costs / what does it cost]." The checkmark affirms, the bottle carries over the topic, the snowflake modifies it as cold/chilled, and the coin icon raises the money aspect. Without a question mark it reads as a statement of fact rather than a question: "Yes, cold bottle, it costs money."
+
+Line 3 — "II" + "I" + bottle + cards + question mark
+ Most likely: "Two-something, one bottle — by card?" The two stroke symbols look like counters or digits (2 and 1), so this is plausibly a price (2 and 1 → e.g. 2.10, or "two-one") attached to one bottle, followed by a question about card payment. Alternative reading: "Two? One? — bottle — card?" i.e. clarifying quantity and then payment method.
+
+Line 4 — check + striped square + "I" + coins
+ "Yes — scan/barcode — one — cash." The affirmation accepts, the striped box most plausibly means a barcode/scanning, "I" is one item, and the coins close the exchange with cash rather than card. So: "Yes, scan it, one, paying cash."
+
+Whole dialogue, freely rendered:
+ A: "Water?"
+ B: "Yes — cold one — that'll cost."
+ A: "It's 2.10 for one bottle. Card?"
+ B: "Yes — scan it — just one — I'll pay cash."
+
+2. Symbol-by-symbol
+
+Bottle — the topic item: water/drink/bottle. Repeated in three lines, which makes it the anchor noun.
+
+Question mark — turns the whole line into a question. It appears at the end both times, which suggests a sentence-final marker rather than an interrogative word.
+
+Checkmark — affirmation: yes / agreed / correct. Line-initial both times, which fits a response marker.
+
+Snowflake — cold, chilled, refrigerated. As a modifier next to the bottle.
+
+Coin stack with $ — money, cash, price, payment.
+
+Card stack — card payment (a contrasting payment method to the coins).
+
+"II" and "I" — numerals or counters: two and one.
+
+Striped square (five bars) — either a barcode/scanning action, or the numeral five as tallies.
+
+3. Confident about
+
+The overall genre: a brief service/purchase exchange about buying a chilled bottled drink.
+
+The question mark as a sentence-final question marker, and the checkmark as a sentence-initial affirmation. Their positions are consistent.
+
+The bottle as the persistent topic, the snowflake as "cold" modifying it.
+
+The coins vs. cards contrast being about two payment methods, and the last line settling on cash.
+
+Turn structure alternating between two speakers: question → answer → question → answer.
+
+4. Ambiguous or unclear
+
+Who speaks first. Nothing marks speaker identity; the customer-asks-first reading is my default, but vendor-offers-first works just as well.
+
+The striped square. Barcode/scan and "five tally marks" are both plausible, and they give quite different line-4 meanings ("scan it" vs. "five"). Its box is the same size as the numeral boxes, which slightly favors a numeral; its internal spacing looks barcode-like, which favors scanning.
+
+The numerals. "II I" could be a price (2.10, 21), a quantity followed by a unit, or a correction ("two? no, one"). I can't tell whether the system writes multi-digit numbers as adjacent boxes.
+
+Whether the coin icon in line 2 is a question about price. There is no question mark there, so I read it as a statement, but "how much?" is possible if the system allows unmarked questions.
+
+Whether the bottle means specifically water or any bottled drink. The shape suggests a water bottle, but this may just be the generic "drink" icon.
+
+Politeness, tense, and modality are entirely absent. Nothing tells me whether line 1 is "I want" or "do you have" or "would you like".
+
+I read the handbook (Pictiq v1.0-core). Here's the encoding.
+
+Proposed sequence
+
+Line 1 — the request
+ move_taxi + move_public + qty_2 + punct_question
+
+Line 2 — the price
+ money_coins + punct_question
+
+As tiles, left to right: 🚕-tile, 🚆/public-transport-tile, "II"-tile, "?"-tile — then on a new line the coin-stack tile and a "?"-tile.
+
+Single-line variant (if it must be one phrase, 5 tiles = protocol maximum):
+ move_taxi + move_public + qty_2 + money_coins + punct_question
+
+How it was built
+
+"I need a taxi" → move_taxi alone. Rule 2 (zero-intent) says pointing at an object tile already means "I need this / where is this", so no separate "need" or "I" operator exists or is required. The handbook lists move_taxi as "private transport now", which is exactly the sense wanted.
+
+"to the train station" → move_public as a qualifier under Rule 6 (compound: BASE + QUALIFIER). Core has no station tile, but move_public is explicitly described as generic cover for bus/metro/train, so move_taxi + move_public reads as "taxi → to public transport / to the station". I deliberately did not use place_airport: it belongs to the Paris pack, not Core, and it names the wrong destination.
+
+"two people" → qty_2, placed after the object per Rule 5 (quantity follows the object: WHAT → HOW MUCH). Core has no person tile, so the count attaches to the taxi and the head-count reading comes from context — a passenger standing at a taxi with two fingers' worth of quantity is not usually asking for two taxis.
+
+"How much will it cost?" → money_coins + punct_question. The handbook gives this pattern directly: money_coins is the most general money concept and with the question tile reads as "money / where to pay / how much?" Kept on its own line because Rule 7 prefers 1–3 tiles and says multiple sentences should be multiple lines.
+
+The question tile on line 1 converts the zero-intent request into "can I / is there", per Rule 3.
+
+What I had to drop
+
+"three bags" — omitted entirely. Core has no luggage or bag tile (the luggage tag in Chapter 5 is an object, not a lexicon entry), and no generic "object/thing" tile exists to hang qty_2 + qty_1 on. A bare quantity tile with no preceding object breaks the placement rule and would most likely be misread as more passengers. The handbook's own guidance applies here: don't invent a tile, let context carry it — in a real taxi situation the bags are visible on the pavement.
+
+"three" — unrepresentable as an exact number anyway. Core quantity is only 1, 2, 5, plus, minus. qty_2 + qty_1 is not a documented composition (only qty_5 is stated to repeat, for "many").
+
+"I", "need", future tense, "will it" — no equivalents exist and none are needed; zero-intent supplies the intent and Pictiq has no tense.
+
+Known ambiguity
+
+qty_2 after a compound could be read as "two taxis" rather than "two passengers" — the handbook only defines quantity following a single object, not a base+qualifier pair. If that risk matters, drop qty_2 from the tiles and show two fingers instead; Chapter 3 explicitly recommends fingers for exact counts in face-to-face use.
+
+No image came through with this message — only the text. The attachment may not have uploaded.
+
+If you meant the earlier image (the bottle/snowflake/coins dialogue), I can re-read it, but with one caveat worth stating up front: I now have the handbook, so I can't give you a clean blind reading of it anymore. What I can give you is the corrected reading, which is probably more useful anyway:
+
+Line 1: need_water + punct_question → "Water? / Where can I get water?"
+
+Line 2: logic_yes + need_water + (cold qualifier) + money_coins → "Yes — cold water — it costs / you pay."
+
+Line 3: qty_2 + qty_1 + need_water + money_card + punct_question → the quantity tiles are 2 and 1, and money_card + punct_question is the handbook's stock phrase for "can I pay by card?"
+
+Line 4: logic_yes + qty_5 + qty_1 + money_coins → the striped tile is the 5 quantity tile, not a barcode. So: "Yes — five, one — cash."
+
+My blind reading got the operators right (question tile, yes/affirmation, quantity follows the object) and got two things wrong: I read the five-tally tile as a barcode, and I underweighted that the number tiles are a documented quantity set rather than ad-hoc counters. The line-3/line-4 numbers most likely encode a price (2–1, then 5–1) rather than item counts, though the protocol has no decimal point, so that remains genuinely ambiguous.
+
+If you upload the new image, I'll do the four-part analysis on it. Tell me whether you want it read blind (inference only, ignoring the handbook) or read with the lexicon applied — I can do either, but they produce different answers and it's worth choosing deliberately.

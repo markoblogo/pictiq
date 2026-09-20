@@ -1,0 +1,93 @@
+{
+  "schema": "pictiq-stress-test-05-blind-slot-analysis-v0.1",
+  "status": "ANALYZED_WITH_STIMULUS_PROVENANCE_LIMITATION",
+  "comparison_target": "user-supplied intended dialogue described in supplied transcripts; not a verified execution of frozen 05a-canonical-dialogue.json",
+  "systems": {
+    "chatgpt": {
+      "slots": {
+        "WATER": "APPROXIMATE",
+        "QUESTION_AVAILABILITY": "APPROXIMATE",
+        "YES": "CORRECT",
+        "COLD": "CORRECT",
+        "SALE": "INFERRED_FROM_CONTEXT",
+        "QUANTITY_3": "OMITTED",
+        "BOTTLE_UNIT": "INFERRED_FROM_CONTEXT",
+        "CARD_PAYMENT": "CORRECT",
+        "YES_CONFIRMATION": "CORRECT",
+        "PRICE_6": "OMITTED",
+        "LOCAL_CURRENCY": "INFERRED_FROM_CONTEXT",
+        "DIALOGUE_TURN_STRUCTURE": "CORRECT"
+      },
+      "notes": "Recognized a bottled-product transaction and quantitative marks; declined to assign exact arithmetic."
+    },
+    "claude": {
+      "slots": {
+        "WATER": "APPROXIMATE",
+        "QUESTION_AVAILABILITY": "APPROXIMATE",
+        "YES": "CORRECT",
+        "COLD": "CORRECT",
+        "SALE": "INFERRED_FROM_CONTEXT",
+        "QUANTITY_3": "WRONG",
+        "BOTTLE_UNIT": "APPROXIMATE",
+        "CARD_PAYMENT": "CORRECT",
+        "YES_CONFIRMATION": "CORRECT",
+        "PRICE_6": "WRONG",
+        "LOCAL_CURRENCY": "APPROXIMATE",
+        "DIALOGUE_TURN_STRUCTURE": "CORRECT"
+      },
+      "notes": "Treated 2+1 as possible 2.10/two-one and the five-mark tile as barcode/scan."
+    },
+    "gemini": {
+      "slots": {
+        "WATER": "APPROXIMATE",
+        "QUESTION_AVAILABILITY": "APPROXIMATE",
+        "YES": "CORRECT",
+        "COLD": "CORRECT",
+        "SALE": "INFERRED_FROM_CONTEXT",
+        "QUANTITY_3": "CORRECT",
+        "BOTTLE_UNIT": "CORRECT",
+        "CARD_PAYMENT": "CORRECT",
+        "YES_CONFIRMATION": "CORRECT",
+        "PRICE_6": "CORRECT",
+        "LOCAL_CURRENCY": "APPROXIMATE",
+        "DIALOGUE_TURN_STRUCTURE": "CORRECT"
+      },
+      "notes": "Recovered the retail dialogue and both additive quantities, while retaining payment/currency ambiguity."
+    },
+    "mistral": {
+      "slots": {
+        "WATER": "NOT_REACHED_DUE_TO_VISUAL_ERROR",
+        "QUESTION_AVAILABILITY": "CORRECT",
+        "YES": "CORRECT",
+        "COLD": "APPROXIMATE",
+        "SALE": "NOT_REACHED_DUE_TO_VISUAL_ERROR",
+        "QUANTITY_3": "NOT_REACHED_DUE_TO_VISUAL_ERROR",
+        "BOTTLE_UNIT": "NOT_REACHED_DUE_TO_VISUAL_ERROR",
+        "CARD_PAYMENT": "CORRECT",
+        "YES_CONFIRMATION": "CORRECT",
+        "PRICE_6": "NOT_REACHED_DUE_TO_VISUAL_ERROR",
+        "LOCAL_CURRENCY": "APPROXIMATE",
+        "DIALOGUE_TURN_STRUCTURE": "WRONG"
+      },
+      "notes": "Misrecognized the water glyph as a pencil and quantity marks as pause/separators; later semantic claims cannot assess Pictiq composition."
+    },
+    "microsoft_copilot": {
+      "slots": {
+        "WATER": "NOT_REACHED_DUE_TO_VISUAL_ERROR",
+        "QUESTION_AVAILABILITY": "CORRECT",
+        "YES": "CORRECT",
+        "COLD": "APPROXIMATE",
+        "SALE": "NOT_REACHED_DUE_TO_VISUAL_ERROR",
+        "QUANTITY_3": "NOT_REACHED_DUE_TO_VISUAL_ERROR",
+        "BOTTLE_UNIT": "NOT_REACHED_DUE_TO_VISUAL_ERROR",
+        "CARD_PAYMENT": "CORRECT",
+        "YES_CONFIRMATION": "CORRECT",
+        "PRICE_6": "NOT_REACHED_DUE_TO_VISUAL_ERROR",
+        "LOCAL_CURRENCY": "APPROXIMATE",
+        "DIALOGUE_TURN_STRUCTURE": "WRONG"
+      },
+      "notes": "Reported a different apparent sequence involving writing, pause/barrier, barcode, and payment; no reliable dialogue-level semantic comparison follows."
+    }
+  },
+  "interpretation": "Labels are descriptive per transcript and deliberately do not produce totals, ranks, or population claims."
+}

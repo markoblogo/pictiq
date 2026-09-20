@@ -1,0 +1,92 @@
+{
+  "schema": "pictiq-stress-test-05-guided-production-analysis-v0.1",
+  "target": "I need a taxi to the train station. There are two people and three bags. How much will it cost?",
+  "systems": {
+    "chatgpt": {
+      "proposed": "move_taxi + move_public; money_coins + punct_question",
+      "documented_use": [
+        "move_taxi",
+        "move_public",
+        "money_coins",
+        "punct_question"
+      ],
+      "omissions": [
+        "two people",
+        "three bags",
+        "exact 3"
+      ],
+      "classification": "STRICT / CONSERVATIVE",
+      "assessment": "Preserves taxi and price question; explicitly declines unsupported detail."
+    },
+    "claude": {
+      "proposed": "move_taxi + move_public + qty_2 + punct_question; money_coins + punct_question",
+      "documented_use": [
+        "move_taxi",
+        "move_public",
+        "qty_2",
+        "punct_question",
+        "money_coins"
+      ],
+      "omissions": [
+        "three bags",
+        "exact 3"
+      ],
+      "classification": "COMPOSITIONAL BUT PLAUSIBLE",
+      "assessment": "Uses documented tiles but quantity attachment to a taxi is context-dependent rather than a documented passenger construction."
+    },
+    "gemini": {
+      "proposed": "move_taxi + move_public; move_feet + qty_2 + qty_plus; money_coins + punct_question",
+      "documented_use": [
+        "move_taxi",
+        "move_public",
+        "move_feet",
+        "qty_2",
+        "qty_plus",
+        "money_coins",
+        "punct_question"
+      ],
+      "omissions": [
+        "literal bags",
+        "exact baggage count"
+      ],
+      "classification": "OVER-EXTENDS POLYSEMY",
+      "assessment": "No invented IDs, but treats movement and more as passengers/luggage without documented support."
+    },
+    "mistral": {
+      "proposed": "move_taxi + move_public + punct_question; qty_2 + qty_3 + money_coins + punct_question",
+      "documented_use": [
+        "move_taxi",
+        "move_public",
+        "qty_2",
+        "money_coins",
+        "punct_question"
+      ],
+      "undocumented": [
+        "need_taxi",
+        "person",
+        "qty_3",
+        "bag"
+      ],
+      "classification": "INVENTS VOCABULARY",
+      "assessment": "Mixes later correction with unsupported IDs and unattached quantity tiles."
+    },
+    "microsoft_copilot": {
+      "proposed": "move_taxi + move_public + qty_2 + qty_5 + punct_question; money_coins + punct_question",
+      "documented_use": [
+        "move_taxi",
+        "move_public",
+        "qty_2",
+        "qty_5",
+        "money_coins",
+        "punct_question"
+      ],
+      "questionable": [
+        "bare qty_2 for people",
+        "qty_5 as bags"
+      ],
+      "classification": "FAILS TO ACKNOWLEDGE GAP",
+      "assessment": "Uses existing IDs but states undocumented whole-phrase quantity and luggage readings as protocol rules."
+    }
+  },
+  "finding": "One conservative response preserves priority-first meaning better than richer unsupported encodings. The guide did not prevent all symbol/rule invention."
+}
