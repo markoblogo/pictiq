@@ -2,6 +2,30 @@
 
 Chronological notes reconstructed from repository evidence. Interpretive statements are marked as such; dates follow commit or release history when a separate event date is unavailable.
 
+## 2026-09-21 — Pictiq Editorial Case 001: Bracken Ford production capture
+
+### Starting question
+
+Can the first real book-production use of Pictiq be preserved as an evidence-bounded case without turning four implemented comics into a comprehension or product-success claim?
+
+### What happened
+
+Four supplied black-and-white full-page comic assets from *No Further Claims: A Bracken Ford Novel* were registered as the first concrete Pictiq editorial narrative case. The record preserves the three-layer distinction between novel scene, simplified Composer input, and actual Pictiq output. Exact Composer inputs for all four comics are now recorded; independent output exports and panel mappings remain a preservation gap.
+
+The four final composites were copied without recompression and hashed. No Pictiq vocabulary, grammar, icon, novel text, or artwork was modified.
+
+### Evidence
+
+[Pictiq Editorial Case 001 — Bracken Ford](../research/editorial-cases/bracken-ford/PICTIQ_EDITORIAL_CASE_001_BRACKEN_FORD.md) and its [four final composite assets](../research/editorial-cases/bracken-ford/assets/).
+
+### Decision / outcome
+
+Case status: **IMPLEMENTED / AWAITING PUBLICATION / AWAITING READER TEST**. The case records bounded observations only: existing vocabulary was used for four simplified narrative inserts without a case-specific addition, richer literary relations remained partly with drawing/context, and Composer functioned as an intermediate authoring tool.
+
+### Boundary
+
+This case does not replace `PICTIQ_NARRATIVE_BENCHMARK_V1`, does not promote the editorial micro-language hypothesis into formal positioning, and does not add a vocabulary or grammar change. Publication metadata and reader-test evidence should be appended to this same case later.
+
 
 ## 2026-09-13 — English landing accepted and translation architecture defined
 
