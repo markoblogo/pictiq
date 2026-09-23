@@ -2,13 +2,20 @@
 
 ## Status
 
-**IMPLEMENTED / AWAITING PUBLICATION / AWAITING READER TEST**
+**PUBLISHED / LIVE / AWAITING READER TEST**
 
 This is a provenance record, not a comprehension, sales, or product-success claim.
 
 ## Book and purpose
 
-*No Further Claims: A Bracken Ford Novel*. Four black-and-white full-page comics combine conventional drawn narrative with Pictiq Composer output. The complete visual system is one non-Pictiq frontispiece, four Pictiq narrative inserts, and one non-Pictiq closing illustration.
+*No Further Claims: A Bracken Ford Novel* by **Calder Brackle**. Four black-and-white full-page comics combine conventional drawn narrative with Pictiq Composer output. The complete visual system is one non-Pictiq frontispiece, four Pictiq narrative inserts, and one non-Pictiq closing illustration.
+
+Published editions:
+
+- [Kindle edition](https://www.amazon.com/dp/B0HKTBFFJM) — ASIN `B0HKTBFFJM`
+- [Paperback edition](https://www.amazon.com/dp/B0HKTFR8ND) — ASIN `B0HKTFR8ND`
+
+Publication status is recorded from the supplied live product records. Publication establishes that the Pictiq editorial experiment reached released Kindle and paperback artifacts; it does not establish commercial success, reader comprehension, conversion, reviews, or sales impact.
 
 The case asks whether existing Pictiq vocabulary can encode selected simplified semantic statements for editorial use. It does not claim that Pictiq translates the novel, replaces prose, or functions as a speech-balloon language.
 
@@ -30,6 +37,8 @@ For every comic, preserve three distinct layers: **NOVEL SCENE**, **COMPOSER INP
 | Comic 3 | Pictiq narrative insert | [comic 03](assets/comic-03-competing-accounts.png) |
 | Comic 4 | Pictiq narrative insert | [comic 04](assets/comic-04-missing-bag.png) |
 | Image 5 | Non-Pictiq closing visual coda | Not supplied in this capture |
+
+Public promotional asset: [Bracken Ford promo](assets/bracken-ford-promo.png), preserved byte-for-byte from the supplied 1536×1024 PNG.
 
 Pictiq is deliberately not placed on every illustration.
 
@@ -165,12 +174,32 @@ The earlier `PICTIQ_NARRATIVE_BENCHMARK_V1` remains reusable and is not replaced
 
 ## Publication and future linkage
 
-**PRE-PUBLICATION / PENDING PUBLICATION.** Add Amazon URL, ASIN, ISBN, publication date, edition, interior pages, cover, and `LOOK_INSIDE_VISIBLE` to this same record after publication. Do not create a duplicate case.
+**PUBLISHED / LIVE.** The Kindle and paperback editions are now linked above. Publication date, ISBN, interior page references, and `LOOK_INSIDE_VISIBLE` remain unrecorded because they were not supplied or independently observable in this pass. Do not create a duplicate case.
+
+### Confirmed by publication
+
+- Pictiq can be integrated into a production paperback/Kindle workflow.
+- Four canonical Composer-based narrative inserts survived the production pipeline.
+- Reader-facing Pictiq attribution can coexist with the fiction product.
+- The experiment reached a commercially published artifact.
+
+### Not yet confirmed
+
+- Reader comprehension.
+- Effect on conversion, reviews, or sales.
+- Whether readers follow the Pictiq attribution or link.
+- Whether Pictiq improves narrative understanding.
+
+### 2026-09-23 — Interior attribution candidate
+
+The successor print and EPUB interiors add a small reader-facing Pictiq attribution to the existing copyright page. The existing copyright wording, locked novel prose, four narrative comic inserts, six-image order, canonical glyph artwork, chapter structure, and illustration placement remain unchanged. No new glyph was required. The print page shows both addresses as readable text; the EPUB links to the Pictiq site and source repository without adding Pictiq to navigation.
+
+This is historical production chronology for the now-published case. It records canonical Pictiq vocabulary used for dialogue/narrative compression alongside drawn scenes. It remains **not a comprehension or commercial-outcome claim**; no reader study or sales result is recorded.
 
 ## Evidence / next actions
 
 - [Narrative Pictiq planning](../../../book-materials/experiments/narrative-pictiq-planning.md)
 - [Bracken Ford novel workspace](../../../../../../2026-09-07/new-chat/work/ostrich-black-comedy-book/)
-- Four supplied final composites are preserved byte-for-byte in `assets/` with hashes above.
+- Four supplied final composites and the supplied promotional image are preserved byte-for-byte in `assets/` with hashes above and in the asset file metadata.
 - Independent Composer inputs/outputs for the four cases, panel mapping, and version metadata should be preserved automatically in future cases alongside every final comic.
 - A future public case page or Pictiq book/manual chapter should wait for publication and/or useful reader evidence.

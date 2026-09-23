@@ -20,11 +20,11 @@ The four final composites were copied without recompression and hashed. No Picti
 
 ### Decision / outcome
 
-Case status: **IMPLEMENTED / AWAITING PUBLICATION / AWAITING READER TEST**. The case records bounded observations only: existing vocabulary was used for four simplified narrative inserts without a case-specific addition, richer literary relations remained partly with drawing/context, and Composer functioned as an intermediate authoring tool.
+Case status: **PUBLISHED / LIVE / AWAITING READER TEST**. The supplied Kindle and paperback records establish that the experiment reached released book artifacts. The case records bounded observations only: existing vocabulary was used for four simplified narrative inserts without a case-specific addition, richer literary relations remained partly with drawing/context, and Composer functioned as an intermediate authoring tool. No comprehension, conversion, review, or sales result is claimed.
 
 ### Boundary
 
-This case does not replace `PICTIQ_NARRATIVE_BENCHMARK_V1`, does not promote the editorial micro-language hypothesis into formal positioning, and does not add a vocabulary or grammar change. Publication metadata and reader-test evidence should be appended to this same case later.
+This case does not replace `PICTIQ_NARRATIVE_BENCHMARK_V1`, does not promote the editorial micro-language hypothesis into formal positioning, and does not add a vocabulary or grammar change. Further publication metadata and reader-test evidence should be appended to this same case later.
 
 
 ## 2026-09-13 — English landing accepted and translation architecture defined
