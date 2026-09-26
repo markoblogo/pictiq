@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Stress Test 07.1 — Question Scope Candidate v2</title>
+<style>
+  :root { color-scheme: light; font: 16px/1.45 system-ui, sans-serif; color: #111; background: #fff; }
+  body { margin: 36px; max-width: 1500px; }
+  h1 { margin: 0 0 6px; font-size: 28px; }
+  .lede { margin: 0 0 30px; color: #454545; }
+  section { border-top: 1px solid #bbb; padding: 24px 0 30px; }
+  h2 { margin: 0 0 14px; font-size: 22px; }
+  .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; }
+  figure { margin: 0; }
+  figcaption { font-weight: 700; margin-bottom: 8px; }
+  img { display: block; width: 100%; max-width: 624px; height: 256px; object-fit: contain; background: #fff; }
+  .meta { margin: 16px 0 0; color: #333; }
+  code { font-size: .9em; overflow-wrap: anywhere; }
+  .note { margin: 0 0 24px; padding: 12px 14px; border: 1px solid #bbb; max-width: 900px; }
+</style>
+</head>
+<body>
+<h1>Stress Test 07.1 — Explicit Question Scope: Candidate v2</h1>
+<p class="lede">Candidate comparison only. Frozen stimuli, delivery PNGs, manifests, prompts, and semantics are unchanged.</p>
+<p class="note"><strong>v2 visual change:</strong> a single outer scope frame remains; <strong>?</strong> occupies its header/operator zone; the object glyph is shown without its nested tile frame. External AVAILABLE / WHERE glyphs are unchanged. This page is not a stimulus and must not be used for execution.</p>
+<div id="rows"></div>
+<script>
+const candidates = [
+  { id: "07B-B", source: "stimuli/07B-B.svg", candidate: "07B-B-question-scope-v2-candidate.svg", meaning: "QUESTION[AVAILABLE(WATER)]", role: "Primary — availability" },
+  { id: "07C-B", source: "stimuli/07C-B.svg", candidate: "07C-B-question-scope-v2-candidate.svg", meaning: "QUESTION[TOILET + WHERE]", role: "Primary — location" },
+  { id: "07T-B-B", source: "transfer-stimuli/07T-B-B.svg", candidate: "07T-B-B-question-scope-v2-candidate.svg", meaning: "QUESTION[AVAILABLE(FOOD)]", role: "Transfer — availability" },
+  { id: "07T-C-B", source: "transfer-stimuli/07T-C-B.svg", candidate: "07T-C-B-question-scope-v2-candidate.svg", meaning: "QUESTION[HOME + WHERE]", role: "Transfer — location" }
+];
+const root = document.querySelector("#rows");
+for (const item of candidates) {
+  const sourceHref = "../../../../" + item.source;
+  const section = document.createElement("section");
+  section.innerHTML = "<h2>" + item.id + " <small>— " + item.role + "</small></h2>" +
+    "<div class=\"comparison\"><figure><figcaption>Current frozen SVG</figcaption><img src=\"" + sourceHref + "\" alt=\"Current frozen " + item.id + " SVG\"></figure>" +
+    "<figure><figcaption>Corrected candidate SVG v2</figcaption><img src=\"" + item.candidate + "\" alt=\"Question scope candidate v2 for " + item.id + "\"></figure></div>" +
+    "<p class=\"meta\"><strong>Semantic target:</strong> <code>" + item.meaning + "</code><br><strong>Candidate rule:</strong> question mark in header/operator zone; object glyph unchanged; inner object frame hidden; external operator unchanged.</p>";
+  root.append(section);
+}
+</script>
+</body>
+</html>

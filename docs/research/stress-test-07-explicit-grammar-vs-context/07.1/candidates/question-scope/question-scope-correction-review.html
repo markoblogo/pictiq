@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stress Test 07.1 — Explicit question scope candidates</title>
+  <style>
+    :root { color-scheme: light; font-family: Arial, sans-serif; color: #111; background: #fff; }
+    body { margin: 32px; background: #fff; }
+    h1 { margin: 0 0 8px; font-size: 28px; }
+    p { margin: 0 0 8px; line-height: 1.45; }
+    .row { border-top: 1px solid #9aa1aa; padding: 22px 0 26px; min-width: 1280px; }
+    .row:last-child { border-bottom: 1px solid #9aa1aa; }
+    .private-id { font-size: 19px; font-weight: 700; margin-bottom: 16px; }
+    .images { display: grid; grid-template-columns: 624px 624px; gap: 32px; }
+    .label { font-size: 13px; font-weight: 700; margin: 0 0 8px; }
+    .image-box { width: 624px; height: 256px; background: #fff; }
+    img { display: block; width: 624px; height: 256px; background: #fff; }
+    .meta { margin-top: 15px; font-size: 14px; line-height: 1.5; }
+    .error { color: #a10000; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <h1>Stress Test 07.1 — Explicit question scope candidates</h1>
+  <p>Internal pre-execution review only. Current frozen source vs corrected SVG candidate. No delivery PNG, hash or manifest changes are proposed here.</p>
+  <p id="status">Loading current manifest…</p>
+  <main id="review"></main>
+  <script>
+    const candidates = {
+      '07B-B': { path: '07B-B-question-scope-candidate.svg', moved: 'Question mark moved to header/operator zone; water artwork unchanged; AVAILABLE unchanged.' },
+      '07C-B': { path: '07C-B-question-scope-candidate.svg', moved: 'Question mark moved to header/operator zone; toilet artwork unchanged; WHERE unchanged.' },
+      '07T-B-B': { path: '07T-B-B-question-scope-candidate.svg', moved: 'Question mark moved to header/operator zone; food artwork unchanged; AVAILABLE unchanged.' },
+      '07T-C-B': { path: '07T-C-B-question-scope-candidate.svg', moved: 'Question mark moved to header/operator zone; home artwork unchanged; WHERE unchanged.' }
+    };
+    const review = document.querySelector('#review');
+    const status = document.querySelector('#status');
+    const sourcePath = record => '../../../' + record.source_svg;
+
+    function makeImage(src, alt) {
+      const image = document.createElement('img');
+      image.src = src;
+      image.alt = alt;
+      image.width = 624;
+      image.height = 256;
+      image.dataset.state = 'loading';
+      image.onload = () => { image.dataset.state = 'loaded'; updateStatus(); };
+      image.onerror = () => { image.dataset.state = 'error'; updateStatus(); };
+      return image;
+    }
+    function updateStatus() {
+      const images = [...document.images];
+      const failed = images.filter(image => image.dataset.state === 'error').length;
+      const loaded = images.filter(image => image.dataset.state === 'loaded').length;
+      status.textContent = failed ? `ASSET ERROR: ${failed} of ${images.length} assets failed to load.` : `Manifest loaded. ${loaded}/${images.length} current and candidate SVGs loaded.`;
+      status.className = failed ? 'error' : '';
+    }
+    function render(record) {
+      const candidate = candidates[record.stimulus_id];
+      const row = document.createElement('section');
+      row.className = 'row';
+      row.innerHTML = `<div class="private-id">${record.stimulus_id}</div>`;
+      const images = document.createElement('div');
+      images.className = 'images';
+      for (const [label, path, alt] of [['CURRENT SVG', sourcePath(record), `${record.stimulus_id} current source`], ['CORRECTED CANDIDATE SVG', candidate.path, `${record.stimulus_id} corrected candidate`]]) {
+        const column = document.createElement('div');
+        column.innerHTML = `<div class="label">${label}</div>`;
+        const box = document.createElement('div');
+        box.className = 'image-box';
+        box.append(makeImage(path, alt));
+        column.append(box);
+        images.append(column);
+      }
+      const meta = document.createElement('div');
+      meta.className = 'meta';
+      meta.textContent = `Semantic target: ${record.intended_meaning}  |  ${candidate.moved}  |  Current source SHA-256: ${record.source_svg_sha256}`;
+      row.append(images, meta);
+      return row;
+    }
+    fetch('../../delivery-manifest.json', { cache: 'no-store' })
+      .then(response => response.ok ? response.json() : Promise.reject(new Error(`manifest HTTP ${response.status}`)))
+      .then(manifest => {
+        const records = [...manifest.primary, ...manifest.transfer].filter(record => candidates[record.stimulus_id]);
+        if (records.length !== 4) throw new Error(`expected four affected records, found ${records.length}`);
+        review.append(...records.map(render));
+        updateStatus();
+      })
+      .catch(error => { status.textContent = `MANIFEST ERROR: ${error.message}. Open through local HTTP, not file://.`; status.className = 'error'; });
+  </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stress Test 07.1 — Raster fidelity review</title>
+  <style>
+    :root { color-scheme: light; font-family: Arial, sans-serif; color: #111; background: #fff; }
+    body { margin: 32px; background: #fff; }
+    h1 { margin: 0 0 8px; font-size: 28px; }
+    h2 { margin: 42px 0 14px; font-size: 20px; border-bottom: 2px solid #111; padding-bottom: 8px; }
+    p { margin: 0 0 8px; line-height: 1.45; }
+    #summary { font-weight: 700; }
+    .row { border-top: 1px solid #9aa1aa; padding: 22px 0 26px; min-width: 1280px; }
+    .row:last-child { border-bottom: 1px solid #9aa1aa; }
+    .private-id { font-size: 19px; font-weight: 700; margin-bottom: 16px; }
+    .images { display: grid; grid-template-columns: 624px 624px; gap: 32px; }
+    .label { font-size: 13px; font-weight: 700; margin: 0 0 8px; }
+    .image-box { width: 624px; height: 256px; background: #fff; }
+    img { display: block; width: 624px; height: 256px; background: #fff; }
+    .details { margin-top: 15px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; line-height: 1.6; overflow-wrap: anywhere; }
+    .status { font-family: Arial, sans-serif; font-weight: 700; margin-top: 8px; }
+    .note { margin-top: 12px; padding: 10px 12px; border-left: 4px solid #a10000; background: #fff5f5; font-weight: 700; }
+    .error { color: #a10000; }
+  </style>
+</head>
+<body>
+  <h1>Stress Test 07.1 — Raster fidelity review</h1>
+  <p>Internal QA only. Each source SVG and its delivery PNG are shown at exactly 624 × 256 CSS pixels on white backgrounds.</p>
+  <p id="summary">Loading delivery manifest…</p>
+  <main id="review"></main>
+  <script>
+    const review = document.querySelector('#review');
+    const summary = document.querySelector('#summary');
+    const sourcePath = record => '../' + record.source_svg;
+
+    function image(src, alt) {
+      const element = document.createElement('img');
+      element.src = src;
+      element.alt = alt;
+      element.width = 624;
+      element.height = 256;
+      element.dataset.state = 'loading';
+      element.addEventListener('load', () => { element.dataset.state = 'loaded'; updateSummary(); });
+      element.addEventListener('error', () => { element.dataset.state = 'error'; element.className = 'error'; updateSummary(); });
+      return element;
+    }
+
+    function updateSummary() {
+      const images = [...document.images];
+      const failed = images.filter(image => image.dataset.state === 'error').length;
+      const loaded = images.filter(image => image.dataset.state === 'loaded').length;
+      summary.textContent = failed
+        ? `ASSET ERROR: ${failed} of ${images.length} visual assets failed to load.`
+        : `Manifest loaded. ${loaded}/${images.length} source and delivery assets loaded.`;
+      summary.className = failed ? 'error' : '';
+    }
+
+    function row(record, kind) {
+      const section = document.createElement('section');
+      section.className = 'row';
+      const id = document.createElement('div');
+      id.className = 'private-id';
+      id.textContent = `${record.stimulus_id} / ${kind}`;
+      const images = document.createElement('div');
+      images.className = 'images';
+      for (const [label, path, alt] of [
+        ['SOURCE SVG', sourcePath(record), `${record.stimulus_id} frozen source SVG`],
+        ['DELIVERY PNG', record.delivery_png, `${record.stimulus_id} delivery PNG`]
+      ]) {
+        const column = document.createElement('div');
+        const heading = document.createElement('div');
+        heading.className = 'label';
+        heading.textContent = label;
+        const box = document.createElement('div');
+        box.className = 'image-box';
+        box.append(image(path, alt));
+        column.append(heading, box);
+        images.append(column);
+      }
+      const details = document.createElement('div');
+      details.className = 'details';
+      details.textContent = `SVG SHA-256: ${record.source_svg_sha256}\nPNG SHA-256: ${record.delivery_png_sha256}\nDimensions: ${record.dimensions}`;
+      const status = document.createElement('div');
+      status.className = 'status';
+      status.textContent = 'Manifest status: PASS — inspect visible fidelity before acceptance.';
+      section.append(id, images, details, status);
+      if (record.stimulus_id === '07C-A') {
+        const note = document.createElement('div');
+        note.className = 'note';
+        note.textContent = 'Pilot had a delivery/render mismatch. Verify explicitly that both source and PNG show TOILET + QUESTION.';
+        section.append(note);
+      }
+      return section;
+    }
+
+    fetch('delivery-manifest.json', { cache: 'no-store' })
+      .then(response => {
+        if (!response.ok) throw new Error(`manifest HTTP ${response.status}`);
+        return response.json();
+      })
+      .then(manifest => {
+        for (const [title, records] of [['PRIMARY STIMULI — 6', manifest.primary], ['TRANSFER STIMULI — 6', manifest.transfer]]) {
+          const heading = document.createElement('h2');
+          heading.textContent = title;
+          review.append(heading, ...records.map(record => row(record, title.startsWith('PRIMARY') ? 'primary' : 'transfer')));
+        }
+        updateSummary();
+      })
+      .catch(error => {
+        summary.textContent = `MANIFEST ERROR: ${error.message}. Open through a local HTTP server, not file://.`;
+        summary.className = 'error';
+      });
+  </script>
+</body>
+</html>
