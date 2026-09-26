@@ -2,6 +2,30 @@
 
 Chronological notes reconstructed from repository evidence. Interpretive statements are marked as such; dates follow commit or release history when a separate event date is unavailable.
 
+## 2026-09-27 — Pictiq Editorial Case 002: Good Dog, Bad System production capture
+
+### Starting question
+
+How can a prepublication long-form fiction use of Pictiq be recorded with source integrity and speaker-level semantic provenance, without changing the language, Composer, or artwork?
+
+### What happened
+
+Six owner-designated final illustrations, four Composer source sheets, and one separately typed GD1 semantic-reference image were preserved byte-for-byte with SHA-256 hashes. The case records the convention dog communication = Pictiq, human speech = English, and system communication = system typography / book English. It remains `PREPUBLICATION` and internal-only.
+
+The owner corrected the sequence: the GD1 dog exchange in `GD1art.jpg` is dialogue sequence 01; supplied Mriya/Atlas, Pixel/Vale/Irena, and Pixel/Rook/Nika dialogue are sequences 02–04. The older Illustration Continuity Audit and Visual Character Canon identify the small light dog in GD1 as Borscht and the larger dark dog as Mriya; these references clarify identity only and do not change the designated final asset set.
+
+### Evidence
+
+[Good Dog, Bad System case](../research/editorial-cases/good-dog-bad-system/GOOD_DOG_BAD_SYSTEM_PICTIQ_CASE_V1.md), [asset manifest](../research/editorial-cases/good-dog-bad-system/GOOD_DOG_BAD_SYSTEM_PICTIQ_ASSET_MANIFEST_V1.json), [dialogue ledger](../research/editorial-cases/good-dog-bad-system/GOOD_DOG_BAD_SYSTEM_PICTIQ_DIALOGUE_LEDGER_V1.json), and [learning record](../research/editorial-cases/good-dog-bad-system/GOOD_DOG_BAD_SYSTEM_PICTIQ_LEARNING_V1.md).
+
+### Decision / outcome
+
+Case status: **PREPUBLICATION**. Semantic wording and speaker sequence are recorded where owner-supplied; GD1 visual character mapping is cross-checked to supplied continuity/canon records. Exact Composer block-to-turn mappings, per-turn region coordinates, and version metadata remain unresolved because no machine-readable exports or stable block IDs were supplied. No meaning is inferred from glyph appearance; no vocabulary, grammar, Composer, illustration, manuscript, or public page changed.
+
+### Boundary
+
+This production record does not establish reader comprehension or commercial outcomes. Update this same case to `PUBLISHED` only after confirmed live-publication evidence; do not create a duplicate. No manuscript was copied into Pictiq.
+
 ## 2026-09-21 — Pictiq Editorial Case 001: Bracken Ford production capture
 
 ### Starting question
