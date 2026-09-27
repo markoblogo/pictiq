@@ -1,0 +1,106 @@
+{
+  "qa_addendum_type": "PICTIQ_COMPOSITION_DICTIONARY_FINAL_CREATOR_QA_ADDENDUM",
+  "version": "0.2",
+  "date": "2026-09-27",
+  "recorded_after_commit": "59e23b2",
+  "source_dictionary_baseline": {
+    "version": "0.1",
+    "source_snapshot": "clb-v0.1:33b00632bedb342af8aed35b62824b9b60663474bca556bb69e4ab16ea22d3e0",
+    "dictionary_json_sha256": "9c0ed9e048b9a4d134635e7f21eab68809b42bfd495ee0697db3ad67063ae107",
+    "status": "UNCHANGED; QA DECISIONS PENDING BASELINE APPLICATION"
+  },
+  "provenance": "CREATOR_FINAL_QA",
+  "status": "PENDING_BASELINE_APPLICATION",
+  "authority_chain": [
+    "HISTORICAL_EVIDENCE",
+    "CREATOR_SEMANTIC_RECONCILIATION",
+    "ACCEPTED_CORPUS",
+    "DICTIONARY_ELIGIBILITY_REVIEW",
+    "DICTIONARY_BASELINE_V0.1",
+    "FINAL_CREATOR_QA_ADDENDUM_V0.2"
+  ],
+  "decisions": [
+    {
+      "corpus_record_id": "clh-v01-0044",
+      "dictionary_entry_id": "pcd-v01-0025",
+      "current_baseline": {
+        "headword": "No entry at this location",
+        "message": {
+          "schema": "0.1",
+          "pictiq": "1.1",
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "rel_here"
+                },
+                {
+                  "type": "icon",
+                  "id": "logic_no"
+                }
+              ]
+            }
+          ]
+        },
+        "token_sequence": "rel_here + logic_no"
+      },
+      "decision": "MOVE_TO_CORPUS_ONLY",
+      "creator_reason": "HERE + NO may work in a sufficiently obvious physical context, but it is too underspecified to be a recommended reusable Dictionary entry. A prohibition should normally preserve what is prohibited where that distinction matters.",
+      "corpus_disposition": "Keep as CONTEXT-DEPENDENT CORPUS EVIDENCE; this is not rejection as invalid Pictiq.",
+      "replacement": null,
+      "creator_examples_not_approved": [
+        "FEET + NO",
+        "PERSON + FEET + NO",
+        "CAR + NO",
+        "UP/AHEAD + NO",
+        "PERSON + NO"
+      ],
+      "application_status": "PENDING; remove only from future Dictionary projection; preserve Corpus evidence"
+    },
+    {
+      "corpus_record_id": "clh-v01-0022",
+      "dictionary_entry_id": "pcd-v01-0065",
+      "decision": "ACCEPT_AS_SHOWN",
+      "clarification": {
+        "meaning": "When does the train/public transport arrive?",
+        "token_sequence": "move_public + time + punct_question",
+        "status": "KEEP EXISTING ENTRY"
+      },
+      "new_related_entry": {
+        "temporary_qa_id": "qa-new-public-transport-timetable",
+        "headword": "Public transport schedule / timetable",
+        "meaning": "Public transport + textual/information schedule + time/question.",
+        "message": {
+          "schema": "0.1",
+          "pictiq": "1.1",
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "move_public"
+                },
+                {
+                  "type": "icon",
+                  "id": "time"
+                },
+                {
+                  "type": "icon",
+                  "id": "punct_question"
+                }
+              ]
+            }
+          ]
+        },
+        "token_sequence": "move_public + media_text + time + punct_question",
+        "preview_render": "review/previews/qa-new-public-transport-timetable.svg",
+        "preview_render_sha256": "b296064c6a9dd5bbdc4df29b88c2c9eb5a554293d0f4f51cac7b1a54ca78b6f2",
+        "status": "CREATOR-APPROVED / PENDING BASELINE APPLICATION",
+        "is_variant_of_arrival_question": false
+      },
+      "resolved_follow_up": "Exact ordered timetable composition; no longer unresolved.",
+      "application_status": "PENDING; preserve arrival-time entry and add a distinct related semantic unit"
+    }
+  ]
+}

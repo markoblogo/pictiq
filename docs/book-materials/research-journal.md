@@ -1498,4 +1498,10 @@ Three supplied, independently prompted AI protocol-design transcripts were archi
 The initial manual Stress Test 07 pilot is **EXECUTED / INTEGRITY FAILURE / PARTIAL**. It covered blind/practical phases only: Claude, Copilot and Mistral accessed SVG semantic internals; ChatGPT reported a visual incompatible with frozen `07C-A`; and micro-learning/transfer were not run. Raw transcripts and coding remain preserved as methodological evidence, but the pilot is invalid for primary A/B inference.
 
 Stress Test 07.1 is **PREPARED / NOT EXECUTED**. It retains the frozen stimuli, hypotheses, prompts, mechanisms and randomization while converting all primary and transfer delivery files into hash-recorded, metadata-free PNGs with neutral names. The methodological lesson is that an SVG is both an image and structured, potentially semantic markup; rasterization can be necessary to isolate visual comprehension in multimodal AI research. This is not a claim about human perception and changes no Pictiq production asset.
+
+## 2026-09-27 — Composition Dictionary Final Creator QA v0.2 prepared
+
+Replaced the v0.1 category-centric final review gate with an entry-centric, read-only QA viewer: 16 historical category events resolve to 10 unique Dictionary entries, each shown once with category badges, accepted variants, provenance, and any applicable before/after render. Two creator decisions are preserved in a separate pending addendum; they do not alter the v0.1 baseline. The viewer supports a local review overlay and validated export/import. A separately identified, canonical-renderer timetable preview is QA-only and pending baseline application.
+
+The Dictionary Baseline v0.1 remains **NOT FROZEN**; eight unique entry cards remain for review, and no visual acceptance is inferred. The accepted corpus, Dictionary data, prior v0.1 QA, Core, Composer, Renderer, production assets, and Stress Test 07.1 remain unchanged. The next gate is creator review and a separate reconciliation pass, not Color Modifier or Practical Coverage work.
 ---

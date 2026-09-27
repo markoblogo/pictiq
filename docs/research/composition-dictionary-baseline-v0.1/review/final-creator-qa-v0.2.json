@@ -1,0 +1,3581 @@
+{
+  "qa_type": "PICTIQ_COMPOSITION_DICTIONARY_FINAL_CREATOR_QA",
+  "version": "0.2",
+  "status": "READY FOR CREATOR QA; BASELINE UNCHANGED",
+  "source_baseline": {
+    "version": "0.1",
+    "commit": "59e23b2",
+    "source_snapshot": "clb-v0.1:33b00632bedb342af8aed35b62824b9b60663474bca556bb69e4ab16ea22d3e0",
+    "dictionary_json_sha256": "9c0ed9e048b9a4d134635e7f21eab68809b42bfd495ee0697db3ad67063ae107"
+  },
+  "pending_addendum": {
+    "path": "final-creator-qa-addendum-v0.2.json",
+    "sha256": "24e7793f39790ecb462094503dfbe66d4f129adf2b2b50dcf8b067d2516df686",
+    "status": "PENDING_BASELINE_APPLICATION"
+  },
+  "unique_primary_entry_count": 10,
+  "old_category_event_count": 16,
+  "old_category_memberships": {
+    "A. PREFERRED MESSAGE CHANGED": "PREFERRED_CHANGED",
+    "B. METADATA / MEANING CLARIFIED": "METADATA_CHANGED",
+    "C. VARIANT ADDED": "VARIANT_ADDED",
+    "D. FORMER REVIEW → DICTIONARY": "FORMER_REVIEW",
+    "E. FOLLOW-UP REQUIRED": "FOLLOW_UP_RESOLVED"
+  },
+  "already_recorded_decisions_count": 2,
+  "remaining_unresolved_follow_up_count": 0,
+  "timetable_preview": {
+    "temporary_qa_id": "qa-new-public-transport-timetable",
+    "token_sequence": "move_public + media_text + time + punct_question",
+    "valid": true,
+    "errors": [],
+    "renderer": "canonical Python Renderer",
+    "path": "previews/qa-new-public-transport-timetable.svg",
+    "sha256": "b296064c6a9dd5bbdc4df29b88c2c9eb5a554293d0f4f51cac7b1a54ca78b6f2"
+  },
+  "entries": [
+    {
+      "dictionary_entry_id": "pcd-v01-0002",
+      "corpus_record_id": "clh-v01-0003",
+      "headword": "Urgent medical help",
+      "semantic_neighbourhood": "Urgent medical help; the live/self context can supply the affected person, while PERSON adds an explicit person referent.",
+      "badges": [
+        "METADATA_CHANGED",
+        "PREFERRED_CHANGED",
+        "VARIANT_ADDED"
+      ],
+      "legacy_category_memberships": [
+        "A. PREFERRED MESSAGE CHANGED",
+        "B. METADATA / MEANING CLARIFIED",
+        "C. VARIANT ADDED"
+      ],
+      "current_baseline": {
+        "preferred_message": {
+          "contexts": [
+            "universal-core"
+          ],
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "safety_medical"
+                },
+                {
+                  "type": "icon",
+                  "id": "punct_exclaim"
+                }
+              ]
+            }
+          ],
+          "pictiq": "1.1",
+          "profile": "standalone-core-v0.1",
+          "schema": "0.1"
+        },
+        "preferred_token_sequence": "safety_medical + punct_exclaim",
+        "preferred_render": "../renders/pcd-v01-0002-preferred.svg",
+        "message_profile": "standalone-core-v0.1",
+        "mode": [
+          "STANDALONE"
+        ],
+        "surface": [
+          "OTHER"
+        ],
+        "context": [
+          {
+            "communication_mode": "STANDALONE",
+            "communication_surface": "OTHER",
+            "context": {
+              "domain": [
+                "constrained-translation pilot"
+              ],
+              "situation": [
+                "single-model, one-repeat structured-output trial"
+              ],
+              "task": [
+                "direct basic"
+              ]
+            },
+            "evidence_ids": [
+              "cand-04a-04"
+            ]
+          }
+        ],
+        "known_ambiguity": [
+          "Unjustified concepts in pilot target assessment: safety_police"
+        ],
+        "context_warnings": [
+          "Live interaction may supply the affected person",
+          "PERSON adds an explicit person referent"
+        ]
+      },
+      "previous_state": {
+        "message": {
+          "contexts": [
+            "universal-core"
+          ],
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "id": "person_generic",
+                  "type": "icon"
+                },
+                {
+                  "id": "safety_medical",
+                  "type": "icon"
+                },
+                {
+                  "id": "punct_exclaim",
+                  "type": "icon"
+                }
+              ]
+            }
+          ],
+          "pictiq": "1.1",
+          "profile": "standalone-core-v0.1",
+          "schema": "0.1"
+        },
+        "token_sequence": "person_generic + safety_medical + punct_exclaim",
+        "render": "../../composition-library-baseline-v0.1/renders/clh-v01-0003.svg",
+        "provenance": [
+          {
+            "origin": {
+              "event_id": "origin-clh-v01-0003",
+              "source_type": "CONSTRAINED TRANSLATION PILOT 04A",
+              "reference": "docs/research/constrained-translation-pilot-04a/normalized/04a-04-r1.json",
+              "location": "cand-04a-04",
+              "role": "ORIGIN",
+              "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+              "sha256": "6f57e0f93b026fec02fe1eef1f64191cdd0bd8e7fe155751f99f3e5a0787f166",
+              "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+            },
+            "uses": [],
+            "creator_review_id": "review-clh-v01-0003",
+            "addendum": null
+          }
+        ],
+        "metadata": {
+          "headword": "I need medical help urgently.",
+          "semantic_neighbourhood": "I need medical help urgently.",
+          "mode": [
+            "STANDALONE"
+          ],
+          "surface": [
+            "OTHER"
+          ],
+          "context": [
+            {
+              "communication_mode": "STANDALONE",
+              "communication_surface": "OTHER",
+              "context": {
+                "domain": [
+                  "constrained-translation pilot"
+                ],
+                "situation": [
+                  "single-model, one-repeat structured-output trial"
+                ],
+                "task": [
+                  "direct basic"
+                ]
+              },
+              "evidence_ids": [
+                "cand-04a-04"
+              ]
+            }
+          ]
+        },
+        "change_display": "BEFORE → AFTER"
+      },
+      "accepted_variants": [
+        {
+          "variant_id": "pcd-v01-0002-preferred",
+          "type": "PREFERRED",
+          "message": {
+            "contexts": [
+              "universal-core"
+            ],
+            "frames": [
+              {
+                "tokens": [
+                  {
+                    "type": "icon",
+                    "id": "safety_medical"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "punct_exclaim"
+                  }
+                ]
+              }
+            ],
+            "pictiq": "1.1",
+            "profile": "standalone-core-v0.1",
+            "schema": "0.1"
+          },
+          "token_sequence": "safety_medical + punct_exclaim",
+          "render": "../renders/pcd-v01-0002-preferred.svg",
+          "mode": [
+            "STANDALONE"
+          ],
+          "surface": [
+            "OTHER"
+          ],
+          "context": [
+            {
+              "communication_mode": "STANDALONE",
+              "communication_surface": "OTHER",
+              "context": {
+                "domain": [
+                  "constrained-translation pilot"
+                ],
+                "situation": [
+                  "single-model, one-repeat structured-output trial"
+                ],
+                "task": [
+                  "direct basic"
+                ]
+              },
+              "evidence_ids": [
+                "cand-04a-04"
+              ]
+            }
+          ],
+          "provenance": {
+            "corpus_record_ids": [
+              "clh-v01-0003"
+            ],
+            "creator_review_record_id": "clh-v01-0003",
+            "dictionary_entry_id": "pcd-v01-0002",
+            "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+          },
+          "qa_warning": null,
+          "visible_in_viewer": true
+        },
+        {
+          "variant_id": "pcd-v01-0002-contextual-person",
+          "type": "CONTEXTUAL",
+          "message": {
+            "contexts": [
+              "universal-core"
+            ],
+            "frames": [
+              {
+                "tokens": [
+                  {
+                    "id": "person_generic",
+                    "type": "icon"
+                  },
+                  {
+                    "id": "safety_medical",
+                    "type": "icon"
+                  },
+                  {
+                    "id": "punct_exclaim",
+                    "type": "icon"
+                  }
+                ]
+              }
+            ],
+            "pictiq": "1.1",
+            "profile": "standalone-core-v0.1",
+            "schema": "0.1"
+          },
+          "token_sequence": "person_generic + safety_medical + punct_exclaim",
+          "render": "../renders/pcd-v01-0002-contextual-person.svg",
+          "mode": [
+            "STANDALONE"
+          ],
+          "surface": [
+            "OTHER"
+          ],
+          "context": [
+            {
+              "communication_mode": "STANDALONE",
+              "communication_surface": "OTHER",
+              "context": {
+                "domain": [
+                  "constrained-translation pilot"
+                ],
+                "situation": [
+                  "single-model, one-repeat structured-output trial"
+                ],
+                "task": [
+                  "direct basic"
+                ]
+              },
+              "evidence_ids": [
+                "cand-04a-04"
+              ]
+            }
+          ],
+          "provenance": {
+            "corpus_record_ids": [
+              "clh-v01-0003"
+            ],
+            "creator_review_record_id": "clh-v01-0003",
+            "dictionary_entry_id": "pcd-v01-0002",
+            "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+          },
+          "qa_warning": null,
+          "visible_in_viewer": true
+        }
+      ],
+      "proposed_unaccepted": [],
+      "creator_note": "если \"я\" то лучше safety_medical + punct_exclaim без person_generic - с person_generic это уже будет кому-то/человеку надо помощь",
+      "structured_interpretation": "Use MEDICAL + URGENT as a live/self-referential practical expression; an explicit PERSON token adds a person referent. This does not define first-person grammar.",
+      "scope_warnings": [
+        "MODE / CONTEXT MAY BE OVERSTATED: current preferred Message profile/mode is STANDALONE, but compact MEDICAL + URGENT relies on speaker/situation to supply the affected person. No PERSON does not encode grammatical first person."
+      ],
+      "lineage": {
+        "dictionary_entry_id": "pcd-v01-0002",
+        "corpus_record_id": "clh-v01-0003",
+        "candidate_entry_id": "pcd-v01-0002",
+        "source_message": {
+          "contexts": [
+            "universal-core"
+          ],
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "id": "person_generic",
+                  "type": "icon"
+                },
+                {
+                  "id": "safety_medical",
+                  "type": "icon"
+                },
+                {
+                  "id": "punct_exclaim",
+                  "type": "icon"
+                }
+              ]
+            }
+          ],
+          "pictiq": "1.1",
+          "profile": "standalone-core-v0.1",
+          "schema": "0.1"
+        },
+        "source_sequence": "person_generic + safety_medical + punct_exclaim",
+        "preferred_message": {
+          "contexts": [
+            "universal-core"
+          ],
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "safety_medical"
+                },
+                {
+                  "type": "icon",
+                  "id": "punct_exclaim"
+                }
+              ]
+            }
+          ],
+          "pictiq": "1.1",
+          "profile": "standalone-core-v0.1",
+          "schema": "0.1"
+        },
+        "preferred_sequence": "safety_medical + punct_exclaim",
+        "preferred_changed_by_creator_review": true,
+        "authority_path": [
+          "HISTORICAL_COMPOSITION_HARVEST",
+          "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+          "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+          "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+        ],
+        "source_provenance": [
+          {
+            "origin": {
+              "event_id": "origin-clh-v01-0003",
+              "source_type": "CONSTRAINED TRANSLATION PILOT 04A",
+              "reference": "docs/research/constrained-translation-pilot-04a/normalized/04a-04-r1.json",
+              "location": "cand-04a-04",
+              "role": "ORIGIN",
+              "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+              "sha256": "6f57e0f93b026fec02fe1eef1f64191cdd0bd8e7fe155751f99f3e5a0787f166",
+              "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+            },
+            "uses": [],
+            "creator_review_id": "review-clh-v01-0003",
+            "addendum": null
+          }
+        ],
+        "creator_review_ref": {
+          "export_path": "creator-review-export.json",
+          "corpus_record_id": "clh-v01-0003",
+          "decision": "EDIT_ENTRY_METADATA",
+          "creator_notes_verbatim_in_export": true
+        }
+      },
+      "former_system_review": null,
+      "pending_addendum": null,
+      "recorded_decision": null,
+      "review_state": "UNREVIEWED",
+      "related_pending_entry": null,
+      "previous_metadata": {
+        "headword": "I need medical help urgently.",
+        "semantic_neighbourhood": "I need medical help urgently.",
+        "mode": [
+          "STANDALONE"
+        ],
+        "surface": [
+          "OTHER"
+        ],
+        "context": [
+          {
+            "communication_mode": "STANDALONE",
+            "communication_surface": "OTHER",
+            "context": {
+              "domain": [
+                "constrained-translation pilot"
+              ],
+              "situation": [
+                "single-model, one-repeat structured-output trial"
+              ],
+              "task": [
+                "direct basic"
+              ]
+            },
+            "evidence_ids": [
+              "cand-04a-04"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0005",
+      "corpus_record_id": "clh-v01-0006",
+      "headword": "Meat",
+      "semantic_neighbourhood": "Meat / meat food",
+      "badges": [
+        "DIRECT_PRIMITIVE_PREFERRED",
+        "PREFERRED_CHANGED"
+      ],
+      "legacy_category_memberships": [
+        "A. PREFERRED MESSAGE CHANGED"
+      ],
+      "current_baseline": {
+        "preferred_message": {
+          "contexts": [
+            "universal-core",
+            "universal-v1"
+          ],
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "food_meat"
+                }
+              ]
+            }
+          ],
+          "pictiq": "1.1",
+          "profile": "standalone-core-v0.1",
+          "schema": "0.1"
+        },
+        "preferred_token_sequence": "food_meat",
+        "preferred_render": "../renders/pcd-v01-0005-preferred.svg",
+        "message_profile": "standalone-core-v0.1",
+        "mode": [
+          "STANDALONE"
+        ],
+        "surface": [
+          "OTHER"
+        ],
+        "context": [
+          {
+            "communication_mode": "STANDALONE",
+            "communication_surface": "OTHER",
+            "context": {
+              "domain": [
+                "constrained-translation pilot"
+              ],
+              "situation": [
+                "single-model, one-repeat structured-output trial"
+              ],
+              "task": [
+                "composition"
+              ]
+            },
+            "evidence_ids": [
+              "cand-04a-08"
+            ]
+          }
+        ],
+        "known_ambiguity": [
+          "Unjustified concepts in pilot target assessment: food_bakery, food_produce"
+        ],
+        "context_warnings": []
+      },
+      "previous_state": {
+        "message": {
+          "contexts": [
+            "universal-core",
+            "universal-v1"
+          ],
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "id": "nature_animal",
+                  "type": "icon"
+                },
+                {
+                  "id": "need_food",
+                  "type": "icon"
+                },
+                {
+                  "id": "food_meat",
+                  "type": "icon"
+                }
+              ]
+            }
+          ],
+          "pictiq": "1.1",
+          "profile": "standalone-core-v0.1",
+          "schema": "0.1"
+        },
+        "token_sequence": "nature_animal + need_food + food_meat",
+        "render": "../../composition-library-baseline-v0.1/renders/clh-v01-0006.svg",
+        "provenance": [
+          {
+            "origin": {
+              "event_id": "origin-clh-v01-0006",
+              "source_type": "CONSTRAINED TRANSLATION PILOT 04A",
+              "reference": "docs/research/constrained-translation-pilot-04a/normalized/04a-08-r1.json",
+              "location": "cand-04a-08",
+              "role": "ORIGIN",
+              "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+              "sha256": "eee2c6d538b617a47759ef7879bb6d029499bd24aa790d743b04f5b9300643e6",
+              "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+            },
+            "uses": [],
+            "creator_review_id": "review-clh-v01-0006",
+            "addendum": null
+          }
+        ],
+        "metadata": null,
+        "change_display": "BEFORE → AFTER"
+      },
+      "accepted_variants": [
+        {
+          "variant_id": "pcd-v01-0005-preferred",
+          "type": "PREFERRED",
+          "message": {
+            "contexts": [
+              "universal-core",
+              "universal-v1"
+            ],
+            "frames": [
+              {
+                "tokens": [
+                  {
+                    "type": "icon",
+                    "id": "food_meat"
+                  }
+                ]
+              }
+            ],
+            "pictiq": "1.1",
+            "profile": "standalone-core-v0.1",
+            "schema": "0.1"
+          },
+          "token_sequence": "food_meat",
+          "render": "../renders/pcd-v01-0005-preferred.svg",
+          "mode": [
+            "STANDALONE"
+          ],
+          "surface": [
+            "OTHER"
+          ],
+          "context": [
+            {
+              "communication_mode": "STANDALONE",
+              "communication_surface": "OTHER",
+              "context": {
+                "domain": [
+                  "constrained-translation pilot"
+                ],
+                "situation": [
+                  "single-model, one-repeat structured-output trial"
+                ],
+                "task": [
+                  "composition"
+                ]
+              },
+              "evidence_ids": [
+                "cand-04a-08"
+              ]
+            }
+          ],
+          "provenance": {
+            "corpus_record_ids": [
+              "clh-v01-0006"
+            ],
+            "creator_review_record_id": "clh-v01-0006",
+            "dictionary_entry_id": "pcd-v01-0005",
+            "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+          },
+          "qa_warning": null,
+          "visible_in_viewer": true
+        }
+      ],
+      "proposed_unaccepted": [],
+      "creator_note": "Проще сразу сказать одной иконкой \"food_meat\"",
+      "structured_interpretation": "Prefer the existing direct food_meat primitive for the reusable meat meaning.",
+      "scope_warnings": [],
+      "lineage": {
+        "dictionary_entry_id": "pcd-v01-0005",
+        "corpus_record_id": "clh-v01-0006",
+        "candidate_entry_id": "pcd-v01-0005",
+        "source_message": {
+          "contexts": [
+            "universal-core",
+            "universal-v1"
+          ],
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "id": "nature_animal",
+                  "type": "icon"
+                },
+                {
+                  "id": "need_food",
+                  "type": "icon"
+                },
+                {
+                  "id": "food_meat",
+                  "type": "icon"
+                }
+              ]
+            }
+          ],
+          "pictiq": "1.1",
+          "profile": "standalone-core-v0.1",
+          "schema": "0.1"
+        },
+        "source_sequence": "nature_animal + need_food + food_meat",
+        "preferred_message": {
+          "contexts": [
+            "universal-core",
+            "universal-v1"
+          ],
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "food_meat"
+                }
+              ]
+            }
+          ],
+          "pictiq": "1.1",
+          "profile": "standalone-core-v0.1",
+          "schema": "0.1"
+        },
+        "preferred_sequence": "food_meat",
+        "preferred_changed_by_creator_review": true,
+        "authority_path": [
+          "HISTORICAL_COMPOSITION_HARVEST",
+          "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+          "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+          "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+        ],
+        "source_provenance": [
+          {
+            "origin": {
+              "event_id": "origin-clh-v01-0006",
+              "source_type": "CONSTRAINED TRANSLATION PILOT 04A",
+              "reference": "docs/research/constrained-translation-pilot-04a/normalized/04a-08-r1.json",
+              "location": "cand-04a-08",
+              "role": "ORIGIN",
+              "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+              "sha256": "eee2c6d538b617a47759ef7879bb6d029499bd24aa790d743b04f5b9300643e6",
+              "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+            },
+            "uses": [],
+            "creator_review_id": "review-clh-v01-0006",
+            "addendum": null
+          }
+        ],
+        "creator_review_ref": {
+          "export_path": "creator-review-export.json",
+          "corpus_record_id": "clh-v01-0006",
+          "decision": "KEEP_IN_DICTIONARY",
+          "creator_notes_verbatim_in_export": true
+        }
+      },
+      "former_system_review": null,
+      "pending_addendum": null,
+      "recorded_decision": null,
+      "review_state": "UNREVIEWED",
+      "related_pending_entry": null,
+      "previous_metadata": null
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0006",
+      "corpus_record_id": "clc-v01-0008-r1",
+      "headword": "Less noise, please.",
+      "semantic_neighbourhood": "Less noise, please.",
+      "badges": [
+        "VARIANT_ADDED"
+      ],
+      "legacy_category_memberships": [
+        "C. VARIANT ADDED"
+      ],
+      "current_baseline": {
+        "preferred_message": {
+          "contexts": [
+            "universal-core"
+          ],
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "comm_sound"
+                },
+                {
+                  "type": "icon",
+                  "id": "qty_minus"
+                }
+              ]
+            }
+          ],
+          "pictiq": "1.1",
+          "profile": "standalone-core-v0.1",
+          "schema": "0.1"
+        },
+        "preferred_token_sequence": "comm_sound + qty_minus",
+        "preferred_render": "../renders/pcd-v01-0006-preferred.svg",
+        "message_profile": "standalone-core-v0.1",
+        "mode": [
+          "STANDALONE"
+        ],
+        "surface": [
+          "OTHER"
+        ],
+        "context": [
+          {
+            "communication_mode": "STANDALONE",
+            "communication_surface": "OTHER",
+            "context": {
+              "domain": [
+                "constrained-translation pilot"
+              ],
+              "situation": [
+                "single-model, one-repeat structured-output trial"
+              ],
+              "task": [
+                "negation evaluation"
+              ]
+            },
+            "evidence_ids": [
+              "cand-04a-10"
+            ]
+          }
+        ],
+        "known_ambiguity": [],
+        "context_warnings": []
+      },
+      "previous_state": {
+        "message": null,
+        "token_sequence": null,
+        "render": null,
+        "provenance": [
+          {
+            "source_type": "CREATOR_RECONCILIATION",
+            "export_path": "../composition-library-historical-harvest-v0.1/reconciliation/creator-export-2026-09-27.json",
+            "addendum_path": "../composition-library-historical-harvest-v0.1/reconciliation/creator-reconciliation-addendum-2026-09-27.json",
+            "historical_record_id": "clh-v01-0008",
+            "creator_reason": "SOUND + LESS is functionally sufficient; comm_speak + logic_yes adds no necessary information and over-explains the intent.",
+            "provenance": "CREATOR_RECONCILIATION"
+          }
+        ],
+        "metadata": null,
+        "change_display": "CURRENT ONCE; metadata/context details below"
+      },
+      "accepted_variants": [
+        {
+          "variant_id": "pcd-v01-0006-preferred",
+          "type": "PREFERRED",
+          "message": {
+            "contexts": [
+              "universal-core"
+            ],
+            "frames": [
+              {
+                "tokens": [
+                  {
+                    "type": "icon",
+                    "id": "comm_sound"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "qty_minus"
+                  }
+                ]
+              }
+            ],
+            "pictiq": "1.1",
+            "profile": "standalone-core-v0.1",
+            "schema": "0.1"
+          },
+          "token_sequence": "comm_sound + qty_minus",
+          "render": "../renders/pcd-v01-0006-preferred.svg",
+          "mode": [
+            "STANDALONE"
+          ],
+          "surface": [
+            "OTHER"
+          ],
+          "context": [
+            {
+              "communication_mode": "STANDALONE",
+              "communication_surface": "OTHER",
+              "context": {
+                "domain": [
+                  "constrained-translation pilot"
+                ],
+                "situation": [
+                  "single-model, one-repeat structured-output trial"
+                ],
+                "task": [
+                  "negation evaluation"
+                ]
+              },
+              "evidence_ids": [
+                "cand-04a-10"
+              ]
+            }
+          ],
+          "provenance": {
+            "corpus_record_ids": [
+              "clc-v01-0008-r1"
+            ],
+            "creator_review_record_id": "clc-v01-0008-r1",
+            "dictionary_entry_id": "pcd-v01-0006",
+            "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+          },
+          "qa_warning": null,
+          "visible_in_viewer": true
+        },
+        {
+          "variant_id": "pcd-v01-0006-alternative-down",
+          "type": "ALTERNATIVE",
+          "message": {
+            "contexts": [
+              "universal-core"
+            ],
+            "frames": [
+              {
+                "tokens": [
+                  {
+                    "type": "icon",
+                    "id": "comm_sound"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "rel_down"
+                  }
+                ]
+              }
+            ],
+            "pictiq": "1.1",
+            "profile": "standalone-core-v0.1",
+            "schema": "0.1"
+          },
+          "token_sequence": "comm_sound + rel_down",
+          "render": "../renders/pcd-v01-0006-alternative-down.svg",
+          "mode": [
+            "STANDALONE"
+          ],
+          "surface": [
+            "OTHER"
+          ],
+          "context": [
+            {
+              "communication_mode": "STANDALONE",
+              "communication_surface": "OTHER",
+              "context": {
+                "domain": [
+                  "constrained-translation pilot"
+                ],
+                "situation": [
+                  "single-model, one-repeat structured-output trial"
+                ],
+                "task": [
+                  "negation evaluation"
+                ]
+              },
+              "evidence_ids": [
+                "cand-04a-10"
+              ]
+            }
+          ],
+          "provenance": {
+            "corpus_record_ids": [
+              "clc-v01-0008-r1"
+            ],
+            "creator_review_record_id": "clc-v01-0008-r1",
+            "dictionary_entry_id": "pcd-v01-0006",
+            "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+          },
+          "qa_warning": "NEARBY CONTEXTUAL READING — VERIFY AS VARIANT",
+          "visible_in_viewer": true
+        },
+        {
+          "variant_id": "pcd-v01-0006-context-speech-less",
+          "type": "CONTEXTUAL",
+          "message": {
+            "contexts": [
+              "universal-core"
+            ],
+            "frames": [
+              {
+                "tokens": [
+                  {
+                    "type": "icon",
+                    "id": "comm_speak"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "qty_minus"
+                  }
+                ]
+              }
+            ],
+            "pictiq": "1.1",
+            "profile": "standalone-core-v0.1",
+            "schema": "0.1"
+          },
+          "token_sequence": "comm_speak + qty_minus",
+          "render": "../renders/pcd-v01-0006-context-speech-less.svg",
+          "mode": [
+            "STANDALONE"
+          ],
+          "surface": [
+            "OTHER"
+          ],
+          "context": [
+            {
+              "communication_mode": "STANDALONE",
+              "communication_surface": "OTHER",
+              "context": {
+                "domain": [
+                  "constrained-translation pilot"
+                ],
+                "situation": [
+                  "single-model, one-repeat structured-output trial"
+                ],
+                "task": [
+                  "negation evaluation"
+                ]
+              },
+              "evidence_ids": [
+                "cand-04a-10"
+              ]
+            }
+          ],
+          "provenance": {
+            "corpus_record_ids": [
+              "clc-v01-0008-r1"
+            ],
+            "creator_review_record_id": "clc-v01-0008-r1",
+            "dictionary_entry_id": "pcd-v01-0006",
+            "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+          },
+          "qa_warning": "SPEECH-SPECIFIC CONTEXT; not a universal equivalent of SOUND + LESS.",
+          "visible_in_viewer": true
+        },
+        {
+          "variant_id": "pcd-v01-0006-context-speech-down",
+          "type": "CONTEXTUAL",
+          "message": {
+            "contexts": [
+              "universal-core"
+            ],
+            "frames": [
+              {
+                "tokens": [
+                  {
+                    "type": "icon",
+                    "id": "comm_speak"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "rel_down"
+                  }
+                ]
+              }
+            ],
+            "pictiq": "1.1",
+            "profile": "standalone-core-v0.1",
+            "schema": "0.1"
+          },
+          "token_sequence": "comm_speak + rel_down",
+          "render": "../renders/pcd-v01-0006-context-speech-down.svg",
+          "mode": [
+            "STANDALONE"
+          ],
+          "surface": [
+            "OTHER"
+          ],
+          "context": [
+            {
+              "communication_mode": "STANDALONE",
+              "communication_surface": "OTHER",
+              "context": {
+                "domain": [
+                  "constrained-translation pilot"
+                ],
+                "situation": [
+                  "single-model, one-repeat structured-output trial"
+                ],
+                "task": [
+                  "negation evaluation"
+                ]
+              },
+              "evidence_ids": [
+                "cand-04a-10"
+              ]
+            }
+          ],
+          "provenance": {
+            "corpus_record_ids": [
+              "clc-v01-0008-r1"
+            ],
+            "creator_review_record_id": "clc-v01-0008-r1",
+            "dictionary_entry_id": "pcd-v01-0006",
+            "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+          },
+          "qa_warning": "SPEECH-SPECIFIC CONTEXT; not a universal equivalent of SOUND + LESS.",
+          "visible_in_viewer": true
+        }
+      ],
+      "proposed_unaccepted": [],
+      "creator_note": "также можно сказать comm_sound + стрелка вниз (down) или если шум от криков либо разговоров то можно сказать без comm_sound - а communication + minus либо down",
+      "structured_interpretation": "Keep SOUND + LESS preferred. Preserve DOWN and speech-specific combinations as labeled variants; communication/speech maps to the current comm_speak primitive.",
+      "scope_warnings": [],
+      "lineage": {
+        "dictionary_entry_id": "pcd-v01-0006",
+        "corpus_record_id": "clc-v01-0008-r1",
+        "candidate_entry_id": "pcd-v01-0006",
+        "source_message": {
+          "contexts": [
+            "universal-core"
+          ],
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "comm_sound"
+                },
+                {
+                  "type": "icon",
+                  "id": "qty_minus"
+                }
+              ]
+            }
+          ],
+          "pictiq": "1.1",
+          "profile": "standalone-core-v0.1",
+          "schema": "0.1"
+        },
+        "source_sequence": "comm_sound + qty_minus",
+        "preferred_message": {
+          "contexts": [
+            "universal-core"
+          ],
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "comm_sound"
+                },
+                {
+                  "type": "icon",
+                  "id": "qty_minus"
+                }
+              ]
+            }
+          ],
+          "pictiq": "1.1",
+          "profile": "standalone-core-v0.1",
+          "schema": "0.1"
+        },
+        "preferred_sequence": "comm_sound + qty_minus",
+        "preferred_changed_by_creator_review": false,
+        "authority_path": [
+          "HISTORICAL_COMPOSITION_HARVEST",
+          "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+          "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+          "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+        ],
+        "source_provenance": [
+          {
+            "source_type": "CREATOR_RECONCILIATION",
+            "export_path": "../composition-library-historical-harvest-v0.1/reconciliation/creator-export-2026-09-27.json",
+            "addendum_path": "../composition-library-historical-harvest-v0.1/reconciliation/creator-reconciliation-addendum-2026-09-27.json",
+            "historical_record_id": "clh-v01-0008",
+            "creator_reason": "SOUND + LESS is functionally sufficient; comm_speak + logic_yes adds no necessary information and over-explains the intent.",
+            "provenance": "CREATOR_RECONCILIATION"
+          }
+        ],
+        "creator_review_ref": {
+          "export_path": "creator-review-export.json",
+          "corpus_record_id": "clc-v01-0008-r1",
+          "decision": "KEEP_IN_DICTIONARY",
+          "creator_notes_verbatim_in_export": true
+        }
+      },
+      "former_system_review": null,
+      "pending_addendum": null,
+      "recorded_decision": null,
+      "review_state": "UNREVIEWED",
+      "related_pending_entry": null,
+      "previous_metadata": null
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0009",
+      "corpus_record_id": "clh-v01-0014",
+      "headword": "General food shop",
+      "semantic_neighbourhood": "General grocery / food shop",
+      "badges": [
+        "METADATA_CHANGED"
+      ],
+      "legacy_category_memberships": [
+        "B. METADATA / MEANING CLARIFIED"
+      ],
+      "current_baseline": {
+        "preferred_message": {
+          "schema": "0.1",
+          "pictiq": "1.1",
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "place_shop"
+                },
+                {
+                  "type": "icon",
+                  "id": "need_food"
+                }
+              ]
+            }
+          ]
+        },
+        "preferred_token_sequence": "place_shop + need_food",
+        "preferred_render": "../renders/pcd-v01-0009-preferred.svg",
+        "message_profile": null,
+        "mode": [
+          "STANDALONE"
+        ],
+        "surface": [
+          "BOOK"
+        ],
+        "context": [
+          {
+            "communication_mode": "STANDALONE",
+            "communication_surface": "BOOK",
+            "context": {
+              "domain": [
+                "practical communication"
+              ],
+              "situation": [
+                "published Handbook v1.0 worked example"
+              ],
+              "task": [
+                "grocery / food shop"
+              ],
+              "context_supplies": [
+                {
+                  "cue": "Handbook prose / example label supplies the scoped gloss",
+                  "availability": "REQUIRED",
+                  "evidence_ids": [
+                    "cand-handbook-food-shop"
+                  ]
+                },
+                {
+                  "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+                  "availability": "OPTIONAL",
+                  "evidence_ids": [
+                    "cand-handbook-food-shop"
+                  ]
+                }
+              ]
+            },
+            "evidence_ids": [
+              "cand-handbook-food-shop"
+            ]
+          }
+        ],
+        "known_ambiguity": [],
+        "context_warnings": []
+      },
+      "previous_state": {
+        "message": null,
+        "token_sequence": null,
+        "render": null,
+        "provenance": [
+          {
+            "origin": {
+              "event_id": "origin-clh-v01-0014",
+              "source_type": "HANDBOOK",
+              "reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+              "location": "cand-handbook-food-shop",
+              "role": "ORIGIN",
+              "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+              "sha256": "5fe3eea1aab10ab51c15727ff2526fb4be42e93ab500edb3a56ee694458b369b",
+              "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+            },
+            "uses": [],
+            "creator_review_id": "review-clh-v01-0014",
+            "addendum": null
+          }
+        ],
+        "metadata": {
+          "headword": "Grocery / food shop",
+          "semantic_neighbourhood": "Grocery / food shop",
+          "mode": [
+            "STANDALONE"
+          ],
+          "surface": [
+            "BOOK"
+          ],
+          "context": [
+            {
+              "communication_mode": "STANDALONE",
+              "communication_surface": "BOOK",
+              "context": {
+                "domain": [
+                  "practical communication"
+                ],
+                "situation": [
+                  "published Handbook v1.0 worked example"
+                ],
+                "task": [
+                  "grocery / food shop"
+                ],
+                "context_supplies": [
+                  {
+                    "cue": "Handbook prose / example label supplies the scoped gloss",
+                    "availability": "REQUIRED",
+                    "evidence_ids": [
+                      "cand-handbook-food-shop"
+                    ]
+                  },
+                  {
+                    "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+                    "availability": "OPTIONAL",
+                    "evidence_ids": [
+                      "cand-handbook-food-shop"
+                    ]
+                  }
+                ]
+              },
+              "evidence_ids": [
+                "cand-handbook-food-shop"
+              ]
+            }
+          ]
+        },
+        "change_display": "CURRENT ONCE; metadata/context details below"
+      },
+      "accepted_variants": [
+        {
+          "variant_id": "pcd-v01-0009-preferred",
+          "type": "PREFERRED",
+          "message": {
+            "schema": "0.1",
+            "pictiq": "1.1",
+            "frames": [
+              {
+                "tokens": [
+                  {
+                    "type": "icon",
+                    "id": "place_shop"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "need_food"
+                  }
+                ]
+              }
+            ]
+          },
+          "token_sequence": "place_shop + need_food",
+          "render": "../renders/pcd-v01-0009-preferred.svg",
+          "mode": [
+            "STANDALONE"
+          ],
+          "surface": [
+            "BOOK"
+          ],
+          "context": [
+            {
+              "communication_mode": "STANDALONE",
+              "communication_surface": "BOOK",
+              "context": {
+                "domain": [
+                  "practical communication"
+                ],
+                "situation": [
+                  "published Handbook v1.0 worked example"
+                ],
+                "task": [
+                  "grocery / food shop"
+                ],
+                "context_supplies": [
+                  {
+                    "cue": "Handbook prose / example label supplies the scoped gloss",
+                    "availability": "REQUIRED",
+                    "evidence_ids": [
+                      "cand-handbook-food-shop"
+                    ]
+                  },
+                  {
+                    "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+                    "availability": "OPTIONAL",
+                    "evidence_ids": [
+                      "cand-handbook-food-shop"
+                    ]
+                  }
+                ]
+              },
+              "evidence_ids": [
+                "cand-handbook-food-shop"
+              ]
+            }
+          ],
+          "provenance": {
+            "corpus_record_ids": [
+              "clh-v01-0014"
+            ],
+            "creator_review_record_id": "clh-v01-0014",
+            "dictionary_entry_id": "pcd-v01-0009",
+            "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+          },
+          "qa_warning": null,
+          "visible_in_viewer": true
+        }
+      ],
+      "proposed_unaccepted": [],
+      "creator_note": "Да, это для универсальных продуктовых магазинов/супермаркетов/рынков - для мясных лавок заменяем need_food на мясо и тд",
+      "structured_interpretation": "Scope this composition to general food shops, supermarkets, and general markets; specialized shop categories may need a matching existing primitive.",
+      "scope_warnings": [],
+      "lineage": {
+        "dictionary_entry_id": "pcd-v01-0009",
+        "corpus_record_id": "clh-v01-0014",
+        "candidate_entry_id": "pcd-v01-0009",
+        "source_message": {
+          "schema": "0.1",
+          "pictiq": "1.1",
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "place_shop"
+                },
+                {
+                  "type": "icon",
+                  "id": "need_food"
+                }
+              ]
+            }
+          ]
+        },
+        "source_sequence": "place_shop + need_food",
+        "preferred_message": {
+          "schema": "0.1",
+          "pictiq": "1.1",
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "place_shop"
+                },
+                {
+                  "type": "icon",
+                  "id": "need_food"
+                }
+              ]
+            }
+          ]
+        },
+        "preferred_sequence": "place_shop + need_food",
+        "preferred_changed_by_creator_review": false,
+        "authority_path": [
+          "HISTORICAL_COMPOSITION_HARVEST",
+          "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+          "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+          "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+        ],
+        "source_provenance": [
+          {
+            "origin": {
+              "event_id": "origin-clh-v01-0014",
+              "source_type": "HANDBOOK",
+              "reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+              "location": "cand-handbook-food-shop",
+              "role": "ORIGIN",
+              "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+              "sha256": "5fe3eea1aab10ab51c15727ff2526fb4be42e93ab500edb3a56ee694458b369b",
+              "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+            },
+            "uses": [],
+            "creator_review_id": "review-clh-v01-0014",
+            "addendum": null
+          }
+        ],
+        "creator_review_ref": {
+          "export_path": "creator-review-export.json",
+          "corpus_record_id": "clh-v01-0014",
+          "decision": "KEEP_IN_DICTIONARY",
+          "creator_notes_verbatim_in_export": true
+        }
+      },
+      "former_system_review": null,
+      "pending_addendum": null,
+      "recorded_decision": null,
+      "review_state": "UNREVIEWED",
+      "related_pending_entry": null,
+      "previous_metadata": {
+        "headword": "Grocery / food shop",
+        "semantic_neighbourhood": "Grocery / food shop",
+        "mode": [
+          "STANDALONE"
+        ],
+        "surface": [
+          "BOOK"
+        ],
+        "context": [
+          {
+            "communication_mode": "STANDALONE",
+            "communication_surface": "BOOK",
+            "context": {
+              "domain": [
+                "practical communication"
+              ],
+              "situation": [
+                "published Handbook v1.0 worked example"
+              ],
+              "task": [
+                "grocery / food shop"
+              ],
+              "context_supplies": [
+                {
+                  "cue": "Handbook prose / example label supplies the scoped gloss",
+                  "availability": "REQUIRED",
+                  "evidence_ids": [
+                    "cand-handbook-food-shop"
+                  ]
+                },
+                {
+                  "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+                  "availability": "OPTIONAL",
+                  "evidence_ids": [
+                    "cand-handbook-food-shop"
+                  ]
+                }
+              ]
+            },
+            "evidence_ids": [
+              "cand-handbook-food-shop"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0010",
+      "corpus_record_id": "clh-v01-0016",
+      "headword": "Less food / smaller portion",
+      "semantic_neighbourhood": "Less food / smaller portion",
+      "badges": [
+        "VARIANT_ADDED"
+      ],
+      "legacy_category_memberships": [
+        "C. VARIANT ADDED"
+      ],
+      "current_baseline": {
+        "preferred_message": {
+          "schema": "0.1",
+          "pictiq": "1.1",
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "need_food"
+                },
+                {
+                  "type": "icon",
+                  "id": "qty_minus"
+                }
+              ]
+            }
+          ]
+        },
+        "preferred_token_sequence": "need_food + qty_minus",
+        "preferred_render": "../renders/pcd-v01-0010-preferred.svg",
+        "message_profile": null,
+        "mode": [
+          "STANDALONE"
+        ],
+        "surface": [
+          "BOOK"
+        ],
+        "context": [
+          {
+            "communication_mode": "STANDALONE",
+            "communication_surface": "BOOK",
+            "context": {
+              "domain": [
+                "practical communication"
+              ],
+              "situation": [
+                "published Handbook v1.0 worked example"
+              ],
+              "task": [
+                "less food / smaller portion"
+              ],
+              "context_supplies": [
+                {
+                  "cue": "Handbook prose / example label supplies the scoped gloss",
+                  "availability": "REQUIRED",
+                  "evidence_ids": [
+                    "cand-handbook-less-food"
+                  ]
+                },
+                {
+                  "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+                  "availability": "OPTIONAL",
+                  "evidence_ids": [
+                    "cand-handbook-less-food"
+                  ]
+                }
+              ]
+            },
+            "evidence_ids": [
+              "cand-handbook-less-food"
+            ]
+          }
+        ],
+        "known_ambiguity": [],
+        "context_warnings": [
+          "LESS / DOWN alternative is local to this entry; no global equivalence is implied."
+        ]
+      },
+      "previous_state": {
+        "message": null,
+        "token_sequence": null,
+        "render": null,
+        "provenance": [
+          {
+            "origin": {
+              "event_id": "origin-clh-v01-0016",
+              "source_type": "HANDBOOK",
+              "reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+              "location": "cand-handbook-less-food",
+              "role": "ORIGIN",
+              "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+              "sha256": "5fe3eea1aab10ab51c15727ff2526fb4be42e93ab500edb3a56ee694458b369b",
+              "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+            },
+            "uses": [],
+            "creator_review_id": "review-clh-v01-0016",
+            "addendum": null
+          }
+        ],
+        "metadata": null,
+        "change_display": "CURRENT ONCE; metadata/context details below"
+      },
+      "accepted_variants": [
+        {
+          "variant_id": "pcd-v01-0010-preferred",
+          "type": "PREFERRED",
+          "message": {
+            "schema": "0.1",
+            "pictiq": "1.1",
+            "frames": [
+              {
+                "tokens": [
+                  {
+                    "type": "icon",
+                    "id": "need_food"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "qty_minus"
+                  }
+                ]
+              }
+            ]
+          },
+          "token_sequence": "need_food + qty_minus",
+          "render": "../renders/pcd-v01-0010-preferred.svg",
+          "mode": [
+            "STANDALONE"
+          ],
+          "surface": [
+            "BOOK"
+          ],
+          "context": [
+            {
+              "communication_mode": "STANDALONE",
+              "communication_surface": "BOOK",
+              "context": {
+                "domain": [
+                  "practical communication"
+                ],
+                "situation": [
+                  "published Handbook v1.0 worked example"
+                ],
+                "task": [
+                  "less food / smaller portion"
+                ],
+                "context_supplies": [
+                  {
+                    "cue": "Handbook prose / example label supplies the scoped gloss",
+                    "availability": "REQUIRED",
+                    "evidence_ids": [
+                      "cand-handbook-less-food"
+                    ]
+                  },
+                  {
+                    "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+                    "availability": "OPTIONAL",
+                    "evidence_ids": [
+                      "cand-handbook-less-food"
+                    ]
+                  }
+                ]
+              },
+              "evidence_ids": [
+                "cand-handbook-less-food"
+              ]
+            }
+          ],
+          "provenance": {
+            "corpus_record_ids": [
+              "clh-v01-0016"
+            ],
+            "creator_review_record_id": "clh-v01-0016",
+            "dictionary_entry_id": "pcd-v01-0010",
+            "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+          },
+          "qa_warning": null,
+          "visible_in_viewer": true
+        },
+        {
+          "variant_id": "pcd-v01-0010-alternative-down",
+          "type": "ALTERNATIVE",
+          "message": {
+            "schema": "0.1",
+            "pictiq": "1.1",
+            "frames": [
+              {
+                "tokens": [
+                  {
+                    "type": "icon",
+                    "id": "need_food"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "rel_down"
+                  }
+                ]
+              }
+            ]
+          },
+          "token_sequence": "need_food + rel_down",
+          "render": "../renders/pcd-v01-0010-alternative-down.svg",
+          "mode": [
+            "STANDALONE"
+          ],
+          "surface": [
+            "BOOK"
+          ],
+          "context": [
+            {
+              "communication_mode": "STANDALONE",
+              "communication_surface": "BOOK",
+              "context": {
+                "domain": [
+                  "practical communication"
+                ],
+                "situation": [
+                  "published Handbook v1.0 worked example"
+                ],
+                "task": [
+                  "less food / smaller portion"
+                ],
+                "context_supplies": [
+                  {
+                    "cue": "Handbook prose / example label supplies the scoped gloss",
+                    "availability": "REQUIRED",
+                    "evidence_ids": [
+                      "cand-handbook-less-food"
+                    ]
+                  },
+                  {
+                    "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+                    "availability": "OPTIONAL",
+                    "evidence_ids": [
+                      "cand-handbook-less-food"
+                    ]
+                  }
+                ]
+              },
+              "evidence_ids": [
+                "cand-handbook-less-food"
+              ]
+            }
+          ],
+          "provenance": {
+            "corpus_record_ids": [
+              "clh-v01-0016"
+            ],
+            "creator_review_record_id": "clh-v01-0016",
+            "dictionary_entry_id": "pcd-v01-0010",
+            "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+          },
+          "qa_warning": "NEARBY CONTEXTUAL READING — VERIFY AS VARIANT",
+          "visible_in_viewer": true
+        }
+      ],
+      "proposed_unaccepted": [],
+      "creator_note": "qty_minus можно также заменять на down",
+      "structured_interpretation": "DOWN is an alternative to LESS for this reviewed food-quantity neighborhood only; no global equivalence is inferred.",
+      "scope_warnings": [],
+      "lineage": {
+        "dictionary_entry_id": "pcd-v01-0010",
+        "corpus_record_id": "clh-v01-0016",
+        "candidate_entry_id": "pcd-v01-0010",
+        "source_message": {
+          "schema": "0.1",
+          "pictiq": "1.1",
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "need_food"
+                },
+                {
+                  "type": "icon",
+                  "id": "qty_minus"
+                }
+              ]
+            }
+          ]
+        },
+        "source_sequence": "need_food + qty_minus",
+        "preferred_message": {
+          "schema": "0.1",
+          "pictiq": "1.1",
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "need_food"
+                },
+                {
+                  "type": "icon",
+                  "id": "qty_minus"
+                }
+              ]
+            }
+          ]
+        },
+        "preferred_sequence": "need_food + qty_minus",
+        "preferred_changed_by_creator_review": false,
+        "authority_path": [
+          "HISTORICAL_COMPOSITION_HARVEST",
+          "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+          "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+          "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+        ],
+        "source_provenance": [
+          {
+            "origin": {
+              "event_id": "origin-clh-v01-0016",
+              "source_type": "HANDBOOK",
+              "reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+              "location": "cand-handbook-less-food",
+              "role": "ORIGIN",
+              "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+              "sha256": "5fe3eea1aab10ab51c15727ff2526fb4be42e93ab500edb3a56ee694458b369b",
+              "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+            },
+            "uses": [],
+            "creator_review_id": "review-clh-v01-0016",
+            "addendum": null
+          }
+        ],
+        "creator_review_ref": {
+          "export_path": "creator-review-export.json",
+          "corpus_record_id": "clh-v01-0016",
+          "decision": "KEEP_IN_DICTIONARY",
+          "creator_notes_verbatim_in_export": true
+        }
+      },
+      "former_system_review": null,
+      "pending_addendum": null,
+      "recorded_decision": null,
+      "review_state": "UNREVIEWED",
+      "related_pending_entry": null,
+      "previous_metadata": null
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0025",
+      "corpus_record_id": "clh-v01-0044",
+      "headword": "No entry at this location",
+      "semantic_neighbourhood": "A location-specific wayfinding prohibition",
+      "badges": [
+        "FOLLOW_UP_RESOLVED",
+        "METADATA_CHANGED",
+        "MOVE_TO_CORPUS_ONLY_PENDING"
+      ],
+      "legacy_category_memberships": [
+        "B. METADATA / MEANING CLARIFIED",
+        "E. FOLLOW-UP REQUIRED"
+      ],
+      "current_baseline": {
+        "preferred_message": {
+          "schema": "0.1",
+          "pictiq": "1.1",
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "rel_here"
+                },
+                {
+                  "type": "icon",
+                  "id": "logic_no"
+                }
+              ]
+            }
+          ]
+        },
+        "preferred_token_sequence": "rel_here + logic_no",
+        "preferred_render": "../renders/pcd-v01-0025-preferred.svg",
+        "message_profile": null,
+        "mode": [
+          "STANDALONE"
+        ],
+        "surface": [
+          "WAYFINDING"
+        ],
+        "context": [
+          {
+            "communication_mode": "STANDALONE",
+            "communication_surface": "WAYFINDING",
+            "context": {
+              "domain": [
+                "road-wayfinding"
+              ],
+              "situation": [
+                "public road and wayfinding sign"
+              ],
+              "task": [
+                "do not enter or proceed into the signed way."
+              ],
+              "context_supplies": [
+                {
+                  "cue": "road/public-wayfinding conventions",
+                  "availability": "REQUIRED",
+                  "evidence_ids": [
+                    "cand-road-05"
+                  ]
+                },
+                {
+                  "cue": "sign placement and road-navigation frame",
+                  "availability": "OPTIONAL",
+                  "evidence_ids": [
+                    "cand-road-05"
+                  ]
+                }
+              ]
+            },
+            "evidence_ids": [
+              "cand-road-05"
+            ]
+          }
+        ],
+        "known_ambiguity": [
+          "Yes. It can be read as no current location, not available here, or no place here rather than entry forbidden."
+        ],
+        "context_warnings": [
+          "Wayfinding context",
+          "Context/referent-dependent; not a universal prohibition"
+        ]
+      },
+      "previous_state": {
+        "message": null,
+        "token_sequence": null,
+        "render": null,
+        "provenance": [
+          {
+            "origin": {
+              "event_id": "origin-clh-v01-0044",
+              "source_type": "ROAD _ WAYFINDING",
+              "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+              "location": "cand-road-05",
+              "role": "ORIGIN",
+              "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+              "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+              "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+            },
+            "uses": [],
+            "creator_review_id": "review-clh-v01-0044",
+            "addendum": null
+          }
+        ],
+        "metadata": {
+          "headword": "Do not enter",
+          "semantic_neighbourhood": "Entry prohibited / do not enter this road or area.",
+          "mode": [
+            "STANDALONE"
+          ],
+          "surface": [
+            "WAYFINDING"
+          ],
+          "context": [
+            {
+              "communication_mode": "STANDALONE",
+              "communication_surface": "WAYFINDING",
+              "context": {
+                "domain": [
+                  "road-wayfinding"
+                ],
+                "situation": [
+                  "public road and wayfinding sign"
+                ],
+                "task": [
+                  "do not enter or proceed into the signed way."
+                ],
+                "context_supplies": [
+                  {
+                    "cue": "road/public-wayfinding conventions",
+                    "availability": "REQUIRED",
+                    "evidence_ids": [
+                      "cand-road-05"
+                    ]
+                  },
+                  {
+                    "cue": "sign placement and road-navigation frame",
+                    "availability": "OPTIONAL",
+                    "evidence_ids": [
+                      "cand-road-05"
+                    ]
+                  }
+                ]
+              },
+              "evidence_ids": [
+                "cand-road-05"
+              ]
+            }
+          ]
+        },
+        "change_display": "CURRENT ONCE; metadata/context details below"
+      },
+      "accepted_variants": [
+        {
+          "variant_id": "pcd-v01-0025-preferred",
+          "type": "PREFERRED",
+          "message": {
+            "schema": "0.1",
+            "pictiq": "1.1",
+            "frames": [
+              {
+                "tokens": [
+                  {
+                    "type": "icon",
+                    "id": "rel_here"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "logic_no"
+                  }
+                ]
+              }
+            ]
+          },
+          "token_sequence": "rel_here + logic_no",
+          "render": "../renders/pcd-v01-0025-preferred.svg",
+          "mode": [
+            "STANDALONE"
+          ],
+          "surface": [
+            "WAYFINDING"
+          ],
+          "context": [
+            {
+              "communication_mode": "STANDALONE",
+              "communication_surface": "WAYFINDING",
+              "context": {
+                "domain": [
+                  "road-wayfinding"
+                ],
+                "situation": [
+                  "public road and wayfinding sign"
+                ],
+                "task": [
+                  "do not enter or proceed into the signed way."
+                ],
+                "context_supplies": [
+                  {
+                    "cue": "road/public-wayfinding conventions",
+                    "availability": "REQUIRED",
+                    "evidence_ids": [
+                      "cand-road-05"
+                    ]
+                  },
+                  {
+                    "cue": "sign placement and road-navigation frame",
+                    "availability": "OPTIONAL",
+                    "evidence_ids": [
+                      "cand-road-05"
+                    ]
+                  }
+                ]
+              },
+              "evidence_ids": [
+                "cand-road-05"
+              ]
+            }
+          ],
+          "provenance": {
+            "corpus_record_ids": [
+              "clh-v01-0044"
+            ],
+            "creator_review_record_id": "clh-v01-0044",
+            "dictionary_entry_id": "pcd-v01-0025",
+            "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+          },
+          "qa_warning": null,
+          "visible_in_viewer": true
+        }
+      ],
+      "proposed_unaccepted": [
+        {
+          "label": "FEET + NO",
+          "token_ids_mentioned": [
+            "move_feet",
+            "logic_no"
+          ],
+          "status": "PROPOSED / NOT ACCEPTED",
+          "exact_message": null,
+          "render": null,
+          "note": "Creator examples refer to distinct prohibited referents/contexts; none is a replacement or accepted variant."
+        },
+        {
+          "label": "PERSON + FEET + NO",
+          "token_ids_mentioned": [
+            "person_generic",
+            "move_feet",
+            "logic_no"
+          ],
+          "status": "PROPOSED / NOT ACCEPTED",
+          "exact_message": null,
+          "render": null,
+          "note": "Creator examples refer to distinct prohibited referents/contexts; none is a replacement or accepted variant."
+        },
+        {
+          "label": "CAR + NO",
+          "token_ids_mentioned": [
+            "move_car",
+            "logic_no"
+          ],
+          "status": "PROPOSED / NOT ACCEPTED",
+          "exact_message": null,
+          "render": null,
+          "note": "Creator examples refer to distinct prohibited referents/contexts; none is a replacement or accepted variant."
+        },
+        {
+          "label": "PERSON + NO",
+          "token_ids_mentioned": [
+            "person_generic",
+            "logic_no"
+          ],
+          "status": "PROPOSED / NOT ACCEPTED",
+          "exact_message": null,
+          "render": null,
+          "note": "Creator examples refer to distinct prohibited referents/contexts; none is a replacement or accepted variant."
+        },
+        {
+          "label": "UP/AHEAD + NO",
+          "token_ids_mentioned": null,
+          "status": "PROPOSED / NOT ACCEPTED",
+          "exact_message": null,
+          "render": null,
+          "note": "Creator examples refer to distinct prohibited referents/contexts; none is a replacement or accepted variant."
+        }
+      ],
+      "creator_note": "так может быть в каком-то контексте, но это не идеальный вариант - я бы скорее написал feet+no либо person+feet+no либо auto+no либо up+no либо person+no",
+      "structured_interpretation": "Current HERE + NO is retained as context-dependent Corpus evidence, not a universal replacement.",
+      "scope_warnings": [
+        "This entry is visually distinguished as a recorded MOVE_TO_CORPUS_ONLY decision, not a normal acceptance card."
+      ],
+      "lineage": {
+        "dictionary_entry_id": "pcd-v01-0025",
+        "corpus_record_id": "clh-v01-0044",
+        "candidate_entry_id": "pcd-v01-0025",
+        "source_message": {
+          "schema": "0.1",
+          "pictiq": "1.1",
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "rel_here"
+                },
+                {
+                  "type": "icon",
+                  "id": "logic_no"
+                }
+              ]
+            }
+          ]
+        },
+        "source_sequence": "rel_here + logic_no",
+        "preferred_message": {
+          "schema": "0.1",
+          "pictiq": "1.1",
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "rel_here"
+                },
+                {
+                  "type": "icon",
+                  "id": "logic_no"
+                }
+              ]
+            }
+          ]
+        },
+        "preferred_sequence": "rel_here + logic_no",
+        "preferred_changed_by_creator_review": false,
+        "authority_path": [
+          "HISTORICAL_COMPOSITION_HARVEST",
+          "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+          "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+          "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+        ],
+        "source_provenance": [
+          {
+            "origin": {
+              "event_id": "origin-clh-v01-0044",
+              "source_type": "ROAD _ WAYFINDING",
+              "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+              "location": "cand-road-05",
+              "role": "ORIGIN",
+              "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+              "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+              "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+            },
+            "uses": [],
+            "creator_review_id": "review-clh-v01-0044",
+            "addendum": null
+          }
+        ],
+        "creator_review_ref": {
+          "export_path": "creator-review-export.json",
+          "corpus_record_id": "clh-v01-0044",
+          "decision": "KEEP_IN_DICTIONARY",
+          "creator_notes_verbatim_in_export": true
+        }
+      },
+      "former_system_review": null,
+      "pending_addendum": {
+        "state": "RECORDED_FROM_CURRENT_CREATOR_QA",
+        "baseline_effect": "REMOVE FROM FUTURE DICTIONARY PROJECTION / KEEP IN CORPUS",
+        "replacement": null
+      },
+      "recorded_decision": "MOVE_TO_CORPUS_ONLY",
+      "review_state": "RECORDED_FROM_CURRENT_CREATOR_QA",
+      "related_pending_entry": null,
+      "previous_metadata": {
+        "headword": "Do not enter",
+        "semantic_neighbourhood": "Entry prohibited / do not enter this road or area.",
+        "mode": [
+          "STANDALONE"
+        ],
+        "surface": [
+          "WAYFINDING"
+        ],
+        "context": [
+          {
+            "communication_mode": "STANDALONE",
+            "communication_surface": "WAYFINDING",
+            "context": {
+              "domain": [
+                "road-wayfinding"
+              ],
+              "situation": [
+                "public road and wayfinding sign"
+              ],
+              "task": [
+                "do not enter or proceed into the signed way."
+              ],
+              "context_supplies": [
+                {
+                  "cue": "road/public-wayfinding conventions",
+                  "availability": "REQUIRED",
+                  "evidence_ids": [
+                    "cand-road-05"
+                  ]
+                },
+                {
+                  "cue": "sign placement and road-navigation frame",
+                  "availability": "OPTIONAL",
+                  "evidence_ids": [
+                    "cand-road-05"
+                  ]
+                }
+              ]
+            },
+            "evidence_ids": [
+              "cand-road-05"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0027",
+      "corpus_record_id": "clh-v01-0046",
+      "headword": "No pedestrians",
+      "semantic_neighbourhood": "Access prohibited to pedestrians.",
+      "badges": [
+        "PREFERRED_CHANGED"
+      ],
+      "legacy_category_memberships": [
+        "A. PREFERRED MESSAGE CHANGED"
+      ],
+      "current_baseline": {
+        "preferred_message": {
+          "schema": "0.1",
+          "pictiq": "1.1",
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "move_feet"
+                },
+                {
+                  "type": "icon",
+                  "id": "logic_no"
+                }
+              ]
+            }
+          ]
+        },
+        "preferred_token_sequence": "move_feet + logic_no",
+        "preferred_render": "../renders/pcd-v01-0027-preferred.svg",
+        "message_profile": null,
+        "mode": [
+          "STANDALONE"
+        ],
+        "surface": [
+          "WAYFINDING"
+        ],
+        "context": [
+          {
+            "communication_mode": "STANDALONE",
+            "communication_surface": "WAYFINDING",
+            "context": {
+              "domain": [
+                "road-wayfinding"
+              ],
+              "situation": [
+                "public road and wayfinding sign"
+              ],
+              "task": [
+                "do not walk here / pedestrians must not enter."
+              ],
+              "context_supplies": [
+                {
+                  "cue": "road/public-wayfinding conventions",
+                  "availability": "REQUIRED",
+                  "evidence_ids": [
+                    "cand-road-07"
+                  ]
+                },
+                {
+                  "cue": "sign placement and road-navigation frame",
+                  "availability": "OPTIONAL",
+                  "evidence_ids": [
+                    "cand-road-07"
+                  ]
+                }
+              ]
+            },
+            "evidence_ids": [
+              "cand-road-07"
+            ]
+          }
+        ],
+        "known_ambiguity": [],
+        "context_warnings": [
+          "Wayfinding context; this entry concerns pedestrian access."
+        ]
+      },
+      "previous_state": {
+        "message": {
+          "schema": "0.1",
+          "pictiq": "1.1",
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "person_generic"
+                },
+                {
+                  "type": "icon",
+                  "id": "move_feet"
+                },
+                {
+                  "type": "icon",
+                  "id": "logic_no"
+                }
+              ]
+            }
+          ]
+        },
+        "token_sequence": "person_generic + move_feet + logic_no",
+        "render": "../../composition-library-baseline-v0.1/renders/clh-v01-0046.svg",
+        "provenance": [
+          {
+            "origin": {
+              "event_id": "origin-clh-v01-0046",
+              "source_type": "ROAD _ WAYFINDING",
+              "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+              "location": "cand-road-07",
+              "role": "ORIGIN",
+              "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+              "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+              "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+            },
+            "uses": [],
+            "creator_review_id": "review-clh-v01-0046",
+            "addendum": null
+          }
+        ],
+        "metadata": null,
+        "change_display": "BEFORE → AFTER"
+      },
+      "accepted_variants": [
+        {
+          "variant_id": "pcd-v01-0027-preferred",
+          "type": "PREFERRED",
+          "message": {
+            "schema": "0.1",
+            "pictiq": "1.1",
+            "frames": [
+              {
+                "tokens": [
+                  {
+                    "type": "icon",
+                    "id": "move_feet"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "logic_no"
+                  }
+                ]
+              }
+            ]
+          },
+          "token_sequence": "move_feet + logic_no",
+          "render": "../renders/pcd-v01-0027-preferred.svg",
+          "mode": [
+            "STANDALONE"
+          ],
+          "surface": [
+            "WAYFINDING"
+          ],
+          "context": [
+            {
+              "communication_mode": "STANDALONE",
+              "communication_surface": "WAYFINDING",
+              "context": {
+                "domain": [
+                  "road-wayfinding"
+                ],
+                "situation": [
+                  "public road and wayfinding sign"
+                ],
+                "task": [
+                  "do not walk here / pedestrians must not enter."
+                ],
+                "context_supplies": [
+                  {
+                    "cue": "road/public-wayfinding conventions",
+                    "availability": "REQUIRED",
+                    "evidence_ids": [
+                      "cand-road-07"
+                    ]
+                  },
+                  {
+                    "cue": "sign placement and road-navigation frame",
+                    "availability": "OPTIONAL",
+                    "evidence_ids": [
+                      "cand-road-07"
+                    ]
+                  }
+                ]
+              },
+              "evidence_ids": [
+                "cand-road-07"
+              ]
+            }
+          ],
+          "provenance": {
+            "corpus_record_ids": [
+              "clh-v01-0046"
+            ],
+            "creator_review_record_id": "clh-v01-0046",
+            "dictionary_entry_id": "pcd-v01-0027",
+            "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+          },
+          "qa_warning": null,
+          "visible_in_viewer": true
+        }
+      ],
+      "proposed_unaccepted": [],
+      "creator_note": "Да, но можно сократить до move_feet + logic_no - так будет лучше",
+      "structured_interpretation": "Use the creator's shorter FEET + NO form for this pedestrian prohibition entry.",
+      "scope_warnings": [],
+      "lineage": {
+        "dictionary_entry_id": "pcd-v01-0027",
+        "corpus_record_id": "clh-v01-0046",
+        "candidate_entry_id": "pcd-v01-0027",
+        "source_message": {
+          "schema": "0.1",
+          "pictiq": "1.1",
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "person_generic"
+                },
+                {
+                  "type": "icon",
+                  "id": "move_feet"
+                },
+                {
+                  "type": "icon",
+                  "id": "logic_no"
+                }
+              ]
+            }
+          ]
+        },
+        "source_sequence": "person_generic + move_feet + logic_no",
+        "preferred_message": {
+          "schema": "0.1",
+          "pictiq": "1.1",
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "move_feet"
+                },
+                {
+                  "type": "icon",
+                  "id": "logic_no"
+                }
+              ]
+            }
+          ]
+        },
+        "preferred_sequence": "move_feet + logic_no",
+        "preferred_changed_by_creator_review": true,
+        "authority_path": [
+          "HISTORICAL_COMPOSITION_HARVEST",
+          "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+          "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+          "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+        ],
+        "source_provenance": [
+          {
+            "origin": {
+              "event_id": "origin-clh-v01-0046",
+              "source_type": "ROAD _ WAYFINDING",
+              "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+              "location": "cand-road-07",
+              "role": "ORIGIN",
+              "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+              "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+              "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+            },
+            "uses": [],
+            "creator_review_id": "review-clh-v01-0046",
+            "addendum": null
+          }
+        ],
+        "creator_review_ref": {
+          "export_path": "creator-review-export.json",
+          "corpus_record_id": "clh-v01-0046",
+          "decision": "KEEP_IN_DICTIONARY",
+          "creator_notes_verbatim_in_export": true
+        }
+      },
+      "former_system_review": null,
+      "pending_addendum": null,
+      "recorded_decision": null,
+      "review_state": "UNREVIEWED",
+      "related_pending_entry": null,
+      "previous_metadata": null
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0028",
+      "corpus_record_id": "clh-v01-0047",
+      "headword": "Pedestrian movement",
+      "semantic_neighbourhood": "Person moving on foot",
+      "badges": [
+        "METADATA_CHANGED",
+        "PREFERRED_CHANGED",
+        "SCOPE_CHANGED"
+      ],
+      "legacy_category_memberships": [
+        "A. PREFERRED MESSAGE CHANGED",
+        "B. METADATA / MEANING CLARIFIED"
+      ],
+      "current_baseline": {
+        "preferred_message": {
+          "schema": "0.1",
+          "pictiq": "1.1",
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "person_generic"
+                },
+                {
+                  "type": "icon",
+                  "id": "move_feet"
+                }
+              ]
+            }
+          ]
+        },
+        "preferred_token_sequence": "person_generic + move_feet",
+        "preferred_render": "../renders/pcd-v01-0028-preferred.svg",
+        "message_profile": null,
+        "mode": [
+          "STANDALONE"
+        ],
+        "surface": [
+          "WAYFINDING"
+        ],
+        "context": [
+          {
+            "communication_mode": "STANDALONE",
+            "communication_surface": "WAYFINDING",
+            "context": {
+              "domain": [
+                "road-wayfinding"
+              ],
+              "situation": [
+                "public road and wayfinding sign"
+              ],
+              "task": [
+                "expect/use a crossing point; drivers yield/slow where applicable; pedestrians cross here."
+              ],
+              "context_supplies": [
+                {
+                  "cue": "road/public-wayfinding conventions",
+                  "availability": "REQUIRED",
+                  "evidence_ids": [
+                    "cand-road-08"
+                  ]
+                },
+                {
+                  "cue": "sign placement and road-navigation frame",
+                  "availability": "OPTIONAL",
+                  "evidence_ids": [
+                    "cand-road-08"
+                  ]
+                }
+              ]
+            },
+            "evidence_ids": [
+              "cand-road-08"
+            ]
+          }
+        ],
+        "known_ambiguity": [
+          "Yes. Walking here is not the same as a crossing relation between two sides of a road."
+        ],
+        "context_warnings": [
+          "Wayfinding context",
+          "Movement on foot is not necessarily a crossing-place relation"
+        ]
+      },
+      "previous_state": {
+        "message": {
+          "schema": "0.1",
+          "pictiq": "1.1",
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "person_generic"
+                },
+                {
+                  "type": "icon",
+                  "id": "move_feet"
+                },
+                {
+                  "type": "icon",
+                  "id": "rel_here"
+                }
+              ]
+            }
+          ]
+        },
+        "token_sequence": "person_generic + move_feet + rel_here",
+        "render": "../../composition-library-baseline-v0.1/renders/clh-v01-0047.svg",
+        "provenance": [
+          {
+            "origin": {
+              "event_id": "origin-clh-v01-0047",
+              "source_type": "ROAD _ WAYFINDING",
+              "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+              "location": "cand-road-08",
+              "role": "ORIGIN",
+              "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+              "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+              "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+            },
+            "uses": [],
+            "creator_review_id": "review-clh-v01-0047",
+            "addendum": null
+          }
+        ],
+        "metadata": {
+          "headword": "Pedestrian crossing",
+          "semantic_neighbourhood": "Pedestrian crossing or crossing place.",
+          "mode": [
+            "STANDALONE"
+          ],
+          "surface": [
+            "WAYFINDING"
+          ],
+          "context": [
+            {
+              "communication_mode": "STANDALONE",
+              "communication_surface": "WAYFINDING",
+              "context": {
+                "domain": [
+                  "road-wayfinding"
+                ],
+                "situation": [
+                  "public road and wayfinding sign"
+                ],
+                "task": [
+                  "expect/use a crossing point; drivers yield/slow where applicable; pedestrians cross here."
+                ],
+                "context_supplies": [
+                  {
+                    "cue": "road/public-wayfinding conventions",
+                    "availability": "REQUIRED",
+                    "evidence_ids": [
+                      "cand-road-08"
+                    ]
+                  },
+                  {
+                    "cue": "sign placement and road-navigation frame",
+                    "availability": "OPTIONAL",
+                    "evidence_ids": [
+                      "cand-road-08"
+                    ]
+                  }
+                ]
+              },
+              "evidence_ids": [
+                "cand-road-08"
+              ]
+            }
+          ]
+        },
+        "change_display": "BEFORE → AFTER"
+      },
+      "accepted_variants": [
+        {
+          "variant_id": "pcd-v01-0028-preferred",
+          "type": "PREFERRED",
+          "message": {
+            "schema": "0.1",
+            "pictiq": "1.1",
+            "frames": [
+              {
+                "tokens": [
+                  {
+                    "type": "icon",
+                    "id": "person_generic"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "move_feet"
+                  }
+                ]
+              }
+            ]
+          },
+          "token_sequence": "person_generic + move_feet",
+          "render": "../renders/pcd-v01-0028-preferred.svg",
+          "mode": [
+            "STANDALONE"
+          ],
+          "surface": [
+            "WAYFINDING"
+          ],
+          "context": [
+            {
+              "communication_mode": "STANDALONE",
+              "communication_surface": "WAYFINDING",
+              "context": {
+                "domain": [
+                  "road-wayfinding"
+                ],
+                "situation": [
+                  "public road and wayfinding sign"
+                ],
+                "task": [
+                  "expect/use a crossing point; drivers yield/slow where applicable; pedestrians cross here."
+                ],
+                "context_supplies": [
+                  {
+                    "cue": "road/public-wayfinding conventions",
+                    "availability": "REQUIRED",
+                    "evidence_ids": [
+                      "cand-road-08"
+                    ]
+                  },
+                  {
+                    "cue": "sign placement and road-navigation frame",
+                    "availability": "OPTIONAL",
+                    "evidence_ids": [
+                      "cand-road-08"
+                    ]
+                  }
+                ]
+              },
+              "evidence_ids": [
+                "cand-road-08"
+              ]
+            }
+          ],
+          "provenance": {
+            "corpus_record_ids": [
+              "clh-v01-0047"
+            ],
+            "creator_review_record_id": "clh-v01-0047",
+            "dictionary_entry_id": "pcd-v01-0028",
+            "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+          },
+          "qa_warning": null,
+          "visible_in_viewer": true
+        }
+      ],
+      "proposed_unaccepted": [],
+      "creator_note": "тут я бы сократил до person_generic + move_feet",
+      "structured_interpretation": "Use PERSON + FEET for the reviewed pedestrian-movement neighborhood; do not imply a crossing-place relation without its token/context.",
+      "scope_warnings": [
+        "SOURCE TASK ≠ CURRENT DICTIONARY SCOPE: source refers to a crossing/crossing point; current entry means pedestrian movement. PERSON + FEET is not an exact general translation of pedestrian crossing."
+      ],
+      "lineage": {
+        "dictionary_entry_id": "pcd-v01-0028",
+        "corpus_record_id": "clh-v01-0047",
+        "candidate_entry_id": "pcd-v01-0028",
+        "source_message": {
+          "schema": "0.1",
+          "pictiq": "1.1",
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "person_generic"
+                },
+                {
+                  "type": "icon",
+                  "id": "move_feet"
+                },
+                {
+                  "type": "icon",
+                  "id": "rel_here"
+                }
+              ]
+            }
+          ]
+        },
+        "source_sequence": "person_generic + move_feet + rel_here",
+        "preferred_message": {
+          "schema": "0.1",
+          "pictiq": "1.1",
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "person_generic"
+                },
+                {
+                  "type": "icon",
+                  "id": "move_feet"
+                }
+              ]
+            }
+          ]
+        },
+        "preferred_sequence": "person_generic + move_feet",
+        "preferred_changed_by_creator_review": true,
+        "authority_path": [
+          "HISTORICAL_COMPOSITION_HARVEST",
+          "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+          "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+          "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+        ],
+        "source_provenance": [
+          {
+            "origin": {
+              "event_id": "origin-clh-v01-0047",
+              "source_type": "ROAD _ WAYFINDING",
+              "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+              "location": "cand-road-08",
+              "role": "ORIGIN",
+              "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+              "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+              "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+            },
+            "uses": [],
+            "creator_review_id": "review-clh-v01-0047",
+            "addendum": null
+          }
+        ],
+        "creator_review_ref": {
+          "export_path": "creator-review-export.json",
+          "corpus_record_id": "clh-v01-0047",
+          "decision": "KEEP_IN_DICTIONARY",
+          "creator_notes_verbatim_in_export": true
+        }
+      },
+      "former_system_review": null,
+      "pending_addendum": null,
+      "recorded_decision": null,
+      "review_state": "UNREVIEWED",
+      "related_pending_entry": null,
+      "previous_metadata": {
+        "headword": "Pedestrian crossing",
+        "semantic_neighbourhood": "Pedestrian crossing or crossing place.",
+        "mode": [
+          "STANDALONE"
+        ],
+        "surface": [
+          "WAYFINDING"
+        ],
+        "context": [
+          {
+            "communication_mode": "STANDALONE",
+            "communication_surface": "WAYFINDING",
+            "context": {
+              "domain": [
+                "road-wayfinding"
+              ],
+              "situation": [
+                "public road and wayfinding sign"
+              ],
+              "task": [
+                "expect/use a crossing point; drivers yield/slow where applicable; pedestrians cross here."
+              ],
+              "context_supplies": [
+                {
+                  "cue": "road/public-wayfinding conventions",
+                  "availability": "REQUIRED",
+                  "evidence_ids": [
+                    "cand-road-08"
+                  ]
+                },
+                {
+                  "cue": "sign placement and road-navigation frame",
+                  "availability": "OPTIONAL",
+                  "evidence_ids": [
+                    "cand-road-08"
+                  ]
+                }
+              ]
+            },
+            "evidence_ids": [
+              "cand-road-08"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0030",
+      "corpus_record_id": "clh-v01-0049",
+      "headword": "No parking",
+      "semantic_neighbourhood": "Parking prohibited.",
+      "badges": [
+        "LOCAL_ORDER_CORRECTION",
+        "PREFERRED_CHANGED"
+      ],
+      "legacy_category_memberships": [
+        "A. PREFERRED MESSAGE CHANGED"
+      ],
+      "current_baseline": {
+        "preferred_message": {
+          "schema": "0.1",
+          "pictiq": "1.1",
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "rel_here"
+                },
+                {
+                  "type": "icon",
+                  "id": "logic_no"
+                },
+                {
+                  "type": "icon",
+                  "id": "move_car"
+                }
+              ]
+            }
+          ]
+        },
+        "preferred_token_sequence": "rel_here + logic_no + move_car",
+        "preferred_render": "../renders/pcd-v01-0030-preferred.svg",
+        "message_profile": null,
+        "mode": [
+          "STANDALONE"
+        ],
+        "surface": [
+          "WAYFINDING"
+        ],
+        "context": [
+          {
+            "communication_mode": "STANDALONE",
+            "communication_surface": "WAYFINDING",
+            "context": {
+              "domain": [
+                "road-wayfinding"
+              ],
+              "situation": [
+                "public road and wayfinding sign"
+              ],
+              "task": [
+                "do not park here."
+              ],
+              "context_supplies": [
+                {
+                  "cue": "road/public-wayfinding conventions",
+                  "availability": "REQUIRED",
+                  "evidence_ids": [
+                    "cand-road-10"
+                  ]
+                },
+                {
+                  "cue": "sign placement and road-navigation frame",
+                  "availability": "OPTIONAL",
+                  "evidence_ids": [
+                    "cand-road-10"
+                  ]
+                }
+              ]
+            },
+            "evidence_ids": [
+              "cand-road-10"
+            ]
+          }
+        ],
+        "known_ambiguity": [
+          "Usually acceptable in road context, but can overread as all cars prohibited here."
+        ],
+        "context_warnings": [
+          "Wayfinding context; preserve the parking-specific reading."
+        ]
+      },
+      "previous_state": {
+        "message": {
+          "schema": "0.1",
+          "pictiq": "1.1",
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "rel_here"
+                },
+                {
+                  "type": "icon",
+                  "id": "move_car"
+                },
+                {
+                  "type": "icon",
+                  "id": "logic_no"
+                }
+              ]
+            }
+          ]
+        },
+        "token_sequence": "rel_here + move_car + logic_no",
+        "render": "../../composition-library-baseline-v0.1/renders/clh-v01-0049.svg",
+        "provenance": [
+          {
+            "origin": {
+              "event_id": "origin-clh-v01-0049",
+              "source_type": "ROAD _ WAYFINDING",
+              "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+              "location": "cand-road-10",
+              "role": "ORIGIN",
+              "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+              "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+              "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+            },
+            "uses": [],
+            "creator_review_id": "review-clh-v01-0049",
+            "addendum": null
+          }
+        ],
+        "metadata": null,
+        "change_display": "BEFORE → AFTER"
+      },
+      "accepted_variants": [
+        {
+          "variant_id": "pcd-v01-0030-preferred",
+          "type": "PREFERRED",
+          "message": {
+            "schema": "0.1",
+            "pictiq": "1.1",
+            "frames": [
+              {
+                "tokens": [
+                  {
+                    "type": "icon",
+                    "id": "rel_here"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "logic_no"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "move_car"
+                  }
+                ]
+              }
+            ]
+          },
+          "token_sequence": "rel_here + logic_no + move_car",
+          "render": "../renders/pcd-v01-0030-preferred.svg",
+          "mode": [
+            "STANDALONE"
+          ],
+          "surface": [
+            "WAYFINDING"
+          ],
+          "context": [
+            {
+              "communication_mode": "STANDALONE",
+              "communication_surface": "WAYFINDING",
+              "context": {
+                "domain": [
+                  "road-wayfinding"
+                ],
+                "situation": [
+                  "public road and wayfinding sign"
+                ],
+                "task": [
+                  "do not park here."
+                ],
+                "context_supplies": [
+                  {
+                    "cue": "road/public-wayfinding conventions",
+                    "availability": "REQUIRED",
+                    "evidence_ids": [
+                      "cand-road-10"
+                    ]
+                  },
+                  {
+                    "cue": "sign placement and road-navigation frame",
+                    "availability": "OPTIONAL",
+                    "evidence_ids": [
+                      "cand-road-10"
+                    ]
+                  }
+                ]
+              },
+              "evidence_ids": [
+                "cand-road-10"
+              ]
+            }
+          ],
+          "provenance": {
+            "corpus_record_ids": [
+              "clh-v01-0049"
+            ],
+            "creator_review_record_id": "clh-v01-0049",
+            "dictionary_entry_id": "pcd-v01-0030",
+            "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+          },
+          "qa_warning": null,
+          "visible_in_viewer": true
+        }
+      ],
+      "proposed_unaccepted": [],
+      "creator_note": "тут бы я поменял местами так rel_here+logic_no+move_car",
+      "structured_interpretation": "Use the creator's exact HERE + NO + CAR order for this no-parking entry; this is a local correction, not a general order rule.",
+      "scope_warnings": [],
+      "lineage": {
+        "dictionary_entry_id": "pcd-v01-0030",
+        "corpus_record_id": "clh-v01-0049",
+        "candidate_entry_id": "pcd-v01-0030",
+        "source_message": {
+          "schema": "0.1",
+          "pictiq": "1.1",
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "rel_here"
+                },
+                {
+                  "type": "icon",
+                  "id": "move_car"
+                },
+                {
+                  "type": "icon",
+                  "id": "logic_no"
+                }
+              ]
+            }
+          ]
+        },
+        "source_sequence": "rel_here + move_car + logic_no",
+        "preferred_message": {
+          "schema": "0.1",
+          "pictiq": "1.1",
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "rel_here"
+                },
+                {
+                  "type": "icon",
+                  "id": "logic_no"
+                },
+                {
+                  "type": "icon",
+                  "id": "move_car"
+                }
+              ]
+            }
+          ]
+        },
+        "preferred_sequence": "rel_here + logic_no + move_car",
+        "preferred_changed_by_creator_review": true,
+        "authority_path": [
+          "HISTORICAL_COMPOSITION_HARVEST",
+          "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+          "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+          "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+        ],
+        "source_provenance": [
+          {
+            "origin": {
+              "event_id": "origin-clh-v01-0049",
+              "source_type": "ROAD _ WAYFINDING",
+              "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+              "location": "cand-road-10",
+              "role": "ORIGIN",
+              "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+              "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+              "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+            },
+            "uses": [],
+            "creator_review_id": "review-clh-v01-0049",
+            "addendum": null
+          }
+        ],
+        "creator_review_ref": {
+          "export_path": "creator-review-export.json",
+          "corpus_record_id": "clh-v01-0049",
+          "decision": "KEEP_IN_DICTIONARY",
+          "creator_notes_verbatim_in_export": true
+        }
+      },
+      "former_system_review": null,
+      "pending_addendum": null,
+      "recorded_decision": null,
+      "review_state": "UNREVIEWED",
+      "related_pending_entry": null,
+      "previous_metadata": null
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0065",
+      "corpus_record_id": "clh-v01-0022",
+      "headword": "When does public transport arrive?",
+      "semantic_neighbourhood": "A question about public-transport arrival time",
+      "badges": [
+        "FOLLOW_UP_RESOLVED",
+        "FORMER_REVIEW",
+        "METADATA_CHANGED",
+        "NEW_RELATED_ENTRY"
+      ],
+      "legacy_category_memberships": [
+        "B. METADATA / MEANING CLARIFIED",
+        "D. FORMER REVIEW → DICTIONARY",
+        "E. FOLLOW-UP REQUIRED"
+      ],
+      "current_baseline": {
+        "preferred_message": {
+          "schema": "0.1",
+          "pictiq": "1.1",
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "move_public"
+                },
+                {
+                  "type": "icon",
+                  "id": "time"
+                },
+                {
+                  "type": "icon",
+                  "id": "punct_question"
+                }
+              ]
+            }
+          ]
+        },
+        "preferred_token_sequence": "move_public + time + punct_question",
+        "preferred_render": "../renders/pcd-v01-0065-preferred.svg",
+        "message_profile": null,
+        "mode": [
+          "STANDALONE"
+        ],
+        "surface": [
+          "BOOK"
+        ],
+        "context": [
+          {
+            "communication_mode": "STANDALONE",
+            "communication_surface": "BOOK",
+            "context": {
+              "domain": [
+                "practical communication"
+              ],
+              "situation": [
+                "published Handbook v1.0 worked example"
+              ],
+              "task": [
+                "public transport schedule / when?"
+              ],
+              "context_supplies": [
+                {
+                  "cue": "Handbook prose / example label supplies the scoped gloss",
+                  "availability": "REQUIRED",
+                  "evidence_ids": [
+                    "cand-handbook-transit-schedule"
+                  ]
+                },
+                {
+                  "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+                  "availability": "OPTIONAL",
+                  "evidence_ids": [
+                    "cand-handbook-transit-schedule"
+                  ]
+                }
+              ]
+            },
+            "evidence_ids": [
+              "cand-handbook-transit-schedule"
+            ]
+          }
+        ],
+        "known_ambiguity": [],
+        "context_warnings": [
+          "Arrival-time question; not a general timetable entry"
+        ]
+      },
+      "previous_state": {
+        "message": null,
+        "token_sequence": null,
+        "render": null,
+        "provenance": {
+          "origin": {
+            "event_id": "origin-clh-v01-0022",
+            "source_type": "HANDBOOK",
+            "reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+            "location": "cand-handbook-transit-schedule",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "5fe3eea1aab10ab51c15727ff2526fb4be42e93ab500edb3a56ee694458b369b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0022",
+          "addendum": null
+        },
+        "metadata": null,
+        "change_display": "CURRENT ONCE; metadata/context details below"
+      },
+      "accepted_variants": [
+        {
+          "variant_id": "pcd-v01-0065-preferred",
+          "type": "PREFERRED",
+          "message": {
+            "schema": "0.1",
+            "pictiq": "1.1",
+            "frames": [
+              {
+                "tokens": [
+                  {
+                    "type": "icon",
+                    "id": "move_public"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "time"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "punct_question"
+                  }
+                ]
+              }
+            ]
+          },
+          "token_sequence": "move_public + time + punct_question",
+          "render": "../renders/pcd-v01-0065-preferred.svg",
+          "mode": [
+            "STANDALONE"
+          ],
+          "surface": [
+            "BOOK"
+          ],
+          "context": [
+            {
+              "communication_mode": "STANDALONE",
+              "communication_surface": "BOOK",
+              "context": {
+                "domain": [
+                  "practical communication"
+                ],
+                "situation": [
+                  "published Handbook v1.0 worked example"
+                ],
+                "task": [
+                  "public transport schedule / when?"
+                ],
+                "context_supplies": [
+                  {
+                    "cue": "Handbook prose / example label supplies the scoped gloss",
+                    "availability": "REQUIRED",
+                    "evidence_ids": [
+                      "cand-handbook-transit-schedule"
+                    ]
+                  },
+                  {
+                    "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+                    "availability": "OPTIONAL",
+                    "evidence_ids": [
+                      "cand-handbook-transit-schedule"
+                    ]
+                  }
+                ]
+              },
+              "evidence_ids": [
+                "cand-handbook-transit-schedule"
+              ]
+            }
+          ],
+          "provenance": {
+            "corpus_record_ids": [
+              "clh-v01-0022"
+            ],
+            "creator_review_record_id": "clh-v01-0022",
+            "dictionary_entry_id": "pcd-v01-0065",
+            "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+          },
+          "qa_warning": null,
+          "visible_in_viewer": true
+        }
+      ],
+      "proposed_unaccepted": [],
+      "creator_note": "тут я бы внес коррективу - это сочетание скорее когда прибывает поезд? для \"Public transport schedule / when?\" я бы после поезда добавил бы еще иконку \"text\"",
+      "structured_interpretation": "Arrival time remains distinct from a separate timetable request; the supplied timetable sequence is recorded as a pending new entry.",
+      "scope_warnings": [],
+      "lineage": {
+        "dictionary_entry_id": "pcd-v01-0065",
+        "corpus_record_id": "clh-v01-0022",
+        "candidate_entry_id": null,
+        "source_message": {
+          "schema": "0.1",
+          "pictiq": "1.1",
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "move_public"
+                },
+                {
+                  "type": "icon",
+                  "id": "time"
+                },
+                {
+                  "type": "icon",
+                  "id": "punct_question"
+                }
+              ]
+            }
+          ]
+        },
+        "source_sequence": "move_public + time + punct_question",
+        "preferred_message": {
+          "schema": "0.1",
+          "pictiq": "1.1",
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "move_public"
+                },
+                {
+                  "type": "icon",
+                  "id": "time"
+                },
+                {
+                  "type": "icon",
+                  "id": "punct_question"
+                }
+              ]
+            }
+          ]
+        },
+        "preferred_sequence": "move_public + time + punct_question",
+        "preferred_changed_by_creator_review": false,
+        "authority_path": [
+          "HISTORICAL_COMPOSITION_HARVEST",
+          "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+          "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+          "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+        ],
+        "source_provenance": {
+          "origin": {
+            "event_id": "origin-clh-v01-0022",
+            "source_type": "HANDBOOK",
+            "reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+            "location": "cand-handbook-transit-schedule",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "5fe3eea1aab10ab51c15727ff2526fb4be42e93ab500edb3a56ee694458b369b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0022",
+          "addendum": null
+        },
+        "creator_review_ref": {
+          "export_path": "creator-review-export.json",
+          "corpus_record_id": "clh-v01-0022",
+          "decision": "KEEP_IN_DICTIONARY",
+          "creator_notes_verbatim_in_export": true
+        }
+      },
+      "former_system_review": {
+        "eligibility": "REVIEW",
+        "candidate_entry_id": null,
+        "former_question": "The accepted sequence combines public transport, time and a question; decide whether the intended schedule/when reading is sufficiently bounded for a public entry."
+      },
+      "pending_addendum": {
+        "state": "RECORDED_FROM_CURRENT_CREATOR_QA",
+        "related_entry_id": "qa-new-public-transport-timetable",
+        "related_entry_status": "CREATOR-APPROVED / PENDING BASELINE APPLICATION"
+      },
+      "recorded_decision": "ACCEPT_AS_SHOWN",
+      "review_state": "RECORDED_FROM_CURRENT_CREATOR_QA",
+      "related_pending_entry": {
+        "temporary_qa_id": "qa-new-public-transport-timetable",
+        "headword": "Public transport schedule / timetable",
+        "meaning": "Public transport + textual/information schedule + time/question.",
+        "message": {
+          "schema": "0.1",
+          "pictiq": "1.1",
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "move_public"
+                },
+                {
+                  "type": "icon",
+                  "id": "media_text"
+                },
+                {
+                  "type": "icon",
+                  "id": "time"
+                },
+                {
+                  "type": "icon",
+                  "id": "punct_question"
+                }
+              ]
+            }
+          ]
+        },
+        "token_sequence": "move_public + media_text + time + punct_question",
+        "render": "previews/qa-new-public-transport-timetable.svg",
+        "status": "CREATOR-APPROVED / PENDING BASELINE APPLICATION",
+        "provenance": "CREATOR_FINAL_QA"
+      },
+      "previous_metadata": null
+    }
+  ],
+  "qa_dataset_sha256": "088da1591c833f3a0a979bd0d5814bee2ea45ad2ec36ebca7615de6ba13d4f90"
+}
