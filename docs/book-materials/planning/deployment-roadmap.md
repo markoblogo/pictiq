@@ -177,3 +177,16 @@ The five supplied cross-model transcripts have been analyzed, but they describe 
 ## Parallel knowledge-infrastructure architecture — 2026-09-27
 
 The [Composition Library v0.1](../concepts/composition-library.md) and [future Translator architecture](../concepts/pictiq-translator-architecture.md) are documented as proposals only. They form a parallel knowledge-infrastructure / future product-architecture track, not an implementation commitment. The Composition Library is not a vocabulary registry, and the Translator is not implemented. Do not displace, alter, or wait on this work to resume the active controlled research experiment: Stress Test 07.1 remains **PREPARED / NOT EXECUTED**. Production cases remain their own evidence track.
+
+
+## Composition Library architecture rotation — 2026-09-27
+
+This dated status supersedes the earlier “Parallel knowledge-infrastructure architecture” note below for current execution order. It changes planning only; it does not erase or alter Stress Test 07.1 materials.
+
+- **ACTIVE:** Composition Library architecture and Historical Harvest preparation.
+- **NEXT:** Historical Composition Harvest, then human reconciliation.
+- **THEN:** Practical Coverage Corpus → Composer coverage pass → Frequency / Semantic Coverage → Translator Spike → Agent Retrieval Stress Test → return to Stress Test 07.1.
+- **PAUSED / PRESERVED:** Stress Test 07.1 — `PAUSED / PRESERVED / RETURN AFTER COMPOSITION-LIBRARY ROTATION`. Resume from the frozen package, with human-approved visual assets; automation may package approved assets byte-for-byte, strip metadata if required, assign neutral delivery names, hash, and manifest them. It must not redraw, reconstruct, optimize, or reinterpret stimuli. Preserve hypotheses, prompts, coding rules, assets, hashes, and forensic history.
+- **DEFERRED:** Claude airport corpus pending its separate future scope; human recruitment/games remain in their existing deferred state. No release promise follows from this working order.
+
+The Historical Harvest is preparation-only in the current pass; the dedicated next task performs the harvest.

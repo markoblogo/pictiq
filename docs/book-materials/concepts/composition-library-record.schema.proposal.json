@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Pictiq Composition Library Record v0.1 Proposal (Not Implemented)",
-  "description": "Discussion-only proposal. Not a production registry or CI schema. Reuses the existing Pictiq Message Format for pictiq_message.",
+  "description": "Discussion-only proposal. Not a production registry or CI schema. Reuses the existing Pictiq Message Format for pictiq_message. One record is one exact Message under an evidenced communication mode/surface context; related records can share an intent ID without merging messages.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -10,7 +10,7 @@
     "lifecycle_status",
     "pictiq_message",
     "semantic_neighbourhoods",
-    "context",
+    "applicability",
     "preservation_assessments",
     "origin",
     "uses",
@@ -19,131 +19,482 @@
     "compatibility"
   ],
   "properties": {
-    "record_schema": { "const": "composition-record-v0.1-proposal" },
-    "composition_id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
-    "lifecycle_status": {
-      "enum": ["CANDIDATE", "EXPERIMENTAL", "HUMAN_ACCEPTED", "NORMATIVE_EXAMPLE", "REJECTED", "DEPRECATED"]
+    "record_schema": {
+      "const": "composition-record-v0.1-proposal"
     },
-    "pictiq_message": { "$ref": "../../../spec/pictiq-message.schema.json" },
+    "composition_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "lifecycle_status": {
+      "enum": [
+        "CANDIDATE",
+        "EXPERIMENTAL",
+        "HUMAN_ACCEPTED",
+        "NORMATIVE_EXAMPLE",
+        "REJECTED",
+        "DEPRECATED"
+      ]
+    },
+    "pictiq_message": {
+      "$ref": "../../../spec/pictiq-message.schema.json"
+    },
     "semantic_neighbourhoods": {
       "type": "array",
       "minItems": 1,
-      "items": { "$ref": "#/$defs/semanticNeighbourhood" }
+      "items": {
+        "$ref": "#/$defs/semanticNeighbourhood"
+      }
     },
-    "context": { "$ref": "#/$defs/context" },
+    "context": {
+      "$ref": "#/$defs/context"
+    },
     "preservation_assessments": {
       "description": "Existing research assessment labels; do not interpret as Grammar tokens or Message Schema fields.",
       "type": "array",
       "items": {
-        "enum": ["PRESERVED_EXPLICITLY", "PRESERVED_BY_COMPOSITION", "CONTEXT-SUFFICIENT", "INTENTIONAL_OMISSION", "LOSSY", "GAP", "OUT-OF-SCOPE", "EMBODIED-OMITTABLE", "STANDALONE-GAP"]
+        "enum": [
+          "PRESERVED_EXPLICITLY",
+          "PRESERVED_BY_COMPOSITION",
+          "CONTEXT-SUFFICIENT",
+          "INTENTIONAL_OMISSION",
+          "LOSSY",
+          "GAP",
+          "OUT-OF-SCOPE",
+          "EMBODIED-OMITTABLE",
+          "STANDALONE-GAP"
+        ]
       },
       "uniqueItems": true
     },
-    "origin": { "$ref": "#/$defs/provenanceEvent" },
-    "uses": { "type": "array", "items": { "$ref": "#/$defs/provenanceEvent" } },
-    "tests": { "type": "array", "items": { "$ref": "#/$defs/provenanceEvent" } },
-    "failures": { "type": "array", "items": { "$ref": "#/$defs/failureEvent" } },
-    "compatibility": { "$ref": "#/$defs/compatibility" },
-    "related_composition_ids": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
-    "created_at": { "type": "string", "format": "date-time" },
-    "accepted_at": { "type": "string", "format": "date-time" },
-    "notes": { "type": "array", "items": { "type": "string" } }
+    "origin": {
+      "$ref": "#/$defs/provenanceEvent"
+    },
+    "uses": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/provenanceEvent"
+      }
+    },
+    "tests": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/provenanceEvent"
+      }
+    },
+    "failures": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/failureEvent"
+      }
+    },
+    "compatibility": {
+      "$ref": "#/$defs/compatibility"
+    },
+    "related_composition_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "accepted_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "applicability": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Evidence-scoped applicability of this exact Message. Multiple entries allow one exact composition to be reused in distinct mode/surface/context combinations without conflating those conditions.",
+      "items": {
+        "$ref": "#/$defs/applicability"
+      }
+    }
   },
   "$defs": {
     "semanticNeighbourhood": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["intent_id", "canonical_intent", "semantic_examples", "required_context", "optional_context", "known_ambiguities"],
+      "required": [
+        "intent_id",
+        "canonical_intent",
+        "semantic_examples",
+        "required_context",
+        "optional_context",
+        "known_ambiguities",
+        "coverage_assessments"
+      ],
       "properties": {
-        "intent_id": { "type": "string" },
-        "canonical_intent": { "type": "string", "minLength": 1 },
-        "semantic_examples": { "type": "array", "items": { "type": "string" } },
-        "required_context": { "$ref": "#/$defs/contextCues" },
-        "optional_context": { "$ref": "#/$defs/contextCues" },
-        "known_ambiguities": { "type": "array", "items": { "type": "string" } },
-        "interpretation_evidence_ids": { "type": "array", "items": { "type": "string" } }
+        "intent_id": {
+          "type": "string",
+          "description": "Shared reference may link multiple exact composition records across modes and surfaces; it is not a canonical translation ID."
+        },
+        "canonical_intent": {
+          "type": "string",
+          "minLength": 1
+        },
+        "semantic_examples": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "required_context": {
+          "$ref": "#/$defs/contextCues"
+        },
+        "optional_context": {
+          "$ref": "#/$defs/contextCues"
+        },
+        "known_ambiguities": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "interpretation_evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "coverage_assessments": {
+          "type": "array",
+          "description": "Mode/surface-scoped finding can represent supported, lossy, gap, out-of-scope, or unknown status even where no exact composition exists for that condition.",
+          "items": {
+            "$ref": "#/$defs/coverageAssessment"
+          }
+        }
       }
     },
     "context": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["communication_mode"],
       "properties": {
-        "communication_mode": { "enum": ["EMBODIED", "STANDALONE"] },
-        "domain": { "type": "array", "items": { "type": "string" } },
-        "situation": { "type": "array", "items": { "type": "string" } },
-        "interaction": { "type": "array", "items": { "type": "string" } },
-        "audience": { "type": "array", "items": { "type": "string" } },
-        "task": { "type": "array", "items": { "type": "string" } },
-        "context_supplies": { "$ref": "#/$defs/contextCues" }
-      }
+        "domain": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "situation": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "audience": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "task": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "context_supplies": {
+          "$ref": "#/$defs/contextCues"
+        },
+        "interaction": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Descriptive interaction pattern, distinct from the communication surface."
+        }
+      },
+      "description": "Open context description; the mode and surface are represented per applicability entry."
     },
     "contextCues": {
       "type": "array",
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["cue", "availability"],
+        "required": [
+          "cue",
+          "availability"
+        ],
         "properties": {
-          "cue": { "type": "string" },
-          "availability": { "enum": ["REQUIRED", "OPTIONAL", "ABSENT", "UNKNOWN"] },
-          "evidence_ids": { "type": "array", "items": { "type": "string" } },
-          "notes": { "type": "string" }
+          "cue": {
+            "type": "string"
+          },
+          "availability": {
+            "enum": [
+              "REQUIRED",
+              "OPTIONAL",
+              "ABSENT",
+              "UNKNOWN"
+            ]
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "notes": {
+            "type": "string"
+          }
         }
       }
     },
     "provenanceEvent": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["event_id", "source_type", "reference", "role"],
+      "required": [
+        "event_id",
+        "source_type",
+        "reference",
+        "role"
+      ],
       "properties": {
-        "event_id": { "type": "string" },
-        "source_type": { "type": "string", "description": "Extensible examples: GRAMMAR, PROTOCOL, HANDBOOK, STRESS_TEST, EDITORIAL_CASE, LANDING, WEB_UI, ROAD_WAYFINDING, ODYSSEY, COMPOSER_EXAMPLE, HUMAN_REVIEW, PRODUCTION_DEPLOYMENT." },
-        "reference": { "type": "string" },
-        "location": { "type": "string" },
-        "role": { "enum": ["ORIGIN", "USE", "TEST"] },
-        "event_date": { "type": "string", "format": "date" },
-        "pictiq_version": { "type": "string" },
-        "message_schema_version": { "type": "string" },
-        "git_commit": { "type": "string" },
-        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
-        "status": { "type": "string" },
-        "notes": { "type": "string" }
+        "event_id": {
+          "type": "string"
+        },
+        "source_type": {
+          "type": "string",
+          "description": "Extensible examples: GRAMMAR, PROTOCOL, HANDBOOK, STRESS_TEST, EDITORIAL_CASE, LANDING, WEB_UI, ROAD_WAYFINDING, ODYSSEY, COMPOSER_EXAMPLE, HUMAN_REVIEW, PRODUCTION_DEPLOYMENT."
+        },
+        "reference": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "role": {
+          "enum": [
+            "ORIGIN",
+            "USE",
+            "TEST"
+          ]
+        },
+        "event_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "pictiq_version": {
+          "type": "string"
+        },
+        "message_schema_version": {
+          "type": "string"
+        },
+        "git_commit": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "status": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        }
       }
     },
     "failureEvent": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["event_id", "source_type", "reference", "role", "observed_interpretation", "failure_type", "disposition"],
+      "required": [
+        "event_id",
+        "source_type",
+        "reference",
+        "role",
+        "observed_interpretation",
+        "failure_type",
+        "disposition"
+      ],
       "properties": {
-        "event_id": { "type": "string" },
-        "source_type": { "type": "string" },
-        "reference": { "type": "string" },
-        "location": { "type": "string" },
-        "role": { "const": "FAILURE" },
-        "event_date": { "type": "string", "format": "date" },
-        "pictiq_version": { "type": "string" },
-        "message_schema_version": { "type": "string" },
-        "git_commit": { "type": "string" },
-        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
-        "status": { "type": "string" },
-        "notes": { "type": "string" },
-        "observed_interpretation": { "type": "string" },
-        "failure_type": { "type": "string" },
-        "disposition": { "enum": ["REJECTED", "AMBIGUOUS", "NEEDS_CONTEXT", "LOSSY", "SUPERSEDED", "UNRESOLVED"] }
+        "event_id": {
+          "type": "string"
+        },
+        "source_type": {
+          "type": "string"
+        },
+        "reference": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "role": {
+          "const": "FAILURE"
+        },
+        "event_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "pictiq_version": {
+          "type": "string"
+        },
+        "message_schema_version": {
+          "type": "string"
+        },
+        "git_commit": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "status": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "observed_interpretation": {
+          "type": "string"
+        },
+        "failure_type": {
+          "type": "string"
+        },
+        "disposition": {
+          "enum": [
+            "REJECTED",
+            "AMBIGUOUS",
+            "NEEDS_CONTEXT",
+            "LOSSY",
+            "SUPERSEDED",
+            "UNRESOLVED"
+          ]
+        }
       }
     },
     "compatibility": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["pictiq_version", "message_schema_version", "source_commit", "message_validity"],
+      "required": [
+        "pictiq_version",
+        "message_schema_version",
+        "source_commit",
+        "message_validity"
+      ],
       "properties": {
-        "pictiq_version": { "type": "string" },
-        "message_schema_version": { "type": "string" },
-        "source_commit": { "type": "string" },
-        "message_validity": { "enum": ["CURRENT", "HISTORICAL", "REVIEW_REQUIRED", "UNKNOWN"] },
-        "legacy_or_deprecated_ids": { "type": "array", "items": { "type": "string" } },
-        "compatibility_notes": { "type": "array", "items": { "type": "string" } }
+        "pictiq_version": {
+          "type": "string"
+        },
+        "message_schema_version": {
+          "type": "string"
+        },
+        "source_commit": {
+          "type": "string"
+        },
+        "message_validity": {
+          "enum": [
+            "CURRENT",
+            "HISTORICAL",
+            "REVIEW_REQUIRED",
+            "UNKNOWN"
+          ]
+        },
+        "legacy_or_deprecated_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "compatibility_notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "applicability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "communication_mode",
+        "communication_surface",
+        "context",
+        "evidence_ids"
+      ],
+      "properties": {
+        "communication_mode": {
+          "enum": [
+            "EMBODIED",
+            "STANDALONE"
+          ]
+        },
+        "communication_surface": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Extensible label; illustrative values include LIVE_INTERACTION, BOOK, COMIC, SIGN, UI, PORTABLE_CARD, LOCKSCREEN, LABEL, STICKER, WAYFINDING, OTHER."
+        },
+        "context": {
+          "$ref": "#/$defs/context"
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      }
+    },
+    "coverageAssessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "communication_mode",
+        "communication_surface",
+        "outcome",
+        "evidence_ids"
+      ],
+      "properties": {
+        "communication_mode": {
+          "enum": [
+            "EMBODIED",
+            "STANDALONE"
+          ]
+        },
+        "communication_surface": {
+          "type": "string",
+          "minLength": 1
+        },
+        "outcome": {
+          "enum": [
+            "SUPPORTED",
+            "LOSSY",
+            "GAP",
+            "OUT-OF-SCOPE",
+            "UNKNOWN"
+          ]
+        },
+        "composition_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "notes": {
+          "type": "string"
+        }
       }
     }
   }

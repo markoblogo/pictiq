@@ -1,7 +1,7 @@
 # Pictiq Composition Library v0.1 — architecture concept
 
 > **Status:** research / knowledge-infrastructure proposal; not implemented, not normative, not a vocabulary source.
-> **Current controlled research remains:** Stress Test 07.1 — `PREPARED / NOT EXECUTED`.
+> **Current controlled research status:** Stress Test 07.1 — `PAUSED / PRESERVED / RETURN AFTER COMPOSITION-LIBRARY ROTATION`.
 
 ## Purpose and boundary
 
@@ -47,18 +47,26 @@ Do not overload assessment with method. A message may use direct tiles and also 
 
 ## Composition records and semantic neighborhoods
 
-The proposed record model is in the [machine-readable record schema proposal](composition-library-record.schema.proposal.json). The schema is a discussion artifact only; it is not used by CI and does not authorize a production registry.
+The proposed record model is in the [machine-readable record schema proposal](composition-library-record.schema.proposal.json). Each exact-message record may have multiple evidence-scoped `applicability` entries, each pairing one mode, one extensible surface, structured context, and evidence. A shared intent neighbourhood may carry coverage findings by mode/surface, including LOSSY or GAP when no exact composition exists. The schema is a discussion artifact only; it is not used by CI and does not authorize a production registry.
 
-One record represents one exact Pictiq Message (including its Message Schema form, frames, Entity Symbol namespace, and formal numeric tokens where present) in one compatibility context. It can support multiple **context-bounded semantic neighborhoods**. This avoids duplicating a record for every English paraphrase while preserving ambiguity limits. Different compositions that serve approximately the same intent in different contexts remain separate records and may be cross-linked. The relationship is many-to-many:
+One record represents one exact Pictiq Message (including its Message Schema form, frames, Entity Symbol namespace, and formal numeric tokens where present) with its evidenced mode, surface, and compatibility context. It can support multiple **context-bounded semantic neighborhoods**. This avoids duplicating a record for every English paraphrase while preserving ambiguity limits. Different compositions that serve approximately the same intent in different contexts remain separate records and may be cross-linked. A shared intent/neighbourhood reference links records; it does not make their messages interchangeable. The relationship is many-to-many:
 
 ```text
-one intent neighborhood → one or more context-compatible compositions
-one composition → one or more supported, context-bounded interpretations
+one semantic intent/neighborhood → one or more exact composition records
+one exact composition → one or more supported, context-bounded interpretations
 ```
 
 For example, a sequence such as `WATER + punct_question` might, depending on the named context and evidence, support “Water?”, “Do you have water?”, or “Is water available?” A library must not flatten those into three fixed word-for-word translations or claim they are interchangeable everywhere. It should record what context supports each reading, the evidence for that reading, and any unresolved ambiguities.
 
 `semantic_examples` are examples of intended communicative meaning, not canonical English glosses. Keep **SOURCE TEXT**, **SEMANTIC INTENT**, **COMPOSITION RECORD**, **PICTIQ MESSAGE JSON**, **AUTHORING SHORTHAND**, and **RENDERED SVG/PNG** as separate layers. Reuse the existing [Pictiq Message Schema](../../../spec/pictiq-message.schema.json) for the actual message; do not invent a second Pictiq syntax.
+
+## One intent across modes and surfaces
+
+Mode and surface are separate: `EMBODIED` / `STANDALONE` says whether a live communicator/body/situation supplies meaning; `LIVE_INTERACTION`, `BOOK`, `COMIC`, `SIGN`, `UI`, `PORTABLE_CARD`, `LOCKSCREEN`, `LABEL`, `STICKER`, `WAYFINDING`, and `OTHER` say where/how a representation is consumed. Surface labels are extensible examples, not a closed enum. A book/comic remains STANDALONE even when its illustration, panel order, speaker, known character, prior turn, or scene supplies context.
+
+The record model supports the required cases without treating records as translations: (A) one exact Message can have multiple evidence-scoped applicability entries; (B) compact EMBODIED and expanded STANDALONE Messages are separate records linked by the same intent/neighbourhood; (C) neighborhood coverage findings can mark one mode/surface SUPPORTED and another LOSSY/GAP; (D) BOOK and SIGN can have separate applicability contexts or linked compositions; (E) one exact composition can link to several context-bounded semantic neighborhoods; (F) competing candidate Messages remain separate records with separate evidence histories. These are model capabilities, not populated examples or accepted translations.
+
+Mode-aware coverage distinguishes “can express this intent?” from “can express it under this mode + surface + context?” It can record a gap even when no exact composition exists, without manufacturing a placeholder Message.
 
 ## Context is structured and open-ended
 
@@ -68,12 +76,13 @@ Context is first-class, not one free-form tag. Proposed dimensions are extensibl
 |---|---|
 | `domain` | travel, airport, road, food, web-ui, fiction, Odyssey |
 | `situation` | border inspection, restaurant order, book scene, settings dialog |
-| `interaction` | live-dialogue, sign, book, UI, portable-card |
 | `communication_mode` | `EMBODIED`, `STANDALONE` (existing Protocol distinction) |
+| `communication_surface` | `LIVE_INTERACTION`, `BOOK`, `COMIC`, `SIGN`, `UI`, `PORTABLE_CARD`, `LOCKSCREEN`, `LABEL`, `STICKER`, `WAYFINDING`, `OTHER` (extensible examples) |
+| `interaction` | turn-taking, pointing, display, reading, scanning (descriptive, not the surface field) |
 | `audience` | traveler, reader, staff member, machine |
 | `task` | ask for help, identify a referent, preserve an event sequence |
 
-Record `REQUIRED_CONTEXT` separately from `OPTIONAL_CONTEXT`. Also record what the context actually supplies (`CONTEXT_SUPPLIES`): visible object, shared place, gesture, gaze, current transaction, speaker identity, previous turn, illustration/panel, surrounding UI, or established narrative context. Each supplied cue should point to the source/evidence establishing its availability; an imagined “common ground” is not evidence.
+Record `REQUIRED_CONTEXT` separately from `OPTIONAL_CONTEXT`. Also record what the context actually supplies (`context_supplies`): visible referent, pointing, gesture, gaze, speaker/listener identity, shared location, current transaction, previous turn, UI state, illustration/panel, narrative scene, established character identity, sign placement/direction, or held object. Each supplied cue should point to evidence establishing availability; an imagined “common ground” is not evidence. `communication_mode` answers whether communicator/body/shared live situation is available; `communication_surface` answers where/how the representation persists and is consumed. BOOK/COMIC remain `STANDALONE` even when panel, character, and prior-turn context supports a shorter message.
 
 Where a context is essential, a message may be unsafe or unintelligible outside that context. Context Packs constrain available vocabulary and conventions but do not by themselves prove that a receiver knows the situation. The `profile`/`contexts` fields of a Pictiq Message remain governed by Message Schema; library context metadata adds provenance and retrieval constraints only.
 
@@ -137,6 +146,14 @@ Principle: **HARVEST BEFORE GENERATE.** Do not mass-populate this proposal. A fu
 | Editorial Case 002 — Good Dog, Bad System | `NOT SAFE TO HARVEST` as exact messages at current provenance | Semantic dialogue, speaker boundaries, Composer sheets, and flattened art are preserved, but per-turn Composer block mapping is unresolved. Record source/reference links and unresolved status, not invented compositions. |
 
 The bounded first batch should select about 20–40 **records only if provenance permits**, beginning with normative examples and explicit accepted Road/Web/UI/Landing compositions, plus exact fixtures paired with semantic source. This pass creates no batch and no registry.
+
+## Mode-aware coverage, machine access, and workflows
+
+Coverage must distinguish “can express this intent?” from “can express it under this mode + surface + context?” The same intent can have the same message in both modes, a compact EMBODIED and expanded STANDALONE message, or a supported EMBODIED form and STANDALONE `LOSSY`/`GAP`. BOOK and SIGN may need distinct standalone records when each supplies different context. Several candidate records may coexist with separate evidence/failure histories; identical messages can also support several named-context neighbourhoods. Coverage counts are not computed in this proposal.
+
+A future machine/agent layer retrieves authoritative Lexicon primitives, exact Library records, Message JSON, evidence, and canonical assets; it does not become another semantic registry. Forward translation is intent → resolve mode/surface/context → Library retrieval → Lexicon/Grammar fallback → validation → canonical render → human decision. Reverse/reference lookup prefers Message JSON or provenance sidecar, then structured export and canonical IDs/hashes, then visual matching; unconstrained vision is last-resort candidate evidence, never canonical identification by itself.
+
+AI may reason about or propose semantics, but must not synthesize or redraw canonical glyph artwork when canonical assets exist. Canonical visual output comes from canonical SVGs, deterministic Renderer output, or preserved immutable Composer/Renderer exports. Discoverability does not grant reuse rights. A future Composer sidecar such as `dialogue-03.pictiq.json` may link existing Message JSON with stable block/frame/source-turn IDs, speaker, mode, surface, context, placement, version, and hashes without duplicating message authority. Case 002 demonstrates the need: semantic dialogue and source sheets exist, but exact per-turn Composer-block mapping remains unresolved; do not infer it from flattened art. See [Machine / Agent Access](pictiq-machine-agent-access.md).
 
 ## Future coverage metrics and public surface
 

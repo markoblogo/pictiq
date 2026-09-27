@@ -1,5 +1,28 @@
 # Research journal
 
+## 2026-09-27 — Composition Library architecture follow-up: surfaces and machine access
+
+### What changed in the research architecture
+
+The Composition Library now distinguishes communicative intent, existing `EMBODIED` / `STANDALONE` mode, extensible communication surface, context, and evidence. One intent may link multiple exact Message records; no universal phrase-to-composition mapping is assumed. `context_supplies` remains explicit and evidence-backed. Narrative BOOK/COMIC remains STANDALONE while allowing illustration, panel, speaker, character, prior turn, and scene context. Coverage is a mode/surface/context question; no current coverage values were computed.
+
+A future Machine / Agent Access concept defines retrieval boundaries over the Lexicon, exact Library records, Message Schema, Grammar, canonical assets, validators, and Renderer. Forward translation resolves mode/surface/context before retrieval and can stop at LOSSY/GAP. Reverse lookup prefers Message JSON/sidecar and structured provenance before visual inference. AI must not redraw canonical glyphs. A Composer sidecar and single future machine entry point are concepts only; technical discoverability does not grant license rights. Case 002's exact per-turn mapping remains unresolved.
+
+The future Agent Retrieval Stress Test is planned, not run. Historical Harvest preparation is ready to proceed; no records were harvested. The roadmap rotation is ACTIVE architecture/harvest preparation → NEXT Historical Harvest → human reconciliation → Practical Coverage Corpus → Composer coverage → Frequency/Semantic Coverage → Translator Spike → Agent Retrieval Stress Test → return to 07.1. Stress Test 07.1 is `PAUSED / PRESERVED / RETURN AFTER COMPOSITION-LIBRARY ROTATION`; its frozen package was not changed.
+
+The Lexicon index/schema mismatch remains separate technical debt: some fields are outside the strict schema and current validation ignores extras. It was recorded as a future narrow repair, not changed here. No registry, Translator, API/MCP, new vocabulary, or product behavior was implemented.
+
+### Evidence
+
+[Composition Library concept](concepts/composition-library.md), [record schema proposal](concepts/composition-library-record.schema.proposal.json), [Translator architecture](concepts/pictiq-translator-architecture.md), [Machine / Agent Access concept](concepts/pictiq-machine-agent-access.md), [Agent Retrieval Stress Test plan](../research/pictiq-agent-retrieval-stress-test-plan.md), [Historical Harvest preparation](research/composition-library-historical-harvest-plan.md), and [deployment roadmap](planning/deployment-roadmap.md).
+
+### Decision / status
+
+`Pictiq Composition Library v0.1 — ARCHITECTURE EXTENDED / READY FOR HISTORICAL HARVEST`. `Pictiq Machine / Agent Access — ARCHITECTURE DEFINED / NOT IMPLEMENTED`. `Pictiq Translator — ARCHITECTURE EXTENDED / NOT IMPLEMENTED`. `Pictiq Agent Retrieval Stress Test — PLANNED / NOT RUN`. `Stress Test 07.1 — PAUSED / PRESERVED / RETURN AFTER COMPOSITION-LIBRARY ROTATION`.
+
+---
+
+
 Chronological notes reconstructed from repository evidence. Interpretive statements are marked as such; dates follow commit or release history when a separate event date is unavailable.
 
 ## 2026-09-27 — External repository review and licensing terminology audit

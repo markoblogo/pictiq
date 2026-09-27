@@ -1,6 +1,7 @@
 # Pictiq Translator — future architecture proposal
 
 > **Status:** future architecture only; not implemented, benchmarked, or accepted as product behavior.
+> **Research rotation:** Stress Test 07.1 is paused and preserved; it is not cancelled.
 > **Boundary:** the Translator assists a human; it is not a language authority. It does not change Message Schema, Grammar, Lexicon, Composer, Renderer, production landing, or licenses.
 
 ## Architecture constraint
@@ -21,11 +22,13 @@ It should follow existing `MEANING-BEFORE-WORDING`, `PRIORITY-FIRST COMMUNICATIO
 ```text
 Natural-language / dialogue / narrative / UI / structured intent
     ↓
-Input profile + explicit context (inferred context remains marked as an assumption)
+Resolve communicative intent + receiver/task + `EMBODIED` / `STANDALONE` mode
+    ↓
+Resolve communication surface + available context (unknown material constraints trigger a question, alternatives, or explicit assumptions)
     ↓
 Segmentation → semantic intent units → action / priority analysis
     ↓
-Composition Library retrieval (intent + context + evidence)
+Composition Library retrieval (intent + mode + surface + context + evidence)
     ↓ on miss
 Lexicon + Grammar constrained candidate generation
     ↓
@@ -74,7 +77,7 @@ Implementation-neutral retrieval should consider, in order:
 
 No embedding model, vector database, LLM, RAG stack, or vendor is selected. Retrieval should consider semantic fit, context compatibility, source quality, lifecycle, current validity, known ambiguity, tests/uses, and known failures. A failed candidate must not become the default due to lexical similarity. `PRODUCTION_USED + TESTED` would usually supply different evidence from `GENERATED_CANDIDATE`, but there is no numeric scoring formula proposed.
 
-The system may return multiple candidates. For each, show the rendered message, semantic interpretation/neighborhood, context assumptions and cues, lifecycle/evidence, known uses/failures, preservation assessment, and unresolved uncertainty. Human selection and repair are first-class. Do not silently choose among semantically different candidates.
+The system may return multiple candidates, including different exact messages for the same intent across mode/surface contexts. For each, show semantic neighborhood, exact Message JSON, canonical render reference, mode/surface match, context supplies/assumptions, lifecycle/evidence, uses/failures, preservation assessment, and uncertainty. Human selection and repair are first-class. Unknown mode/surface must not silently default to live or standalone: ask, offer alternatives, or label assumptions.
 
 ## Candidate outcomes (proposed Translator API, not protocol enums)
 
@@ -94,7 +97,7 @@ These labels would report a translation attempt. They are not new Grammar, Messa
 
 ## Vocabulary-pressure loop
 
-When translation fails, use the accepted sequence: (1) search known compositions; (2) try existing primitives; (3) try current composition; (4) test named context and action-relevant polysemy; (5) consider intentional omission; (6) label meaningful loss; (7) identify a true gap; and (8) only then emit vocabulary pressure. Vocabulary creation remains a separate, human-governed NEED-BEFORE-VOCABULARY process. A Translator never creates a canonical icon or ID.
+When translation fails, use the accepted sequence: (1) search known compositions; (2) try existing primitives; (3) try current composition; (4) test named context and action-relevant polysemy; (5) consider intentional omission; (6) label meaningful loss; (7) identify a true gap; and (8) only then emit vocabulary pressure. Vocabulary creation remains a separate, human-governed NEED-BEFORE-VOCABULARY process. A Translator never creates a canonical icon or ID. Composition Library lookup is retrieval memory, not a license to treat a near match as established.
 
 ## Safety and authority
 
@@ -116,7 +119,7 @@ SOURCE INTENT
 
 `GENERATED_CANDIDATE → HUMAN_ACCEPTED → PRODUCTION_USED → TESTED` is one possible sequence, not a mandatory pipeline. Evidence may arrive in another order, and each event has a different meaning. A generated candidate never automatically becomes accepted. Human acceptance is scoped to a use; production use records that it appeared in a product; a test records its method and result. The Composition Library human-governed lifecycle decides what status follows.
 
-Future Composer integration may let the Translator submit valid candidate Message JSON to Composer, where a person inspects and edits it. An accepted composition may be saved with intent and provenance metadata separately from the message itself. Future Composer exports could include stable block/frame IDs, speaker IDs, semantic-source references, and placement references. These are future ideas, not changes to Composer v0.1. Case 002’s unresolved per-turn block mapping is concrete workflow friction: do not infer mapping from flattened artwork.
+Future Composer integration may let the Translator submit valid candidate Message JSON to Composer, where a person inspects and edits it. Reverse/reference lookup should prefer exact Message JSON, Composer/Renderer structured export, and canonical asset IDs/hashes before visual matching; vision can suggest candidates only when structured provenance is absent. The AI must retrieve canonical SVG/Renderer output and must not draw substitute glyphs. A future provenance sidecar could preserve block/frame/source-turn IDs and source placement; Case 002 exact per-turn mappings remain unresolved and must not be reconstructed from flattened artwork. Machine/agent discovery is a prerequisite architecture, described separately in [Pictiq Machine / Agent Access](pictiq-machine-agent-access.md). An accepted composition may be saved with intent and provenance metadata separately from the message itself. Future Composer exports could include stable block/frame IDs, speaker IDs, semantic-source references, and placement references. These are future ideas, not changes to Composer v0.1. Case 002’s unresolved per-turn block mapping is concrete workflow friction: do not infer mapping from flattened artwork.
 
 ## Known limits and future health metrics
 
@@ -126,10 +129,10 @@ The Composition Library could eventually demonstrate practical expressive capaci
 
 ## Current-track boundary
 
-- **Active controlled research:** Stress Test 07.1, explicit grammar vs contextual compression; prepared, not executed.
+- **Paused controlled research:** Stress Test 07.1, preserved and to resume after the Composition Library rotation.
 - **Production evidence:** Editorial Case 001 — Bracken Ford; Editorial Case 002 — Good Dog, Bad System.
 - **Knowledge infrastructure:** Composition Library v0.1 proposal.
 - **Future product/machine architecture:** Pictiq Translator proposal.
 - **Documentation pressure:** README/Handbook should eventually explain composition-first formation more clearly; no rewrite here.
 
-These tracks do not substitute for one another. In particular, neither architecture proposal pauses or redesigns Stress Test 07.1, establishes comprehension, or creates a public Translator.
+These tracks do not substitute for one another. This rotation pauses (does not cancel or redesign) Stress Test 07.1; neither architecture proposal establishes comprehension or creates a public Translator. A future Agent Retrieval Stress Test is planned separately and is not a comprehension test.
