@@ -1,0 +1,391 @@
+{
+  "message_validation": [
+    {
+      "corpus_record_id": "clh-v01-0001",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0001.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0002",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0002.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0003",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0003.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0004",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0004.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0005",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0005.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0006",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0006.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0007",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0007.svg"
+    },
+    {
+      "corpus_record_id": "clc-v01-0008-r1",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clc-v01-0008-r1.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0009",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0009.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0011",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0011.svg"
+    },
+    {
+      "corpus_record_id": "clc-v01-0012-r1",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clc-v01-0012-r1.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0013",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0013.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0014",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0014.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0016",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0016.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0017",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0017.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0018",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0018.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0019",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0019.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0020",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0020.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0021",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0021.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0022",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0022.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0023",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0023.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0024",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0024.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0025",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0025.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0026",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0026.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0028",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0028.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0029",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0029.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0030",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0030.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0031",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0031.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0032",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0032.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0033",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0033.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0034",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0034.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0035",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0035.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0036",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0036.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0037",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0037.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0038",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0038.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0039",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0039.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0040",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0040.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0041",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0041.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0042",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0042.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0043",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0043.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0044",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0044.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0045",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0045.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0046",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0046.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0047",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0047.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0048",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0048.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0049",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0049.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0050",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0050.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0051",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0051.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0052",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0052.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0053",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0053.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0055",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0055.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0056",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0056.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0057",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0057.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0058",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0058.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0059",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0059.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0060",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0060.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0061",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0061.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0062",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0062.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0063",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0063.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0064",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0064.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0065",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0065.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0066",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0066.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0067",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0067.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0068",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0068.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0069",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0069.svg"
+    },
+    {
+      "corpus_record_id": "clc-v01-0070-r1",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clc-v01-0070-r1.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0071",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0071.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0072",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0072.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0073",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0073.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0074",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0074.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0075",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0075.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0076",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0076.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0077",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0077.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0078",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0078.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0079",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0079.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0080",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0080.svg"
+    },
+    {
+      "corpus_record_id": "clh-v01-0081",
+      "status": "RENDERED_CANONICAL",
+      "path": "renders/clh-v01-0081.svg"
+    }
+  ],
+  "rendered": 77,
+  "failed": []
+}

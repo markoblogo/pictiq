@@ -1,0 +1,76 @@
+{
+  "baseline_version": "0.1",
+  "created_on": "2026-09-27",
+  "status": "RESEARCH BASELINE / NOT NORMATIVE GRAMMAR",
+  "source_harvest": "pictiq-composition-library-historical-harvest-v0.1",
+  "source_harvest_snapshot": "8fae507",
+  "creator_export": {
+    "path": "../composition-library-historical-harvest-v0.1/reconciliation/creator-export-2026-09-27.json",
+    "sha256": "455588e54a561e162d4b8ffdad38ad1b0f59612ccb3fafb889cc6e8ba41b40bc",
+    "reviewed_count": 81,
+    "unreviewed_count": 0,
+    "decision_counts": {
+      "ACCEPT": 77,
+      "EDIT": 1,
+      "REJECT": 3
+    }
+  },
+  "addendum": {
+    "path": "../composition-library-historical-harvest-v0.1/reconciliation/creator-reconciliation-addendum-2026-09-27.json",
+    "sha256": "596aa1a58ea5b7935404e74715b34e87a672ea423b417943556cdb79d60c35f5",
+    "harvest_snapshot": "8fae507",
+    "cases": [
+      "clh-v01-0008",
+      "clh-v01-0010",
+      "clh-v01-0012",
+      "clh-v01-0070"
+    ]
+  },
+  "input_commit": "45609d58ad55de975ae8e4b316fa84b101677dcd",
+  "counts": {
+    "harvest_candidates": 81,
+    "corpus_records_including_history_and_replacements": 84,
+    "current_accepted": 77,
+    "accepted_unchanged": 74,
+    "accepted_historical_only_incompatible": 3,
+    "accepted_replacements": 3,
+    "blocked": 1,
+    "negative_or_superseded": 4,
+    "dictionary_yes": 60,
+    "dictionary_corpus_only": 12,
+    "dictionary_review": 5,
+    "dictionary_entries": 60,
+    "entries_with_multiple_composition_variants": 0,
+    "entries_with_embodied_variant": 1,
+    "entries_with_standalone_variant": 59,
+    "entries_with_known_ambiguity": 37,
+    "review_queue": 5,
+    "renders": 77,
+    "historical_only_compatibility": 3,
+    "records_with_tests": 74,
+    "records_with_failures_or_ambiguities": 48
+  },
+  "validation": {
+    "export_sha": "PASS",
+    "harvest_ids": "PASS",
+    "addendum_binding": "PASS",
+    "current_message_schema_shape_and_registry_validation": "PASS",
+    "canonical_renderer": "PASS"
+  },
+  "artifact_sha256": {
+    "accepted-corpus.json": "8dc2509dfc9d31d006726732e1825bc120dbeef06c5c1b0b1798e6315808e14e",
+    "dictionary-candidate.json": "b8b45ef09542e138f5f28931429fa7722a33f4c743e957541bff932b8189462b",
+    "dictionary-eligibility.json": "f212ad2ed2a81dd6820905186b5ef52a855f8187a86619fe3861320ad2b763b4",
+    "lineage.json": "a4b86c25e61be7c926ac3ed0428dd6602922842c304bc0d73714e9c819748523",
+    "negative-evidence.json": "bdfb9d5cb68e5202681cebe2a205551887103e0f420d50ac3619f13c4d1cf228",
+    "blocked.json": "03b233805286a8a712397a6765e9b0becad4263559c0a97433e795fa6d53a729",
+    "reconciliation-accounting.json": "991f647fe1cd41bb17359281b3173d438696122e28ba2c615a04f95034a496b8",
+    "review/corpus.html": "1cdb7f6650b8cce70aa0e2c829f45a476613e27a7996cda43db46eae51a04180",
+    "review/dictionary.html": "32ef9a223dcf4de8c1457bffffe8d55cec8ec90bb3a3f3e3286ff30a200a2595",
+    "review/eligibility-review.html": "3cb3a1b9a8a0a14239e111c68468b7882ad4cc8e5393ee3b81b5c675d483b2ab",
+    "review/replacement-qa.html": "e131659ead0623143264c1525b3b6c98ca48a97e4415bf2573341d8fcd30a19a",
+    "corpus-only-summary.md": "88d3433e76a5b8601064b62ab7ad260bc2dac2c2f7b5a8d78f23e5787a97d129",
+    "explicit-color-modifier-repair.md": "8fb911376974d85de93088247afad3a786f8340b582432858cd768e74f07b91c"
+  },
+  "render_bundle_sha256": "e667dbc1a6bcc760f9e459b6adb76b6b51edaf6513e6ca2c1ca245f2b9849576"
+}

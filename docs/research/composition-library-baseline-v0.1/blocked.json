@@ -1,0 +1,71 @@
+{
+  "records": [
+    {
+      "blocked_id": "blocked-clh-v01-0010",
+      "historical_record_id": "clh-v01-0010",
+      "semantic_intent": "HOTEL + BLUE + GOOD",
+      "historical_rejected_message": {
+        "contexts": [
+          "universal-core",
+          "universal-v1"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "place_home",
+                "type": "icon"
+              },
+              {
+                "id": "rel_here",
+                "type": "icon"
+              },
+              {
+                "id": "qual_good",
+                "type": "icon"
+              },
+              {
+                "id": "media_image",
+                "params": {
+                  "color": "#0000ff"
+                },
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "creator_decision": {
+        "composition_id": "clh-v01-0010",
+        "intent": "A beautiful blue hotel near the old city center.",
+        "historical_composition": [
+          "place_home",
+          "rel_here",
+          "qual_good",
+          "media_image"
+        ],
+        "historical_disposition": "REJECTED / SUPERSEDED",
+        "historical_reason": "Recoloring the referenced object glyph with media_image as semantic color changes neither glyph identity nor provides a distinct reusable color tile; the representation conflates render style with semantic color.",
+        "creator_replacement_intent": "HOTEL + BLUE + GOOD",
+        "creator_replacement_current_message": null,
+        "creator_replacement_status": "CREATOR DECISION / IMPLEMENTATION REPAIR REQUIRED",
+        "explicit_color_tile_rule": "A separate color tile follows the object it modifies; the tile is filled with the communicated color. Do not recolor the canonical object glyph to convey its semantic color.",
+        "intentional_omission": "near the old city center",
+        "color_decisions": {
+          "COLOR_AS_RENDER_STYLE": "REJECTED",
+          "COLOR_AS_EXPLICIT_TILE": "CREATOR DECISION / REPAIR REQUIRED"
+        },
+        "no_new_color_id": true,
+        "provenance": "CREATOR_RECONCILIATION"
+      },
+      "current_message": null,
+      "status": "BLOCKED_BY_MISSING_EXPLICIT_COLOR_TILE_MECHANISM",
+      "dictionary_eligibility": "DEFERRED_BLOCKED",
+      "repair_dependency": "Explicit Color Modifier Mechanism — REQUIRED / NOT IMPLEMENTED",
+      "evidence_path": "records/clh-v01-0010.json"
+    }
+  ]
+}

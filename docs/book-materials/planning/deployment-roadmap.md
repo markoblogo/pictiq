@@ -207,3 +207,12 @@ The Historical Harvest preparation-only status below is superseded by the dated 
 - The future `Composition Dictionary` is the public reusable-concepts/short-expressions layer; the broader internal `Composition Corpus` retains narratives and all evidence types. `PUBLIC_DICTIONARY_ELIGIBILITY` (`YES`, `CORPUS_ONLY`, `REVIEW`) is separate from semantic disposition. Accepted Odyssey narrative records remain accepted evidence and are not to be automatically split.
 - The creator’s COLOR rule is recorded as a system repair requirement: current `params.color` recolors an icon glyph; explicit object-plus-color-tile authoring is not implemented. No color ID or product change is part of this stage.
 - The Practical Coverage Corpus remains **NOT STARTED**. Historical Harvest v0.1 remains frozen; Stress Test 07.1 remains paused and preserved.
+
+## Composition Library baseline processing — 2026-09-27
+
+- **COMPLETE:** Historical Composition Harvest v0.1; creator semantic reconciliation and addendum; processing into the human-reconciled Accepted Composition Corpus Baseline v0.1.
+- **CURRENT:** Public Composition Dictionary Candidate v0.1 — **SYSTEM-CLASSIFIED / AWAITING CREATOR ELIGIBILITY REVIEW**. Research data only, not a public route or deployment.
+- **NEXT HUMAN GATE:** review all 60 Dictionary YES entries and five REVIEW questions; eligibility review does not reopen semantic acceptance.
+- **THEN:** Composition Dictionary Baseline v0.1 → Explicit Color Modifier Mechanism repair (preferably before or early in Practical Coverage expansion because color intents may arise) → Practical Coverage Corpus → Composer coverage pass → Frequency / Semantic Coverage → Translator Spike → Agent Retrieval Stress Test → return to Stress Test 07.1.
+- Whole Odyssey and Stress Test 05 records remain in the Corpus. No narrative splitting or sub-composition extraction occurred. Three historically accepted `place_hotel` messages remain historical-only because the ID is absent from the current registry; no conversion was inferred.
+- **STATUS:** Composition Library implemented at research-data-baseline level. Translator and Machine / Agent Access remain **NOT IMPLEMENTED**. Practical Coverage Corpus **NOT STARTED**. Explicit Color Modifier Mechanism **REQUIRED / NOT IMPLEMENTED**. Stress Test 07.1 **PAUSED / PRESERVED / UNCHANGED**.

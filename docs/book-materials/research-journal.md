@@ -1,5 +1,18 @@
 # Research journal
 
+## 2026-09-27 — Composition Library reconciliation processing v0.1
+
+Processed the frozen 81-record Historical Harvest, byte-identical creator export, and four-case creator addendum into an Accepted Composition Corpus Baseline v0.1 and separate Public Composition Dictionary Candidate v0.1. The Corpus contains all 81 historical records plus three distinct creator replacement records, retaining rejected/superseded forms, provenance, tests, failures, compatibility, and lineage. The creator export SHA-256 was rechecked as `455588e54a561e162d4b8ffdad38ad1b0f59612ccb3fafb889cc6e8ba41b40bc`; the addendum remains bound to Harvest snapshot `8fae507`.
+
+Of the 77 original ACCEPT decisions, 74 are current-valid unchanged messages; three historically accepted messages containing retired `place_hotel` remain preserved as `HISTORICAL_ONLY / NOT CURRENTLY VALID` without silent conversion. Three explicit creator replacements are current-valid; the hotel/color target remains blocked by the missing explicit Color Modifier mechanism. Current schema-shape/registry validation and canonical rendering passed for all 77 current-valid accepted messages. Rejected and superseded evidence remains in its own ledger.
+
+The current-valid accepted set has 60 system-classified Dictionary YES entries, 12 CORPUS_ONLY records, and five REVIEW records. Eligibility is a candidate editorial classification, not creator approval or comprehension evidence. Odyssey and the Stress Test 05 dialogue remain whole CORPUS_ONLY records; no narrative splitting or sub-composition extraction occurred. The candidate is internal research material, not published or deployed.
+
+**CURRENT:** Public Composition Dictionary Candidate v0.1 — creator eligibility review. **NEXT HUMAN GATE:** review the 60 YES entries and five specific REVIEW questions; do not re-review semantic acceptance. Composition Library is implemented at research-data-baseline level; the Dictionary is candidate data only. Practical Coverage Corpus remains NOT STARTED; Translator and Machine / Agent Access remain NOT IMPLEMENTED. Explicit Color Modifier Mechanism remains REQUIRED / NOT IMPLEMENTED. Stress Test 07.1 remains PAUSED / PRESERVED / UNCHANGED.
+
+[Accepted Corpus and Dictionary Candidate baseline](../research/composition-library-baseline-v0.1/README.md), [Corpus viewer](../research/composition-library-baseline-v0.1/review/corpus.html), [Dictionary candidate viewer](../research/composition-library-baseline-v0.1/review/dictionary.html), and [eligibility review queue](../research/composition-library-baseline-v0.1/review/eligibility-review.html).
+
+
 ## 2026-09-27 — Human Reconciliation Viewer v0.1 prepared
 
 Prepared a local static review surface for the 81 exact candidates from Historical Composition Harvest v0.1, bound to snapshot `8fae507` and protected with manifest/dataset hash checks. Creator decisions, reason tags, and notes live in a separate browser-local overlay with JSON export/import; the Harvest package remains frozen. No human decisions were made by Codex, and no accepted Composition Library baseline was created.
@@ -37,8 +50,6 @@ The review package preserves source-family coverage, exact Message records, rend
 **NEXT: human reconciliation** of exactness, semantic targets, lifecycle, provenance, and schema fit. The Practical Coverage Corpus remains later in the sequence and is not started by this harvest. The Composition Library remains a research proposal, not a public registry.
 
 [Historical Harvest v0.1 package](../research/composition-library-historical-harvest-v0.1/README.md), [source-coverage ledger](../research/composition-library-historical-harvest-v0.1/source-coverage.json), [reviewer](../research/composition-library-historical-harvest-v0.1/review/index.html), and [corpus analysis](../research/composition-library-historical-harvest-v0.1/corpus-analysis.md).
-
----
 
 ## 2026-09-27 — Composition Library architecture follow-up: surfaces and machine access
 
@@ -1476,3 +1487,4 @@ Three supplied, independently prompted AI protocol-design transcripts were archi
 The initial manual Stress Test 07 pilot is **EXECUTED / INTEGRITY FAILURE / PARTIAL**. It covered blind/practical phases only: Claude, Copilot and Mistral accessed SVG semantic internals; ChatGPT reported a visual incompatible with frozen `07C-A`; and micro-learning/transfer were not run. Raw transcripts and coding remain preserved as methodological evidence, but the pilot is invalid for primary A/B inference.
 
 Stress Test 07.1 is **PREPARED / NOT EXECUTED**. It retains the frozen stimuli, hypotheses, prompts, mechanisms and randomization while converting all primary and transfer delivery files into hash-recorded, metadata-free PNGs with neutral names. The methodological lesson is that an SVG is both an image and structured, potentially semantic markup; rasterization can be necessary to isolate visual comprehension in multimodal AI research. This is not a claim about human perception and changes no Pictiq production asset.
+---

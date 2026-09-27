@@ -1,0 +1,282 @@
+{
+  "records": [
+    {
+      "historical_record_id": "clh-v01-0008",
+      "historical_message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "comm_sound",
+                "type": "icon"
+              },
+              {
+                "id": "qty_minus",
+                "type": "icon"
+              },
+              {
+                "id": "comm_speak",
+                "type": "icon"
+              },
+              {
+                "id": "logic_yes",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "historical_sequence": "comm_sound + qty_minus + comm_speak + logic_yes",
+      "intent": [
+        {
+          "intent_id": "intent-6fcae0c98e60",
+          "canonical_intent": "Less noise, please.",
+          "semantic_examples": [
+            "Required target slots: comm_sound, qty_minus"
+          ],
+          "required_context": [],
+          "optional_context": [],
+          "known_ambiguities": [
+            "Unjustified concepts in pilot target assessment: logic_no, qual_bad"
+          ],
+          "interpretation_evidence_ids": [
+            "cand-04a-10"
+          ],
+          "coverage_assessments": [
+            {
+              "communication_mode": "STANDALONE",
+              "communication_surface": "OTHER",
+              "outcome": "LOSSY",
+              "composition_ids": [
+                "clh-v01-0008"
+              ],
+              "evidence_ids": [
+                "cand-04a-10"
+              ],
+              "notes": "Exact model output is retained as experimental evidence, not accepted composition. CONCEPT_SELECTION_FAILURE"
+            }
+          ]
+        }
+      ],
+      "historical_status": "SUPERSEDED",
+      "creator_reason": "SOUND + LESS is functionally sufficient; comm_speak + logic_yes adds no necessary information and over-explains the intent.",
+      "replacement_record_id": "clc-v01-0008-r1",
+      "creator_provenance": "CREATOR_RECONCILIATION",
+      "evidence_path": "records/clh-v01-0008.json"
+    },
+    {
+      "historical_record_id": "clh-v01-0010",
+      "historical_message": {
+        "contexts": [
+          "universal-core",
+          "universal-v1"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "place_home",
+                "type": "icon"
+              },
+              {
+                "id": "rel_here",
+                "type": "icon"
+              },
+              {
+                "id": "qual_good",
+                "type": "icon"
+              },
+              {
+                "id": "media_image",
+                "params": {
+                  "color": "#0000ff"
+                },
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "historical_sequence": "place_home + rel_here + qual_good + media_image",
+      "intent": [
+        {
+          "intent_id": "intent-a94d613cc42c",
+          "canonical_intent": "A beautiful blue hotel near the old city center.",
+          "semantic_examples": [
+            "Required target slots: place_home"
+          ],
+          "required_context": [],
+          "optional_context": [],
+          "known_ambiguities": [
+            "Unjustified concepts in pilot target assessment: place_hotel, media_image"
+          ],
+          "interpretation_evidence_ids": [
+            "cand-04a-16"
+          ],
+          "coverage_assessments": [
+            {
+              "communication_mode": "STANDALONE",
+              "communication_surface": "OTHER",
+              "outcome": "LOSSY",
+              "composition_ids": [
+                "clh-v01-0010"
+              ],
+              "evidence_ids": [
+                "cand-04a-16"
+              ],
+              "notes": "Exact model output is retained as experimental evidence, not accepted composition. CONCEPT_SELECTION_FAILURE"
+            }
+          ]
+        }
+      ],
+      "historical_status": "REJECTED",
+      "creator_reason": "",
+      "replacement_record_id": null,
+      "creator_provenance": "CREATOR_EXPORT",
+      "evidence_path": "records/clh-v01-0010.json"
+    },
+    {
+      "historical_record_id": "clh-v01-0012",
+      "historical_message": {
+        "contexts": [
+          "universal-core",
+          "narrative"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "place_home",
+                "type": "icon"
+              },
+              {
+                "id": "action_conflict",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "historical_sequence": "place_home + action_conflict",
+      "intent": [
+        {
+          "intent_id": "intent-9352fa6ca6b4",
+          "canonical_intent": "This place is a battlefield.",
+          "semantic_examples": [
+            "Required target slots: action_conflict"
+          ],
+          "required_context": [],
+          "optional_context": [],
+          "known_ambiguities": [
+            "Unjustified concepts in pilot target assessment: state_dead"
+          ],
+          "interpretation_evidence_ids": [
+            "cand-04a-18"
+          ],
+          "coverage_assessments": [
+            {
+              "communication_mode": "STANDALONE",
+              "communication_surface": "OTHER",
+              "outcome": "LOSSY",
+              "composition_ids": [
+                "clh-v01-0012"
+              ],
+              "evidence_ids": [
+                "cand-04a-18"
+              ],
+              "notes": "Exact model output is retained as experimental evidence, not accepted composition. CONCEPT_SELECTION_FAILURE"
+            }
+          ]
+        }
+      ],
+      "historical_status": "SUPERSEDED",
+      "creator_reason": "place_home changes the referent and can suggest domestic conflict, a violent house, or a detention/torture context; the source is deictic (THIS PLACE / HERE), not HOME.",
+      "replacement_record_id": "clc-v01-0012-r1",
+      "creator_provenance": "CREATOR_RECONCILIATION",
+      "evidence_path": "records/clh-v01-0012.json"
+    },
+    {
+      "historical_record_id": "clh-v01-0070",
+      "historical_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "time"
+              }
+            ]
+          }
+        ]
+      },
+      "historical_sequence": "time",
+      "intent": [
+        {
+          "intent_id": "intent-b92fed069b92",
+          "canonical_intent": "Loading / processing",
+          "semantic_examples": [
+            "System is working; wait"
+          ],
+          "required_context": [
+            {
+              "cue": "Loading indicator context",
+              "availability": "REQUIRED",
+              "evidence_ids": [
+                "cand-webui-08"
+              ]
+            }
+          ],
+          "optional_context": [
+            {
+              "cue": "Loading indicator context",
+              "availability": "OPTIONAL",
+              "evidence_ids": [
+                "cand-webui-08"
+              ]
+            }
+          ],
+          "known_ambiguities": [
+            "Human review accepts TIME as contextual wait/loading/processing/in-progress representation; not a current GAP.",
+            "process/wait state"
+          ],
+          "interpretation_evidence_ids": [
+            "cand-webui-08"
+          ],
+          "coverage_assessments": [
+            {
+              "communication_mode": "STANDALONE",
+              "communication_surface": "UI",
+              "outcome": "SUPPORTED",
+              "composition_ids": [
+                "clh-v01-0070"
+              ],
+              "evidence_ids": [
+                "cand-webui-08"
+              ],
+              "notes": "Human review accepts TIME as contextual wait/loading/processing/in-progress representation; not a current GAP."
+            }
+          ]
+        }
+      ],
+      "historical_status": "SUPERSEDED",
+      "creator_reason": "TIME may express waiting but loses the central PROCESS / CHANGE meaning.",
+      "replacement_record_id": "clc-v01-0070-r1",
+      "creator_provenance": "CREATOR_RECONCILIATION",
+      "evidence_path": "records/clh-v01-0070.json"
+    }
+  ]
+}

@@ -1,0 +1,621 @@
+{
+  "classification_authority": "SYSTEM CANDIDATE; CREATOR REVIEW NOT YET PERFORMED",
+  "records": [
+    {
+      "corpus_record_id": "clh-v01-0001",
+      "intent": "No alcohol.",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0001",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0002",
+      "intent": "Where is home?",
+      "eligibility": "REVIEW",
+      "rationale": "The accepted question is reusable in principle, but the referent HOME can be personal or venue-specific; choose a public-facing lookup label/context.",
+      "dictionary_entry_id": null,
+      "review_question": "The accepted question is reusable in principle, but the referent HOME can be personal or venue-specific; choose a public-facing lookup label/context."
+    },
+    {
+      "corpus_record_id": "clh-v01-0003",
+      "intent": "I need medical help urgently.",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0002",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0004",
+      "intent": "A sacred building.",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0003",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0005",
+      "intent": "A loved person.",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0004",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0006",
+      "intent": "Animal food, like meat.",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0005",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0007",
+      "intent": "The food is bad, not unavailable.",
+      "eligibility": "REVIEW",
+      "rationale": "The accepted composition encodes a contrastive interpretation (bad food, not unavailable); confirm how narrowly the Dictionary should present this reading.",
+      "dictionary_entry_id": null,
+      "review_question": "The accepted composition encodes a contrastive interpretation (bad food, not unavailable); confirm how narrowly the Dictionary should present this reading."
+    },
+    {
+      "corpus_record_id": "clc-v01-0008-r1",
+      "intent": "Less noise, please.",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0006",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0009",
+      "intent": "Polyphemus sees a person.",
+      "eligibility": "CORPUS_ONLY",
+      "rationale": "A single literary character action from the 04A trial; useful experimental/narrative evidence, but not a reusable general Dictionary expression.",
+      "dictionary_entry_id": null,
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0011",
+      "intent": "Could you maybe point me toward food?",
+      "eligibility": "REVIEW",
+      "rationale": "The accepted polite request depends on the interaction supplying pointing/direction; confirm whether the narrow context is clear enough for a standalone Dictionary entry.",
+      "dictionary_entry_id": null,
+      "review_question": "The accepted polite request depends on the interaction supplying pointing/direction; confirm whether the narrow context is clear enough for a standalone Dictionary entry."
+    },
+    {
+      "corpus_record_id": "clc-v01-0012-r1",
+      "intent": "This place is a battlefield.",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0007",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0013",
+      "intent": "Car service / repair",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0008",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0014",
+      "intent": "Grocery / food shop",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0009",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0016",
+      "intent": "Less food / smaller portion",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0010",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0017",
+      "intent": "Many waters",
+      "eligibility": "REVIEW",
+      "rationale": "The accepted Handbook gloss ‘many waters’ is unusual in English and quantity interpretation depends on the Handbook convention; choose a clear lookup label.",
+      "dictionary_entry_id": null,
+      "review_question": "The accepted Handbook gloss ‘many waters’ is unusual in English and quantity interpretation depends on the Handbook convention; choose a clear lookup label."
+    },
+    {
+      "corpus_record_id": "clh-v01-0018",
+      "intent": "More water",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0011",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0019",
+      "intent": "One food portion",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0012",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0020",
+      "intent": "Phone / electronics shop",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0013",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0021",
+      "intent": "Can I pay for a taxi by card?",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0014",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0022",
+      "intent": "Public transport schedule / when?",
+      "eligibility": "REVIEW",
+      "rationale": "The accepted sequence combines public transport, time and a question; decide whether the intended schedule/when reading is sufficiently bounded for a public entry.",
+      "dictionary_entry_id": null,
+      "review_question": "The accepted sequence combines public transport, time and a question; decide whether the intended schedule/when reading is sufficiently bounded for a public entry."
+    },
+    {
+      "corpus_record_id": "clh-v01-0023",
+      "intent": "Two waters / two units of water",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0015",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0024",
+      "intent": "Medical help, urgent",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0016",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0025",
+      "intent": "Urgent toilet request",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0017",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0026",
+      "intent": "Where can I get water?",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0018",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0028",
+      "intent": "Toilet / need a toilet / where is the toilet",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0019",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0029",
+      "intent": "Wi-Fi / internet / where is Wi-Fi",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0020",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0030",
+      "intent": "Small visual communication — identity / headline",
+      "eligibility": "CORPUS_ONLY",
+      "rationale": "Landing/source-specific Pictiq identity or project-structure wording; not a reusable general concept entry.",
+      "dictionary_entry_id": null,
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0031",
+      "intent": "Small visual communication — identity / headline",
+      "eligibility": "CORPUS_ONLY",
+      "rationale": "Landing/source-specific Pictiq identity or project-structure wording; not a reusable general concept entry.",
+      "dictionary_entry_id": null,
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0032",
+      "intent": "Visual concepts combine into useful messages",
+      "eligibility": "CORPUS_ONLY",
+      "rationale": "Landing/source-specific Pictiq identity or project-structure wording; not a reusable general concept entry.",
+      "dictionary_entry_id": null,
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0033",
+      "intent": "Pictiq writes and communicates public notes / project writing",
+      "eligibility": "CORPUS_ONLY",
+      "rationale": "Landing/source-specific Pictiq identity or project-structure wording; not a reusable general concept entry.",
+      "dictionary_entry_id": null,
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0034",
+      "intent": "Return from war / Odysseus / Calypso",
+      "eligibility": "CORPUS_ONLY",
+      "rationale": "Whole accepted Odyssey narrative/discourse record; preserved without extracting reusable sub-compositions.",
+      "dictionary_entry_id": null,
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0035",
+      "intent": "Gods / Poseidon / hostility / homecoming",
+      "eligibility": "CORPUS_ONLY",
+      "rationale": "Whole accepted Odyssey narrative/discourse record; preserved without extracting reusable sub-compositions.",
+      "dictionary_entry_id": null,
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0036",
+      "intent": "Ship / sea / dark sky",
+      "eligibility": "CORPUS_ONLY",
+      "rationale": "Whole accepted Odyssey narrative/discourse record; preserved without extracting reusable sub-compositions.",
+      "dictionary_entry_id": null,
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0037",
+      "intent": "Arete dialogue: identity / origin / clothing",
+      "eligibility": "CORPUS_ONLY",
+      "rationale": "Whole accepted Odyssey narrative/discourse record; preserved without extracting reusable sub-compositions.",
+      "dictionary_entry_id": null,
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0038",
+      "intent": "Survival / food / animal / cooking",
+      "eligibility": "CORPUS_ONLY",
+      "rationale": "Whole accepted Odyssey narrative/discourse record; preserved without extracting reusable sub-compositions.",
+      "dictionary_entry_id": null,
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0039",
+      "intent": "Poseidon / Polyphemus / eye injury / kinship / blocked homecoming",
+      "eligibility": "CORPUS_ONLY",
+      "rationale": "Whole accepted Odyssey narrative/discourse record; preserved without extracting reusable sub-compositions.",
+      "dictionary_entry_id": null,
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0040",
+      "intent": "Proceed or turn right according to road/public-wayfinding indication.",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0021",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0041",
+      "intent": "Proceed or turn left according to road/public-wayfinding indication.",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0022",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0042",
+      "intent": "Continue straight ahead.",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0023",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0043",
+      "intent": "Go down, lower level, or downward route.",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0024",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0044",
+      "intent": "Entry prohibited / do not enter this road or area.",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0025",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0045",
+      "intent": "Route or path for pedestrians.",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0026",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0046",
+      "intent": "Access prohibited to pedestrians.",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0027",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0047",
+      "intent": "Pedestrian crossing or crossing place.",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0028",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0048",
+      "intent": "Parking place or parking permitted.",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0029",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0049",
+      "intent": "Parking prohibited.",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0030",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0050",
+      "intent": "Fuel service or petrol station.",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0031",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0051",
+      "intent": "Hospital or medical service nearby.",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0032",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0052",
+      "intent": "Police service or police post.",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0033",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0053",
+      "intent": "Food service / restaurant available.",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0034",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0055",
+      "intent": "Information point / tourist or public information.",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0035",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0056",
+      "intent": "General danger warning or caution ahead.",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0036",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0057",
+      "intent": "Road works or maintenance ahead.",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0037",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0058",
+      "intent": "Road surface may be slippery.",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0038",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0059",
+      "intent": "Road has no through continuation.",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0039",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0060",
+      "intent": "Do not exceed 50 in the jurisdiction's speed unit.",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0040",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0061",
+      "intent": "Turning left at the next junction is prohibited.",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0041",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0062",
+      "intent": "Current viewer/location reference point on a map or wayfinding board.",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0042",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0063",
+      "intent": "Four-turn practical water/payment dialogue",
+      "eligibility": "CORPUS_ONLY",
+      "rationale": "Whole multi-frame dialogue or discourse unit; keep as Corpus evidence without automatic splitting.",
+      "dictionary_entry_id": null,
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0064",
+      "intent": "Back to previous screen or step",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0043",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0065",
+      "intent": "Forward / next step",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0044",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0066",
+      "intent": "Home/start/dashboard",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0045",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0067",
+      "intent": "Close/cancel dialog",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0046",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0068",
+      "intent": "Selected item",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0047",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0069",
+      "intent": "Active/current page",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0048",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clc-v01-0070-r1",
+      "intent": "Loading / processing",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0049",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0071",
+      "intent": "Empty state / no content",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0050",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0072",
+      "intent": "Success/completed",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0051",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0073",
+      "intent": "Error/failure",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0052",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0074",
+      "intent": "Save changes",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0053",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0075",
+      "intent": "Publish/send message",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0054",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0076",
+      "intent": "Edit content",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0055",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0077",
+      "intent": "Login/access",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0056",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0078",
+      "intent": "Permission denied",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0057",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0079",
+      "intent": "Settings/preferences",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0058",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0080",
+      "intent": "Text content",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0059",
+      "review_question": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0081",
+      "intent": "Notification/message alert",
+      "eligibility": "YES",
+      "rationale": "Accepted, current-valid compact concept, practical expression, sign, or UI state/action with source-bounded context.",
+      "dictionary_entry_id": "pcd-v01-0060",
+      "review_question": null
+    }
+  ]
+}

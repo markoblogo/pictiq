@@ -1,0 +1,490 @@
+{
+  "records": [
+    {
+      "harvest_candidate_id": "clh-v01-0001",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0001"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0002",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0002"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0003",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0003"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0004",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0004"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0005",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0005"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0006",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0006"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0007",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0007"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0008",
+      "original_decision": "EDIT",
+      "final_disposition": "ACCEPTED_REPLACEMENT",
+      "current_record_id": "clc-v01-0008-r1"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0009",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0009"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0010",
+      "original_decision": "REJECT",
+      "final_disposition": "BLOCKED_REPLACEMENT",
+      "current_record_id": null
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0011",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0011"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0012",
+      "original_decision": "REJECT",
+      "final_disposition": "ACCEPTED_REPLACEMENT",
+      "current_record_id": "clc-v01-0012-r1"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0013",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0013"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0014",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0014"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0015",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_HISTORICAL_ONLY_INCOMPATIBLE",
+      "current_record_id": null
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0016",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0016"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0017",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0017"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0018",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0018"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0019",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0019"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0020",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0020"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0021",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0021"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0022",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0022"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0023",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0023"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0024",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0024"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0025",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0025"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0026",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0026"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0027",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_HISTORICAL_ONLY_INCOMPATIBLE",
+      "current_record_id": null
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0028",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0028"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0029",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0029"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0030",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0030"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0031",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0031"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0032",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0032"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0033",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0033"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0034",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0034"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0035",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0035"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0036",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0036"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0037",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0037"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0038",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0038"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0039",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0039"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0040",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0040"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0041",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0041"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0042",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0042"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0043",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0043"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0044",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0044"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0045",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0045"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0046",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0046"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0047",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0047"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0048",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0048"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0049",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0049"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0050",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0050"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0051",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0051"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0052",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0052"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0053",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0053"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0054",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_HISTORICAL_ONLY_INCOMPATIBLE",
+      "current_record_id": null
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0055",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0055"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0056",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0056"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0057",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0057"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0058",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0058"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0059",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0059"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0060",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0060"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0061",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0061"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0062",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0062"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0063",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0063"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0064",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0064"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0065",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0065"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0066",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0066"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0067",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0067"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0068",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0068"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0069",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0069"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0070",
+      "original_decision": "REJECT",
+      "final_disposition": "ACCEPTED_REPLACEMENT",
+      "current_record_id": "clc-v01-0070-r1"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0071",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0071"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0072",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0072"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0073",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0073"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0074",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0074"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0075",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0075"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0076",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0076"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0077",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0077"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0078",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0078"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0079",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0079"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0080",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0080"
+    },
+    {
+      "harvest_candidate_id": "clh-v01-0081",
+      "original_decision": "ACCEPT",
+      "final_disposition": "ACCEPTED_UNCHANGED",
+      "current_record_id": "clh-v01-0081"
+    }
+  ]
+}

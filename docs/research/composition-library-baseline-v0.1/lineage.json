@@ -1,0 +1,277 @@
+{
+  "records": [
+    {
+      "historical_record_id": "clh-v01-0008",
+      "historical_message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "comm_sound",
+                "type": "icon"
+              },
+              {
+                "id": "qty_minus",
+                "type": "icon"
+              },
+              {
+                "id": "comm_speak",
+                "type": "icon"
+              },
+              {
+                "id": "logic_yes",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "original_decision": "EDIT",
+      "addendum_decision": {
+        "composition_id": "clh-v01-0008",
+        "intent": "Less noise, please.",
+        "historical_composition": [
+          "comm_sound",
+          "qty_minus",
+          "comm_speak",
+          "logic_yes"
+        ],
+        "historical_disposition": "SUPERSEDED / HISTORICAL EVIDENCE",
+        "creator_replacement": [
+          "comm_sound",
+          "qty_minus"
+        ],
+        "creator_reason": "SOUND + LESS is functionally sufficient; comm_speak + logic_yes adds no necessary information and over-explains the intent.",
+        "provenance": "CREATOR_RECONCILIATION"
+      },
+      "current_record_id": "clc-v01-0008-r1",
+      "current_message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "comm_sound"
+              },
+              {
+                "type": "icon",
+                "id": "qty_minus"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "eligibility": "YES",
+      "evidence_path": "records/clh-v01-0008.json"
+    },
+    {
+      "historical_record_id": "clh-v01-0010",
+      "historical_message": {
+        "contexts": [
+          "universal-core",
+          "universal-v1"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "place_home",
+                "type": "icon"
+              },
+              {
+                "id": "rel_here",
+                "type": "icon"
+              },
+              {
+                "id": "qual_good",
+                "type": "icon"
+              },
+              {
+                "id": "media_image",
+                "params": {
+                  "color": "#0000ff"
+                },
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "original_decision": "REJECT",
+      "addendum_decision": {
+        "composition_id": "clh-v01-0010",
+        "intent": "A beautiful blue hotel near the old city center.",
+        "historical_composition": [
+          "place_home",
+          "rel_here",
+          "qual_good",
+          "media_image"
+        ],
+        "historical_disposition": "REJECTED / SUPERSEDED",
+        "historical_reason": "Recoloring the referenced object glyph with media_image as semantic color changes neither glyph identity nor provides a distinct reusable color tile; the representation conflates render style with semantic color.",
+        "creator_replacement_intent": "HOTEL + BLUE + GOOD",
+        "creator_replacement_current_message": null,
+        "creator_replacement_status": "CREATOR DECISION / IMPLEMENTATION REPAIR REQUIRED",
+        "explicit_color_tile_rule": "A separate color tile follows the object it modifies; the tile is filled with the communicated color. Do not recolor the canonical object glyph to convey its semantic color.",
+        "intentional_omission": "near the old city center",
+        "color_decisions": {
+          "COLOR_AS_RENDER_STYLE": "REJECTED",
+          "COLOR_AS_EXPLICIT_TILE": "CREATOR DECISION / REPAIR REQUIRED"
+        },
+        "no_new_color_id": true,
+        "provenance": "CREATOR_RECONCILIATION"
+      },
+      "current_record_id": null,
+      "blocked_id": "blocked-clh-v01-0010",
+      "eligibility": "DEFERRED_BLOCKED",
+      "evidence_path": "records/clh-v01-0010.json"
+    },
+    {
+      "historical_record_id": "clh-v01-0012",
+      "historical_message": {
+        "contexts": [
+          "universal-core",
+          "narrative"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "place_home",
+                "type": "icon"
+              },
+              {
+                "id": "action_conflict",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "original_decision": "REJECT",
+      "addendum_decision": {
+        "composition_id": "clh-v01-0012",
+        "intent": "This place is a battlefield.",
+        "historical_composition": [
+          "place_home",
+          "action_conflict"
+        ],
+        "historical_disposition": "REJECTED / SUPERSEDED",
+        "historical_reason": "place_home changes the referent and can suggest domestic conflict, a violent house, or a detention/torture context; the source is deictic (THIS PLACE / HERE), not HOME.",
+        "creator_replacement": [
+          "rel_here",
+          "action_conflict"
+        ],
+        "semantic_reading": "HERE + CONFLICT; approximately conflict here / this is a place of conflict / this place is a battlefield under relevant context.",
+        "translator_lesson": "Do not fill a generic LOCATION slot with a more specific place_* primitive unless the source supplies that specificity. Preserve deixis or return GAP rather than introducing a false referent.",
+        "provenance": "CREATOR_RECONCILIATION"
+      },
+      "current_record_id": "clc-v01-0012-r1",
+      "current_message": {
+        "contexts": [
+          "universal-core",
+          "narrative"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_here"
+              },
+              {
+                "type": "icon",
+                "id": "action_conflict"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "eligibility": "YES",
+      "evidence_path": "records/clh-v01-0012.json"
+    },
+    {
+      "historical_record_id": "clh-v01-0070",
+      "historical_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "time"
+              }
+            ]
+          }
+        ]
+      },
+      "original_decision": "REJECT",
+      "addendum_decision": {
+        "composition_id": "clh-v01-0070",
+        "intent": "Loading / processing",
+        "historical_composition": [
+          "time"
+        ],
+        "historical_disposition": "REJECTED / SUPERSEDED",
+        "historical_reason": "TIME may express waiting but loses the central PROCESS / CHANGE meaning.",
+        "creator_replacement": [
+          "action_change"
+        ],
+        "creator_preferred_id_resolution": "Human-readable change resolves to current canonical ID action_change.",
+        "semantic_neighbourhood": [
+          "loading",
+          "processing",
+          "updating",
+          "operation in progress",
+          "system working/changing"
+        ],
+        "optional_distinct_composition": [
+          "action_change",
+          "time"
+        ],
+        "optional_composition_status": "NOT THE AUTOMATIC REPLACEMENT; may express processing / please wait or the process is taking time.",
+        "translator_lesson": "Do not translate a state or process through only an associated consequence: loading → takes time → TIME loses the central process semantics.",
+        "provenance": "CREATOR_RECONCILIATION"
+      },
+      "current_record_id": "clc-v01-0070-r1",
+      "current_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "action_change"
+              }
+            ]
+          }
+        ]
+      },
+      "eligibility": "YES",
+      "evidence_path": "records/clh-v01-0070.json"
+    }
+  ]
+}
