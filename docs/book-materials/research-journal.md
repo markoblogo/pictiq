@@ -1,5 +1,16 @@
 # Research journal
 
+## 2026-09-27 — Composition Dictionary creator review processing v0.1
+
+Processed the owner-supplied eligibility export (65/65 decisions; 64 KEEP_IN_DICTIONARY, one EDIT_ENTRY_METADATA; ten non-empty notes) against its bound Candidate/Corpus snapshot. The byte-identical export is archived in the new research package with its SHA-256. The resulting research-only Dictionary has 65 entries and 70 rendered preferred/accepted variants. All five former system REVIEW items were kept by the creator; 12 previously CORPUS_ONLY records were outside this review and remain excluded.
+
+Creator-directed metadata/composition changes are recorded with per-entry lineage. Two proposed extensions remain unresolved and are follow-up questions, not accepted Messages: the scope/token of the UP/AHEAD prohibition and the exact ordered timetable composition. Context/ambiguity warnings remain visible. No protocol, lexicon, grammar, icon, schema, Composer, Renderer, or site changes were made. Review and repository validation passed; this is not comprehension evidence or visual acceptance.
+
+**CURRENT GATE:** final creator visual QA of changed entries and the full Dictionary viewer; then close/freeze v0.1. Practical Coverage Corpus remains NOT STARTED; Color Modifier remains REQUIRED / NOT IMPLEMENTED; Translator and Machine / Agent Access remain NOT IMPLEMENTED; Stress Test 07.1 remains PAUSED / PRESERVED / UNCHANGED.
+
+[Composition Dictionary Baseline v0.1](../research/composition-dictionary-baseline-v0.1/README.md), [full Dictionary viewer](../research/composition-dictionary-baseline-v0.1/review/index.html), [final creator visual QA](../research/composition-dictionary-baseline-v0.1/review/final-creator-visual-qa.html), and [open creator-note follow-ups](../research/composition-dictionary-baseline-v0.1/creator-notes-follow-up/index.html).
+
+
 ## 2026-09-27 — Composition Library reconciliation processing v0.1
 
 Processed the frozen 81-record Historical Harvest, byte-identical creator export, and four-case creator addendum into an Accepted Composition Corpus Baseline v0.1 and separate Public Composition Dictionary Candidate v0.1. The Corpus contains all 81 historical records plus three distinct creator replacement records, retaining rejected/superseded forms, provenance, tests, failures, compatibility, and lineage. The creator export SHA-256 was rechecked as `455588e54a561e162d4b8ffdad38ad1b0f59612ccb3fafb889cc6e8ba41b40bc`; the addendum remains bound to Harvest snapshot `8fae507`.
@@ -8,7 +19,7 @@ Of the 77 original ACCEPT decisions, 74 are current-valid unchanged messages; th
 
 The current-valid accepted set has 60 system-classified Dictionary YES entries, 12 CORPUS_ONLY records, and five REVIEW records. Eligibility is a candidate editorial classification, not creator approval or comprehension evidence. Odyssey and the Stress Test 05 dialogue remain whole CORPUS_ONLY records; no narrative splitting or sub-composition extraction occurred. The candidate is internal research material, not published or deployed.
 
-**CURRENT:** Public Composition Dictionary Candidate v0.1 — creator eligibility review. **NEXT HUMAN GATE:** review the 60 YES entries and five specific REVIEW questions; do not re-review semantic acceptance. Composition Library is implemented at research-data-baseline level; the Dictionary is candidate data only. Practical Coverage Corpus remains NOT STARTED; Translator and Machine / Agent Access remain NOT IMPLEMENTED. Explicit Color Modifier Mechanism remains REQUIRED / NOT IMPLEMENTED. Stress Test 07.1 remains PAUSED / PRESERVED / UNCHANGED.
+**AT THAT POINT:** Public Composition Dictionary Candidate v0.1 awaited creator eligibility review. This gate was later completed by the creator-review processing entry above; final visual QA remains pending. Composition Library is implemented at research-data-baseline level only. Practical Coverage Corpus remains NOT STARTED; Translator and Machine / Agent Access remain NOT IMPLEMENTED. Explicit Color Modifier Mechanism remains REQUIRED / NOT IMPLEMENTED. Stress Test 07.1 remains PAUSED / PRESERVED / UNCHANGED.
 
 [Accepted Corpus and Dictionary Candidate baseline](../research/composition-library-baseline-v0.1/README.md), [Corpus viewer](../research/composition-library-baseline-v0.1/review/corpus.html), [Dictionary candidate viewer](../research/composition-library-baseline-v0.1/review/dictionary.html), and [eligibility review queue](../research/composition-library-baseline-v0.1/review/eligibility-review.html).
 

@@ -1,0 +1,70 @@
+{
+  "dictionary_version": "0.1",
+  "created_on": "2026-09-27",
+  "status": "CREATOR-REVIEWED / ACCEPTED RESEARCH BASELINE; AWAITING FINAL VISUAL QA",
+  "normative_grammar": false,
+  "publication_status": "INTERNAL / NOT DEPLOYED",
+  "source_corpus_baseline": {
+    "version": "0.1",
+    "path": "../composition-library-baseline-v0.1/accepted-corpus.json",
+    "sha256": "8dc2509dfc9d31d006726732e1825bc120dbeef06c5c1b0b1798e6315808e14e"
+  },
+  "source_dictionary_candidate": {
+    "version": "0.1",
+    "path": "../composition-library-baseline-v0.1/dictionary-candidate.json",
+    "sha256": "b8b45ef09542e138f5f28931429fa7722a33f4c743e957541bff932b8189462b"
+  },
+  "source_dictionary_eligibility_sha256": "f212ad2ed2a81dd6820905186b5ef52a855f8187a86619fe3861320ad2b763b4",
+  "creator_review_export": {
+    "path": "creator-review-export.json",
+    "sha256": "3151d779efab99445f3f5b61cd5da41dded979d435cf11226da5d62bbfe9d5ae",
+    "source_snapshot": "clb-v0.1:33b00632bedb342af8aed35b62824b9b60663474bca556bb69e4ab16ea22d3e0",
+    "record_count": 65
+  },
+  "creator_review_amendment_sha256": "e34e5c2d88aa161d543654c6c186ddeab5549581daf9ce83b0cdce345adc4595",
+  "creator_decision_counts": {
+    "EDIT_ENTRY_METADATA": 1,
+    "KEEP_IN_DICTIONARY": 64,
+    "MOVE_TO_CORPUS_ONLY": 0,
+    "REVIEW_LATER": 0
+  },
+  "counts": {
+    "creator_review_records": 65,
+    "creator_notes_nonempty": 10,
+    "dictionary_entries": 65,
+    "preferred_messages": 65,
+    "alternative_variants": 2,
+    "contextual_variants": 3,
+    "entries_with_multiple_variants": 3,
+    "entries_with_context_warnings": 11,
+    "entries_with_known_ambiguity": 40,
+    "render_count": 70,
+    "former_review_promoted": 5,
+    "follow_up_items": 2
+  },
+  "status_dependencies": {
+    "color_modifier": "REQUIRED / NOT IMPLEMENTED",
+    "practical_coverage": "NOT STARTED",
+    "translator": "NOT IMPLEMENTED",
+    "machine_agent_access": "NOT IMPLEMENTED",
+    "stress_test_07_1": "PAUSED / PRESERVED / UNCHANGED",
+    "blocked_hotel_color": "EXCLUDED / STILL BLOCKED"
+  },
+  "validation": "PASS",
+  "artifact_sha256": {
+    "creator-review-export.json": "3151d779efab99445f3f5b61cd5da41dded979d435cf11226da5d62bbfe9d5ae",
+    "creator-review-amendment.json": "e34e5c2d88aa161d543654c6c186ddeab5549581daf9ce83b0cdce345adc4595",
+    "dictionary.json": "9c0ed9e048b9a4d134635e7f21eab68809b42bfd495ee0697db3ad67063ae107",
+    "variants.json": "13bdf0d0e22d377074c79216de941f1db23f87c0fd689e97bf9398c7dd59cb10",
+    "lineage.json": "f181fe3d302dbc9bae30e789d104133f750321c8605cb26f6f5de06d6e1f819e",
+    "translator-lessons.json": "14ebbc283bf4f885099465a5357e54d9309ff82f96b28f048e6a88e66dfff82d",
+    "creator-notes-follow-up.json": "e84fd4a733d775f37052c4d4200aec9fdedcf265fb43ff5190569ccf4ab0f6e3",
+    "validation.json": "fd940fe9276a6c2e5ceaae3ded2e83045c92e56fb1423bdfbe29b2980d5b736e",
+    "render-manifest.json": "0af554dc932d365460cc8a4ae069519c6196df03edeabb8151dae086ee810f86",
+    "review/index.html": "72c58c7392b7209862969d250fa2a6a33de246692faaf8d41fc6f9efaf5f43d6",
+    "review/data.json": "9c0ed9e048b9a4d134635e7f21eab68809b42bfd495ee0697db3ad67063ae107",
+    "review/final-creator-visual-qa.html": "eebc2ed93516c04325a8b17191314b887e9c290d2ba0e5428ac8f6ea415317a6",
+    "creator-notes-follow-up/index.html": "7a534b2f356206293d684c380f180e71e3fc311f8f25dfe1166b2ce26efd919d",
+    "README.md": "73bb002ce391cfa0cf4649deeec235bcdbb020de3c2af45bc13c3d842a4a2d05"
+  }
+}

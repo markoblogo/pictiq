@@ -1,0 +1,920 @@
+{
+  "amendment_version": "0.1",
+  "status": "CREATOR REVIEW PROCESSED; FINAL VISUAL QA PENDING",
+  "source_review": {
+    "path": "creator-review-export.json",
+    "sha256": "3151d779efab99445f3f5b61cd5da41dded979d435cf11226da5d62bbfe9d5ae",
+    "review_type": "PICTIQ_DICTIONARY_CREATOR_ELIGIBILITY_REVIEW",
+    "review_version": "0.1",
+    "source_snapshot": "clb-v0.1:33b00632bedb342af8aed35b62824b9b60663474bca556bb69e4ab16ea22d3e0",
+    "total_records": 65,
+    "reviewed_records": 65
+  },
+  "source_dictionary_candidate": {
+    "path": "../composition-library-baseline-v0.1/dictionary-candidate.json",
+    "version": "0.1",
+    "sha256": "b8b45ef09542e138f5f28931429fa7722a33f4c743e957541bff932b8189462b"
+  },
+  "source_corpus_baseline": {
+    "path": "../composition-library-baseline-v0.1/accepted-corpus.json",
+    "version": "0.1",
+    "sha256": "8dc2509dfc9d31d006726732e1825bc120dbeef06c5c1b0b1798e6315808e14e"
+  },
+  "note_classification_semantics": "Counts are notes carrying each class; a note may carry multiple classes. Original Russian notes remain byte-preserved in creator-review-export.json and are copied verbatim per amendment record.",
+  "note_classification_counts": {
+    "ALTERNATIVE_VARIANT": 3,
+    "CONTEXTUAL_VARIANT": 2,
+    "DISPLAY_METADATA_EDIT": 5,
+    "PREFERRED_COMPOSITION_CORRECTION": 5,
+    "REQUIRES_FOLLOW_UP": 2,
+    "SEMANTIC_CLARIFICATION": 5,
+    "TRANSLATOR_LESSON": 10
+  },
+  "prohibition_variant_candidates": [
+    {
+      "label": "FEET + NO",
+      "token_ids": [
+        "move_feet",
+        "logic_no"
+      ],
+      "status": "CANDIDATE_NOT_ACCEPTED_VARIANT"
+    },
+    {
+      "label": "PERSON + FEET + NO",
+      "token_ids": [
+        "person_generic",
+        "move_feet",
+        "logic_no"
+      ],
+      "status": "CANDIDATE_NOT_ACCEPTED_VARIANT"
+    },
+    {
+      "label": "CAR + NO",
+      "token_ids": [
+        "move_car",
+        "logic_no"
+      ],
+      "status": "CANDIDATE_NOT_ACCEPTED_VARIANT"
+    },
+    {
+      "label": "PERSON + NO",
+      "token_ids": [
+        "person_generic",
+        "logic_no"
+      ],
+      "status": "CANDIDATE_NOT_ACCEPTED_VARIANT"
+    },
+    {
+      "label": "UP/AHEAD + NO",
+      "token_ids": null,
+      "mentioned_possible_id": "rel_up",
+      "status": "UNRESOLVED_TOKEN_AND_CONTEXT"
+    }
+  ],
+  "records": [
+    {
+      "corpus_record_id": "clh-v01-0001",
+      "dictionary_entry_id": "pcd-v01-0001",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0001",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0003",
+      "dictionary_entry_id": "pcd-v01-0002",
+      "system_eligibility": "YES",
+      "creator_decision": "EDIT_ENTRY_METADATA",
+      "creator_notes": "если \"я\" то лучше safety_medical + punct_exclaim без person_generic - с person_generic это уже будет кому-то/человеку надо помощь",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0002",
+      "creator_note_processing": {
+        "source_review_record_id": "clh-v01-0003",
+        "original_creator_note": "если \"я\" то лучше safety_medical + punct_exclaim без person_generic - с person_generic это уже будет кому-то/человеку надо помощь",
+        "classifications": [
+          "DISPLAY_METADATA_EDIT",
+          "PREFERRED_COMPOSITION_CORRECTION",
+          "SEMANTIC_CLARIFICATION",
+          "TRANSLATOR_LESSON"
+        ],
+        "structured_interpretation": "Use MEDICAL + URGENT as a live/self-referential practical expression; an explicit PERSON token adds a person referent. This does not define first-person grammar.",
+        "processing_actions": [
+          "preferred Message changed",
+          "explicit-person contextual variant retained"
+        ]
+      }
+    },
+    {
+      "corpus_record_id": "clh-v01-0004",
+      "dictionary_entry_id": "pcd-v01-0003",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0003",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0005",
+      "dictionary_entry_id": "pcd-v01-0004",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0004",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0006",
+      "dictionary_entry_id": "pcd-v01-0005",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "Проще сразу сказать одной иконкой \"food_meat\"",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0005",
+      "creator_note_processing": {
+        "source_review_record_id": "clh-v01-0006",
+        "original_creator_note": "Проще сразу сказать одной иконкой \"food_meat\"",
+        "classifications": [
+          "PREFERRED_COMPOSITION_CORRECTION",
+          "TRANSLATOR_LESSON"
+        ],
+        "structured_interpretation": "Prefer the existing direct food_meat primitive for the reusable meat meaning.",
+        "processing_actions": [
+          "preferred Message changed to food_meat"
+        ]
+      }
+    },
+    {
+      "corpus_record_id": "clc-v01-0008-r1",
+      "dictionary_entry_id": "pcd-v01-0006",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "также можно сказать comm_sound + стрелка вниз (down) или если шум от криков либо разговоров то можно сказать без comm_sound - а communication + minus либо down",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0006",
+      "creator_note_processing": {
+        "source_review_record_id": "clc-v01-0008-r1",
+        "original_creator_note": "также можно сказать comm_sound + стрелка вниз (down) или если шум от криков либо разговоров то можно сказать без comm_sound - а communication + minus либо down",
+        "classifications": [
+          "CONTEXTUAL_VARIANT",
+          "ALTERNATIVE_VARIANT",
+          "TRANSLATOR_LESSON"
+        ],
+        "structured_interpretation": "Keep SOUND + LESS preferred. Preserve DOWN and speech-specific combinations as labeled variants; communication/speech maps to the current comm_speak primitive.",
+        "processing_actions": [
+          "one alternative variant",
+          "two shouting/talking contextual variants"
+        ]
+      }
+    },
+    {
+      "corpus_record_id": "clc-v01-0012-r1",
+      "dictionary_entry_id": "pcd-v01-0007",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0007",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0013",
+      "dictionary_entry_id": "pcd-v01-0008",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0008",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0014",
+      "dictionary_entry_id": "pcd-v01-0009",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "Да, это для универсальных продуктовых магазинов/супермаркетов/рынков - для мясных лавок заменяем need_food на мясо и тд",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0009",
+      "creator_note_processing": {
+        "source_review_record_id": "clh-v01-0014",
+        "original_creator_note": "Да, это для универсальных продуктовых магазинов/супермаркетов/рынков - для мясных лавок заменяем need_food на мясо и тд",
+        "classifications": [
+          "DISPLAY_METADATA_EDIT",
+          "SEMANTIC_CLARIFICATION",
+          "TRANSLATOR_LESSON"
+        ],
+        "structured_interpretation": "Scope this composition to general food shops, supermarkets, and general markets; specialized shop categories may need a matching existing primitive.",
+        "processing_actions": [
+          "usage/context clarified",
+          "no shop family generated"
+        ]
+      }
+    },
+    {
+      "corpus_record_id": "clh-v01-0016",
+      "dictionary_entry_id": "pcd-v01-0010",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "qty_minus можно также заменять на down",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0010",
+      "creator_note_processing": {
+        "source_review_record_id": "clh-v01-0016",
+        "original_creator_note": "qty_minus можно также заменять на down",
+        "classifications": [
+          "ALTERNATIVE_VARIANT",
+          "TRANSLATOR_LESSON"
+        ],
+        "structured_interpretation": "DOWN is an alternative to LESS for this reviewed food-quantity neighborhood only; no global equivalence is inferred.",
+        "processing_actions": [
+          "one alternative variant"
+        ]
+      }
+    },
+    {
+      "corpus_record_id": "clh-v01-0018",
+      "dictionary_entry_id": "pcd-v01-0011",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0011",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0019",
+      "dictionary_entry_id": "pcd-v01-0012",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0012",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0020",
+      "dictionary_entry_id": "pcd-v01-0013",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0013",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0021",
+      "dictionary_entry_id": "pcd-v01-0014",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0014",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0023",
+      "dictionary_entry_id": "pcd-v01-0015",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0015",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0024",
+      "dictionary_entry_id": "pcd-v01-0016",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0016",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0025",
+      "dictionary_entry_id": "pcd-v01-0017",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0017",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0026",
+      "dictionary_entry_id": "pcd-v01-0018",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0018",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0028",
+      "dictionary_entry_id": "pcd-v01-0019",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0019",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0029",
+      "dictionary_entry_id": "pcd-v01-0020",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0020",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0040",
+      "dictionary_entry_id": "pcd-v01-0021",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0021",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0041",
+      "dictionary_entry_id": "pcd-v01-0022",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0022",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0042",
+      "dictionary_entry_id": "pcd-v01-0023",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0023",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0043",
+      "dictionary_entry_id": "pcd-v01-0024",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0024",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0044",
+      "dictionary_entry_id": "pcd-v01-0025",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "так может быть в каком-то контексте, но это не идеальный вариант - я бы скорее написал feet+no либо person+feet+no либо auto+no либо up+no либо person+no",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0025",
+      "creator_note_processing": {
+        "source_review_record_id": "clh-v01-0044",
+        "original_creator_note": "так может быть в каком-то контексте, но это не идеальный вариант - я бы скорее написал feet+no либо person+feet+no либо auto+no либо up+no либо person+no",
+        "classifications": [
+          "DISPLAY_METADATA_EDIT",
+          "CONTEXTUAL_VARIANT",
+          "ALTERNATIVE_VARIANT",
+          "SEMANTIC_CLARIFICATION",
+          "TRANSLATOR_LESSON",
+          "REQUIRES_FOLLOW_UP"
+        ],
+        "structured_interpretation": "The accepted HERE + NO form is a narrow wayfinding message. Prohibition must retain its referent; the suggested UP/AHEAD concept does not resolve to one exact intended token.",
+        "processing_actions": [
+          "headword/context narrowed",
+          "referent-specific proposals retained as non-accepted candidates",
+          "one exact-token follow-up"
+        ]
+      }
+    },
+    {
+      "corpus_record_id": "clh-v01-0045",
+      "dictionary_entry_id": "pcd-v01-0026",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0026",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0046",
+      "dictionary_entry_id": "pcd-v01-0027",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "Да, но можно сократить до move_feet + logic_no - так будет лучше",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0027",
+      "creator_note_processing": {
+        "source_review_record_id": "clh-v01-0046",
+        "original_creator_note": "Да, но можно сократить до move_feet + logic_no - так будет лучше",
+        "classifications": [
+          "PREFERRED_COMPOSITION_CORRECTION",
+          "TRANSLATOR_LESSON"
+        ],
+        "structured_interpretation": "Use the creator's shorter FEET + NO form for this pedestrian prohibition entry.",
+        "processing_actions": [
+          "preferred Message changed"
+        ]
+      }
+    },
+    {
+      "corpus_record_id": "clh-v01-0047",
+      "dictionary_entry_id": "pcd-v01-0028",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "тут я бы сократил до person_generic + move_feet",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0028",
+      "creator_note_processing": {
+        "source_review_record_id": "clh-v01-0047",
+        "original_creator_note": "тут я бы сократил до person_generic + move_feet",
+        "classifications": [
+          "DISPLAY_METADATA_EDIT",
+          "PREFERRED_COMPOSITION_CORRECTION",
+          "SEMANTIC_CLARIFICATION",
+          "TRANSLATOR_LESSON"
+        ],
+        "structured_interpretation": "Use PERSON + FEET for the reviewed pedestrian-movement neighborhood; do not imply a crossing-place relation without its token/context.",
+        "processing_actions": [
+          "preferred Message changed",
+          "headword/context narrowed"
+        ]
+      }
+    },
+    {
+      "corpus_record_id": "clh-v01-0048",
+      "dictionary_entry_id": "pcd-v01-0029",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0029",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0049",
+      "dictionary_entry_id": "pcd-v01-0030",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "тут бы я поменял местами так rel_here+logic_no+move_car",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0030",
+      "creator_note_processing": {
+        "source_review_record_id": "clh-v01-0049",
+        "original_creator_note": "тут бы я поменял местами так rel_here+logic_no+move_car",
+        "classifications": [
+          "PREFERRED_COMPOSITION_CORRECTION",
+          "TRANSLATOR_LESSON"
+        ],
+        "structured_interpretation": "Use the creator's exact HERE + NO + CAR order for this no-parking entry; this is a local correction, not a general order rule.",
+        "processing_actions": [
+          "preferred token order changed"
+        ]
+      }
+    },
+    {
+      "corpus_record_id": "clh-v01-0050",
+      "dictionary_entry_id": "pcd-v01-0031",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0031",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0051",
+      "dictionary_entry_id": "pcd-v01-0032",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0032",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0052",
+      "dictionary_entry_id": "pcd-v01-0033",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0033",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0053",
+      "dictionary_entry_id": "pcd-v01-0034",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0034",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0055",
+      "dictionary_entry_id": "pcd-v01-0035",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0035",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0056",
+      "dictionary_entry_id": "pcd-v01-0036",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0036",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0057",
+      "dictionary_entry_id": "pcd-v01-0037",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0037",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0058",
+      "dictionary_entry_id": "pcd-v01-0038",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0038",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0059",
+      "dictionary_entry_id": "pcd-v01-0039",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0039",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0060",
+      "dictionary_entry_id": "pcd-v01-0040",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0040",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0061",
+      "dictionary_entry_id": "pcd-v01-0041",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0041",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0062",
+      "dictionary_entry_id": "pcd-v01-0042",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0042",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0064",
+      "dictionary_entry_id": "pcd-v01-0043",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0043",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0065",
+      "dictionary_entry_id": "pcd-v01-0044",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0044",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0066",
+      "dictionary_entry_id": "pcd-v01-0045",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0045",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0067",
+      "dictionary_entry_id": "pcd-v01-0046",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0046",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0068",
+      "dictionary_entry_id": "pcd-v01-0047",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0047",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0069",
+      "dictionary_entry_id": "pcd-v01-0048",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0048",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clc-v01-0070-r1",
+      "dictionary_entry_id": "pcd-v01-0049",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0049",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0071",
+      "dictionary_entry_id": "pcd-v01-0050",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0050",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0072",
+      "dictionary_entry_id": "pcd-v01-0051",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0051",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0073",
+      "dictionary_entry_id": "pcd-v01-0052",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0052",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0074",
+      "dictionary_entry_id": "pcd-v01-0053",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0053",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0075",
+      "dictionary_entry_id": "pcd-v01-0054",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0054",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0076",
+      "dictionary_entry_id": "pcd-v01-0055",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0055",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0077",
+      "dictionary_entry_id": "pcd-v01-0056",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0056",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0078",
+      "dictionary_entry_id": "pcd-v01-0057",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0057",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0079",
+      "dictionary_entry_id": "pcd-v01-0058",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0058",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0080",
+      "dictionary_entry_id": "pcd-v01-0059",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0059",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0081",
+      "dictionary_entry_id": "pcd-v01-0060",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "YES",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0060",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0002",
+      "dictionary_entry_id": null,
+      "system_eligibility": "REVIEW",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "REVIEW",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0061",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0007",
+      "dictionary_entry_id": null,
+      "system_eligibility": "REVIEW",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "REVIEW",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0062",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0011",
+      "dictionary_entry_id": null,
+      "system_eligibility": "REVIEW",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "REVIEW",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0063",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0017",
+      "dictionary_entry_id": null,
+      "system_eligibility": "REVIEW",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "",
+      "previous_system_eligibility": "REVIEW",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0064",
+      "creator_note_processing": null
+    },
+    {
+      "corpus_record_id": "clh-v01-0022",
+      "dictionary_entry_id": null,
+      "system_eligibility": "REVIEW",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "тут я бы внес коррективу - это сочетание скорее когда прибывает поезд? для \"Public transport schedule / when?\" я бы после поезда добавил бы еще иконку \"text\"",
+      "previous_system_eligibility": "REVIEW",
+      "final_creator_disposition": "ACCEPTED_IN_DICTIONARY",
+      "dictionary_entry_id_after_processing": "pcd-v01-0065",
+      "creator_note_processing": {
+        "source_review_record_id": "clh-v01-0022",
+        "original_creator_note": "тут я бы внес коррективу - это сочетание скорее когда прибывает поезд? для \"Public transport schedule / when?\" я бы после поезда добавил бы еще иконку \"text\"",
+        "classifications": [
+          "DISPLAY_METADATA_EDIT",
+          "SEMANTIC_CLARIFICATION",
+          "TRANSLATOR_LESSON",
+          "REQUIRES_FOLLOW_UP"
+        ],
+        "structured_interpretation": "Distinguish an arrival-time question from a timetable/schedule request; the latter's exact ordered composition remains unspecified.",
+        "processing_actions": [
+          "headword/meaning clarified",
+          "schedule proposal held for follow-up"
+        ]
+      }
+    }
+  ]
+}

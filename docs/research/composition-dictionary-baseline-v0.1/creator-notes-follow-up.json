@@ -1,0 +1,78 @@
+{
+  "status": "TWO NOTE PORTIONS REQUIRE CREATOR INPUT; CURRENT ENTRIES REMAIN ACCEPTED",
+  "items": [
+    {
+      "corpus_record_id": "clh-v01-0044",
+      "dictionary_entry_id": "pcd-v01-0025",
+      "original_creator_note": "так может быть в каком-то контексте, но это не идеальный вариант - я бы скорее написал feet+no либо person+feet+no либо auto+no либо up+no либо person+no",
+      "current_preferred_sequence": "rel_here + logic_no",
+      "safe_inference": "The existing HERE + NO entry is narrow wayfinding; prohibited referents differ. The listed exact-token candidates are retained only as ideas, not accepted public variants.",
+      "unresolved": "The UP/AHEAD alternative does not identify one exact primitive or context; the note does not approve any specific contextual variant as current Dictionary content.",
+      "creator_question": "Should any of the referent-specific proposals become accepted contextual variants; if so, which context applies to each, and which exact current token do you intend for UP/AHEAD?",
+      "variant_candidates": [
+        {
+          "label": "FEET + NO",
+          "token_ids": [
+            "move_feet",
+            "logic_no"
+          ],
+          "status": "CANDIDATE_NOT_ACCEPTED_VARIANT"
+        },
+        {
+          "label": "PERSON + FEET + NO",
+          "token_ids": [
+            "person_generic",
+            "move_feet",
+            "logic_no"
+          ],
+          "status": "CANDIDATE_NOT_ACCEPTED_VARIANT"
+        },
+        {
+          "label": "CAR + NO",
+          "token_ids": [
+            "move_car",
+            "logic_no"
+          ],
+          "status": "CANDIDATE_NOT_ACCEPTED_VARIANT"
+        },
+        {
+          "label": "PERSON + NO",
+          "token_ids": [
+            "person_generic",
+            "logic_no"
+          ],
+          "status": "CANDIDATE_NOT_ACCEPTED_VARIANT"
+        },
+        {
+          "label": "UP/AHEAD + NO",
+          "token_ids": null,
+          "mentioned_possible_id": "rel_up",
+          "status": "UNRESOLVED_TOKEN_AND_CONTEXT"
+        }
+      ],
+      "entry_status": "CURRENT_ENTRY_ACCEPTED; ONLY_NOTE_PORTION_REQUIRES_FOLLOW_UP"
+    },
+    {
+      "corpus_record_id": "clh-v01-0022",
+      "dictionary_entry_id": "pcd-v01-0065",
+      "original_creator_note": "тут я бы внес коррективу - это сочетание скорее когда прибывает поезд? для \"Public transport schedule / when?\" я бы после поезда добавил бы еще иконку \"text\"",
+      "current_preferred_sequence": "move_public + time + punct_question",
+      "safe_inference": "move_public + time + punct_question is an arrival-time question. A distinct timetable/schedule message may include media_text.",
+      "unresolved": "The exact order and relation of move_public, media_text, time, and punct_question were not specified.",
+      "creator_question": "For a separate timetable/schedule request, what exact ordered token sequence using move_public, media_text, time, and punct_question should be accepted?",
+      "variant_candidates": [
+        {
+          "mentioned_token_ids": [
+            "move_public",
+            "media_text",
+            "time",
+            "punct_question"
+          ],
+          "sequence_status": "ORDER_NOT_SPECIFIED",
+          "status": "CREATOR_VARIANT_CANDIDATE_NOT_ACCEPTED"
+        }
+      ],
+      "entry_status": "CURRENT_ENTRY_ACCEPTED; ONLY_NOTE_PORTION_REQUIRES_FOLLOW_UP"
+    }
+  ]
+}

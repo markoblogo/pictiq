@@ -1,0 +1,5517 @@
+{
+  "dictionary_version": "0.1",
+  "variant_types": [
+    "PREFERRED",
+    "ALTERNATIVE",
+    "CONTEXTUAL",
+    "HISTORICAL"
+  ],
+  "variants": [
+    {
+      "variant_id": "pcd-v01-0001-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "logic_no",
+                "type": "icon"
+              },
+              {
+                "id": "drink_alcohol",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "token_sequence": "logic_no + drink_alcohol",
+      "render": "renders/pcd-v01-0001-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "OTHER"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "OTHER",
+          "context": {
+            "domain": [
+              "constrained-translation pilot"
+            ],
+            "situation": [
+              "single-model, one-repeat structured-output trial"
+            ],
+            "task": [
+              "direct basic"
+            ]
+          },
+          "evidence_ids": [
+            "cand-04a-02"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "No alcohol.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0001"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0001",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0002-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "safety_medical"
+              },
+              {
+                "type": "icon",
+                "id": "punct_exclaim"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "token_sequence": "safety_medical + punct_exclaim",
+      "render": "renders/pcd-v01-0002-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "OTHER"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "OTHER",
+          "context": {
+            "domain": [
+              "constrained-translation pilot"
+            ],
+            "situation": [
+              "single-model, one-repeat structured-output trial"
+            ],
+            "task": [
+              "direct basic"
+            ]
+          },
+          "evidence_ids": [
+            "cand-04a-04"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Urgent medical help; the live/self context can supply the affected person, while PERSON adds an explicit person referent.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0003"
+        ],
+        "creator_review_record_id": "clh-v01-0003",
+        "dictionary_entry_id": "pcd-v01-0002",
+        "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0002-contextual-person",
+      "variant_type": "CONTEXTUAL",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "person_generic",
+                "type": "icon"
+              },
+              {
+                "id": "safety_medical",
+                "type": "icon"
+              },
+              {
+                "id": "punct_exclaim",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "token_sequence": "person_generic + safety_medical + punct_exclaim",
+      "render": "renders/pcd-v01-0002-contextual-person.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "OTHER"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "OTHER",
+          "context": {
+            "domain": [
+              "constrained-translation pilot"
+            ],
+            "situation": [
+              "single-model, one-repeat structured-output trial"
+            ],
+            "task": [
+              "direct basic"
+            ]
+          },
+          "evidence_ids": [
+            "cand-04a-04"
+          ]
+        }
+      ],
+      "variant_context_note": "For an explicit person referent; no first-person or person-role grammar is implied.",
+      "semantic_distinction": "PERSON makes a person referent explicit; it can shift the reading toward someone specified or other than the speaker.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0003"
+        ],
+        "creator_review_record_id": "clh-v01-0003",
+        "dictionary_entry_id": "pcd-v01-0002",
+        "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0003-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "qual_sacred",
+                "type": "icon"
+              },
+              {
+                "id": "place_home",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "token_sequence": "qual_sacred + place_home",
+      "render": "renders/pcd-v01-0003-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "OTHER"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "OTHER",
+          "context": {
+            "domain": [
+              "constrained-translation pilot"
+            ],
+            "situation": [
+              "single-model, one-repeat structured-output trial"
+            ],
+            "task": [
+              "composition"
+            ]
+          },
+          "evidence_ids": [
+            "cand-04a-06"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "A sacred building.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0004"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0003",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0004-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "person_generic",
+                "type": "icon"
+              },
+              {
+                "id": "love_heart",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "token_sequence": "person_generic + love_heart",
+      "render": "renders/pcd-v01-0004-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "OTHER"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "OTHER",
+          "context": {
+            "domain": [
+              "constrained-translation pilot"
+            ],
+            "situation": [
+              "single-model, one-repeat structured-output trial"
+            ],
+            "task": [
+              "composition"
+            ]
+          },
+          "evidence_ids": [
+            "cand-04a-07"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "A loved person.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0005"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0004",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0005-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "contexts": [
+          "universal-core",
+          "universal-v1"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "food_meat"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "token_sequence": "food_meat",
+      "render": "renders/pcd-v01-0005-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "OTHER"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "OTHER",
+          "context": {
+            "domain": [
+              "constrained-translation pilot"
+            ],
+            "situation": [
+              "single-model, one-repeat structured-output trial"
+            ],
+            "task": [
+              "composition"
+            ]
+          },
+          "evidence_ids": [
+            "cand-04a-08"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Meat / meat food",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0006"
+        ],
+        "creator_review_record_id": "clh-v01-0006",
+        "dictionary_entry_id": "pcd-v01-0005",
+        "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0006-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "comm_sound"
+              },
+              {
+                "type": "icon",
+                "id": "qty_minus"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "token_sequence": "comm_sound + qty_minus",
+      "render": "renders/pcd-v01-0006-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "OTHER"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "OTHER",
+          "context": {
+            "domain": [
+              "constrained-translation pilot"
+            ],
+            "situation": [
+              "single-model, one-repeat structured-output trial"
+            ],
+            "task": [
+              "negation evaluation"
+            ]
+          },
+          "evidence_ids": [
+            "cand-04a-10"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Less noise, please.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clc-v01-0008-r1"
+        ],
+        "creator_review_record_id": "clc-v01-0008-r1",
+        "dictionary_entry_id": "pcd-v01-0006",
+        "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0006-alternative-down",
+      "variant_type": "ALTERNATIVE",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "comm_sound"
+              },
+              {
+                "type": "icon",
+                "id": "rel_down"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "token_sequence": "comm_sound + rel_down",
+      "render": "renders/pcd-v01-0006-alternative-down.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "OTHER"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "OTHER",
+          "context": {
+            "domain": [
+              "constrained-translation pilot"
+            ],
+            "situation": [
+              "single-model, one-repeat structured-output trial"
+            ],
+            "task": [
+              "negation evaluation"
+            ]
+          },
+          "evidence_ids": [
+            "cand-04a-10"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Sound reduction expressed with DOWN; an alternative for this noise-request neighborhood.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clc-v01-0008-r1"
+        ],
+        "creator_review_record_id": "clc-v01-0008-r1",
+        "dictionary_entry_id": "pcd-v01-0006",
+        "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0006-context-speech-less",
+      "variant_type": "CONTEXTUAL",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "comm_speak"
+              },
+              {
+                "type": "icon",
+                "id": "qty_minus"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "token_sequence": "comm_speak + qty_minus",
+      "render": "renders/pcd-v01-0006-context-speech-less.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "OTHER"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "OTHER",
+          "context": {
+            "domain": [
+              "constrained-translation pilot"
+            ],
+            "situation": [
+              "single-model, one-repeat structured-output trial"
+            ],
+            "task": [
+              "negation evaluation"
+            ]
+          },
+          "evidence_ids": [
+            "cand-04a-10"
+          ]
+        }
+      ],
+      "variant_context_note": "Noise from shouting or conversation",
+      "semantic_distinction": "Noise specifically from shouting or conversation, expressed with SPEECH + LESS.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clc-v01-0008-r1"
+        ],
+        "creator_review_record_id": "clc-v01-0008-r1",
+        "dictionary_entry_id": "pcd-v01-0006",
+        "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0006-context-speech-down",
+      "variant_type": "CONTEXTUAL",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "comm_speak"
+              },
+              {
+                "type": "icon",
+                "id": "rel_down"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "token_sequence": "comm_speak + rel_down",
+      "render": "renders/pcd-v01-0006-context-speech-down.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "OTHER"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "OTHER",
+          "context": {
+            "domain": [
+              "constrained-translation pilot"
+            ],
+            "situation": [
+              "single-model, one-repeat structured-output trial"
+            ],
+            "task": [
+              "negation evaluation"
+            ]
+          },
+          "evidence_ids": [
+            "cand-04a-10"
+          ]
+        }
+      ],
+      "variant_context_note": "Noise from shouting or conversation",
+      "semantic_distinction": "Noise specifically from shouting or conversation, expressed with SPEECH + DOWN.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clc-v01-0008-r1"
+        ],
+        "creator_review_record_id": "clc-v01-0008-r1",
+        "dictionary_entry_id": "pcd-v01-0006",
+        "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0007-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "contexts": [
+          "universal-core",
+          "narrative"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_here"
+              },
+              {
+                "type": "icon",
+                "id": "action_conflict"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "token_sequence": "rel_here + action_conflict",
+      "render": "renders/pcd-v01-0007-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "OTHER"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "OTHER",
+          "context": {
+            "domain": [
+              "constrained-translation pilot"
+            ],
+            "situation": [
+              "single-model, one-repeat structured-output trial"
+            ],
+            "task": [
+              "boundary"
+            ]
+          },
+          "evidence_ids": [
+            "cand-04a-18"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "This place is a battlefield.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clc-v01-0012-r1"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0007",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0008-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "move_car"
+              },
+              {
+                "type": "icon",
+                "id": "service_tools"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "move_car + service_tools",
+      "render": "renders/pcd-v01-0008-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "BOOK"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "BOOK",
+          "context": {
+            "domain": [
+              "practical communication"
+            ],
+            "situation": [
+              "published Handbook v1.0 worked example"
+            ],
+            "task": [
+              "car service / repair"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Handbook prose / example label supplies the scoped gloss",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-handbook-car-repair"
+                ]
+              },
+              {
+                "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-handbook-car-repair"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-handbook-car-repair"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Car service / repair",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0013"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0008",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0009-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "place_shop"
+              },
+              {
+                "type": "icon",
+                "id": "need_food"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "place_shop + need_food",
+      "render": "renders/pcd-v01-0009-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "BOOK"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "BOOK",
+          "context": {
+            "domain": [
+              "practical communication"
+            ],
+            "situation": [
+              "published Handbook v1.0 worked example"
+            ],
+            "task": [
+              "grocery / food shop"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Handbook prose / example label supplies the scoped gloss",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-handbook-food-shop"
+                ]
+              },
+              {
+                "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-handbook-food-shop"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-handbook-food-shop"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "General grocery / food shop",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0014"
+        ],
+        "creator_review_record_id": "clh-v01-0014",
+        "dictionary_entry_id": "pcd-v01-0009",
+        "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0010-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "need_food"
+              },
+              {
+                "type": "icon",
+                "id": "qty_minus"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "need_food + qty_minus",
+      "render": "renders/pcd-v01-0010-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "BOOK"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "BOOK",
+          "context": {
+            "domain": [
+              "practical communication"
+            ],
+            "situation": [
+              "published Handbook v1.0 worked example"
+            ],
+            "task": [
+              "less food / smaller portion"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Handbook prose / example label supplies the scoped gloss",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-handbook-less-food"
+                ]
+              },
+              {
+                "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-handbook-less-food"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-handbook-less-food"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Less food / smaller portion",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0016"
+        ],
+        "creator_review_record_id": "clh-v01-0016",
+        "dictionary_entry_id": "pcd-v01-0010",
+        "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0010-alternative-down",
+      "variant_type": "ALTERNATIVE",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "need_food"
+              },
+              {
+                "type": "icon",
+                "id": "rel_down"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "need_food + rel_down",
+      "render": "renders/pcd-v01-0010-alternative-down.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "BOOK"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "BOOK",
+          "context": {
+            "domain": [
+              "practical communication"
+            ],
+            "situation": [
+              "published Handbook v1.0 worked example"
+            ],
+            "task": [
+              "less food / smaller portion"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Handbook prose / example label supplies the scoped gloss",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-handbook-less-food"
+                ]
+              },
+              {
+                "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-handbook-less-food"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-handbook-less-food"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "DOWN as an alternative to LESS in this food-quantity neighborhood only.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0016"
+        ],
+        "creator_review_record_id": "clh-v01-0016",
+        "dictionary_entry_id": "pcd-v01-0010",
+        "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0011-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "need_water"
+              },
+              {
+                "type": "icon",
+                "id": "qty_plus"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "need_water + qty_plus",
+      "render": "renders/pcd-v01-0011-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "BOOK"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "BOOK",
+          "context": {
+            "domain": [
+              "practical communication"
+            ],
+            "situation": [
+              "published Handbook v1.0 worked example"
+            ],
+            "task": [
+              "more water"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Handbook prose / example label supplies the scoped gloss",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-handbook-more-water"
+                ]
+              },
+              {
+                "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-handbook-more-water"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-handbook-more-water"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "More water",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0018"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0011",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0012-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "need_food"
+              },
+              {
+                "type": "icon",
+                "id": "qty_1"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "need_food + qty_1",
+      "render": "renders/pcd-v01-0012-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "BOOK"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "BOOK",
+          "context": {
+            "domain": [
+              "practical communication"
+            ],
+            "situation": [
+              "published Handbook v1.0 worked example"
+            ],
+            "task": [
+              "one food portion"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Handbook prose / example label supplies the scoped gloss",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-handbook-one-food-portion"
+                ]
+              },
+              {
+                "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-handbook-one-food-portion"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-handbook-one-food-portion"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "One food portion",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0019"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0012",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0013-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "place_shop"
+              },
+              {
+                "type": "icon",
+                "id": "comm_phone"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "place_shop + comm_phone",
+      "render": "renders/pcd-v01-0013-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "BOOK"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "BOOK",
+          "context": {
+            "domain": [
+              "practical communication"
+            ],
+            "situation": [
+              "published Handbook v1.0 worked example"
+            ],
+            "task": [
+              "phone / electronics shop"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Handbook prose / example label supplies the scoped gloss",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-handbook-phone-shop"
+                ]
+              },
+              {
+                "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-handbook-phone-shop"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-handbook-phone-shop"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Phone / electronics shop",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0020"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0013",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0014-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "move_taxi"
+              },
+              {
+                "type": "icon",
+                "id": "money_card"
+              },
+              {
+                "type": "icon",
+                "id": "punct_question"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "move_taxi + money_card + punct_question",
+      "render": "renders/pcd-v01-0014-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "BOOK"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "BOOK",
+          "context": {
+            "domain": [
+              "practical communication"
+            ],
+            "situation": [
+              "published Handbook v1.0 worked example"
+            ],
+            "task": [
+              "can i pay for a taxi by card?"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Handbook prose / example label supplies the scoped gloss",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-handbook-taxi-card-payment"
+                ]
+              },
+              {
+                "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-handbook-taxi-card-payment"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-handbook-taxi-card-payment"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Can I pay for a taxi by card?",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0021"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0014",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0015-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "need_water"
+              },
+              {
+                "type": "icon",
+                "id": "qty_2"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "need_water + qty_2",
+      "render": "renders/pcd-v01-0015-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "BOOK"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "BOOK",
+          "context": {
+            "domain": [
+              "practical communication"
+            ],
+            "situation": [
+              "published Handbook v1.0 worked example"
+            ],
+            "task": [
+              "two waters / two units of water"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Handbook prose / example label supplies the scoped gloss",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-handbook-two-waters"
+                ]
+              },
+              {
+                "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-handbook-two-waters"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-handbook-two-waters"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Two waters / two units of water",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0023"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0015",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0016-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "safety_medical"
+              },
+              {
+                "type": "icon",
+                "id": "punct_exclaim"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "safety_medical + punct_exclaim",
+      "render": "renders/pcd-v01-0016-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "BOOK"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "BOOK",
+          "context": {
+            "domain": [
+              "practical communication"
+            ],
+            "situation": [
+              "published Handbook v1.0 worked example"
+            ],
+            "task": [
+              "medical help, urgent"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Handbook prose / example label supplies the scoped gloss",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-handbook-urgent-medical"
+                ]
+              },
+              {
+                "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-handbook-urgent-medical"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-handbook-urgent-medical"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Medical help, urgent",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0024"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0016",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0017-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "need_toilet"
+              },
+              {
+                "type": "icon",
+                "id": "punct_exclaim"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "need_toilet + punct_exclaim",
+      "render": "renders/pcd-v01-0017-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "BOOK"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "BOOK",
+          "context": {
+            "domain": [
+              "practical communication"
+            ],
+            "situation": [
+              "published Handbook v1.0 worked example"
+            ],
+            "task": [
+              "urgent toilet request"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Handbook prose / example label supplies the scoped gloss",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-handbook-urgent-toilet"
+                ]
+              },
+              {
+                "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-handbook-urgent-toilet"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-handbook-urgent-toilet"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Urgent toilet request",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0025"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0017",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0018-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "need_water"
+              },
+              {
+                "type": "icon",
+                "id": "punct_question"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "need_water + punct_question",
+      "render": "renders/pcd-v01-0018-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "BOOK"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "BOOK",
+          "context": {
+            "domain": [
+              "practical communication"
+            ],
+            "situation": [
+              "published Handbook v1.0 worked example"
+            ],
+            "task": [
+              "where can i get water?"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Handbook prose / example label supplies the scoped gloss",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-handbook-water-question"
+                ]
+              },
+              {
+                "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-handbook-water-question"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-handbook-water-question"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Where can I get water?",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0026"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0018",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0019-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "need_toilet"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "need_toilet",
+      "render": "renders/pcd-v01-0019-preferred.svg",
+      "mode": [
+        "EMBODIED"
+      ],
+      "surface": [
+        "PORTABLE_CARD"
+      ],
+      "context": [
+        {
+          "communication_mode": "EMBODIED",
+          "communication_surface": "PORTABLE_CARD",
+          "context": {
+            "domain": [
+              "practical communication"
+            ],
+            "situation": [
+              "published Handbook v1.0 worked example"
+            ],
+            "task": [
+              "toilet / need a toilet / where is the toilet"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Handbook prose / example label supplies the scoped gloss",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-handbook-zero-toilet"
+                ]
+              },
+              {
+                "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-handbook-zero-toilet"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-handbook-zero-toilet"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Toilet / need a toilet / where is the toilet",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0028"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0019",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0020-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "comm_wifi"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "comm_wifi",
+      "render": "renders/pcd-v01-0020-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "BOOK"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "BOOK",
+          "context": {
+            "domain": [
+              "practical communication"
+            ],
+            "situation": [
+              "published Handbook v1.0 worked example"
+            ],
+            "task": [
+              "wi-fi / internet / where is wi-fi"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Handbook prose / example label supplies the scoped gloss",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-handbook-zero-wifi"
+                ]
+              },
+              {
+                "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-handbook-zero-wifi"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-handbook-zero-wifi"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Wi-Fi / internet / where is Wi-Fi",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0029"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0020",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0021-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_greater"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "rel_greater",
+      "render": "renders/pcd-v01-0021-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "WAYFINDING"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "context": {
+            "domain": [
+              "road-wayfinding"
+            ],
+            "situation": [
+              "public road and wayfinding sign"
+            ],
+            "task": [
+              "move right / choose the rightward route."
+            ],
+            "context_supplies": [
+              {
+                "cue": "road/public-wayfinding conventions",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-road-01"
+                ]
+              },
+              {
+                "cue": "sign placement and road-navigation frame",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-road-01"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-road-01"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Proceed or turn right according to road/public-wayfinding indication.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0040"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0021",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0022-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_lesser"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "rel_lesser",
+      "render": "renders/pcd-v01-0022-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "WAYFINDING"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "context": {
+            "domain": [
+              "road-wayfinding"
+            ],
+            "situation": [
+              "public road and wayfinding sign"
+            ],
+            "task": [
+              "move left / choose the leftward route."
+            ],
+            "context_supplies": [
+              {
+                "cue": "road/public-wayfinding conventions",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-road-02"
+                ]
+              },
+              {
+                "cue": "sign placement and road-navigation frame",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-road-02"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-road-02"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Proceed or turn left according to road/public-wayfinding indication.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0041"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0022",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0023-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_up"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "rel_up",
+      "render": "renders/pcd-v01-0023-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "WAYFINDING"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "context": {
+            "domain": [
+              "road-wayfinding"
+            ],
+            "situation": [
+              "public road and wayfinding sign"
+            ],
+            "task": [
+              "continue forward on the present route."
+            ],
+            "context_supplies": [
+              {
+                "cue": "road/public-wayfinding conventions",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-road-03"
+                ]
+              },
+              {
+                "cue": "sign placement and road-navigation frame",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-road-03"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-road-03"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Continue straight ahead.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0042"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0023",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0024-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_down"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "rel_down",
+      "render": "renders/pcd-v01-0024-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "WAYFINDING"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "context": {
+            "domain": [
+              "road-wayfinding"
+            ],
+            "situation": [
+              "public road and wayfinding sign"
+            ],
+            "task": [
+              "move down or choose the lower-level route."
+            ],
+            "context_supplies": [
+              {
+                "cue": "road/public-wayfinding conventions",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-road-04"
+                ]
+              },
+              {
+                "cue": "sign placement and road-navigation frame",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-road-04"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-road-04"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Go down, lower level, or downward route.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0043"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0024",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0025-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_here"
+              },
+              {
+                "type": "icon",
+                "id": "logic_no"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "rel_here + logic_no",
+      "render": "renders/pcd-v01-0025-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "WAYFINDING"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "context": {
+            "domain": [
+              "road-wayfinding"
+            ],
+            "situation": [
+              "public road and wayfinding sign"
+            ],
+            "task": [
+              "do not enter or proceed into the signed way."
+            ],
+            "context_supplies": [
+              {
+                "cue": "road/public-wayfinding conventions",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-road-05"
+                ]
+              },
+              {
+                "cue": "sign placement and road-navigation frame",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-road-05"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-road-05"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "A location-specific wayfinding prohibition",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0044"
+        ],
+        "creator_review_record_id": "clh-v01-0044",
+        "dictionary_entry_id": "pcd-v01-0025",
+        "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0026-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "person_generic"
+              },
+              {
+                "type": "icon",
+                "id": "move_feet"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "person_generic + move_feet",
+      "render": "renders/pcd-v01-0026-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "WAYFINDING"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "context": {
+            "domain": [
+              "road-wayfinding"
+            ],
+            "situation": [
+              "public road and wayfinding sign"
+            ],
+            "task": [
+              "walk here / pedestrians should use this route."
+            ],
+            "context_supplies": [
+              {
+                "cue": "road/public-wayfinding conventions",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-road-06"
+                ]
+              },
+              {
+                "cue": "sign placement and road-navigation frame",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-road-06"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-road-06"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Route or path for pedestrians.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0045"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0026",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0027-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "move_feet"
+              },
+              {
+                "type": "icon",
+                "id": "logic_no"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "move_feet + logic_no",
+      "render": "renders/pcd-v01-0027-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "WAYFINDING"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "context": {
+            "domain": [
+              "road-wayfinding"
+            ],
+            "situation": [
+              "public road and wayfinding sign"
+            ],
+            "task": [
+              "do not walk here / pedestrians must not enter."
+            ],
+            "context_supplies": [
+              {
+                "cue": "road/public-wayfinding conventions",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-road-07"
+                ]
+              },
+              {
+                "cue": "sign placement and road-navigation frame",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-road-07"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-road-07"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Access prohibited to pedestrians.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0046"
+        ],
+        "creator_review_record_id": "clh-v01-0046",
+        "dictionary_entry_id": "pcd-v01-0027",
+        "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0028-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "person_generic"
+              },
+              {
+                "type": "icon",
+                "id": "move_feet"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "person_generic + move_feet",
+      "render": "renders/pcd-v01-0028-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "WAYFINDING"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "context": {
+            "domain": [
+              "road-wayfinding"
+            ],
+            "situation": [
+              "public road and wayfinding sign"
+            ],
+            "task": [
+              "expect/use a crossing point; drivers yield/slow where applicable; pedestrians cross here."
+            ],
+            "context_supplies": [
+              {
+                "cue": "road/public-wayfinding conventions",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-road-08"
+                ]
+              },
+              {
+                "cue": "sign placement and road-navigation frame",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-road-08"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-road-08"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Person moving on foot",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0047"
+        ],
+        "creator_review_record_id": "clh-v01-0047",
+        "dictionary_entry_id": "pcd-v01-0028",
+        "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0029-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_here"
+              },
+              {
+                "type": "icon",
+                "id": "move_car"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "rel_here + move_car",
+      "render": "renders/pcd-v01-0029-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "WAYFINDING"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "context": {
+            "domain": [
+              "road-wayfinding"
+            ],
+            "situation": [
+              "public road and wayfinding sign"
+            ],
+            "task": [
+              "a driver may park here / find parking here."
+            ],
+            "context_supplies": [
+              {
+                "cue": "road/public-wayfinding conventions",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-road-09"
+                ]
+              },
+              {
+                "cue": "sign placement and road-navigation frame",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-road-09"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-road-09"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Parking place or parking permitted.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0048"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0029",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0030-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_here"
+              },
+              {
+                "type": "icon",
+                "id": "logic_no"
+              },
+              {
+                "type": "icon",
+                "id": "move_car"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "rel_here + logic_no + move_car",
+      "render": "renders/pcd-v01-0030-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "WAYFINDING"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "context": {
+            "domain": [
+              "road-wayfinding"
+            ],
+            "situation": [
+              "public road and wayfinding sign"
+            ],
+            "task": [
+              "do not park here."
+            ],
+            "context_supplies": [
+              {
+                "cue": "road/public-wayfinding conventions",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-road-10"
+                ]
+              },
+              {
+                "cue": "sign placement and road-navigation frame",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-road-10"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-road-10"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Parking prohibited.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0049"
+        ],
+        "creator_review_record_id": "clh-v01-0049",
+        "dictionary_entry_id": "pcd-v01-0030",
+        "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0031-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "place_gas"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "place_gas",
+      "render": "renders/pcd-v01-0031-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "WAYFINDING"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "context": {
+            "domain": [
+              "road-wayfinding"
+            ],
+            "situation": [
+              "public road and wayfinding sign"
+            ],
+            "task": [
+              "go here for fuel."
+            ],
+            "context_supplies": [
+              {
+                "cue": "road/public-wayfinding conventions",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-road-11"
+                ]
+              },
+              {
+                "cue": "sign placement and road-navigation frame",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-road-11"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-road-11"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Fuel service or petrol station.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0050"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0031",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0032-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "safety_medical"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "safety_medical",
+      "render": "renders/pcd-v01-0032-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "WAYFINDING"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "context": {
+            "domain": [
+              "road-wayfinding"
+            ],
+            "situation": [
+              "public road and wayfinding sign"
+            ],
+            "task": [
+              "go here for medical help."
+            ],
+            "context_supplies": [
+              {
+                "cue": "road/public-wayfinding conventions",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-road-12"
+                ]
+              },
+              {
+                "cue": "sign placement and road-navigation frame",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-road-12"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-road-12"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Hospital or medical service nearby.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0051"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0032",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0033-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "safety_police"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "safety_police",
+      "render": "renders/pcd-v01-0033-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "WAYFINDING"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "context": {
+            "domain": [
+              "road-wayfinding"
+            ],
+            "situation": [
+              "public road and wayfinding sign"
+            ],
+            "task": [
+              "go here for police help or comply with police-point indication."
+            ],
+            "context_supplies": [
+              {
+                "cue": "road/public-wayfinding conventions",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-road-13"
+                ]
+              },
+              {
+                "cue": "sign placement and road-navigation frame",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-road-13"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-road-13"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Police service or police post.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0052"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0033",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0034-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "need_food"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "need_food",
+      "render": "renders/pcd-v01-0034-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "WAYFINDING"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "context": {
+            "domain": [
+              "road-wayfinding"
+            ],
+            "situation": [
+              "public road and wayfinding sign"
+            ],
+            "task": [
+              "go here for food."
+            ],
+            "context_supplies": [
+              {
+                "cue": "road/public-wayfinding conventions",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-road-14"
+                ]
+              },
+              {
+                "cue": "sign placement and road-navigation frame",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-road-14"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-road-14"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Food service / restaurant available.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0053"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0034",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0035-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "media_text"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "media_text",
+      "render": "renders/pcd-v01-0035-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "WAYFINDING"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "context": {
+            "domain": [
+              "road-wayfinding"
+            ],
+            "situation": [
+              "public road and wayfinding sign"
+            ],
+            "task": [
+              "go here to obtain information."
+            ],
+            "context_supplies": [
+              {
+                "cue": "road/public-wayfinding conventions",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-road-16"
+                ]
+              },
+              {
+                "cue": "sign placement and road-navigation frame",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-road-16"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-road-16"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Information point / tourist or public information.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0055"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0035",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0036-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "punct_exclaim"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "punct_exclaim",
+      "render": "renders/pcd-v01-0036-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "WAYFINDING"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "context": {
+            "domain": [
+              "road-wayfinding"
+            ],
+            "situation": [
+              "public road and wayfinding sign"
+            ],
+            "task": [
+              "pay attention, slow, prepare for hazard."
+            ],
+            "context_supplies": [
+              {
+                "cue": "road/public-wayfinding conventions",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-road-17"
+                ]
+              },
+              {
+                "cue": "sign placement and road-navigation frame",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-road-17"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-road-17"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "General danger warning or caution ahead.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0056"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0036",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0037-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "service_tools"
+              },
+              {
+                "type": "icon",
+                "id": "punct_exclaim"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "service_tools + punct_exclaim",
+      "render": "renders/pcd-v01-0037-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "WAYFINDING"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "context": {
+            "domain": [
+              "road-wayfinding"
+            ],
+            "situation": [
+              "public road and wayfinding sign"
+            ],
+            "task": [
+              "expect works, slow down, follow temporary routing."
+            ],
+            "context_supplies": [
+              {
+                "cue": "road/public-wayfinding conventions",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-road-18"
+                ]
+              },
+              {
+                "cue": "sign placement and road-navigation frame",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-road-18"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-road-18"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Road works or maintenance ahead.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0057"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0037",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0038-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "surface_wavy"
+              },
+              {
+                "type": "icon",
+                "id": "punct_exclaim"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "surface_wavy + punct_exclaim",
+      "render": "renders/pcd-v01-0038-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "WAYFINDING"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "context": {
+            "domain": [
+              "road-wayfinding"
+            ],
+            "situation": [
+              "public road and wayfinding sign"
+            ],
+            "task": [
+              "slow down, avoid abrupt steering/braking, increase caution."
+            ],
+            "context_supplies": [
+              {
+                "cue": "road/public-wayfinding conventions",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-road-19"
+                ]
+              },
+              {
+                "cue": "sign placement and road-navigation frame",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-road-19"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-road-19"
+          ]
+        },
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "context": {
+            "domain": [
+              "road-wayfinding"
+            ],
+            "situation": [
+              "public road and wayfinding sign"
+            ],
+            "task": [
+              "slow down and expect rough surface/vehicle movement."
+            ],
+            "context_supplies": [
+              {
+                "cue": "road/public-wayfinding conventions",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-road-20"
+                ]
+              },
+              {
+                "cue": "sign placement and road-navigation frame",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-road-20"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-road-20"
+          ]
+        },
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "context": {
+            "domain": [
+              "road-wayfinding"
+            ],
+            "situation": [
+              "public road and wayfinding sign"
+            ],
+            "task": [
+              "slow down before a vertical traffic-calming feature."
+            ],
+            "context_supplies": [
+              {
+                "cue": "road/public-wayfinding conventions",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-road-21"
+                ]
+              },
+              {
+                "cue": "sign placement and road-navigation frame",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-road-21"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-road-21"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Road surface may be slippery.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0058"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0038",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0039-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_up"
+              },
+              {
+                "type": "icon",
+                "id": "logic_no"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "rel_up + logic_no",
+      "render": "renders/pcd-v01-0039-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "WAYFINDING"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "context": {
+            "domain": [
+              "road-wayfinding"
+            ],
+            "situation": [
+              "public road and wayfinding sign"
+            ],
+            "task": [
+              "do not expect through passage; turn around or choose another route if needed."
+            ],
+            "context_supplies": [
+              {
+                "cue": "road/public-wayfinding conventions",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-road-22"
+                ]
+              },
+              {
+                "cue": "sign placement and road-navigation frame",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-road-22"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-road-22"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Road has no through continuation.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0059"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0039",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0040-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "number",
+                "value": 50
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "50",
+      "render": "renders/pcd-v01-0040-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "WAYFINDING"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "context": {
+            "domain": [
+              "road-wayfinding"
+            ],
+            "situation": [
+              "public road and wayfinding sign"
+            ],
+            "task": [
+              "keep speed at or below 50 km/h or mph depending on jurisdiction."
+            ],
+            "context_supplies": [
+              {
+                "cue": "road/public-wayfinding conventions",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-road-23"
+                ]
+              },
+              {
+                "cue": "sign placement and road-navigation frame",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-road-23"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-road-23"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Do not exceed 50 in the jurisdiction's speed unit.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0060"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0040",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0041-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_lesser"
+              },
+              {
+                "type": "icon",
+                "id": "logic_no"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "rel_lesser + logic_no",
+      "render": "renders/pcd-v01-0041-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "WAYFINDING"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "context": {
+            "domain": [
+              "road-wayfinding"
+            ],
+            "situation": [
+              "public road and wayfinding sign"
+            ],
+            "task": [
+              "do not turn left."
+            ],
+            "context_supplies": [
+              {
+                "cue": "road/public-wayfinding conventions",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-road-24"
+                ]
+              },
+              {
+                "cue": "sign placement and road-navigation frame",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-road-24"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-road-24"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Turning left at the next junction is prohibited.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0061"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0041",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0042-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_here"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "rel_here",
+      "render": "renders/pcd-v01-0042-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "WAYFINDING"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "context": {
+            "domain": [
+              "road-wayfinding"
+            ],
+            "situation": [
+              "public road and wayfinding sign"
+            ],
+            "task": [
+              "orient from this point."
+            ],
+            "context_supplies": [
+              {
+                "cue": "road/public-wayfinding conventions",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-road-25"
+                ]
+              },
+              {
+                "cue": "sign placement and road-navigation frame",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-road-25"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-road-25"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Current viewer/location reference point on a map or wayfinding board.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0062"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0042",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0043-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_lesser"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "rel_lesser",
+      "render": "renders/pcd-v01-0043-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "UI"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "context": {
+            "domain": [
+              "web-ui"
+            ],
+            "situation": [
+              "navigation"
+            ],
+            "task": [
+              "back to previous screen or step"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Header/back-control context",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-webui-01"
+                ]
+              },
+              {
+                "cue": "Header/back-control context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-webui-01"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-webui-01"
+          ]
+        },
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "context": {
+            "domain": [
+              "web-ui"
+            ],
+            "situation": [
+              "action"
+            ],
+            "task": [
+              "undo / restore previous state"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Editor history context",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-webui-17"
+                ]
+              },
+              {
+                "cue": "Editor history context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-webui-17"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-webui-17"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Back to previous screen or step",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0064"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0043",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0044-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_greater"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "rel_greater",
+      "render": "renders/pcd-v01-0044-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "UI"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "context": {
+            "domain": [
+              "web-ui"
+            ],
+            "situation": [
+              "navigation"
+            ],
+            "task": [
+              "forward / next step"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Wizard/header context",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-webui-02"
+                ]
+              },
+              {
+                "cue": "Wizard/header context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-webui-02"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-webui-02"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Forward / next step",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0065"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0044",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0045-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "place_home"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "place_home",
+      "render": "renders/pcd-v01-0045-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "UI"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "context": {
+            "domain": [
+              "web-ui"
+            ],
+            "situation": [
+              "navigation"
+            ],
+            "task": [
+              "home/start/dashboard"
+            ],
+            "context_supplies": [
+              {
+                "cue": "App navigation bar",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-webui-03"
+                ]
+              },
+              {
+                "cue": "App navigation bar",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-webui-03"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-webui-03"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Home/start/dashboard",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0066"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0045",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0046-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "logic_no"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "logic_no",
+      "render": "renders/pcd-v01-0046-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "UI"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "context": {
+            "domain": [
+              "web-ui"
+            ],
+            "situation": [
+              "navigation"
+            ],
+            "task": [
+              "close/cancel dialog"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Dialog/modal context",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-webui-04"
+                ]
+              },
+              {
+                "cue": "Dialog/modal context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-webui-04"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-webui-04"
+          ]
+        },
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "context": {
+            "domain": [
+              "web-ui"
+            ],
+            "situation": [
+              "state"
+            ],
+            "task": [
+              "disabled control"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Button/control context",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-webui-07"
+                ]
+              },
+              {
+                "cue": "Button/control context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-webui-07"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-webui-07"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Close/cancel dialog",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0067"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0046",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0047-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "logic_yes"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "logic_yes",
+      "render": "renders/pcd-v01-0047-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "UI"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "context": {
+            "domain": [
+              "web-ui"
+            ],
+            "situation": [
+              "state"
+            ],
+            "task": [
+              "selected item"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Choice list context",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-webui-05"
+                ]
+              },
+              {
+                "cue": "Choice list context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-webui-05"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-webui-05"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Selected item",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0068"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0047",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0048-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_here"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "rel_here",
+      "render": "renders/pcd-v01-0048-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "UI"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "context": {
+            "domain": [
+              "web-ui"
+            ],
+            "situation": [
+              "state"
+            ],
+            "task": [
+              "active/current page"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Navigation tab context",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-webui-06"
+                ]
+              },
+              {
+                "cue": "Navigation tab context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-webui-06"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-webui-06"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Active/current page",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0069"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0048",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0049-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "action_change"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "action_change",
+      "render": "renders/pcd-v01-0049-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "UI"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "context": {
+            "domain": [
+              "web-ui"
+            ],
+            "situation": [
+              "state"
+            ],
+            "task": [
+              "loading / processing"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Loading indicator context",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-webui-08"
+                ]
+              },
+              {
+                "cue": "Loading indicator context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-webui-08"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-webui-08"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Loading / processing",
+      "provenance": {
+        "corpus_record_ids": [
+          "clc-v01-0070-r1"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0049",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0050-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "logic_no"
+              },
+              {
+                "type": "icon",
+                "id": "media_text"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "logic_no + media_text",
+      "render": "renders/pcd-v01-0050-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "UI"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "context": {
+            "domain": [
+              "web-ui"
+            ],
+            "situation": [
+              "state"
+            ],
+            "task": [
+              "empty state / no content"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Blank state or list context",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-webui-09"
+                ]
+              },
+              {
+                "cue": "Blank state or list context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-webui-09"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-webui-09"
+          ]
+        },
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "context": {
+            "domain": [
+              "web-ui"
+            ],
+            "situation": [
+              "action"
+            ],
+            "task": [
+              "delete item"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Item/action menu context",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-webui-14"
+                ]
+              },
+              {
+                "cue": "Item/action menu context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-webui-14"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-webui-14"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Empty state / no content",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0071"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0050",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0051-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "logic_yes"
+              },
+              {
+                "type": "icon",
+                "id": "qual_good"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "logic_yes + qual_good",
+      "render": "renders/pcd-v01-0051-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "UI"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "context": {
+            "domain": [
+              "web-ui"
+            ],
+            "situation": [
+              "state"
+            ],
+            "task": [
+              "success/completed"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Toast/result context",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-webui-10"
+                ]
+              },
+              {
+                "cue": "Toast/result context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-webui-10"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-webui-10"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Success/completed",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0072"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0051",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0052-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "qual_bad"
+              },
+              {
+                "type": "icon",
+                "id": "punct_exclaim"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "qual_bad + punct_exclaim",
+      "render": "renders/pcd-v01-0052-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "UI"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "context": {
+            "domain": [
+              "web-ui"
+            ],
+            "situation": [
+              "state"
+            ],
+            "task": [
+              "error/failure"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Error state context",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-webui-11"
+                ]
+              },
+              {
+                "cue": "Error state context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-webui-11"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-webui-11"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Error/failure",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0073"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0052",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0053-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_down"
+              },
+              {
+                "type": "icon",
+                "id": "media_text"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "rel_down + media_text",
+      "render": "renders/pcd-v01-0053-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "UI"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "context": {
+            "domain": [
+              "web-ui"
+            ],
+            "situation": [
+              "action"
+            ],
+            "task": [
+              "save changes"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Editor/form context",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-webui-12"
+                ]
+              },
+              {
+                "cue": "Editor/form context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-webui-12"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-webui-12"
+          ]
+        },
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "context": {
+            "domain": [
+              "web-ui"
+            ],
+            "situation": [
+              "action"
+            ],
+            "task": [
+              "archive item"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Mail/task/list context",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-webui-15"
+                ]
+              },
+              {
+                "cue": "Mail/task/list context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-webui-15"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-webui-15"
+          ]
+        },
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "context": {
+            "domain": [
+              "web-ui"
+            ],
+            "situation": [
+              "access system"
+            ],
+            "task": [
+              "download"
+            ],
+            "context_supplies": [
+              {
+                "cue": "File/action toolbar context",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-webui-21"
+                ]
+              },
+              {
+                "cue": "File/action toolbar context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-webui-21"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-webui-21"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Save changes",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0074"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0053",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0054-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_up"
+              },
+              {
+                "type": "icon",
+                "id": "media_text"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "rel_up + media_text",
+      "render": "renders/pcd-v01-0054-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "UI"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "context": {
+            "domain": [
+              "web-ui"
+            ],
+            "situation": [
+              "action"
+            ],
+            "task": [
+              "publish/send message"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Composer/editor context",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-webui-13"
+                ]
+              },
+              {
+                "cue": "Composer/editor context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-webui-13"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-webui-13"
+          ]
+        },
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "context": {
+            "domain": [
+              "web-ui"
+            ],
+            "situation": [
+              "access system"
+            ],
+            "task": [
+              "upload"
+            ],
+            "context_supplies": [
+              {
+                "cue": "File/action toolbar context",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-webui-22"
+                ]
+              },
+              {
+                "cue": "File/action toolbar context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-webui-22"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-webui-22"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Publish/send message",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0075"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0054",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0055-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "media_text"
+              },
+              {
+                "type": "icon",
+                "id": "action_change"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "media_text + action_change",
+      "render": "renders/pcd-v01-0055-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "UI"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "context": {
+            "domain": [
+              "web-ui"
+            ],
+            "situation": [
+              "action"
+            ],
+            "task": [
+              "edit content"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Text/image editor context",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-webui-16"
+                ]
+              },
+              {
+                "cue": "Text/image editor context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-webui-16"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-webui-16"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Edit content",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0076"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0055",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0056-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "person_generic"
+              },
+              {
+                "type": "icon",
+                "id": "rel_here"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "person_generic + rel_here",
+      "render": "renders/pcd-v01-0056-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "UI"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "context": {
+            "domain": [
+              "web-ui"
+            ],
+            "situation": [
+              "access system"
+            ],
+            "task": [
+              "login/access"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Login or account context",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-webui-18"
+                ]
+              },
+              {
+                "cue": "Login or account context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-webui-18"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-webui-18"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Login/access",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0077"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0056",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0057-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "logic_no"
+              },
+              {
+                "type": "icon",
+                "id": "person_generic"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "logic_no + person_generic",
+      "render": "renders/pcd-v01-0057-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "UI"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "context": {
+            "domain": [
+              "web-ui"
+            ],
+            "situation": [
+              "access system"
+            ],
+            "task": [
+              "permission denied"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Restricted action context",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-webui-19"
+                ]
+              },
+              {
+                "cue": "Restricted action context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-webui-19"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-webui-19"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Permission denied",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0078"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0057",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0058-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "service_tools"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "service_tools",
+      "render": "renders/pcd-v01-0058-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "UI"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "context": {
+            "domain": [
+              "web-ui"
+            ],
+            "situation": [
+              "access system"
+            ],
+            "task": [
+              "settings/preferences"
+            ],
+            "context_supplies": [
+              {
+                "cue": "App toolbar/menu context",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-webui-20"
+                ]
+              },
+              {
+                "cue": "App toolbar/menu context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-webui-20"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-webui-20"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Settings/preferences",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0079"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0058",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0059-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "media_text"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "media_text",
+      "render": "renders/pcd-v01-0059-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "UI"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "context": {
+            "domain": [
+              "web-ui"
+            ],
+            "situation": [
+              "content comm"
+            ],
+            "task": [
+              "text content"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Content-type picker",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-webui-23"
+                ]
+              },
+              {
+                "cue": "Content-type picker",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-webui-23"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-webui-23"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Text content",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0080"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0059",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0060-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "comm_speak"
+              },
+              {
+                "type": "icon",
+                "id": "punct_exclaim"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "comm_speak + punct_exclaim",
+      "render": "renders/pcd-v01-0060-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "UI"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "context": {
+            "domain": [
+              "web-ui"
+            ],
+            "situation": [
+              "content comm"
+            ],
+            "task": [
+              "notification/message alert"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Notification center context",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-webui-24"
+                ]
+              },
+              {
+                "cue": "Notification center context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-webui-24"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-webui-24"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Notification/message alert",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0081"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0060",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0061-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "place_home",
+                "type": "icon"
+              },
+              {
+                "id": "punct_question",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "token_sequence": "place_home + punct_question",
+      "render": "renders/pcd-v01-0061-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "OTHER"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "OTHER",
+          "context": {
+            "domain": [
+              "constrained-translation pilot"
+            ],
+            "situation": [
+              "single-model, one-repeat structured-output trial"
+            ],
+            "task": [
+              "direct basic"
+            ]
+          },
+          "evidence_ids": [
+            "cand-04a-03"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Where is home?",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0002"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0061",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0062-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "need_food",
+                "type": "icon"
+              },
+              {
+                "id": "qual_bad",
+                "type": "icon"
+              },
+              {
+                "id": "logic_no",
+                "type": "icon"
+              },
+              {
+                "id": "qty_minus",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "token_sequence": "need_food + qual_bad + logic_no + qty_minus",
+      "render": "renders/pcd-v01-0062-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "OTHER"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "OTHER",
+          "context": {
+            "domain": [
+              "constrained-translation pilot"
+            ],
+            "situation": [
+              "single-model, one-repeat structured-output trial"
+            ],
+            "task": [
+              "negation evaluation"
+            ]
+          },
+          "evidence_ids": [
+            "cand-04a-09"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "The food is bad, not unavailable.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0007"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0062",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0063-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "person_generic",
+                "type": "icon"
+              },
+              {
+                "id": "need_food",
+                "type": "icon"
+              },
+              {
+                "id": "rel_here",
+                "type": "icon"
+              },
+              {
+                "id": "punct_question",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "token_sequence": "person_generic + need_food + rel_here + punct_question",
+      "render": "renders/pcd-v01-0063-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "OTHER"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "OTHER",
+          "context": {
+            "domain": [
+              "constrained-translation pilot"
+            ],
+            "situation": [
+              "single-model, one-repeat structured-output trial"
+            ],
+            "task": [
+              "boundary"
+            ]
+          },
+          "evidence_ids": [
+            "cand-04a-17"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Could you maybe point me toward food?",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0011"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0063",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0064-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "need_water"
+              },
+              {
+                "type": "icon",
+                "id": "qty_5"
+              },
+              {
+                "type": "icon",
+                "id": "qty_5"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "need_water + qty_5 + qty_5",
+      "render": "renders/pcd-v01-0064-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "BOOK"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "BOOK",
+          "context": {
+            "domain": [
+              "practical communication"
+            ],
+            "situation": [
+              "published Handbook v1.0 worked example"
+            ],
+            "task": [
+              "many waters"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Handbook prose / example label supplies the scoped gloss",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-handbook-many-waters"
+                ]
+              },
+              {
+                "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-handbook-many-waters"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-handbook-many-waters"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "Many waters",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0017"
+        ],
+        "creator_review_record_id": null,
+        "dictionary_entry_id": "pcd-v01-0064",
+        "authority": "ACCEPTED_CORPUS_MESSAGE"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0065-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "move_public"
+              },
+              {
+                "type": "icon",
+                "id": "time"
+              },
+              {
+                "type": "icon",
+                "id": "punct_question"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "move_public + time + punct_question",
+      "render": "renders/pcd-v01-0065-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "BOOK"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "BOOK",
+          "context": {
+            "domain": [
+              "practical communication"
+            ],
+            "situation": [
+              "published Handbook v1.0 worked example"
+            ],
+            "task": [
+              "public transport schedule / when?"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Handbook prose / example label supplies the scoped gloss",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-handbook-transit-schedule"
+                ]
+              },
+              {
+                "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-handbook-transit-schedule"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-handbook-transit-schedule"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "A question about public-transport arrival time",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0022"
+        ],
+        "creator_review_record_id": "clh-v01-0022",
+        "dictionary_entry_id": "pcd-v01-0065",
+        "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    }
+  ]
+}

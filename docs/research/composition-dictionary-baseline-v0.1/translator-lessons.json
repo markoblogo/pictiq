@@ -1,0 +1,63 @@
+{
+  "status": "TRANSLATOR DESIGN EVIDENCE / NOT EXECUTABLE RULE",
+  "boundary": "This ledger does not change Grammar, Protocol, Composer, or implement translation behavior.",
+  "lessons": [
+    {
+      "id": "lesson-001",
+      "source_corpus_record_ids": [
+        "clh-v01-0003"
+      ],
+      "lesson": "Live/self context may supply the affected person; adding PERSON introduces an explicit referent and can change interpretation. Do not encode first person by omission."
+    },
+    {
+      "id": "lesson-002",
+      "source_corpus_record_ids": [
+        "clh-v01-0006"
+      ],
+      "lesson": "Prefer an accepted direct primitive such as food_meat over unnecessary decomposition when it matches the semantic unit."
+    },
+    {
+      "id": "lesson-003",
+      "source_corpus_record_ids": [
+        "clc-v01-0008-r1",
+        "clh-v01-0016"
+      ],
+      "lesson": "LESS and DOWN may be alternatives in specified semantic neighborhoods; do not generalize them as globally equivalent."
+    },
+    {
+      "id": "lesson-004",
+      "source_corpus_record_ids": [
+        "clh-v01-0014"
+      ],
+      "lesson": "A general food-shop composition is not automatically a specialized shop taxonomy; select a supported category only when the task/context requires it."
+    },
+    {
+      "id": "lesson-005",
+      "source_corpus_record_ids": [
+        "clh-v01-0044"
+      ],
+      "lesson": "A prohibition should retain the prohibited referent/action when that distinction matters; one location-specific NO message is not universal."
+    },
+    {
+      "id": "lesson-006",
+      "source_corpus_record_ids": [
+        "clh-v01-0047"
+      ],
+      "lesson": "PERSON + FEET supports pedestrian movement in context but does not independently establish a crossing-place relation."
+    },
+    {
+      "id": "lesson-007",
+      "source_corpus_record_ids": [
+        "clh-v01-0049"
+      ],
+      "lesson": "Creator review can correct token order for a specific practical reading; a local order correction is not a general syntax rule."
+    },
+    {
+      "id": "lesson-008",
+      "source_corpus_record_ids": [
+        "clh-v01-0022"
+      ],
+      "lesson": "Arrival-time questions and schedule/timetable requests are distinct; keep the latter unresolved until an exact composition is specified."
+    }
+  ]
+}

@@ -1,0 +1,424 @@
+{
+  "renders": [
+    {
+      "variant_id": "pcd-v01-0001-preferred",
+      "dictionary_entry_id": "pcd-v01-0001",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0001-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0002-preferred",
+      "dictionary_entry_id": "pcd-v01-0002",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0002-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0002-contextual-person",
+      "dictionary_entry_id": "pcd-v01-0002",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0002-contextual-person.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0003-preferred",
+      "dictionary_entry_id": "pcd-v01-0003",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0003-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0004-preferred",
+      "dictionary_entry_id": "pcd-v01-0004",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0004-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0005-preferred",
+      "dictionary_entry_id": "pcd-v01-0005",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0005-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0006-preferred",
+      "dictionary_entry_id": "pcd-v01-0006",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0006-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0006-alternative-down",
+      "dictionary_entry_id": "pcd-v01-0006",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0006-alternative-down.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0006-context-speech-less",
+      "dictionary_entry_id": "pcd-v01-0006",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0006-context-speech-less.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0006-context-speech-down",
+      "dictionary_entry_id": "pcd-v01-0006",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0006-context-speech-down.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0007-preferred",
+      "dictionary_entry_id": "pcd-v01-0007",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0007-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0008-preferred",
+      "dictionary_entry_id": "pcd-v01-0008",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0008-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0009-preferred",
+      "dictionary_entry_id": "pcd-v01-0009",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0009-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0010-preferred",
+      "dictionary_entry_id": "pcd-v01-0010",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0010-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0010-alternative-down",
+      "dictionary_entry_id": "pcd-v01-0010",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0010-alternative-down.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0011-preferred",
+      "dictionary_entry_id": "pcd-v01-0011",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0011-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0012-preferred",
+      "dictionary_entry_id": "pcd-v01-0012",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0012-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0013-preferred",
+      "dictionary_entry_id": "pcd-v01-0013",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0013-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0014-preferred",
+      "dictionary_entry_id": "pcd-v01-0014",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0014-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0015-preferred",
+      "dictionary_entry_id": "pcd-v01-0015",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0015-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0016-preferred",
+      "dictionary_entry_id": "pcd-v01-0016",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0016-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0017-preferred",
+      "dictionary_entry_id": "pcd-v01-0017",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0017-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0018-preferred",
+      "dictionary_entry_id": "pcd-v01-0018",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0018-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0019-preferred",
+      "dictionary_entry_id": "pcd-v01-0019",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0019-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0020-preferred",
+      "dictionary_entry_id": "pcd-v01-0020",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0020-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0021-preferred",
+      "dictionary_entry_id": "pcd-v01-0021",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0021-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0022-preferred",
+      "dictionary_entry_id": "pcd-v01-0022",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0022-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0023-preferred",
+      "dictionary_entry_id": "pcd-v01-0023",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0023-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0024-preferred",
+      "dictionary_entry_id": "pcd-v01-0024",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0024-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0025-preferred",
+      "dictionary_entry_id": "pcd-v01-0025",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0025-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0026-preferred",
+      "dictionary_entry_id": "pcd-v01-0026",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0026-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0027-preferred",
+      "dictionary_entry_id": "pcd-v01-0027",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0027-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0028-preferred",
+      "dictionary_entry_id": "pcd-v01-0028",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0028-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0029-preferred",
+      "dictionary_entry_id": "pcd-v01-0029",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0029-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0030-preferred",
+      "dictionary_entry_id": "pcd-v01-0030",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0030-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0031-preferred",
+      "dictionary_entry_id": "pcd-v01-0031",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0031-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0032-preferred",
+      "dictionary_entry_id": "pcd-v01-0032",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0032-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0033-preferred",
+      "dictionary_entry_id": "pcd-v01-0033",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0033-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0034-preferred",
+      "dictionary_entry_id": "pcd-v01-0034",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0034-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0035-preferred",
+      "dictionary_entry_id": "pcd-v01-0035",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0035-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0036-preferred",
+      "dictionary_entry_id": "pcd-v01-0036",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0036-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0037-preferred",
+      "dictionary_entry_id": "pcd-v01-0037",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0037-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0038-preferred",
+      "dictionary_entry_id": "pcd-v01-0038",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0038-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0039-preferred",
+      "dictionary_entry_id": "pcd-v01-0039",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0039-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0040-preferred",
+      "dictionary_entry_id": "pcd-v01-0040",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0040-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0041-preferred",
+      "dictionary_entry_id": "pcd-v01-0041",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0041-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0042-preferred",
+      "dictionary_entry_id": "pcd-v01-0042",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0042-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0043-preferred",
+      "dictionary_entry_id": "pcd-v01-0043",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0043-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0044-preferred",
+      "dictionary_entry_id": "pcd-v01-0044",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0044-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0045-preferred",
+      "dictionary_entry_id": "pcd-v01-0045",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0045-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0046-preferred",
+      "dictionary_entry_id": "pcd-v01-0046",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0046-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0047-preferred",
+      "dictionary_entry_id": "pcd-v01-0047",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0047-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0048-preferred",
+      "dictionary_entry_id": "pcd-v01-0048",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0048-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0049-preferred",
+      "dictionary_entry_id": "pcd-v01-0049",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0049-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0050-preferred",
+      "dictionary_entry_id": "pcd-v01-0050",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0050-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0051-preferred",
+      "dictionary_entry_id": "pcd-v01-0051",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0051-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0052-preferred",
+      "dictionary_entry_id": "pcd-v01-0052",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0052-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0053-preferred",
+      "dictionary_entry_id": "pcd-v01-0053",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0053-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0054-preferred",
+      "dictionary_entry_id": "pcd-v01-0054",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0054-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0055-preferred",
+      "dictionary_entry_id": "pcd-v01-0055",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0055-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0056-preferred",
+      "dictionary_entry_id": "pcd-v01-0056",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0056-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0057-preferred",
+      "dictionary_entry_id": "pcd-v01-0057",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0057-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0058-preferred",
+      "dictionary_entry_id": "pcd-v01-0058",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0058-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0059-preferred",
+      "dictionary_entry_id": "pcd-v01-0059",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0059-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0060-preferred",
+      "dictionary_entry_id": "pcd-v01-0060",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0060-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0061-preferred",
+      "dictionary_entry_id": "pcd-v01-0061",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0061-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0062-preferred",
+      "dictionary_entry_id": "pcd-v01-0062",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0062-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0063-preferred",
+      "dictionary_entry_id": "pcd-v01-0063",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0063-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0064-preferred",
+      "dictionary_entry_id": "pcd-v01-0064",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0064-preferred.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0065-preferred",
+      "dictionary_entry_id": "pcd-v01-0065",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0065-preferred.svg"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Pictiq Composition Library v0.1 — architecture concept
 
-> **Status:** research / knowledge-infrastructure proposal; not implemented, not normative, not a vocabulary source.
+> **Status:** research / knowledge-infrastructure proposal; the research-only pipeline has a historical harvest, accepted corpus baseline, and creator-reviewed Dictionary data baseline v0.1. These artifacts are not product implementation, normative, or a vocabulary source; final creator visual QA is pending.
 > **Current controlled research status:** Stress Test 07.1 — `PAUSED / PRESERVED / RETURN AFTER COMPOSITION-LIBRARY ROTATION`.
 
 ## Purpose and boundary

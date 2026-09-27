@@ -1,0 +1,4701 @@
+{
+  "dictionary_version": "0.1",
+  "source_layers": [
+    "HISTORICAL_COMPOSITION_HARVEST",
+    "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+    "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+    "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+  ],
+  "records": [
+    {
+      "dictionary_entry_id": "pcd-v01-0001",
+      "corpus_record_id": "clh-v01-0001",
+      "candidate_entry_id": "pcd-v01-0001",
+      "source_message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "logic_no",
+                "type": "icon"
+              },
+              {
+                "id": "drink_alcohol",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "source_sequence": "logic_no + drink_alcohol",
+      "preferred_message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "logic_no",
+                "type": "icon"
+              },
+              {
+                "id": "drink_alcohol",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "preferred_sequence": "logic_no + drink_alcohol",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0001",
+            "source_type": "CONSTRAINED TRANSLATION PILOT 04A",
+            "reference": "docs/research/constrained-translation-pilot-04a/normalized/04a-02-r1.json",
+            "location": "cand-04a-02",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "231cca8a7495de708dd3473cbbb1210c8890190ebc6f11ae4ad96d42e8c7abf7",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0001",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0001",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0002",
+      "corpus_record_id": "clh-v01-0003",
+      "candidate_entry_id": "pcd-v01-0002",
+      "source_message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "person_generic",
+                "type": "icon"
+              },
+              {
+                "id": "safety_medical",
+                "type": "icon"
+              },
+              {
+                "id": "punct_exclaim",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "source_sequence": "person_generic + safety_medical + punct_exclaim",
+      "preferred_message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "safety_medical"
+              },
+              {
+                "type": "icon",
+                "id": "punct_exclaim"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "preferred_sequence": "safety_medical + punct_exclaim",
+      "preferred_changed_by_creator_review": true,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0003",
+            "source_type": "CONSTRAINED TRANSLATION PILOT 04A",
+            "reference": "docs/research/constrained-translation-pilot-04a/normalized/04a-04-r1.json",
+            "location": "cand-04a-04",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "6f57e0f93b026fec02fe1eef1f64191cdd0bd8e7fe155751f99f3e5a0787f166",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0003",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0003",
+        "decision": "EDIT_ENTRY_METADATA",
+        "creator_notes_verbatim_in_export": true
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0003",
+      "corpus_record_id": "clh-v01-0004",
+      "candidate_entry_id": "pcd-v01-0003",
+      "source_message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "qual_sacred",
+                "type": "icon"
+              },
+              {
+                "id": "place_home",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "source_sequence": "qual_sacred + place_home",
+      "preferred_message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "qual_sacred",
+                "type": "icon"
+              },
+              {
+                "id": "place_home",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "preferred_sequence": "qual_sacred + place_home",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0004",
+            "source_type": "CONSTRAINED TRANSLATION PILOT 04A",
+            "reference": "docs/research/constrained-translation-pilot-04a/normalized/04a-06-r1.json",
+            "location": "cand-04a-06",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "606dd958629363bc5afdfe2a53f3eac693aec027a078ddb1a6821467b0d1f212",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0004",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0004",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0004",
+      "corpus_record_id": "clh-v01-0005",
+      "candidate_entry_id": "pcd-v01-0004",
+      "source_message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "person_generic",
+                "type": "icon"
+              },
+              {
+                "id": "love_heart",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "source_sequence": "person_generic + love_heart",
+      "preferred_message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "person_generic",
+                "type": "icon"
+              },
+              {
+                "id": "love_heart",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "preferred_sequence": "person_generic + love_heart",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0005",
+            "source_type": "CONSTRAINED TRANSLATION PILOT 04A",
+            "reference": "docs/research/constrained-translation-pilot-04a/normalized/04a-07-r1.json",
+            "location": "cand-04a-07",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "56ed443a3ddc3af68b18946d8a2ccb38875296c613acc8a9bd4933cfdc357b78",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0005",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0005",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0005",
+      "corpus_record_id": "clh-v01-0006",
+      "candidate_entry_id": "pcd-v01-0005",
+      "source_message": {
+        "contexts": [
+          "universal-core",
+          "universal-v1"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "nature_animal",
+                "type": "icon"
+              },
+              {
+                "id": "need_food",
+                "type": "icon"
+              },
+              {
+                "id": "food_meat",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "source_sequence": "nature_animal + need_food + food_meat",
+      "preferred_message": {
+        "contexts": [
+          "universal-core",
+          "universal-v1"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "food_meat"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "preferred_sequence": "food_meat",
+      "preferred_changed_by_creator_review": true,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0006",
+            "source_type": "CONSTRAINED TRANSLATION PILOT 04A",
+            "reference": "docs/research/constrained-translation-pilot-04a/normalized/04a-08-r1.json",
+            "location": "cand-04a-08",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "eee2c6d538b617a47759ef7879bb6d029499bd24aa790d743b04f5b9300643e6",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0006",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0006",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": true
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0006",
+      "corpus_record_id": "clc-v01-0008-r1",
+      "candidate_entry_id": "pcd-v01-0006",
+      "source_message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "comm_sound"
+              },
+              {
+                "type": "icon",
+                "id": "qty_minus"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "source_sequence": "comm_sound + qty_minus",
+      "preferred_message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "comm_sound"
+              },
+              {
+                "type": "icon",
+                "id": "qty_minus"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "preferred_sequence": "comm_sound + qty_minus",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "source_type": "CREATOR_RECONCILIATION",
+          "export_path": "../composition-library-historical-harvest-v0.1/reconciliation/creator-export-2026-09-27.json",
+          "addendum_path": "../composition-library-historical-harvest-v0.1/reconciliation/creator-reconciliation-addendum-2026-09-27.json",
+          "historical_record_id": "clh-v01-0008",
+          "creator_reason": "SOUND + LESS is functionally sufficient; comm_speak + logic_yes adds no necessary information and over-explains the intent.",
+          "provenance": "CREATOR_RECONCILIATION"
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clc-v01-0008-r1",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": true
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0007",
+      "corpus_record_id": "clc-v01-0012-r1",
+      "candidate_entry_id": "pcd-v01-0007",
+      "source_message": {
+        "contexts": [
+          "universal-core",
+          "narrative"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_here"
+              },
+              {
+                "type": "icon",
+                "id": "action_conflict"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "source_sequence": "rel_here + action_conflict",
+      "preferred_message": {
+        "contexts": [
+          "universal-core",
+          "narrative"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_here"
+              },
+              {
+                "type": "icon",
+                "id": "action_conflict"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "preferred_sequence": "rel_here + action_conflict",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "source_type": "CREATOR_RECONCILIATION",
+          "export_path": "../composition-library-historical-harvest-v0.1/reconciliation/creator-export-2026-09-27.json",
+          "addendum_path": "../composition-library-historical-harvest-v0.1/reconciliation/creator-reconciliation-addendum-2026-09-27.json",
+          "historical_record_id": "clh-v01-0012",
+          "creator_reason": "place_home changes the referent and can suggest domestic conflict, a violent house, or a detention/torture context; the source is deictic (THIS PLACE / HERE), not HOME.",
+          "provenance": "CREATOR_RECONCILIATION"
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clc-v01-0012-r1",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0008",
+      "corpus_record_id": "clh-v01-0013",
+      "candidate_entry_id": "pcd-v01-0008",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "move_car"
+              },
+              {
+                "type": "icon",
+                "id": "service_tools"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "move_car + service_tools",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "move_car"
+              },
+              {
+                "type": "icon",
+                "id": "service_tools"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "move_car + service_tools",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0013",
+            "source_type": "HANDBOOK",
+            "reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+            "location": "cand-handbook-car-repair",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "5fe3eea1aab10ab51c15727ff2526fb4be42e93ab500edb3a56ee694458b369b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0013",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0013",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0009",
+      "corpus_record_id": "clh-v01-0014",
+      "candidate_entry_id": "pcd-v01-0009",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "place_shop"
+              },
+              {
+                "type": "icon",
+                "id": "need_food"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "place_shop + need_food",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "place_shop"
+              },
+              {
+                "type": "icon",
+                "id": "need_food"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "place_shop + need_food",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0014",
+            "source_type": "HANDBOOK",
+            "reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+            "location": "cand-handbook-food-shop",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "5fe3eea1aab10ab51c15727ff2526fb4be42e93ab500edb3a56ee694458b369b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0014",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0014",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": true
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0010",
+      "corpus_record_id": "clh-v01-0016",
+      "candidate_entry_id": "pcd-v01-0010",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "need_food"
+              },
+              {
+                "type": "icon",
+                "id": "qty_minus"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "need_food + qty_minus",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "need_food"
+              },
+              {
+                "type": "icon",
+                "id": "qty_minus"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "need_food + qty_minus",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0016",
+            "source_type": "HANDBOOK",
+            "reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+            "location": "cand-handbook-less-food",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "5fe3eea1aab10ab51c15727ff2526fb4be42e93ab500edb3a56ee694458b369b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0016",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0016",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": true
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0011",
+      "corpus_record_id": "clh-v01-0018",
+      "candidate_entry_id": "pcd-v01-0011",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "need_water"
+              },
+              {
+                "type": "icon",
+                "id": "qty_plus"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "need_water + qty_plus",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "need_water"
+              },
+              {
+                "type": "icon",
+                "id": "qty_plus"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "need_water + qty_plus",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0018",
+            "source_type": "HANDBOOK",
+            "reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+            "location": "cand-handbook-more-water",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "5fe3eea1aab10ab51c15727ff2526fb4be42e93ab500edb3a56ee694458b369b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0018",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0018",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0012",
+      "corpus_record_id": "clh-v01-0019",
+      "candidate_entry_id": "pcd-v01-0012",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "need_food"
+              },
+              {
+                "type": "icon",
+                "id": "qty_1"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "need_food + qty_1",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "need_food"
+              },
+              {
+                "type": "icon",
+                "id": "qty_1"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "need_food + qty_1",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0019",
+            "source_type": "HANDBOOK",
+            "reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+            "location": "cand-handbook-one-food-portion",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "5fe3eea1aab10ab51c15727ff2526fb4be42e93ab500edb3a56ee694458b369b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0019",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0019",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0013",
+      "corpus_record_id": "clh-v01-0020",
+      "candidate_entry_id": "pcd-v01-0013",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "place_shop"
+              },
+              {
+                "type": "icon",
+                "id": "comm_phone"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "place_shop + comm_phone",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "place_shop"
+              },
+              {
+                "type": "icon",
+                "id": "comm_phone"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "place_shop + comm_phone",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0020",
+            "source_type": "HANDBOOK",
+            "reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+            "location": "cand-handbook-phone-shop",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "5fe3eea1aab10ab51c15727ff2526fb4be42e93ab500edb3a56ee694458b369b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0020",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0020",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0014",
+      "corpus_record_id": "clh-v01-0021",
+      "candidate_entry_id": "pcd-v01-0014",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "move_taxi"
+              },
+              {
+                "type": "icon",
+                "id": "money_card"
+              },
+              {
+                "type": "icon",
+                "id": "punct_question"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "move_taxi + money_card + punct_question",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "move_taxi"
+              },
+              {
+                "type": "icon",
+                "id": "money_card"
+              },
+              {
+                "type": "icon",
+                "id": "punct_question"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "move_taxi + money_card + punct_question",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0021",
+            "source_type": "HANDBOOK",
+            "reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+            "location": "cand-handbook-taxi-card-payment",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "5fe3eea1aab10ab51c15727ff2526fb4be42e93ab500edb3a56ee694458b369b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0021",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0021",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0015",
+      "corpus_record_id": "clh-v01-0023",
+      "candidate_entry_id": "pcd-v01-0015",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "need_water"
+              },
+              {
+                "type": "icon",
+                "id": "qty_2"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "need_water + qty_2",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "need_water"
+              },
+              {
+                "type": "icon",
+                "id": "qty_2"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "need_water + qty_2",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0023",
+            "source_type": "HANDBOOK",
+            "reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+            "location": "cand-handbook-two-waters",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "5fe3eea1aab10ab51c15727ff2526fb4be42e93ab500edb3a56ee694458b369b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0023",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0023",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0016",
+      "corpus_record_id": "clh-v01-0024",
+      "candidate_entry_id": "pcd-v01-0016",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "safety_medical"
+              },
+              {
+                "type": "icon",
+                "id": "punct_exclaim"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "safety_medical + punct_exclaim",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "safety_medical"
+              },
+              {
+                "type": "icon",
+                "id": "punct_exclaim"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "safety_medical + punct_exclaim",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0024",
+            "source_type": "HANDBOOK",
+            "reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+            "location": "cand-handbook-urgent-medical",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "5fe3eea1aab10ab51c15727ff2526fb4be42e93ab500edb3a56ee694458b369b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0024",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0024",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0017",
+      "corpus_record_id": "clh-v01-0025",
+      "candidate_entry_id": "pcd-v01-0017",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "need_toilet"
+              },
+              {
+                "type": "icon",
+                "id": "punct_exclaim"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "need_toilet + punct_exclaim",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "need_toilet"
+              },
+              {
+                "type": "icon",
+                "id": "punct_exclaim"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "need_toilet + punct_exclaim",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0025",
+            "source_type": "HANDBOOK",
+            "reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+            "location": "cand-handbook-urgent-toilet",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "5fe3eea1aab10ab51c15727ff2526fb4be42e93ab500edb3a56ee694458b369b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0025",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0025",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0018",
+      "corpus_record_id": "clh-v01-0026",
+      "candidate_entry_id": "pcd-v01-0018",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "need_water"
+              },
+              {
+                "type": "icon",
+                "id": "punct_question"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "need_water + punct_question",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "need_water"
+              },
+              {
+                "type": "icon",
+                "id": "punct_question"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "need_water + punct_question",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0026",
+            "source_type": "HANDBOOK",
+            "reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+            "location": "cand-handbook-water-question",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "5fe3eea1aab10ab51c15727ff2526fb4be42e93ab500edb3a56ee694458b369b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0026",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0026",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0019",
+      "corpus_record_id": "clh-v01-0028",
+      "candidate_entry_id": "pcd-v01-0019",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "need_toilet"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "need_toilet",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "need_toilet"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "need_toilet",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0028",
+            "source_type": "HANDBOOK",
+            "reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+            "location": "cand-handbook-zero-toilet",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "5fe3eea1aab10ab51c15727ff2526fb4be42e93ab500edb3a56ee694458b369b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0028",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0028",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0020",
+      "corpus_record_id": "clh-v01-0029",
+      "candidate_entry_id": "pcd-v01-0020",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "comm_wifi"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "comm_wifi",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "comm_wifi"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "comm_wifi",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0029",
+            "source_type": "HANDBOOK",
+            "reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+            "location": "cand-handbook-zero-wifi",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "5fe3eea1aab10ab51c15727ff2526fb4be42e93ab500edb3a56ee694458b369b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0029",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0029",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0021",
+      "corpus_record_id": "clh-v01-0040",
+      "candidate_entry_id": "pcd-v01-0021",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_greater"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "rel_greater",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_greater"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "rel_greater",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0040",
+            "source_type": "ROAD _ WAYFINDING",
+            "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+            "location": "cand-road-01",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0040",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0040",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0022",
+      "corpus_record_id": "clh-v01-0041",
+      "candidate_entry_id": "pcd-v01-0022",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_lesser"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "rel_lesser",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_lesser"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "rel_lesser",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0041",
+            "source_type": "ROAD _ WAYFINDING",
+            "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+            "location": "cand-road-02",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0041",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0041",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0023",
+      "corpus_record_id": "clh-v01-0042",
+      "candidate_entry_id": "pcd-v01-0023",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_up"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "rel_up",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_up"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "rel_up",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0042",
+            "source_type": "ROAD _ WAYFINDING",
+            "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+            "location": "cand-road-03",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0042",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0042",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0024",
+      "corpus_record_id": "clh-v01-0043",
+      "candidate_entry_id": "pcd-v01-0024",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_down"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "rel_down",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_down"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "rel_down",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0043",
+            "source_type": "ROAD _ WAYFINDING",
+            "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+            "location": "cand-road-04",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0043",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0043",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0025",
+      "corpus_record_id": "clh-v01-0044",
+      "candidate_entry_id": "pcd-v01-0025",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_here"
+              },
+              {
+                "type": "icon",
+                "id": "logic_no"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "rel_here + logic_no",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_here"
+              },
+              {
+                "type": "icon",
+                "id": "logic_no"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "rel_here + logic_no",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0044",
+            "source_type": "ROAD _ WAYFINDING",
+            "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+            "location": "cand-road-05",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0044",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0044",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": true
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0026",
+      "corpus_record_id": "clh-v01-0045",
+      "candidate_entry_id": "pcd-v01-0026",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "person_generic"
+              },
+              {
+                "type": "icon",
+                "id": "move_feet"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "person_generic + move_feet",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "person_generic"
+              },
+              {
+                "type": "icon",
+                "id": "move_feet"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "person_generic + move_feet",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0045",
+            "source_type": "ROAD _ WAYFINDING",
+            "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+            "location": "cand-road-06",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0045",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0045",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0027",
+      "corpus_record_id": "clh-v01-0046",
+      "candidate_entry_id": "pcd-v01-0027",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "person_generic"
+              },
+              {
+                "type": "icon",
+                "id": "move_feet"
+              },
+              {
+                "type": "icon",
+                "id": "logic_no"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "person_generic + move_feet + logic_no",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "move_feet"
+              },
+              {
+                "type": "icon",
+                "id": "logic_no"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "move_feet + logic_no",
+      "preferred_changed_by_creator_review": true,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0046",
+            "source_type": "ROAD _ WAYFINDING",
+            "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+            "location": "cand-road-07",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0046",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0046",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": true
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0028",
+      "corpus_record_id": "clh-v01-0047",
+      "candidate_entry_id": "pcd-v01-0028",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "person_generic"
+              },
+              {
+                "type": "icon",
+                "id": "move_feet"
+              },
+              {
+                "type": "icon",
+                "id": "rel_here"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "person_generic + move_feet + rel_here",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "person_generic"
+              },
+              {
+                "type": "icon",
+                "id": "move_feet"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "person_generic + move_feet",
+      "preferred_changed_by_creator_review": true,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0047",
+            "source_type": "ROAD _ WAYFINDING",
+            "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+            "location": "cand-road-08",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0047",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0047",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": true
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0029",
+      "corpus_record_id": "clh-v01-0048",
+      "candidate_entry_id": "pcd-v01-0029",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_here"
+              },
+              {
+                "type": "icon",
+                "id": "move_car"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "rel_here + move_car",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_here"
+              },
+              {
+                "type": "icon",
+                "id": "move_car"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "rel_here + move_car",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0048",
+            "source_type": "ROAD _ WAYFINDING",
+            "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+            "location": "cand-road-09",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0048",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0048",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0030",
+      "corpus_record_id": "clh-v01-0049",
+      "candidate_entry_id": "pcd-v01-0030",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_here"
+              },
+              {
+                "type": "icon",
+                "id": "move_car"
+              },
+              {
+                "type": "icon",
+                "id": "logic_no"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "rel_here + move_car + logic_no",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_here"
+              },
+              {
+                "type": "icon",
+                "id": "logic_no"
+              },
+              {
+                "type": "icon",
+                "id": "move_car"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "rel_here + logic_no + move_car",
+      "preferred_changed_by_creator_review": true,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0049",
+            "source_type": "ROAD _ WAYFINDING",
+            "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+            "location": "cand-road-10",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0049",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0049",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": true
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0031",
+      "corpus_record_id": "clh-v01-0050",
+      "candidate_entry_id": "pcd-v01-0031",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "place_gas"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "place_gas",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "place_gas"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "place_gas",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0050",
+            "source_type": "ROAD _ WAYFINDING",
+            "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+            "location": "cand-road-11",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0050",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0050",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0032",
+      "corpus_record_id": "clh-v01-0051",
+      "candidate_entry_id": "pcd-v01-0032",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "safety_medical"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "safety_medical",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "safety_medical"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "safety_medical",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0051",
+            "source_type": "ROAD _ WAYFINDING",
+            "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+            "location": "cand-road-12",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0051",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0051",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0033",
+      "corpus_record_id": "clh-v01-0052",
+      "candidate_entry_id": "pcd-v01-0033",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "safety_police"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "safety_police",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "safety_police"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "safety_police",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0052",
+            "source_type": "ROAD _ WAYFINDING",
+            "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+            "location": "cand-road-13",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0052",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0052",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0034",
+      "corpus_record_id": "clh-v01-0053",
+      "candidate_entry_id": "pcd-v01-0034",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "need_food"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "need_food",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "need_food"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "need_food",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0053",
+            "source_type": "ROAD _ WAYFINDING",
+            "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+            "location": "cand-road-14",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0053",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0053",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0035",
+      "corpus_record_id": "clh-v01-0055",
+      "candidate_entry_id": "pcd-v01-0035",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "media_text"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "media_text",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "media_text"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "media_text",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0055",
+            "source_type": "ROAD _ WAYFINDING",
+            "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+            "location": "cand-road-16",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0055",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0055",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0036",
+      "corpus_record_id": "clh-v01-0056",
+      "candidate_entry_id": "pcd-v01-0036",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "punct_exclaim"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "punct_exclaim",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "punct_exclaim"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "punct_exclaim",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0056",
+            "source_type": "ROAD _ WAYFINDING",
+            "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+            "location": "cand-road-17",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0056",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0056",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0037",
+      "corpus_record_id": "clh-v01-0057",
+      "candidate_entry_id": "pcd-v01-0037",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "service_tools"
+              },
+              {
+                "type": "icon",
+                "id": "punct_exclaim"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "service_tools + punct_exclaim",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "service_tools"
+              },
+              {
+                "type": "icon",
+                "id": "punct_exclaim"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "service_tools + punct_exclaim",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0057",
+            "source_type": "ROAD _ WAYFINDING",
+            "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+            "location": "cand-road-18",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0057",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0057",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0038",
+      "corpus_record_id": "clh-v01-0058",
+      "candidate_entry_id": "pcd-v01-0038",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "surface_wavy"
+              },
+              {
+                "type": "icon",
+                "id": "punct_exclaim"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "surface_wavy + punct_exclaim",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "surface_wavy"
+              },
+              {
+                "type": "icon",
+                "id": "punct_exclaim"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "surface_wavy + punct_exclaim",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0058",
+            "source_type": "ROAD _ WAYFINDING",
+            "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+            "location": "cand-road-19",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0058",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0058",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0039",
+      "corpus_record_id": "clh-v01-0059",
+      "candidate_entry_id": "pcd-v01-0039",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_up"
+              },
+              {
+                "type": "icon",
+                "id": "logic_no"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "rel_up + logic_no",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_up"
+              },
+              {
+                "type": "icon",
+                "id": "logic_no"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "rel_up + logic_no",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0059",
+            "source_type": "ROAD _ WAYFINDING",
+            "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+            "location": "cand-road-22",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0059",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0059",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0040",
+      "corpus_record_id": "clh-v01-0060",
+      "candidate_entry_id": "pcd-v01-0040",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "number",
+                "value": 50
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "50",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "number",
+                "value": 50
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "50",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0060",
+            "source_type": "ROAD _ WAYFINDING",
+            "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+            "location": "cand-road-23",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0060",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0060",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0041",
+      "corpus_record_id": "clh-v01-0061",
+      "candidate_entry_id": "pcd-v01-0041",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_lesser"
+              },
+              {
+                "type": "icon",
+                "id": "logic_no"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "rel_lesser + logic_no",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_lesser"
+              },
+              {
+                "type": "icon",
+                "id": "logic_no"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "rel_lesser + logic_no",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0061",
+            "source_type": "ROAD _ WAYFINDING",
+            "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+            "location": "cand-road-24",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0061",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0061",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0042",
+      "corpus_record_id": "clh-v01-0062",
+      "candidate_entry_id": "pcd-v01-0042",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_here"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "rel_here",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_here"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "rel_here",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0062",
+            "source_type": "ROAD _ WAYFINDING",
+            "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+            "location": "cand-road-25",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0062",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0062",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0043",
+      "corpus_record_id": "clh-v01-0064",
+      "candidate_entry_id": "pcd-v01-0043",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_lesser"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "rel_lesser",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_lesser"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "rel_lesser",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0064",
+            "source_type": "WEB_UI",
+            "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+            "location": "cand-webui-01",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "c312c06d5f92fc100fcf5df4e7ddbf27d88c4bd5013dbb9ee01728fd815cb64b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0064",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0064",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0044",
+      "corpus_record_id": "clh-v01-0065",
+      "candidate_entry_id": "pcd-v01-0044",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_greater"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "rel_greater",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_greater"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "rel_greater",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0065",
+            "source_type": "WEB_UI",
+            "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+            "location": "cand-webui-02",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "c312c06d5f92fc100fcf5df4e7ddbf27d88c4bd5013dbb9ee01728fd815cb64b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0065",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0065",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0045",
+      "corpus_record_id": "clh-v01-0066",
+      "candidate_entry_id": "pcd-v01-0045",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "place_home"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "place_home",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "place_home"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "place_home",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0066",
+            "source_type": "WEB_UI",
+            "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+            "location": "cand-webui-03",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "c312c06d5f92fc100fcf5df4e7ddbf27d88c4bd5013dbb9ee01728fd815cb64b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0066",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0066",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0046",
+      "corpus_record_id": "clh-v01-0067",
+      "candidate_entry_id": "pcd-v01-0046",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "logic_no"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "logic_no",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "logic_no"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "logic_no",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0067",
+            "source_type": "WEB_UI",
+            "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+            "location": "cand-webui-04",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "c312c06d5f92fc100fcf5df4e7ddbf27d88c4bd5013dbb9ee01728fd815cb64b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0067",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0067",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0047",
+      "corpus_record_id": "clh-v01-0068",
+      "candidate_entry_id": "pcd-v01-0047",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "logic_yes"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "logic_yes",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "logic_yes"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "logic_yes",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0068",
+            "source_type": "WEB_UI",
+            "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+            "location": "cand-webui-05",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "c312c06d5f92fc100fcf5df4e7ddbf27d88c4bd5013dbb9ee01728fd815cb64b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0068",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0068",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0048",
+      "corpus_record_id": "clh-v01-0069",
+      "candidate_entry_id": "pcd-v01-0048",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_here"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "rel_here",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_here"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "rel_here",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0069",
+            "source_type": "WEB_UI",
+            "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+            "location": "cand-webui-06",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "c312c06d5f92fc100fcf5df4e7ddbf27d88c4bd5013dbb9ee01728fd815cb64b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0069",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0069",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0049",
+      "corpus_record_id": "clc-v01-0070-r1",
+      "candidate_entry_id": "pcd-v01-0049",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "action_change"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "action_change",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "action_change"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "action_change",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "source_type": "CREATOR_RECONCILIATION",
+          "export_path": "../composition-library-historical-harvest-v0.1/reconciliation/creator-export-2026-09-27.json",
+          "addendum_path": "../composition-library-historical-harvest-v0.1/reconciliation/creator-reconciliation-addendum-2026-09-27.json",
+          "historical_record_id": "clh-v01-0070",
+          "creator_reason": "TIME may express waiting but loses the central PROCESS / CHANGE meaning.",
+          "provenance": "CREATOR_RECONCILIATION"
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clc-v01-0070-r1",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0050",
+      "corpus_record_id": "clh-v01-0071",
+      "candidate_entry_id": "pcd-v01-0050",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "logic_no"
+              },
+              {
+                "type": "icon",
+                "id": "media_text"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "logic_no + media_text",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "logic_no"
+              },
+              {
+                "type": "icon",
+                "id": "media_text"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "logic_no + media_text",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0071",
+            "source_type": "WEB_UI",
+            "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+            "location": "cand-webui-09",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "c312c06d5f92fc100fcf5df4e7ddbf27d88c4bd5013dbb9ee01728fd815cb64b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0071",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0071",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0051",
+      "corpus_record_id": "clh-v01-0072",
+      "candidate_entry_id": "pcd-v01-0051",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "logic_yes"
+              },
+              {
+                "type": "icon",
+                "id": "qual_good"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "logic_yes + qual_good",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "logic_yes"
+              },
+              {
+                "type": "icon",
+                "id": "qual_good"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "logic_yes + qual_good",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0072",
+            "source_type": "WEB_UI",
+            "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+            "location": "cand-webui-10",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "c312c06d5f92fc100fcf5df4e7ddbf27d88c4bd5013dbb9ee01728fd815cb64b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0072",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0072",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0052",
+      "corpus_record_id": "clh-v01-0073",
+      "candidate_entry_id": "pcd-v01-0052",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "qual_bad"
+              },
+              {
+                "type": "icon",
+                "id": "punct_exclaim"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "qual_bad + punct_exclaim",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "qual_bad"
+              },
+              {
+                "type": "icon",
+                "id": "punct_exclaim"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "qual_bad + punct_exclaim",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0073",
+            "source_type": "WEB_UI",
+            "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+            "location": "cand-webui-11",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "c312c06d5f92fc100fcf5df4e7ddbf27d88c4bd5013dbb9ee01728fd815cb64b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0073",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0073",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0053",
+      "corpus_record_id": "clh-v01-0074",
+      "candidate_entry_id": "pcd-v01-0053",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_down"
+              },
+              {
+                "type": "icon",
+                "id": "media_text"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "rel_down + media_text",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_down"
+              },
+              {
+                "type": "icon",
+                "id": "media_text"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "rel_down + media_text",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0074",
+            "source_type": "WEB_UI",
+            "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+            "location": "cand-webui-12",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "c312c06d5f92fc100fcf5df4e7ddbf27d88c4bd5013dbb9ee01728fd815cb64b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0074",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0074",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0054",
+      "corpus_record_id": "clh-v01-0075",
+      "candidate_entry_id": "pcd-v01-0054",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_up"
+              },
+              {
+                "type": "icon",
+                "id": "media_text"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "rel_up + media_text",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_up"
+              },
+              {
+                "type": "icon",
+                "id": "media_text"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "rel_up + media_text",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0075",
+            "source_type": "WEB_UI",
+            "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+            "location": "cand-webui-13",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "c312c06d5f92fc100fcf5df4e7ddbf27d88c4bd5013dbb9ee01728fd815cb64b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0075",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0075",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0055",
+      "corpus_record_id": "clh-v01-0076",
+      "candidate_entry_id": "pcd-v01-0055",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "media_text"
+              },
+              {
+                "type": "icon",
+                "id": "action_change"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "media_text + action_change",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "media_text"
+              },
+              {
+                "type": "icon",
+                "id": "action_change"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "media_text + action_change",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0076",
+            "source_type": "WEB_UI",
+            "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+            "location": "cand-webui-16",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "c312c06d5f92fc100fcf5df4e7ddbf27d88c4bd5013dbb9ee01728fd815cb64b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0076",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0076",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0056",
+      "corpus_record_id": "clh-v01-0077",
+      "candidate_entry_id": "pcd-v01-0056",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "person_generic"
+              },
+              {
+                "type": "icon",
+                "id": "rel_here"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "person_generic + rel_here",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "person_generic"
+              },
+              {
+                "type": "icon",
+                "id": "rel_here"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "person_generic + rel_here",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0077",
+            "source_type": "WEB_UI",
+            "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+            "location": "cand-webui-18",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "c312c06d5f92fc100fcf5df4e7ddbf27d88c4bd5013dbb9ee01728fd815cb64b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0077",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0077",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0057",
+      "corpus_record_id": "clh-v01-0078",
+      "candidate_entry_id": "pcd-v01-0057",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "logic_no"
+              },
+              {
+                "type": "icon",
+                "id": "person_generic"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "logic_no + person_generic",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "logic_no"
+              },
+              {
+                "type": "icon",
+                "id": "person_generic"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "logic_no + person_generic",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0078",
+            "source_type": "WEB_UI",
+            "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+            "location": "cand-webui-19",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "c312c06d5f92fc100fcf5df4e7ddbf27d88c4bd5013dbb9ee01728fd815cb64b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0078",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0078",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0058",
+      "corpus_record_id": "clh-v01-0079",
+      "candidate_entry_id": "pcd-v01-0058",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "service_tools"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "service_tools",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "service_tools"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "service_tools",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0079",
+            "source_type": "WEB_UI",
+            "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+            "location": "cand-webui-20",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "c312c06d5f92fc100fcf5df4e7ddbf27d88c4bd5013dbb9ee01728fd815cb64b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0079",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0079",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0059",
+      "corpus_record_id": "clh-v01-0080",
+      "candidate_entry_id": "pcd-v01-0059",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "media_text"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "media_text",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "media_text"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "media_text",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0080",
+            "source_type": "WEB_UI",
+            "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+            "location": "cand-webui-23",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "c312c06d5f92fc100fcf5df4e7ddbf27d88c4bd5013dbb9ee01728fd815cb64b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0080",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0080",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0060",
+      "corpus_record_id": "clh-v01-0081",
+      "candidate_entry_id": "pcd-v01-0060",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "comm_speak"
+              },
+              {
+                "type": "icon",
+                "id": "punct_exclaim"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "comm_speak + punct_exclaim",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "comm_speak"
+              },
+              {
+                "type": "icon",
+                "id": "punct_exclaim"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "comm_speak + punct_exclaim",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0081",
+            "source_type": "WEB_UI",
+            "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+            "location": "cand-webui-24",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "c312c06d5f92fc100fcf5df4e7ddbf27d88c4bd5013dbb9ee01728fd815cb64b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0081",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0081",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0061",
+      "corpus_record_id": "clh-v01-0002",
+      "candidate_entry_id": null,
+      "source_message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "place_home",
+                "type": "icon"
+              },
+              {
+                "id": "punct_question",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "source_sequence": "place_home + punct_question",
+      "preferred_message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "place_home",
+                "type": "icon"
+              },
+              {
+                "id": "punct_question",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "preferred_sequence": "place_home + punct_question",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": {
+        "origin": {
+          "event_id": "origin-clh-v01-0002",
+          "source_type": "CONSTRAINED TRANSLATION PILOT 04A",
+          "reference": "docs/research/constrained-translation-pilot-04a/normalized/04a-03-r1.json",
+          "location": "cand-04a-03",
+          "role": "ORIGIN",
+          "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+          "sha256": "bb967883f4721b162e56dcc828d2418d71e542ef50246c7a03cac1b4ddafc208",
+          "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+        },
+        "uses": [],
+        "creator_review_id": "review-clh-v01-0002",
+        "addendum": null
+      },
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0002",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0062",
+      "corpus_record_id": "clh-v01-0007",
+      "candidate_entry_id": null,
+      "source_message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "need_food",
+                "type": "icon"
+              },
+              {
+                "id": "qual_bad",
+                "type": "icon"
+              },
+              {
+                "id": "logic_no",
+                "type": "icon"
+              },
+              {
+                "id": "qty_minus",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "source_sequence": "need_food + qual_bad + logic_no + qty_minus",
+      "preferred_message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "need_food",
+                "type": "icon"
+              },
+              {
+                "id": "qual_bad",
+                "type": "icon"
+              },
+              {
+                "id": "logic_no",
+                "type": "icon"
+              },
+              {
+                "id": "qty_minus",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "preferred_sequence": "need_food + qual_bad + logic_no + qty_minus",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": {
+        "origin": {
+          "event_id": "origin-clh-v01-0007",
+          "source_type": "CONSTRAINED TRANSLATION PILOT 04A",
+          "reference": "docs/research/constrained-translation-pilot-04a/normalized/04a-09-r1.json",
+          "location": "cand-04a-09",
+          "role": "ORIGIN",
+          "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+          "sha256": "2b46d787415107bb6fb4613cef6b142ee1e1b538c6d4db5340f8791b169b6932",
+          "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+        },
+        "uses": [],
+        "creator_review_id": "review-clh-v01-0007",
+        "addendum": null
+      },
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0007",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0063",
+      "corpus_record_id": "clh-v01-0011",
+      "candidate_entry_id": null,
+      "source_message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "person_generic",
+                "type": "icon"
+              },
+              {
+                "id": "need_food",
+                "type": "icon"
+              },
+              {
+                "id": "rel_here",
+                "type": "icon"
+              },
+              {
+                "id": "punct_question",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "source_sequence": "person_generic + need_food + rel_here + punct_question",
+      "preferred_message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "person_generic",
+                "type": "icon"
+              },
+              {
+                "id": "need_food",
+                "type": "icon"
+              },
+              {
+                "id": "rel_here",
+                "type": "icon"
+              },
+              {
+                "id": "punct_question",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "preferred_sequence": "person_generic + need_food + rel_here + punct_question",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": {
+        "origin": {
+          "event_id": "origin-clh-v01-0011",
+          "source_type": "CONSTRAINED TRANSLATION PILOT 04A",
+          "reference": "docs/research/constrained-translation-pilot-04a/normalized/04a-17-r1.json",
+          "location": "cand-04a-17",
+          "role": "ORIGIN",
+          "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+          "sha256": "3f67310e904886d85b38ac1455e6aedb2cb7ea50ff41bbc57d310f6570faaa40",
+          "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+        },
+        "uses": [],
+        "creator_review_id": "review-clh-v01-0011",
+        "addendum": null
+      },
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0011",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0064",
+      "corpus_record_id": "clh-v01-0017",
+      "candidate_entry_id": null,
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "need_water"
+              },
+              {
+                "type": "icon",
+                "id": "qty_5"
+              },
+              {
+                "type": "icon",
+                "id": "qty_5"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "need_water + qty_5 + qty_5",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "need_water"
+              },
+              {
+                "type": "icon",
+                "id": "qty_5"
+              },
+              {
+                "type": "icon",
+                "id": "qty_5"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "need_water + qty_5 + qty_5",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": {
+        "origin": {
+          "event_id": "origin-clh-v01-0017",
+          "source_type": "HANDBOOK",
+          "reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+          "location": "cand-handbook-many-waters",
+          "role": "ORIGIN",
+          "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+          "sha256": "5fe3eea1aab10ab51c15727ff2526fb4be42e93ab500edb3a56ee694458b369b",
+          "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+        },
+        "uses": [],
+        "creator_review_id": "review-clh-v01-0017",
+        "addendum": null
+      },
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0017",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": false
+      }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0065",
+      "corpus_record_id": "clh-v01-0022",
+      "candidate_entry_id": null,
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "move_public"
+              },
+              {
+                "type": "icon",
+                "id": "time"
+              },
+              {
+                "type": "icon",
+                "id": "punct_question"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "move_public + time + punct_question",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "move_public"
+              },
+              {
+                "type": "icon",
+                "id": "time"
+              },
+              {
+                "type": "icon",
+                "id": "punct_question"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "move_public + time + punct_question",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": {
+        "origin": {
+          "event_id": "origin-clh-v01-0022",
+          "source_type": "HANDBOOK",
+          "reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+          "location": "cand-handbook-transit-schedule",
+          "role": "ORIGIN",
+          "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+          "sha256": "5fe3eea1aab10ab51c15727ff2526fb4be42e93ab500edb3a56ee694458b369b",
+          "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+        },
+        "uses": [],
+        "creator_review_id": "review-clh-v01-0022",
+        "addendum": null
+      },
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0022",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": true
+      }
+    }
+  ]
+}
