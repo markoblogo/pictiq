@@ -26,6 +26,32 @@ Classification: composition comprehension — `INDEPENDENTLY CONVERGENT WITH EXI
 
 The review remains external commentary, not comprehension validation, human evidence, protocol validation, or a standalone reason to change Pictiq. Stress Test conclusions, frozen materials, and current licensing terms remain unchanged.
 
+## 2026-09-27 — Claude External Review 002 and Composition Library architecture
+
+### Starting question
+
+How should a second external repository review be reconciled with existing findings, and can Pictiq preserve evidence-bearing compositions before a future translation assistant is designed?
+
+### What happened
+
+The owner-supplied Claude review was preserved byte-for-byte as `EXTERNAL REPOSITORY REVIEW`; its original date, model/version, prompt, and inspected revision were not supplied. Several claims were checked against the current local repository. The “87 icons” count is current, but eight Paris entries are Contextual, not Core. `place_fashion_shopping` is intentionally retained for legacy compatibility. The review did identify a real icon-index/schema mismatch: two records use additional properties not declared by the strict index schema, while the current CI lexicon validator ignores extra fields. This is recorded without changing lexicon, schema, or validation code.
+
+Claude independently raised composition-comprehension, first-use, and licensing pressures already noted by Perplexity. The airport list is a future test corpus, not accepted vocabulary or translations. The exact principle remains that a missing natural-language noun does not prove a Pictiq gap; current composition/context/omission/LOSSY/GAP distinctions govern review.
+
+Two research architecture notes now define a proposed Composition Library and future Translator. A discussion-only JSON Schema proposal illustrates a single-message, multi-provenance record with structured context, intent neighborhoods, lifecycle, compatibility, tests, and failures. No registry population, airport corpus run, Translator, or product integration was created.
+
+### Evidence
+
+[Claude review archive and findings map](../research/external-review-and-licensing-audit-2026-09/claude-review-002.md), [Perplexity / Claude matrix](../research/external-review-and-licensing-audit-2026-09/cross-review-matrix.md), [airport composition hypotheses](../research/external-review-and-licensing-audit-2026-09/airport-composition-hypotheses.md), [Composition Library concept](concepts/composition-library.md), [proposed record schema](concepts/composition-library-record.schema.proposal.json), and [future Translator architecture](concepts/pictiq-translator-architecture.md).
+
+### Decision / outcome
+
+`Claude External Review 002 — ARCHIVED / RECONCILED`. `Pictiq Composition Library v0.1 — ARCHITECTURE DEFINED / NOT IMPLEMENTED`. `Pictiq Translator — FUTURE ARCHITECTURE DEFINED / NOT IMPLEMENTED`. Stress Test 07.1 remains `PREPARED / NOT EXECUTED` and is not displaced by this parallel knowledge-infrastructure track.
+
+### Boundary
+
+No vocabulary, Entity Symbol, Grammar, Message Schema, Composer, Renderer, production landing, license, or research stimulus changed. No owner hypothesis was promoted to normative. Editorial Case 001/002 are not harvested into exact composition records where semantic-source-to-Message provenance remains incomplete. No push, tag, or release was made.
+
 ## 2026-09-27 — Pictiq Editorial Case 002: Good Dog, Bad System production capture
 
 ### Starting question

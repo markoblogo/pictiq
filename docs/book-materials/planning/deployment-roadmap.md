@@ -173,3 +173,7 @@ The five supplied cross-model transcripts have been analyzed, but they describe 
 ## Stress Test 07 — prepared experiment — 2026-09-20
 
 `Stress Test 07 — Explicit Grammar vs Contextual Compression` has an **INVALID / PARTIAL PILOT**: SVG source exposure, one delivery mismatch, and missing learning/transfer phases prevent a primary inference. `Stress Test 07.1` is **PREPARED / NOT EXECUTED** with the frozen design delivered only through neutral, metadata-free PNGs. It remains a controlled research follow-up to 05, 06 and 06B; no production or vocabulary track is reopened.
+
+## Parallel knowledge-infrastructure architecture — 2026-09-27
+
+The [Composition Library v0.1](../concepts/composition-library.md) and [future Translator architecture](../concepts/pictiq-translator-architecture.md) are documented as proposals only. They form a parallel knowledge-infrastructure / future product-architecture track, not an implementation commitment. The Composition Library is not a vocabulary registry, and the Translator is not implemented. Do not displace, alter, or wait on this work to resume the active controlled research experiment: Stress Test 07.1 remains **PREPARED / NOT EXECUTED**. Production cases remain their own evidence track.
