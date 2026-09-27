@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Pictiq Composition Library Human Reconciliation Overlay v0.1",
+  "description": "Research-only creator decision overlay. It references the frozen Harvest and does not constitute an accepted Composition Library.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "reconciliation_version",
+    "harvest_version",
+    "harvest_snapshot",
+    "exported_at",
+    "reviewed_count",
+    "unreviewed_count",
+    "decision_counts",
+    "records"
+  ],
+  "properties": {
+    "reconciliation_version": {
+      "const": "pictiq-composition-human-reconciliation-v0.1"
+    },
+    "harvest_version": {
+      "const": "0.1"
+    },
+    "harvest_snapshot": {
+      "const": "8fae507"
+    },
+    "exported_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "reviewed_count": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 81
+    },
+    "unreviewed_count": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 81
+    },
+    "decision_counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ACCEPT",
+        "ACCEPT_CONTEXTUAL",
+        "EDIT",
+        "REJECT",
+        "EVIDENCE_ONLY",
+        "UNREVIEWED"
+      ],
+      "properties": {
+        "ACCEPT": {"type": "integer", "minimum": 0, "maximum": 81},
+        "ACCEPT_CONTEXTUAL": {"type": "integer", "minimum": 0, "maximum": 81},
+        "EDIT": {"type": "integer", "minimum": 0, "maximum": 81},
+        "REJECT": {"type": "integer", "minimum": 0, "maximum": 81},
+        "EVIDENCE_ONLY": {"type": "integer", "minimum": 0, "maximum": 81},
+        "UNREVIEWED": {"type": "integer", "minimum": 0, "maximum": 81}
+      }
+    },
+    "records": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/reconciledRecord"}
+    }
+  },
+  "$defs": {
+    "reconciledRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "composition_id",
+        "review_id",
+        "original_harvest_identity",
+        "primary_decision",
+        "reason_tags",
+        "human_notes"
+      ],
+      "properties": {
+        "composition_id": {"type": "string"},
+        "review_id": {"type": "string"},
+        "original_harvest_identity": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["source_family", "origin_reference", "source_references"],
+          "properties": {
+            "source_family": {"type": "string"},
+            "origin_reference": {"type": "string"},
+            "source_references": {
+              "type": "array",
+              "items": {"type": "string"}
+            }
+          }
+        },
+        "primary_decision": {
+          "enum": [
+            "ACCEPT",
+            "ACCEPT_CONTEXTUAL",
+            "EDIT",
+            "REJECT",
+            "EVIDENCE_ONLY",
+            "UNREVIEWED"
+          ]
+        },
+        "reason_tags": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "SEMANTICS",
+              "CONTEXT",
+              "AMBIGUOUS",
+              "LOSSY",
+              "MESSAGE_BOUNDARY",
+              "PROVENANCE",
+              "HISTORICAL",
+              "COMPATIBILITY",
+              "NEEDS_REBUILD",
+              "TOO_EXPLICIT",
+              "TOO_COMPRESSED",
+              "SURFACE_SPECIFIC",
+              "MODE_SPECIFIC",
+              "FAILURE_EVIDENCE",
+              "OTHER"
+            ]
+          }
+        },
+        "human_notes": {"type": "string"}
+      }
+    }
+  }
+}

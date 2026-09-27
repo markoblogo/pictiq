@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pictiq Composition Library — Human Reconciliation</title>
+  <link rel="stylesheet" href="reconciliation.css">
+  <script src="reconciliation.js" defer></script>
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <p class="eyebrow">Pictiq research tool · local creator review</p>
+      <h1>Composition Library — Human Reconciliation v0.1</h1>
+      <p class="snapshot">Bound to Historical Composition Harvest v0.1 · repository snapshot <code>8fae507</code> · 81 exact candidates</p>
+    </div>
+    <div class="header-links">
+      <a href="../review/exclusions.html">Review excluded evidence: 86 evidence-only · 7 unsafe</a>
+      <a href="../README.md">Harvest package and methodology</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="lock-warning" class="warning" role="alert" hidden></section>
+    <section id="persistence-warning" class="warning" role="status" hidden></section>
+
+    <section class="progress-panel" aria-labelledby="progress-title">
+      <div class="progress-heading">
+        <h2 id="progress-title">Creator review progress</h2>
+        <strong id="reviewed-count" aria-live="polite">Reviewed: 0 / 81</strong>
+      </div>
+      <div id="decision-counts" class="count-list" aria-live="polite"></div>
+      <div class="progress-track" aria-label="Review completion">
+        <div id="progress-fill" class="progress-fill"></div>
+      </div>
+      <p id="completion-status" class="status-text" aria-live="polite">81 UNREVIEWED · decisions save in this browser only until exported.</p>
+    </section>
+
+    <section class="toolbar" aria-label="Save and transfer review">
+      <button id="export-button" type="button" disabled>Export reconciliation JSON</button>
+      <label class="button secondary" for="import-file">Import reconciliation JSON</label>
+      <input id="import-file" type="file" accept="application/json,.json" hidden>
+      <button id="clear-button" type="button" class="secondary" disabled>Clear local reconciliation</button>
+      <span id="storage-status" class="muted" role="status">Loading frozen harvest…</span>
+      <span id="action-status" class="action-status" role="status" aria-live="polite"></span>
+    </section>
+
+    <section class="filters" aria-labelledby="filters-title">
+      <div class="filter-heading">
+        <h2 id="filters-title">Find records</h2>
+        <button id="clear-filters" type="button" class="text-button">Clear filters</button>
+      </div>
+      <div class="filter-grid">
+        <label>Review pass<select id="filter-pass"><option value="">All passes</option></select></label>
+        <label>Source family<select id="filter-source"><option value="">All sources</option></select></label>
+        <label>Primary decision<select id="filter-decision"><option value="">All decisions</option></select></label>
+        <label>Lifecycle<select id="filter-lifecycle"><option value="">All lifecycle states</option></select></label>
+        <label>Mode<select id="filter-mode"><option value="">All modes</option></select></label>
+        <label>Surface<select id="filter-surface"><option value="">All surfaces</option></select></label>
+        <label>Preservation<select id="filter-preservation"><option value="">All assessments</option></select></label>
+        <label>Compatibility<select id="filter-compatibility"><option value="">All compatibility states</option></select></label>
+        <label>Reason tag<select id="filter-tag"><option value="">All reason tags</option></select></label>
+        <label class="check-filter"><input id="filter-tests" type="checkbox"> Has tests</label>
+        <label class="check-filter"><input id="filter-failures" type="checkbox"> Has failure evidence</label>
+        <label class="search-filter">Search<input id="filter-search" type="search" placeholder="ID, intent, source, token, or notes"></label>
+      </div>
+      <div class="quick-filters" aria-label="Quick filters">
+        <button type="button" data-quick="unreviewed">UNREVIEWED ONLY</button>
+        <button type="button" data-quick="attention">NEEDS ATTENTION</button>
+        <button type="button" data-quick="accepted">ACCEPTED</button>
+        <span>Attention follows review state or creator-selected reason tags.</span>
+      </div>
+    </section>
+
+    <section class="navigation" aria-label="Record navigation">
+      <div class="nav-buttons">
+        <button id="previous-button" type="button" disabled>Previous</button>
+        <button id="next-button" type="button" disabled>Next</button>
+        <button id="next-unreviewed-button" type="button" disabled>Next unreviewed</button>
+      </div>
+      <label class="jump-control">Jump to composition ID<select id="jump-select" disabled></select></label>
+      <p id="position" class="position" aria-live="polite">Loading records…</p>
+    </section>
+
+    <section id="workspace" class="workspace" aria-label="Reconciliation workspace">
+      <nav class="queue-panel" aria-label="Filtered candidate records">
+        <div class="queue-heading"><h2>Review queue</h2><span id="queue-count">0 records</span></div>
+        <ol id="queue-list" class="queue-list"></ol>
+      </nav>
+      <section id="record-panel" class="record-panel" aria-live="polite">
+        <p>Loading candidate records…</p>
+      </section>
+    </section>
+    <section id="comparison-panel" class="comparison-panel" hidden aria-label="Side-by-side comparison"></section>
+  </main>
+  <footer>
+    <p>Creator decisions are a separate local overlay. This viewer does not accept a Composition Library baseline or alter harvested evidence.</p>
+    <p>Keyboard: ← / → previous or next · J next unreviewed · D focus decision · shortcuts are ignored while entering text.</p>
+  </footer>
+</body>
+</html>

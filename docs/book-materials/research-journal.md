@@ -1,5 +1,15 @@
 # Research journal
 
+## 2026-09-27 — Human Reconciliation Viewer v0.1 prepared
+
+Prepared a local static review surface for the 81 exact candidates from Historical Composition Harvest v0.1, bound to snapshot `8fae507` and protected with manifest/dataset hash checks. Creator decisions, reason tags, and notes live in a separate browser-local overlay with JSON export/import; the Harvest package remains frozen. No human decisions were made by Codex, and no accepted Composition Library baseline was created.
+
+**NEXT:** creator review of the 81 candidates. Practical Coverage Corpus remains not started. The viewer does not edit a Message, process `EDIT`, or turn review input into an accepted registry.
+
+[Human Reconciliation Viewer v0.1](../research/composition-library-historical-harvest-v0.1/reconciliation/README.md), [viewer](../research/composition-library-historical-harvest-v0.1/reconciliation/index.html), and [frozen Harvest](../research/composition-library-historical-harvest-v0.1/README.md).
+
+---
+
 ## 2026-09-27 — Composition Library Historical Harvest v0.1
 
 The repository-source harvest is complete at snapshot `8fae507`: 182 findings were inventoried, including 89 exact source/message pairings collapsed into 81 unique candidate records, 86 evidence-only findings, and 7 unsafe findings. All 81 exact records rendered with the current Renderer. These retrieval counts and corpus summaries describe only the biased historical repository sample; they do not establish vocabulary coverage, user frequency, comprehension, or product success.

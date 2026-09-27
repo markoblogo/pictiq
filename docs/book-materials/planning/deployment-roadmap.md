@@ -198,3 +198,10 @@ The Historical Harvest preparation-only status below is superseded by the dated 
 - **THEN:** Practical Coverage Corpus → Composer coverage → Frequency / Semantic Coverage → Translator Spike → Agent Retrieval Stress Test → return to Stress Test 07.1.
 - **PAUSED / PRESERVED:** Stress Test 07.1 remains untouched and paused. Harvesting did not inspect its visual symbols as a means of reconstructing messages.
 - The harvest is internal research evidence only. No public Composition Library, new protocol claim, product change, or vocabulary change follows from its counts.
+
+## Human Reconciliation Viewer ready — 2026-09-27
+
+- **CURRENT:** Composition Library Human Reconciliation v0.1 — `TOOL READY / CREATOR REVIEW PENDING`.
+- **NEXT:** Creator completes review of all 81 exact Harvest candidates and exports the separate reconciliation overlay.
+- **AFTER REVIEW:** Process the creator’s export and prepare a first accepted Composition Library baseline candidate for separate review.
+- The Practical Coverage Corpus remains **NOT STARTED** until reconciliation processing is complete. Historical Harvest v0.1 remains frozen; Stress Test 07.1 remains paused and preserved.
