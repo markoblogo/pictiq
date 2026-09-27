@@ -1,0 +1,89 @@
+{
+  "addendum_type": "CREATOR RECONCILIATION ADDENDUM",
+  "date": "2026-09-27",
+  "reconciliation_version": "pictiq-composition-human-reconciliation-v0.1",
+  "harvest_version": "0.1",
+  "harvest_snapshot": "8fae507",
+  "original_creator_export": {
+    "path": "creator-export-2026-09-27.json",
+    "sha256": "455588e54a561e162d4b8ffdad38ad1b0f59612ccb3fafb889cc6e8ba41b40bc",
+    "preservation": "BYTE_IDENTICAL; do not rewrite"
+  },
+  "source": "Subsequent creator instructions supplied after manual review of all four non-ACCEPT records.",
+  "decisions": [
+    {
+      "composition_id": "clh-v01-0008",
+      "intent": "Less noise, please.",
+      "historical_composition": ["comm_sound", "qty_minus", "comm_speak", "logic_yes"],
+      "historical_disposition": "SUPERSEDED / HISTORICAL EVIDENCE",
+      "creator_replacement": ["comm_sound", "qty_minus"],
+      "creator_reason": "SOUND + LESS is functionally sufficient; comm_speak + logic_yes adds no necessary information and over-explains the intent.",
+      "provenance": "CREATOR_RECONCILIATION"
+    },
+    {
+      "composition_id": "clh-v01-0010",
+      "intent": "A beautiful blue hotel near the old city center.",
+      "historical_composition": ["place_home", "rel_here", "qual_good", "media_image"],
+      "historical_disposition": "REJECTED / SUPERSEDED",
+      "historical_reason": "Recoloring the referenced object glyph with media_image as semantic color changes neither glyph identity nor provides a distinct reusable color tile; the representation conflates render style with semantic color.",
+      "creator_replacement_intent": "HOTEL + BLUE + GOOD",
+      "creator_replacement_current_message": null,
+      "creator_replacement_status": "CREATOR DECISION / IMPLEMENTATION REPAIR REQUIRED",
+      "explicit_color_tile_rule": "A separate color tile follows the object it modifies; the tile is filled with the communicated color. Do not recolor the canonical object glyph to convey its semantic color.",
+      "intentional_omission": "near the old city center",
+      "color_decisions": {
+        "COLOR_AS_RENDER_STYLE": "REJECTED",
+        "COLOR_AS_EXPLICIT_TILE": "CREATOR DECISION / REPAIR REQUIRED"
+      },
+      "no_new_color_id": true,
+      "provenance": "CREATOR_RECONCILIATION"
+    },
+    {
+      "composition_id": "clh-v01-0012",
+      "intent": "This place is a battlefield.",
+      "historical_composition": ["place_home", "action_conflict"],
+      "historical_disposition": "REJECTED / SUPERSEDED",
+      "historical_reason": "place_home changes the referent and can suggest domestic conflict, a violent house, or a detention/torture context; the source is deictic (THIS PLACE / HERE), not HOME.",
+      "creator_replacement": ["rel_here", "action_conflict"],
+      "semantic_reading": "HERE + CONFLICT; approximately conflict here / this is a place of conflict / this place is a battlefield under relevant context.",
+      "translator_lesson": "Do not fill a generic LOCATION slot with a more specific place_* primitive unless the source supplies that specificity. Preserve deixis or return GAP rather than introducing a false referent.",
+      "provenance": "CREATOR_RECONCILIATION"
+    },
+    {
+      "composition_id": "clh-v01-0070",
+      "intent": "Loading / processing",
+      "historical_composition": ["time"],
+      "historical_disposition": "REJECTED / SUPERSEDED",
+      "historical_reason": "TIME may express waiting but loses the central PROCESS / CHANGE meaning.",
+      "creator_replacement": ["action_change"],
+      "creator_preferred_id_resolution": "Human-readable change resolves to current canonical ID action_change.",
+      "semantic_neighbourhood": ["loading", "processing", "updating", "operation in progress", "system working/changing"],
+      "optional_distinct_composition": ["action_change", "time"],
+      "optional_composition_status": "NOT THE AUTOMATIC REPLACEMENT; may express processing / please wait or the process is taking time.",
+      "translator_lesson": "Do not translate a state or process through only an associated consequence: loading → takes time → TIME loses the central process semantics.",
+      "provenance": "CREATOR_RECONCILIATION"
+    }
+  ],
+  "color_system_audit": {
+    "current_finding": "The protocol has a proposed parametric color-sample mechanism, but no accepted color token, canonical ID, sample geometry contract, or Message Schema token. Message Schema and Composer currently support params.color on an icon token; Composer exposes a color picker for that token and Renderer applies it to the referenced glyph. This is token recoloring, not an explicit object-plus-color-tile composition.",
+    "existing_explicit_color_tile_support": false,
+    "repair_requirement": "Separately review and specify an explicit parametric color tile that can follow an object without recoloring its canonical glyph; align protocol/schema/shorthand/validation/Renderer/Composer only in a later authorized repair pass.",
+    "implementation_changed": false,
+    "new_color_ids_created": false
+  },
+  "composition_architecture_clarification": {
+    "lexicon": "Canonical individual primitives.",
+    "composition_dictionary": "Future public dictionary-like set of human-approved reusable concepts, compositional words, short phrases, and practical expressions.",
+    "composition_corpus": "Broader evidence-bearing collection, including dictionary candidates, narrative/discourse records, experiments, historical variants, production examples, rejected variants, and failure evidence.",
+    "translator_relationship": "Search the Dictionary first for reusable known solutions, then consult the broader Corpus as evidence/context; distinguish authority and status in either result.",
+    "public_library_ui": "Should primarily expose the Dictionary, not dump the full Corpus.",
+    "public_dictionary_eligibility_values": ["YES", "CORPUS_ONLY", "REVIEW"],
+    "eligibility_is_separate_from_semantic_decision": true,
+    "eligibility_rule": "Semantic reusability outside the originating work, experiment, or discourse; no hard token-count or frame-count threshold.",
+    "narrative_example": "Accepted multi-frame Odyssey/narrative records remain semantically ACCEPTED evidence and are Corpus-only as whole narrative/discourse fragments; do not reclassify the semantic decision or automatically split them.",
+    "record_level_eligibility_processing": "Deferred to Human Reconciliation Processing / Accepted Baseline v0.1; do not classify every harvested record in this addendum.",
+    "accepted_baselines_created": false,
+    "public_ui_implemented": false,
+    "narratives_automatically_split": false
+  }
+}

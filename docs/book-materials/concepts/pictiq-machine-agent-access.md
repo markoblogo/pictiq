@@ -11,7 +11,8 @@ An unfamiliar machine should be able to discover Pictiq's authoritative records 
 | Primitive IDs and meanings | [canonical Lexicon data](../../../lexicon/icon-index.json), vocabulary classification, and Entity registry | Find/return current canonical record and status; do not duplicate meanings |
 | Valid message structure | [Message Schema](../../../spec/pictiq-message.schema.json) | Reuse exact schema and validation behavior |
 | Valid language behavior | [Grammar](../../../spec/GRAMMAR.md) and [Protocol](../../../spec/PROTOCOL.md) | Link relevant rules; do not reinterpret them |
-| Evidence-bearing exact compositions | Future Composition Library | Retrieve exact Message JSON with mode, surface, context, provenance, lifecycle, tests and failures |
+| Reusable public compositions | Future Composition Dictionary | Retrieve reusable, human-reviewed exact Messages with separate Dictionary eligibility and evidence |
+| Broader evidence-bearing compositions | Future internal Composition Corpus | Retrieve exact Messages and source evidence, including narrative, experimental, historical, rejected, and failure records; do not imply Dictionary eligibility |
 | Visual output | Canonical SVG assets and deterministic Renderer | Resolve original assets or request the existing Renderer; do not synthesize canonical art |
 | Human authoring | Composer | Remain the authoring/review surface; future exports may carry provenance |
 
@@ -26,7 +27,7 @@ Future access may support these conceptual operations; names are descriptive, no
 - `validate_message(message_json)` and `render_message(message_json)` reuse existing Schema, validators, and Renderer. No parallel validator or renderer.
 - `report_gap(intent, context, mode, surface, attempted_candidates)` may record pressure for human review under existing NEED-BEFORE-VOCABULARY governance. It does not create vocabulary.
 
-The Composition Library model is one exact message per record with extensible communication surface and existing `EMBODIED` / `STANDALONE` mode. Shared intent/neighborhood references can link different records; they do not imply a universal phrase translation. Context supplies must be evidence-backed. Coverage is assessed per mode/surface/context, not just per intent.
+The Composition Library model is one exact message per record with extensible communication surface and existing `EMBODIED` / `STANDALONE` mode. Shared intent/neighborhood references can link different records; they do not imply a universal phrase translation. Context supplies must be evidence-backed. Coverage is assessed per mode/surface/context, not just per intent. Composition Dictionary eligibility (`YES`, `CORPUS_ONLY`, or `REVIEW`) is separate from semantic disposition and lifecycle; the public Library view should primarily expose the Dictionary. Translator retrieval may use Dictionary first and Corpus as broader evidence, while making authority/status explicit.
 
 ## Stable addressing and entry point
 
@@ -36,7 +37,7 @@ Human-facing HTML, machine-readable data, Translator retrieval, Composer referen
 
 ## Forward and reverse use
 
-**Forward:** source/dialogue/structured intent → semantic intent → resolve mode + surface + context → Composition Library retrieval → Lexicon + Grammar fallback → candidate Message JSON → existing validation → canonical Renderer preview → human decision. The Translator can stop with `LOSSY`, `GAP`, or `NEEDS_HUMAN_REVIEW`; it is not required to emit a message.
+**Forward:** source/dialogue/structured intent → semantic intent → resolve mode + surface + context → Composition Dictionary retrieval → Composition Corpus evidence/context → Lexicon + Grammar fallback → candidate Message JSON → existing validation → canonical Renderer preview → human decision. The Translator can stop with `LOSSY`, `GAP`, or `NEEDS_HUMAN_REVIEW`; it is not required to emit a message.
 
 **Reverse/reference:** prefer (1) exact Message JSON or provenance sidecar, (2) Composer/Renderer structured export, (3) canonical IDs and hashes, (4) visual matching against canonical assets, then (5) unconstrained vision only as candidate inference. Resolve IDs through the Lexicon, retrieve original SVGs, inspect known compositions/evidence, and report ambiguity. If structured provenance is absent, visual matching does not become canonical identification without review.
 

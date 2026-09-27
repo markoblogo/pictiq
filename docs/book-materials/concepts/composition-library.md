@@ -18,6 +18,19 @@ The library could serve as:
 
 The library has no authority to change Grammar, the Lexicon, the Message Schema, or the meaning of an icon. It is downstream of those sources. A normative Grammar example can be recorded with its source authority; an external reviewer’s proposed phrase remains an external candidate.
 
+## Dictionary and Corpus layers
+
+The Composition Library is the umbrella for two distinct collections, neither implemented as a baseline yet:
+
+- **Composition Dictionary** — a future public, dictionary-like set of human-approved reusable concepts, compositional words, short phrases, and practical expressions (for example `LESS NOISE`, `COLD WATER`, `PAY BY CARD`, `WHERE IS THE TOILET?`, or `HERE + CONFLICT`).
+- **Composition Corpus** — the broader evidence-bearing set of known Pictiq use: Dictionary candidates plus long multi-frame narrative/discourse, experiment stimuli, historical variants, production examples, rejected attempts, and failure evidence. It is not a public phrase-to-message dump.
+
+Creator semantic disposition and public Dictionary eligibility are separate axes. A composition can be `ACCEPT` as correct Pictiq evidence and `CORPUS_ONLY` as a whole narrative/discourse passage. The proposed `PUBLIC_DICTIONARY_ELIGIBILITY` values are `YES`, `CORPUS_ONLY`, and `REVIEW`; these do not replace or reinterpret `ACCEPT`, `REJECT`, or lifecycle status. Eligibility asks whether the composition can reasonably serve as a reusable standalone lexical, conceptual, or short practical unit outside its originating work, experiment, or discourse. It is semantic/reusability-based, not a token-count or frame-count cutoff. Leave uncertain cases at `REVIEW`; do not split a larger record automatically.
+
+The accepted multi-frame Odyssey records remain semantically accepted evidence. As complete narrative/discourse fragments they are Corpus material, not Dictionary entries. Their creator decisions are not mistakes; later extraction of reusable sub-compositions is a separate human-reviewed task. A future public Library UI should primarily expose the Dictionary while the internal Corpus preserves the broader evidence.
+
+For a future Translator, search the Dictionary first for reusable known solutions, then consult the broader Corpus as evidence and context. Results from either layer must expose authority, source, context, status, and uncertainty. Corpus evidence does not by itself grant Dictionary eligibility.
+
 ## Message formation: compose intent, do not translate words
 
 The repository already has the principles needed to explain Pictiq message formation. This note reconciles them; it adds no normative doctrine.

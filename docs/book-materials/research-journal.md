@@ -8,6 +8,24 @@ Prepared a local static review surface for the 81 exact candidates from Historic
 
 [Human Reconciliation Viewer v0.1](../research/composition-library-historical-harvest-v0.1/reconciliation/README.md), [viewer](../research/composition-library-historical-harvest-v0.1/reconciliation/index.html), and [frozen Harvest](../research/composition-library-historical-harvest-v0.1/README.md).
 
+## 2026-09-27 — Creator review received for Historical Harvest v0.1
+
+Archived the supplied reconciliation export against Harvest snapshot `8fae507`. It contains decisions for all 81 candidate IDs: 77 `ACCEPT`, 1 `EDIT`, and 3 `REJECT`; there are no `UNREVIEWED` rows. All IDs match the frozen review dataset and the export header counts match its rows. The original export is preserved with its SHA-256 and provenance in the reconciliation package.
+
+This closes the creator’s review pass, but not creation of an accepted Composition Library baseline: `EDIT` for `clh-v01-0008` (“Less noise, please.”) has no explanatory note or replacement composition. That correction must be resolved before the record can be represented as accepted. The three `REJECT` dispositions are recorded as creator decisions, not as evidence that the associated messages are invalid in all contexts. `ACCEPT` records remain creator dispositions over historical candidates; they do not establish comprehension, general validity, or protocol-level acceptance. Frozen Harvest records, dataset, manifest, and renders remain unchanged. Practical Coverage Corpus has not started.
+
+[Creator review export and reconciliation report](../research/composition-library-historical-harvest-v0.1/reconciliation/creator-review-2026-09-27.md).
+
+## 2026-09-27 — Creator reconciliation addendum and Dictionary / Corpus distinction
+
+The creator supplied replacements for all four non-`ACCEPT` records: `comm_sound + qty_minus` supersedes the over-explained “Less noise, please”; the hotel intent is `HOTEL + BLUE + GOOD` with the location detail omitted, pending an explicit color-tile mechanism; `rel_here + action_conflict` preserves HERE rather than the false HOME referent; and `action_change` replaces `time` for “Loading / processing.” Optional `action_change + time` remains a distinct expression, not the replacement. The original browser export remains byte-identical; later decisions are a separate addendum.
+
+Architecture now distinguishes the Lexicon, future public Composition Dictionary, and broader internal Composition Corpus. Semantic `ACCEPT` is separate from proposed Dictionary eligibility (`YES`, `CORPUS_ONLY`, `REVIEW`). Accepted multi-frame Odyssey narrative records remain accepted evidence and Corpus-only as whole passages; no automatic narrative splitting or blanket eligibility classification was performed. The Translator may search Dictionary first and Corpus as broader evidence; a public UI should primarily expose Dictionary.
+
+The repository audit found a mismatch requiring separate review: protocol COLOR is only a proposed sample-tile mechanism with no implemented token, while schema/Composer allow `params.color` on an icon and Renderer applies it to that glyph. This is rendering-style recoloring, not the creator’s explicit object-plus-color-tile semantics. The repair requirement is recorded; no color ID, protocol/code change, or accepted baseline was created. Current stage remains `Composition Library Human Reconciliation v0.1`; next is a separate `Human Reconciliation Processing / Accepted Baseline v0.1` pass. Harvest and Stress Test 07.1 remain frozen/preserved.
+
+[Creator reconciliation addendum](../research/composition-library-historical-harvest-v0.1/reconciliation/creator-reconciliation-addendum-2026-09-27.md).
+
 ---
 
 ## 2026-09-27 — Composition Library Historical Harvest v0.1

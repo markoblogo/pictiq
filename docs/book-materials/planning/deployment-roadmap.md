@@ -201,7 +201,9 @@ The Historical Harvest preparation-only status below is superseded by the dated 
 
 ## Human Reconciliation Viewer ready — 2026-09-27
 
-- **CURRENT:** Composition Library Human Reconciliation v0.1 — `TOOL READY / CREATOR REVIEW PENDING`.
-- **NEXT:** Creator completes review of all 81 exact Harvest candidates and exports the separate reconciliation overlay.
-- **AFTER REVIEW:** Process the creator’s export and prepare a first accepted Composition Library baseline candidate for separate review.
-- The Practical Coverage Corpus remains **NOT STARTED** until reconciliation processing is complete. Historical Harvest v0.1 remains frozen; Stress Test 07.1 remains paused and preserved.
+- **SUPERSEDED STATUS:** the viewer is complete and the creator has reviewed all 81 exact Harvest candidates, then supplied a separate reconciliation addendum with replacements for all four non-`ACCEPT` records.
+- **CURRENT:** `Composition Library Human Reconciliation v0.1` — first creator decision layer and addendum recorded; the original export is preserved byte-for-byte.
+- **NEXT:** `Human Reconciliation Processing / Accepted Baseline v0.1` — a separate pass to process the 77 original `ACCEPT` decisions, replacements, rejected historical evidence, and semantic Dictionary-vs-Corpus eligibility. Do not create either baseline until that pass.
+- The future `Composition Dictionary` is the public reusable-concepts/short-expressions layer; the broader internal `Composition Corpus` retains narratives and all evidence types. `PUBLIC_DICTIONARY_ELIGIBILITY` (`YES`, `CORPUS_ONLY`, `REVIEW`) is separate from semantic disposition. Accepted Odyssey narrative records remain accepted evidence and are not to be automatically split.
+- The creator’s COLOR rule is recorded as a system repair requirement: current `params.color` recolors an icon glyph; explicit object-plus-color-tile authoring is not implemented. No color ID or product change is part of this stage.
+- The Practical Coverage Corpus remains **NOT STARTED**. Historical Harvest v0.1 remains frozen; Stress Test 07.1 remains paused and preserved.

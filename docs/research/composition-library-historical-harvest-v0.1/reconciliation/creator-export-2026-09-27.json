@@ -1,0 +1,1228 @@
+{
+  "reconciliation_version": "pictiq-composition-human-reconciliation-v0.1",
+  "harvest_version": "0.1",
+  "harvest_snapshot": "8fae507",
+  "exported_at": "2026-09-27T17:42:11.509Z",
+  "reviewed_count": 81,
+  "unreviewed_count": 0,
+  "decision_counts": {
+    "ACCEPT": 77,
+    "ACCEPT_CONTEXTUAL": 0,
+    "EDIT": 1,
+    "REJECT": 3,
+    "EVIDENCE_ONLY": 0,
+    "UNREVIEWED": 0
+  },
+  "records": [
+    {
+      "composition_id": "clh-v01-0013",
+      "review_id": "review-clh-v01-0013",
+      "original_harvest_identity": {
+        "source_family": "HANDBOOK",
+        "origin_reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+        "source_references": [
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf#worked-examples"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0014",
+      "review_id": "review-clh-v01-0014",
+      "original_harvest_identity": {
+        "source_family": "HANDBOOK",
+        "origin_reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+        "source_references": [
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf#worked-examples"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0015",
+      "review_id": "review-clh-v01-0015",
+      "original_harvest_identity": {
+        "source_family": "HANDBOOK",
+        "origin_reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+        "source_references": [
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf#worked-examples"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0016",
+      "review_id": "review-clh-v01-0016",
+      "original_harvest_identity": {
+        "source_family": "HANDBOOK",
+        "origin_reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+        "source_references": [
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf#worked-examples"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0017",
+      "review_id": "review-clh-v01-0017",
+      "original_harvest_identity": {
+        "source_family": "HANDBOOK",
+        "origin_reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+        "source_references": [
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf#worked-examples"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0018",
+      "review_id": "review-clh-v01-0018",
+      "original_harvest_identity": {
+        "source_family": "HANDBOOK",
+        "origin_reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+        "source_references": [
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf#worked-examples"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0019",
+      "review_id": "review-clh-v01-0019",
+      "original_harvest_identity": {
+        "source_family": "HANDBOOK",
+        "origin_reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+        "source_references": [
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf#worked-examples"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0020",
+      "review_id": "review-clh-v01-0020",
+      "original_harvest_identity": {
+        "source_family": "HANDBOOK",
+        "origin_reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+        "source_references": [
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf#worked-examples"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0021",
+      "review_id": "review-clh-v01-0021",
+      "original_harvest_identity": {
+        "source_family": "HANDBOOK",
+        "origin_reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+        "source_references": [
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf#worked-examples"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0022",
+      "review_id": "review-clh-v01-0022",
+      "original_harvest_identity": {
+        "source_family": "HANDBOOK",
+        "origin_reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+        "source_references": [
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf#worked-examples"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0023",
+      "review_id": "review-clh-v01-0023",
+      "original_harvest_identity": {
+        "source_family": "HANDBOOK",
+        "origin_reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+        "source_references": [
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf#worked-examples"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0024",
+      "review_id": "review-clh-v01-0024",
+      "original_harvest_identity": {
+        "source_family": "HANDBOOK",
+        "origin_reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+        "source_references": [
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf#worked-examples"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0025",
+      "review_id": "review-clh-v01-0025",
+      "original_harvest_identity": {
+        "source_family": "HANDBOOK",
+        "origin_reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+        "source_references": [
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf#worked-examples"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0026",
+      "review_id": "review-clh-v01-0026",
+      "original_harvest_identity": {
+        "source_family": "HANDBOOK",
+        "origin_reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+        "source_references": [
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf#worked-examples"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0027",
+      "review_id": "review-clh-v01-0027",
+      "original_harvest_identity": {
+        "source_family": "HANDBOOK",
+        "origin_reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+        "source_references": [
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf#worked-examples"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0028",
+      "review_id": "review-clh-v01-0028",
+      "original_harvest_identity": {
+        "source_family": "HANDBOOK",
+        "origin_reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+        "source_references": [
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf#worked-examples"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0029",
+      "review_id": "review-clh-v01-0029",
+      "original_harvest_identity": {
+        "source_family": "HANDBOOK",
+        "origin_reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+        "source_references": [
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+          "books/handbook-v1/pictiq-handbook-v1.0.pdf#worked-examples"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0030",
+      "review_id": "review-clh-v01-0030",
+      "original_harvest_identity": {
+        "source_family": "LANDING",
+        "origin_reference": "docs/book-materials/research/landing-translation-findings-2026-09.md",
+        "source_references": [
+          "docs/book-materials/research/landing-translation-findings-2026-09.md",
+          "docs/book-materials/research/landing-translation-findings-2026-09.md#implemented-translation-pressure-log"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0031",
+      "review_id": "review-clh-v01-0031",
+      "original_harvest_identity": {
+        "source_family": "LANDING",
+        "origin_reference": "docs/book-materials/research/landing-translation-findings-2026-09.md",
+        "source_references": [
+          "docs/book-materials/research/landing-translation-findings-2026-09.md",
+          "docs/book-materials/research/landing-translation-findings-2026-09.md#implemented-translation-pressure-log"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0032",
+      "review_id": "review-clh-v01-0032",
+      "original_harvest_identity": {
+        "source_family": "LANDING",
+        "origin_reference": "docs/book-materials/research/landing-translation-findings-2026-09.md",
+        "source_references": [
+          "docs/book-materials/research/landing-translation-findings-2026-09.md",
+          "docs/book-materials/research/landing-translation-findings-2026-09.md#implemented-translation-pressure-log"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0033",
+      "review_id": "review-clh-v01-0033",
+      "original_harvest_identity": {
+        "source_family": "LANDING",
+        "origin_reference": "docs/book-materials/research/landing-translation-findings-2026-09.md",
+        "source_references": [
+          "docs/book-materials/research/landing-translation-findings-2026-09.md",
+          "docs/book-materials/research/landing-translation-findings-2026-09.md#implemented-translation-pressure-log"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0040",
+      "review_id": "review-clh-v01-0040",
+      "original_harvest_identity": {
+        "source_family": "ROAD _ WAYFINDING",
+        "origin_reference": "docs/research/road-wayfinding-stress-test-v1.json",
+        "source_references": [
+          "docs/research/road-wayfinding-stress-test-v1.json",
+          "docs/research/road-wayfinding-stress-test-v1.json#cases/1"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0041",
+      "review_id": "review-clh-v01-0041",
+      "original_harvest_identity": {
+        "source_family": "ROAD _ WAYFINDING",
+        "origin_reference": "docs/research/road-wayfinding-stress-test-v1.json",
+        "source_references": [
+          "docs/research/road-wayfinding-stress-test-v1.json",
+          "docs/research/road-wayfinding-stress-test-v1.json#cases/2"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0042",
+      "review_id": "review-clh-v01-0042",
+      "original_harvest_identity": {
+        "source_family": "ROAD _ WAYFINDING",
+        "origin_reference": "docs/research/road-wayfinding-stress-test-v1.json",
+        "source_references": [
+          "docs/research/road-wayfinding-stress-test-v1.json",
+          "docs/research/road-wayfinding-stress-test-v1.json#cases/3"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0043",
+      "review_id": "review-clh-v01-0043",
+      "original_harvest_identity": {
+        "source_family": "ROAD _ WAYFINDING",
+        "origin_reference": "docs/research/road-wayfinding-stress-test-v1.json",
+        "source_references": [
+          "docs/research/road-wayfinding-stress-test-v1.json",
+          "docs/research/road-wayfinding-stress-test-v1.json#cases/4"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0044",
+      "review_id": "review-clh-v01-0044",
+      "original_harvest_identity": {
+        "source_family": "ROAD _ WAYFINDING",
+        "origin_reference": "docs/research/road-wayfinding-stress-test-v1.json",
+        "source_references": [
+          "docs/research/road-wayfinding-stress-test-v1.json",
+          "docs/research/road-wayfinding-stress-test-v1.json#cases/5"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0045",
+      "review_id": "review-clh-v01-0045",
+      "original_harvest_identity": {
+        "source_family": "ROAD _ WAYFINDING",
+        "origin_reference": "docs/research/road-wayfinding-stress-test-v1.json",
+        "source_references": [
+          "docs/research/road-wayfinding-stress-test-v1.json",
+          "docs/research/road-wayfinding-stress-test-v1.json#cases/6"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0046",
+      "review_id": "review-clh-v01-0046",
+      "original_harvest_identity": {
+        "source_family": "ROAD _ WAYFINDING",
+        "origin_reference": "docs/research/road-wayfinding-stress-test-v1.json",
+        "source_references": [
+          "docs/research/road-wayfinding-stress-test-v1.json",
+          "docs/research/road-wayfinding-stress-test-v1.json#cases/7"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0047",
+      "review_id": "review-clh-v01-0047",
+      "original_harvest_identity": {
+        "source_family": "ROAD _ WAYFINDING",
+        "origin_reference": "docs/research/road-wayfinding-stress-test-v1.json",
+        "source_references": [
+          "docs/research/road-wayfinding-stress-test-v1.json",
+          "docs/research/road-wayfinding-stress-test-v1.json#cases/8"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0048",
+      "review_id": "review-clh-v01-0048",
+      "original_harvest_identity": {
+        "source_family": "ROAD _ WAYFINDING",
+        "origin_reference": "docs/research/road-wayfinding-stress-test-v1.json",
+        "source_references": [
+          "docs/research/road-wayfinding-stress-test-v1.json",
+          "docs/research/road-wayfinding-stress-test-v1.json#cases/9"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0049",
+      "review_id": "review-clh-v01-0049",
+      "original_harvest_identity": {
+        "source_family": "ROAD _ WAYFINDING",
+        "origin_reference": "docs/research/road-wayfinding-stress-test-v1.json",
+        "source_references": [
+          "docs/research/road-wayfinding-stress-test-v1.json",
+          "docs/research/road-wayfinding-stress-test-v1.json#cases/10"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0050",
+      "review_id": "review-clh-v01-0050",
+      "original_harvest_identity": {
+        "source_family": "ROAD _ WAYFINDING",
+        "origin_reference": "docs/research/road-wayfinding-stress-test-v1.json",
+        "source_references": [
+          "docs/research/road-wayfinding-stress-test-v1.json",
+          "docs/research/road-wayfinding-stress-test-v1.json#cases/11"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0051",
+      "review_id": "review-clh-v01-0051",
+      "original_harvest_identity": {
+        "source_family": "ROAD _ WAYFINDING",
+        "origin_reference": "docs/research/road-wayfinding-stress-test-v1.json",
+        "source_references": [
+          "docs/research/road-wayfinding-stress-test-v1.json",
+          "docs/research/road-wayfinding-stress-test-v1.json#cases/12"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0052",
+      "review_id": "review-clh-v01-0052",
+      "original_harvest_identity": {
+        "source_family": "ROAD _ WAYFINDING",
+        "origin_reference": "docs/research/road-wayfinding-stress-test-v1.json",
+        "source_references": [
+          "docs/research/road-wayfinding-stress-test-v1.json",
+          "docs/research/road-wayfinding-stress-test-v1.json#cases/13"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0053",
+      "review_id": "review-clh-v01-0053",
+      "original_harvest_identity": {
+        "source_family": "ROAD _ WAYFINDING",
+        "origin_reference": "docs/research/road-wayfinding-stress-test-v1.json",
+        "source_references": [
+          "docs/research/road-wayfinding-stress-test-v1.json",
+          "docs/research/road-wayfinding-stress-test-v1.json#cases/14"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0054",
+      "review_id": "review-clh-v01-0054",
+      "original_harvest_identity": {
+        "source_family": "ROAD _ WAYFINDING",
+        "origin_reference": "docs/research/road-wayfinding-stress-test-v1.json",
+        "source_references": [
+          "docs/research/road-wayfinding-stress-test-v1.json",
+          "docs/research/road-wayfinding-stress-test-v1.json#cases/15"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0055",
+      "review_id": "review-clh-v01-0055",
+      "original_harvest_identity": {
+        "source_family": "ROAD _ WAYFINDING",
+        "origin_reference": "docs/research/road-wayfinding-stress-test-v1.json",
+        "source_references": [
+          "docs/research/road-wayfinding-stress-test-v1.json",
+          "docs/research/road-wayfinding-stress-test-v1.json#cases/16"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0056",
+      "review_id": "review-clh-v01-0056",
+      "original_harvest_identity": {
+        "source_family": "ROAD _ WAYFINDING",
+        "origin_reference": "docs/research/road-wayfinding-stress-test-v1.json",
+        "source_references": [
+          "docs/research/road-wayfinding-stress-test-v1.json",
+          "docs/research/road-wayfinding-stress-test-v1.json#cases/17"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0057",
+      "review_id": "review-clh-v01-0057",
+      "original_harvest_identity": {
+        "source_family": "ROAD _ WAYFINDING",
+        "origin_reference": "docs/research/road-wayfinding-stress-test-v1.json",
+        "source_references": [
+          "docs/research/road-wayfinding-stress-test-v1.json",
+          "docs/research/road-wayfinding-stress-test-v1.json#cases/18"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0058",
+      "review_id": "review-clh-v01-0058",
+      "original_harvest_identity": {
+        "source_family": "ROAD _ WAYFINDING",
+        "origin_reference": "docs/research/road-wayfinding-stress-test-v1.json",
+        "source_references": [
+          "docs/research/road-wayfinding-stress-test-v1.json",
+          "docs/research/road-wayfinding-stress-test-v1.json#cases/19",
+          "docs/research/road-wayfinding-stress-test-v1.json#cases/20",
+          "docs/research/road-wayfinding-stress-test-v1.json#cases/21"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0059",
+      "review_id": "review-clh-v01-0059",
+      "original_harvest_identity": {
+        "source_family": "ROAD _ WAYFINDING",
+        "origin_reference": "docs/research/road-wayfinding-stress-test-v1.json",
+        "source_references": [
+          "docs/research/road-wayfinding-stress-test-v1.json",
+          "docs/research/road-wayfinding-stress-test-v1.json#cases/22"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0060",
+      "review_id": "review-clh-v01-0060",
+      "original_harvest_identity": {
+        "source_family": "ROAD _ WAYFINDING",
+        "origin_reference": "docs/research/road-wayfinding-stress-test-v1.json",
+        "source_references": [
+          "docs/research/road-wayfinding-stress-test-v1.json",
+          "docs/research/road-wayfinding-stress-test-v1.json#cases/23"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0061",
+      "review_id": "review-clh-v01-0061",
+      "original_harvest_identity": {
+        "source_family": "ROAD _ WAYFINDING",
+        "origin_reference": "docs/research/road-wayfinding-stress-test-v1.json",
+        "source_references": [
+          "docs/research/road-wayfinding-stress-test-v1.json",
+          "docs/research/road-wayfinding-stress-test-v1.json#cases/24"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0062",
+      "review_id": "review-clh-v01-0062",
+      "original_harvest_identity": {
+        "source_family": "ROAD _ WAYFINDING",
+        "origin_reference": "docs/research/road-wayfinding-stress-test-v1.json",
+        "source_references": [
+          "docs/research/road-wayfinding-stress-test-v1.json",
+          "docs/research/road-wayfinding-stress-test-v1.json#cases/25"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0064",
+      "review_id": "review-clh-v01-0064",
+      "original_harvest_identity": {
+        "source_family": "WEB_UI",
+        "origin_reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+        "source_references": [
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json#cases/WEBUI-01",
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json#cases/WEBUI-17"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0065",
+      "review_id": "review-clh-v01-0065",
+      "original_harvest_identity": {
+        "source_family": "WEB_UI",
+        "origin_reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+        "source_references": [
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json#cases/WEBUI-02"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0066",
+      "review_id": "review-clh-v01-0066",
+      "original_harvest_identity": {
+        "source_family": "WEB_UI",
+        "origin_reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+        "source_references": [
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json#cases/WEBUI-03"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0067",
+      "review_id": "review-clh-v01-0067",
+      "original_harvest_identity": {
+        "source_family": "WEB_UI",
+        "origin_reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+        "source_references": [
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json#cases/WEBUI-04",
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json#cases/WEBUI-07"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0068",
+      "review_id": "review-clh-v01-0068",
+      "original_harvest_identity": {
+        "source_family": "WEB_UI",
+        "origin_reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+        "source_references": [
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json#cases/WEBUI-05"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0069",
+      "review_id": "review-clh-v01-0069",
+      "original_harvest_identity": {
+        "source_family": "WEB_UI",
+        "origin_reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+        "source_references": [
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json#cases/WEBUI-06"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0070",
+      "review_id": "review-clh-v01-0070",
+      "original_harvest_identity": {
+        "source_family": "WEB_UI",
+        "origin_reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+        "source_references": [
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json#cases/WEBUI-08"
+        ]
+      },
+      "primary_decision": "REJECT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0071",
+      "review_id": "review-clh-v01-0071",
+      "original_harvest_identity": {
+        "source_family": "WEB_UI",
+        "origin_reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+        "source_references": [
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json#cases/WEBUI-09",
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json#cases/WEBUI-14"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0072",
+      "review_id": "review-clh-v01-0072",
+      "original_harvest_identity": {
+        "source_family": "WEB_UI",
+        "origin_reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+        "source_references": [
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json#cases/WEBUI-10"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0073",
+      "review_id": "review-clh-v01-0073",
+      "original_harvest_identity": {
+        "source_family": "WEB_UI",
+        "origin_reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+        "source_references": [
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json#cases/WEBUI-11"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0074",
+      "review_id": "review-clh-v01-0074",
+      "original_harvest_identity": {
+        "source_family": "WEB_UI",
+        "origin_reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+        "source_references": [
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json#cases/WEBUI-12",
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json#cases/WEBUI-15",
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json#cases/WEBUI-21"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0075",
+      "review_id": "review-clh-v01-0075",
+      "original_harvest_identity": {
+        "source_family": "WEB_UI",
+        "origin_reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+        "source_references": [
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json#cases/WEBUI-13",
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json#cases/WEBUI-22"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0076",
+      "review_id": "review-clh-v01-0076",
+      "original_harvest_identity": {
+        "source_family": "WEB_UI",
+        "origin_reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+        "source_references": [
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json#cases/WEBUI-16"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0077",
+      "review_id": "review-clh-v01-0077",
+      "original_harvest_identity": {
+        "source_family": "WEB_UI",
+        "origin_reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+        "source_references": [
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json#cases/WEBUI-18"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0078",
+      "review_id": "review-clh-v01-0078",
+      "original_harvest_identity": {
+        "source_family": "WEB_UI",
+        "origin_reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+        "source_references": [
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json#cases/WEBUI-19"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0079",
+      "review_id": "review-clh-v01-0079",
+      "original_harvest_identity": {
+        "source_family": "WEB_UI",
+        "origin_reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+        "source_references": [
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json#cases/WEBUI-20"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0080",
+      "review_id": "review-clh-v01-0080",
+      "original_harvest_identity": {
+        "source_family": "WEB_UI",
+        "origin_reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+        "source_references": [
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json#cases/WEBUI-23"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0081",
+      "review_id": "review-clh-v01-0081",
+      "original_harvest_identity": {
+        "source_family": "WEB_UI",
+        "origin_reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+        "source_references": [
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+          "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json#cases/WEBUI-24"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0034",
+      "review_id": "review-clh-v01-0034",
+      "original_harvest_identity": {
+        "source_family": "ODYSSEY",
+        "origin_reference": "docs/research/odyssey-toki-pona-pictiq-stress-test-03.json",
+        "source_references": [
+          "docs/research/odyssey-toki-pona-pictiq-stress-test-03.json",
+          "docs/research/odyssey-toki-pona-pictiq-stress-test-03.json#cases/01-war-return-calypso"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0035",
+      "review_id": "review-clh-v01-0035",
+      "original_harvest_identity": {
+        "source_family": "ODYSSEY",
+        "origin_reference": "docs/research/odyssey-toki-pona-pictiq-stress-test-03.json",
+        "source_references": [
+          "docs/research/odyssey-toki-pona-pictiq-stress-test-03.json",
+          "docs/research/odyssey-toki-pona-pictiq-stress-test-03.json#cases/02-gods-poseidon-hostility"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0036",
+      "review_id": "review-clh-v01-0036",
+      "original_harvest_identity": {
+        "source_family": "ODYSSEY",
+        "origin_reference": "docs/research/odyssey-toki-pona-pictiq-stress-test-03.json",
+        "source_references": [
+          "docs/research/odyssey-toki-pona-pictiq-stress-test-03.json",
+          "docs/research/odyssey-toki-pona-pictiq-stress-test-03.json#cases/03-watercraft-wavy-cloud"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0037",
+      "review_id": "review-clh-v01-0037",
+      "original_harvest_identity": {
+        "source_family": "ODYSSEY",
+        "origin_reference": "docs/research/odyssey-toki-pona-pictiq-stress-test-03.json",
+        "source_references": [
+          "docs/research/odyssey-toki-pona-pictiq-stress-test-03.json",
+          "docs/research/odyssey-toki-pona-pictiq-stress-test-03.json#cases/04-arete-dialogue"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0038",
+      "review_id": "review-clh-v01-0038",
+      "original_harvest_identity": {
+        "source_family": "ODYSSEY",
+        "origin_reference": "docs/research/odyssey-toki-pona-pictiq-stress-test-03.json",
+        "source_references": [
+          "docs/research/odyssey-toki-pona-pictiq-stress-test-03.json",
+          "docs/research/odyssey-toki-pona-pictiq-stress-test-03.json#cases/05-survival-food-animal-cooking"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0039",
+      "review_id": "review-clh-v01-0039",
+      "original_harvest_identity": {
+        "source_family": "ODYSSEY",
+        "origin_reference": "docs/research/odyssey-toki-pona-pictiq-stress-test-03.json",
+        "source_references": [
+          "docs/research/odyssey-toki-pona-pictiq-stress-test-03.json",
+          "docs/research/odyssey-toki-pona-pictiq-stress-test-03.json#cases/06-polyphemus-eye-kinship-homecoming"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0063",
+      "review_id": "review-clh-v01-0063",
+      "original_harvest_identity": {
+        "source_family": "STRESS TEST 05",
+        "origin_reference": "docs/research/stress-test-05-zero-training-cross-model/05a-canonical-dialogue.json",
+        "source_references": [
+          "docs/research/stress-test-05-zero-training-cross-model/05a-canonical-dialogue.json"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0001",
+      "review_id": "review-clh-v01-0001",
+      "original_harvest_identity": {
+        "source_family": "CONSTRAINED TRANSLATION PILOT 04A",
+        "origin_reference": "docs/research/constrained-translation-pilot-04a/normalized/04a-02-r1.json",
+        "source_references": [
+          "docs/research/constrained-translation-pilot-04a/normalized/04a-02-r1.json"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0002",
+      "review_id": "review-clh-v01-0002",
+      "original_harvest_identity": {
+        "source_family": "CONSTRAINED TRANSLATION PILOT 04A",
+        "origin_reference": "docs/research/constrained-translation-pilot-04a/normalized/04a-03-r1.json",
+        "source_references": [
+          "docs/research/constrained-translation-pilot-04a/normalized/04a-03-r1.json"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0003",
+      "review_id": "review-clh-v01-0003",
+      "original_harvest_identity": {
+        "source_family": "CONSTRAINED TRANSLATION PILOT 04A",
+        "origin_reference": "docs/research/constrained-translation-pilot-04a/normalized/04a-04-r1.json",
+        "source_references": [
+          "docs/research/constrained-translation-pilot-04a/normalized/04a-04-r1.json"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0004",
+      "review_id": "review-clh-v01-0004",
+      "original_harvest_identity": {
+        "source_family": "CONSTRAINED TRANSLATION PILOT 04A",
+        "origin_reference": "docs/research/constrained-translation-pilot-04a/normalized/04a-06-r1.json",
+        "source_references": [
+          "docs/research/constrained-translation-pilot-04a/normalized/04a-06-r1.json"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0005",
+      "review_id": "review-clh-v01-0005",
+      "original_harvest_identity": {
+        "source_family": "CONSTRAINED TRANSLATION PILOT 04A",
+        "origin_reference": "docs/research/constrained-translation-pilot-04a/normalized/04a-07-r1.json",
+        "source_references": [
+          "docs/research/constrained-translation-pilot-04a/normalized/04a-07-r1.json"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0006",
+      "review_id": "review-clh-v01-0006",
+      "original_harvest_identity": {
+        "source_family": "CONSTRAINED TRANSLATION PILOT 04A",
+        "origin_reference": "docs/research/constrained-translation-pilot-04a/normalized/04a-08-r1.json",
+        "source_references": [
+          "docs/research/constrained-translation-pilot-04a/normalized/04a-08-r1.json"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0007",
+      "review_id": "review-clh-v01-0007",
+      "original_harvest_identity": {
+        "source_family": "CONSTRAINED TRANSLATION PILOT 04A",
+        "origin_reference": "docs/research/constrained-translation-pilot-04a/normalized/04a-09-r1.json",
+        "source_references": [
+          "docs/research/constrained-translation-pilot-04a/normalized/04a-09-r1.json"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0008",
+      "review_id": "review-clh-v01-0008",
+      "original_harvest_identity": {
+        "source_family": "CONSTRAINED TRANSLATION PILOT 04A",
+        "origin_reference": "docs/research/constrained-translation-pilot-04a/normalized/04a-10-r1.json",
+        "source_references": [
+          "docs/research/constrained-translation-pilot-04a/normalized/04a-10-r1.json"
+        ]
+      },
+      "primary_decision": "EDIT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0009",
+      "review_id": "review-clh-v01-0009",
+      "original_harvest_identity": {
+        "source_family": "CONSTRAINED TRANSLATION PILOT 04A",
+        "origin_reference": "docs/research/constrained-translation-pilot-04a/normalized/04a-14-r1.json",
+        "source_references": [
+          "docs/research/constrained-translation-pilot-04a/normalized/04a-14-r1.json"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0010",
+      "review_id": "review-clh-v01-0010",
+      "original_harvest_identity": {
+        "source_family": "CONSTRAINED TRANSLATION PILOT 04A",
+        "origin_reference": "docs/research/constrained-translation-pilot-04a/normalized/04a-16-r1.json",
+        "source_references": [
+          "docs/research/constrained-translation-pilot-04a/normalized/04a-16-r1.json"
+        ]
+      },
+      "primary_decision": "REJECT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0011",
+      "review_id": "review-clh-v01-0011",
+      "original_harvest_identity": {
+        "source_family": "CONSTRAINED TRANSLATION PILOT 04A",
+        "origin_reference": "docs/research/constrained-translation-pilot-04a/normalized/04a-17-r1.json",
+        "source_references": [
+          "docs/research/constrained-translation-pilot-04a/normalized/04a-17-r1.json"
+        ]
+      },
+      "primary_decision": "ACCEPT",
+      "reason_tags": [],
+      "human_notes": ""
+    },
+    {
+      "composition_id": "clh-v01-0012",
+      "review_id": "review-clh-v01-0012",
+      "original_harvest_identity": {
+        "source_family": "CONSTRAINED TRANSLATION PILOT 04A",
+        "origin_reference": "docs/research/constrained-translation-pilot-04a/normalized/04a-18-r1.json",
+        "source_references": [
+          "docs/research/constrained-translation-pilot-04a/normalized/04a-18-r1.json"
+        ]
+      },
+      "primary_decision": "REJECT",
+      "reason_tags": [],
+      "human_notes": ""
+    }
+  ]
+}

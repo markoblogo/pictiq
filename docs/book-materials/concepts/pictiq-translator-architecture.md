@@ -28,7 +28,9 @@ Resolve communication surface + available context (unknown material constraints 
     ↓
 Segmentation → semantic intent units → action / priority analysis
     ↓
-Composition Library retrieval (intent + mode + surface + context + evidence)
+Composition Dictionary retrieval (reusable known solutions)
+    ↓ on miss / for broader evidence
+Composition Corpus retrieval (historical, experimental, narrative, production, rejected, and failure evidence)
     ↓ on miss
 Lexicon + Grammar constrained candidate generation
     ↓
@@ -68,12 +70,15 @@ Each unit should retain a pointer to source span/turn and structured semantic no
 
 Implementation-neutral retrieval should consider, in order:
 
-1. exact or near intent in a compatible context with relevant, strong evidence;
-2. a semantic-neighborhood match whose context constraints are satisfied;
-3. a reusable composition template that can be instantiated with current valid IDs;
-4. Lexicon + Grammar constrained generation;
-5. human-guided construction in Composer or equivalent authoring tools;
-6. `GAP` / `VOCABULARY_PRESSURE` when no honest sufficient expression exists.
+1. exact or near intent in the Composition Dictionary in a compatible context, with relevant, strong evidence;
+2. a semantic-neighborhood match in the Dictionary whose context constraints are satisfied;
+3. broader Composition Corpus evidence, clearly distinguished by source, context, and authority (a narrative fragment is not thereby a reusable dictionary answer);
+4. a reusable composition template that can be instantiated with current valid IDs;
+5. Lexicon + Grammar constrained generation;
+6. human-guided construction in Composer or equivalent authoring tools;
+7. `GAP` / `VOCABULARY_PRESSURE` when no honest sufficient expression exists.
+
+Dictionary eligibility is separate from semantic acceptance. Proposed eligibility values are `YES`, `CORPUS_ONLY`, and `REVIEW`; they are not lifecycle states or creator semantic decisions. Do not filter out an accepted Corpus record merely because it is not a Dictionary entry.
 
 No embedding model, vector database, LLM, RAG stack, or vendor is selected. Retrieval should consider semantic fit, context compatibility, source quality, lifecycle, current validity, known ambiguity, tests/uses, and known failures. A failed candidate must not become the default due to lexical similarity. `PRODUCTION_USED + TESTED` would usually supply different evidence from `GENERATED_CANDIDATE`, but there is no numeric scoring formula proposed.
 
