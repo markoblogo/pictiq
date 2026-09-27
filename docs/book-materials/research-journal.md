@@ -2,6 +2,30 @@
 
 Chronological notes reconstructed from repository evidence. Interpretive statements are marked as such; dates follow commit or release history when a separate event date is unavailable.
 
+## 2026-09-27 — External repository review and licensing terminology audit
+
+### Starting question
+
+How does a supplied external review relate to existing Pictiq research, and do repository uses of “open” / “open-source” accurately describe the current license terms?
+
+### What happened
+
+A Perplexity review supplied by the project owner was archived verbatim and classified as `EXTERNAL REPOSITORY REVIEW`. Its concern about ambiguity between recognizable glyphs and consistently understood compositions independently converges with existing Stress Test 05, 06B, and 07 research; it is not human evidence or protocol validation. The first-use recommendation is partly represented by existing priority-first examples and a Composer example, but the proposed focused scenario and three-message first-use sequence are not tested. The licensing concern is supported by the repository wording audit.
+
+The audit found one broad root CC BY-NC 4.0 license statement, no component-specific software license for source code, Composer, Renderer, or specification, and a commercial-license document marked Draft. “Open source” on the landing page is inconsistent with the noncommercial restriction in the ordinary OSI open-source software sense; other uses of “open” are ambiguous. This is a terminology finding, not a legal opinion.
+
+### Evidence
+
+[Archived Perplexity review](../research/external-review-and-licensing-audit-2026-09/perplexity-review.md), [finding mapping](../research/external-review-and-licensing-audit-2026-09/findings-mapping.md), and [licensing terminology audit](../research/external-review-and-licensing-audit-2026-09/licensing-terminology-audit.md).
+
+### Decision / outcome
+
+Classification: composition comprehension — `INDEPENDENTLY CONVERGENT WITH EXISTING FINDING`; first-use positioning — `PARTIALLY NEW`; licensing / “open-source” wording — `NEW PRESSURE`. No protocol/product changes, wording rewrites, license changes, or publication milestone were made. Proposed wording alternatives remain for later human decision.
+
+### Boundary
+
+The review remains external commentary, not comprehension validation, human evidence, protocol validation, or a standalone reason to change Pictiq. Stress Test conclusions, frozen materials, and current licensing terms remain unchanged.
+
 ## 2026-09-27 — Pictiq Editorial Case 002: Good Dog, Bad System production capture
 
 ### Starting question
