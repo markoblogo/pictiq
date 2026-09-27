@@ -189,4 +189,12 @@ This dated status supersedes the earlier “Parallel knowledge-infrastructure ar
 - **PAUSED / PRESERVED:** Stress Test 07.1 — `PAUSED / PRESERVED / RETURN AFTER COMPOSITION-LIBRARY ROTATION`. Resume from the frozen package, with human-approved visual assets; automation may package approved assets byte-for-byte, strip metadata if required, assign neutral delivery names, hash, and manifest them. It must not redraw, reconstruct, optimize, or reinterpret stimuli. Preserve hypotheses, prompts, coding rules, assets, hashes, and forensic history.
 - **DEFERRED:** Claude airport corpus pending its separate future scope; human recruitment/games remain in their existing deferred state. No release promise follows from this working order.
 
-The Historical Harvest is preparation-only in the current pass; the dedicated next task performs the harvest.
+The Historical Harvest preparation-only status below is superseded by the dated completion update below. Current next gate is human reconciliation; the Practical Coverage Corpus remains later and has not started.
+
+## Historical Composition Harvest complete — 2026-09-27
+
+- **COMPLETE:** Historical Composition Harvest v0.1 at snapshot `8fae507`; 81 unique exact-message candidates plus separate evidence-only and unsafe inventories.
+- **NEXT:** Human reconciliation of the harvested records, provenance, semantic neighborhoods, lifecycle, and schema-fit notes.
+- **THEN:** Practical Coverage Corpus → Composer coverage → Frequency / Semantic Coverage → Translator Spike → Agent Retrieval Stress Test → return to Stress Test 07.1.
+- **PAUSED / PRESERVED:** Stress Test 07.1 remains untouched and paused. Harvesting did not inspect its visual symbols as a means of reconstructing messages.
+- The harvest is internal research evidence only. No public Composition Library, new protocol claim, product change, or vocabulary change follows from its counts.

@@ -1,0 +1,365 @@
+{
+  "record_schema": "composition-record-v0.1-proposal",
+  "composition_id": "clh-v01-0058",
+  "lifecycle_status": "EXPERIMENTAL",
+  "pictiq_message": {
+    "schema": "0.1",
+    "pictiq": "1.1",
+    "frames": [
+      {
+        "tokens": [
+          {
+            "type": "icon",
+            "id": "surface_wavy"
+          },
+          {
+            "type": "icon",
+            "id": "punct_exclaim"
+          }
+        ]
+      }
+    ]
+  },
+  "semantic_neighbourhoods": [
+    {
+      "intent_id": "intent-6c27d1e3f8c1",
+      "canonical_intent": "Road surface may be slippery.",
+      "semantic_examples": [
+        "Slow down, avoid abrupt steering/braking, increase caution."
+      ],
+      "required_context": [
+        {
+          "cue": "road/public-wayfinding conventions",
+          "availability": "REQUIRED",
+          "evidence_ids": [
+            "cand-road-19"
+          ]
+        }
+      ],
+      "optional_context": [
+        {
+          "cue": "sign placement and road-navigation frame",
+          "availability": "OPTIONAL",
+          "evidence_ids": [
+            "cand-road-19"
+          ]
+        }
+      ],
+      "known_ambiguities": [
+        "Yes. Generic warning does not say surface traction is the issue."
+      ],
+      "interpretation_evidence_ids": [
+        "cand-road-19"
+      ],
+      "coverage_assessments": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "outcome": "LOSSY",
+          "composition_ids": [
+            "clh-v01-0058"
+          ],
+          "evidence_ids": [
+            "cand-road-19"
+          ],
+          "notes": "Evidence for a surface-irregularity primitive or road/domain notation."
+        }
+      ]
+    },
+    {
+      "intent_id": "intent-65f7a67877ed",
+      "canonical_intent": "Uneven or rough road surface ahead.",
+      "semantic_examples": [
+        "Slow down and expect rough surface/vehicle movement."
+      ],
+      "required_context": [
+        {
+          "cue": "road/public-wayfinding conventions",
+          "availability": "REQUIRED",
+          "evidence_ids": [
+            "cand-road-20"
+          ]
+        }
+      ],
+      "optional_context": [
+        {
+          "cue": "sign placement and road-navigation frame",
+          "availability": "OPTIONAL",
+          "evidence_ids": [
+            "cand-road-20"
+          ]
+        }
+      ],
+      "known_ambiguities": [
+        "Yes. Generic caution loses the surface condition."
+      ],
+      "interpretation_evidence_ids": [
+        "cand-road-20"
+      ],
+      "coverage_assessments": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "outcome": "LOSSY",
+          "composition_ids": [
+            "clh-v01-0058"
+          ],
+          "evidence_ids": [
+            "cand-road-20"
+          ],
+          "notes": "Same WAVY evidence as slippery road."
+        }
+      ]
+    },
+    {
+      "intent_id": "intent-fa78000e18c6",
+      "canonical_intent": "Speed hump/bump ahead.",
+      "semantic_examples": [
+        "Slow down before a vertical traffic-calming feature."
+      ],
+      "required_context": [
+        {
+          "cue": "road/public-wayfinding conventions",
+          "availability": "REQUIRED",
+          "evidence_ids": [
+            "cand-road-21"
+          ]
+        }
+      ],
+      "optional_context": [
+        {
+          "cue": "sign placement and road-navigation frame",
+          "availability": "OPTIONAL",
+          "evidence_ids": [
+            "cand-road-21"
+          ]
+        }
+      ],
+      "known_ambiguities": [
+        "Yes. It may mean go up, uphill, upstairs, or caution ahead, not a bump."
+      ],
+      "interpretation_evidence_ids": [
+        "cand-road-21"
+      ],
+      "coverage_assessments": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "outcome": "LOSSY",
+          "composition_ids": [
+            "clh-v01-0058"
+          ],
+          "evidence_ids": [
+            "cand-road-21"
+          ],
+          "notes": "Most adversarial WAVY case; likely Road-pack refinement if precision matters."
+        }
+      ]
+    }
+  ],
+  "applicability": [
+    {
+      "communication_mode": "STANDALONE",
+      "communication_surface": "WAYFINDING",
+      "context": {
+        "domain": [
+          "road-wayfinding"
+        ],
+        "situation": [
+          "public road and wayfinding sign"
+        ],
+        "task": [
+          "slow down, avoid abrupt steering/braking, increase caution."
+        ],
+        "context_supplies": [
+          {
+            "cue": "road/public-wayfinding conventions",
+            "availability": "REQUIRED",
+            "evidence_ids": [
+              "cand-road-19"
+            ]
+          },
+          {
+            "cue": "sign placement and road-navigation frame",
+            "availability": "OPTIONAL",
+            "evidence_ids": [
+              "cand-road-19"
+            ]
+          }
+        ]
+      },
+      "evidence_ids": [
+        "cand-road-19"
+      ]
+    },
+    {
+      "communication_mode": "STANDALONE",
+      "communication_surface": "WAYFINDING",
+      "context": {
+        "domain": [
+          "road-wayfinding"
+        ],
+        "situation": [
+          "public road and wayfinding sign"
+        ],
+        "task": [
+          "slow down and expect rough surface/vehicle movement."
+        ],
+        "context_supplies": [
+          {
+            "cue": "road/public-wayfinding conventions",
+            "availability": "REQUIRED",
+            "evidence_ids": [
+              "cand-road-20"
+            ]
+          },
+          {
+            "cue": "sign placement and road-navigation frame",
+            "availability": "OPTIONAL",
+            "evidence_ids": [
+              "cand-road-20"
+            ]
+          }
+        ]
+      },
+      "evidence_ids": [
+        "cand-road-20"
+      ]
+    },
+    {
+      "communication_mode": "STANDALONE",
+      "communication_surface": "WAYFINDING",
+      "context": {
+        "domain": [
+          "road-wayfinding"
+        ],
+        "situation": [
+          "public road and wayfinding sign"
+        ],
+        "task": [
+          "slow down before a vertical traffic-calming feature."
+        ],
+        "context_supplies": [
+          {
+            "cue": "road/public-wayfinding conventions",
+            "availability": "REQUIRED",
+            "evidence_ids": [
+              "cand-road-21"
+            ]
+          },
+          {
+            "cue": "sign placement and road-navigation frame",
+            "availability": "OPTIONAL",
+            "evidence_ids": [
+              "cand-road-21"
+            ]
+          }
+        ]
+      },
+      "evidence_ids": [
+        "cand-road-21"
+      ]
+    }
+  ],
+  "preservation_assessments": [
+    "LOSSY"
+  ],
+  "origin": {
+    "event_id": "origin-clh-v01-0058",
+    "source_type": "ROAD _ WAYFINDING",
+    "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+    "location": "cand-road-19",
+    "role": "ORIGIN",
+    "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+    "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+    "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+  },
+  "uses": [],
+  "tests": [
+    {
+      "source_type": "ROAD_WAYFINDING",
+      "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+      "location": "slippery road",
+      "status": "human semantic reconciliation; LOSSY",
+      "event_date": "2026-09-10",
+      "message_schema_version": "unknown",
+      "role": "TEST",
+      "event_id": "test-cand-road-19",
+      "notes": "Evidence for a surface-irregularity primitive or road/domain notation."
+    },
+    {
+      "source_type": "ROAD_WAYFINDING",
+      "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+      "location": "uneven/bumpy road",
+      "status": "human semantic reconciliation; LOSSY",
+      "event_date": "2026-09-10",
+      "message_schema_version": "unknown",
+      "role": "TEST",
+      "event_id": "test-cand-road-20",
+      "notes": "Same WAVY evidence as slippery road."
+    },
+    {
+      "source_type": "ROAD_WAYFINDING",
+      "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+      "location": "speed bump",
+      "status": "human semantic reconciliation; LOSSY",
+      "event_date": "2026-09-10",
+      "message_schema_version": "unknown",
+      "role": "TEST",
+      "event_id": "test-cand-road-21",
+      "notes": "Most adversarial WAVY case; likely Road-pack refinement if precision matters."
+    }
+  ],
+  "failures": [
+    {
+      "event_id": "failure-cand-road-19",
+      "source_type": "ROAD _ WAYFINDING",
+      "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+      "location": "cand-road-19",
+      "role": "FAILURE",
+      "observed_interpretation": "wavy/unstable surface warning",
+      "failure_type": "LOSSY: SEMANTIC-COMPRESSION",
+      "disposition": "LOSSY",
+      "notes": "Evidence for a surface-irregularity primitive or road/domain notation."
+    },
+    {
+      "event_id": "failure-cand-road-20",
+      "source_type": "ROAD _ WAYFINDING",
+      "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+      "location": "cand-road-20",
+      "role": "FAILURE",
+      "observed_interpretation": "wavy/unstable surface warning",
+      "failure_type": "LOSSY: SEMANTIC-COMPRESSION",
+      "disposition": "LOSSY",
+      "notes": "Same WAVY evidence as slippery road."
+    },
+    {
+      "event_id": "failure-cand-road-21",
+      "source_type": "ROAD _ WAYFINDING",
+      "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+      "location": "cand-road-21",
+      "role": "FAILURE",
+      "observed_interpretation": "surface irregularity warning",
+      "failure_type": "LOSSY: SEMANTIC-COMPRESSION, SAFETY-PRECISION",
+      "disposition": "LOSSY",
+      "notes": "Most adversarial WAVY case; likely Road-pack refinement if precision matters."
+    }
+  ],
+  "compatibility": {
+    "pictiq_version": "1.1",
+    "message_schema_version": "0.1",
+    "source_commit": "unknown",
+    "message_validity": "CURRENT",
+    "compatibility_notes": [
+      "Research Message JSON is exact where preserved; when source only preserved IDs, the v0.1 JSON structure is a transparent encoding of that exact sequence.",
+      "Source commit/version is unknown unless the source explicitly records it. Harvest snapshot: 8fae507.",
+      "HISTORICAL HARVEST CANDIDATE only; no Composition Library acceptance implied."
+    ]
+  },
+  "related_composition_ids": [],
+  "notes": [
+    "cand-road-19: Evidence for a surface-irregularity primitive or road/domain notation.",
+    "cand-road-20: Same WAVY evidence as slippery road.",
+    "cand-road-21: Most adversarial WAVY case; likely Road-pack refinement if precision matters."
+  ]
+}

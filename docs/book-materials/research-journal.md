@@ -1,5 +1,17 @@
 # Research journal
 
+## 2026-09-27 — Composition Library Historical Harvest v0.1
+
+The repository-source harvest is complete at snapshot `8fae507`: 182 findings were inventoried, including 89 exact source/message pairings collapsed into 81 unique candidate records, 86 evidence-only findings, and 7 unsafe findings. All 81 exact records rendered with the current Renderer. These retrieval counts and corpus summaries describe only the biased historical repository sample; they do not establish vocabulary coverage, user frequency, comprehension, or product success.
+
+The review package preserves source-family coverage, exact Message records, renderer previews, evidence and exclusion views, intent index, and token/length/context counts. Historical status is retained: experimental evidence is not acceptance; creator-accepted landing copy is not comprehension evidence; Stress Test 05 has no verified matching run and alternate-stimulus transcripts remain unmerged. Stress Test 07.1 remains `PAUSED / PRESERVED`; its frozen stimuli were not decoded or changed. No production or protocol assets were modified.
+
+**NEXT: human reconciliation** of exactness, semantic targets, lifecycle, provenance, and schema fit. The Practical Coverage Corpus remains later in the sequence and is not started by this harvest. The Composition Library remains a research proposal, not a public registry.
+
+[Historical Harvest v0.1 package](../research/composition-library-historical-harvest-v0.1/README.md), [source-coverage ledger](../research/composition-library-historical-harvest-v0.1/source-coverage.json), [reviewer](../research/composition-library-historical-harvest-v0.1/review/index.html), and [corpus analysis](../research/composition-library-historical-harvest-v0.1/corpus-analysis.md).
+
+---
+
 ## 2026-09-27 — Composition Library architecture follow-up: surfaces and machine access
 
 ### What changed in the research architecture
@@ -8,7 +20,7 @@ The Composition Library now distinguishes communicative intent, existing `EMBODI
 
 A future Machine / Agent Access concept defines retrieval boundaries over the Lexicon, exact Library records, Message Schema, Grammar, canonical assets, validators, and Renderer. Forward translation resolves mode/surface/context before retrieval and can stop at LOSSY/GAP. Reverse lookup prefers Message JSON/sidecar and structured provenance before visual inference. AI must not redraw canonical glyphs. A Composer sidecar and single future machine entry point are concepts only; technical discoverability does not grant license rights. Case 002's exact per-turn mapping remains unresolved.
 
-The future Agent Retrieval Stress Test is planned, not run. Historical Harvest preparation is ready to proceed; no records were harvested. The roadmap rotation is ACTIVE architecture/harvest preparation → NEXT Historical Harvest → human reconciliation → Practical Coverage Corpus → Composer coverage → Frequency/Semantic Coverage → Translator Spike → Agent Retrieval Stress Test → return to 07.1. Stress Test 07.1 is `PAUSED / PRESERVED / RETURN AFTER COMPOSITION-LIBRARY ROTATION`; its frozen package was not changed.
+The future Agent Retrieval Stress Test is planned, not run. Historical Harvest has now completed as a separate repository-source pass; candidate records await human reconciliation before any practical corpus work. Stress Test 07.1 remains `PAUSED / PRESERVED / RETURN AFTER COMPOSITION-LIBRARY ROTATION`; its frozen package was not changed.
 
 The Lexicon index/schema mismatch remains separate technical debt: some fields are outside the strict schema and current validation ignores extras. It was recorded as a future narrow repair, not changed here. No registry, Translator, API/MCP, new vocabulary, or product behavior was implemented.
 
@@ -18,7 +30,7 @@ The Lexicon index/schema mismatch remains separate technical debt: some fields a
 
 ### Decision / status
 
-`Pictiq Composition Library v0.1 — ARCHITECTURE EXTENDED / READY FOR HISTORICAL HARVEST`. `Pictiq Machine / Agent Access — ARCHITECTURE DEFINED / NOT IMPLEMENTED`. `Pictiq Translator — ARCHITECTURE EXTENDED / NOT IMPLEMENTED`. `Pictiq Agent Retrieval Stress Test — PLANNED / NOT RUN`. `Stress Test 07.1 — PAUSED / PRESERVED / RETURN AFTER COMPOSITION-LIBRARY ROTATION`.
+`Pictiq Composition Library v0.1 — ARCHITECTURE EXTENDED / HISTORICAL HARVEST COMPLETE / AWAITING HUMAN RECONCILIATION`. `Pictiq Machine / Agent Access — ARCHITECTURE DEFINED / NOT IMPLEMENTED`. `Pictiq Translator — ARCHITECTURE EXTENDED / NOT IMPLEMENTED`. `Pictiq Agent Retrieval Stress Test — PLANNED / NOT RUN`. `Stress Test 07.1 — PAUSED / PRESERVED / RETURN AFTER COMPOSITION-LIBRARY ROTATION`.
 
 ---
 

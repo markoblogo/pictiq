@@ -1,0 +1,244 @@
+{
+  "record_schema": "composition-record-v0.1-proposal",
+  "composition_id": "clh-v01-0071",
+  "lifecycle_status": "EXPERIMENTAL",
+  "pictiq_message": {
+    "schema": "0.1",
+    "pictiq": "1.1",
+    "frames": [
+      {
+        "tokens": [
+          {
+            "type": "icon",
+            "id": "logic_no"
+          },
+          {
+            "type": "icon",
+            "id": "media_text"
+          }
+        ]
+      }
+    ]
+  },
+  "semantic_neighbourhoods": [
+    {
+      "intent_id": "intent-5e3a6eabbe69",
+      "canonical_intent": "Empty state / no content",
+      "semantic_examples": [
+        "There is no item/result/content here"
+      ],
+      "required_context": [
+        {
+          "cue": "Blank state or list context",
+          "availability": "REQUIRED",
+          "evidence_ids": [
+            "cand-webui-09"
+          ]
+        }
+      ],
+      "optional_context": [
+        {
+          "cue": "Blank state or list context",
+          "availability": "OPTIONAL",
+          "evidence_ids": [
+            "cand-webui-09"
+          ]
+        }
+      ],
+      "known_ambiguities": [
+        "Empty state should be expressed as absence of the relevant content, e.g. NO + TEXT or NO + IMAGE; no EMPTY primitive.",
+        "none/empty state"
+      ],
+      "interpretation_evidence_ids": [
+        "cand-webui-09"
+      ],
+      "coverage_assessments": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "outcome": "SUPPORTED",
+          "composition_ids": [
+            "clh-v01-0071"
+          ],
+          "evidence_ids": [
+            "cand-webui-09"
+          ],
+          "notes": "Empty state should be expressed as absence of the relevant content, e.g. NO + TEXT or NO + IMAGE; no EMPTY primitive."
+        }
+      ]
+    },
+    {
+      "intent_id": "intent-cf66c9a0932d",
+      "canonical_intent": "Delete item",
+      "semantic_examples": [
+        "Remove item, possibly destructive"
+      ],
+      "required_context": [
+        {
+          "cue": "Item/action menu context",
+          "availability": "REQUIRED",
+          "evidence_ids": [
+            "cand-webui-14"
+          ]
+        }
+      ],
+      "optional_context": [
+        {
+          "cue": "Item/action menu context",
+          "availability": "OPTIONAL",
+          "evidence_ids": [
+            "cand-webui-14"
+          ]
+        }
+      ],
+      "known_ambiguities": [
+        "Delete/remove can be NO + relevant object or MINUS depending on context; no trash/delete primitive.",
+        "delete vs archive vs close"
+      ],
+      "interpretation_evidence_ids": [
+        "cand-webui-14"
+      ],
+      "coverage_assessments": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "outcome": "SUPPORTED",
+          "composition_ids": [
+            "clh-v01-0071"
+          ],
+          "evidence_ids": [
+            "cand-webui-14"
+          ],
+          "notes": "Delete/remove can be NO + relevant object or MINUS depending on context; no trash/delete primitive."
+        }
+      ]
+    }
+  ],
+  "applicability": [
+    {
+      "communication_mode": "STANDALONE",
+      "communication_surface": "UI",
+      "context": {
+        "domain": [
+          "web-ui"
+        ],
+        "situation": [
+          "state"
+        ],
+        "task": [
+          "empty state / no content"
+        ],
+        "context_supplies": [
+          {
+            "cue": "Blank state or list context",
+            "availability": "REQUIRED",
+            "evidence_ids": [
+              "cand-webui-09"
+            ]
+          },
+          {
+            "cue": "Blank state or list context",
+            "availability": "OPTIONAL",
+            "evidence_ids": [
+              "cand-webui-09"
+            ]
+          }
+        ]
+      },
+      "evidence_ids": [
+        "cand-webui-09"
+      ]
+    },
+    {
+      "communication_mode": "STANDALONE",
+      "communication_surface": "UI",
+      "context": {
+        "domain": [
+          "web-ui"
+        ],
+        "situation": [
+          "action"
+        ],
+        "task": [
+          "delete item"
+        ],
+        "context_supplies": [
+          {
+            "cue": "Item/action menu context",
+            "availability": "REQUIRED",
+            "evidence_ids": [
+              "cand-webui-14"
+            ]
+          },
+          {
+            "cue": "Item/action menu context",
+            "availability": "OPTIONAL",
+            "evidence_ids": [
+              "cand-webui-14"
+            ]
+          }
+        ]
+      },
+      "evidence_ids": [
+        "cand-webui-14"
+      ]
+    }
+  ],
+  "preservation_assessments": [
+    "PRESERVED_BY_COMPOSITION"
+  ],
+  "origin": {
+    "event_id": "origin-clh-v01-0071",
+    "source_type": "WEB_UI",
+    "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+    "location": "cand-webui-09",
+    "role": "ORIGIN",
+    "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+    "sha256": "c312c06d5f92fc100fcf5df4e7ddbf27d88c4bd5013dbb9ee01728fd815cb64b",
+    "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+  },
+  "uses": [],
+  "tests": [
+    {
+      "source_type": "WEB_UI",
+      "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+      "location": "WEBUI-09",
+      "status": "human semantic reconciliation; PRESERVED_BY_COMPOSITION; WORKS_WITH_COMPOSITION",
+      "event_date": "2026-09-27",
+      "pictiq_version": "v1.2.0",
+      "message_schema_version": "0.1",
+      "role": "TEST",
+      "event_id": "test-cand-webui-09",
+      "notes": "Empty state should be expressed as absence of the relevant content, e.g. NO + TEXT or NO + IMAGE; no EMPTY primitive."
+    },
+    {
+      "source_type": "WEB_UI",
+      "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+      "location": "WEBUI-14",
+      "status": "human semantic reconciliation; PRESERVED_BY_COMPOSITION; WORKS_WITH_COMPOSITION",
+      "event_date": "2026-09-27",
+      "pictiq_version": "v1.2.0",
+      "message_schema_version": "0.1",
+      "role": "TEST",
+      "event_id": "test-cand-webui-14",
+      "notes": "Delete/remove can be NO + relevant object or MINUS depending on context; no trash/delete primitive."
+    }
+  ],
+  "failures": [],
+  "compatibility": {
+    "pictiq_version": "1.1",
+    "message_schema_version": "0.1",
+    "source_commit": "unknown",
+    "message_validity": "CURRENT",
+    "compatibility_notes": [
+      "Research Message JSON is exact where preserved; when source only preserved IDs, the v0.1 JSON structure is a transparent encoding of that exact sequence.",
+      "Source commit/version is unknown unless the source explicitly records it. Harvest snapshot: 8fae507.",
+      "HISTORICAL HARVEST CANDIDATE only; no Composition Library acceptance implied."
+    ]
+  },
+  "related_composition_ids": [],
+  "notes": [
+    "cand-webui-09: Empty state should be expressed as absence of the relevant content, e.g. NO + TEXT or NO + IMAGE; no EMPTY primitive.",
+    "cand-webui-14: Delete/remove can be NO + relevant object or MINUS depending on context; no trash/delete primitive."
+  ]
+}

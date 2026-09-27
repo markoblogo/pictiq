@@ -1,0 +1,138 @@
+{
+  "record_schema": "composition-record-v0.1-proposal",
+  "composition_id": "clh-v01-0006",
+  "lifecycle_status": "EXPERIMENTAL",
+  "pictiq_message": {
+    "contexts": [
+      "universal-core",
+      "universal-v1"
+    ],
+    "frames": [
+      {
+        "tokens": [
+          {
+            "id": "nature_animal",
+            "type": "icon"
+          },
+          {
+            "id": "need_food",
+            "type": "icon"
+          },
+          {
+            "id": "food_meat",
+            "type": "icon"
+          }
+        ]
+      }
+    ],
+    "pictiq": "1.1",
+    "profile": "standalone-core-v0.1",
+    "schema": "0.1"
+  },
+  "semantic_neighbourhoods": [
+    {
+      "intent_id": "intent-9b7b3396cb41",
+      "canonical_intent": "Animal food, like meat.",
+      "semantic_examples": [
+        "Required target slots: food_meat"
+      ],
+      "required_context": [],
+      "optional_context": [],
+      "known_ambiguities": [
+        "Unjustified concepts in pilot target assessment: food_bakery, food_produce"
+      ],
+      "interpretation_evidence_ids": [
+        "cand-04a-08"
+      ],
+      "coverage_assessments": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "OTHER",
+          "outcome": "LOSSY",
+          "composition_ids": [
+            "clh-v01-0006"
+          ],
+          "evidence_ids": [
+            "cand-04a-08"
+          ],
+          "notes": "Exact model output is retained as experimental evidence, not accepted composition. OK"
+        }
+      ]
+    }
+  ],
+  "applicability": [
+    {
+      "communication_mode": "STANDALONE",
+      "communication_surface": "OTHER",
+      "context": {
+        "domain": [
+          "constrained-translation pilot"
+        ],
+        "situation": [
+          "single-model, one-repeat structured-output trial"
+        ],
+        "task": [
+          "composition"
+        ]
+      },
+      "evidence_ids": [
+        "cand-04a-08"
+      ]
+    }
+  ],
+  "preservation_assessments": [
+    "LOSSY"
+  ],
+  "origin": {
+    "event_id": "origin-clh-v01-0006",
+    "source_type": "CONSTRAINED TRANSLATION PILOT 04A",
+    "reference": "docs/research/constrained-translation-pilot-04a/normalized/04a-08-r1.json",
+    "location": "cand-04a-08",
+    "role": "ORIGIN",
+    "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+    "sha256": "eee2c6d538b617a47759ef7879bb6d029499bd24aa790d743b04f5b9300643e6",
+    "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+  },
+  "uses": [],
+  "tests": [
+    {
+      "source_type": "STRESS_TEST",
+      "reference": "docs/research/constrained-translation-pilot-04a/normalized/04a-08-r1.json",
+      "location": "04a-08",
+      "status": "OK",
+      "event_date": "2026-09-11",
+      "message_schema_version": "0.1",
+      "role": "TEST",
+      "event_id": "test-cand-04a-08",
+      "notes": "Exact model output is retained as experimental evidence, not accepted composition. OK"
+    }
+  ],
+  "failures": [
+    {
+      "event_id": "failure-cand-04a-08",
+      "source_type": "CONSTRAINED TRANSLATION PILOT 04A",
+      "reference": "docs/research/constrained-translation-pilot-04a/normalized/04a-08-r1.json",
+      "location": "cand-04a-08",
+      "role": "FAILURE",
+      "observed_interpretation": "Pilot records unjustified candidate concepts: food_bakery, food_produce",
+      "failure_type": "CONCEPT_SELECTION_FAILURE",
+      "disposition": "NEEDS_CONTEXT",
+      "notes": "Exact model output is retained as experimental evidence, not accepted composition. OK"
+    }
+  ],
+  "compatibility": {
+    "pictiq_version": "1.1",
+    "message_schema_version": "0.1",
+    "source_commit": "unknown",
+    "message_validity": "CURRENT",
+    "compatibility_notes": [
+      "Research Message JSON is exact where preserved; when source only preserved IDs, the v0.1 JSON structure is a transparent encoding of that exact sequence.",
+      "Source commit/version is unknown unless the source explicitly records it. Harvest snapshot: 8fae507.",
+      "HISTORICAL HARVEST CANDIDATE only; no Composition Library acceptance implied."
+    ]
+  },
+  "related_composition_ids": [],
+  "notes": [
+    "cand-04a-08: Exact model output is retained as experimental evidence, not accepted composition. OK"
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "record_schema": "composition-record-v0.1-proposal",
+  "composition_id": "clh-v01-0043",
+  "lifecycle_status": "EXPERIMENTAL",
+  "pictiq_message": {
+    "schema": "0.1",
+    "pictiq": "1.1",
+    "frames": [
+      {
+        "tokens": [
+          {
+            "type": "icon",
+            "id": "rel_down"
+          }
+        ]
+      }
+    ]
+  },
+  "semantic_neighbourhoods": [
+    {
+      "intent_id": "intent-2280a2486858",
+      "canonical_intent": "Go down, lower level, or downward route.",
+      "semantic_examples": [
+        "Move down or choose the lower-level route."
+      ],
+      "required_context": [
+        {
+          "cue": "road/public-wayfinding conventions",
+          "availability": "REQUIRED",
+          "evidence_ids": [
+            "cand-road-04"
+          ]
+        }
+      ],
+      "optional_context": [
+        {
+          "cue": "sign placement and road-navigation frame",
+          "availability": "OPTIONAL",
+          "evidence_ids": [
+            "cand-road-04"
+          ]
+        }
+      ],
+      "known_ambiguities": [],
+      "interpretation_evidence_ids": [
+        "cand-road-04"
+      ],
+      "coverage_assessments": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "outcome": "SUPPORTED",
+          "composition_ids": [
+            "clh-v01-0043"
+          ],
+          "evidence_ids": [
+            "cand-road-04"
+          ],
+          "notes": "Existing relational operator covers the required distinction."
+        }
+      ]
+    }
+  ],
+  "applicability": [
+    {
+      "communication_mode": "STANDALONE",
+      "communication_surface": "WAYFINDING",
+      "context": {
+        "domain": [
+          "road-wayfinding"
+        ],
+        "situation": [
+          "public road and wayfinding sign"
+        ],
+        "task": [
+          "move down or choose the lower-level route."
+        ],
+        "context_supplies": [
+          {
+            "cue": "road/public-wayfinding conventions",
+            "availability": "REQUIRED",
+            "evidence_ids": [
+              "cand-road-04"
+            ]
+          },
+          {
+            "cue": "sign placement and road-navigation frame",
+            "availability": "OPTIONAL",
+            "evidence_ids": [
+              "cand-road-04"
+            ]
+          }
+        ]
+      },
+      "evidence_ids": [
+        "cand-road-04"
+      ]
+    }
+  ],
+  "preservation_assessments": [
+    "PRESERVED_EXPLICITLY"
+  ],
+  "origin": {
+    "event_id": "origin-clh-v01-0043",
+    "source_type": "ROAD _ WAYFINDING",
+    "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+    "location": "cand-road-04",
+    "role": "ORIGIN",
+    "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+    "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+    "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+  },
+  "uses": [],
+  "tests": [
+    {
+      "source_type": "ROAD_WAYFINDING",
+      "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+      "location": "down / lower level",
+      "status": "human semantic reconciliation; DIRECT",
+      "event_date": "2026-09-10",
+      "message_schema_version": "unknown",
+      "role": "TEST",
+      "event_id": "test-cand-road-04",
+      "notes": "Existing relational operator covers the required distinction."
+    }
+  ],
+  "failures": [],
+  "compatibility": {
+    "pictiq_version": "1.1",
+    "message_schema_version": "0.1",
+    "source_commit": "unknown",
+    "message_validity": "CURRENT",
+    "compatibility_notes": [
+      "Research Message JSON is exact where preserved; when source only preserved IDs, the v0.1 JSON structure is a transparent encoding of that exact sequence.",
+      "Source commit/version is unknown unless the source explicitly records it. Harvest snapshot: 8fae507.",
+      "HISTORICAL HARVEST CANDIDATE only; no Composition Library acceptance implied."
+    ]
+  },
+  "related_composition_ids": [],
+  "notes": [
+    "cand-road-04: Existing relational operator covers the required distinction."
+  ]
+}

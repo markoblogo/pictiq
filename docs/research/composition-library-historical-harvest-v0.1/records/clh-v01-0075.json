@@ -1,0 +1,245 @@
+{
+  "record_schema": "composition-record-v0.1-proposal",
+  "composition_id": "clh-v01-0075",
+  "lifecycle_status": "EXPERIMENTAL",
+  "pictiq_message": {
+    "schema": "0.1",
+    "pictiq": "1.1",
+    "frames": [
+      {
+        "tokens": [
+          {
+            "type": "icon",
+            "id": "rel_up"
+          },
+          {
+            "type": "icon",
+            "id": "media_text"
+          }
+        ]
+      }
+    ]
+  },
+  "semantic_neighbourhoods": [
+    {
+      "intent_id": "intent-849d54b90cfe",
+      "canonical_intent": "Publish/send message",
+      "semantic_examples": [
+        "Transmit or publish current content"
+      ],
+      "required_context": [
+        {
+          "cue": "Composer/editor context",
+          "availability": "REQUIRED",
+          "evidence_ids": [
+            "cand-webui-13"
+          ]
+        }
+      ],
+      "optional_context": [
+        {
+          "cue": "Composer/editor context",
+          "availability": "OPTIONAL",
+          "evidence_ids": [
+            "cand-webui-13"
+          ]
+        }
+      ],
+      "known_ambiguities": [
+        "Human review accepts UP as contextual publish/upload/send outward; communication can be added when speech/message semantics matter.",
+        "send vs publish vs speak"
+      ],
+      "interpretation_evidence_ids": [
+        "cand-webui-13"
+      ],
+      "coverage_assessments": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "outcome": "SUPPORTED",
+          "composition_ids": [
+            "clh-v01-0075"
+          ],
+          "evidence_ids": [
+            "cand-webui-13"
+          ],
+          "notes": "Human review accepts UP as contextual publish/upload/send outward; communication can be added when speech/message semantics matter."
+        }
+      ]
+    },
+    {
+      "intent_id": "intent-ff4085ad1573",
+      "canonical_intent": "Upload",
+      "semantic_examples": [
+        "Send a file/data to system"
+      ],
+      "required_context": [
+        {
+          "cue": "File/action toolbar context",
+          "availability": "REQUIRED",
+          "evidence_ids": [
+            "cand-webui-22"
+          ]
+        }
+      ],
+      "optional_context": [
+        {
+          "cue": "File/action toolbar context",
+          "availability": "OPTIONAL",
+          "evidence_ids": [
+            "cand-webui-22"
+          ]
+        }
+      ],
+      "known_ambiguities": [
+        "Upload uses UP + content in digital context; no conventional upload glyph primitive.",
+        "upload arrow convention"
+      ],
+      "interpretation_evidence_ids": [
+        "cand-webui-22"
+      ],
+      "coverage_assessments": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "outcome": "SUPPORTED",
+          "composition_ids": [
+            "clh-v01-0075"
+          ],
+          "evidence_ids": [
+            "cand-webui-22"
+          ],
+          "notes": "Upload uses UP + content in digital context; no conventional upload glyph primitive."
+        }
+      ]
+    }
+  ],
+  "applicability": [
+    {
+      "communication_mode": "STANDALONE",
+      "communication_surface": "UI",
+      "context": {
+        "domain": [
+          "web-ui"
+        ],
+        "situation": [
+          "action"
+        ],
+        "task": [
+          "publish/send message"
+        ],
+        "context_supplies": [
+          {
+            "cue": "Composer/editor context",
+            "availability": "REQUIRED",
+            "evidence_ids": [
+              "cand-webui-13"
+            ]
+          },
+          {
+            "cue": "Composer/editor context",
+            "availability": "OPTIONAL",
+            "evidence_ids": [
+              "cand-webui-13"
+            ]
+          }
+        ]
+      },
+      "evidence_ids": [
+        "cand-webui-13"
+      ]
+    },
+    {
+      "communication_mode": "STANDALONE",
+      "communication_surface": "UI",
+      "context": {
+        "domain": [
+          "web-ui"
+        ],
+        "situation": [
+          "access system"
+        ],
+        "task": [
+          "upload"
+        ],
+        "context_supplies": [
+          {
+            "cue": "File/action toolbar context",
+            "availability": "REQUIRED",
+            "evidence_ids": [
+              "cand-webui-22"
+            ]
+          },
+          {
+            "cue": "File/action toolbar context",
+            "availability": "OPTIONAL",
+            "evidence_ids": [
+              "cand-webui-22"
+            ]
+          }
+        ]
+      },
+      "evidence_ids": [
+        "cand-webui-22"
+      ]
+    }
+  ],
+  "preservation_assessments": [
+    "CONTEXT-SUFFICIENT",
+    "PRESERVED_BY_COMPOSITION"
+  ],
+  "origin": {
+    "event_id": "origin-clh-v01-0075",
+    "source_type": "WEB_UI",
+    "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+    "location": "cand-webui-13",
+    "role": "ORIGIN",
+    "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+    "sha256": "c312c06d5f92fc100fcf5df4e7ddbf27d88c4bd5013dbb9ee01728fd815cb64b",
+    "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+  },
+  "uses": [],
+  "tests": [
+    {
+      "source_type": "WEB_UI",
+      "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+      "location": "WEBUI-13",
+      "status": "human semantic reconciliation; CONTEXT-SUFFICIENT; WORKS_ONLY_WITH_STRONG_CONTEXT",
+      "event_date": "2026-09-27",
+      "pictiq_version": "v1.2.0",
+      "message_schema_version": "0.1",
+      "role": "TEST",
+      "event_id": "test-cand-webui-13",
+      "notes": "Human review accepts UP as contextual publish/upload/send outward; communication can be added when speech/message semantics matter."
+    },
+    {
+      "source_type": "WEB_UI",
+      "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+      "location": "WEBUI-22",
+      "status": "human semantic reconciliation; PRESERVED_BY_COMPOSITION; WORKS_WITH_COMPOSITION",
+      "event_date": "2026-09-27",
+      "pictiq_version": "v1.2.0",
+      "message_schema_version": "0.1",
+      "role": "TEST",
+      "event_id": "test-cand-webui-22",
+      "notes": "Upload uses UP + content in digital context; no conventional upload glyph primitive."
+    }
+  ],
+  "failures": [],
+  "compatibility": {
+    "pictiq_version": "1.1",
+    "message_schema_version": "0.1",
+    "source_commit": "unknown",
+    "message_validity": "CURRENT",
+    "compatibility_notes": [
+      "Research Message JSON is exact where preserved; when source only preserved IDs, the v0.1 JSON structure is a transparent encoding of that exact sequence.",
+      "Source commit/version is unknown unless the source explicitly records it. Harvest snapshot: 8fae507.",
+      "HISTORICAL HARVEST CANDIDATE only; no Composition Library acceptance implied."
+    ]
+  },
+  "related_composition_ids": [],
+  "notes": [
+    "cand-webui-13: Human review accepts UP as contextual publish/upload/send outward; communication can be added when speech/message semantics matter.",
+    "cand-webui-22: Upload uses UP + content in digital context; no conventional upload glyph primitive."
+  ]
+}

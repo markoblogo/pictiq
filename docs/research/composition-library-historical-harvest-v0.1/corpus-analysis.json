@@ -1,0 +1,183 @@
+{
+  "count_basis": "unique deduplicated exact Message records; source-level repeats retained in inventory and provenance",
+  "unique_exact_records": 81,
+  "token_occurrences": 207,
+  "ordinary_primitive_occurrences": 207,
+  "most_recurrent_primitives": [
+    [
+      "logic_no",
+      15
+    ],
+    [
+      "person_generic",
+      15
+    ],
+    [
+      "punct_question",
+      11
+    ],
+    [
+      "rel_here",
+      10
+    ],
+    [
+      "need_food",
+      9
+    ],
+    [
+      "punct_exclaim",
+      8
+    ],
+    [
+      "need_water",
+      8
+    ],
+    [
+      "comm_speak",
+      6
+    ],
+    [
+      "action_conflict",
+      6
+    ],
+    [
+      "media_text",
+      6
+    ],
+    [
+      "place_home",
+      5
+    ],
+    [
+      "logic_yes",
+      5
+    ],
+    [
+      "qty_5",
+      5
+    ],
+    [
+      "qty_plus",
+      5
+    ],
+    [
+      "rel_lesser",
+      5
+    ],
+    [
+      "qty_minus",
+      4
+    ],
+    [
+      "media_image",
+      4
+    ],
+    [
+      "state_dead",
+      4
+    ],
+    [
+      "safety_medical",
+      3
+    ],
+    [
+      "love_heart",
+      3
+    ]
+  ],
+  "entity_symbol_occurrences": {
+    "entity:polyphemus@odyssey": 3,
+    "entity:odysseus@literary": 9,
+    "entity:calypso@odyssey": 1,
+    "entity:poseidon@odyssey": 5,
+    "entity:zeus@odyssey": 1
+  },
+  "pragmatic_quantity_occurrences": {
+    "qty_minus": 4,
+    "qty_5": 5,
+    "qty_plus": 5,
+    "qty_1": 2,
+    "qty_2": 1
+  },
+  "formal_numeric_values": [
+    50
+  ],
+  "primitives_not_observed_in_historical_harvest": [
+    "action_learn",
+    "body_mouth",
+    "drink_beer",
+    "food_bakery",
+    "food_produce",
+    "item_cannabis",
+    "item_cigarette",
+    "item_condom",
+    "money_atm_bank",
+    "move_boat",
+    "nature_flower",
+    "nature_moon",
+    "nature_sun",
+    "paris_arc_de_triomphe",
+    "paris_croissant",
+    "paris_eiffel_tower",
+    "paris_louvre_pyramid",
+    "paris_moulin_windmill",
+    "paris_notre_dame",
+    "paris_sacre_coeur",
+    "place_airport",
+    "place_art_gallery",
+    "place_catacombs",
+    "place_disco",
+    "place_fashion_shopping",
+    "place_landmark_park",
+    "place_theme_park",
+    "power_plug",
+    "state_light",
+    "tech_ai"
+  ],
+  "composition_token_lengths": {
+    "1": 25,
+    "2": 33,
+    "3": 11,
+    "4": 5,
+    "8": 2,
+    "10": 1,
+    "11": 1,
+    "12": 1,
+    "16": 1,
+    "18": 1
+  },
+  "frame_counts": {
+    "1": 74,
+    "3": 3,
+    "4": 4
+  },
+  "mode_applicability_counts": {
+    "STANDALONE": 88,
+    "EMBODIED": 1
+  },
+  "surface_applicability_counts": {
+    "OTHER": 13,
+    "BOOK": 22,
+    "PORTABLE_CARD": 1,
+    "UI": 28,
+    "WAYFINDING": 25
+  },
+  "preservation_assessment_record_counts": {
+    "LOSSY": 16,
+    "PRESERVED_BY_COMPOSITION": 37,
+    "PRESERVED_EXPLICITLY": 13,
+    "INTENTIONAL_OMISSION": 11,
+    "GAP": 7,
+    "CONTEXT-SUFFICIENT": 17
+  },
+  "records_with_tests": 81,
+  "records_with_failures": 16,
+  "records_with_ambiguity": 54,
+  "records_with_context_supplies": 77,
+  "limitations": [
+    "Historical project corpus is non-random and does not estimate general language frequency or expressive coverage.",
+    "Records may carry several semantic neighborhoods/applicability entries; mode/surface distribution counts applicability entries, not unique records.",
+    "Token counts count each deduplicated exact Message once, not each source reuse.",
+    "Current-version token validation is separate from original source-version certainty."
+  ]
+}

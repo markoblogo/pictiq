@@ -1,0 +1,147 @@
+{
+  "record_schema": "composition-record-v0.1-proposal",
+  "composition_id": "clh-v01-0070",
+  "lifecycle_status": "EXPERIMENTAL",
+  "pictiq_message": {
+    "schema": "0.1",
+    "pictiq": "1.1",
+    "frames": [
+      {
+        "tokens": [
+          {
+            "type": "icon",
+            "id": "time"
+          }
+        ]
+      }
+    ]
+  },
+  "semantic_neighbourhoods": [
+    {
+      "intent_id": "intent-b92fed069b92",
+      "canonical_intent": "Loading / processing",
+      "semantic_examples": [
+        "System is working; wait"
+      ],
+      "required_context": [
+        {
+          "cue": "Loading indicator context",
+          "availability": "REQUIRED",
+          "evidence_ids": [
+            "cand-webui-08"
+          ]
+        }
+      ],
+      "optional_context": [
+        {
+          "cue": "Loading indicator context",
+          "availability": "OPTIONAL",
+          "evidence_ids": [
+            "cand-webui-08"
+          ]
+        }
+      ],
+      "known_ambiguities": [
+        "Human review accepts TIME as contextual wait/loading/processing/in-progress representation; not a current GAP.",
+        "process/wait state"
+      ],
+      "interpretation_evidence_ids": [
+        "cand-webui-08"
+      ],
+      "coverage_assessments": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "outcome": "SUPPORTED",
+          "composition_ids": [
+            "clh-v01-0070"
+          ],
+          "evidence_ids": [
+            "cand-webui-08"
+          ],
+          "notes": "Human review accepts TIME as contextual wait/loading/processing/in-progress representation; not a current GAP."
+        }
+      ]
+    }
+  ],
+  "applicability": [
+    {
+      "communication_mode": "STANDALONE",
+      "communication_surface": "UI",
+      "context": {
+        "domain": [
+          "web-ui"
+        ],
+        "situation": [
+          "state"
+        ],
+        "task": [
+          "loading / processing"
+        ],
+        "context_supplies": [
+          {
+            "cue": "Loading indicator context",
+            "availability": "REQUIRED",
+            "evidence_ids": [
+              "cand-webui-08"
+            ]
+          },
+          {
+            "cue": "Loading indicator context",
+            "availability": "OPTIONAL",
+            "evidence_ids": [
+              "cand-webui-08"
+            ]
+          }
+        ]
+      },
+      "evidence_ids": [
+        "cand-webui-08"
+      ]
+    }
+  ],
+  "preservation_assessments": [
+    "CONTEXT-SUFFICIENT"
+  ],
+  "origin": {
+    "event_id": "origin-clh-v01-0070",
+    "source_type": "WEB_UI",
+    "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+    "location": "cand-webui-08",
+    "role": "ORIGIN",
+    "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+    "sha256": "c312c06d5f92fc100fcf5df4e7ddbf27d88c4bd5013dbb9ee01728fd815cb64b",
+    "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+  },
+  "uses": [],
+  "tests": [
+    {
+      "source_type": "WEB_UI",
+      "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+      "location": "WEBUI-08",
+      "status": "human semantic reconciliation; CONTEXT-SUFFICIENT; WORKS_ONLY_WITH_STRONG_CONTEXT",
+      "event_date": "2026-09-27",
+      "pictiq_version": "v1.2.0",
+      "message_schema_version": "0.1",
+      "role": "TEST",
+      "event_id": "test-cand-webui-08",
+      "notes": "Human review accepts TIME as contextual wait/loading/processing/in-progress representation; not a current GAP."
+    }
+  ],
+  "failures": [],
+  "compatibility": {
+    "pictiq_version": "1.1",
+    "message_schema_version": "0.1",
+    "source_commit": "unknown",
+    "message_validity": "CURRENT",
+    "compatibility_notes": [
+      "Research Message JSON is exact where preserved; when source only preserved IDs, the v0.1 JSON structure is a transparent encoding of that exact sequence.",
+      "Source commit/version is unknown unless the source explicitly records it. Harvest snapshot: 8fae507.",
+      "HISTORICAL HARVEST CANDIDATE only; no Composition Library acceptance implied."
+    ]
+  },
+  "related_composition_ids": [],
+  "notes": [
+    "cand-webui-08: Human review accepts TIME as contextual wait/loading/processing/in-progress representation; not a current GAP."
+  ]
+}

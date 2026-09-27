@@ -1,0 +1,146 @@
+{
+  "record_schema": "composition-record-v0.1-proposal",
+  "composition_id": "clh-v01-0028",
+  "lifecycle_status": "CANDIDATE",
+  "pictiq_message": {
+    "schema": "0.1",
+    "pictiq": "1.1",
+    "frames": [
+      {
+        "tokens": [
+          {
+            "type": "icon",
+            "id": "need_toilet"
+          }
+        ]
+      }
+    ]
+  },
+  "semantic_neighbourhoods": [
+    {
+      "intent_id": "intent-7fdf6b694a0d",
+      "canonical_intent": "Toilet / need a toilet / where is the toilet",
+      "semantic_examples": [
+        "Toilet / need a toilet / where is the toilet"
+      ],
+      "required_context": [
+        {
+          "cue": "Handbook prose / example label supplies the scoped gloss",
+          "availability": "REQUIRED",
+          "evidence_ids": [
+            "cand-handbook-zero-toilet"
+          ]
+        }
+      ],
+      "optional_context": [
+        {
+          "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+          "availability": "OPTIONAL",
+          "evidence_ids": [
+            "cand-handbook-zero-toilet"
+          ]
+        }
+      ],
+      "known_ambiguities": [
+        "Handbook states these are examples and warns context affects exact meaning."
+      ],
+      "interpretation_evidence_ids": [
+        "cand-handbook-zero-toilet"
+      ],
+      "coverage_assessments": [
+        {
+          "communication_mode": "EMBODIED",
+          "communication_surface": "PORTABLE_CARD",
+          "outcome": "SUPPORTED",
+          "composition_ids": [
+            "clh-v01-0028"
+          ],
+          "evidence_ids": [
+            "cand-handbook-zero-toilet"
+          ],
+          "notes": "zero-intent example; multiple readings intentionally context-bounded"
+        }
+      ]
+    }
+  ],
+  "applicability": [
+    {
+      "communication_mode": "EMBODIED",
+      "communication_surface": "PORTABLE_CARD",
+      "context": {
+        "domain": [
+          "practical communication"
+        ],
+        "situation": [
+          "published Handbook v1.0 worked example"
+        ],
+        "task": [
+          "toilet / need a toilet / where is the toilet"
+        ],
+        "context_supplies": [
+          {
+            "cue": "Handbook prose / example label supplies the scoped gloss",
+            "availability": "REQUIRED",
+            "evidence_ids": [
+              "cand-handbook-zero-toilet"
+            ]
+          },
+          {
+            "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+            "availability": "OPTIONAL",
+            "evidence_ids": [
+              "cand-handbook-zero-toilet"
+            ]
+          }
+        ]
+      },
+      "evidence_ids": [
+        "cand-handbook-zero-toilet"
+      ]
+    }
+  ],
+  "preservation_assessments": [
+    "PRESERVED_EXPLICITLY"
+  ],
+  "origin": {
+    "event_id": "origin-clh-v01-0028",
+    "source_type": "HANDBOOK",
+    "reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+    "location": "cand-handbook-zero-toilet",
+    "role": "ORIGIN",
+    "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+    "sha256": "5fe3eea1aab10ab51c15727ff2526fb4be42e93ab500edb3a56ee694458b369b",
+    "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+  },
+  "uses": [],
+  "tests": [
+    {
+      "source_type": "HANDBOOK",
+      "reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+      "location": "Chapter 2 worked examples; exact page noted in README",
+      "status": "published illustrative example; no Library acceptance implied",
+      "pictiq_version": "unknown",
+      "message_schema_version": "unknown",
+      "role": "TEST",
+      "event_id": "test-cand-handbook-zero-toilet",
+      "notes": "zero-intent example; multiple readings intentionally context-bounded"
+    }
+  ],
+  "failures": [],
+  "compatibility": {
+    "pictiq_version": "unknown",
+    "message_schema_version": "unknown",
+    "source_commit": "unknown",
+    "message_validity": "CURRENT",
+    "compatibility_notes": [
+      "Research Message JSON is exact where preserved; when source only preserved IDs, the v0.1 JSON structure is a transparent encoding of that exact sequence.",
+      "Source commit/version is unknown unless the source explicitly records it. Harvest snapshot: 8fae507.",
+      "HISTORICAL HARVEST CANDIDATE only; no Composition Library acceptance implied.",
+      "The source stores an exact token sequence/ID array, not a versioned Message JSON; schema-shaped Message fields are a research encoding, and source Pictiq/Message-schema versions are unknown."
+    ]
+  },
+  "related_composition_ids": [],
+  "notes": [
+    "cand-handbook-zero-toilet: zero-intent example; multiple readings intentionally context-bounded"
+  ]
+}

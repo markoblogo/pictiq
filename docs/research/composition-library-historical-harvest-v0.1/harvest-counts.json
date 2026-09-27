@@ -1,0 +1,71 @@
+{
+  "candidate_findings_total": 182,
+  "exact_harvestable_candidate_findings": 89,
+  "evidence_only": 86,
+  "unsafe_to_harvest": 7,
+  "unique_exact_records": 81,
+  "source_counts": {
+    "Web/UI": {
+      "EXACT_HARVESTABLE": 24
+    },
+    "Road / Wayfinding": {
+      "EXACT_HARVESTABLE": 25
+    },
+    "Odyssey": {
+      "EXACT_HARVESTABLE": 6
+    },
+    "Landing": {
+      "EXACT_HARVESTABLE": 4,
+      "EVIDENCE_ONLY": 5
+    },
+    "Handbook": {
+      "EXACT_HARVESTABLE": 17,
+      "EVIDENCE_ONLY": 3
+    },
+    "Constrained Translation Pilot 04A": {
+      "EXACT_HARVESTABLE": 12,
+      "EVIDENCE_ONLY": 6
+    },
+    "Stress Test 05": {
+      "EXACT_HARVESTABLE": 1,
+      "UNSAFE_TO_HARVEST": 5
+    },
+    "Protocol / Grammar": {
+      "EVIDENCE_ONLY": 17
+    },
+    "Message / Renderer fixtures": {
+      "EVIDENCE_ONLY": 22
+    },
+    "Composer examples": {
+      "EVIDENCE_ONLY": 6
+    },
+    "Portable layouts": {
+      "EVIDENCE_ONLY": 4
+    },
+    "Editorial Case 001": {
+      "EVIDENCE_ONLY": 1
+    },
+    "Editorial Case 002": {
+      "EVIDENCE_ONLY": 1
+    },
+    "Toki Pona crosswalk": {
+      "EVIDENCE_ONLY": 1
+    },
+    "Stress Test 06": {
+      "UNSAFE_TO_HARVEST": 1,
+      "EVIDENCE_ONLY": 1
+    },
+    "Stress Test 06B": {
+      "UNSAFE_TO_HARVEST": 1,
+      "EVIDENCE_ONLY": 1
+    },
+    "Stress Test 07": {
+      "EVIDENCE_ONLY": 6
+    },
+    "Stress Test 07.1": {
+      "EVIDENCE_ONLY": 12
+    }
+  },
+  "rendered_current": 81,
+  "historical_render_unavailable": 0
+}

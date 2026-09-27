@@ -1,0 +1,318 @@
+[
+  {
+    "source_family": "Protocol / Grammar",
+    "source_paths": [
+      "spec/PROTOCOL.md",
+      "spec/GRAMMAR.md",
+      "spec/VOCABULARY_GOVERNANCE.md",
+      "spec/pictiq-message.schema.json"
+    ],
+    "revision_inspected": "8fae507",
+    "candidates_found": 17,
+    "exact_harvestable": 0,
+    "evidence_only": 17,
+    "unsafe_to_harvest": 0,
+    "notes": "Explicit examples and rule sections inspected. Examples without source-established mode/surface remain evidence-only; no Cartesian generation.",
+    "unresolved_retrieval_or_provenance_issues": [
+      "Exact or explicitly hypothesized sequence is in a draft grammar source, but communication mode/surface of the intended use is not established and schema v0.1 proposal requires a concrete mode. Hypotheses remain hypotheses."
+    ]
+  },
+  {
+    "source_family": "Handbook",
+    "source_paths": [
+      "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+      "books/handbook-v1/README.md"
+    ],
+    "revision_inspected": "8fae507",
+    "candidates_found": 20,
+    "exact_harvestable": 17,
+    "evidence_only": 3,
+    "unsafe_to_harvest": 0,
+    "notes": "Published worked examples with explicit sequence/gloss harvested as candidates; page surface and source version are preserved, not made normative by harvest.",
+    "unresolved_retrieval_or_provenance_issues": [
+      "Exact sequence appears as a pattern/example but no sufficiently specific supported communicative intent is paired with it in the cited passage."
+    ]
+  },
+  {
+    "source_family": "Message / Renderer fixtures",
+    "source_paths": [
+      "examples/messages/valid/",
+      "docs/renderer/parity-fixtures/",
+      "examples/renderer/"
+    ],
+    "revision_inspected": "8fae507",
+    "candidates_found": 22,
+    "exact_harvestable": 0,
+    "evidence_only": 22,
+    "unsafe_to_harvest": 0,
+    "notes": "All valid Message examples and parity fixtures inspected. Exact JSON without semantic source remains technical evidence.",
+    "unresolved_retrieval_or_provenance_issues": [
+      "Exact Message fixture exists, but fixture filename or technical validation does not establish communicative intent.",
+      "Exact parity fixture exists, but it is renderer-comparison evidence and does not itself establish communicative intent."
+    ]
+  },
+  {
+    "source_family": "Composer examples",
+    "source_paths": [
+      "spec/PICTIQ_COMPOSER.md#human-acceptance-scenarios",
+      "docs/composer/"
+    ],
+    "revision_inspected": "8fae507",
+    "candidates_found": 6,
+    "exact_harvestable": 0,
+    "evidence_only": 6,
+    "unsafe_to_harvest": 0,
+    "notes": "Six task examples reviewed; source-to-message explicit but intended communication mode is unspecified.",
+    "unresolved_retrieval_or_provenance_issues": [
+      "Authoring task and exact shorthand are documented, but whether the composed message is EMBODIED or STANDALONE is not established by the Composer task."
+    ]
+  },
+  {
+    "source_family": "Portable layouts",
+    "source_paths": [
+      "layouts/profiles/",
+      "layouts/wallet-card/",
+      "layouts/luggage-tag/",
+      "layouts/phone-lockscreen/",
+      "tools/make_wallet_card.py",
+      "tools/make_luggage_tag.py",
+      "tools/make_phone_lockscreen.py"
+    ],
+    "revision_inspected": "8fae507",
+    "candidates_found": 4,
+    "exact_harvestable": 0,
+    "evidence_only": 4,
+    "unsafe_to_harvest": 0,
+    "notes": "Profiles are tile catalogs/layouts, not complete messages; no token order or semantic message inferred.",
+    "unresolved_retrieval_or_provenance_issues": [
+      "Profile lists tile availability/layout slots; it does not define a complete ordered Message or semantic intent for a token sequence."
+    ]
+  },
+  {
+    "source_family": "Road / Wayfinding",
+    "source_paths": [
+      "docs/research/road-wayfinding-stress-test-v1.json",
+      "docs/research/road-wayfinding-stress-test-v1.md",
+      "docs/book-materials/experiments/road-wayfinding-stress-test.md"
+    ],
+    "revision_inspected": "8fae507",
+    "candidates_found": 25,
+    "exact_harvestable": 25,
+    "evidence_only": 0,
+    "unsafe_to_harvest": 0,
+    "notes": "25 explicit semantic/message rows; LOSSY and GAP attempts retained as such. Final flattened visual not used to extract token IDs.",
+    "unresolved_retrieval_or_provenance_issues": []
+  },
+  {
+    "source_family": "Odyssey",
+    "source_paths": [
+      "docs/research/odyssey-toki-pona-pictiq-stress-test-03.json",
+      "docs/research/odyssey-toki-pona-pictiq-stress-test-03.md",
+      "docs/research/odyssey-toki-pona-pictiq-stress-test-03-stage-1.json"
+    ],
+    "revision_inspected": "8fae507",
+    "candidates_found": 6,
+    "exact_harvestable": 6,
+    "evidence_only": 0,
+    "unsafe_to_harvest": 0,
+    "notes": "Six human-reviewed case-level multi-frame sequences with exact ID arrays and concise back interpretation; long source excerpts not copied.",
+    "unresolved_retrieval_or_provenance_issues": []
+  },
+  {
+    "source_family": "Web/UI",
+    "source_paths": [
+      "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+      "docs/research/web-ui-stress-test-2026-09/messages/",
+      "docs/book-materials/experiments/web-ui-stress-test.md"
+    ],
+    "revision_inspected": "8fae507",
+    "candidates_found": 24,
+    "exact_harvestable": 24,
+    "evidence_only": 0,
+    "unsafe_to_harvest": 0,
+    "notes": "All 24 reconciled cases have exact JSON, source intent, context and preservation classification; exact repeated messages deduplicated into shared records with separate neighbourhoods.",
+    "unresolved_retrieval_or_provenance_issues": []
+  },
+  {
+    "source_family": "Landing",
+    "source_paths": [
+      "docs/book-materials/research/landing-translation-findings-2026-09.md",
+      "docs/landing/index.html"
+    ],
+    "revision_inspected": "8fae507",
+    "candidates_found": 9,
+    "exact_harvestable": 4,
+    "evidence_only": 5,
+    "unsafe_to_harvest": 0,
+    "notes": "Explicit textual message sequences harvested; logo-only/incomplete boundaries remain evidence-only.",
+    "unresolved_retrieval_or_provenance_issues": [
+      "Do not infer from screenshot or mixed asset row.",
+      "Logo mark is not a canonical token reference.",
+      "No composition to record.",
+      "No sequence inferred from flattened page.",
+      "Omission is evidence, not a composition."
+    ]
+  },
+  {
+    "source_family": "Constrained Translation Pilot 04A",
+    "source_paths": [
+      "docs/research/constrained-translation-pilot-04a/human-targets.json",
+      "docs/research/constrained-translation-pilot-04a/normalized/",
+      "docs/research/constrained-translation-pilot-04a/README.md"
+    ],
+    "revision_inspected": "8fae507",
+    "candidates_found": 18,
+    "exact_harvestable": 12,
+    "evidence_only": 6,
+    "unsafe_to_harvest": 0,
+    "notes": "Valid normalized model outputs with explicit standalone profile retained as EXPERIMENTAL; no output is treated as human-accepted. Invalid/unprofiled results excluded.",
+    "unresolved_retrieval_or_provenance_issues": [
+      "Exact normalized model Message and human target exist, but this run does not establish communication mode in the record; current proposal requires an explicit mode.",
+      "Human target is preserved, but no valid normalized exact Message is available."
+    ]
+  },
+  {
+    "source_family": "Stress Test 05",
+    "source_paths": [
+      "docs/research/stress-test-05-zero-training-cross-model/05a-canonical-dialogue.json",
+      "docs/research/stress-test-05-zero-training-cross-model/README.md",
+      "docs/research/stress-test-05-zero-training-cross-model/evidence/"
+    ],
+    "revision_inspected": "8fae507",
+    "candidates_found": 6,
+    "exact_harvestable": 1,
+    "evidence_only": 0,
+    "unsafe_to_harvest": 5,
+    "notes": "Frozen canonical message retained as unexecuted experimental record. Five supplied alternate-stimulus transcript sets excluded from canonical result mapping.",
+    "unresolved_retrieval_or_provenance_issues": [
+      "Supplied transcript set is explicitly bound to an alternate stimulus that differs from frozen 05A; do not merge results or backfill exact canonical messages."
+    ]
+  },
+  {
+    "source_family": "Stress Test 06",
+    "source_paths": [
+      "docs/research/stress-test-06-generative-symbol-convergence/",
+      "docs/research/stress-test-06-generative-symbol-convergence/pictiq-comparison.md"
+    ],
+    "revision_inspected": "8fae507",
+    "candidates_found": 2,
+    "exact_harvestable": 0,
+    "evidence_only": 1,
+    "unsafe_to_harvest": 1,
+    "notes": "Generated icon proposals are not Pictiq compositions; Pictiq comparison is primitive-level only.",
+    "unresolved_retrieval_or_provenance_issues": [
+      "Comparison discusses canonical individual primitives and quantity approaches, not an exact complete Message composition.",
+      "Independent generative proposals are not accepted Pictiq messages; convergence is not Pictiq approval."
+    ]
+  },
+  {
+    "source_family": "Stress Test 06B",
+    "source_paths": [
+      "docs/research/stress-test-06b-independent-protocol-design/",
+      "docs/research/stress-test-06b-independent-protocol-design/pictiq-comparison.md"
+    ],
+    "revision_inspected": "8fae507",
+    "candidates_found": 2,
+    "exact_harvestable": 0,
+    "evidence_only": 1,
+    "unsafe_to_harvest": 1,
+    "notes": "Independent systems and convergence are comparative evidence, not accepted Pictiq compositions.",
+    "unresolved_retrieval_or_provenance_issues": [
+      "Repository-grounded comparison addresses protocol properties rather than exact semantic intent ↔ Message mappings.",
+      "The independently developed systems are comparative proposals, not Pictiq messages or accepted Pictiq compositions."
+    ]
+  },
+  {
+    "source_family": "Stress Test 07",
+    "source_paths": [
+      "docs/research/stress-test-07-explicit-grammar-vs-context/pilot/",
+      "docs/research/stress-test-07-explicit-grammar-vs-context/results/"
+    ],
+    "revision_inspected": "8fae507",
+    "candidates_found": 6,
+    "exact_harvestable": 0,
+    "evidence_only": 6,
+    "unsafe_to_harvest": 0,
+    "notes": "Invalid/partial pilot preserved as methodological evidence; not included as accepted composition results.",
+    "unresolved_retrieval_or_provenance_issues": [
+      "Pilot integrity is invalid/partial; clean exact Message-to-result provenance is unavailable."
+    ]
+  },
+  {
+    "source_family": "Stress Test 07.1",
+    "source_paths": [
+      "docs/research/stress-test-07-explicit-grammar-vs-context/07.1/"
+    ],
+    "revision_inspected": "8fae507",
+    "candidates_found": 12,
+    "exact_harvestable": 0,
+    "evidence_only": 12,
+    "unsafe_to_harvest": 0,
+    "notes": "Paused frozen visual stimuli inventoried only; no visual reconstruction, and the package remains unchanged.",
+    "unresolved_retrieval_or_provenance_issues": [
+      "Exact structured Message JSON is not attached; stimuli remain paused and preserved."
+    ]
+  },
+  {
+    "source_family": "Editorial Case 001",
+    "source_paths": [
+      "docs/research/editorial-cases/bracken-ford/"
+    ],
+    "revision_inspected": "8fae507",
+    "candidates_found": 1,
+    "exact_harvestable": 0,
+    "evidence_only": 1,
+    "unsafe_to_harvest": 0,
+    "notes": "Production evidence only; independent Composer export, sequence JSON and panel mapping unresolved.",
+    "unresolved_retrieval_or_provenance_issues": [
+      "Production use is documented, but independent Composer export, sequence JSON, and exact panel mapping are not retained."
+    ]
+  },
+  {
+    "source_family": "Editorial Case 002",
+    "source_paths": [
+      "docs/research/editorial-cases/good-dog-bad-system/"
+    ],
+    "revision_inspected": "8fae507",
+    "candidates_found": 1,
+    "exact_harvestable": 0,
+    "evidence_only": 1,
+    "unsafe_to_harvest": 0,
+    "notes": "Production/prepublication evidence only; source sheets exist but exact per-turn Composer block mapping is unresolved.",
+    "unresolved_retrieval_or_provenance_issues": [
+      "Approved dialogue and Composer source sheets exist, but per-turn Composer block mapping remains unresolved. Do not reconstruct from flattened artwork."
+    ]
+  },
+  {
+    "source_family": "Toki Pona crosswalk",
+    "source_paths": [
+      "docs/book-materials/research/",
+      "docs/research/"
+    ],
+    "revision_inspected": "8fae507",
+    "candidates_found": 1,
+    "exact_harvestable": 0,
+    "evidence_only": 1,
+    "unsafe_to_harvest": 0,
+    "notes": "Crosswalk/lexical associations reviewed; exact semantic intent-to-Message source not established outside the separate Odyssey cases.",
+    "unresolved_retrieval_or_provenance_issues": [
+      "Crosswalk/materials document lexical or semantic associations, not an exact message-level Pictiq composition."
+    ]
+  },
+  {
+    "source_family": "Additional repository history",
+    "source_paths": [
+      "examples/",
+      "docs/book-materials/",
+      "docs/research/",
+      "releases/"
+    ],
+    "revision_inspected": "8fae507",
+    "candidates_found": 0,
+    "exact_harvestable": 0,
+    "evidence_only": 0,
+    "unsafe_to_harvest": 0,
+    "notes": "Targeted searches for explicit semantic intent ↔ exact Message; no additional safely mappable candidate beyond rows above. Release notes and screenshots were not reverse-engineered.",
+    "unresolved_retrieval_or_provenance_issues": []
+  }
+]

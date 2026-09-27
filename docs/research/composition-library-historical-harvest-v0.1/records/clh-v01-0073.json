@@ -1,0 +1,151 @@
+{
+  "record_schema": "composition-record-v0.1-proposal",
+  "composition_id": "clh-v01-0073",
+  "lifecycle_status": "EXPERIMENTAL",
+  "pictiq_message": {
+    "schema": "0.1",
+    "pictiq": "1.1",
+    "frames": [
+      {
+        "tokens": [
+          {
+            "type": "icon",
+            "id": "qual_bad"
+          },
+          {
+            "type": "icon",
+            "id": "punct_exclaim"
+          }
+        ]
+      }
+    ]
+  },
+  "semantic_neighbourhoods": [
+    {
+      "intent_id": "intent-361efc7cecd5",
+      "canonical_intent": "Error/failure",
+      "semantic_examples": [
+        "Something failed or is bad and needs attention"
+      ],
+      "required_context": [
+        {
+          "cue": "Error state context",
+          "availability": "REQUIRED",
+          "evidence_ids": [
+            "cand-webui-11"
+          ]
+        }
+      ],
+      "optional_context": [
+        {
+          "cue": "Error state context",
+          "availability": "OPTIONAL",
+          "evidence_ids": [
+            "cand-webui-11"
+          ]
+        }
+      ],
+      "known_ambiguities": [
+        "Error/failure can use BAD + !; warning/attention can use !.",
+        "error cause missing"
+      ],
+      "interpretation_evidence_ids": [
+        "cand-webui-11"
+      ],
+      "coverage_assessments": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "outcome": "SUPPORTED",
+          "composition_ids": [
+            "clh-v01-0073"
+          ],
+          "evidence_ids": [
+            "cand-webui-11"
+          ],
+          "notes": "Error/failure can use BAD + !; warning/attention can use !."
+        }
+      ]
+    }
+  ],
+  "applicability": [
+    {
+      "communication_mode": "STANDALONE",
+      "communication_surface": "UI",
+      "context": {
+        "domain": [
+          "web-ui"
+        ],
+        "situation": [
+          "state"
+        ],
+        "task": [
+          "error/failure"
+        ],
+        "context_supplies": [
+          {
+            "cue": "Error state context",
+            "availability": "REQUIRED",
+            "evidence_ids": [
+              "cand-webui-11"
+            ]
+          },
+          {
+            "cue": "Error state context",
+            "availability": "OPTIONAL",
+            "evidence_ids": [
+              "cand-webui-11"
+            ]
+          }
+        ]
+      },
+      "evidence_ids": [
+        "cand-webui-11"
+      ]
+    }
+  ],
+  "preservation_assessments": [
+    "PRESERVED_BY_COMPOSITION"
+  ],
+  "origin": {
+    "event_id": "origin-clh-v01-0073",
+    "source_type": "WEB_UI",
+    "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+    "location": "cand-webui-11",
+    "role": "ORIGIN",
+    "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+    "sha256": "c312c06d5f92fc100fcf5df4e7ddbf27d88c4bd5013dbb9ee01728fd815cb64b",
+    "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+  },
+  "uses": [],
+  "tests": [
+    {
+      "source_type": "WEB_UI",
+      "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+      "location": "WEBUI-11",
+      "status": "human semantic reconciliation; PRESERVED_BY_COMPOSITION; WORKS_WITH_COMPOSITION",
+      "event_date": "2026-09-27",
+      "pictiq_version": "v1.2.0",
+      "message_schema_version": "0.1",
+      "role": "TEST",
+      "event_id": "test-cand-webui-11",
+      "notes": "Error/failure can use BAD + !; warning/attention can use !."
+    }
+  ],
+  "failures": [],
+  "compatibility": {
+    "pictiq_version": "1.1",
+    "message_schema_version": "0.1",
+    "source_commit": "unknown",
+    "message_validity": "CURRENT",
+    "compatibility_notes": [
+      "Research Message JSON is exact where preserved; when source only preserved IDs, the v0.1 JSON structure is a transparent encoding of that exact sequence.",
+      "Source commit/version is unknown unless the source explicitly records it. Harvest snapshot: 8fae507.",
+      "HISTORICAL HARVEST CANDIDATE only; no Composition Library acceptance implied."
+    ]
+  },
+  "related_composition_ids": [],
+  "notes": [
+    "cand-webui-11: Error/failure can use BAD + !; warning/attention can use !."
+  ]
+}

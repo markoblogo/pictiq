@@ -1,0 +1,351 @@
+{
+  "record_schema": "composition-record-v0.1-proposal",
+  "composition_id": "clh-v01-0074",
+  "lifecycle_status": "EXPERIMENTAL",
+  "pictiq_message": {
+    "schema": "0.1",
+    "pictiq": "1.1",
+    "frames": [
+      {
+        "tokens": [
+          {
+            "type": "icon",
+            "id": "rel_down"
+          },
+          {
+            "type": "icon",
+            "id": "media_text"
+          }
+        ]
+      }
+    ]
+  },
+  "semantic_neighbourhoods": [
+    {
+      "intent_id": "intent-c85cce08693c",
+      "canonical_intent": "Save changes",
+      "semantic_examples": [
+        "Preserve current work/data"
+      ],
+      "required_context": [
+        {
+          "cue": "Editor/form context",
+          "availability": "REQUIRED",
+          "evidence_ids": [
+            "cand-webui-12"
+          ]
+        }
+      ],
+      "optional_context": [
+        {
+          "cue": "Editor/form context",
+          "availability": "OPTIONAL",
+          "evidence_ids": [
+            "cand-webui-12"
+          ]
+        }
+      ],
+      "known_ambiguities": [
+        "Human review accepts DOWN as contextual save/download/move-into-storage in UI context. SAVE is not canonically identical to DOWNLOAD.",
+        "persistence/storage action"
+      ],
+      "interpretation_evidence_ids": [
+        "cand-webui-12"
+      ],
+      "coverage_assessments": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "outcome": "SUPPORTED",
+          "composition_ids": [
+            "clh-v01-0074"
+          ],
+          "evidence_ids": [
+            "cand-webui-12"
+          ],
+          "notes": "Human review accepts DOWN as contextual save/download/move-into-storage in UI context. SAVE is not canonically identical to DOWNLOAD."
+        }
+      ]
+    },
+    {
+      "intent_id": "intent-d8d5f256a3a6",
+      "canonical_intent": "Archive item",
+      "semantic_examples": [
+        "Move item out of active view but retain it"
+      ],
+      "required_context": [
+        {
+          "cue": "Mail/task/list context",
+          "availability": "REQUIRED",
+          "evidence_ids": [
+            "cand-webui-15"
+          ]
+        }
+      ],
+      "optional_context": [
+        {
+          "cue": "Mail/task/list context",
+          "availability": "OPTIONAL",
+          "evidence_ids": [
+            "cand-webui-15"
+          ]
+        }
+      ],
+      "known_ambiguities": [
+        "Archive may use DOWN + relevant content/object to suggest moving/storing elsewhere, but the exact composition is unresolved. Dedicated ARCHIVE is DEFERRED_UNTIL_NEEDED.",
+        "archive/retain hidden state"
+      ],
+      "interpretation_evidence_ids": [
+        "cand-webui-15"
+      ],
+      "coverage_assessments": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "outcome": "LOSSY",
+          "composition_ids": [
+            "clh-v01-0074"
+          ],
+          "evidence_ids": [
+            "cand-webui-15"
+          ],
+          "notes": "Archive may use DOWN + relevant content/object to suggest moving/storing elsewhere, but the exact composition is unresolved. Dedicated ARCHIVE is DEFERRED_UNTIL_NEEDED."
+        }
+      ]
+    },
+    {
+      "intent_id": "intent-68ff63fb82e0",
+      "canonical_intent": "Download",
+      "semantic_examples": [
+        "Receive a file/data from system"
+      ],
+      "required_context": [
+        {
+          "cue": "File/action toolbar context",
+          "availability": "REQUIRED",
+          "evidence_ids": [
+            "cand-webui-21"
+          ]
+        }
+      ],
+      "optional_context": [
+        {
+          "cue": "File/action toolbar context",
+          "availability": "OPTIONAL",
+          "evidence_ids": [
+            "cand-webui-21"
+          ]
+        }
+      ],
+      "known_ambiguities": [
+        "Download uses DOWN + content in digital context; no conventional download glyph primitive.",
+        "download arrow convention"
+      ],
+      "interpretation_evidence_ids": [
+        "cand-webui-21"
+      ],
+      "coverage_assessments": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "outcome": "SUPPORTED",
+          "composition_ids": [
+            "clh-v01-0074"
+          ],
+          "evidence_ids": [
+            "cand-webui-21"
+          ],
+          "notes": "Download uses DOWN + content in digital context; no conventional download glyph primitive."
+        }
+      ]
+    }
+  ],
+  "applicability": [
+    {
+      "communication_mode": "STANDALONE",
+      "communication_surface": "UI",
+      "context": {
+        "domain": [
+          "web-ui"
+        ],
+        "situation": [
+          "action"
+        ],
+        "task": [
+          "save changes"
+        ],
+        "context_supplies": [
+          {
+            "cue": "Editor/form context",
+            "availability": "REQUIRED",
+            "evidence_ids": [
+              "cand-webui-12"
+            ]
+          },
+          {
+            "cue": "Editor/form context",
+            "availability": "OPTIONAL",
+            "evidence_ids": [
+              "cand-webui-12"
+            ]
+          }
+        ]
+      },
+      "evidence_ids": [
+        "cand-webui-12"
+      ]
+    },
+    {
+      "communication_mode": "STANDALONE",
+      "communication_surface": "UI",
+      "context": {
+        "domain": [
+          "web-ui"
+        ],
+        "situation": [
+          "action"
+        ],
+        "task": [
+          "archive item"
+        ],
+        "context_supplies": [
+          {
+            "cue": "Mail/task/list context",
+            "availability": "REQUIRED",
+            "evidence_ids": [
+              "cand-webui-15"
+            ]
+          },
+          {
+            "cue": "Mail/task/list context",
+            "availability": "OPTIONAL",
+            "evidence_ids": [
+              "cand-webui-15"
+            ]
+          }
+        ]
+      },
+      "evidence_ids": [
+        "cand-webui-15"
+      ]
+    },
+    {
+      "communication_mode": "STANDALONE",
+      "communication_surface": "UI",
+      "context": {
+        "domain": [
+          "web-ui"
+        ],
+        "situation": [
+          "access system"
+        ],
+        "task": [
+          "download"
+        ],
+        "context_supplies": [
+          {
+            "cue": "File/action toolbar context",
+            "availability": "REQUIRED",
+            "evidence_ids": [
+              "cand-webui-21"
+            ]
+          },
+          {
+            "cue": "File/action toolbar context",
+            "availability": "OPTIONAL",
+            "evidence_ids": [
+              "cand-webui-21"
+            ]
+          }
+        ]
+      },
+      "evidence_ids": [
+        "cand-webui-21"
+      ]
+    }
+  ],
+  "preservation_assessments": [
+    "CONTEXT-SUFFICIENT",
+    "LOSSY",
+    "PRESERVED_BY_COMPOSITION"
+  ],
+  "origin": {
+    "event_id": "origin-clh-v01-0074",
+    "source_type": "WEB_UI",
+    "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+    "location": "cand-webui-12",
+    "role": "ORIGIN",
+    "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+    "sha256": "c312c06d5f92fc100fcf5df4e7ddbf27d88c4bd5013dbb9ee01728fd815cb64b",
+    "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+  },
+  "uses": [],
+  "tests": [
+    {
+      "source_type": "WEB_UI",
+      "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+      "location": "WEBUI-12",
+      "status": "human semantic reconciliation; CONTEXT-SUFFICIENT; WORKS_ONLY_WITH_STRONG_CONTEXT",
+      "event_date": "2026-09-27",
+      "pictiq_version": "v1.2.0",
+      "message_schema_version": "0.1",
+      "role": "TEST",
+      "event_id": "test-cand-webui-12",
+      "notes": "Human review accepts DOWN as contextual save/download/move-into-storage in UI context. SAVE is not canonically identical to DOWNLOAD."
+    },
+    {
+      "source_type": "WEB_UI",
+      "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+      "location": "WEBUI-15",
+      "status": "human semantic reconciliation; LOSSY; AMBIGUOUS",
+      "event_date": "2026-09-27",
+      "pictiq_version": "v1.2.0",
+      "message_schema_version": "0.1",
+      "role": "TEST",
+      "event_id": "test-cand-webui-15",
+      "notes": "Archive may use DOWN + relevant content/object to suggest moving/storing elsewhere, but the exact composition is unresolved. Dedicated ARCHIVE is DEFERRED_UNTIL_NEEDED."
+    },
+    {
+      "source_type": "WEB_UI",
+      "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+      "location": "WEBUI-21",
+      "status": "human semantic reconciliation; PRESERVED_BY_COMPOSITION; WORKS_WITH_COMPOSITION",
+      "event_date": "2026-09-27",
+      "pictiq_version": "v1.2.0",
+      "message_schema_version": "0.1",
+      "role": "TEST",
+      "event_id": "test-cand-webui-21",
+      "notes": "Download uses DOWN + content in digital context; no conventional download glyph primitive."
+    }
+  ],
+  "failures": [
+    {
+      "event_id": "failure-cand-webui-15",
+      "source_type": "WEB_UI",
+      "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+      "location": "cand-webui-15",
+      "role": "FAILURE",
+      "observed_interpretation": "Archive may use DOWN + relevant content/object to suggest moving/storing elsewhere, but the exact composition is unresolved. Dedicated ARCHIVE is DEFERRED_UNTIL_NEEDED.",
+      "failure_type": "COMPOSITION_CANDIDATE_NEEDS_VALIDATION",
+      "disposition": "LOSSY",
+      "notes": "Archive may use DOWN + relevant content/object to suggest moving/storing elsewhere, but the exact composition is unresolved. Dedicated ARCHIVE is DEFERRED_UNTIL_NEEDED."
+    }
+  ],
+  "compatibility": {
+    "pictiq_version": "1.1",
+    "message_schema_version": "0.1",
+    "source_commit": "unknown",
+    "message_validity": "CURRENT",
+    "compatibility_notes": [
+      "Research Message JSON is exact where preserved; when source only preserved IDs, the v0.1 JSON structure is a transparent encoding of that exact sequence.",
+      "Source commit/version is unknown unless the source explicitly records it. Harvest snapshot: 8fae507.",
+      "HISTORICAL HARVEST CANDIDATE only; no Composition Library acceptance implied."
+    ]
+  },
+  "related_composition_ids": [],
+  "notes": [
+    "cand-webui-12: Human review accepts DOWN as contextual save/download/move-into-storage in UI context. SAVE is not canonically identical to DOWNLOAD.",
+    "cand-webui-15: Archive may use DOWN + relevant content/object to suggest moving/storing elsewhere, but the exact composition is unresolved. Dedicated ARCHIVE is DEFERRED_UNTIL_NEEDED.",
+    "cand-webui-21: Download uses DOWN + content in digital context; no conventional download glyph primitive."
+  ]
+}

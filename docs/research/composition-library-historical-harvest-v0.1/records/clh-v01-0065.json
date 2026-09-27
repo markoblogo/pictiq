@@ -1,0 +1,147 @@
+{
+  "record_schema": "composition-record-v0.1-proposal",
+  "composition_id": "clh-v01-0065",
+  "lifecycle_status": "EXPERIMENTAL",
+  "pictiq_message": {
+    "schema": "0.1",
+    "pictiq": "1.1",
+    "frames": [
+      {
+        "tokens": [
+          {
+            "type": "icon",
+            "id": "rel_greater"
+          }
+        ]
+      }
+    ]
+  },
+  "semantic_neighbourhoods": [
+    {
+      "intent_id": "intent-97b5b3c7f192",
+      "canonical_intent": "Forward / next step",
+      "semantic_examples": [
+        "Move to next step or forward history"
+      ],
+      "required_context": [
+        {
+          "cue": "Wizard/header context",
+          "availability": "REQUIRED",
+          "evidence_ids": [
+            "cand-webui-02"
+          ]
+        }
+      ],
+      "optional_context": [
+        {
+          "cue": "Wizard/header context",
+          "availability": "OPTIONAL",
+          "evidence_ids": [
+            "cand-webui-02"
+          ]
+        }
+      ],
+      "known_ambiguities": [
+        "Human review accepts existing forward/directional representation as sufficient in a next/forward UI context.",
+        "direction/navigation ambiguity"
+      ],
+      "interpretation_evidence_ids": [
+        "cand-webui-02"
+      ],
+      "coverage_assessments": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "outcome": "SUPPORTED",
+          "composition_ids": [
+            "clh-v01-0065"
+          ],
+          "evidence_ids": [
+            "cand-webui-02"
+          ],
+          "notes": "Human review accepts existing forward/directional representation as sufficient in a next/forward UI context."
+        }
+      ]
+    }
+  ],
+  "applicability": [
+    {
+      "communication_mode": "STANDALONE",
+      "communication_surface": "UI",
+      "context": {
+        "domain": [
+          "web-ui"
+        ],
+        "situation": [
+          "navigation"
+        ],
+        "task": [
+          "forward / next step"
+        ],
+        "context_supplies": [
+          {
+            "cue": "Wizard/header context",
+            "availability": "REQUIRED",
+            "evidence_ids": [
+              "cand-webui-02"
+            ]
+          },
+          {
+            "cue": "Wizard/header context",
+            "availability": "OPTIONAL",
+            "evidence_ids": [
+              "cand-webui-02"
+            ]
+          }
+        ]
+      },
+      "evidence_ids": [
+        "cand-webui-02"
+      ]
+    }
+  ],
+  "preservation_assessments": [
+    "CONTEXT-SUFFICIENT"
+  ],
+  "origin": {
+    "event_id": "origin-clh-v01-0065",
+    "source_type": "WEB_UI",
+    "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+    "location": "cand-webui-02",
+    "role": "ORIGIN",
+    "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+    "sha256": "c312c06d5f92fc100fcf5df4e7ddbf27d88c4bd5013dbb9ee01728fd815cb64b",
+    "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+  },
+  "uses": [],
+  "tests": [
+    {
+      "source_type": "WEB_UI",
+      "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+      "location": "WEBUI-02",
+      "status": "human semantic reconciliation; CONTEXT-SUFFICIENT; WORKS_ONLY_WITH_STRONG_CONTEXT",
+      "event_date": "2026-09-27",
+      "pictiq_version": "v1.2.0",
+      "message_schema_version": "0.1",
+      "role": "TEST",
+      "event_id": "test-cand-webui-02",
+      "notes": "Human review accepts existing forward/directional representation as sufficient in a next/forward UI context."
+    }
+  ],
+  "failures": [],
+  "compatibility": {
+    "pictiq_version": "1.1",
+    "message_schema_version": "0.1",
+    "source_commit": "unknown",
+    "message_validity": "CURRENT",
+    "compatibility_notes": [
+      "Research Message JSON is exact where preserved; when source only preserved IDs, the v0.1 JSON structure is a transparent encoding of that exact sequence.",
+      "Source commit/version is unknown unless the source explicitly records it. Harvest snapshot: 8fae507.",
+      "HISTORICAL HARVEST CANDIDATE only; no Composition Library acceptance implied."
+    ]
+  },
+  "related_composition_ids": [],
+  "notes": [
+    "cand-webui-02: Human review accepts existing forward/directional representation as sufficient in a next/forward UI context."
+  ]
+}

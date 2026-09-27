@@ -1,0 +1,141 @@
+{
+  "record_schema": "composition-record-v0.1-proposal",
+  "composition_id": "clh-v01-0007",
+  "lifecycle_status": "EXPERIMENTAL",
+  "pictiq_message": {
+    "contexts": [
+      "universal-core"
+    ],
+    "frames": [
+      {
+        "tokens": [
+          {
+            "id": "need_food",
+            "type": "icon"
+          },
+          {
+            "id": "qual_bad",
+            "type": "icon"
+          },
+          {
+            "id": "logic_no",
+            "type": "icon"
+          },
+          {
+            "id": "qty_minus",
+            "type": "icon"
+          }
+        ]
+      }
+    ],
+    "pictiq": "1.1",
+    "profile": "standalone-core-v0.1",
+    "schema": "0.1"
+  },
+  "semantic_neighbourhoods": [
+    {
+      "intent_id": "intent-eaf52fdd4c9b",
+      "canonical_intent": "The food is bad, not unavailable.",
+      "semantic_examples": [
+        "Required target slots: need_food, qual_bad"
+      ],
+      "required_context": [],
+      "optional_context": [],
+      "known_ambiguities": [
+        "Unjustified concepts in pilot target assessment: logic_no, qty_minus"
+      ],
+      "interpretation_evidence_ids": [
+        "cand-04a-09"
+      ],
+      "coverage_assessments": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "OTHER",
+          "outcome": "LOSSY",
+          "composition_ids": [
+            "clh-v01-0007"
+          ],
+          "evidence_ids": [
+            "cand-04a-09"
+          ],
+          "notes": "Exact model output is retained as experimental evidence, not accepted composition. CONCEPT_SELECTION_FAILURE"
+        }
+      ]
+    }
+  ],
+  "applicability": [
+    {
+      "communication_mode": "STANDALONE",
+      "communication_surface": "OTHER",
+      "context": {
+        "domain": [
+          "constrained-translation pilot"
+        ],
+        "situation": [
+          "single-model, one-repeat structured-output trial"
+        ],
+        "task": [
+          "negation evaluation"
+        ]
+      },
+      "evidence_ids": [
+        "cand-04a-09"
+      ]
+    }
+  ],
+  "preservation_assessments": [
+    "LOSSY"
+  ],
+  "origin": {
+    "event_id": "origin-clh-v01-0007",
+    "source_type": "CONSTRAINED TRANSLATION PILOT 04A",
+    "reference": "docs/research/constrained-translation-pilot-04a/normalized/04a-09-r1.json",
+    "location": "cand-04a-09",
+    "role": "ORIGIN",
+    "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+    "sha256": "2b46d787415107bb6fb4613cef6b142ee1e1b538c6d4db5340f8791b169b6932",
+    "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+  },
+  "uses": [],
+  "tests": [
+    {
+      "source_type": "STRESS_TEST",
+      "reference": "docs/research/constrained-translation-pilot-04a/normalized/04a-09-r1.json",
+      "location": "04a-09",
+      "status": "CONCEPT_SELECTION_FAILURE",
+      "event_date": "2026-09-11",
+      "message_schema_version": "0.1",
+      "role": "TEST",
+      "event_id": "test-cand-04a-09",
+      "notes": "Exact model output is retained as experimental evidence, not accepted composition. CONCEPT_SELECTION_FAILURE"
+    }
+  ],
+  "failures": [
+    {
+      "event_id": "failure-cand-04a-09",
+      "source_type": "CONSTRAINED TRANSLATION PILOT 04A",
+      "reference": "docs/research/constrained-translation-pilot-04a/normalized/04a-09-r1.json",
+      "location": "cand-04a-09",
+      "role": "FAILURE",
+      "observed_interpretation": "Pilot records unjustified candidate concepts: logic_no, qty_minus",
+      "failure_type": "CONCEPT_SELECTION_FAILURE",
+      "disposition": "NEEDS_CONTEXT",
+      "notes": "Exact model output is retained as experimental evidence, not accepted composition. CONCEPT_SELECTION_FAILURE"
+    }
+  ],
+  "compatibility": {
+    "pictiq_version": "1.1",
+    "message_schema_version": "0.1",
+    "source_commit": "unknown",
+    "message_validity": "CURRENT",
+    "compatibility_notes": [
+      "Research Message JSON is exact where preserved; when source only preserved IDs, the v0.1 JSON structure is a transparent encoding of that exact sequence.",
+      "Source commit/version is unknown unless the source explicitly records it. Harvest snapshot: 8fae507.",
+      "HISTORICAL HARVEST CANDIDATE only; no Composition Library acceptance implied."
+    ]
+  },
+  "related_composition_ids": [],
+  "notes": [
+    "cand-04a-09: Exact model output is retained as experimental evidence, not accepted composition. CONCEPT_SELECTION_FAILURE"
+  ]
+}

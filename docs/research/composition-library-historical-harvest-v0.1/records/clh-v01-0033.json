@@ -1,0 +1,159 @@
+{
+  "record_schema": "composition-record-v0.1-proposal",
+  "composition_id": "clh-v01-0033",
+  "lifecycle_status": "HUMAN_ACCEPTED",
+  "pictiq_message": {
+    "schema": "0.1",
+    "pictiq": "1.1",
+    "frames": [
+      {
+        "tokens": [
+          {
+            "type": "icon",
+            "id": "action_write"
+          },
+          {
+            "type": "icon",
+            "id": "comm_speak"
+          }
+        ]
+      }
+    ]
+  },
+  "semantic_neighbourhoods": [
+    {
+      "intent_id": "intent-38b58cba4459",
+      "canonical_intent": "Pictiq writes and communicates public notes / project writing",
+      "semantic_examples": [
+        "Pictiq writes and communicates public notes / project writing"
+      ],
+      "required_context": [
+        {
+          "cue": "surrounding landing section and UI labels",
+          "availability": "REQUIRED",
+          "evidence_ids": [
+            "cand-landing-publications"
+          ]
+        }
+      ],
+      "optional_context": [
+        {
+          "cue": "section layout, English-mode baseline, linked publication/UI destinations",
+          "availability": "OPTIONAL",
+          "evidence_ids": [
+            "cand-landing-publications"
+          ]
+        }
+      ],
+      "known_ambiguities": [],
+      "interpretation_evidence_ids": [
+        "cand-landing-publications"
+      ],
+      "coverage_assessments": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "outcome": "SUPPORTED",
+          "composition_ids": [
+            "clh-v01-0033"
+          ],
+          "evidence_ids": [
+            "cand-landing-publications"
+          ],
+          "notes": "titles omitted; publishing entities are separate linked entity symbols"
+        }
+      ]
+    }
+  ],
+  "applicability": [
+    {
+      "communication_mode": "STANDALONE",
+      "communication_surface": "UI",
+      "context": {
+        "domain": [
+          "pictiq landing"
+        ],
+        "situation": [
+          "Pictiq mode landing page"
+        ],
+        "task": [
+          "explain the project or navigate its public writing"
+        ],
+        "context_supplies": [
+          {
+            "cue": "surrounding landing section and UI labels",
+            "availability": "REQUIRED",
+            "evidence_ids": [
+              "cand-landing-publications"
+            ]
+          },
+          {
+            "cue": "section layout, English-mode baseline, linked publication/UI destinations",
+            "availability": "OPTIONAL",
+            "evidence_ids": [
+              "cand-landing-publications"
+            ]
+          }
+        ]
+      },
+      "evidence_ids": [
+        "cand-landing-publications"
+      ]
+    }
+  ],
+  "preservation_assessments": [
+    "INTENTIONAL_OMISSION",
+    "PRESERVED_BY_COMPOSITION"
+  ],
+  "origin": {
+    "event_id": "origin-clh-v01-0033",
+    "source_type": "LANDING",
+    "reference": "docs/book-materials/research/landing-translation-findings-2026-09.md",
+    "location": "cand-landing-publications",
+    "role": "ORIGIN",
+    "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+    "sha256": "f5e50c88ff7744088ab957fdc23721a4e28de16834c8dee82ce37ba4a1ef8668",
+    "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+  },
+  "uses": [
+    {
+      "source_type": "PRODUCTION_DEPLOYMENT",
+      "reference": "docs/landing/index.html",
+      "location": "Pictiq mode landing",
+      "role": "USE",
+      "status": "public landing use documented",
+      "event_id": "use-cand-landing-publications"
+    }
+  ],
+  "tests": [
+    {
+      "source_type": "LANDING",
+      "reference": "docs/book-materials/research/landing-translation-findings-2026-09.md",
+      "location": "implemented translation pressure log",
+      "status": "creator accepted; deployment status is documented separately",
+      "event_date": "2026-09-27",
+      "pictiq_version": "unknown",
+      "message_schema_version": "unknown",
+      "role": "TEST",
+      "event_id": "test-cand-landing-publications",
+      "notes": "titles omitted; publishing entities are separate linked entity symbols"
+    }
+  ],
+  "failures": [],
+  "compatibility": {
+    "pictiq_version": "unknown",
+    "message_schema_version": "unknown",
+    "source_commit": "unknown",
+    "message_validity": "CURRENT",
+    "compatibility_notes": [
+      "Research Message JSON is exact where preserved; when source only preserved IDs, the v0.1 JSON structure is a transparent encoding of that exact sequence.",
+      "Source commit/version is unknown unless the source explicitly records it. Harvest snapshot: 8fae507.",
+      "HISTORICAL HARVEST CANDIDATE only; no Composition Library acceptance implied.",
+      "The source stores an exact token sequence/ID array, not a versioned Message JSON; schema-shaped Message fields are a research encoding, and source Pictiq/Message-schema versions are unknown."
+    ]
+  },
+  "related_composition_ids": [],
+  "notes": [
+    "cand-landing-publications: titles omitted; publishing entities are separate linked entity symbols"
+  ]
+}

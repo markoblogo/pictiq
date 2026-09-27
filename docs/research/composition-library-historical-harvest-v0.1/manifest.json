@@ -1,0 +1,1563 @@
+{
+  "harvest_id": "pictiq-composition-library-historical-harvest-v0.1",
+  "status": "HISTORICAL HARVEST CANDIDATES / AWAITING HUMAN RECONCILIATION",
+  "snapshot_commit": "8fae507",
+  "harvest_date": "2026-09-27",
+  "pictiq_release": "current repo version not asserted; source-specific values retained",
+  "message_schema": "0.1 research encoding; historical source versions noted per record",
+  "ordinary_primitive_count": 87,
+  "entity_symbol_count": 16,
+  "records": [
+    {
+      "composition_id": "clh-v01-0001",
+      "path": "records/clh-v01-0001.json",
+      "source_family": "CONSTRAINED TRANSLATION PILOT 04A",
+      "intent_ids": [
+        "intent-daca4d9a17b6"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "OTHER"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": true,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0002",
+      "path": "records/clh-v01-0002.json",
+      "source_family": "CONSTRAINED TRANSLATION PILOT 04A",
+      "intent_ids": [
+        "intent-1634a83e112d"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "OTHER"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": true,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0003",
+      "path": "records/clh-v01-0003.json",
+      "source_family": "CONSTRAINED TRANSLATION PILOT 04A",
+      "intent_ids": [
+        "intent-cfd1b182140d"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "OTHER"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": true,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0004",
+      "path": "records/clh-v01-0004.json",
+      "source_family": "CONSTRAINED TRANSLATION PILOT 04A",
+      "intent_ids": [
+        "intent-95a2f6b92a59"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "OTHER"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": true,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0005",
+      "path": "records/clh-v01-0005.json",
+      "source_family": "CONSTRAINED TRANSLATION PILOT 04A",
+      "intent_ids": [
+        "intent-18fd0a2de88e"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "OTHER"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0006",
+      "path": "records/clh-v01-0006.json",
+      "source_family": "CONSTRAINED TRANSLATION PILOT 04A",
+      "intent_ids": [
+        "intent-9b7b3396cb41"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "OTHER"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": true,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0007",
+      "path": "records/clh-v01-0007.json",
+      "source_family": "CONSTRAINED TRANSLATION PILOT 04A",
+      "intent_ids": [
+        "intent-eaf52fdd4c9b"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "OTHER"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": true,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0008",
+      "path": "records/clh-v01-0008.json",
+      "source_family": "CONSTRAINED TRANSLATION PILOT 04A",
+      "intent_ids": [
+        "intent-6fcae0c98e60"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "OTHER"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": true,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0009",
+      "path": "records/clh-v01-0009.json",
+      "source_family": "CONSTRAINED TRANSLATION PILOT 04A",
+      "intent_ids": [
+        "intent-ef147a869b00"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "OTHER"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": true,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0010",
+      "path": "records/clh-v01-0010.json",
+      "source_family": "CONSTRAINED TRANSLATION PILOT 04A",
+      "intent_ids": [
+        "intent-a94d613cc42c"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "OTHER"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": true,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0011",
+      "path": "records/clh-v01-0011.json",
+      "source_family": "CONSTRAINED TRANSLATION PILOT 04A",
+      "intent_ids": [
+        "intent-2a9be9dbf630"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "OTHER"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": true,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0012",
+      "path": "records/clh-v01-0012.json",
+      "source_family": "CONSTRAINED TRANSLATION PILOT 04A",
+      "intent_ids": [
+        "intent-9352fa6ca6b4"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "OTHER"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": true,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0013",
+      "path": "records/clh-v01-0013.json",
+      "source_family": "HANDBOOK",
+      "intent_ids": [
+        "intent-078c334ab11c"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "BOOK"
+      ],
+      "lifecycle": "CANDIDATE",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0014",
+      "path": "records/clh-v01-0014.json",
+      "source_family": "HANDBOOK",
+      "intent_ids": [
+        "intent-bad5397b363f"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "BOOK"
+      ],
+      "lifecycle": "CANDIDATE",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0015",
+      "path": "records/clh-v01-0015.json",
+      "source_family": "HANDBOOK",
+      "intent_ids": [
+        "intent-896247531f3b"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "BOOK"
+      ],
+      "lifecycle": "CANDIDATE",
+      "compatibility": "HISTORICAL",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0016",
+      "path": "records/clh-v01-0016.json",
+      "source_family": "HANDBOOK",
+      "intent_ids": [
+        "intent-6e872ecdc41f"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "BOOK"
+      ],
+      "lifecycle": "CANDIDATE",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0017",
+      "path": "records/clh-v01-0017.json",
+      "source_family": "HANDBOOK",
+      "intent_ids": [
+        "intent-47c4e8ff1ed2"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "BOOK"
+      ],
+      "lifecycle": "CANDIDATE",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0018",
+      "path": "records/clh-v01-0018.json",
+      "source_family": "HANDBOOK",
+      "intent_ids": [
+        "intent-0b4c66ebbf45"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "BOOK"
+      ],
+      "lifecycle": "CANDIDATE",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0019",
+      "path": "records/clh-v01-0019.json",
+      "source_family": "HANDBOOK",
+      "intent_ids": [
+        "intent-cad3ea3c70c3"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "BOOK"
+      ],
+      "lifecycle": "CANDIDATE",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0020",
+      "path": "records/clh-v01-0020.json",
+      "source_family": "HANDBOOK",
+      "intent_ids": [
+        "intent-d96cf2e553f5"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "BOOK"
+      ],
+      "lifecycle": "CANDIDATE",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0021",
+      "path": "records/clh-v01-0021.json",
+      "source_family": "HANDBOOK",
+      "intent_ids": [
+        "intent-c21d183fadb4"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "BOOK"
+      ],
+      "lifecycle": "CANDIDATE",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0022",
+      "path": "records/clh-v01-0022.json",
+      "source_family": "HANDBOOK",
+      "intent_ids": [
+        "intent-60502ca11b20"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "BOOK"
+      ],
+      "lifecycle": "CANDIDATE",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0023",
+      "path": "records/clh-v01-0023.json",
+      "source_family": "HANDBOOK",
+      "intent_ids": [
+        "intent-fcdac2a89205"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "BOOK"
+      ],
+      "lifecycle": "CANDIDATE",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0024",
+      "path": "records/clh-v01-0024.json",
+      "source_family": "HANDBOOK",
+      "intent_ids": [
+        "intent-2ae01604477d"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "BOOK"
+      ],
+      "lifecycle": "CANDIDATE",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0025",
+      "path": "records/clh-v01-0025.json",
+      "source_family": "HANDBOOK",
+      "intent_ids": [
+        "intent-1266dba80021"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "BOOK"
+      ],
+      "lifecycle": "CANDIDATE",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0026",
+      "path": "records/clh-v01-0026.json",
+      "source_family": "HANDBOOK",
+      "intent_ids": [
+        "intent-1785a0ecbf3f"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "BOOK"
+      ],
+      "lifecycle": "CANDIDATE",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0027",
+      "path": "records/clh-v01-0027.json",
+      "source_family": "HANDBOOK",
+      "intent_ids": [
+        "intent-19d42473b1e2"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "BOOK"
+      ],
+      "lifecycle": "CANDIDATE",
+      "compatibility": "HISTORICAL",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0028",
+      "path": "records/clh-v01-0028.json",
+      "source_family": "HANDBOOK",
+      "intent_ids": [
+        "intent-7fdf6b694a0d"
+      ],
+      "communication_modes": [
+        "EMBODIED"
+      ],
+      "communication_surfaces": [
+        "PORTABLE_CARD"
+      ],
+      "lifecycle": "CANDIDATE",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0029",
+      "path": "records/clh-v01-0029.json",
+      "source_family": "HANDBOOK",
+      "intent_ids": [
+        "intent-033623495917"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "BOOK"
+      ],
+      "lifecycle": "CANDIDATE",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0030",
+      "path": "records/clh-v01-0030.json",
+      "source_family": "LANDING",
+      "intent_ids": [
+        "intent-e64fba41635b"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "UI"
+      ],
+      "lifecycle": "HUMAN_ACCEPTED",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0031",
+      "path": "records/clh-v01-0031.json",
+      "source_family": "LANDING",
+      "intent_ids": [
+        "intent-e64fba41635b"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "UI"
+      ],
+      "lifecycle": "HUMAN_ACCEPTED",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0032",
+      "path": "records/clh-v01-0032.json",
+      "source_family": "LANDING",
+      "intent_ids": [
+        "intent-9cd9e8297110"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "UI"
+      ],
+      "lifecycle": "HUMAN_ACCEPTED",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0033",
+      "path": "records/clh-v01-0033.json",
+      "source_family": "LANDING",
+      "intent_ids": [
+        "intent-38b58cba4459"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "UI"
+      ],
+      "lifecycle": "HUMAN_ACCEPTED",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "MODERATE"
+    },
+    {
+      "composition_id": "clh-v01-0034",
+      "path": "records/clh-v01-0034.json",
+      "source_family": "ODYSSEY",
+      "intent_ids": [
+        "intent-8bb36a811fb6"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "BOOK"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0035",
+      "path": "records/clh-v01-0035.json",
+      "source_family": "ODYSSEY",
+      "intent_ids": [
+        "intent-dfafe76064bd"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "BOOK"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0036",
+      "path": "records/clh-v01-0036.json",
+      "source_family": "ODYSSEY",
+      "intent_ids": [
+        "intent-8dcc24a2f970"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "BOOK"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0037",
+      "path": "records/clh-v01-0037.json",
+      "source_family": "ODYSSEY",
+      "intent_ids": [
+        "intent-85a8cf11199a"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "BOOK"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0038",
+      "path": "records/clh-v01-0038.json",
+      "source_family": "ODYSSEY",
+      "intent_ids": [
+        "intent-2fd853d6d395"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "BOOK"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0039",
+      "path": "records/clh-v01-0039.json",
+      "source_family": "ODYSSEY",
+      "intent_ids": [
+        "intent-2a249996408d"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "BOOK"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0040",
+      "path": "records/clh-v01-0040.json",
+      "source_family": "ROAD _ WAYFINDING",
+      "intent_ids": [
+        "intent-3920e46308d3"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "WAYFINDING"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0041",
+      "path": "records/clh-v01-0041.json",
+      "source_family": "ROAD _ WAYFINDING",
+      "intent_ids": [
+        "intent-4c4ab4b873e9"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "WAYFINDING"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0042",
+      "path": "records/clh-v01-0042.json",
+      "source_family": "ROAD _ WAYFINDING",
+      "intent_ids": [
+        "intent-da3d30ff499d"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "WAYFINDING"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0043",
+      "path": "records/clh-v01-0043.json",
+      "source_family": "ROAD _ WAYFINDING",
+      "intent_ids": [
+        "intent-2280a2486858"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "WAYFINDING"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0044",
+      "path": "records/clh-v01-0044.json",
+      "source_family": "ROAD _ WAYFINDING",
+      "intent_ids": [
+        "intent-3745edc3ee1d"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "WAYFINDING"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": true,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0045",
+      "path": "records/clh-v01-0045.json",
+      "source_family": "ROAD _ WAYFINDING",
+      "intent_ids": [
+        "intent-f17edfb62adb"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "WAYFINDING"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0046",
+      "path": "records/clh-v01-0046.json",
+      "source_family": "ROAD _ WAYFINDING",
+      "intent_ids": [
+        "intent-1662c62f0450"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "WAYFINDING"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0047",
+      "path": "records/clh-v01-0047.json",
+      "source_family": "ROAD _ WAYFINDING",
+      "intent_ids": [
+        "intent-ab908346d026"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "WAYFINDING"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": true,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0048",
+      "path": "records/clh-v01-0048.json",
+      "source_family": "ROAD _ WAYFINDING",
+      "intent_ids": [
+        "intent-137bd0575f30"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "WAYFINDING"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0049",
+      "path": "records/clh-v01-0049.json",
+      "source_family": "ROAD _ WAYFINDING",
+      "intent_ids": [
+        "intent-9deaae21c5c8"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "WAYFINDING"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0050",
+      "path": "records/clh-v01-0050.json",
+      "source_family": "ROAD _ WAYFINDING",
+      "intent_ids": [
+        "intent-6518d8f88085"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "WAYFINDING"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0051",
+      "path": "records/clh-v01-0051.json",
+      "source_family": "ROAD _ WAYFINDING",
+      "intent_ids": [
+        "intent-9f8193ea4707"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "WAYFINDING"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0052",
+      "path": "records/clh-v01-0052.json",
+      "source_family": "ROAD _ WAYFINDING",
+      "intent_ids": [
+        "intent-90378cfe023a"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "WAYFINDING"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0053",
+      "path": "records/clh-v01-0053.json",
+      "source_family": "ROAD _ WAYFINDING",
+      "intent_ids": [
+        "intent-354468112d2d"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "WAYFINDING"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0054",
+      "path": "records/clh-v01-0054.json",
+      "source_family": "ROAD _ WAYFINDING",
+      "intent_ids": [
+        "intent-babe21381f90"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "WAYFINDING"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "HISTORICAL",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0055",
+      "path": "records/clh-v01-0055.json",
+      "source_family": "ROAD _ WAYFINDING",
+      "intent_ids": [
+        "intent-e84db0c2d1b4"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "WAYFINDING"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": true,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0056",
+      "path": "records/clh-v01-0056.json",
+      "source_family": "ROAD _ WAYFINDING",
+      "intent_ids": [
+        "intent-451a8b38a377"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "WAYFINDING"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0057",
+      "path": "records/clh-v01-0057.json",
+      "source_family": "ROAD _ WAYFINDING",
+      "intent_ids": [
+        "intent-f814f4781efc"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "WAYFINDING"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0058",
+      "path": "records/clh-v01-0058.json",
+      "source_family": "ROAD _ WAYFINDING",
+      "intent_ids": [
+        "intent-6c27d1e3f8c1",
+        "intent-65f7a67877ed",
+        "intent-fa78000e18c6"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "WAYFINDING"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": true,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0059",
+      "path": "records/clh-v01-0059.json",
+      "source_family": "ROAD _ WAYFINDING",
+      "intent_ids": [
+        "intent-322b8d93d0ec"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "WAYFINDING"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0060",
+      "path": "records/clh-v01-0060.json",
+      "source_family": "ROAD _ WAYFINDING",
+      "intent_ids": [
+        "intent-911afab2298a"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "WAYFINDING"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0061",
+      "path": "records/clh-v01-0061.json",
+      "source_family": "ROAD _ WAYFINDING",
+      "intent_ids": [
+        "intent-989c587b0063"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "WAYFINDING"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0062",
+      "path": "records/clh-v01-0062.json",
+      "source_family": "ROAD _ WAYFINDING",
+      "intent_ids": [
+        "intent-3b09695894b0"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "WAYFINDING"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0063",
+      "path": "records/clh-v01-0063.json",
+      "source_family": "STRESS TEST 05",
+      "intent_ids": [
+        "intent-6bf45a6e5eca"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "OTHER"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0064",
+      "path": "records/clh-v01-0064.json",
+      "source_family": "WEB_UI",
+      "intent_ids": [
+        "intent-3dc0d984673e",
+        "intent-749245cddd8c"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "UI"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0065",
+      "path": "records/clh-v01-0065.json",
+      "source_family": "WEB_UI",
+      "intent_ids": [
+        "intent-97b5b3c7f192"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "UI"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0066",
+      "path": "records/clh-v01-0066.json",
+      "source_family": "WEB_UI",
+      "intent_ids": [
+        "intent-827c70b58976"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "UI"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0067",
+      "path": "records/clh-v01-0067.json",
+      "source_family": "WEB_UI",
+      "intent_ids": [
+        "intent-90047f471958",
+        "intent-060ff5e8e897"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "UI"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0068",
+      "path": "records/clh-v01-0068.json",
+      "source_family": "WEB_UI",
+      "intent_ids": [
+        "intent-4b94a9731688"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "UI"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0069",
+      "path": "records/clh-v01-0069.json",
+      "source_family": "WEB_UI",
+      "intent_ids": [
+        "intent-1e868934cd03"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "UI"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0070",
+      "path": "records/clh-v01-0070.json",
+      "source_family": "WEB_UI",
+      "intent_ids": [
+        "intent-b92fed069b92"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "UI"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0071",
+      "path": "records/clh-v01-0071.json",
+      "source_family": "WEB_UI",
+      "intent_ids": [
+        "intent-5e3a6eabbe69",
+        "intent-cf66c9a0932d"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "UI"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0072",
+      "path": "records/clh-v01-0072.json",
+      "source_family": "WEB_UI",
+      "intent_ids": [
+        "intent-7845f986dc19"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "UI"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0073",
+      "path": "records/clh-v01-0073.json",
+      "source_family": "WEB_UI",
+      "intent_ids": [
+        "intent-361efc7cecd5"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "UI"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0074",
+      "path": "records/clh-v01-0074.json",
+      "source_family": "WEB_UI",
+      "intent_ids": [
+        "intent-c85cce08693c",
+        "intent-d8d5f256a3a6",
+        "intent-68ff63fb82e0"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "UI"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": true,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0075",
+      "path": "records/clh-v01-0075.json",
+      "source_family": "WEB_UI",
+      "intent_ids": [
+        "intent-849d54b90cfe",
+        "intent-ff4085ad1573"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "UI"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0076",
+      "path": "records/clh-v01-0076.json",
+      "source_family": "WEB_UI",
+      "intent_ids": [
+        "intent-33edbbb52264"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "UI"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0077",
+      "path": "records/clh-v01-0077.json",
+      "source_family": "WEB_UI",
+      "intent_ids": [
+        "intent-a7f9107c82b5"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "UI"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0078",
+      "path": "records/clh-v01-0078.json",
+      "source_family": "WEB_UI",
+      "intent_ids": [
+        "intent-b77f13ea8d89"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "UI"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0079",
+      "path": "records/clh-v01-0079.json",
+      "source_family": "WEB_UI",
+      "intent_ids": [
+        "intent-9b787e043659"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "UI"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0080",
+      "path": "records/clh-v01-0080.json",
+      "source_family": "WEB_UI",
+      "intent_ids": [
+        "intent-234bf9c629a2"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "UI"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    },
+    {
+      "composition_id": "clh-v01-0081",
+      "path": "records/clh-v01-0081.json",
+      "source_family": "WEB_UI",
+      "intent_ids": [
+        "intent-3ac0900c6562"
+      ],
+      "communication_modes": [
+        "STANDALONE"
+      ],
+      "communication_surfaces": [
+        "UI"
+      ],
+      "lifecycle": "EXPERIMENTAL",
+      "compatibility": "CURRENT",
+      "has_tests": true,
+      "has_failures": false,
+      "provenance_quality": "STRONG"
+    }
+  ],
+  "inventory_path": "inventory.json",
+  "source_coverage_path": "source-coverage.json",
+  "review_dataset_path": "review-dataset.json",
+  "intent_index_path": "intent-index.json"
+}

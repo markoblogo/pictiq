@@ -1,0 +1,165 @@
+{
+  "record_schema": "composition-record-v0.1-proposal",
+  "composition_id": "clh-v01-0047",
+  "lifecycle_status": "EXPERIMENTAL",
+  "pictiq_message": {
+    "schema": "0.1",
+    "pictiq": "1.1",
+    "frames": [
+      {
+        "tokens": [
+          {
+            "type": "icon",
+            "id": "person_generic"
+          },
+          {
+            "type": "icon",
+            "id": "move_feet"
+          },
+          {
+            "type": "icon",
+            "id": "rel_here"
+          }
+        ]
+      }
+    ]
+  },
+  "semantic_neighbourhoods": [
+    {
+      "intent_id": "intent-ab908346d026",
+      "canonical_intent": "Pedestrian crossing or crossing place.",
+      "semantic_examples": [
+        "Expect/use a crossing point; drivers yield/slow where applicable; pedestrians cross here."
+      ],
+      "required_context": [
+        {
+          "cue": "road/public-wayfinding conventions",
+          "availability": "REQUIRED",
+          "evidence_ids": [
+            "cand-road-08"
+          ]
+        }
+      ],
+      "optional_context": [
+        {
+          "cue": "sign placement and road-navigation frame",
+          "availability": "OPTIONAL",
+          "evidence_ids": [
+            "cand-road-08"
+          ]
+        }
+      ],
+      "known_ambiguities": [
+        "Yes. Walking here is not the same as a crossing relation between two sides of a road."
+      ],
+      "interpretation_evidence_ids": [
+        "cand-road-08"
+      ],
+      "coverage_assessments": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "outcome": "LOSSY",
+          "composition_ids": [
+            "clh-v01-0047"
+          ],
+          "evidence_ids": [
+            "cand-road-08"
+          ],
+          "notes": "Candidate Road/Public relation, not immediate Core."
+        }
+      ]
+    }
+  ],
+  "applicability": [
+    {
+      "communication_mode": "STANDALONE",
+      "communication_surface": "WAYFINDING",
+      "context": {
+        "domain": [
+          "road-wayfinding"
+        ],
+        "situation": [
+          "public road and wayfinding sign"
+        ],
+        "task": [
+          "expect/use a crossing point; drivers yield/slow where applicable; pedestrians cross here."
+        ],
+        "context_supplies": [
+          {
+            "cue": "road/public-wayfinding conventions",
+            "availability": "REQUIRED",
+            "evidence_ids": [
+              "cand-road-08"
+            ]
+          },
+          {
+            "cue": "sign placement and road-navigation frame",
+            "availability": "OPTIONAL",
+            "evidence_ids": [
+              "cand-road-08"
+            ]
+          }
+        ]
+      },
+      "evidence_ids": [
+        "cand-road-08"
+      ]
+    }
+  ],
+  "preservation_assessments": [
+    "LOSSY"
+  ],
+  "origin": {
+    "event_id": "origin-clh-v01-0047",
+    "source_type": "ROAD _ WAYFINDING",
+    "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+    "location": "cand-road-08",
+    "role": "ORIGIN",
+    "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+    "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+    "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+  },
+  "uses": [],
+  "tests": [
+    {
+      "source_type": "ROAD_WAYFINDING",
+      "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+      "location": "pedestrian crossing",
+      "status": "human semantic reconciliation; LOSSY",
+      "event_date": "2026-09-10",
+      "message_schema_version": "unknown",
+      "role": "TEST",
+      "event_id": "test-cand-road-08",
+      "notes": "Candidate Road/Public relation, not immediate Core."
+    }
+  ],
+  "failures": [
+    {
+      "event_id": "failure-cand-road-08",
+      "source_type": "ROAD _ WAYFINDING",
+      "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+      "location": "cand-road-08",
+      "role": "FAILURE",
+      "observed_interpretation": "person walking at this reference/location",
+      "failure_type": "LOSSY: RELATION, LAYOUT, SAFETY-PRECISION",
+      "disposition": "LOSSY",
+      "notes": "Candidate Road/Public relation, not immediate Core."
+    }
+  ],
+  "compatibility": {
+    "pictiq_version": "1.1",
+    "message_schema_version": "0.1",
+    "source_commit": "unknown",
+    "message_validity": "CURRENT",
+    "compatibility_notes": [
+      "Research Message JSON is exact where preserved; when source only preserved IDs, the v0.1 JSON structure is a transparent encoding of that exact sequence.",
+      "Source commit/version is unknown unless the source explicitly records it. Harvest snapshot: 8fae507.",
+      "HISTORICAL HARVEST CANDIDATE only; no Composition Library acceptance implied."
+    ]
+  },
+  "related_composition_ids": [],
+  "notes": [
+    "cand-road-08: Candidate Road/Public relation, not immediate Core."
+  ]
+}

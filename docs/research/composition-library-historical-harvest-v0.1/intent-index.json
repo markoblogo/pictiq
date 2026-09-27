@@ -1,0 +1,1911 @@
+[
+  {
+    "intent_id": "intent-daca4d9a17b6",
+    "semantic_description": "No alcohol.",
+    "related_composition_ids": [
+      "clh-v01-0001"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "OTHER"
+    ],
+    "source_families": [
+      "Constrained Translation Pilot 04A"
+    ],
+    "current_coverage_observations": [
+      "LOSSY"
+    ],
+    "unresolved_ambiguity": [
+      "Unjustified concepts in pilot target assessment: need_bar"
+    ]
+  },
+  {
+    "intent_id": "intent-1634a83e112d",
+    "semantic_description": "Where is home?",
+    "related_composition_ids": [
+      "clh-v01-0002"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "OTHER"
+    ],
+    "source_families": [
+      "Constrained Translation Pilot 04A"
+    ],
+    "current_coverage_observations": [
+      "LOSSY"
+    ],
+    "unresolved_ambiguity": [
+      "Unjustified concepts in pilot target assessment: place_hotel"
+    ]
+  },
+  {
+    "intent_id": "intent-cfd1b182140d",
+    "semantic_description": "I need medical help urgently.",
+    "related_composition_ids": [
+      "clh-v01-0003"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "OTHER"
+    ],
+    "source_families": [
+      "Constrained Translation Pilot 04A"
+    ],
+    "current_coverage_observations": [
+      "LOSSY"
+    ],
+    "unresolved_ambiguity": [
+      "Unjustified concepts in pilot target assessment: safety_police"
+    ]
+  },
+  {
+    "intent_id": "intent-95a2f6b92a59",
+    "semantic_description": "A sacred building.",
+    "related_composition_ids": [
+      "clh-v01-0004"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "OTHER"
+    ],
+    "source_families": [
+      "Constrained Translation Pilot 04A"
+    ],
+    "current_coverage_observations": [
+      "LOSSY"
+    ],
+    "unresolved_ambiguity": [
+      "Unjustified concepts in pilot target assessment: paris_sacre_coeur"
+    ]
+  },
+  {
+    "intent_id": "intent-18fd0a2de88e",
+    "semantic_description": "A loved person.",
+    "related_composition_ids": [
+      "clh-v01-0005"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "OTHER"
+    ],
+    "source_families": [
+      "Constrained Translation Pilot 04A"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": []
+  },
+  {
+    "intent_id": "intent-9b7b3396cb41",
+    "semantic_description": "Animal food, like meat.",
+    "related_composition_ids": [
+      "clh-v01-0006"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "OTHER"
+    ],
+    "source_families": [
+      "Constrained Translation Pilot 04A"
+    ],
+    "current_coverage_observations": [
+      "LOSSY"
+    ],
+    "unresolved_ambiguity": [
+      "Unjustified concepts in pilot target assessment: food_bakery, food_produce"
+    ]
+  },
+  {
+    "intent_id": "intent-eaf52fdd4c9b",
+    "semantic_description": "The food is bad, not unavailable.",
+    "related_composition_ids": [
+      "clh-v01-0007"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "OTHER"
+    ],
+    "source_families": [
+      "Constrained Translation Pilot 04A"
+    ],
+    "current_coverage_observations": [
+      "LOSSY"
+    ],
+    "unresolved_ambiguity": [
+      "Unjustified concepts in pilot target assessment: logic_no, qty_minus"
+    ]
+  },
+  {
+    "intent_id": "intent-6fcae0c98e60",
+    "semantic_description": "Less noise, please.",
+    "related_composition_ids": [
+      "clh-v01-0008"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "OTHER"
+    ],
+    "source_families": [
+      "Constrained Translation Pilot 04A"
+    ],
+    "current_coverage_observations": [
+      "LOSSY"
+    ],
+    "unresolved_ambiguity": [
+      "Unjustified concepts in pilot target assessment: logic_no, qual_bad"
+    ]
+  },
+  {
+    "intent_id": "intent-ef147a869b00",
+    "semantic_description": "Polyphemus sees a person.",
+    "related_composition_ids": [
+      "clh-v01-0009"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "OTHER"
+    ],
+    "source_families": [
+      "Constrained Translation Pilot 04A"
+    ],
+    "current_coverage_observations": [
+      "LOSSY"
+    ],
+    "unresolved_ambiguity": [
+      "Unjustified concepts in pilot target assessment: entity:poseidon@odyssey"
+    ]
+  },
+  {
+    "intent_id": "intent-a94d613cc42c",
+    "semantic_description": "A beautiful blue hotel near the old city center.",
+    "related_composition_ids": [
+      "clh-v01-0010"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "OTHER"
+    ],
+    "source_families": [
+      "Constrained Translation Pilot 04A"
+    ],
+    "current_coverage_observations": [
+      "LOSSY"
+    ],
+    "unresolved_ambiguity": [
+      "Unjustified concepts in pilot target assessment: place_hotel, media_image"
+    ]
+  },
+  {
+    "intent_id": "intent-2a9be9dbf630",
+    "semantic_description": "Could you maybe point me toward food?",
+    "related_composition_ids": [
+      "clh-v01-0011"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "OTHER"
+    ],
+    "source_families": [
+      "Constrained Translation Pilot 04A"
+    ],
+    "current_coverage_observations": [
+      "LOSSY"
+    ],
+    "unresolved_ambiguity": [
+      "Unjustified concepts in pilot target assessment: comm_speak"
+    ]
+  },
+  {
+    "intent_id": "intent-9352fa6ca6b4",
+    "semantic_description": "This place is a battlefield.",
+    "related_composition_ids": [
+      "clh-v01-0012"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "OTHER"
+    ],
+    "source_families": [
+      "Constrained Translation Pilot 04A"
+    ],
+    "current_coverage_observations": [
+      "LOSSY"
+    ],
+    "unresolved_ambiguity": [
+      "Unjustified concepts in pilot target assessment: state_dead"
+    ]
+  },
+  {
+    "intent_id": "intent-078c334ab11c",
+    "semantic_description": "Car service / repair",
+    "related_composition_ids": [
+      "clh-v01-0013"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "BOOK"
+    ],
+    "source_families": [
+      "Handbook"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": []
+  },
+  {
+    "intent_id": "intent-bad5397b363f",
+    "semantic_description": "Grocery / food shop",
+    "related_composition_ids": [
+      "clh-v01-0014"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "BOOK"
+    ],
+    "source_families": [
+      "Handbook"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": []
+  },
+  {
+    "intent_id": "intent-896247531f3b",
+    "semantic_description": "Where is a hotel?",
+    "related_composition_ids": [
+      "clh-v01-0015"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "BOOK"
+    ],
+    "source_families": [
+      "Handbook"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Handbook states these are examples and warns context affects exact meaning."
+    ]
+  },
+  {
+    "intent_id": "intent-6e872ecdc41f",
+    "semantic_description": "Less food / smaller portion",
+    "related_composition_ids": [
+      "clh-v01-0016"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "BOOK"
+    ],
+    "source_families": [
+      "Handbook"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": []
+  },
+  {
+    "intent_id": "intent-47c4e8ff1ed2",
+    "semantic_description": "Many waters",
+    "related_composition_ids": [
+      "clh-v01-0017"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "BOOK"
+    ],
+    "source_families": [
+      "Handbook"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": []
+  },
+  {
+    "intent_id": "intent-0b4c66ebbf45",
+    "semantic_description": "More water",
+    "related_composition_ids": [
+      "clh-v01-0018"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "BOOK"
+    ],
+    "source_families": [
+      "Handbook"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": []
+  },
+  {
+    "intent_id": "intent-cad3ea3c70c3",
+    "semantic_description": "One food portion",
+    "related_composition_ids": [
+      "clh-v01-0019"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "BOOK"
+    ],
+    "source_families": [
+      "Handbook"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": []
+  },
+  {
+    "intent_id": "intent-d96cf2e553f5",
+    "semantic_description": "Phone / electronics shop",
+    "related_composition_ids": [
+      "clh-v01-0020"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "BOOK"
+    ],
+    "source_families": [
+      "Handbook"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": []
+  },
+  {
+    "intent_id": "intent-c21d183fadb4",
+    "semantic_description": "Can I pay for a taxi by card?",
+    "related_composition_ids": [
+      "clh-v01-0021"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "BOOK"
+    ],
+    "source_families": [
+      "Handbook"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": []
+  },
+  {
+    "intent_id": "intent-60502ca11b20",
+    "semantic_description": "Public transport schedule / when?",
+    "related_composition_ids": [
+      "clh-v01-0022"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "BOOK"
+    ],
+    "source_families": [
+      "Handbook"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": []
+  },
+  {
+    "intent_id": "intent-fcdac2a89205",
+    "semantic_description": "Two waters / two units of water",
+    "related_composition_ids": [
+      "clh-v01-0023"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "BOOK"
+    ],
+    "source_families": [
+      "Handbook"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": []
+  },
+  {
+    "intent_id": "intent-2ae01604477d",
+    "semantic_description": "Medical help, urgent",
+    "related_composition_ids": [
+      "clh-v01-0024"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "BOOK"
+    ],
+    "source_families": [
+      "Handbook"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": []
+  },
+  {
+    "intent_id": "intent-1266dba80021",
+    "semantic_description": "Urgent toilet request",
+    "related_composition_ids": [
+      "clh-v01-0025"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "BOOK"
+    ],
+    "source_families": [
+      "Handbook"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": []
+  },
+  {
+    "intent_id": "intent-1785a0ecbf3f",
+    "semantic_description": "Where can I get water?",
+    "related_composition_ids": [
+      "clh-v01-0026"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "BOOK"
+    ],
+    "source_families": [
+      "Handbook"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Handbook states these are examples and warns context affects exact meaning."
+    ]
+  },
+  {
+    "intent_id": "intent-19d42473b1e2",
+    "semantic_description": "Hotel / lodging / where to stay",
+    "related_composition_ids": [
+      "clh-v01-0027"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "BOOK"
+    ],
+    "source_families": [
+      "Handbook"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Handbook states these are examples and warns context affects exact meaning."
+    ]
+  },
+  {
+    "intent_id": "intent-7fdf6b694a0d",
+    "semantic_description": "Toilet / need a toilet / where is the toilet",
+    "related_composition_ids": [
+      "clh-v01-0028"
+    ],
+    "modes_represented": [
+      "EMBODIED"
+    ],
+    "surfaces_represented": [
+      "PORTABLE_CARD"
+    ],
+    "source_families": [
+      "Handbook"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Handbook states these are examples and warns context affects exact meaning."
+    ]
+  },
+  {
+    "intent_id": "intent-033623495917",
+    "semantic_description": "Wi-Fi / internet / where is Wi-Fi",
+    "related_composition_ids": [
+      "clh-v01-0029"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "BOOK"
+    ],
+    "source_families": [
+      "Handbook"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Handbook states these are examples and warns context affects exact meaning."
+    ]
+  },
+  {
+    "intent_id": "intent-e64fba41635b",
+    "semantic_description": "Small visual communication — identity / headline",
+    "related_composition_ids": [
+      "clh-v01-0030",
+      "clh-v01-0031"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "UI"
+    ],
+    "source_families": [
+      "Landing"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": []
+  },
+  {
+    "intent_id": "intent-9cd9e8297110",
+    "semantic_description": "Visual concepts combine into useful messages",
+    "related_composition_ids": [
+      "clh-v01-0032"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "UI"
+    ],
+    "source_families": [
+      "Landing"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": []
+  },
+  {
+    "intent_id": "intent-38b58cba4459",
+    "semantic_description": "Pictiq writes and communicates public notes / project writing",
+    "related_composition_ids": [
+      "clh-v01-0033"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "UI"
+    ],
+    "source_families": [
+      "Landing"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": []
+  },
+  {
+    "intent_id": "intent-8bb36a811fb6",
+    "semantic_description": "Return from war / Odysseus / Calypso",
+    "related_composition_ids": [
+      "clh-v01-0034"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "BOOK"
+    ],
+    "source_families": [
+      "Odyssey"
+    ],
+    "current_coverage_observations": [
+      "GAP"
+    ],
+    "unresolved_ambiguity": [
+      "Exact HOME/RETURN/CAVE/PREVENT remain unresolved; no cave primitive added."
+    ]
+  },
+  {
+    "intent_id": "intent-dfafe76064bd",
+    "semantic_description": "Gods / Poseidon / hostility / homecoming",
+    "related_composition_ids": [
+      "clh-v01-0035"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "BOOK"
+    ],
+    "source_families": [
+      "Odyssey"
+    ],
+    "current_coverage_observations": [
+      "GAP"
+    ],
+    "unresolved_ambiguity": [
+      "ENERGY-as-intensifier remains hypothetical; HOME/RETURN exactness remains a gap."
+    ]
+  },
+  {
+    "intent_id": "intent-8dcc24a2f970",
+    "semantic_description": "Ship / sea / dark sky",
+    "related_composition_ids": [
+      "clh-v01-0036"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "BOOK"
+    ],
+    "source_families": [
+      "Odyssey"
+    ],
+    "current_coverage_observations": [
+      "GAP"
+    ],
+    "unresolved_ambiguity": [
+      "Parametric COLOR is accepted direction but not represented as ordinary icon ID; move_boat vs move_watercraft is deferred."
+    ]
+  },
+  {
+    "intent_id": "intent-85a8cf11199a",
+    "semantic_description": "Arete dialogue: identity / origin / clothing",
+    "related_composition_ids": [
+      "clh-v01-0037"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "BOOK"
+    ],
+    "source_families": [
+      "Odyssey"
+    ],
+    "current_coverage_observations": [
+      "GAP"
+    ],
+    "unresolved_ambiguity": [
+      "No WHO/YOU/I/NAME/FROM/ORIGIN/GIVE primitives were added; named places may later need Entity Symbols."
+    ]
+  },
+  {
+    "intent_id": "intent-2fd853d6d395",
+    "semantic_description": "Survival / food / animal / cooking",
+    "related_composition_ids": [
+      "clh-v01-0038"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "BOOK"
+    ],
+    "source_families": [
+      "Odyssey"
+    ],
+    "current_coverage_observations": [
+      "GAP"
+    ],
+    "unresolved_ambiguity": [
+      "No COOK/HUNGER/STARVATION/HAND/WASH primitives added; species taxonomy deferred."
+    ]
+  },
+  {
+    "intent_id": "intent-2a249996408d",
+    "semantic_description": "Poseidon / Polyphemus / eye injury / kinship / blocked homecoming",
+    "related_composition_ids": [
+      "clh-v01-0039"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "BOOK"
+    ],
+    "source_families": [
+      "Odyssey"
+    ],
+    "current_coverage_observations": [
+      "GAP"
+    ],
+    "unresolved_ambiguity": [
+      "No BLIND/INJURE/PREVENT/TORMENT/SON/DAUGHTER primitives added; rel_lesser is not globally CHILD."
+    ]
+  },
+  {
+    "intent_id": "intent-3920e46308d3",
+    "semantic_description": "Proceed or turn right according to road/public-wayfinding indication.",
+    "related_composition_ids": [
+      "clh-v01-0040"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "WAYFINDING"
+    ],
+    "source_families": [
+      "Road / Wayfinding"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": []
+  },
+  {
+    "intent_id": "intent-4c4ab4b873e9",
+    "semantic_description": "Proceed or turn left according to road/public-wayfinding indication.",
+    "related_composition_ids": [
+      "clh-v01-0041"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "WAYFINDING"
+    ],
+    "source_families": [
+      "Road / Wayfinding"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": []
+  },
+  {
+    "intent_id": "intent-da3d30ff499d",
+    "semantic_description": "Continue straight ahead.",
+    "related_composition_ids": [
+      "clh-v01-0042"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "WAYFINDING"
+    ],
+    "source_families": [
+      "Road / Wayfinding"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Low on a road sign; higher in building maps where up may mean upstairs."
+    ]
+  },
+  {
+    "intent_id": "intent-2280a2486858",
+    "semantic_description": "Go down, lower level, or downward route.",
+    "related_composition_ids": [
+      "clh-v01-0043"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "WAYFINDING"
+    ],
+    "source_families": [
+      "Road / Wayfinding"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": []
+  },
+  {
+    "intent_id": "intent-3745edc3ee1d",
+    "semantic_description": "Entry prohibited / do not enter this road or area.",
+    "related_composition_ids": [
+      "clh-v01-0044"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "WAYFINDING"
+    ],
+    "source_families": [
+      "Road / Wayfinding"
+    ],
+    "current_coverage_observations": [
+      "GAP"
+    ],
+    "unresolved_ambiguity": [
+      "Yes. It can be read as no current location, not available here, or no place here rather than entry forbidden."
+    ]
+  },
+  {
+    "intent_id": "intent-f17edfb62adb",
+    "semantic_description": "Route or path for pedestrians.",
+    "related_composition_ids": [
+      "clh-v01-0045"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "WAYFINDING"
+    ],
+    "source_families": [
+      "Road / Wayfinding"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Low in pedestrian-wayfinding context."
+    ]
+  },
+  {
+    "intent_id": "intent-1662c62f0450",
+    "semantic_description": "Access prohibited to pedestrians.",
+    "related_composition_ids": [
+      "clh-v01-0046"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "WAYFINDING"
+    ],
+    "source_families": [
+      "Road / Wayfinding"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": []
+  },
+  {
+    "intent_id": "intent-ab908346d026",
+    "semantic_description": "Pedestrian crossing or crossing place.",
+    "related_composition_ids": [
+      "clh-v01-0047"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "WAYFINDING"
+    ],
+    "source_families": [
+      "Road / Wayfinding"
+    ],
+    "current_coverage_observations": [
+      "LOSSY"
+    ],
+    "unresolved_ambiguity": [
+      "Yes. Walking here is not the same as a crossing relation between two sides of a road."
+    ]
+  },
+  {
+    "intent_id": "intent-137bd0575f30",
+    "semantic_description": "Parking place or parking permitted.",
+    "related_composition_ids": [
+      "clh-v01-0048"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "WAYFINDING"
+    ],
+    "source_families": [
+      "Road / Wayfinding"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Low in road context. Outside it, this could mean car location rather than permission to park."
+    ]
+  },
+  {
+    "intent_id": "intent-9deaae21c5c8",
+    "semantic_description": "Parking prohibited.",
+    "related_composition_ids": [
+      "clh-v01-0049"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "WAYFINDING"
+    ],
+    "source_families": [
+      "Road / Wayfinding"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Usually acceptable in road context, but can overread as all cars prohibited here."
+    ]
+  },
+  {
+    "intent_id": "intent-6518d8f88085",
+    "semantic_description": "Fuel service or petrol station.",
+    "related_composition_ids": [
+      "clh-v01-0050"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "WAYFINDING"
+    ],
+    "source_families": [
+      "Road / Wayfinding"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": []
+  },
+  {
+    "intent_id": "intent-9f8193ea4707",
+    "semantic_description": "Hospital or medical service nearby.",
+    "related_composition_ids": [
+      "clh-v01-0051"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "WAYFINDING"
+    ],
+    "source_families": [
+      "Road / Wayfinding"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": []
+  },
+  {
+    "intent_id": "intent-90378cfe023a",
+    "semantic_description": "Police service or police post.",
+    "related_composition_ids": [
+      "clh-v01-0052"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "WAYFINDING"
+    ],
+    "source_families": [
+      "Road / Wayfinding"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": []
+  },
+  {
+    "intent_id": "intent-354468112d2d",
+    "semantic_description": "Food service / restaurant available.",
+    "related_composition_ids": [
+      "clh-v01-0053"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "WAYFINDING"
+    ],
+    "source_families": [
+      "Road / Wayfinding"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Low in service-sign context, but it does not distinguish restaurant, grocery, or food need."
+    ]
+  },
+  {
+    "intent_id": "intent-babe21381f90",
+    "semantic_description": "Hotel/accommodation available.",
+    "related_composition_ids": [
+      "clh-v01-0054"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "WAYFINDING"
+    ],
+    "source_families": [
+      "Road / Wayfinding"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": []
+  },
+  {
+    "intent_id": "intent-e84db0c2d1b4",
+    "semantic_description": "Information point / tourist or public information.",
+    "related_composition_ids": [
+      "clh-v01-0055"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "WAYFINDING"
+    ],
+    "source_families": [
+      "Road / Wayfinding"
+    ],
+    "current_coverage_observations": [
+      "LOSSY"
+    ],
+    "unresolved_ambiguity": [
+      "Yes. Written text is not always an information service, and information can be spoken/digital."
+    ]
+  },
+  {
+    "intent_id": "intent-451a8b38a377",
+    "semantic_description": "General danger warning or caution ahead.",
+    "related_composition_ids": [
+      "clh-v01-0056"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "WAYFINDING"
+    ],
+    "source_families": [
+      "Road / Wayfinding"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": []
+  },
+  {
+    "intent_id": "intent-f814f4781efc",
+    "semantic_description": "Road works or maintenance ahead.",
+    "related_composition_ids": [
+      "clh-v01-0057"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "WAYFINDING"
+    ],
+    "source_families": [
+      "Road / Wayfinding"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Low in road context; outside it could mean repair help or tools needed."
+    ]
+  },
+  {
+    "intent_id": "intent-6c27d1e3f8c1",
+    "semantic_description": "Road surface may be slippery.",
+    "related_composition_ids": [
+      "clh-v01-0058"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "WAYFINDING"
+    ],
+    "source_families": [
+      "Road / Wayfinding"
+    ],
+    "current_coverage_observations": [
+      "LOSSY"
+    ],
+    "unresolved_ambiguity": [
+      "Yes. Generic warning does not say surface traction is the issue."
+    ]
+  },
+  {
+    "intent_id": "intent-65f7a67877ed",
+    "semantic_description": "Uneven or rough road surface ahead.",
+    "related_composition_ids": [
+      "clh-v01-0058"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "WAYFINDING"
+    ],
+    "source_families": [
+      "Road / Wayfinding"
+    ],
+    "current_coverage_observations": [
+      "LOSSY"
+    ],
+    "unresolved_ambiguity": [
+      "Yes. Generic caution loses the surface condition."
+    ]
+  },
+  {
+    "intent_id": "intent-fa78000e18c6",
+    "semantic_description": "Speed hump/bump ahead.",
+    "related_composition_ids": [
+      "clh-v01-0058"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "WAYFINDING"
+    ],
+    "source_families": [
+      "Road / Wayfinding"
+    ],
+    "current_coverage_observations": [
+      "LOSSY"
+    ],
+    "unresolved_ambiguity": [
+      "Yes. It may mean go up, uphill, upstairs, or caution ahead, not a bump."
+    ]
+  },
+  {
+    "intent_id": "intent-322b8d93d0ec",
+    "semantic_description": "Road has no through continuation.",
+    "related_composition_ids": [
+      "clh-v01-0059"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "WAYFINDING"
+    ],
+    "source_families": [
+      "Road / Wayfinding"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Low in road navigation context, but not safe outside it."
+    ]
+  },
+  {
+    "intent_id": "intent-911afab2298a",
+    "semantic_description": "Do not exceed 50 in the jurisdiction's speed unit.",
+    "related_composition_ids": [
+      "clh-v01-0060"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "WAYFINDING"
+    ],
+    "source_families": [
+      "Road / Wayfinding"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Yes. Current quantity primitives cannot encode exact 50 or maximum-speed rule."
+    ]
+  },
+  {
+    "intent_id": "intent-989c587b0063",
+    "semantic_description": "Turning left at the next junction is prohibited.",
+    "related_composition_ids": [
+      "clh-v01-0061"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "WAYFINDING"
+    ],
+    "source_families": [
+      "Road / Wayfinding"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Low in road context. Adding `move_car` is usually redundant because the sign context supplies vehicle/road use."
+    ]
+  },
+  {
+    "intent_id": "intent-3b09695894b0",
+    "semantic_description": "Current viewer/location reference point on a map or wayfinding board.",
+    "related_composition_ids": [
+      "clh-v01-0062"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "WAYFINDING"
+    ],
+    "source_families": [
+      "Road / Wayfinding"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": []
+  },
+  {
+    "intent_id": "intent-6bf45a6e5eca",
+    "semantic_description": "Four-turn practical water/payment dialogue",
+    "related_composition_ids": [
+      "clh-v01-0063"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "OTHER"
+    ],
+    "source_families": [
+      "Stress Test 05"
+    ],
+    "current_coverage_observations": [
+      "LOSSY"
+    ],
+    "unresolved_ambiguity": [
+      "Exact quantity, bottle/unit, price, and politeness are intentionally omitted; frozen canonical stimulus has no matching run results."
+    ]
+  },
+  {
+    "intent_id": "intent-3dc0d984673e",
+    "semantic_description": "Back to previous screen or step",
+    "related_composition_ids": [
+      "clh-v01-0064"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "UI"
+    ],
+    "source_families": [
+      "Web/UI"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Human review accepts existing backward/directional representation as sufficient in a back-control context.",
+      "direction/navigation ambiguity"
+    ]
+  },
+  {
+    "intent_id": "intent-749245cddd8c",
+    "semantic_description": "Undo / restore previous state",
+    "related_composition_ids": [
+      "clh-v01-0064"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "UI"
+    ],
+    "source_families": [
+      "Web/UI"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Undo/restore can use backward/back directional meaning in editor history context; no UNDO/RESTORE primitive.",
+      "temporal/action history"
+    ]
+  },
+  {
+    "intent_id": "intent-97b5b3c7f192",
+    "semantic_description": "Forward / next step",
+    "related_composition_ids": [
+      "clh-v01-0065"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "UI"
+    ],
+    "source_families": [
+      "Web/UI"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Human review accepts existing forward/directional representation as sufficient in a next/forward UI context.",
+      "direction/navigation ambiguity"
+    ]
+  },
+  {
+    "intent_id": "intent-827c70b58976",
+    "semantic_description": "Home/start/dashboard",
+    "related_composition_ids": [
+      "clh-v01-0066"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "UI"
+    ],
+    "source_families": [
+      "Web/UI"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "In an app/UI context, place_home can naturally mean home/start/main location; no HOME_UI primitive needed.",
+      "home physical vs UI-start"
+    ]
+  },
+  {
+    "intent_id": "intent-90047f471958",
+    "semantic_description": "Close/cancel dialog",
+    "related_composition_ids": [
+      "clh-v01-0067"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "UI"
+    ],
+    "source_families": [
+      "Web/UI"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Close/cancel can use NO or MINUS depending on interface context; no dedicated CLOSE/CANCEL primitive.",
+      "cancel vs no vs denied"
+    ]
+  },
+  {
+    "intent_id": "intent-060ff5e8e897",
+    "semantic_description": "Disabled control",
+    "related_composition_ids": [
+      "clh-v01-0067"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "UI"
+    ],
+    "source_families": [
+      "Web/UI"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "NO can mark disabled/cannot-use in a control context; no DISABLED primitive.",
+      "disabled vs permission denied vs unavailable"
+    ]
+  },
+  {
+    "intent_id": "intent-4b94a9731688",
+    "semantic_description": "Selected item",
+    "related_composition_ids": [
+      "clh-v01-0068"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "UI"
+    ],
+    "source_families": [
+      "Web/UI"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Human review accepts YES for selected/active state where the UI supplies the selectable object.",
+      "selection state"
+    ]
+  },
+  {
+    "intent_id": "intent-1e868934cd03",
+    "semantic_description": "Active/current page",
+    "related_composition_ids": [
+      "clh-v01-0069"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "UI"
+    ],
+    "source_families": [
+      "Web/UI"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Current/here remains a direct representation for active/current page.",
+      "current state"
+    ]
+  },
+  {
+    "intent_id": "intent-b92fed069b92",
+    "semantic_description": "Loading / processing",
+    "related_composition_ids": [
+      "clh-v01-0070"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "UI"
+    ],
+    "source_families": [
+      "Web/UI"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Human review accepts TIME as contextual wait/loading/processing/in-progress representation; not a current GAP.",
+      "process/wait state"
+    ]
+  },
+  {
+    "intent_id": "intent-5e3a6eabbe69",
+    "semantic_description": "Empty state / no content",
+    "related_composition_ids": [
+      "clh-v01-0071"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "UI"
+    ],
+    "source_families": [
+      "Web/UI"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Empty state should be expressed as absence of the relevant content, e.g. NO + TEXT or NO + IMAGE; no EMPTY primitive.",
+      "none/empty state"
+    ]
+  },
+  {
+    "intent_id": "intent-cf66c9a0932d",
+    "semantic_description": "Delete item",
+    "related_composition_ids": [
+      "clh-v01-0071"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "UI"
+    ],
+    "source_families": [
+      "Web/UI"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Delete/remove can be NO + relevant object or MINUS depending on context; no trash/delete primitive.",
+      "delete vs archive vs close"
+    ]
+  },
+  {
+    "intent_id": "intent-7845f986dc19",
+    "semantic_description": "Success/completed",
+    "related_composition_ids": [
+      "clh-v01-0072"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "UI"
+    ],
+    "source_families": [
+      "Web/UI"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Success/completed can use GOOD or YES + GOOD depending on context.",
+      "success vs selected yes"
+    ]
+  },
+  {
+    "intent_id": "intent-361efc7cecd5",
+    "semantic_description": "Error/failure",
+    "related_composition_ids": [
+      "clh-v01-0073"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "UI"
+    ],
+    "source_families": [
+      "Web/UI"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Error/failure can use BAD + !; warning/attention can use !.",
+      "error cause missing"
+    ]
+  },
+  {
+    "intent_id": "intent-c85cce08693c",
+    "semantic_description": "Save changes",
+    "related_composition_ids": [
+      "clh-v01-0074"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "UI"
+    ],
+    "source_families": [
+      "Web/UI"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Human review accepts DOWN as contextual save/download/move-into-storage in UI context. SAVE is not canonically identical to DOWNLOAD.",
+      "persistence/storage action"
+    ]
+  },
+  {
+    "intent_id": "intent-d8d5f256a3a6",
+    "semantic_description": "Archive item",
+    "related_composition_ids": [
+      "clh-v01-0074"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "UI"
+    ],
+    "source_families": [
+      "Web/UI"
+    ],
+    "current_coverage_observations": [
+      "LOSSY"
+    ],
+    "unresolved_ambiguity": [
+      "Archive may use DOWN + relevant content/object to suggest moving/storing elsewhere, but the exact composition is unresolved. Dedicated ARCHIVE is DEFERRED_UNTIL_NEEDED.",
+      "archive/retain hidden state"
+    ]
+  },
+  {
+    "intent_id": "intent-68ff63fb82e0",
+    "semantic_description": "Download",
+    "related_composition_ids": [
+      "clh-v01-0074"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "UI"
+    ],
+    "source_families": [
+      "Web/UI"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Download uses DOWN + content in digital context; no conventional download glyph primitive.",
+      "download arrow convention"
+    ]
+  },
+  {
+    "intent_id": "intent-849d54b90cfe",
+    "semantic_description": "Publish/send message",
+    "related_composition_ids": [
+      "clh-v01-0075"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "UI"
+    ],
+    "source_families": [
+      "Web/UI"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Human review accepts UP as contextual publish/upload/send outward; communication can be added when speech/message semantics matter.",
+      "send vs publish vs speak"
+    ]
+  },
+  {
+    "intent_id": "intent-ff4085ad1573",
+    "semantic_description": "Upload",
+    "related_composition_ids": [
+      "clh-v01-0075"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "UI"
+    ],
+    "source_families": [
+      "Web/UI"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Upload uses UP + content in digital context; no conventional upload glyph primitive.",
+      "upload arrow convention"
+    ]
+  },
+  {
+    "intent_id": "intent-33edbbb52264",
+    "semantic_description": "Edit content",
+    "related_composition_ids": [
+      "clh-v01-0076"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "UI"
+    ],
+    "source_families": [
+      "Web/UI"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Domain pressure around EDIT revealed the broader Core primitive action_change: CHANGE / TRANSFORM / MODIFY. It is not merely an EDIT icon.",
+      "edit/change action"
+    ]
+  },
+  {
+    "intent_id": "intent-a7f9107c82b5",
+    "semantic_description": "Login/access",
+    "related_composition_ids": [
+      "clh-v01-0077"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "UI"
+    ],
+    "source_families": [
+      "Web/UI"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Login/access can use PERSON + HERE or related current composition; no LOGIN primitive.",
+      "identity/access"
+    ]
+  },
+  {
+    "intent_id": "intent-b77f13ea8d89",
+    "semantic_description": "Permission denied",
+    "related_composition_ids": [
+      "clh-v01-0078"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "UI"
+    ],
+    "source_families": [
+      "Web/UI"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Permission denied can use NO + PERSON or NO + HERE depending on UI context; no PERMISSION primitive from this test.",
+      "permission denied vs no"
+    ]
+  },
+  {
+    "intent_id": "intent-9b787e043659",
+    "semantic_description": "Settings/preferences",
+    "related_composition_ids": [
+      "clh-v01-0079"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "UI"
+    ],
+    "source_families": [
+      "Web/UI"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Human review accepts service_tools/TOOLS as sufficiently broad for settings/configuration/tools in software context; no gear/settings icon.",
+      "gear/settings convention"
+    ]
+  },
+  {
+    "intent_id": "intent-234bf9c629a2",
+    "semantic_description": "Text content",
+    "related_composition_ids": [
+      "clh-v01-0080"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "UI"
+    ],
+    "source_families": [
+      "Web/UI"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Existing media_text is sufficient.",
+      "direct content primitive"
+    ]
+  },
+  {
+    "intent_id": "intent-3ac0900c6562",
+    "semantic_description": "Notification/message alert",
+    "related_composition_ids": [
+      "clh-v01-0081"
+    ],
+    "modes_represented": [
+      "STANDALONE"
+    ],
+    "surfaces_represented": [
+      "UI"
+    ],
+    "source_families": [
+      "Web/UI"
+    ],
+    "current_coverage_observations": [
+      "SUPPORTED"
+    ],
+    "unresolved_ambiguity": [
+      "Notification/message alert can use communication primitives plus ! depending on actual meaning; no MESSAGE/NOTIFICATION primitive.",
+      "message vs alert vs speech"
+    ]
+  }
+]

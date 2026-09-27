@@ -1,0 +1,188 @@
+{
+  "record_schema": "composition-record-v0.1-proposal",
+  "composition_id": "clh-v01-0037",
+  "lifecycle_status": "EXPERIMENTAL",
+  "pictiq_message": {
+    "schema": "0.1",
+    "pictiq": "1.1",
+    "frames": [
+      {
+        "tokens": [
+          {
+            "type": "icon",
+            "id": "person_generic"
+          },
+          {
+            "type": "icon",
+            "id": "punct_question"
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "icon",
+            "id": "rel_here"
+          },
+          {
+            "type": "icon",
+            "id": "punct_question"
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "icon",
+            "id": "person_generic"
+          },
+          {
+            "type": "icon",
+            "id": "item_clothing"
+          },
+          {
+            "type": "icon",
+            "id": "punct_question"
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "entity",
+            "id": "entity:odysseus@literary"
+          }
+        ]
+      }
+    ]
+  },
+  "semantic_neighbourhoods": [
+    {
+      "intent_id": "intent-85a8cf11199a",
+      "canonical_intent": "Arete dialogue: identity / origin / clothing",
+      "semantic_examples": [
+        "The dialogue asks for identity, place/origin in context, and clothing explanation; Odysseus can answer with his entity symbol."
+      ],
+      "required_context": [
+        {
+          "cue": "narrative and named-character context",
+          "availability": "REQUIRED",
+          "evidence_ids": [
+            "cand-odyssey-04"
+          ]
+        }
+      ],
+      "optional_context": [
+        {
+          "cue": "surrounding narrative scene and established entity identities",
+          "availability": "OPTIONAL",
+          "evidence_ids": [
+            "cand-odyssey-04"
+          ]
+        }
+      ],
+      "known_ambiguities": [
+        "No WHO/YOU/I/NAME/FROM/ORIGIN/GIVE primitives were added; named places may later need Entity Symbols."
+      ],
+      "interpretation_evidence_ids": [
+        "cand-odyssey-04"
+      ],
+      "coverage_assessments": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "BOOK",
+          "outcome": "GAP",
+          "composition_ids": [
+            "clh-v01-0037"
+          ],
+          "evidence_ids": [
+            "cand-odyssey-04"
+          ],
+          "notes": "Machine-readable ID arrays preserved exactly. Omitted source detail: exact giver relation, politeness/formulaic dialogue framing"
+        }
+      ]
+    }
+  ],
+  "applicability": [
+    {
+      "communication_mode": "STANDALONE",
+      "communication_surface": "BOOK",
+      "context": {
+        "domain": [
+          "narrative"
+        ],
+        "situation": [
+          "Odyssey narrative fragment"
+        ],
+        "task": [
+          "preserve selected narrative distinctions and event sequence"
+        ],
+        "context_supplies": [
+          {
+            "cue": "narrative and named-character context",
+            "availability": "REQUIRED",
+            "evidence_ids": [
+              "cand-odyssey-04"
+            ]
+          },
+          {
+            "cue": "surrounding narrative scene and established entity identities",
+            "availability": "OPTIONAL",
+            "evidence_ids": [
+              "cand-odyssey-04"
+            ]
+          }
+        ]
+      },
+      "evidence_ids": [
+        "cand-odyssey-04"
+      ]
+    }
+  ],
+  "preservation_assessments": [
+    "GAP",
+    "INTENTIONAL_OMISSION",
+    "PRESERVED_BY_COMPOSITION"
+  ],
+  "origin": {
+    "event_id": "origin-clh-v01-0037",
+    "source_type": "ODYSSEY",
+    "reference": "docs/research/odyssey-toki-pona-pictiq-stress-test-03.json",
+    "location": "cand-odyssey-04",
+    "role": "ORIGIN",
+    "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+    "sha256": "4040b4fdc9190f0012e9fbf70469aa02bf77e43a0cd22de8e9371a149b704784",
+    "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+  },
+  "uses": [],
+  "tests": [
+    {
+      "source_type": "STRESS_TEST",
+      "reference": "docs/research/odyssey-toki-pona-pictiq-stress-test-03.json",
+      "location": "04-arete-dialogue",
+      "status": "human-accepted Stage 1/2 research representation; not a normative grammar example",
+      "event_date": "2026-09-10",
+      "pictiq_version": "unknown",
+      "message_schema_version": "unknown",
+      "role": "TEST",
+      "event_id": "test-cand-odyssey-04",
+      "notes": "Machine-readable ID arrays preserved exactly. Omitted source detail: exact giver relation, politeness/formulaic dialogue framing"
+    }
+  ],
+  "failures": [],
+  "compatibility": {
+    "pictiq_version": "1.1",
+    "message_schema_version": "0.1",
+    "source_commit": "unknown",
+    "message_validity": "CURRENT",
+    "compatibility_notes": [
+      "Research Message JSON is exact where preserved; when source only preserved IDs, the v0.1 JSON structure is a transparent encoding of that exact sequence.",
+      "Source commit/version is unknown unless the source explicitly records it. Harvest snapshot: 8fae507.",
+      "HISTORICAL HARVEST CANDIDATE only; no Composition Library acceptance implied."
+    ]
+  },
+  "related_composition_ids": [],
+  "notes": [
+    "cand-odyssey-04: Machine-readable ID arrays preserved exactly. Omitted source detail: exact giver relation, politeness/formulaic dialogue framing"
+  ]
+}

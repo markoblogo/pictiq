@@ -1,0 +1,152 @@
+{
+  "record_schema": "composition-record-v0.1-proposal",
+  "composition_id": "clh-v01-0021",
+  "lifecycle_status": "CANDIDATE",
+  "pictiq_message": {
+    "schema": "0.1",
+    "pictiq": "1.1",
+    "frames": [
+      {
+        "tokens": [
+          {
+            "type": "icon",
+            "id": "move_taxi"
+          },
+          {
+            "type": "icon",
+            "id": "money_card"
+          },
+          {
+            "type": "icon",
+            "id": "punct_question"
+          }
+        ]
+      }
+    ]
+  },
+  "semantic_neighbourhoods": [
+    {
+      "intent_id": "intent-c21d183fadb4",
+      "canonical_intent": "Can I pay for a taxi by card?",
+      "semantic_examples": [
+        "Can I pay for a taxi by card?"
+      ],
+      "required_context": [
+        {
+          "cue": "Handbook prose / example label supplies the scoped gloss",
+          "availability": "REQUIRED",
+          "evidence_ids": [
+            "cand-handbook-taxi-card-payment"
+          ]
+        }
+      ],
+      "optional_context": [
+        {
+          "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+          "availability": "OPTIONAL",
+          "evidence_ids": [
+            "cand-handbook-taxi-card-payment"
+          ]
+        }
+      ],
+      "known_ambiguities": [],
+      "interpretation_evidence_ids": [
+        "cand-handbook-taxi-card-payment"
+      ],
+      "coverage_assessments": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "BOOK",
+          "outcome": "SUPPORTED",
+          "composition_ids": [
+            "clh-v01-0021"
+          ],
+          "evidence_ids": [
+            "cand-handbook-taxi-card-payment"
+          ],
+          "notes": "Handbook explicitly glosses sequence."
+        }
+      ]
+    }
+  ],
+  "applicability": [
+    {
+      "communication_mode": "STANDALONE",
+      "communication_surface": "BOOK",
+      "context": {
+        "domain": [
+          "practical communication"
+        ],
+        "situation": [
+          "published Handbook v1.0 worked example"
+        ],
+        "task": [
+          "can i pay for a taxi by card?"
+        ],
+        "context_supplies": [
+          {
+            "cue": "Handbook prose / example label supplies the scoped gloss",
+            "availability": "REQUIRED",
+            "evidence_ids": [
+              "cand-handbook-taxi-card-payment"
+            ]
+          },
+          {
+            "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+            "availability": "OPTIONAL",
+            "evidence_ids": [
+              "cand-handbook-taxi-card-payment"
+            ]
+          }
+        ]
+      },
+      "evidence_ids": [
+        "cand-handbook-taxi-card-payment"
+      ]
+    }
+  ],
+  "preservation_assessments": [
+    "PRESERVED_BY_COMPOSITION"
+  ],
+  "origin": {
+    "event_id": "origin-clh-v01-0021",
+    "source_type": "HANDBOOK",
+    "reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+    "location": "cand-handbook-taxi-card-payment",
+    "role": "ORIGIN",
+    "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+    "sha256": "5fe3eea1aab10ab51c15727ff2526fb4be42e93ab500edb3a56ee694458b369b",
+    "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+  },
+  "uses": [],
+  "tests": [
+    {
+      "source_type": "HANDBOOK",
+      "reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+      "location": "Chapter 2 worked examples; exact page noted in README",
+      "status": "published illustrative example; no Library acceptance implied",
+      "pictiq_version": "unknown",
+      "message_schema_version": "unknown",
+      "role": "TEST",
+      "event_id": "test-cand-handbook-taxi-card-payment",
+      "notes": "Handbook explicitly glosses sequence."
+    }
+  ],
+  "failures": [],
+  "compatibility": {
+    "pictiq_version": "unknown",
+    "message_schema_version": "unknown",
+    "source_commit": "unknown",
+    "message_validity": "CURRENT",
+    "compatibility_notes": [
+      "Research Message JSON is exact where preserved; when source only preserved IDs, the v0.1 JSON structure is a transparent encoding of that exact sequence.",
+      "Source commit/version is unknown unless the source explicitly records it. Harvest snapshot: 8fae507.",
+      "HISTORICAL HARVEST CANDIDATE only; no Composition Library acceptance implied.",
+      "The source stores an exact token sequence/ID array, not a versioned Message JSON; schema-shaped Message fields are a research encoding, and source Pictiq/Message-schema versions are unknown."
+    ]
+  },
+  "related_composition_ids": [],
+  "notes": [
+    "cand-handbook-taxi-card-payment: Handbook explicitly glosses sequence."
+  ]
+}

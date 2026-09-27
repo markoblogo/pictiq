@@ -1,0 +1,240 @@
+{
+  "record_schema": "composition-record-v0.1-proposal",
+  "composition_id": "clh-v01-0067",
+  "lifecycle_status": "EXPERIMENTAL",
+  "pictiq_message": {
+    "schema": "0.1",
+    "pictiq": "1.1",
+    "frames": [
+      {
+        "tokens": [
+          {
+            "type": "icon",
+            "id": "logic_no"
+          }
+        ]
+      }
+    ]
+  },
+  "semantic_neighbourhoods": [
+    {
+      "intent_id": "intent-90047f471958",
+      "canonical_intent": "Close/cancel dialog",
+      "semantic_examples": [
+        "Dismiss current surface without accepting"
+      ],
+      "required_context": [
+        {
+          "cue": "Dialog/modal context",
+          "availability": "REQUIRED",
+          "evidence_ids": [
+            "cand-webui-04"
+          ]
+        }
+      ],
+      "optional_context": [
+        {
+          "cue": "Dialog/modal context",
+          "availability": "OPTIONAL",
+          "evidence_ids": [
+            "cand-webui-04"
+          ]
+        }
+      ],
+      "known_ambiguities": [
+        "Close/cancel can use NO or MINUS depending on interface context; no dedicated CLOSE/CANCEL primitive.",
+        "cancel vs no vs denied"
+      ],
+      "interpretation_evidence_ids": [
+        "cand-webui-04"
+      ],
+      "coverage_assessments": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "outcome": "SUPPORTED",
+          "composition_ids": [
+            "clh-v01-0067"
+          ],
+          "evidence_ids": [
+            "cand-webui-04"
+          ],
+          "notes": "Close/cancel can use NO or MINUS depending on interface context; no dedicated CLOSE/CANCEL primitive."
+        }
+      ]
+    },
+    {
+      "intent_id": "intent-060ff5e8e897",
+      "canonical_intent": "Disabled control",
+      "semantic_examples": [
+        "Control cannot be used now"
+      ],
+      "required_context": [
+        {
+          "cue": "Button/control context",
+          "availability": "REQUIRED",
+          "evidence_ids": [
+            "cand-webui-07"
+          ]
+        }
+      ],
+      "optional_context": [
+        {
+          "cue": "Button/control context",
+          "availability": "OPTIONAL",
+          "evidence_ids": [
+            "cand-webui-07"
+          ]
+        }
+      ],
+      "known_ambiguities": [
+        "NO can mark disabled/cannot-use in a control context; no DISABLED primitive.",
+        "disabled vs permission denied vs unavailable"
+      ],
+      "interpretation_evidence_ids": [
+        "cand-webui-07"
+      ],
+      "coverage_assessments": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "outcome": "SUPPORTED",
+          "composition_ids": [
+            "clh-v01-0067"
+          ],
+          "evidence_ids": [
+            "cand-webui-07"
+          ],
+          "notes": "NO can mark disabled/cannot-use in a control context; no DISABLED primitive."
+        }
+      ]
+    }
+  ],
+  "applicability": [
+    {
+      "communication_mode": "STANDALONE",
+      "communication_surface": "UI",
+      "context": {
+        "domain": [
+          "web-ui"
+        ],
+        "situation": [
+          "navigation"
+        ],
+        "task": [
+          "close/cancel dialog"
+        ],
+        "context_supplies": [
+          {
+            "cue": "Dialog/modal context",
+            "availability": "REQUIRED",
+            "evidence_ids": [
+              "cand-webui-04"
+            ]
+          },
+          {
+            "cue": "Dialog/modal context",
+            "availability": "OPTIONAL",
+            "evidence_ids": [
+              "cand-webui-04"
+            ]
+          }
+        ]
+      },
+      "evidence_ids": [
+        "cand-webui-04"
+      ]
+    },
+    {
+      "communication_mode": "STANDALONE",
+      "communication_surface": "UI",
+      "context": {
+        "domain": [
+          "web-ui"
+        ],
+        "situation": [
+          "state"
+        ],
+        "task": [
+          "disabled control"
+        ],
+        "context_supplies": [
+          {
+            "cue": "Button/control context",
+            "availability": "REQUIRED",
+            "evidence_ids": [
+              "cand-webui-07"
+            ]
+          },
+          {
+            "cue": "Button/control context",
+            "availability": "OPTIONAL",
+            "evidence_ids": [
+              "cand-webui-07"
+            ]
+          }
+        ]
+      },
+      "evidence_ids": [
+        "cand-webui-07"
+      ]
+    }
+  ],
+  "preservation_assessments": [
+    "CONTEXT-SUFFICIENT"
+  ],
+  "origin": {
+    "event_id": "origin-clh-v01-0067",
+    "source_type": "WEB_UI",
+    "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+    "location": "cand-webui-04",
+    "role": "ORIGIN",
+    "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+    "sha256": "c312c06d5f92fc100fcf5df4e7ddbf27d88c4bd5013dbb9ee01728fd815cb64b",
+    "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+  },
+  "uses": [],
+  "tests": [
+    {
+      "source_type": "WEB_UI",
+      "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+      "location": "WEBUI-04",
+      "status": "human semantic reconciliation; CONTEXT-SUFFICIENT; WORKS_ONLY_WITH_STRONG_CONTEXT",
+      "event_date": "2026-09-27",
+      "pictiq_version": "v1.2.0",
+      "message_schema_version": "0.1",
+      "role": "TEST",
+      "event_id": "test-cand-webui-04",
+      "notes": "Close/cancel can use NO or MINUS depending on interface context; no dedicated CLOSE/CANCEL primitive."
+    },
+    {
+      "source_type": "WEB_UI",
+      "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+      "location": "WEBUI-07",
+      "status": "human semantic reconciliation; CONTEXT-SUFFICIENT; WORKS_ONLY_WITH_STRONG_CONTEXT",
+      "event_date": "2026-09-27",
+      "pictiq_version": "v1.2.0",
+      "message_schema_version": "0.1",
+      "role": "TEST",
+      "event_id": "test-cand-webui-07",
+      "notes": "NO can mark disabled/cannot-use in a control context; no DISABLED primitive."
+    }
+  ],
+  "failures": [],
+  "compatibility": {
+    "pictiq_version": "1.1",
+    "message_schema_version": "0.1",
+    "source_commit": "unknown",
+    "message_validity": "CURRENT",
+    "compatibility_notes": [
+      "Research Message JSON is exact where preserved; when source only preserved IDs, the v0.1 JSON structure is a transparent encoding of that exact sequence.",
+      "Source commit/version is unknown unless the source explicitly records it. Harvest snapshot: 8fae507.",
+      "HISTORICAL HARVEST CANDIDATE only; no Composition Library acceptance implied."
+    ]
+  },
+  "related_composition_ids": [],
+  "notes": [
+    "cand-webui-04: Close/cancel can use NO or MINUS depending on interface context; no dedicated CLOSE/CANCEL primitive.",
+    "cand-webui-07: NO can mark disabled/cannot-use in a control context; no DISABLED primitive."
+  ]
+}

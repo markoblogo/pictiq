@@ -1,0 +1,207 @@
+{
+  "record_schema": "composition-record-v0.1-proposal",
+  "composition_id": "clh-v01-0063",
+  "lifecycle_status": "EXPERIMENTAL",
+  "pictiq_message": {
+    "schema": "0.1",
+    "pictiq": "1.1",
+    "contexts": [
+      "universal-v1"
+    ],
+    "frames": [
+      {
+        "tokens": [
+          {
+            "type": "icon",
+            "id": "need_water"
+          },
+          {
+            "type": "icon",
+            "id": "punct_question"
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "icon",
+            "id": "logic_yes"
+          },
+          {
+            "type": "icon",
+            "id": "state_cold"
+          },
+          {
+            "type": "icon",
+            "id": "need_water"
+          },
+          {
+            "type": "icon",
+            "id": "money_coins"
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "icon",
+            "id": "need_water"
+          },
+          {
+            "type": "icon",
+            "id": "qty_plus"
+          },
+          {
+            "type": "icon",
+            "id": "money_card"
+          },
+          {
+            "type": "icon",
+            "id": "punct_question"
+          }
+        ]
+      },
+      {
+        "tokens": [
+          {
+            "type": "icon",
+            "id": "logic_yes"
+          },
+          {
+            "type": "icon",
+            "id": "money_coins"
+          }
+        ]
+      }
+    ]
+  },
+  "semantic_neighbourhoods": [
+    {
+      "intent_id": "intent-6bf45a6e5eca",
+      "canonical_intent": "Four-turn practical water/payment dialogue",
+      "semantic_examples": [
+        "Do you have water?",
+        "Yes; cold water; for sale.",
+        "More water; card payment?",
+        "Yes; money/currency."
+      ],
+      "required_context": [
+        {
+          "cue": "turn sequence and research stimulus context",
+          "availability": "REQUIRED",
+          "evidence_ids": [
+            "cand-st05-05a"
+          ]
+        }
+      ],
+      "optional_context": [
+        {
+          "cue": "frame order and fixed test task",
+          "availability": "OPTIONAL",
+          "evidence_ids": [
+            "cand-st05-05a"
+          ]
+        }
+      ],
+      "known_ambiguities": [
+        "Exact quantity, bottle/unit, price, and politeness are intentionally omitted; frozen canonical stimulus has no matching run results."
+      ],
+      "interpretation_evidence_ids": [
+        "cand-st05-05a"
+      ],
+      "coverage_assessments": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "OTHER",
+          "outcome": "LOSSY",
+          "composition_ids": [
+            "clh-v01-0063"
+          ],
+          "evidence_ids": [
+            "cand-st05-05a"
+          ],
+          "notes": "Canonical frozen message only; alternate supplied transcripts are not attached as results."
+        }
+      ]
+    }
+  ],
+  "applicability": [
+    {
+      "communication_mode": "STANDALONE",
+      "communication_surface": "OTHER",
+      "context": {
+        "domain": [
+          "cross-model stress test"
+        ],
+        "situation": [
+          "frozen 05A blind visual stimulus"
+        ],
+        "task": [
+          "decode a four-turn visual dialogue"
+        ],
+        "context_supplies": [
+          {
+            "cue": "turn sequence and research stimulus context",
+            "availability": "REQUIRED",
+            "evidence_ids": [
+              "cand-st05-05a"
+            ]
+          },
+          {
+            "cue": "frame order and fixed test task",
+            "availability": "OPTIONAL",
+            "evidence_ids": [
+              "cand-st05-05a"
+            ]
+          }
+        ]
+      },
+      "evidence_ids": [
+        "cand-st05-05a"
+      ]
+    }
+  ],
+  "preservation_assessments": [
+    "INTENTIONAL_OMISSION",
+    "LOSSY"
+  ],
+  "origin": {
+    "event_id": "origin-clh-v01-0063",
+    "source_type": "STRESS TEST 05",
+    "reference": "docs/research/stress-test-05-zero-training-cross-model/05a-canonical-dialogue.json",
+    "location": "cand-st05-05a",
+    "role": "ORIGIN",
+    "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+    "sha256": "36c080c3e34695a2f602616bb1e27252a130610a6cf8534111890888215dd9f8",
+    "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+  },
+  "uses": [],
+  "tests": [
+    {
+      "source_type": "STRESS_TEST",
+      "reference": "docs/research/stress-test-05-zero-training-cross-model/05a-canonical-dialogue.json",
+      "location": "05A canonical dialogue",
+      "status": "frozen stimulus; no verified runs for this exact stimulus",
+      "message_schema_version": "0.1",
+      "role": "TEST",
+      "event_id": "test-cand-st05-05a",
+      "notes": "Canonical frozen message only; alternate supplied transcripts are not attached as results."
+    }
+  ],
+  "failures": [],
+  "compatibility": {
+    "pictiq_version": "1.1",
+    "message_schema_version": "0.1",
+    "source_commit": "unknown",
+    "message_validity": "CURRENT",
+    "compatibility_notes": [
+      "Research Message JSON is exact where preserved; when source only preserved IDs, the v0.1 JSON structure is a transparent encoding of that exact sequence.",
+      "Source commit/version is unknown unless the source explicitly records it. Harvest snapshot: 8fae507.",
+      "HISTORICAL HARVEST CANDIDATE only; no Composition Library acceptance implied."
+    ]
+  },
+  "related_composition_ids": [],
+  "notes": [
+    "cand-st05-05a: Canonical frozen message only; alternate supplied transcripts are not attached as results."
+  ]
+}

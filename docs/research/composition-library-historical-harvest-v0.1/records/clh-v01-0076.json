@@ -1,0 +1,151 @@
+{
+  "record_schema": "composition-record-v0.1-proposal",
+  "composition_id": "clh-v01-0076",
+  "lifecycle_status": "EXPERIMENTAL",
+  "pictiq_message": {
+    "schema": "0.1",
+    "pictiq": "1.1",
+    "frames": [
+      {
+        "tokens": [
+          {
+            "type": "icon",
+            "id": "media_text"
+          },
+          {
+            "type": "icon",
+            "id": "action_change"
+          }
+        ]
+      }
+    ]
+  },
+  "semantic_neighbourhoods": [
+    {
+      "intent_id": "intent-33edbbb52264",
+      "canonical_intent": "Edit content",
+      "semantic_examples": [
+        "Modify existing content"
+      ],
+      "required_context": [
+        {
+          "cue": "Text/image editor context",
+          "availability": "REQUIRED",
+          "evidence_ids": [
+            "cand-webui-16"
+          ]
+        }
+      ],
+      "optional_context": [
+        {
+          "cue": "Text/image editor context",
+          "availability": "OPTIONAL",
+          "evidence_ids": [
+            "cand-webui-16"
+          ]
+        }
+      ],
+      "known_ambiguities": [
+        "Domain pressure around EDIT revealed the broader Core primitive action_change: CHANGE / TRANSFORM / MODIFY. It is not merely an EDIT icon.",
+        "edit/change action"
+      ],
+      "interpretation_evidence_ids": [
+        "cand-webui-16"
+      ],
+      "coverage_assessments": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "UI",
+          "outcome": "SUPPORTED",
+          "composition_ids": [
+            "clh-v01-0076"
+          ],
+          "evidence_ids": [
+            "cand-webui-16"
+          ],
+          "notes": "Domain pressure around EDIT revealed the broader Core primitive action_change: CHANGE / TRANSFORM / MODIFY. It is not merely an EDIT icon."
+        }
+      ]
+    }
+  ],
+  "applicability": [
+    {
+      "communication_mode": "STANDALONE",
+      "communication_surface": "UI",
+      "context": {
+        "domain": [
+          "web-ui"
+        ],
+        "situation": [
+          "action"
+        ],
+        "task": [
+          "edit content"
+        ],
+        "context_supplies": [
+          {
+            "cue": "Text/image editor context",
+            "availability": "REQUIRED",
+            "evidence_ids": [
+              "cand-webui-16"
+            ]
+          },
+          {
+            "cue": "Text/image editor context",
+            "availability": "OPTIONAL",
+            "evidence_ids": [
+              "cand-webui-16"
+            ]
+          }
+        ]
+      },
+      "evidence_ids": [
+        "cand-webui-16"
+      ]
+    }
+  ],
+  "preservation_assessments": [
+    "PRESERVED_BY_COMPOSITION"
+  ],
+  "origin": {
+    "event_id": "origin-clh-v01-0076",
+    "source_type": "WEB_UI",
+    "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+    "location": "cand-webui-16",
+    "role": "ORIGIN",
+    "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+    "sha256": "c312c06d5f92fc100fcf5df4e7ddbf27d88c4bd5013dbb9ee01728fd815cb64b",
+    "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+  },
+  "uses": [],
+  "tests": [
+    {
+      "source_type": "WEB_UI",
+      "reference": "docs/research/web-ui-stress-test-2026-09/web-ui-stress-test-results.json",
+      "location": "WEBUI-16",
+      "status": "human semantic reconciliation; PRESERVED_BY_COMPOSITION; WORKS_WITH_COMPOSITION",
+      "event_date": "2026-09-27",
+      "pictiq_version": "v1.2.0",
+      "message_schema_version": "0.1",
+      "role": "TEST",
+      "event_id": "test-cand-webui-16",
+      "notes": "Domain pressure around EDIT revealed the broader Core primitive action_change: CHANGE / TRANSFORM / MODIFY. It is not merely an EDIT icon."
+    }
+  ],
+  "failures": [],
+  "compatibility": {
+    "pictiq_version": "1.1",
+    "message_schema_version": "0.1",
+    "source_commit": "unknown",
+    "message_validity": "CURRENT",
+    "compatibility_notes": [
+      "Research Message JSON is exact where preserved; when source only preserved IDs, the v0.1 JSON structure is a transparent encoding of that exact sequence.",
+      "Source commit/version is unknown unless the source explicitly records it. Harvest snapshot: 8fae507.",
+      "HISTORICAL HARVEST CANDIDATE only; no Composition Library acceptance implied."
+    ]
+  },
+  "related_composition_ids": [],
+  "notes": [
+    "cand-webui-16: Domain pressure around EDIT revealed the broader Core primitive action_change: CHANGE / TRANSFORM / MODIFY. It is not merely an EDIT icon."
+  ]
+}
