@@ -1505,3 +1505,13 @@ Replaced the v0.1 category-centric final review gate with an entry-centric, read
 
 The Dictionary Baseline v0.1 remains **NOT FROZEN**; eight unique entry cards remain for review, and no visual acceptance is inferred. The accepted corpus, Dictionary data, prior v0.1 QA, Core, Composer, Renderer, production assets, and Stress Test 07.1 remain unchanged. The next gate is creator review and a separate reconciliation pass, not Color Modifier or Practical Coverage work.
 ---
+
+## 2026-09-30 — Editorial Case 003: Good Dog, Bad District published-use ingest
+
+Book Two of Good Dogs of the Apocalypse is recorded as **PUBLISHED / AMAZON LIVE**, with first verified live observation 2026-09-30 based on the owner-supplied KDP Bookshelf screenshot: Kindle B0HLJ9VMWB, paperback B0HLLKRHRW, series Live. Four owner-designated published comics, four Composer screenshots, retailer evidence and the verbatim ingest brief are copied byte-for-byte and hashed. The 24 supplied semantic turns are preserved without inventing historical glyph IDs or panel crosswalks; Vetch species remains unresolved pending owner/canon confirmation.
+
+The dog/Pictiq, human/English and system/English-typography contract is recorded. Owner visual review is recorded separately from exact source fidelity: historical per-turn machine provenance is **PARTIAL / NOT FULLY MACHINE-VERIFIED**, and visible source-sheet/final-bubble differences remain preserved. Publication use is not comprehension validation or evidence of sales/adoption.
+
+Future production requirements are speaker/species resolution before generation and retention of exact approved Composer sequences, screenshot hashes, version/approval records and final placements. Nothing/zero/absence/none is a NORMAL-priority product issue only, not an automatic Core addition or a publication blocker. Book One, Dictionary baseline, Stress Test 07.1, language/product code, book files and production assets are unchanged; no Book Three work started and no publication milestone was created.
+
+Evidence: [Case 003](../research/editorial-cases/good-dog-bad-district/GOOD_DOG_BAD_DISTRICT_PICTIQ_CASE_V1.md), [asset manifest](../research/editorial-cases/good-dog-bad-district/GOOD_DOG_BAD_DISTRICT_PICTIQ_ASSET_MANIFEST_V1.json), [dialogue ledger](../research/editorial-cases/good-dog-bad-district/GOOD_DOG_BAD_DISTRICT_PICTIQ_DIALOGUE_LEDGER_V1.json), [workflow learning](../research/editorial-cases/good-dog-bad-district/GOOD_DOG_BAD_DISTRICT_PICTIQ_LEARNING_V1.md), [product issue](../research/editorial-cases/good-dog-bad-district/VOCABULARY_GAP_NOTHING_ZERO_ABSENCE_V1.md).

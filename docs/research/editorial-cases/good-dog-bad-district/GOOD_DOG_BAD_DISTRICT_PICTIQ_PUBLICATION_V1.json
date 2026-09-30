@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "case_id": "GOOD_DOG_BAD_DISTRICT_PICTIQ_CASE_V1",
+  "editorial_case_number": "003",
+  "recorded_at": "2026-09-30",
+  "title": "Good Dog, Bad District",
+  "subtitle": "A Darkly Comic System Apocalypse LitRPG",
+  "series": "Good Dogs of the Apocalypse",
+  "series_position": 2,
+  "author_book_facing": "Sminx Jonahtan J.",
+  "author_amazon": "Sminx Jonahtan",
+  "status": "PUBLISHED / AMAZON LIVE",
+  "series_status": "LIVE",
+  "first_verified_live_observation": "2026-09-30",
+  "verification_basis": "Owner-provided KDP Bookshelf screenshot, not an independent live storefront check",
+  "retailer_evidence": "assets/retailer-evidence/kdp-live-2026-09-30.png",
+  "editions": [
+    {
+      "format": "Kindle",
+      "asin": "B0HLJ9VMWB",
+      "status": "LIVE",
+      "price_at_observation": "$4.99 USD",
+      "kdp_submitted_on": "2026-09-29",
+      "owner_supplied_url": "https://kdp.amazon.com/amazon-dp-action/us/dualbookshelf.marketplacelink/B0HLJ9VMWB",
+      "url_type": "KDP_MARKETPLACE_REDIRECT",
+      "public_storefront_url": null,
+      "isbn": null
+    },
+    {
+      "format": "Paperback",
+      "asin": "B0HLLKRHRW",
+      "status": "LIVE",
+      "price_at_observation": "$18.99 USD",
+      "kdp_submitted_on": "2026-09-30",
+      "owner_supplied_url": "https://kdp.amazon.com/amazon-dp-action/us/dualbookshelf.marketplacelink/B0HLLKRHRW",
+      "url_type": "KDP_MARKETPLACE_REDIRECT",
+      "public_storefront_url": null,
+      "isbn": null
+    }
+  ],
+  "limits": [
+    "Prices and statuses are the supplied observation, not a continuously verified retailer state.",
+    "Submitted dates are not asserted publication dates.",
+    "No sales, reviews, rankings, reader adoption or comprehension evidence supplied.",
+    "Interior page numbers and final book-file hashes not supplied."
+  ]
+}

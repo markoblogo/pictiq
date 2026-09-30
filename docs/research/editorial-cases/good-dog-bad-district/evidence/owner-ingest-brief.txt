@@ -1,0 +1,690 @@
+TASK: PICTIQ
+INGEST GOOD DOG, BAD DISTRICT AS PUBLISHED USE CASE V1
+
+MODE:
+CASE-STUDY INGEST + KNOWLEDGE/LEARNING UPDATE
+
+PURPOSE
+
+Record the second Good Dogs novel as another real-world Pictiq usage case.
+
+This is not a speculative demo.
+
+Good Dog, Bad District has now been published on Amazon in both Kindle and
+paperback formats, and its Amazon series is LIVE.
+
+Pictiq is used inside the published book as the written/visual language of
+dog dialogue.
+
+The objective is to preserve:
+
+1. the published visual examples;
+2. the production workflow used to create them;
+3. the semantic/dialogue source evidence that remains available;
+4. limitations in provenance;
+5. product learnings for future Pictiq development;
+6. links/identifiers connecting the case to the published work.
+
+Do not alter the existing Pictiq lexicon or mappings merely to make historical
+examples easier to explain.
+
+==================================================
+1. CASE IDENTITY
+==================================================
+
+Create a Pictiq case record for:
+
+CASE:
+Good Dog, Bad District
+
+SERIES:
+Good Dogs of the Apocalypse
+
+SERIES POSITION:
+2
+
+AUTHOR — BOOK FACING:
+Sminx Jonahtan J.
+
+AMAZON AUTHOR:
+Sminx Jonahtan
+
+SUBTITLE:
+A Darkly Comic System Apocalypse LitRPG
+
+USE TYPE:
+PUBLISHED FICTION / IN-WORLD INTERSPECIES LANGUAGE
+
+STATUS:
+PUBLISHED / AMAZON LIVE
+
+FIRST VERIFIED LIVE OBSERVATION:
+2026-09-30
+
+==================================================
+2. AMAZON / RETAILER EVIDENCE
+==================================================
+
+Record:
+
+KINDLE:
+LIVE
+
+Kindle ASIN:
+B0HLJ9VMWB
+
+Kindle price:
+$4.99 USD
+
+PAPERBACK:
+LIVE
+
+Paperback ASIN:
+B0HLLKRHRW
+
+Paperback price:
+$18.99 USD
+
+SERIES:
+Good Dogs of the Apocalypse
+
+SERIES STATUS:
+LIVE
+
+If the Pictiq project maintains external links, derive/store Amazon links only
+through the project's existing link conventions or verified Amazon URLs.
+
+Do not invent marketplace URLs if the project requires explicit verification.
+
+Retailer evidence screenshot supplied by owner:
+
+/mnt/data/Снимок экрана — 2026-09-30 в 15.51.25.png
+
+Treat this as factual evidence for LIVE status only.
+
+Do not infer sales, reviews, rankings or commercial performance.
+
+==================================================
+3. PICTIQ NARRATIVE CONTRACT
+==================================================
+
+Record the central language rule used by the book:
+
+DOG DIRECT SPEECH:
+PICTIQ
+
+HUMAN DIRECT SPEECH:
+ENGLISH
+
+SYSTEM / ordinary human-readable interfaces:
+ENGLISH / established book typography
+
+Pictiq is therefore not decorative iconography.
+
+It performs a narrative language function:
+
+dogs communicate through a visual language that human characters do not
+simply share as ordinary English dialogue.
+
+This distinction is important to the case study.
+
+==================================================
+4. PUBLISHED COMIC SET
+==================================================
+
+Ingest the four final comic illustrations:
+
+GD2-C01
+/mnt/data/GD2-C01.png
+
+GD2-C02
+/mnt/data/GD2-C02.png
+
+GD2-C03
+/mnt/data/GD2-C03.png
+
+GD2-C04
+/mnt/data/GD2-C04.png
+
+Preserve originals byte-for-byte.
+
+Record SHA-256 for each.
+
+Do not recompress or replace them.
+
+Classify all four as:
+
+PUBLISHED_USE_CASE_ASSET
+
+and:
+
+PICTIQ_IN_CONTEXT
+
+==================================================
+5. COMPOSER EVIDENCE
+==================================================
+
+Also ingest the four owner-provided Composer screenshots used during
+production:
+
+/mnt/data/Снимок экрана — 2026-09-29 в 18.01.17.png
+
+/mnt/data/Снимок экрана — 2026-09-29 в 18.34.16.png
+
+/mnt/data/Снимок экрана — 2026-09-29 в 18.50.18.png
+
+/mnt/data/Снимок экрана — 2026-09-29 в 18.59.37.png
+
+These are historical production evidence.
+
+Preserve byte-for-byte and hash them.
+
+Do not infer an exact machine-readable glyph crosswalk from visual inspection
+alone if the exact mapping cannot be established safely.
+
+==================================================
+6. SOURCE DIALOGUE — GD2-C01
+==================================================
+
+Record the semantic/dialogue source:
+
+Wrench:
+Wait.
+
+Wrench:
+What are you matching?
+
+Learner:
+The opening.
+
+Wrench:
+The opening of what?
+
+Learner:
+The dry socket.
+
+Learner:
+Whether the piece fits.
+
+Learner:
+Whether the pipe is safe.
+
+Pixel:
+The wall says it isn't.
+
+All speakers in this sequence are dogs.
+
+Therefore all direct dialogue in the final comic is Pictiq.
+
+Link this semantic source to GD2-C01.
+
+Do not reconstruct glyph sequences beyond retained Composer evidence.
+
+==================================================
+7. SOURCE DIALOGUE — GD2-C02
+==================================================
+
+Record:
+
+Vetch:
+I need a roof until the plate stops moving.
+
+Atlas:
+If they come in, who watches the route?
+
+Mriya:
+The route isn't theirs to watch.
+
+Mriya:
+If we call the bed a task, they won't be able to rest.
+
+Vetch:
+I can listen for the cover. One turn of the water, then I'm done.
+I won't tell you the crawlway.
+
+Mriya:
+You don't have to.
+
+Vetch:
+And if I leave before the turn?
+
+Mriya:
+Then you leave.
+
+Vetch:
+No one follows?
+
+Mriya:
+No one follows.
+
+Preserve speaker/species attribution from the book canon.
+
+Apply the established rule:
+
+DOG → PICTIQ
+HUMAN → ENGLISH
+
+The production history included explicit checking/correction of language
+channel attribution.
+
+Record this as a workflow learning:
+
+SPEAKER SPECIES MUST BE RESOLVED BEFORE ART GENERATION.
+
+Do not infer species from the visual appearance of a generated panel if
+canonical character data exists.
+
+==================================================
+8. SOURCE DIALOGUE — GD2-C03
+==================================================
+
+Record:
+
+High Collars courier:
+I am only the carrier.
+
+High Collars courier:
+I don't know. That isn't on my route.
+
+High Collars courier:
+I will carry that sentence. I can't promise what they do with it.
+
+This dialogue is represented in Pictiq in the published comic according to the
+book's canonical character/language channel.
+
+Link semantic source, Composer evidence and final GD2-C03 asset.
+
+==================================================
+9. SOURCE DIALOGUE — GD2-C04
+==================================================
+
+Record:
+
+Mriya:
+The worker gave you a time?
+
+Mriya:
+Could he have been wrong?
+
+Mriya:
+You're right. You don't have to prove the route to me.
+
+Mriya is a dog.
+
+Therefore these lines use Pictiq.
+
+Link semantic source, Composer evidence and final GD2-C04 asset.
+
+==================================================
+10. PROVENANCE LIMITATION
+==================================================
+
+Preserve the historical limitation honestly.
+
+During Book Two production:
+
+- semantic/dialogue records were recoverable;
+- Composer screenshots were retained;
+- final comic assets were retained;
+- exact historical machine-readable glyph sequences/per-turn Composer
+  crosswalk were NOT comprehensively recoverable from the earlier project
+  ledger.
+
+The owner accepted this limitation for Book Two publication.
+
+Therefore record:
+
+PICTIQ VISUAL CHANNEL:
+VERIFIED BY OWNER REVIEW
+
+EXACT RETROSPECTIVE SEMANTIC PROVENANCE:
+PARTIAL / NOT FULLY MACHINE-VERIFIED
+
+Do not upgrade this to FULL merely because screenshots now exist.
+
+Do not reverse-engineer glyph sequences and label them canonical.
+
+==================================================
+11. WORKFLOW LEARNING
+==================================================
+
+Book Two established a stronger future production workflow:
+
+TEXT LOCK
+↓
+DIALOGUE EXTRACTION
+↓
+SPEAKER
+↓
+SPECIES
+↓
+LANGUAGE CHANNEL
+↓
+OWNER PICTIQ COMPOSER
+↓
+EXACT COMPOSER OUTPUT PRESERVED
+↓
+COMIC GENERATION
+↓
+VISUAL QA
+↓
+ASSET LOCK
+↓
+PUBLICATION
+
+For future Good Dogs comics:
+
+DOG:
+Pictiq only from owner-approved Composer output
+
+HUMAN:
+English
+
+No generated illustration may:
+
+- translate dog dialogue independently;
+- invent Pictiq glyphs;
+- reassign a bubble to another speaker;
+- convert human dialogue into Pictiq;
+- convert dog dialogue into English unless explicitly approved.
+
+==================================================
+12. FUTURE COMPOSER EVIDENCE CONTRACT
+==================================================
+
+Book Two exposed a provenance weakness.
+
+For future Composer use, preserve a machine-readable record BEFORE art
+generation.
+
+Suggested record:
+
+case_id
+book_id
+scene_id
+turn_id
+speaker
+species
+english_semantic_source
+composer_sequence
+composer_sequence_ids
+composer_version
+screenshot_path
+screenshot_sha256
+approved_by
+approved_at
+
+The screenshot is evidence.
+
+The machine-readable sequence is canonical production input.
+
+Do not rely on screenshot-only reconstruction later.
+
+==================================================
+13. VOCABULARY PRODUCT LEARNING
+==================================================
+
+Record a product-learning item discovered during GD2-C01 production:
+
+CONCEPT NEEDED:
+nothing / zero / absence / none
+
+Current production could express the required meaning using existing
+combinations/layout, but the owner identified a recurring need for a dedicated
+Pictiq concept/entity/icon covering the semantic area of:
+
+nothing
+zero
+absence
+none
+
+Do NOT add a glyph automatically.
+
+Create a vocabulary/product issue for later Pictiq design.
+
+Suggested status:
+
+VOCABULARY_GAP_IDENTIFIED
+
+priority:
+NORMAL
+
+source:
+Good Dog, Bad District production
+
+This is not a blocker for the published book.
+
+==================================================
+14. CASE-STUDY VALUE
+==================================================
+
+Record why this case matters for Pictiq.
+
+This is evidence of Pictiq being used:
+
+- in a commercially published work;
+- across multiple sequential comic scenes;
+- as dialogue rather than decorative signage;
+- alongside ordinary English human dialogue;
+- with semantic meaning constrained by a locked manuscript;
+- through a human-approved Composer workflow;
+- in both Kindle and paperback production;
+- as part of an ongoing fiction series.
+
+Do not make marketing claims about sales or reader adoption.
+
+==================================================
+15. VISUAL CASE GALLERY
+==================================================
+
+If Pictiq has a cases/examples/gallery system, add the four published comics
+as one grouped case rather than four unrelated examples.
+
+Preferred presentation:
+
+GOOD DOG, BAD DISTRICT
+Published fiction case
+
+then:
+
+GD2-C01
+GD2-C02
+GD2-C03
+GD2-C04
+
+Show the actual final images.
+
+Where useful, include short neutral captions describing the Pictiq use, not
+full plot spoilers.
+
+==================================================
+16. RELATION TO BOOK ONE
+==================================================
+
+If a Good Dog / Book One Pictiq case already exists:
+
+link Book Two as:
+
+NEXT PUBLISHED CASE / SERIES CONTINUATION
+
+Do not overwrite the Book One case.
+
+The two books should demonstrate evolution of the Pictiq workflow over time.
+
+If Book One has weaker provenance, preserve that historical limitation rather
+than retroactively applying Book Two evidence.
+
+==================================================
+17. LEARNING PROMOTION
+==================================================
+
+Classify Book Two learnings:
+
+DOG → PICTIQ / HUMAN → ENGLISH
+scope:
+GOOD DOGS SERIES CANON
+
+COMPOSER OUTPUT MUST BE PRESERVED BEFORE ART
+scope:
+PICTIQ PRODUCTION BEST PRACTICE
+
+SPEAKER/SPECIES RESOLUTION BEFORE GENERATION
+scope:
+PICTIQ PRODUCTION BEST PRACTICE
+
+NOTHING/ZERO/ABSENCE GAP
+scope:
+PICTIQ PRODUCT / LEXICON LEARNING
+
+PUBLISHED AMAZON CASE
+scope:
+PICTIQ CASE STUDY
+
+==================================================
+18. DO NOT DO
+==================================================
+
+Do NOT:
+
+- modify existing lexicon mappings;
+- invent new glyphs;
+- infer exact old glyph sequences without evidence;
+- alter the four final comics;
+- alter Good Dogs book files;
+- change Amazon/KDP;
+- claim sales;
+- claim reader adoption;
+- claim full semantic provenance where it was not retained;
+- start Book Three Pictiq production.
+
+==================================================
+19. EXPECTED ARTIFACTS
+==================================================
+
+Adapt names to existing Pictiq repository conventions.
+
+At minimum create/update:
+
+1. a Good Dog, Bad District published-case record;
+
+2. asset/evidence manifest for:
+   - 4 final comics
+   - 4 Composer screenshots
+   - retailer LIVE evidence;
+
+3. semantic dialogue/source record;
+
+4. workflow-learning record;
+
+5. vocabulary-gap issue:
+   nothing / zero / absence;
+
+6. case-gallery/index entry if such registry already exists.
+
+Prefer updating existing registries over creating duplicate parallel systems.
+
+==================================================
+20. VALIDATION
+==================================================
+
+Validate:
+
+FINAL COMICS:
+4/4 present
+
+COMPOSER EVIDENCE:
+4/4 present
+
+ASSET HASHES:
+recorded
+
+RETAILER EVIDENCE:
+present
+
+KINDLE LIVE:
+recorded
+
+PAPERBACK LIVE:
+recorded
+
+DOG/HUMAN LANGUAGE CONTRACT:
+recorded
+
+SEMANTIC SOURCE:
+recorded
+
+EXACT RETROSPECTIVE GLYPH PROVENANCE:
+PARTIAL / correctly limited
+
+VOCABULARY GAP:
+recorded
+
+BOOK ONE CASE:
+unchanged
+
+GOOD DOG BOOK FILES:
+unchanged
+
+==================================================
+21. FINAL REPORT
+==================================================
+
+Return:
+
+PICTIQ CASE:
+GOOD DOG, BAD DISTRICT
+
+CASE STATUS:
+PUBLISHED / LIVE
+
+FINAL COMICS INGESTED:
+4/4
+
+COMPOSER EVIDENCE INGESTED:
+4/4
+
+RETAILER EVIDENCE:
+PASS
+
+KINDLE:
+LIVE — B0HLJ9VMWB
+
+PAPERBACK:
+LIVE — B0HLLKRHRW
+
+PICTIQ NARRATIVE CONTRACT:
+RECORDED
+
+SEMANTIC DIALOGUE:
+RECORDED
+
+EXACT RETROSPECTIVE GLYPH PROVENANCE:
+PARTIAL
+
+FUTURE COMPOSER EVIDENCE CONTRACT:
+RECORDED
+
+VOCABULARY GAP — NOTHING/ZERO/ABSENCE:
+RECORDED
+
+BOOK ONE CASE MODIFIED:
+NO / only linked if appropriate
+
+GOOD DOG BOOK FILES MODIFIED:
+NO
+
+LEXICON MODIFIED:
+NO
+
+NEW GLYPHS CREATED:
+0
+
+Then summarize:
+
+WHAT BOOK TWO PROVED ABOUT PICTIQ
+
+WHAT FAILED / WAS WEAK IN THE WORKFLOW
+
+WHAT MUST CHANGE FOR BOOK THREE
+
+Do not start Book Three work.

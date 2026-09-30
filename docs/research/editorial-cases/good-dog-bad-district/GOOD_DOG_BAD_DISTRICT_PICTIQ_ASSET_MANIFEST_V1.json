@@ -1,0 +1,192 @@
+{
+  "schema_version": "1.0",
+  "case_id": "GOOD_DOG_BAD_DISTRICT_PICTIQ_CASE_V1",
+  "editorial_case_number": "003",
+  "recorded_at": "2026-09-30",
+  "status": "PUBLISHED / AMAZON LIVE",
+  "asset_integrity_policy": "Byte-for-byte copies; no recompression, no image edits. Hashes computed from preserved files and matched to supplied originals.",
+  "assets": [
+    {
+      "asset_id": "GD2-C01",
+      "path": "assets/final-illustrations/GD2-C01.png",
+      "source_filename": "GD2-C01.png",
+      "source_path": "/Users/antonbiletskiy-volokh/Desktop/GD2-C01.png",
+      "classifications": [
+        "PUBLISHED_USE_CASE_ASSET",
+        "PICTIQ_IN_CONTEXT"
+      ],
+      "context": "Owner-designated final comic in the published Book Two; interior page number not supplied.",
+      "mime_type": "image/png",
+      "dimensions_px": {
+        "width": 1024,
+        "height": 1536
+      },
+      "bytes": 3299937,
+      "sha256": "39ced8b02c835172e82f2439419e3974b20e4c1493e404c389d3f39d45e13fda",
+      "unchanged_copy": true
+    },
+    {
+      "asset_id": "GD2-C02",
+      "path": "assets/final-illustrations/GD2-C02.png",
+      "source_filename": "GD2-C02.png",
+      "source_path": "/Users/antonbiletskiy-volokh/Desktop/GD2-C02.png",
+      "classifications": [
+        "PUBLISHED_USE_CASE_ASSET",
+        "PICTIQ_IN_CONTEXT"
+      ],
+      "context": "Owner-designated final comic in the published Book Two; interior page number not supplied.",
+      "mime_type": "image/png",
+      "dimensions_px": {
+        "width": 1024,
+        "height": 1536
+      },
+      "bytes": 3189359,
+      "sha256": "1b7dfd29c25a786c27a4091d1a0ada609445817d7fbbb45ab42b2e8fea7b41e5",
+      "unchanged_copy": true
+    },
+    {
+      "asset_id": "GD2-C03",
+      "path": "assets/final-illustrations/GD2-C03.png",
+      "source_filename": "GD2-C03.png",
+      "source_path": "/Users/antonbiletskiy-volokh/Desktop/GD2-C03.png",
+      "classifications": [
+        "PUBLISHED_USE_CASE_ASSET",
+        "PICTIQ_IN_CONTEXT"
+      ],
+      "context": "Owner-designated final comic in the published Book Two; interior page number not supplied.",
+      "mime_type": "image/png",
+      "dimensions_px": {
+        "width": 1024,
+        "height": 1536
+      },
+      "bytes": 3194768,
+      "sha256": "5f998ff324981cc3b73ac06f6208d5a7a11147c61d709bfeb5dca507dd97a140",
+      "unchanged_copy": true
+    },
+    {
+      "asset_id": "GD2-C04",
+      "path": "assets/final-illustrations/GD2-C04.png",
+      "source_filename": "GD2-C04.png",
+      "source_path": "/Users/antonbiletskiy-volokh/Desktop/GD2-C04.png",
+      "classifications": [
+        "PUBLISHED_USE_CASE_ASSET",
+        "PICTIQ_IN_CONTEXT"
+      ],
+      "context": "Owner-designated final comic in the published Book Two; interior page number not supplied.",
+      "mime_type": "image/png",
+      "dimensions_px": {
+        "width": 1024,
+        "height": 1536
+      },
+      "bytes": 3008080,
+      "sha256": "6a62295c76bea61d704fd9d848a0c7c0242d2afef3ba9d276f44b01f40c4d3de",
+      "unchanged_copy": true
+    },
+    {
+      "asset_id": "COMPOSER-01",
+      "path": "assets/composer-sources/composer-01.png",
+      "source_filename": "Снимок экрана — 2026-09-29 в 18.01.17.png",
+      "source_path": "/Users/antonbiletskiy-volokh/Desktop/Снимок экрана — 2026-09-29 в 18.01.17.png",
+      "classifications": [
+        "HISTORICAL_PRODUCTION_EVIDENCE"
+      ],
+      "context": "Owner-provided production screenshot associated with GD2-C01 at batch level; exact per-turn crosswalk unverified.",
+      "mime_type": "image/png",
+      "dimensions_px": {
+        "width": 538,
+        "height": 1064
+      },
+      "bytes": 68975,
+      "sha256": "71235ff6517d2ff2a822e98a04153263a3368b3ced596a5bdb773f476ac68e77",
+      "unchanged_copy": true
+    },
+    {
+      "asset_id": "COMPOSER-02",
+      "path": "assets/composer-sources/composer-02.png",
+      "source_filename": "Снимок экрана — 2026-09-29 в 18.34.16.png",
+      "source_path": "/Users/antonbiletskiy-volokh/Desktop/Снимок экрана — 2026-09-29 в 18.34.16.png",
+      "classifications": [
+        "HISTORICAL_PRODUCTION_EVIDENCE"
+      ],
+      "context": "Owner-provided production screenshot associated with GD2-C02 at batch level; exact per-turn crosswalk unverified.",
+      "mime_type": "image/png",
+      "dimensions_px": {
+        "width": 698,
+        "height": 714
+      },
+      "bytes": 59564,
+      "sha256": "ffbeb7259857d9aaf1291d82800ec5828e20179ef52714f6e3e831e10ad340a7",
+      "unchanged_copy": true
+    },
+    {
+      "asset_id": "COMPOSER-03",
+      "path": "assets/composer-sources/composer-03.png",
+      "source_filename": "Снимок экрана — 2026-09-29 в 18.50.18.png",
+      "source_path": "/Users/antonbiletskiy-volokh/Desktop/Снимок экрана — 2026-09-29 в 18.50.18.png",
+      "classifications": [
+        "HISTORICAL_PRODUCTION_EVIDENCE"
+      ],
+      "context": "Owner-provided production screenshot associated with GD2-C03 at batch level; exact per-turn crosswalk unverified.",
+      "mime_type": "image/png",
+      "dimensions_px": {
+        "width": 680,
+        "height": 568
+      },
+      "bytes": 46488,
+      "sha256": "2d4d1c3a57120cdf32d2957bb4eedde660aaf4d4ca37e3822c55fb80dd621d38",
+      "unchanged_copy": true
+    },
+    {
+      "asset_id": "COMPOSER-04",
+      "path": "assets/composer-sources/composer-04.png",
+      "source_filename": "Снимок экрана — 2026-09-29 в 18.59.37.png",
+      "source_path": "/Users/antonbiletskiy-volokh/Desktop/Снимок экрана — 2026-09-29 в 18.59.37.png",
+      "classifications": [
+        "HISTORICAL_PRODUCTION_EVIDENCE"
+      ],
+      "context": "Owner-provided production screenshot associated with GD2-C04 at batch level; exact per-turn crosswalk unverified.",
+      "mime_type": "image/png",
+      "dimensions_px": {
+        "width": 682,
+        "height": 604
+      },
+      "bytes": 44550,
+      "sha256": "308e285dd9e9e080656a90960710a46944e50ccb175821fa50a8baea295a0ba3",
+      "unchanged_copy": true
+    },
+    {
+      "asset_id": "KDP-LIVE-2026-09-30",
+      "path": "assets/retailer-evidence/kdp-live-2026-09-30.png",
+      "source_filename": "Снимок экрана — 2026-09-30 в 15.51.25.png",
+      "source_path": "/Users/antonbiletskiy-volokh/Desktop/Снимок экрана — 2026-09-30 в 15.51.25.png",
+      "classifications": [
+        "RETAILER_LIVE_EVIDENCE"
+      ],
+      "context": "Owner-provided KDP Bookshelf screenshot: Kindle, paperback, series Live; proof of displayed status only.",
+      "mime_type": "image/png",
+      "dimensions_px": {
+        "width": 2036,
+        "height": 980
+      },
+      "bytes": 345262,
+      "sha256": "2adb8d09811535a3c65c94b451d7335949953e54742e737f9760e639c3a4767d",
+      "unchanged_copy": true
+    },
+    {
+      "asset_id": "OWNER-BRIEF",
+      "path": "evidence/owner-ingest-brief.txt",
+      "source_filename": "Вставлений текст.txt",
+      "source_path": "/Users/antonbiletskiy-volokh/.codex/attachments/5646d96f-c222-47ff-a9f2-e391396f8963/Вставлений текст.txt",
+      "classifications": [
+        "OWNER_SUPPLIED_SEMANTIC_SOURCE",
+        "INGEST_INSTRUCTIONS"
+      ],
+      "context": "Preserved verbatim; /mnt/data paths are attachment aliases, actual file provenance is in this manifest.",
+      "mime_type": "text/plain",
+      "dimensions_px": null,
+      "bytes": 13963,
+      "sha256": "8362dc61ef79f4535fccff389efef319b73fc0fb58df2655cd0c34d3e72278c9",
+      "unchanged_copy": true
+    }
+  ]
+}
