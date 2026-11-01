@@ -1515,3 +1515,9 @@ The dog/Pictiq, human/English and system/English-typography contract is recorded
 Future production requirements are speaker/species resolution before generation and retention of exact approved Composer sequences, screenshot hashes, version/approval records and final placements. Nothing/zero/absence/none is a NORMAL-priority product issue only, not an automatic Core addition or a publication blocker. Book One, Dictionary baseline, Stress Test 07.1, language/product code, book files and production assets are unchanged; no Book Three work started and no publication milestone was created.
 
 Evidence: [Case 003](../research/editorial-cases/good-dog-bad-district/GOOD_DOG_BAD_DISTRICT_PICTIQ_CASE_V1.md), [asset manifest](../research/editorial-cases/good-dog-bad-district/GOOD_DOG_BAD_DISTRICT_PICTIQ_ASSET_MANIFEST_V1.json), [dialogue ledger](../research/editorial-cases/good-dog-bad-district/GOOD_DOG_BAD_DISTRICT_PICTIQ_DIALOGUE_LEDGER_V1.json), [workflow learning](../research/editorial-cases/good-dog-bad-district/GOOD_DOG_BAD_DISTRICT_PICTIQ_LEARNING_V1.md), [product issue](../research/editorial-cases/good-dog-bad-district/VOCABULARY_GAP_NOTHING_ZERO_ABSENCE_V1.md).
+
+## 2026-11-01 — Good Dogs trilogy: animated / spoken Pictiq
+
+The author confirmed a YouTube animation in which a dog speaks Pictiq: **00:23–00:25, three words**, playback starting at **23 seconds**. Category: **ANIMATED / SPOKEN PICTIQ**. Evidence status: **AUTHOR-CONFIRMED / CONTENT NOT INDEPENDENTLY VERIFIED**. The author supplied the [YouTube video URL](https://youtu.be/WxEa5q_PPOk?si=bgNCympeLomoMr8B); [playback from 00:23](https://youtu.be/WxEa5q_PPOk?t=23). The exact words have not been supplied; no independent content check or canonical speech/phonology claim is recorded.
+
+[Animation use record and preserved author statement](../research/editorial-cases/good-dogs-trilogy/GOOD_DOGS_TRILOGY_ANIMATED_SPOKEN_PICTIQ_V1.md).
