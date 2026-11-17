@@ -46,6 +46,16 @@ def old_groups() -> dict[str, list[dict[str, Any]]]:
     return json.loads(match.group(1))
 
 
+def timetable_message(arrival_message: dict[str, Any]) -> dict[str, Any]:
+    """Preserve the existing creator-approved four-token timetable, not arrival time."""
+    message = copy.deepcopy(arrival_message)
+    message["frames"][0]["tokens"] = [
+        {"type": "icon", "id": token}
+        for token in ("move_public", "media_text", "time", "punct_question")
+    ]
+    return message
+
+
 def make_addendum(entries_by_corpus: dict[str, dict[str, Any]], dictionary: dict[str, Any], preview_sha: str) -> dict[str, Any]:
     return {
         "qa_addendum_type": "PICTIQ_COMPOSITION_DICTIONARY_FINAL_CREATOR_QA_ADDENDUM",
@@ -82,12 +92,20 @@ def make_addendum(entries_by_corpus: dict[str, dict[str, Any]], dictionary: dict
                     "temporary_qa_id": "qa-new-public-transport-timetable",
                     "headword": "Public transport schedule / timetable",
                     "meaning": "Public transport + textual/information schedule + time/question.",
-                    "message": copy.deepcopy(entries_by_corpus["clh-v01-0022"]["preferred_variant"]["message"]),
+                    "message": timetable_message(entries_by_corpus["clh-v01-0022"]["preferred_variant"]["message"]),
                     "token_sequence": "move_public + media_text + time + punct_question",
                     "preview_render": "review/previews/qa-new-public-transport-timetable.svg",
                     "preview_render_sha256": preview_sha,
                     "status": "CREATOR-APPROVED / PENDING BASELINE APPLICATION",
                     "is_variant_of_arrival_question": False,
+                    "technical_correction": {
+                        "pass": "K01",
+                        "audited_revision": "f9be7228bf1b4a64ab52dd157e2663add3298d5a",
+                        "creator_decision_revision": "277bbb5",
+                        "creator_decision_path": "docs/research/composition-dictionary-baseline-v0.1/final-creator-qa-addendum-v0.2.json",
+                        "creator_decision_selector": "decisions[*].new_related_entry[temporary_qa_id=qa-new-public-transport-timetable].token_sequence",
+                        "reason": "Restore media_text already specified by the creator; no new semantic decision.",
+                    },
                 },
                 "resolved_follow_up": "Exact ordered timetable composition; no longer unresolved.",
                 "application_status": "PENDING; preserve arrival-time entry and add a distinct related semantic unit",
@@ -120,20 +138,20 @@ def build() -> dict[str, Any]:
 
     registry = Registry()
     transport = by_corpus["clh-v01-0022"]
-    timetable = copy.deepcopy(transport["preferred_variant"]["message"])
-    timetable["frames"][0]["tokens"] = [{"type": "icon", "id": token} for token in ("move_public", "media_text", "time", "punct_question")]
+    timetable = timetable_message(transport["preferred_variant"]["message"])
     validation_errors = schema_errors(timetable) + semantic_errors(timetable)
     if validation_errors:
         raise ValueError(f"creator-specified timetable preview failed validation: {validation_errors}")
     svg, _ = render_svg(timetable, registry=registry)
     preview_path = REVIEW / "previews/qa-new-public-transport-timetable.svg"
     preview_path.parent.mkdir(parents=True, exist_ok=True)
-    preview_path.write_text(svg, encoding="utf-8")
+    if preview_path.read_text(encoding="utf-8") != svg:
+        raise ValueError("K01a known preview changed; no snapshot outputs written")
     preview_hash = sha(svg.encode())
 
     addendum = make_addendum(by_corpus, dictionary, preview_hash)
-    write_json(ADDENDUM, addendum)
-    addendum_hash = sha(ADDENDUM.read_bytes())
+    addendum_bytes = (json.dumps(addendum, ensure_ascii=False, indent=2) + "\n").encode()
+    addendum_hash = sha(addendum_bytes)
     scope_ids = {"clh-v01-0047"}
     changed = {e["corpus_refs"][0] for e in entries if e["lineage"]["preferred_changed_by_creator_review"]}
     metadata = {"clh-v01-0003", "clh-v01-0014", "clh-v01-0022", "clh-v01-0044", "clh-v01-0047"}
@@ -244,10 +262,64 @@ def build() -> dict[str, Any]:
         "entries": rows,
     }
     dataset_core["qa_dataset_sha256"] = sha(json.dumps(dataset_core, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode())
+    # Preflight compatibility before replacing any active snapshot artifacts.
+    html = make_html(dataset_core)
+    readme = make_readme(dataset_core, groups)
+    ADDENDUM.write_bytes(addendum_bytes)
     write_json(OUT_DATA, dataset_core)
-    HTML.write_text(make_html(dataset_core), encoding="utf-8")
-    README.write_text(make_readme(dataset_core, groups), encoding="utf-8")
+    HTML.write_text(html, encoding="utf-8")
+    README.write_text(readme, encoding="utf-8")
     return dataset_core
+
+
+def add_snapshot_migration(html: str, data: dict[str, Any]) -> str:
+    source_path = PKG / "repairs/K01-timetable-media-text/migration-source.json"
+    if sha(source_path.read_bytes()) != "c0095a3bec57d7fe91e50c8772d6255d8a69fb21beeefca814740e5add15c75d":
+        raise ValueError("K01a historical snapshot archive changed")
+    source = read(source_path)
+    old = source["dataset"]
+    expected_new = "45c041165ad17f2f8114dddd454ba42f74e9e635eb44606133f291348626f413"
+    if data["qa_dataset_sha256"] != expected_new:
+        raise ValueError("K01a: unexpected target snapshot; transfer must be re-audited")
+    old_core = copy.deepcopy(old)
+    old_hash = old_core.pop("qa_dataset_sha256")
+    if sha(json.dumps(old_core, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode()) != old_hash:
+        raise ValueError("K01a historical dataset hash mismatch")
+    if sha((json.dumps(source["addendum"], ensure_ascii=False, indent=2) + "\n").encode()) != old["pending_addendum"]["sha256"]:
+        raise ValueError("K01a historical addendum hash mismatch")
+    def comparable(d):
+        out = copy.deepcopy(d)
+        del out["qa_dataset_sha256"]
+        del out["pending_addendum"]["sha256"]
+        return out
+    if comparable(old) != comparable(data):
+        raise ValueError("K01a: cards, previews, decisions or baseline bindings changed")
+    for rel, expected in source["asset_sha256"].items():
+        if sha((REVIEW / rel).read_bytes()) != expected:
+            raise ValueError(f"K01a: preview bytes changed: {rel}")
+    contract = {**source, "old_dataset_sha256": old_hash,
+                "new_dataset_sha256": data["qa_dataset_sha256"],
+                "old_addendum_sha256": old["pending_addendum"]["sha256"],
+                "new_addendum_sha256": data["pending_addendum"]["sha256"]}
+    runtime = (ROOT / "tools/research/composition_dictionary_qa_migration_v0_2.js").read_text()
+    runtime = runtime.replace("__MIGRATION_CONTRACT__", json.dumps(contract, ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c"))
+    html = html.replace("let state=load(),active=0;", "let migrationLineage=null,preservedExport=null,preservedOriginal=null,storageLoadError=null;let state=load(),active=0;")
+    def replace_function(start, end, body):
+        nonlocal html
+        a = html.index(start); b = html.index(end, a)
+        html = html[:a] + body + html[b:]
+    replace_function("function load()", "function locked(", """function load(){try{const x=JSON.parse(localStorage.getItem(KEY)||'{}');if(x.qa_overlay){migrationLineage=x.migration_lineage||null;preservedExport=x.source_export||null;preservedOriginal=x.original_source||null;return x.qa_overlay}return x}catch(e){storageLoadError='Current saved state cannot be read: '+e.message;return {}}}""")
+    replace_function("function save()", "function options(", """function save(){if(storageLoadError)throw Error(storageLoadError);localStorage.setItem(KEY,JSON.stringify({qa_overlay:state,migration_lineage:migrationLineage,source_export:preservedExport,original_source:preservedOriginal}));draw()}""")
+    replace_function("function exportRecords()", "function validateImport(", """function exportRecords(){return DATA.entries.map(r=>{const previous=preservedExport?.records?.find(x=>x.dictionary_entry_id===r.dictionary_entry_id)||{};const local=state[r.dictionary_entry_id]||{};return {...previous,...local,dictionary_entry_id:r.dictionary_entry_id,corpus_record_id:r.corpus_record_id,decision:decision(r)==='UNREVIEWED'?null:decision(r),creator_note:locked(r)?(previous.creator_note||''):(local.note??previous.creator_note??''),decision_source:locked(r)?'PENDING_ADDENDUM':'LOCAL_QA_OVERLAY'}})}""")
+    replace_function("function validateImport(", "function download(", "function validateImport(x){return validateSnapshotExport(x,DATA)}")
+    a=html.index("$('export').onclick=");b=html.index(";$('import').onchange=",a)
+    html=html[:a]+"""$('export').onclick=()=>{try{const out=snapshotExport(exportRecords());if(migrationLineage)out.technical_migration=migrationLineage;validateImport(out);download(out,'pictiq-final-creator-qa-v0.2.json')}catch(e){alert('Export rejected: '+e.message)}}"""+html[b:]
+    a=html.index("$('import').onchange=");b=html.index(";$('reset').onclick=",a)
+    html=html[:a]+"""$('import').onchange=async e=>{try{const x=JSON.parse(await e.target.files[0].text());validateImport(x);const next=overlayFromExport(x);localStorage.setItem(KEY,JSON.stringify({qa_overlay:next,migration_lineage:x.technical_migration||null,source_export:x,original_source:null}));state=next;migrationLineage=x.technical_migration||null;preservedExport=x;preservedOriginal=null;draw();alert('Import validated and applied to local review overlay.')}catch(err){alert('Import rejected: '+err.message+'. For the known old snapshot use Explicit old-export transfer.')}e.target.value=''}"""+html[b:]
+    html=html.replace("state={};draw()", "state={};migrationLineage=null;preservedExport=null;preservedOriginal=null;storageLoadError=null;draw();refreshMigrationNotice()")
+    controls='<section class="pending" aria-label="Known QA snapshot transfer"><p id="migration-status" role="status"></p><button id="migrate-local" hidden>Transfer saved work from previous snapshot</button><label>Explicit old-export transfer <input id="migrate-file" type="file" accept="application/json"></label><button id="backup-old" hidden>Download original old state</button><button id="backup-new">Download current state backup</button></section>'
+    html=html.replace('<main id="cards">',controls+'<main id="cards">')
+    return html.replace("draw();</script>", runtime + "\n// K01A_RUNTIME_END\ndraw();initMigration();</script>")
 
 
 def make_html(data: dict[str, Any]) -> str:
@@ -261,7 +333,7 @@ def make_html(data: dict[str, Any]) -> str:
 <header><div class="controls"><button id="prev">Previous</button><button id="next">Next</button><label><input id="unreviewed" type="checkbox"> Show unreviewed only</label><input id="search" type="search" placeholder="Search entry / token"><select id="badge"><option value="">All badges</option></select><select id="decisionFilter"><option value="">All decisions</option><option>UNREVIEWED</option><option>RECORDED_FROM_CURRENT_CREATOR_QA</option><option>ACCEPT_AS_SHOWN</option><option>NEEDS_CORRECTION</option><option>MOVE_TO_CORPUS_ONLY</option><option>KEEP_ENTRY_CHANGE_PREFERRED</option><option>UNRESOLVED</option></select><span class="progress" id="progress"></span></div><div><button id="export">EXPORT FINAL QA JSON</button><label>Import JSON <input id="import" type="file" accept="application/json"></label><button id="reset">RESET LOCAL QA</button><a href="index.html">Open full current Dictionary</a></div></header>
 <main id="cards"></main><script>const DATA=__DATA__;const KEY='pictiq.final-creator-qa.v0.2:'+DATA.qa_dataset_sha256;const DECISIONS=__DECISIONS__;const $=id=>document.getElementById(id);const esc=s=>String(s??'').replace(/[&<>]/g,c=>({{'&':'&amp;','<':'&lt;','>':'&gt;'}}[c])).replaceAll('"','&quot;').replaceAll("'",'&#39;');let state=load(),active=0;function load(){{try{{return JSON.parse(localStorage.getItem(KEY)||'{{}}')}}catch{{return {{}}}}}}function locked(r){{return !!r.recorded_decision}}function decision(r){{return locked(r)?r.recorded_decision:(state[r.dictionary_entry_id]?.decision||'UNREVIEWED')}}function reviewed(r){{return locked(r)||!!state[r.dictionary_entry_id]?.decision}}function save(){{localStorage.setItem(KEY,JSON.stringify(state));draw()}}function options(selected){{return ['','ACCEPT_AS_SHOWN','NEEDS_CORRECTION','MOVE_TO_CORPUS_ONLY','KEEP_ENTRY_CHANGE_PREFERRED','UNRESOLVED'].map(x=>`<option value="${{x}}" ${{x===selected?'selected':''}}>${{x||'UNREVIEWED'}}</option>`).join('')}}function visual(label,seq,img,msg,provenance){{return `<div class="visual"><h3>${{esc(label)}}</h3><img src="${{esc(img)}}" alt="${{esc(label)}} Pictiq render"><p><b>Exact Message:</b> <code>${{esc(seq)}}</code></p><details><summary>Message structure and provenance</summary><pre>${{esc(JSON.stringify(msg,null,2))}}</pre><pre>${{esc(JSON.stringify(provenance,null,2))}}</pre></details></div>`}}function card(r){{const lockedDecision=locked(r),cur=r.current_baseline,prev=r.previous_state;let visuals='';if(prev.message)visuals=`<div class="visuals">${{visual('BEFORE — candidate / source',prev.token_sequence,prev.render,prev.message,prev.provenance)}}${{visual('AFTER — current baseline',cur.preferred_token_sequence,cur.preferred_render,cur.preferred_message,r.accepted_variants.find(v=>v.type==='PREFERRED')?.provenance)}}</div>`;else visuals=visual('CURRENT PICTIQ MESSAGE',cur.preferred_token_sequence,cur.preferred_render,cur.preferred_message,r.accepted_variants.find(v=>v.type==='PREFERRED')?.provenance);const extra=r.accepted_variants.filter(v=>v.variant_id!==r.accepted_variants.find(z=>z.type==='PREFERRED')?.variant_id);const variants=extra.length?`<h3>Accepted variants — part of the same card</h3><div class="variants">${{extra.map(v=>`<div class="variant"><h4>${{esc(v.type)}} · ${{esc(v.variant_id)}}</h4><img src="${{esc(v.render)}}"><p><b>Exact Message:</b> <code>${{esc(v.token_sequence)}}</code></p><details><summary>Message structure</summary><pre>${{esc(JSON.stringify(v.message,null,2))}}</pre></details><p>Mode: ${{esc(v.mode.join(', '))}} · Surface: ${{esc(v.surface.join(', '))}}</p><p>Context: ${{esc(JSON.stringify(v.context))}}</p><p>Provenance: ${{esc(JSON.stringify(v.provenance))}}</p>${{v.qa_warning?`<p class="warn">${{esc(v.qa_warning)}}</p>`:''}}</div>`).join('')}}</div>`:'';const proposals=r.proposed_unaccepted.length?`<h3>PROPOSED / NOT ACCEPTED</h3>${{r.proposed_unaccepted.map(p=>`<div class="proposal"><b>${{esc(p.label)}}</b> — ${{esc(p.status)}}<p>${{esc(p.note)}} ${{p.token_ids_mentioned?`Mentioned tokens: ${{esc(p.token_ids_mentioned.join(' + '))}}`:''}}</p><p>No exact Message and no render are asserted.</p></div>`).join('')}`:'';const related=r.related_pending_entry?`<section class="pending"><h3>Related creator-approved entry — PENDING BASELINE APPLICATION</h3><p><b>${{esc(r.related_pending_entry.headword)}}</b> · ${{esc(r.related_pending_entry.meaning)}}</p>${{visual('QA PREVIEW — NOT BASELINE DATA',r.related_pending_entry.token_sequence,r.related_pending_entry.render,r.related_pending_entry.message,r.related_pending_entry.provenance)}}<p>Status: ${{esc(r.related_pending_entry.status)}} · Temporary ID: ${{esc(r.related_pending_entry.temporary_qa_id)}}</p></section>`:'';const metadata=prev.metadata?`<p><b>OLD HEADWORD / MEANING:</b> ${{esc(prev.metadata.headword)}} → <b>NEW:</b> ${{esc(r.headword)}} · ${{esc(prev.metadata.semantic_neighbourhood)}} → ${{esc(r.semantic_neighbourhood)}}<br>Previous mode/surface: ${{esc([...(prev.metadata.mode||[]),...(prev.metadata.surface||[])].join(' / '))}<br>Previous context: ${{esc(JSON.stringify(prev.metadata.context||[]))}}</p>`:'';const warnings=r.scope_warnings.map(w=>`<p class="warn">${{esc(w)}}</p>`).join('');const decisionUI=lockedDecision?`<p class="readonly">RECORDED FROM CURRENT CREATOR QA — ${{esc(r.recorded_decision)}}. Read-only; already counted.</p><p>${{esc(JSON.stringify(r.pending_addendum))}}</p>`:`<label>One decision for this entry: <select data-decision="${{esc(r.dictionary_entry_id)}}">${{options(state[r.dictionary_entry_id]?.decision||'')}}</select></label><label>Creator notes <textarea data-note="${{esc(r.dictionary_entry_id)}}" rows="3" style="width:100%">${{esc(state[r.dictionary_entry_id]?.note||'')}}</textarea></label>`;return `<article class="card ${{lockedDecision?'recorded':''}}" data-id="${{esc(r.dictionary_entry_id)}}"><h2>${{esc(r.dictionary_entry_id)}} · ${{esc(r.corpus_record_id)}} · ${{esc(r.headword)}}</h2><div class="badges">${{r.badges.map(b=>`<span>${{esc(b)}}</span>`).join('')}}</div>${{r.pending_addendum?.baseline_effect?`<div class="pending"><b>CURRENT BASELINE ENTRY</b><p><code>${{esc(cur.preferred_token_sequence)}}</code></p><b>PENDING FINAL APPLICATION:</b><p>${{esc(r.pending_addendum.baseline_effect)}</p>Reason: underspecified as a reusable Dictionary recommendation; keep Corpus evidence.</p></div>`:''}}${{visuals}}${{metadata}}<div class="meta"><b>Meaning</b><span>${{esc(r.semantic_neighbourhood)}}</span><b>Mode / Profile</b><span>${{esc(cur.mode.join(', '))}} / ${{esc(cur.message_profile||'unspecified')}}</span><b>Surface</b><span>${{esc(cur.surface.join(', '))}}</span><b>Context / supplies</b><span>${{esc(JSON.stringify(cur.context))}}</span><b>Known ambiguity</b><span>${{esc(cur.known_ambiguity.join('; ')||'None recorded')}}</span></div>${{r.creator_note?`<h3>Creator note (verbatim)</h3><p class="note">${{esc(r.creator_note)}}</p>`:''}}<p><b>Interpretation:</b> ${{esc(r.structured_interpretation)}}</p>${{warnings}}${{variants}}${{proposals}}${{related}}<details><summary>Full lineage and source evidence</summary><pre>${{esc(JSON.stringify(r.lineage,null,2))}}</pre></details>${{decisionUI}}<p><a href="index.html">Open full Dictionary viewer</a></p></article>`}}function filtered(){{let a=DATA.entries.slice();if($('unreviewed').checked)a=a.filter(r=>!reviewed(r));const q=$('search').value.toLowerCase();if(q)a=a.filter(r=>JSON.stringify(r).toLowerCase().includes(q));const b=$('badge').value;if(b)a=a.filter(r=>r.badges.includes(b));const d=$('decisionFilter').value;if(d)a=a.filter(r=>decision(r)===d);return a}}function draw(){{const badges=[...new Set(DATA.entries.flatMap(x=>x.badges))].sort();const sel=$('badge');const old=sel.value;if(sel.options.length===1)badges.forEach(b=>{{const o=document.createElement('option');o.value=b;o.textContent=b;sel.append(o)}});sel.value=old;const rows=filtered(),reviewedCount=DATA.entries.filter(reviewed).length;$('progress').textContent=`${{reviewedCount}} / ${{DATA.unique_primary_entry_count}} UNIQUE ENTRIES REVIEWED`;if(!rows.length){{$('cards').innerHTML='<p>No matching entries.</p>';return}}if(active>=rows.length)active=rows.length-1;$('cards').innerHTML=rows.map((r,i)=>card(r)).join('');document.querySelectorAll('[data-decision]').forEach(el=>el.addEventListener('change',e=>{{const id=e.target.dataset.decision,val=e.target.value;if(val)state[id]={{...(state[id]||{{}}),decision:val}};else if(state[id])delete state[id].decision;save()}}));document.querySelectorAll('[data-note]').forEach(el=>el.addEventListener('change',e=>{{const id=e.target.dataset.note;state[id]={{...(state[id]||{{}}),note:e.target.value}};save()}}))}}function exportRecords(){{return DATA.entries.map(r=>({{dictionary_entry_id:r.dictionary_entry_id,corpus_record_id:r.corpus_record_id,decision:decision(r)==='UNREVIEWED'?null:decision(r),creator_note:locked(r)?'':(state[r.dictionary_entry_id]?.note||''),decision_source:locked(r)?'PENDING_ADDENDUM':'LOCAL_QA_OVERLAY'}}))}}function validateImport(x){{if(x.qa_type!==DATA.qa_type||x.version!==DATA.version)throw Error('QA type/version mismatch');if(x.source_baseline?.dictionary_json_sha256!==DATA.source_baseline.dictionary_json_sha256||x.source_baseline?.commit!==DATA.source_baseline.commit||x.source_baseline?.source_snapshot!==DATA.source_baseline.source_snapshot)throw Error('baseline snapshot mismatch');if(x.unique_primary_entry_count!==DATA.unique_primary_entry_count)throw Error('unique entry count mismatch');const suppliedIds=x.entry_ids||[];const expectedIds=DATA.entries.map(r=>r.dictionary_entry_id);if(suppliedIds.length!==expectedIds.length||new Set(suppliedIds).size!==suppliedIds.length||expectedIds.some(id=>!suppliedIds.includes(id)))throw Error('entry ID list mismatch');if(x.qa_dataset_sha256!==DATA.qa_dataset_sha256||x.pending_addendum?.sha256!==DATA.pending_addendum.sha256)throw Error('QA dataset/addendum snapshot mismatch');const expected=new Set(DATA.entries.map(r=>r.dictionary_entry_id)),seen=new Set();for(const r of x.records||[]){{if(!expected.has(r.dictionary_entry_id)||seen.has(r.dictionary_entry_id))throw Error('unknown or duplicate Dictionary entry ID');seen.add(r.dictionary_entry_id);if(r.decision&&!DECISIONS.includes(r.decision))throw Error('invalid decision');if(r.decision==='NEEDS_CORRECTION'&&!String(r.creator_note||'').trim())throw Error('NEEDS_CORRECTION requires a note');const lockedRow=DATA.entries.find(e=>e.dictionary_entry_id===r.dictionary_entry_id);if(locked(lockedRow)&&r.decision!==lockedRow.recorded_decision)throw Error('recorded addendum decision mismatch')}}if(seen.size!==expected.size)throw Error('missing expected unique review records');return true}}function download(obj,name){{const blob=new Blob([JSON.stringify(obj,null,2)],{{type:'application/json'}}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;a.click();URL.revokeObjectURL(a.href)}}$('export').onclick=()=>{{const records=exportRecords();if(records.some(r=>r.decision==='NEEDS_CORRECTION'&&!r.creator_note.trim()))return alert('Add a note for each NEEDS_CORRECTION decision before export.');download({{qa_type:DATA.qa_type,version:DATA.version,source_baseline:DATA.source_baseline,qa_dataset_sha256:DATA.qa_dataset_sha256,pending_addendum:DATA.pending_addendum,unique_primary_entry_count:DATA.unique_primary_entry_count,reviewed_count:DATA.entries.filter(reviewed).length,unresolved_follow_up_count:DATA.remaining_unresolved_follow_up_count,unresolved_decision_count:records.filter(r=>r.decision==='UNRESOLVED').length,entry_ids:DATA.entries.map(r=>r.dictionary_entry_id),records}},'pictiq-final-creator-qa-v0.2.json')}};$('import').onchange=async e=>{{try{{const x=JSON.parse(await e.target.files[0].text());validateImport(x);const next={{}};for(const r of x.records)if(!locked(DATA.entries.find(e=>e.dictionary_entry_id===r.dictionary_entry_id))&&r.decision)next[r.dictionary_entry_id]={{decision:r.decision,note:r.creator_note||''}};state=next;save();alert('Import validated and applied to local review overlay.')}}catch(err){{alert('Import rejected: '+err.message)}}e.target.value=''}};$('reset').onclick=()=>{{if(confirm('Reset only local QA decisions and notes? The repository pending addendum will remain unchanged.')){{localStorage.removeItem(KEY);state={{}};draw()}}}};$('prev').onclick=()=>{{active=Math.max(0,active-1);const e=filtered()[active];if(e)document.querySelector(`[data-id="${{CSS.escape(e.dictionary_entry_id)}}"]`)?.scrollIntoView()}};$('next').onclick=()=>{{active=Math.min(filtered().length-1,active+1);const e=filtered()[active];if(e)document.querySelector(`[data-id="${{CSS.escape(e.dictionary_entry_id)}}"]`)?.scrollIntoView()}};for(const id of ['unreviewed','search','badge','decisionFilter'])$(id).addEventListener('input',()=>{{active=0;draw()}});draw();</script></body></html>'''
     html = html.replace('{{', '{').replace('}}', '}')
-    return html.replace('__DATA__', payload).replace('__DECISIONS__', json.dumps(sorted(ALLOWED)))
+    return add_snapshot_migration(html.replace('__DATA__', payload).replace('__DECISIONS__', json.dumps(sorted(ALLOWED))), data)
 
 
 def make_readme(data: dict[str, Any], groups: dict[str, list[dict[str, Any]]]) -> str:
@@ -274,6 +346,8 @@ The v0.1 QA sheet grouped records under change categories, causing the same sema
 Open `review/final-creator-qa-v0.2.html` (local server URL: `http://localhost:8765/docs/research/composition-dictionary-baseline-v0.1/review/final-creator-qa-v0.2.html`). Actions are ACCEPT_AS_SHOWN, NEEDS_CORRECTION, MOVE_TO_CORPUS_ONLY, KEEP_ENTRY_CHANGE_PREFERRED, and UNRESOLVED. The two decisions already supplied in this task are shown as read-only evidence and counted reviewed; remaining cards start UNREVIEWED.
 
 Editable decisions and notes live only in browser `localStorage`, keyed to the dataset snapshot. EXPORT / IMPORT uses JSON bound to baseline, dataset, and pending-addendum hashes; import rejects mismatched snapshots, unknown/duplicate IDs, missing entry records, invalid actions, and changed locked decisions. RESET LOCAL QA asks for confirmation and clears only the local overlay; it cannot remove the repository addendum.
+
+K01a adds a fixed, explicit old→corrected snapshot transfer in this same viewer. It detects old local work, checks all unchanged card content and preview bytes, preserves the old key/export, and refuses to overwrite a nonempty target. Ordinary import still rejects old snapshots. Use **Transfer saved work from previous snapshot** or **Explicit old-export transfer**; the original export downloads before any target write. See [K01a verification](repairs/K01-timetable-media-text/K01a-REPORT.md).
 
 `final-creator-qa-addendum-v0.2.json` records the new creator decisions with status `PENDING_BASELINE_APPLICATION`. The timetable preview uses the canonical renderer and lives under `review/previews/`; neither it nor the addendum is baseline data. No review decision is automatically applied.
 

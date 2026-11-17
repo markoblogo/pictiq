@@ -1,5 +1,7 @@
 # K01 — verified timetable repair patch; snapshot migration dependency
 
+**Historical K01 report. Superseded by [K01a active repair and migration verification](K01a-REPORT.md).** The original findings and patch below are preserved as the pre-application record.
+
 **Status: PREPARED PATCH / BLOCKED ON SEPARATE QA SNAPSHOT MIGRATION.**
 
 The correction has been tested in isolation. This package deliberately does **not** apply it to the active addendum, generator or QA viewer, because that would change the snapshot namespace used for existing saved decisions. No old export, browser storage, decision or locked creator choice has been rewritten, rebound or cleared. Do not report the active pending Message as fixed yet.

@@ -4,6 +4,7 @@ import re
 import subprocess
 import sys
 import unittest
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -14,6 +15,10 @@ DATA_PATH = PKG / "review/final-creator-qa-v0.2.json"
 
 def load(path):
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def migration_runtime(html):
+    return html[html.index("// K01a: exactly"):html.index("// K01A_RUNTIME_END")]
 
 
 class FinalCreatorQATests(unittest.TestCase):
@@ -75,21 +80,86 @@ class FinalCreatorQATests(unittest.TestCase):
         funcs = script[script.index("function exportRecords()") : script.index("function download(")]
         harness = f'''const DATA={json.dumps(data,ensure_ascii=False)};
 const DECISIONS=["ACCEPT_AS_SHOWN","NEEDS_CORRECTION","MOVE_TO_CORPUS_ONLY","KEEP_ENTRY_CHANGE_PREFERRED","UNRESOLVED"];
-let state={{}};
+let state={{}};let preservedExport=null;const KEY="fixture-key";
 function locked(r){{return !!r.recorded_decision}}
 function decision(r){{return locked(r)?r.recorded_decision:(state[r.dictionary_entry_id]?.decision||"UNREVIEWED")}}
 function reviewed(r){{return locked(r)||!!state[r.dictionary_entry_id]?.decision}}
 {funcs}
+{migration_runtime(html)}
 const records=exportRecords();
-const payload={{qa_type:DATA.qa_type,version:DATA.version,source_baseline:DATA.source_baseline,qa_dataset_sha256:DATA.qa_dataset_sha256,pending_addendum:DATA.pending_addendum,unique_primary_entry_count:DATA.unique_primary_entry_count,entry_ids:DATA.entries.map(r=>r.dictionary_entry_id),records}};
+const payload={{qa_type:DATA.qa_type,version:DATA.version,source_baseline:DATA.source_baseline,qa_dataset_sha256:DATA.qa_dataset_sha256,pending_addendum:DATA.pending_addendum,unique_primary_entry_count:DATA.unique_primary_entry_count,entry_ids:DATA.entries.map(r=>r.dictionary_entry_id),reviewed_count:2,unresolved_follow_up_count:0,unresolved_decision_count:0,records}};
 if(records.length!==DATA.unique_primary_entry_count)throw Error("record count");
 if(DATA.entries.filter(reviewed).length!==2)throw Error("initial progress");
 validateImport(payload);
 state[DATA.entries.find(x=>!locked(x)).dictionary_entry_id]={{decision:"ACCEPT_AS_SHOWN",note:""}};
 if(DATA.entries.filter(reviewed).length!==3)throw Error("progress after decision");
-const updated={{...payload,records:exportRecords()}};validateImport(updated);
+const updated={{...payload,reviewed_count:3,records:exportRecords()}};validateImport(updated);
 for(const bad of [{{...updated,qa_dataset_sha256:"wrong"}},{{...updated,records:[...updated.records,updated.records[0]]}},{{...updated,records:updated.records.slice(1)}}]){{let rejected=false;try{{validateImport(bad)}}catch{{rejected=true}}if(!rejected)throw Error("invalid import accepted")}}
 '''
+        result = subprocess.run(["node", "-e", harness], capture_output=True, text=True)
+        self.assertEqual(result.returncode, 0, result.stderr)
+
+    def test_pending_timetable_matches_explicit_creator_sequence(self):
+        # Independent oracle: a three-token arrival Message is not a timetable.
+        expected = ["move_public", "media_text", "time", "punct_question"]
+        addendum = load(PKG / "final-creator-qa-addendum-v0.2.json")
+        decision = next(d for d in addendum["decisions"]
+                        if d.get("new_related_entry", {}).get("temporary_qa_id")
+                        == "qa-new-public-transport-timetable")
+        pending = decision["new_related_entry"]
+        data = load(DATA_PATH)
+        card = next(e for e in data["entries"]
+                    if e["corpus_record_id"] == decision["corpus_record_id"])
+        for name, record in [("addendum", pending),
+                             ("viewer dataset", card["related_pending_entry"])]:
+            with self.subTest(record=name):
+                self.assertEqual([t["id"] for f in record["message"]["frames"]
+                                  for t in f["tokens"]], expected)
+                self.assertEqual(record["token_sequence"].split(" + "), expected)
+                from tools.validate_message_schema import schema_errors, semantic_errors
+                self.assertEqual(schema_errors(record["message"]), [])
+                self.assertEqual(semantic_errors(record["message"]), [])
+        preview = PKG / pending["preview_render"]
+        self.assertEqual([el.attrib["data-id"] for el in ET.parse(preview).iter()
+                          if "data-id" in el.attrib], expected)
+        from tools.research.build_composition_dictionary_final_qa_v0_2 import make_addendum
+        dictionary = load(PKG / "dictionary.json")
+        by_corpus = {cid: e for e in dictionary["entries"] for cid in e["corpus_refs"]}
+        generated = make_addendum(by_corpus, dictionary, pending["preview_render_sha256"])
+        generated_pending = next(d["new_related_entry"] for d in generated["decisions"]
+                                 if d.get("new_related_entry", {}).get("temporary_qa_id")
+                                 == pending["temporary_qa_id"])
+        self.assertEqual([t["id"] for f in generated_pending["message"]["frames"]
+                          for t in f["tokens"]], expected)
+        self.assertEqual([t["id"] for f in by_corpus[decision["corpus_record_id"]]
+                          ["preferred_variant"]["message"]["frames"]
+                          for t in f["tokens"]], ["move_public", "time", "punct_question"])
+        self.assertEqual(addendum["status"], "PENDING_BASELINE_APPLICATION")
+        self.assertEqual(hashlib.sha256(preview.read_bytes()).hexdigest(),
+                         pending["preview_render_sha256"])
+        self.assertEqual(hashlib.sha256((PKG / data["pending_addendum"]["path"]).read_bytes()).hexdigest(),
+                         data["pending_addendum"]["sha256"])
+
+    def test_k01_rejects_old_snapshot_without_migrating_decisions(self):
+        revision = "f9be7228bf1b4a64ab52dd157e2663add3298d5a"
+        relative = "docs/research/composition-dictionary-baseline-v0.1/review/final-creator-qa-v0.2.json"
+        old = json.loads(subprocess.check_output(["git", "show", f"{revision}:{relative}"], cwd=ROOT))
+        data = load(DATA_PATH)
+        self.assertEqual(data["entries"], old["entries"])
+        self.assertEqual(data["source_baseline"], old["source_baseline"])
+        self.assertNotEqual(data["qa_dataset_sha256"], old["qa_dataset_sha256"])
+        self.assertNotEqual(data["pending_addendum"]["sha256"], old["pending_addendum"]["sha256"])
+        script = re.search(r"<script>(.*?)</script>", VIEWER.read_text(), re.S).group(1)
+        funcs = script[script.index("function exportRecords()") : script.index("function download(")]
+        # A historical export must still fail the snapshot guard, even with valid records.
+        old_export = {**old, "entry_ids": [e["dictionary_entry_id"] for e in old["entries"]],
+                      "records": [{"dictionary_entry_id": e["dictionary_entry_id"],
+                                   "decision": e["recorded_decision"]} for e in old["entries"]]}
+        harness = f"const DATA={json.dumps(data)};const oldExport={json.dumps(old_export)};const KEY=\"fixture-key\";" + funcs + migration_runtime(VIEWER.read_text()) + """
+let rejected=false;try{validateImport(oldExport)}catch(e){
+ if(e.message!=='QA dataset/addendum snapshot mismatch')throw e;rejected=true;}
+if(!rejected)throw Error('old decisions silently rebound');
+"""
         result = subprocess.run(["node", "-e", harness], capture_output=True, text=True)
         self.assertEqual(result.returncode, 0, result.stderr)
 

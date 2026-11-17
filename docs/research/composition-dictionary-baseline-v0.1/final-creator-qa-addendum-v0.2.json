@@ -83,6 +83,10 @@
                 },
                 {
                   "type": "icon",
+                  "id": "media_text"
+                },
+                {
+                  "type": "icon",
                   "id": "time"
                 },
                 {
@@ -97,7 +101,15 @@
         "preview_render": "review/previews/qa-new-public-transport-timetable.svg",
         "preview_render_sha256": "b296064c6a9dd5bbdc4df29b88c2c9eb5a554293d0f4f51cac7b1a54ca78b6f2",
         "status": "CREATOR-APPROVED / PENDING BASELINE APPLICATION",
-        "is_variant_of_arrival_question": false
+        "is_variant_of_arrival_question": false,
+        "technical_correction": {
+          "pass": "K01",
+          "audited_revision": "f9be7228bf1b4a64ab52dd157e2663add3298d5a",
+          "creator_decision_revision": "277bbb5",
+          "creator_decision_path": "docs/research/composition-dictionary-baseline-v0.1/final-creator-qa-addendum-v0.2.json",
+          "creator_decision_selector": "decisions[*].new_related_entry[temporary_qa_id=qa-new-public-transport-timetable].token_sequence",
+          "reason": "Restore media_text already specified by the creator; no new semantic decision."
+        }
       },
       "resolved_follow_up": "Exact ordered timetable composition; no longer unresolved.",
       "application_status": "PENDING; preserve arrival-time entry and add a distinct related semantic unit"

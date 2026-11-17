@@ -8,8 +8,10 @@ Open `review/final-creator-qa-v0.2.html` (local server URL: `http://localhost:87
 
 Editable decisions and notes live only in browser `localStorage`, keyed to the dataset snapshot. EXPORT / IMPORT uses JSON bound to baseline, dataset, and pending-addendum hashes; import rejects mismatched snapshots, unknown/duplicate IDs, missing entry records, invalid actions, and changed locked decisions. RESET LOCAL QA asks for confirmation and clears only the local overlay; it cannot remove the repository addendum.
 
+K01a adds a fixed, explicit old→corrected snapshot transfer in this same viewer. It detects old local work, checks all unchanged card content and preview bytes, preserves the old key/export, and refuses to overwrite a nonempty target. Ordinary import still rejects old snapshots. Use **Transfer saved work from previous snapshot** or **Explicit old-export transfer**; the original export downloads before any target write. See [K01a verification](repairs/K01-timetable-media-text/K01a-REPORT.md).
+
 `final-creator-qa-addendum-v0.2.json` records the new creator decisions with status `PENDING_BASELINE_APPLICATION`. The timetable preview uses the canonical renderer and lives under `review/previews/`; neither it nor the addendum is baseline data. No review decision is automatically applied.
 
 After creator completes v0.2, a separate processing pass should apply the QA export and addendum, validate the resulting baseline, and freeze v0.1. Only after that research arc is complete should it be pushed; Color Modifier repair comes next. This task does not start that pass.
 
-Dataset SHA-256: `088da1591c833f3a0a979bd0d5814bee2ea45ad2ec36ebca7615de6ba13d4f90`. Pending addendum SHA-256: `24e7793f39790ecb462094503dfbe66d4f129adf2b2b50dcf8b067d2516df686`. Old v0.1 QA remains at `review/final-creator-visual-qa.html` unchanged.
+Dataset SHA-256: `45c041165ad17f2f8114dddd454ba42f74e9e635eb44606133f291348626f413`. Pending addendum SHA-256: `8c5cfda80ee90dea0e185d142249a03e6be83b7ec40f1523f07e74dcd5ed0b51`. Old v0.1 QA remains at `review/final-creator-visual-qa.html` unchanged.
