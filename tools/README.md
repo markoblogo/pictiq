@@ -215,3 +215,17 @@ python3 tools/pictiq_render.py normalize examples/renderer/legacy-normalization.
 ```
 
 Diagnostics are emitted as JSON lines on stderr. Errors stop rendering; warnings preserve deterministic output.
+
+## read_composition.py — read-only Composition Dictionary / Corpus v0.1
+
+Run from the repository root (the script resolves data relative to its own location):
+
+```bash
+python tools/read_composition.py --source dictionary --id pcd-v01-0006
+python tools/read_composition.py --source dictionary --id pcd-v01-0025
+python tools/read_composition.py --source corpus --id clh-v01-0015
+```
+
+Output is JSON: the exact `baseline_record`, package QA status, explicitly linked subsequent creator decisions with application status, linked Corpus records, saved renders, current canonical asset availability, record selectors and SHA-256 of consumed files. No data is normalized or rewritten. Pending decisions are not applied; absence of a pending action does not complete Dictionary QA. Missing historical `place_hotel` stays missing in the current registry even when a saved historical render is available. Its Corpus ID is verified in `accepted-corpus.json`, not inferred from the Harvest ID.
+
+Exit 0 means the record was read without contradictory links; warnings such as pending QA, historical limitations or missing assets remain in `diagnostics`. It does **not** mean semantic approval. Exit 1 reports unknown IDs/sources, incompatible bindings or ambiguous/contradictory links; no fallback dataset or replacement token is selected. Fatal follow-on link errors preserve the selected raw record when available. Only the fixed active v0.1 files and explicit ID/manifest links are used; archived copies never replace the active addendum. No browser-only QA decisions are inspected or inferred.
