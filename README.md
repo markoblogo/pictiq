@@ -81,7 +81,7 @@ Printable PDF: [`docs/overview/pictiq-core-grid.pdf`](docs/overview/pictiq-core-
 - Vocabulary governance: `spec/VOCABULARY_GOVERNANCE.md` records NEED-BEFORE-VOCABULARY and DEFERRED_UNTIL_NEEDED.
 - Entity-symbol registry: `entities/entity-index.json`
 - Packs: `packs/universal-core.json`, `packs/universal-v1.json`
-- Static dictionary site (GitHub Pages): `docs/`
+- Static Lexicon and Composer site (GitHub Pages): `docs/`
 
 Canonical overview artifacts: `docs/overview/pictiq-core-grid.png` and `docs/overview/pictiq-core-grid.pdf` (historical filename retained).
 Core protocol release: `v1.0.0-core`
@@ -98,7 +98,7 @@ Meaning may enter a message through [lexical tiles, modifiers/operators, paramet
 
 The single canonical lexicon can be selected through an [Embodied Profile](spec/PROFILES.md#embodied-profile) for person-present communication or a [Standalone Profile](spec/PROFILES.md#standalone-profile) for durable/remote communication. Context packs layer on either profile; they are not separate icon libraries.
 
-Pictiq currently scales through five distinct layers: the 87-identifier ordinary canonical registry, the 86 active ordinary semantic concepts retained after compatibility cleanup, Core vocabulary, context packs/profiles, and the 11-example entity registry for specific named entities or visual proper names. Entity registry growth does not increase the ordinary vocabulary count.
+Pictiq currently scales through five distinct layers: the 87-identifier ordinary canonical registry, the 86 active ordinary semantic concepts retained after compatibility cleanup, Core vocabulary, context packs/profiles, and the 16-symbol entity registry for specific named entities or visual proper names. Entity registry growth does not increase the ordinary vocabulary count.
 
 ### Research
 - [Toki Pona interoperability research](https://github.com/markoblogo/toki-pona-translator) compares the 120-word Toki Pona core vocabulary, sitelen pona, sitelen emoji, and the current Pictiq lexicon as a semantic and interoperability stress test—not as evidence of historical influence or lexical equivalence.
@@ -119,7 +119,7 @@ Pictiq currently scales through five distinct layers: the 87-identifier ordinary
 - `/profiles` — recommended Embodied and Standalone vocabulary profiles
 - `/templates` — tile template for icon authoring
 - `/tools` — validation and SVG→PNG rendering scripts
-- `/docs` — static dictionary site (GitHub Pages-ready)
+- `/docs` — static Lexicon and Composer site (GitHub Pages-ready)
 - `/releases` — release-note sources
 
 ## Tooling & CI
@@ -133,13 +133,17 @@ Pictiq currently scales through five distinct layers: the 87-identifier ordinary
 - Layout generators produce wallet cards, luggage tags, phone lockscreens, lighter artwork, and documentation overviews from content profiles.
 - GitHub Actions runs validation on push and pull requests.
 
-## Licensing (summary)
-- Personal use is allowed.
-- Non-commercial use is allowed under `LICENSE` (CC BY-NC 4.0).
-- Commercial use requires a separate agreement: see `COMMERCIAL_LICENSE.md`.
+## Usage & licensing
 
-## Status
-The Core protocol and the first Pictiq Handbook are published. The lexicon, context packs, profiles, layouts, and machine-readable experiments remain under active development.
+Read the existing [LICENSE](LICENSE): **Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)**. The separate [Commercial License (Draft)](COMMERCIAL_LICENSE.md) describes proposed commercial-use arrangements; it remains a draft. Consult these documents for terms and scope.
+
+## Current status
+
+The Core protocol and first Pictiq Handbook are published.
+
+- **Lexicon and Composer:** the existing [Lexicon](https://pictiq.abvx.xyz/lexicon/) presents canonical primitives/signs and separate Entity Symbols; [Composer](https://pictiq.abvx.xyz/composer/) builds and exports messages.
+- **Composition Dictionary** stores reusable concepts and short expressions as a [research baseline awaiting final creator visual QA](docs/research/composition-dictionary-baseline-v0.1/README.md). **Corpus** is the broader [evidence and historical-example archive](docs/research/composition-library-baseline-v0.1/README.md). Neither is another name for the public Lexicon.
+- **Local CLI tools:** [read a record with status/provenance](tools/README.md) and [build/verify one replica package](docs/research/replica-package-v0.1/README.md). These local tools are separate from Composer exports and do not constitute a public API, MCP or Translator.
 
 <!-- ABVX:ECOSYSTEM:BEGIN -->
 ## ABVX ecosystem
