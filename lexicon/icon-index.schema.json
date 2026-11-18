@@ -19,6 +19,10 @@
           "type": { "type": "string", "enum": ["icon", "operator"] },
           "category": { "type": "string" },
           "meaning_en": { "type": "string" },
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "keywords": { "type": "array", "items": { "type": "string" } },
+          "aliases": { "type": "array", "items": { "type": "string" } },
           "aliases_en": { "type": "array", "items": { "type": "string" } },
           "tags_en": { "type": "array", "items": { "type": "string" } },
           "examples": { "type": "array", "items": { "type": "string" } }
