@@ -5,7 +5,7 @@ Pictiq lexicon validation.
 Checks:
 - every pack and content-profile id exists in lexicon/icon-index.json
 - all lexicon ids are unique
-- required fields exist and type is valid
+- declared JSON Schema validates the complete lexicon structure
 """
 
 from __future__ import annotations
@@ -14,10 +14,6 @@ import json
 import sys
 from pathlib import Path
 from typing import Any
-
-
-REQUIRED_FIELDS = ("id", "type", "category", "meaning_en", "aliases_en", "tags_en", "examples")
-VALID_TYPES = {"icon", "operator"}
 
 
 def eprint(msg: str) -> None:
@@ -34,58 +30,50 @@ def load_json(path: Path) -> Any:
 
 
 def validate_lexicon_index(root: Path) -> tuple[list[dict[str, Any]], list[str]]:
+    root = root.resolve()
     idx_path = root / "lexicon" / "icon-index.json"
-    idx = load_json(idx_path)
+    schema_path = root / "lexicon" / "icon-index.schema.json"
+    try:
+        from jsonschema.validators import validator_for
+    except ImportError as exc:
+        return [], [f"{idx_path}: JSON Schema validation unavailable: {exc}; "
+                    "install dependencies with python -m pip install -r requirements.txt"]
 
-    errs: list[str] = []
-    if not isinstance(idx, dict):
-        return [], [f"{idx_path}: expected object"]
+    try:
+        schema = load_json(schema_path)
+        validator_class = validator_for(schema, default=None) if isinstance(schema, dict) else None
+        if validator_class is None:
+            return [], [f"{schema_path}: schema $: missing or unsupported $schema dialect"]
+        validator_class.check_schema(schema)
+    except Exception as exc:  # Invalid/unreadable schemas must fail closed.
+        path = getattr(exc, "json_path", "$")
+        message = getattr(exc, "message", str(exc))
+        return [], [f"{schema_path}: schema {path}: {message}"]
 
-    icons = idx.get("icons")
-    if not isinstance(icons, list):
-        return [], [f"{idx_path}: missing/invalid 'icons' array"]
+    try:
+        idx = load_json(idx_path)
+    except (OSError, RuntimeError) as exc:
+        return [], [f"{idx_path}: $: {exc}"]
 
+    try:
+        validation_errors = sorted(validator_class(schema).iter_errors(idx),
+                                   key=lambda error: tuple(map(str, error.absolute_path)))
+    except Exception as exc:  # Includes an unavailable schema reference.
+        return [], [f"{schema_path}: JSON Schema validation failed: {exc}"]
+    if validation_errors:
+        return [], [f"{idx_path}: {error.json_path}: {error.message}"
+                    for error in validation_errors]
+
+    # Uniqueness is a project invariant beyond the declared structural schema.
+    icons = idx["icons"]
     seen: set[str] = set()
-    out: list[dict[str, Any]] = []
+    errs: list[str] = []
     for i, entry in enumerate(icons):
-        if not isinstance(entry, dict):
-            errs.append(f"{idx_path}: icons[{i}]: expected object")
-            continue
-
-        missing = [k for k in REQUIRED_FIELDS if k not in entry]
-        if missing:
-            errs.append(f"{idx_path}: icons[{i}]: missing required fields: {', '.join(missing)}")
-            continue
-
-        _id = entry.get("id")
-        if not isinstance(_id, str) or not _id:
-            errs.append(f"{idx_path}: icons[{i}].id: expected non-empty string")
-            continue
-
-        if _id in seen:
-            errs.append(f"{idx_path}: duplicate id: {_id}")
-        else:
-            seen.add(_id)
-
-        _type = entry.get("type")
-        if _type not in VALID_TYPES:
-            errs.append(f"{idx_path}: {_id}: invalid type '{_type}', expected one of: {', '.join(sorted(VALID_TYPES))}")
-
-        # Basic type checks for required fields (kept minimal, per requirements)
-        if not isinstance(entry.get("category"), str):
-            errs.append(f"{idx_path}: {_id}.category: expected string")
-        if not isinstance(entry.get("meaning_en"), str):
-            errs.append(f"{idx_path}: {_id}.meaning_en: expected string")
-        if not isinstance(entry.get("aliases_en"), list):
-            errs.append(f"{idx_path}: {_id}.aliases_en: expected array")
-        if not isinstance(entry.get("tags_en"), list):
-            errs.append(f"{idx_path}: {_id}.tags_en: expected array")
-        if not isinstance(entry.get("examples"), list):
-            errs.append(f"{idx_path}: {_id}.examples: expected array")
-
-        out.append(entry)
-
-    return out, errs
+        icon_id = entry["id"]
+        if icon_id in seen:
+            errs.append(f"{idx_path}: $.icons[{i}].id: duplicate id: {icon_id}")
+        seen.add(icon_id)
+    return icons, errs
 
 
 def validate_packs(root: Path, lexicon_ids: set[str]) -> list[str]:
@@ -245,14 +233,13 @@ def validate_profiles(root: Path, lexicon_ids: set[str]) -> list[str]:
 def main(argv: list[str]) -> int:
     root = Path(__file__).resolve().parents[1]
 
-    _, lex_errs = validate_lexicon_index(root)
+    entries, lex_errs = validate_lexicon_index(root)
     if lex_errs:
         for msg in lex_errs:
             eprint(f"ERROR: {msg}")
         return 1
 
-    idx = load_json(root / "lexicon" / "icon-index.json")
-    lexicon_ids = {e["id"] for e in idx["icons"] if isinstance(e, dict) and isinstance(e.get("id"), str)}
+    lexicon_ids = {entry["id"] for entry in entries}
 
     pack_errs = validate_packs(root, lexicon_ids)
     if pack_errs:
