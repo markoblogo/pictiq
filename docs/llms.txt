@@ -11,6 +11,7 @@ Pictiq uses framed canonical SVG tiles, composition, context packs, numeric nota
 - Composer: https://pictiq.abvx.xyz/composer/
 - Lexicon: https://pictiq.abvx.xyz/lexicon/
 - Source and specifications: https://github.com/markoblogo/pictiq
+- Data and local CLI reading guide (prepared in checkout; new URL awaits publication): https://pictiq.abvx.xyz/machine-start.md
 - Handbook: https://github.com/markoblogo/pictiq/tree/main/books/handbook-v1
 
 ## Project facts

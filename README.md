@@ -143,7 +143,7 @@ The Core protocol and first Pictiq Handbook are published.
 
 - **Lexicon and Composer:** the existing [Lexicon](https://pictiq.abvx.xyz/lexicon/) presents canonical primitives/signs and separate Entity Symbols; [Composer](https://pictiq.abvx.xyz/composer/) builds and exports messages.
 - **Composition Dictionary** stores reusable concepts and short expressions as a [research baseline awaiting final creator visual QA](docs/research/composition-dictionary-baseline-v0.1/README.md). **Corpus** is the broader [evidence and historical-example archive](docs/research/composition-library-baseline-v0.1/README.md). Neither is another name for the public Lexicon.
-- **Local CLI tools:** [read a record with status/provenance](tools/README.md) and [build/verify one replica package](docs/research/replica-package-v0.1/README.md). These local tools are separate from Composer exports and do not constitute a public API, MCP or Translator.
+- **Local CLI tools:** [read a record with status/provenance](tools/README.md) and [build/verify one replica package](docs/research/replica-package-v0.1/README.md). These local tools are separate from Composer exports and do not constitute a public API, MCP or Translator. See the [machine-reading start guide](docs/machine-start.md) for data paths and status boundaries.
 
 <!-- ABVX:ECOSYSTEM:BEGIN -->
 ## ABVX ecosystem
