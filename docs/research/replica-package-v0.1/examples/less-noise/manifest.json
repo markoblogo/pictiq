@@ -1,0 +1,360 @@
+{
+  "format": "pictiq-replica-package",
+  "format_version": "0.1",
+  "package_id": "replica-ff63f6c650cd6d7ffaac23f8",
+  "reference_git_revision": "34366fc7396f49e40d5235b3a3cc897550b8ea92",
+  "source": {
+    "path": "docs/research/composition-dictionary-baseline-v0.1/dictionary.json",
+    "sha256": "9c0ed9e048b9a4d134635e7f21eab68809b42bfd495ee0697db3ad67063ae107",
+    "entry_id": "pcd-v01-0006",
+    "entry_selector": "/entries/5",
+    "variant_id": "pcd-v01-0006-preferred",
+    "variant_selector": "/entries/5/variants/0",
+    "message_selector": "/entries/5/variants/0/message",
+    "variant_provenance": {
+      "corpus_record_ids": [
+        "clc-v01-0008-r1"
+      ],
+      "creator_review_record_id": "clc-v01-0008-r1",
+      "dictionary_entry_id": "pcd-v01-0006",
+      "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+    }
+  },
+  "files": {
+    "message": {
+      "path": "message.json",
+      "sha256": "ab56f7a70e4958adf4a2e0a2494c31e73ba5ef29d6230161decb6a035ecb936e"
+    },
+    "render": {
+      "path": "render.svg",
+      "sha256": "6f1724b6de5ed1c9b20e5c16e816e83b4a244d01df66fab5058f230b2d66605f"
+    }
+  },
+  "implementation": {
+    "renderer": "existing Python Renderer v0.1 / render_svg",
+    "render_options": {
+      "tile_size": 64,
+      "token_gap": 8,
+      "frame_gap": 16,
+      "padding": 16,
+      "direction": "ltr"
+    },
+    "files": [
+      {
+        "path": "pictiq_renderer/__init__.py",
+        "sha256": "87aa4e724139a4fa6c4f76166295cd97bff100b29937f48e530b6c70a11b495b"
+      },
+      {
+        "path": "pictiq_renderer/diagnostics.py",
+        "sha256": "1efeb8c5b56d429c0eee6f894cef64aa295e53e6ec160475db948c2b072d1c79"
+      },
+      {
+        "path": "pictiq_renderer/layout.py",
+        "sha256": "c23e0f4798c5c8bf16e285c09553f0e5f303bbb9ba055bd92241f8de2a9805c5"
+      },
+      {
+        "path": "pictiq_renderer/parser.py",
+        "sha256": "6fb94b8353c4c8a073815cf4ec5b679efa4034501de583028136145fde764dee"
+      },
+      {
+        "path": "pictiq_renderer/pipeline.py",
+        "sha256": "38c05bfb72e2d9087db9ab9e97e27f187cec8f4da26a64446af697738e3b1691"
+      },
+      {
+        "path": "pictiq_renderer/registry.py",
+        "sha256": "eac1c1fdf1b4f4a8b34ed6449c43dab072b415fd318add1b3f47be4114575e98"
+      },
+      {
+        "path": "pictiq_renderer/svg_renderer.py",
+        "sha256": "3e1b02b18fe84dabc9485200e990e78a57222716947ead13c2258b5ed6caaa55"
+      },
+      {
+        "path": "pictiq_renderer/validator.py",
+        "sha256": "3d15606ead0758b0ec226e9d12ba6bff7a75328e0c33672706a66ba5f05018d1"
+      },
+      {
+        "path": "tools/validate_message_schema.py",
+        "sha256": "5a18e45e55654bde5dc82ccba20bae5fbe5cb61dc4c9d677a9d79b9962507ca8"
+      },
+      {
+        "path": "tools/replica_package.py",
+        "sha256": "81b0c08121871be7b0fd36328505917394f84665b7c9c21a1a81f866cdbbb91c"
+      }
+    ]
+  },
+  "registry_files": [
+    {
+      "path": "lexicon/icon-index.json",
+      "sha256": "d3cf9678639d3f7af4fa41196664361231114b3aa12ba7e99b6b803034e4cb24"
+    },
+    {
+      "path": "lexicon/compatibility.json",
+      "sha256": "a7323a578551c89f8cb185fe9215819989ae4b0c1b595a0ea98d2511fe51871b"
+    },
+    {
+      "path": "entities/entity-index.json",
+      "sha256": "b8b736e41a9e6bc2650ac8e943688790ac3acc2a2c78d08e4ed86016caf87f51"
+    },
+    {
+      "path": "notation/numeric/index.json",
+      "sha256": "6ef2453a5e5f03d571192d2dabd2c041912aa147ba10d094355381d5fb388edd"
+    },
+    {
+      "path": "profiles/standalone-core-v0.1.json",
+      "sha256": "970c92fc08ce5af90863d2da473e819916b763263019dd3fd677cc9397db1233"
+    },
+    {
+      "path": "profiles/embodied-core-v0.1.json",
+      "sha256": "58bb4e11f377d4caa0d30e5554a58bdd0d6fdc2ee7b494bda7875af1d2f5004b"
+    },
+    {
+      "path": "packs/city-paris-v0.1.json",
+      "sha256": "510b3577eab6cd5cba612940cebfdbbfdc09af0bd1e5086acc88b6abec5d286a"
+    },
+    {
+      "path": "packs/road-wayfinding-v0.1.json",
+      "sha256": "7702a35d1ba37167a4c7372cc32506633b16031856229bcaa0b9275ce391b7f8"
+    },
+    {
+      "path": "packs/universal-core.json",
+      "sha256": "2b9920ac5e047038e534cee67669bec3dfa93c2f8e9b0b16de13fe45a6b6a933"
+    },
+    {
+      "path": "packs/universal-v1.json",
+      "sha256": "93635a79f40118770971ccc32713a6414517cfdf7cfaff063a264505c1b687a8"
+    }
+  ],
+  "canonical_assets": [
+    {
+      "frame": 0,
+      "token": 0,
+      "type": "icon",
+      "original_id_or_value": "comm_sound",
+      "path": "icons/svg/comm_sound.svg",
+      "sha256": "78ea410db07ce53e07280f1f45de969ea3850873012b74281350e250feb23790"
+    },
+    {
+      "frame": 0,
+      "token": 1,
+      "type": "icon",
+      "original_id_or_value": "qty_minus",
+      "path": "icons/svg/qty_minus.svg",
+      "sha256": "bb63a53a92c0de4f14622b0d2863663313bf9abd0e3ae37854022fec32df8382"
+    }
+  ],
+  "creator_decision": {
+    "record": {
+      "corpus_record_id": "clc-v01-0008-r1",
+      "dictionary_entry_id": "pcd-v01-0006",
+      "system_eligibility": "YES",
+      "creator_decision": "KEEP_IN_DICTIONARY",
+      "creator_notes": "также можно сказать comm_sound + стрелка вниз (down) или если шум от криков либо разговоров то можно сказать без comm_sound - а communication + minus либо down"
+    },
+    "source": {
+      "path": "docs/research/composition-dictionary-baseline-v0.1/creator-review-export.json",
+      "sha256": "3151d779efab99445f3f5b61cd5da41dded979d435cf11226da5d62bbfe9d5ae",
+      "selector": "/records/5"
+    }
+  },
+  "corpus_lineage": {
+    "source": {
+      "path": "docs/research/composition-library-baseline-v0.1/accepted-corpus.json",
+      "sha256": "8dc2509dfc9d31d006726732e1825bc120dbeef06c5c1b0b1798e6315808e14e",
+      "selector": "/records/81"
+    },
+    "record_id": "clc-v01-0008-r1",
+    "provenance": {
+      "source_type": "CREATOR_RECONCILIATION",
+      "export_path": "../composition-library-historical-harvest-v0.1/reconciliation/creator-export-2026-09-27.json",
+      "addendum_path": "../composition-library-historical-harvest-v0.1/reconciliation/creator-reconciliation-addendum-2026-09-27.json",
+      "historical_record_id": "clh-v01-0008",
+      "creator_reason": "SOUND + LESS is functionally sufficient; comm_speak + logic_yes adds no necessary information and over-explains the intent.",
+      "provenance": "CREATOR_RECONCILIATION"
+    }
+  },
+  "source_constraints": {
+    "mode": [
+      "STANDALONE"
+    ],
+    "surface": [
+      "OTHER"
+    ],
+    "context": [
+      {
+        "communication_mode": "STANDALONE",
+        "communication_surface": "OTHER",
+        "context": {
+          "domain": [
+            "constrained-translation pilot"
+          ],
+          "situation": [
+            "single-model, one-repeat structured-output trial"
+          ],
+          "task": [
+            "negation evaluation"
+          ]
+        },
+        "evidence_ids": [
+          "cand-04a-10"
+        ]
+      }
+    ],
+    "usage_note": "",
+    "known_ambiguity": [],
+    "context_warnings": []
+  },
+  "variant_constraints": {
+    "variant_type": "PREFERRED",
+    "status": "CURRENT_ACCEPTED",
+    "mode": [
+      "STANDALONE"
+    ],
+    "surface": [
+      "OTHER"
+    ],
+    "context": [
+      {
+        "communication_mode": "STANDALONE",
+        "communication_surface": "OTHER",
+        "context": {
+          "domain": [
+            "constrained-translation pilot"
+          ],
+          "situation": [
+            "single-model, one-repeat structured-output trial"
+          ],
+          "task": [
+            "negation evaluation"
+          ]
+        },
+        "evidence_ids": [
+          "cand-04a-10"
+        ]
+      }
+    ],
+    "variant_context_note": null,
+    "semantic_distinction": "Less noise, please."
+  },
+  "source_qa": {
+    "dictionary_version": "0.1",
+    "status": "CREATOR-REVIEWED / ACCEPTED RESEARCH BASELINE; AWAITING FINAL VISUAL QA",
+    "manifest_status": "CREATOR-REVIEWED / ACCEPTED RESEARCH BASELINE; AWAITING FINAL VISUAL QA",
+    "subsequent_creator_decisions": [],
+    "no_new_context_permission_inferred": true
+  },
+  "review_status": {
+    "new_render": "NOT_REVIEWED",
+    "final_placement": "NOT_REVIEWED"
+  },
+  "validation_diagnostics": [],
+  "input_files": [
+    {
+      "path": "docs/research/composition-dictionary-baseline-v0.1/creator-review-export.json",
+      "sha256": "3151d779efab99445f3f5b61cd5da41dded979d435cf11226da5d62bbfe9d5ae"
+    },
+    {
+      "path": "docs/research/composition-dictionary-baseline-v0.1/dictionary.json",
+      "sha256": "9c0ed9e048b9a4d134635e7f21eab68809b42bfd495ee0697db3ad67063ae107"
+    },
+    {
+      "path": "docs/research/composition-dictionary-baseline-v0.1/final-creator-qa-addendum-v0.2.json",
+      "sha256": "8c5cfda80ee90dea0e185d142249a03e6be83b7ec40f1523f07e74dcd5ed0b51"
+    },
+    {
+      "path": "docs/research/composition-dictionary-baseline-v0.1/manifest.json",
+      "sha256": "3187b80882586bba131a1878195be06f92cb4ce5c2357d59822b158e9bafe0ae"
+    },
+    {
+      "path": "docs/research/composition-library-baseline-v0.1/accepted-corpus.json",
+      "sha256": "8dc2509dfc9d31d006726732e1825bc120dbeef06c5c1b0b1798e6315808e14e"
+    },
+    {
+      "path": "entities/entity-index.json",
+      "sha256": "b8b736e41a9e6bc2650ac8e943688790ac3acc2a2c78d08e4ed86016caf87f51"
+    },
+    {
+      "path": "icons/svg/comm_sound.svg",
+      "sha256": "78ea410db07ce53e07280f1f45de969ea3850873012b74281350e250feb23790"
+    },
+    {
+      "path": "icons/svg/qty_minus.svg",
+      "sha256": "bb63a53a92c0de4f14622b0d2863663313bf9abd0e3ae37854022fec32df8382"
+    },
+    {
+      "path": "lexicon/compatibility.json",
+      "sha256": "a7323a578551c89f8cb185fe9215819989ae4b0c1b595a0ea98d2511fe51871b"
+    },
+    {
+      "path": "lexicon/icon-index.json",
+      "sha256": "d3cf9678639d3f7af4fa41196664361231114b3aa12ba7e99b6b803034e4cb24"
+    },
+    {
+      "path": "notation/numeric/index.json",
+      "sha256": "6ef2453a5e5f03d571192d2dabd2c041912aa147ba10d094355381d5fb388edd"
+    },
+    {
+      "path": "packs/city-paris-v0.1.json",
+      "sha256": "510b3577eab6cd5cba612940cebfdbbfdc09af0bd1e5086acc88b6abec5d286a"
+    },
+    {
+      "path": "packs/road-wayfinding-v0.1.json",
+      "sha256": "7702a35d1ba37167a4c7372cc32506633b16031856229bcaa0b9275ce391b7f8"
+    },
+    {
+      "path": "packs/universal-core.json",
+      "sha256": "2b9920ac5e047038e534cee67669bec3dfa93c2f8e9b0b16de13fe45a6b6a933"
+    },
+    {
+      "path": "packs/universal-v1.json",
+      "sha256": "93635a79f40118770971ccc32713a6414517cfdf7cfaff063a264505c1b687a8"
+    },
+    {
+      "path": "pictiq_renderer/__init__.py",
+      "sha256": "87aa4e724139a4fa6c4f76166295cd97bff100b29937f48e530b6c70a11b495b"
+    },
+    {
+      "path": "pictiq_renderer/diagnostics.py",
+      "sha256": "1efeb8c5b56d429c0eee6f894cef64aa295e53e6ec160475db948c2b072d1c79"
+    },
+    {
+      "path": "pictiq_renderer/layout.py",
+      "sha256": "c23e0f4798c5c8bf16e285c09553f0e5f303bbb9ba055bd92241f8de2a9805c5"
+    },
+    {
+      "path": "pictiq_renderer/parser.py",
+      "sha256": "6fb94b8353c4c8a073815cf4ec5b679efa4034501de583028136145fde764dee"
+    },
+    {
+      "path": "pictiq_renderer/pipeline.py",
+      "sha256": "38c05bfb72e2d9087db9ab9e97e27f187cec8f4da26a64446af697738e3b1691"
+    },
+    {
+      "path": "pictiq_renderer/registry.py",
+      "sha256": "eac1c1fdf1b4f4a8b34ed6449c43dab072b415fd318add1b3f47be4114575e98"
+    },
+    {
+      "path": "pictiq_renderer/svg_renderer.py",
+      "sha256": "3e1b02b18fe84dabc9485200e990e78a57222716947ead13c2258b5ed6caaa55"
+    },
+    {
+      "path": "pictiq_renderer/validator.py",
+      "sha256": "3d15606ead0758b0ec226e9d12ba6bff7a75328e0c33672706a66ba5f05018d1"
+    },
+    {
+      "path": "profiles/embodied-core-v0.1.json",
+      "sha256": "58bb4e11f377d4caa0d30e5554a58bdd0d6fdc2ee7b494bda7875af1d2f5004b"
+    },
+    {
+      "path": "profiles/standalone-core-v0.1.json",
+      "sha256": "970c92fc08ce5af90863d2da473e819916b763263019dd3fd677cc9397db1233"
+    },
+    {
+      "path": "tools/replica_package.py",
+      "sha256": "81b0c08121871be7b0fd36328505917394f84665b7c9c21a1a81f866cdbbb91c"
+    },
+    {
+      "path": "tools/validate_message_schema.py",
+      "sha256": "5a18e45e55654bde5dc82ccba20bae5fbe5cb61dc4c9d677a9d79b9962507ca8"
+    }
+  ]
+}
