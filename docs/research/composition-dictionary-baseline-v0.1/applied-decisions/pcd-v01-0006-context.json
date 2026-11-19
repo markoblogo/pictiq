@@ -1,0 +1,68 @@
+{
+  "application_id": "S01.11-pcd-v01-0006-context",
+  "dictionary_entry_id": "pcd-v01-0006",
+  "application_status": "APPLIED",
+  "scope": "CONTEXT_CLARIFICATION_ONLY",
+  "source_revision": "9ae6675e5529c63b592074a14399465f725d2601",
+  "source_decision": {
+    "path": "docs/research/composition-dictionary-baseline-v0.1/creator-final-qa-2026-11-19/creator-export.json",
+    "sha256": "609c38175864d5da66e9f969364ea5dc84f71a15eab7bf4cfed14d81d1412152",
+    "selector": "/records/2",
+    "qa_dataset_sha256": "45c041165ad17f2f8114dddd454ba42f74e9e635eb44606133f291348626f413"
+  },
+  "dictionary_before_sha256": "dccfa377a630b1a789fb8167373c067a887dc3a0510409d6a626144a5098282e",
+  "dictionary_after_sha256": "fea29c8aa2d1aee8b53d7b786f6656d64ceda9a7d7af4622d8c4bc0a480a2081",
+  "changed_fields": [
+    {
+      "selector": "/entries/5/semantic_neighbourhood",
+      "before": "Less noise, please.",
+      "after": "For comm_sound + qty_minus and comm_sound + rel_down: less human communication or human-produced sound; Less noise, please. is one context-dependent reading."
+    },
+    {
+      "selector": "/entries/5/usage_note",
+      "before": "",
+      "after": "This clarification applies to comm_sound + qty_minus and comm_sound + rel_down. In these forms, comm_sound covers human communication (oral, written and social-media messages), and sound produced by people directly or through technical means: voice, rustling, playing music, a car. Natural sounds such as rain and animal sounds are outside this definition. Context determines the reading: «говори поменьше», «можно потише», «сделайте потише», «пиши меньше». Less noise, please. is one such reading. In these specified uses, qty_minus and rel_down are synonymous. The two comm_speak variants retain their existing meanings; no general LESS/DOWN equivalence is introduced."
+    },
+    {
+      "selector": "/entries/5/context_warnings",
+      "before": [],
+      "after": [
+        "The expanded readings apply to the two comm_sound forms only; comm_speak descriptions are unchanged.",
+        "Less noise, please. is one contextual reading, not the full scope of the comm_sound forms.",
+        "LESS/DOWN synonymy is local to the specified human-communication and human-produced-sound uses."
+      ]
+    },
+    {
+      "selector": "/entries/5/preferred_variant/semantic_distinction",
+      "before": "Less noise, please.",
+      "after": "For comm_sound + qty_minus and comm_sound + rel_down: less human communication or human-produced sound; Less noise, please. is one context-dependent reading."
+    },
+    {
+      "selector": "/entries/5/preferred_variant/variant_context_note",
+      "before": null,
+      "after": "Human communication or human-produced sound; natural sounds are excluded. LESS and DOWN are synonymous in these specified uses, with the reading supplied by context."
+    },
+    {
+      "selector": "/entries/5/variants/0/semantic_distinction",
+      "before": "Less noise, please.",
+      "after": "For comm_sound + qty_minus and comm_sound + rel_down: less human communication or human-produced sound; Less noise, please. is one context-dependent reading."
+    },
+    {
+      "selector": "/entries/5/variants/0/variant_context_note",
+      "before": null,
+      "after": "Human communication or human-produced sound; natural sounds are excluded. LESS and DOWN are synonymous in these specified uses, with the reading supplied by context."
+    },
+    {
+      "selector": "/entries/5/variants/1/semantic_distinction",
+      "before": "Sound reduction expressed with DOWN; an alternative for this noise-request neighborhood.",
+      "after": "For comm_sound + qty_minus and comm_sound + rel_down: less human communication or human-produced sound; Less noise, please. is one context-dependent reading."
+    },
+    {
+      "selector": "/entries/5/variants/1/variant_context_note",
+      "before": null,
+      "after": "Human communication or human-produced sound; natural sounds are excluded. LESS and DOWN are synonymous in these specified uses, with the reading supplied by context."
+    }
+  ],
+  "other_qa_changes": "PENDING",
+  "baseline_freeze": "NOT PERFORMED"
+}

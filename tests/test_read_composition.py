@@ -85,6 +85,26 @@ class CompositionReaderTests(unittest.TestCase):
         self.assertIn('FINAL_QA_OUTSTANDING', self.codes(result))
         self.assertEqual(result['subsequent_creator_decisions'], [])
 
+    def test_communication_context_applied_without_reinterpreting_speech_variants(self):
+        result = read_composition('dictionary', 'pcd-v01-0006')
+        self.assertTrue(result['ok'], result['diagnostics'])
+        entry = result['baseline_record']
+        self.assertEqual(entry['headword'], 'Less noise, please.')
+        self.assertIn('oral, written and social-media messages', entry['usage_note'])
+        self.assertIn('Natural sounds such as rain and animal sounds', entry['usage_note'])
+        self.assertIn('пиши меньше', entry['usage_note'])
+        self.assertIn('comm_sound + qty_minus and comm_sound + rel_down', entry['usage_note'])
+        self.assertEqual(entry['variants'][2]['semantic_distinction'],
+                         'Noise specifically from shouting or conversation, expressed with SPEECH + LESS.')
+        self.assertEqual(entry['variants'][3]['semantic_distinction'],
+                         'Noise specifically from shouting or conversation, expressed with SPEECH + DOWN.')
+        applied, = result['applied_creator_decisions']
+        self.assertEqual(applied['application_status'], 'APPLIED')
+        self.assertEqual(applied['source_decision']['decision'], 'NEEDS_CORRECTION')
+        self.assertEqual(applied['source_provenance']['selector'], '/records/2')
+        self.assertTrue(applied['link_verified'])
+        self.assertIn('AWAITING FINAL VISUAL QA', result['package']['dictionary_qa_status'])
+
     def test_application_receipt_cannot_hide_other_edits_or_rebind_source(self):
         from tools.research.medical_context_clarification import RECEIPT
         for change in ('source_selector', 'duplicate_field', 'unrelated_entry', 'medical_message'):
@@ -109,12 +129,52 @@ class CompositionReaderTests(unittest.TestCase):
                 raw = (json.dumps(receipt, ensure_ascii=False, indent=2) + '\n').encode()
                 (root / DICTIONARY / RECEIPT).write_bytes(raw)
                 self.edit(root, DICTIONARY + '/manifest.json',
-                          lambda m: m['context_clarification'].update(sha256=hashlib.sha256(raw).hexdigest()))
+                          lambda m: m['context_clarifications'][0].update(sha256=hashlib.sha256(raw).hexdigest()))
                 result = read_composition('dictionary', 'pcd-v01-0025', root)
                 self.assertFalse(result['ok'])
                 self.assertIn('CONTEXT_CLARIFICATION_MISMATCH', self.codes(result))
                 self.assertEqual(result['applied_creator_decisions'], [])
                 self.assertFalse(result['subsequent_creator_decisions'][0]['link_verified'])
+
+    def test_application_sequence_accepts_both_steps_and_rejects_intermediate_substitution(self):
+        from tools.research.communication_context_clarification import receipt_refs, verify_sequence, encode
+        manifest = self.load(DICTIONARY + '/manifest.json')
+        refs = receipt_refs(manifest)
+        receipts = [self.load(DICTIONARY + '/' + ref['path']) for ref in refs]
+        raw = (ROOT / DICTIONARY / 'dictionary.json').read_bytes()
+        original, _, decisions = verify_sequence(raw, receipts, ROOT)
+        self.assertEqual([d['dictionary_entry_id'] for d in decisions], ['pcd-v01-0002', 'pcd-v01-0006'])
+        self.assertEqual(hashlib.sha256(encode(original)).hexdigest(), receipts[0]['dictionary_before_sha256'])
+        self.assertEqual(receipts[0]['dictionary_after_sha256'], receipts[1]['dictionary_before_sha256'])
+        for entry_id in ('pcd-v01-0002', 'pcd-v01-0006'):
+            result = read_composition('dictionary', entry_id)
+            self.assertTrue(result['ok'], result['diagnostics'])
+            self.assertEqual(result['applied_creator_decisions'][0]['application_status'], 'APPLIED')
+        for change in ('gap', 'substituted_intermediate', 'reordered', 'missing_step'):
+            with self.subTest(change=change):
+                root = self.fixture()
+                edited = copy.deepcopy(receipts)
+                if change in ('gap', 'substituted_intermediate'):
+                    edited[1]['dictionary_before_sha256'] = 'a' * 64
+                    if change == 'substituted_intermediate':
+                        edited[0]['dictionary_after_sha256'] = 'a' * 64
+                    for ref, receipt in zip(refs, edited):
+                        data = encode(receipt)
+                        (root / DICTIONARY / ref['path']).write_bytes(data)
+                    def rehash(m):
+                        for ref in m['context_clarifications']:
+                            digest = hashlib.sha256((root / DICTIONARY / ref['path']).read_bytes()).hexdigest()
+                            ref['sha256'] = digest
+                            m['artifact_sha256'][ref['path']] = digest
+                    self.edit(root, DICTIONARY + '/manifest.json', rehash)
+                elif change == 'reordered':
+                    self.edit(root, DICTIONARY + '/manifest.json', lambda m: m['context_clarifications'].reverse())
+                else:
+                    self.edit(root, DICTIONARY + '/manifest.json', lambda m: m['context_clarifications'].pop(0))
+                result = read_composition('dictionary', 'pcd-v01-0006', root)
+                self.assertFalse(result['ok'])
+                self.assertIn('CONTEXT_CLARIFICATION_MISMATCH', self.codes(result))
+                self.assertEqual(result['applied_creator_decisions'], [])
 
     def test_historical_corpus_id_render_and_unresolved_token(self):
         original = next(e for e in self.load(CORPUS + '/accepted-corpus.json')['records']

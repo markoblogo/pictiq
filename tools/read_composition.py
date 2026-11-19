@@ -180,28 +180,29 @@ class Reader:
         binding = addendum['source_dictionary_baseline']
         applied = []
         bound_dictionary_sha = self.file(dp)['sha256']
-        if 'context_clarification' in dm:
-            from tools.research.medical_context_clarification import verify, RECEIPT, SOURCE, QA_DATA
-            application = dm['context_clarification']
-            if application['path'] != RECEIPT:
-                raise ReadError('Unknown context clarification receipt path')
-            app_path = db / RECEIPT
-            receipt = self.load(app_path)
-            if self.verify(app_path, application['sha256'], 'manifest → context clarification'):
-                try:
-                    _, _, raw_decision = verify(dp.read_bytes(), receipt, self.root)
-                except (ValueError, KeyError, TypeError, IndexError, OSError) as exc:
-                    self.note('CONTEXT_CLARIFICATION_MISMATCH', str(exc), error=True)
-                else:
-                    bound_dictionary_sha = receipt['dictionary_before_sha256']
-                    self.file(self.root / QA_DATA)
+        if 'context_clarification' in dm or 'context_clarifications' in dm:
+            from tools.research.communication_context_clarification import receipt_refs, verify_sequence, SOURCE, QA_DATA
+            try:
+                applications = receipt_refs(dm)
+                receipts = [self.load(db / ref['path']) for ref in applications]
+                checks = [self.verify(db / ref['path'], ref['sha256'], 'manifest → context clarification')
+                          for ref in applications]
+                if not all(checks):
+                    raise ValueError('Context clarification receipt hash mismatch')
+                _, _, raw_decisions = verify_sequence(dp.read_bytes(), receipts, self.root)
+            except (ReadError, ValueError, KeyError, TypeError, IndexError, OSError) as exc:
+                self.note('CONTEXT_CLARIFICATION_MISMATCH', str(exc), error=True)
+            else:
+                bound_dictionary_sha = receipts[0]['dictionary_before_sha256']
+                self.file(self.root / QA_DATA)
+                for ref, receipt, raw_decision in zip(applications, receipts, raw_decisions):
                     source_ref = self.ref(self.root / SOURCE, receipt['source_decision']['selector'])
                     if (source == 'dictionary' and record_id == receipt['dictionary_entry_id']) or (
                             source == 'corpus' and record_id == raw_decision['corpus_record_id']):
                         applied.append({'action': raw_decision['decision'], 'application_status': 'APPLIED',
                                         'scope': receipt['scope'], 'link_verified': True,
                                         'source_decision': raw_decision, 'source_provenance': source_ref,
-                                        'provenance': self.ref(app_path, ''), 'application': receipt})
+                                        'provenance': self.ref(db / ref['path'], ''), 'application': receipt})
         bound = (source_bound and binding['version'] == dictionary['dictionary_version'] == dm['dictionary_version'] and
                  binding['source_snapshot'] == dictionary['source_snapshot'] == dm['creator_review_export']['source_snapshot'] and
                  binding['dictionary_json_sha256'] == bound_dictionary_sha)

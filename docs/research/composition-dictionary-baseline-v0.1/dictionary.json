@@ -1439,13 +1439,17 @@
       "semantic_id": "pictiq-dict-sem-v0.1-0006",
       "headword": "Less noise, please.",
       "aliases": [],
-      "semantic_neighbourhood": "Less noise, please.",
+      "semantic_neighbourhood": "For comm_sound + qty_minus and comm_sound + rel_down: less human communication or human-produced sound; Less noise, please. is one context-dependent reading.",
       "candidate_lookup_material": [
         "Less noise, please."
       ],
-      "usage_note": "",
+      "usage_note": "This clarification applies to comm_sound + qty_minus and comm_sound + rel_down. In these forms, comm_sound covers human communication (oral, written and social-media messages), and sound produced by people directly or through technical means: voice, rustling, playing music, a car. Natural sounds such as rain and animal sounds are outside this definition. Context determines the reading: «говори поменьше», «можно потише», «сделайте потише», «пиши меньше». Less noise, please. is one such reading. In these specified uses, qty_minus and rel_down are synonymous. The two comm_speak variants retain their existing meanings; no general LESS/DOWN equivalence is introduced.",
       "known_ambiguity": [],
-      "context_warnings": [],
+      "context_warnings": [
+        "The expanded readings apply to the two comm_sound forms only; comm_speak descriptions are unchanged.",
+        "Less noise, please. is one contextual reading, not the full scope of the comm_sound forms.",
+        "LESS/DOWN synonymy is local to the specified human-communication and human-produced-sound uses."
+      ],
       "preferred_variant": {
         "variant_id": "pcd-v01-0006-preferred",
         "variant_type": "PREFERRED",
@@ -1500,8 +1504,8 @@
             ]
           }
         ],
-        "variant_context_note": null,
-        "semantic_distinction": "Less noise, please.",
+        "variant_context_note": "Human communication or human-produced sound; natural sounds are excluded. LESS and DOWN are synonymous in these specified uses, with the reading supplied by context.",
+        "semantic_distinction": "For comm_sound + qty_minus and comm_sound + rel_down: less human communication or human-produced sound; Less noise, please. is one context-dependent reading.",
         "provenance": {
           "corpus_record_ids": [
             "clc-v01-0008-r1"
@@ -1567,8 +1571,8 @@
               ]
             }
           ],
-          "variant_context_note": null,
-          "semantic_distinction": "Less noise, please.",
+          "variant_context_note": "Human communication or human-produced sound; natural sounds are excluded. LESS and DOWN are synonymous in these specified uses, with the reading supplied by context.",
+          "semantic_distinction": "For comm_sound + qty_minus and comm_sound + rel_down: less human communication or human-produced sound; Less noise, please. is one context-dependent reading.",
           "provenance": {
             "corpus_record_ids": [
               "clc-v01-0008-r1"
@@ -1633,8 +1637,8 @@
               ]
             }
           ],
-          "variant_context_note": null,
-          "semantic_distinction": "Sound reduction expressed with DOWN; an alternative for this noise-request neighborhood.",
+          "variant_context_note": "Human communication or human-produced sound; natural sounds are excluded. LESS and DOWN are synonymous in these specified uses, with the reading supplied by context.",
+          "semantic_distinction": "For comm_sound + qty_minus and comm_sound + rel_down: less human communication or human-produced sound; Less noise, please. is one context-dependent reading.",
           "provenance": {
             "corpus_record_ids": [
               "clc-v01-0008-r1"

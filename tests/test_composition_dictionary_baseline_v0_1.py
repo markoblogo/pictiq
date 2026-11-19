@@ -51,10 +51,11 @@ class CompositionDictionaryBaselineTests(unittest.TestCase):
 
     def test_medical_application_changes_only_explicit_description_fields(self):
         from tools.research.medical_context_clarification import RECEIPT, verify
+        from tools.research.communication_context_clarification import RECEIPT as COMMUNICATION_RECEIPT, verify as verify_communication, encode
         raw = (PACKAGE / 'dictionary.json').read_bytes()
         receipt = json.loads((PACKAGE / RECEIPT).read_bytes())
-        original, _, _ = verify(raw, receipt, ROOT)
-        current = json.loads(raw)
+        current, _, _ = verify_communication(raw, json.loads((PACKAGE / COMMUNICATION_RECEIPT).read_bytes()), ROOT)
+        original, _, _ = verify(encode(current), receipt, ROOT)
         allowed = {'semantic_neighbourhood', 'usage_note', 'context_warnings',
                    'preferred_variant/semantic_distinction', 'preferred_variant/variant_context_note',
                    'variants/0/semantic_distinction', 'variants/0/variant_context_note',
@@ -68,6 +69,34 @@ class CompositionDictionaryBaselineTests(unittest.TestCase):
             for old, new in zip(before['variants'], after['variants']):
                 for key in ('variant_id', 'variant_type', 'message', 'mode', 'surface', 'context', 'token_sequence', 'render'):
                     self.assertEqual(old[key], new[key])
+
+    def test_communication_application_preserves_medical_and_all_messages(self):
+        from tools.research.communication_context_clarification import RECEIPT, verify, encode, BEFORE_SHA
+        raw = (PACKAGE / 'dictionary.json').read_bytes()
+        receipt = json.loads((PACKAGE / RECEIPT).read_bytes())
+        previous, _, _ = verify(raw, receipt, ROOT)
+        self.assertEqual(hashlib.sha256(encode(previous)).hexdigest(), BEFORE_SHA)
+        current = json.loads(raw)
+        allowed = {'semantic_neighbourhood', 'usage_note', 'context_warnings',
+                   'preferred_variant/semantic_distinction', 'preferred_variant/variant_context_note',
+                   'variants/0/semantic_distinction', 'variants/0/variant_context_note',
+                   'variants/1/semantic_distinction', 'variants/1/variant_context_note'}
+        self.assertEqual({c['selector'].removeprefix('/entries/5/') for c in receipt['changed_fields']}, allowed)
+        self.assertEqual(len(previous['entries']), 65)
+        for before, after in zip(previous['entries'], current['entries']):
+            if before['dictionary_entry_id'] != 'pcd-v01-0006':
+                self.assertEqual(before, after)
+            else:
+                self.assertEqual(before['variants'][2:], after['variants'][2:])
+                self.assertEqual([v['token_sequence'] for v in after['variants'][:2]],
+                                 ['comm_sound + qty_minus', 'comm_sound + rel_down'])
+            self.assertEqual(before['preferred_variant']['message'], after['preferred_variant']['message'])
+            for old, new in zip(before['variants'], after['variants']):
+                for key in ('variant_id', 'variant_type', 'message', 'mode', 'surface', 'context', 'token_sequence', 'render'):
+                    self.assertEqual(old[key], new[key])
+        manifest = json.loads((PACKAGE / 'manifest.json').read_bytes())
+        self.assertEqual(manifest['counts']['entries_with_context_warnings'],
+                         sum(bool(e['context_warnings']) for e in current['entries']))
 
 
 if __name__ == "__main__":

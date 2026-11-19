@@ -139,19 +139,22 @@ def compose(entry_id, variant_id, root=ROOT, revision=None):
     addendum = inputs.json(addendum_path)
     binding = addendum['source_dictionary_baseline']
     bound_sha = inputs.ref(relative)['sha256']
-    if 'context_clarification' in manifest:
-        from tools.research.medical_context_clarification import verify as verify_context, RECEIPT, SOURCE, QA_DATA
-        application = manifest['context_clarification']
-        if application['path'] != RECEIPT or inputs.ref(PACKAGE + '/' + RECEIPT)['sha256'] != application['sha256']:
-            raise PackageError('Context clarification receipt binding mismatch')
-        receipt = inputs.json(PACKAGE + '/' + RECEIPT)
-        inputs.take(SOURCE); inputs.take(QA_DATA)
-        inputs.take('tools/research/medical_context_clarification.py')
+    if 'context_clarification' in manifest or 'context_clarifications' in manifest:
+        from tools.research.communication_context_clarification import receipt_refs, verify_sequence, SOURCE, QA_DATA
         try:
-            verify_context(inputs.take(relative), receipt, inputs.root)
+            applications = receipt_refs(manifest)
+            receipts = []
+            for ref in applications:
+                if inputs.ref(PACKAGE + '/' + ref['path'])['sha256'] != ref['sha256']:
+                    raise PackageError('Context clarification receipt binding mismatch')
+                receipts.append(inputs.json(PACKAGE + '/' + ref['path']))
+            inputs.take(SOURCE); inputs.take(QA_DATA)
+            for module in ('medical_context_clarification.py', 'communication_context_clarification.py'):
+                inputs.take('tools/research/' + module)
+            verify_sequence(inputs.take(relative), receipts, inputs.root)
         except (ValueError, KeyError, TypeError, IndexError, OSError) as exc:
             raise PackageError(f'Context clarification verification failed: {exc}') from exc
-        bound_sha = receipt['dictionary_before_sha256']
+        bound_sha = receipts[0]['dictionary_before_sha256']
     if (binding['dictionary_json_sha256'] != bound_sha or
         binding['source_snapshot'] != dictionary['source_snapshot'] or
         binding['version'] != dictionary['dictionary_version']):
