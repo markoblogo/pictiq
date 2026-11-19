@@ -38,7 +38,7 @@ const raw=JSON.stringify(originalOverlay);localStorage.setItem(OLD_KEY,raw);
 const oldExport=oldOverlayExport(raw),sourceHash='a'.repeat(64),at='2026-11-18T12:00:00Z';
 '''
         script = preamble + runtime + fixtures + '\n(async()=>{\n' + body + '\n})().catch(e=>{console.error(e);process.exit(1)});'
-        result = subprocess.run(['node', '-e', script], cwd=ROOT, capture_output=True, text=True)
+        result = subprocess.run(['node', '-'], input=script, cwd=ROOT, capture_output=True, text=True)
         self.assertEqual(result.returncode, 0, result.stderr)
 
     def test_partial_progress_notes_timestamps_and_locked_choices(self):
@@ -171,7 +171,7 @@ const output=vm.runInContext('exportRecords()',context);
 assert.equal(output.find(r=>r.dictionary_entry_id===id).timestamp,'2026-09-28');
 })().catch(e=>{console.error(e);process.exit(1)});
 '''
-        result = subprocess.run(['node','-e',harness],cwd=ROOT,capture_output=True,text=True)
+        result = subprocess.run(['node','-'],input=harness,cwd=ROOT,capture_output=True,text=True)
         self.assertEqual(result.returncode,0,result.stderr)
 
 

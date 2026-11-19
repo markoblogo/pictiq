@@ -104,7 +104,7 @@ if(DATA.entries.filter(reviewed).length!==3)throw Error("progress after decision
 const updated={{...payload,reviewed_count:3,records:exportRecords()}};validateImport(updated);
 for(const bad of [{{...updated,qa_dataset_sha256:"wrong"}},{{...updated,records:[...updated.records,updated.records[0]]}},{{...updated,records:updated.records.slice(1)}}]){{let rejected=false;try{{validateImport(bad)}}catch{{rejected=true}}if(!rejected)throw Error("invalid import accepted")}}
 '''
-        result = subprocess.run(["node", "-e", harness], capture_output=True, text=True)
+        result = subprocess.run(["node", "-"], input=harness, capture_output=True, text=True)
         self.assertEqual(result.returncode, 0, result.stderr)
 
     def test_pending_timetable_matches_explicit_creator_sequence(self):
@@ -171,7 +171,7 @@ let rejected=false;try{validateImport(oldExport)}catch(e){
  if(e.message!=='QA dataset/addendum snapshot mismatch')throw e;rejected=true;}
 if(!rejected)throw Error('old decisions silently rebound');
 """
-        result = subprocess.run(["node", "-e", harness], capture_output=True, text=True)
+        result = subprocess.run(["node", "-"], input=harness, capture_output=True, text=True)
         self.assertEqual(result.returncode, 0, result.stderr)
 
     def test_preview_render_and_frozen_inputs_unchanged(self):
