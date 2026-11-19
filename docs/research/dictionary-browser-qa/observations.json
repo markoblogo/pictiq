@@ -1,0 +1,255 @@
+{
+  "run": "S01.21",
+  "date": "2026-11-19",
+  "source_revision": "31cdc4f308f9398d957e2aa101cab8780917aec2",
+  "browser": "Google Chrome (connected desktop browser)",
+  "url": "http://localhost:8000/docs/research/composition-dictionary-baseline-v0.1/review/index.html",
+  "viewports": [
+    {
+      "width": 1280,
+      "height": 900
+    },
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "results": [
+    {
+      "case": "A-desktop",
+      "query": "Less noise",
+      "result": {
+        "codes": [
+          "comm_sound + qty_minus",
+          "comm_sound + rel_down",
+          "comm_speak + qty_minus",
+          "comm_speak + rel_down"
+        ],
+        "count": "1 / 65",
+        "heading": "Less noise, please.",
+        "images": [
+          {
+            "height": 96,
+            "loaded": true,
+            "src": "../renders/pcd-v01-0006-preferred.svg",
+            "width": 168
+          },
+          {
+            "height": 96,
+            "loaded": true,
+            "src": "../renders/pcd-v01-0006-alternative-down.svg",
+            "width": 168
+          },
+          {
+            "height": 96,
+            "loaded": true,
+            "src": "../renders/pcd-v01-0006-context-speech-less.svg",
+            "width": 168
+          },
+          {
+            "height": 96,
+            "loaded": true,
+            "src": "../renders/pcd-v01-0006-context-speech-down.svg",
+            "width": 168
+          }
+        ],
+        "scrollWidth": 1280,
+        "width": 1280
+      }
+    },
+    {
+      "case": "B-desktop",
+      "query": "Pedestrian movement",
+      "result": {
+        "codes": [
+          "move_feet",
+          "person_generic + move_feet",
+          "person_generic + move_feet + rel_here"
+        ],
+        "count": "1 / 65",
+        "scrollWidth": 1280
+      }
+    },
+    {
+      "case": "C-desktop-title",
+      "result": {
+        "cards": 0,
+        "count": "0 / 65"
+      }
+    },
+    {
+      "case": "D-desktop",
+      "result": {
+        "count": "1 / 65",
+        "currentNote": "Arrival-time question: pcd-v01-0065. Timetable/schedule question: separate Dictionary entry pcd-v01-0066.",
+        "images": [
+          {
+            "loaded": true,
+            "src": "../renders/pcd-v01-0065-preferred.svg"
+          }
+        ],
+        "scrollWidth": 1280,
+        "unresolvedOutsideHistory": 0
+      }
+    },
+    {
+      "case": "E-desktop",
+      "result": {
+        "codes": [
+          "move_public + media_text + time + punct_question"
+        ],
+        "count": "1 / 65",
+        "images": [
+          {
+            "height": 96,
+            "loaded": true,
+            "src": "../renders/pcd-v01-0066-preferred.svg",
+            "width": 312
+          }
+        ],
+        "scrollWidth": 1280
+      }
+    },
+    {
+      "case": "E-mobile",
+      "result": {
+        "articleWidth": 358,
+        "codes": [
+          "move_public + media_text + time + punct_question"
+        ],
+        "heading": "Public transport schedule / timetable",
+        "images": [
+          {
+            "left": 16,
+            "loaded": true,
+            "right": 328,
+            "src": "../renders/pcd-v01-0066-preferred.svg"
+          }
+        ],
+        "layoutWidth": 358,
+        "scrollWidth": 654,
+        "viewport": {
+          "height": 844,
+          "width": 390
+        }
+      }
+    },
+    {
+      "case": "A-mobile",
+      "result": {
+        "codes": [
+          "comm_sound + qty_minus",
+          "comm_sound + rel_down",
+          "comm_speak + qty_minus",
+          "comm_speak + rel_down"
+        ],
+        "count": "1 / 65",
+        "images": [
+          {
+            "left": 16,
+            "loaded": true,
+            "right": 184,
+            "src": "../renders/pcd-v01-0006-preferred.svg"
+          },
+          {
+            "left": 26,
+            "loaded": true,
+            "right": 194,
+            "src": "../renders/pcd-v01-0006-alternative-down.svg"
+          },
+          {
+            "left": 26,
+            "loaded": true,
+            "right": 194,
+            "src": "../renders/pcd-v01-0006-context-speech-less.svg"
+          },
+          {
+            "left": 26,
+            "loaded": true,
+            "right": 194,
+            "src": "../renders/pcd-v01-0006-context-speech-down.svg"
+          }
+        ],
+        "scrollWidth": 662,
+        "width": 390
+      }
+    },
+    {
+      "case": "B-mobile",
+      "result": {
+        "codes": [
+          "move_feet",
+          "person_generic + move_feet",
+          "person_generic + move_feet + rel_here"
+        ],
+        "count": "1 / 65",
+        "images": [
+          {
+            "left": 16,
+            "loaded": true,
+            "right": 112,
+            "src": "../renders/pcd-v01-0028-preferred-feet.svg"
+          },
+          {
+            "left": 26,
+            "loaded": true,
+            "right": 194,
+            "src": "../renders/pcd-v01-0028-preferred.svg"
+          },
+          {
+            "left": 26,
+            "loaded": true,
+            "right": 266,
+            "src": "../renders/pcd-v01-0028-contextual-here.svg"
+          }
+        ],
+        "scrollWidth": 706,
+        "width": 390
+      }
+    },
+    {
+      "case": "C-mobile-title",
+      "result": {
+        "cards": 0,
+        "count": "0 / 65",
+        "scrollWidth": 390,
+        "width": 390
+      }
+    },
+    {
+      "case": "D-mobile",
+      "result": {
+        "count": "1 / 65",
+        "currentNote": "Arrival-time question: pcd-v01-0065. Timetable/schedule question: separate Dictionary entry pcd-v01-0066.",
+        "images": [
+          {
+            "left": 16,
+            "loaded": true,
+            "right": 256,
+            "src": "../renders/pcd-v01-0065-preferred.svg"
+          }
+        ],
+        "scrollWidth": 654,
+        "unresolvedOutsideHistory": 0,
+        "width": 390
+      }
+    }
+  ],
+  "console_warnings_and_errors": [],
+  "overall": "FAIL",
+  "defects": [
+    {
+      "id": "BQA-01",
+      "severity": "MEDIUM",
+      "summary": "Horizontal overflow and clipped text on 390px viewport",
+      "scroll_widths": {
+        "pcd-v01-0006": 662,
+        "pcd-v01-0028": 706,
+        "pcd-v01-0065": 654,
+        "pcd-v01-0066": 654
+      },
+      "changes_applied": false
+    }
+  ],
+  "note": "Real Chrome screenshots and UI interactions; no semantic re-evaluation. Full-page mobile screenshot includes overflow width; mobile-0066-viewport.jpg is the actual 390x844 viewport."
+}
