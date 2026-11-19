@@ -511,7 +511,19 @@ def build(output_dir: Path = OUT) -> dict[str, Any]:
             qa_groups["E. FOLLOW-UP REQUIRED"].append(qa)
     (output_dir / "review/final-creator-visual-qa.html").write_text(make_qa_viewer(qa_groups), encoding="utf-8")
 
+    # S01.10 applies only the medical descriptive revision AFTER historical QA
+    # has been rendered from its original snapshot. No Message/SVG is changed.
+    from tools.research.medical_context_clarification import apply, RECEIPT
+    dictionary, medical_application = apply(dictionary, ROOT)
+    write_json(output_dir / RECEIPT, medical_application)
+    variant_data['variants'] = [v for e in dictionary['entries'] for v in e['variants']]
+    write_json(output_dir / 'dictionary.json', dictionary)
+    write_json(output_dir / 'variants.json', variant_data)
+    write_json(output_dir / 'review/data.json', dictionary)
+    (output_dir / 'review/index.html').write_text(make_dictionary_viewer(dictionary['entries']), encoding='utf-8')
+
     artifact_paths = ["creator-review-export.json", "creator-review-amendment.json", "dictionary.json", "variants.json", "lineage.json", "translator-lessons.json", "creator-notes-follow-up.json", "validation.json", "render-manifest.json", "review/index.html", "review/data.json", "review/final-creator-visual-qa.html", "creator-notes-follow-up/index.html"]
+    artifact_paths.append(RECEIPT)
     manifest = {
         "dictionary_version": "0.1", "created_on": "2026-09-27", "status": "CREATOR-REVIEWED / ACCEPTED RESEARCH BASELINE; AWAITING FINAL VISUAL QA",
         "normative_grammar": False, "publication_status": "INTERNAL / NOT DEPLOYED",
@@ -523,6 +535,7 @@ def build(output_dir: Path = OUT) -> dict[str, Any]:
         "creator_decision_counts": creator_counts, "counts": counts,
         "status_dependencies": {"color_modifier": "REQUIRED / NOT IMPLEMENTED", "practical_coverage": "NOT STARTED", "translator": "NOT IMPLEMENTED", "machine_agent_access": "NOT IMPLEMENTED", "stress_test_07_1": "PAUSED / PRESERVED / UNCHANGED", "blocked_hotel_color": "EXCLUDED / STILL BLOCKED"},
         "validation": "PASS" if len(validation_rows) == len(all_variants) and not failures else "FAIL",
+        "context_clarification": {"path": RECEIPT, "sha256": sha256_bytes((output_dir / RECEIPT).read_bytes())},
         "artifact_sha256": {name: sha256_bytes((output_dir / name).read_bytes()) for name in artifact_paths},
     }
     write_json(output_dir / "manifest.json", manifest)

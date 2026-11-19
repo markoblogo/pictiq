@@ -127,8 +127,8 @@
           ]
         }
       ],
-      "variant_context_note": null,
-      "semantic_distinction": "Urgent medical help; the live/self context can supply the affected person, while PERSON adds an explicit person referent.",
+      "variant_context_note": "The self-referential default applies to this request; omission of PERSON does not encode a grammatical first-person pronoun.",
+      "semantic_distinction": "Urgent medical help for oneself, including in writing, or for another person explicitly pointed to in a shared visible situation.",
       "provenance": {
         "corpus_record_ids": [
           "clh-v01-0003"
@@ -197,8 +197,8 @@
           ]
         }
       ],
-      "variant_context_note": "For an explicit person referent; no first-person or person-role grammar is implied.",
-      "semantic_distinction": "PERSON makes a person referent explicit; it can shift the reading toward someone specified or other than the speaker.",
+      "variant_context_note": "For another person in a shared visible situation, explicit pointing allows the shorter form without PERSON.",
+      "semantic_distinction": "Urgent medical help for another person outside shared visual contact, or in a written message about another person.",
       "provenance": {
         "corpus_record_ids": [
           "clh-v01-0003"

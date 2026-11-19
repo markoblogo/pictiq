@@ -51,20 +51,25 @@
     "blocked_hotel_color": "EXCLUDED / STILL BLOCKED"
   },
   "validation": "PASS",
+  "context_clarification": {
+    "path": "applied-decisions/pcd-v01-0002-context.json",
+    "sha256": "203e83602e65115fda64d743fe9c6bf59279fb649414e4cc6add99f3db3921d4"
+  },
   "artifact_sha256": {
     "creator-review-export.json": "3151d779efab99445f3f5b61cd5da41dded979d435cf11226da5d62bbfe9d5ae",
     "creator-review-amendment.json": "e34e5c2d88aa161d543654c6c186ddeab5549581daf9ce83b0cdce345adc4595",
-    "dictionary.json": "9c0ed9e048b9a4d134635e7f21eab68809b42bfd495ee0697db3ad67063ae107",
-    "variants.json": "13bdf0d0e22d377074c79216de941f1db23f87c0fd689e97bf9398c7dd59cb10",
+    "dictionary.json": "dccfa377a630b1a789fb8167373c067a887dc3a0510409d6a626144a5098282e",
+    "variants.json": "268c1994dafd2aa2fa62e49989f88b81a4228503cc100ff806f6ff80d85bc979",
     "lineage.json": "f181fe3d302dbc9bae30e789d104133f750321c8605cb26f6f5de06d6e1f819e",
     "translator-lessons.json": "14ebbc283bf4f885099465a5357e54d9309ff82f96b28f048e6a88e66dfff82d",
     "creator-notes-follow-up.json": "e84fd4a733d775f37052c4d4200aec9fdedcf265fb43ff5190569ccf4ab0f6e3",
     "validation.json": "fd940fe9276a6c2e5ceaae3ded2e83045c92e56fb1423bdfbe29b2980d5b736e",
     "render-manifest.json": "0af554dc932d365460cc8a4ae069519c6196df03edeabb8151dae086ee810f86",
-    "review/index.html": "bc063e9c17daaf8f8fc7d9736c3b06a7b633779bd3c4977c931b0ed8d1af14d5",
-    "review/data.json": "9c0ed9e048b9a4d134635e7f21eab68809b42bfd495ee0697db3ad67063ae107",
+    "review/index.html": "0586d1a16102b341be0df1842e1cbd7efe8e5aa5e29a37986270e16750a9d439",
+    "review/data.json": "dccfa377a630b1a789fb8167373c067a887dc3a0510409d6a626144a5098282e",
     "review/final-creator-visual-qa.html": "eebc2ed93516c04325a8b17191314b887e9c290d2ba0e5428ac8f6ea415317a6",
     "creator-notes-follow-up/index.html": "7a534b2f356206293d684c380f180e71e3fc311f8f25dfe1166b2ce26efd919d",
+    "applied-decisions/pcd-v01-0002-context.json": "203e83602e65115fda64d743fe9c6bf59279fb649414e4cc6add99f3db3921d4",
     "README.md": "73bb002ce391cfa0cf4649deeec235bcdbb020de3c2af45bc13c3d842a4a2d05"
   }
 }

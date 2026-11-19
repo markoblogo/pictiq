@@ -61,6 +61,61 @@ class CompositionReaderTests(unittest.TestCase):
         corpus = read_composition('corpus', 'clh-v01-0044')
         self.assertEqual(corpus['subsequent_creator_decisions'], result['subsequent_creator_decisions'])
 
+    def test_medical_context_application_keeps_messages_and_qa_separate(self):
+        result = read_composition('dictionary', 'pcd-v01-0002')
+        self.assertTrue(result['ok'], result['diagnostics'])
+        entry = result['baseline_record']
+        self.assertIn('including written requests', entry['usage_note'])
+        self.assertIn('explicitly pointed to', entry['usage_note'])
+        self.assertIn('outside shared visual contact', entry['usage_note'])
+        self.assertIn('not a grammatical first-person pronoun', entry['usage_note'])
+        self.assertEqual([v['token_sequence'] for v in entry['variants']], [
+            'safety_medical + punct_exclaim',
+            'person_generic + safety_medical + punct_exclaim'])
+        self.assertTrue(all(v['message']['profile'] == 'standalone-core-v0.1'
+                            and v['message']['contexts'] == ['universal-core']
+                            and v['mode'] == ['STANDALONE'] and v['surface'] == ['OTHER']
+                            for v in entry['variants']))
+        applied, = result['applied_creator_decisions']
+        self.assertEqual(applied['application_status'], 'APPLIED')
+        self.assertEqual(applied['scope'], 'CONTEXT_CLARIFICATION_ONLY')
+        self.assertEqual(applied['source_decision']['decision'], 'NEEDS_CORRECTION')
+        self.assertTrue(applied['link_verified'])
+        self.assertIn('AWAITING FINAL VISUAL QA', result['package']['dictionary_qa_status'])
+        self.assertIn('FINAL_QA_OUTSTANDING', self.codes(result))
+        self.assertEqual(result['subsequent_creator_decisions'], [])
+
+    def test_application_receipt_cannot_hide_other_edits_or_rebind_source(self):
+        from tools.research.medical_context_clarification import RECEIPT
+        for change in ('source_selector', 'duplicate_field', 'unrelated_entry', 'medical_message'):
+            with self.subTest(change=change):
+                root = self.fixture()
+                receipt = self.load(DICTIONARY + '/' + RECEIPT, root)
+                dictionary = self.load(DICTIONARY + '/dictionary.json', root)
+                if change == 'source_selector':
+                    receipt['source_decision']['selector'] = '/records/1'
+                elif change == 'duplicate_field':
+                    receipt['changed_fields'].append(copy.deepcopy(receipt['changed_fields'][0]))
+                else:
+                    if change == 'unrelated_entry':
+                        dictionary['entries'][4]['usage_note'] = 'unapproved change'
+                    else:
+                        dictionary['entries'][1]['variants'][0]['message']['profile'] = 'embodied-core-v0.1'
+                    raw = (json.dumps(dictionary, ensure_ascii=False, indent=2) + '\n').encode()
+                    (root / DICTIONARY / 'dictionary.json').write_bytes(raw)
+                    receipt['dictionary_after_sha256'] = hashlib.sha256(raw).hexdigest()
+                    self.edit(root, DICTIONARY + '/manifest.json',
+                              lambda m: m['artifact_sha256'].update({'dictionary.json': receipt['dictionary_after_sha256']}))
+                raw = (json.dumps(receipt, ensure_ascii=False, indent=2) + '\n').encode()
+                (root / DICTIONARY / RECEIPT).write_bytes(raw)
+                self.edit(root, DICTIONARY + '/manifest.json',
+                          lambda m: m['context_clarification'].update(sha256=hashlib.sha256(raw).hexdigest()))
+                result = read_composition('dictionary', 'pcd-v01-0025', root)
+                self.assertFalse(result['ok'])
+                self.assertIn('CONTEXT_CLARIFICATION_MISMATCH', self.codes(result))
+                self.assertEqual(result['applied_creator_decisions'], [])
+                self.assertFalse(result['subsequent_creator_decisions'][0]['link_verified'])
+
     def test_historical_corpus_id_render_and_unresolved_token(self):
         original = next(e for e in self.load(CORPUS + '/accepted-corpus.json')['records']
                         if e.get('source_harvest', {}).get('composition_id') == 'clh-v01-0015')

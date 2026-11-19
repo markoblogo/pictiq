@@ -138,7 +138,21 @@ def compose(entry_id, variant_id, root=ROOT, revision=None):
     addendum_path = PACKAGE + '/final-creator-qa-addendum-v0.2.json'
     addendum = inputs.json(addendum_path)
     binding = addendum['source_dictionary_baseline']
-    if (binding['dictionary_json_sha256'] != inputs.ref(relative)['sha256'] or
+    bound_sha = inputs.ref(relative)['sha256']
+    if 'context_clarification' in manifest:
+        from tools.research.medical_context_clarification import verify as verify_context, RECEIPT, SOURCE, QA_DATA
+        application = manifest['context_clarification']
+        if application['path'] != RECEIPT or inputs.ref(PACKAGE + '/' + RECEIPT)['sha256'] != application['sha256']:
+            raise PackageError('Context clarification receipt binding mismatch')
+        receipt = inputs.json(PACKAGE + '/' + RECEIPT)
+        inputs.take(SOURCE); inputs.take(QA_DATA)
+        inputs.take('tools/research/medical_context_clarification.py')
+        try:
+            verify_context(inputs.take(relative), receipt, inputs.root)
+        except (ValueError, KeyError, TypeError, IndexError, OSError) as exc:
+            raise PackageError(f'Context clarification verification failed: {exc}') from exc
+        bound_sha = receipt['dictionary_before_sha256']
+    if (binding['dictionary_json_sha256'] != bound_sha or
         binding['source_snapshot'] != dictionary['source_snapshot'] or
         binding['version'] != dictionary['dictionary_version']):
         raise PackageError('Active pending addendum is not bound to this Dictionary')

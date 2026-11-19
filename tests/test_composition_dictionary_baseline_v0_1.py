@@ -46,6 +46,28 @@ class CompositionDictionaryBaselineTests(unittest.TestCase):
                 subprocess.run([sys.executable, str(BUILDER), "--output-dir", str(out)], check=True, capture_output=True, text=True)
                 outputs.append({p.relative_to(out): hashlib.sha256(p.read_bytes()).hexdigest() for p in out.rglob("*") if p.is_file()})
             self.assertEqual(outputs[0], outputs[1])
+            self.assertEqual(outputs[0], {p: hashlib.sha256((PACKAGE / p).read_bytes()).hexdigest()
+                                          for p in outputs[0]})
+
+    def test_medical_application_changes_only_explicit_description_fields(self):
+        from tools.research.medical_context_clarification import RECEIPT, verify
+        raw = (PACKAGE / 'dictionary.json').read_bytes()
+        receipt = json.loads((PACKAGE / RECEIPT).read_bytes())
+        original, _, _ = verify(raw, receipt, ROOT)
+        current = json.loads(raw)
+        allowed = {'semantic_neighbourhood', 'usage_note', 'context_warnings',
+                   'preferred_variant/semantic_distinction', 'preferred_variant/variant_context_note',
+                   'variants/0/semantic_distinction', 'variants/0/variant_context_note',
+                   'variants/1/semantic_distinction', 'variants/1/variant_context_note'}
+        self.assertEqual({c['selector'].removeprefix('/entries/1/') for c in receipt['changed_fields']}, allowed)
+        for before, after in zip(original['entries'], current['entries']):
+            if before['dictionary_entry_id'] != 'pcd-v01-0002':
+                self.assertEqual(before, after)
+            self.assertEqual(before['preferred_variant']['message'], after['preferred_variant']['message'])
+            self.assertEqual(before['lineage'], after['lineage'])
+            for old, new in zip(before['variants'], after['variants']):
+                for key in ('variant_id', 'variant_type', 'message', 'mode', 'surface', 'context', 'token_sequence', 'render'):
+                    self.assertEqual(old[key], new[key])
 
 
 if __name__ == "__main__":

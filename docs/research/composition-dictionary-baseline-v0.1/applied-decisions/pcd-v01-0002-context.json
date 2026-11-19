@@ -1,0 +1,71 @@
+{
+  "application_id": "S01.10-pcd-v01-0002-context",
+  "dictionary_entry_id": "pcd-v01-0002",
+  "application_status": "APPLIED",
+  "scope": "CONTEXT_CLARIFICATION_ONLY",
+  "source_revision": "36bf1b2421ce900eab5123f0ff646c48a9133c4e",
+  "source_decision": {
+    "path": "docs/research/composition-dictionary-baseline-v0.1/creator-final-qa-2026-11-19/creator-export.json",
+    "sha256": "609c38175864d5da66e9f969364ea5dc84f71a15eab7bf4cfed14d81d1412152",
+    "selector": "/records/0",
+    "qa_dataset_sha256": "45c041165ad17f2f8114dddd454ba42f74e9e635eb44606133f291348626f413"
+  },
+  "dictionary_before_sha256": "9c0ed9e048b9a4d134635e7f21eab68809b42bfd495ee0697db3ad67063ae107",
+  "dictionary_after_sha256": "dccfa377a630b1a789fb8167373c067a887dc3a0510409d6a626144a5098282e",
+  "changed_fields": [
+    {
+      "selector": "/entries/1/semantic_neighbourhood",
+      "before": "Urgent medical help; the live/self context can supply the affected person, while PERSON adds an explicit person referent.",
+      "after": "Urgent medical help for oneself or another person; the form depends on the request and shared visible or written context."
+    },
+    {
+      "selector": "/entries/1/usage_note",
+      "before": "In live/self-referential use, the interaction may supply who needs help. Adding PERSON makes a person referent explicit and can shift the reading toward someone specified or other than the speaker. This is context economy, not a first-person grammatical rule.",
+      "after": "For this request, safety_medical + punct_exclaim is sufficient when asking for oneself, including written requests. It is also sufficient for another person in a shared visible situation when that person is explicitly pointed to. Use person_generic + safety_medical + punct_exclaim for another person outside shared visual contact, or in a written message about another person. The self-referential default belongs to use of this request; absence of PERSON is not a grammatical first-person pronoun."
+    },
+    {
+      "selector": "/entries/1/context_warnings",
+      "before": [
+        "Live interaction may supply the affected person",
+        "PERSON adds an explicit person referent"
+      ],
+      "after": [
+        "The short form covers a request for oneself, including in writing.",
+        "For another person, the short form relies on shared visibility and explicit pointing.",
+        "Use the PERSON form for another person outside shared visual contact or in writing about another person."
+      ]
+    },
+    {
+      "selector": "/entries/1/preferred_variant/semantic_distinction",
+      "before": "Urgent medical help; the live/self context can supply the affected person, while PERSON adds an explicit person referent.",
+      "after": "Urgent medical help for oneself, including in writing, or for another person explicitly pointed to in a shared visible situation."
+    },
+    {
+      "selector": "/entries/1/variants/0/semantic_distinction",
+      "before": "Urgent medical help; the live/self context can supply the affected person, while PERSON adds an explicit person referent.",
+      "after": "Urgent medical help for oneself, including in writing, or for another person explicitly pointed to in a shared visible situation."
+    },
+    {
+      "selector": "/entries/1/preferred_variant/variant_context_note",
+      "before": null,
+      "after": "The self-referential default applies to this request; omission of PERSON does not encode a grammatical first-person pronoun."
+    },
+    {
+      "selector": "/entries/1/variants/0/variant_context_note",
+      "before": null,
+      "after": "The self-referential default applies to this request; omission of PERSON does not encode a grammatical first-person pronoun."
+    },
+    {
+      "selector": "/entries/1/variants/1/semantic_distinction",
+      "before": "PERSON makes a person referent explicit; it can shift the reading toward someone specified or other than the speaker.",
+      "after": "Urgent medical help for another person outside shared visual contact, or in a written message about another person."
+    },
+    {
+      "selector": "/entries/1/variants/1/variant_context_note",
+      "before": "For an explicit person referent; no first-person or person-role grammar is implied.",
+      "after": "For another person in a shared visible situation, explicit pointing allows the shorter form without PERSON."
+    }
+  ],
+  "other_qa_changes": "PENDING",
+  "baseline_freeze": "NOT PERFORMED"
+}

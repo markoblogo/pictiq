@@ -5,12 +5,14 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DICTIONARY = 'docs/research/composition-dictionary-baseline-v0.1'
 CORPUS = 'docs/research/composition-library-baseline-v0.1'
 ADDENDUM = 'final-creator-qa-addendum-v0.2.json'  # Active source, never filename-ranked.
+sys.path.insert(0, str(ROOT))
 
 
 class ReadError(Exception):
@@ -176,10 +178,36 @@ class Reader:
             self.note('BINDING_MISMATCH', 'Corpus baseline version mismatch', error=True)
         add_path = db / ADDENDUM; addendum = self.load(add_path)
         binding = addendum['source_dictionary_baseline']
+        applied = []
+        bound_dictionary_sha = self.file(dp)['sha256']
+        if 'context_clarification' in dm:
+            from tools.research.medical_context_clarification import verify, RECEIPT, SOURCE, QA_DATA
+            application = dm['context_clarification']
+            if application['path'] != RECEIPT:
+                raise ReadError('Unknown context clarification receipt path')
+            app_path = db / RECEIPT
+            receipt = self.load(app_path)
+            if self.verify(app_path, application['sha256'], 'manifest → context clarification'):
+                try:
+                    _, _, raw_decision = verify(dp.read_bytes(), receipt, self.root)
+                except (ValueError, KeyError, TypeError, IndexError, OSError) as exc:
+                    self.note('CONTEXT_CLARIFICATION_MISMATCH', str(exc), error=True)
+                else:
+                    bound_dictionary_sha = receipt['dictionary_before_sha256']
+                    self.file(self.root / QA_DATA)
+                    source_ref = self.ref(self.root / SOURCE, receipt['source_decision']['selector'])
+                    if (source == 'dictionary' and record_id == receipt['dictionary_entry_id']) or (
+                            source == 'corpus' and record_id == raw_decision['corpus_record_id']):
+                        applied.append({'action': raw_decision['decision'], 'application_status': 'APPLIED',
+                                        'scope': receipt['scope'], 'link_verified': True,
+                                        'source_decision': raw_decision, 'source_provenance': source_ref,
+                                        'provenance': self.ref(app_path, ''), 'application': receipt})
         bound = (source_bound and binding['version'] == dictionary['dictionary_version'] == dm['dictionary_version'] and
                  binding['source_snapshot'] == dictionary['source_snapshot'] == dm['creator_review_export']['source_snapshot'] and
-                 binding['dictionary_json_sha256'] == self.file(dp)['sha256'])
+                 binding['dictionary_json_sha256'] == bound_dictionary_sha)
         if not bound:
+            for application in applied:
+                application['link_verified'] = False
             self.note('ADDENDUM_BASELINE_MISMATCH', 'Active creator decisions cannot be resolved against this baseline', error=True)
         related = []
         if source == 'dictionary':
@@ -256,6 +284,9 @@ class Reader:
             elif isinstance(node, list):
                 for i, v in enumerate(node): check_sequences(v, selector + '/' + str(i))
         check_sequences(record); check_sequences(decisions)
+        if any(d['level'] == 'error' for d in self.diagnostics):
+            for application in applied:
+                application['link_verified'] = False
         return {'ok': not any(d['level'] == 'error' for d in self.diagnostics),
                 'source': source, 'id': record_id, 'baseline_record': record,
                 'record_statuses': {k: record[k] for k in ('creator_review', 'reconciliation_disposition', 'dictionary_eligibility', 'compatibility', 'render_status') if k in record},
@@ -264,6 +295,7 @@ class Reader:
                             'declared_status': primary['status'], 'manifest_status': (dm if source == 'dictionary' else cm)['status'],
                             'dictionary_qa_status': dm['status'], 'no_new_semantic_approval_inferred': True},
                 'linked_corpus_records': related, 'subsequent_creator_decisions': decisions,
+                'applied_creator_decisions': applied,
                 'renders': renders, 'canonical_assets': assets, 'baseline_provenance': baseline_ref,
                 'files_sha256': self.files, 'diagnostics': self.diagnostics}
 

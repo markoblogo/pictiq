@@ -178,6 +178,13 @@ if(!rejected)throw Error('old decisions silently rebound');
         ]:
             actual = (ROOT / repo_path).read_bytes()
             frozen = subprocess.run(["git", "show", f"59e23b2:{repo_path}"], cwd=ROOT, capture_output=True, check=True).stdout
+            if repo_path.endswith('/dictionary.json'):
+                # The original QA stays bound to these exact bytes. Verify the
+                # one authorized description delta back to that frozen input.
+                from tools.research.medical_context_clarification import RECEIPT, verify, encode
+                receipt = load(PKG / RECEIPT)
+                predecessor, _, _ = verify(actual, receipt, ROOT)
+                actual = encode(predecessor)
             self.assertEqual(actual, frozen, repo_path)
 
 

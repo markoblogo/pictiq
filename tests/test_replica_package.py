@@ -27,6 +27,9 @@ class ReplicaPackageTests(unittest.TestCase):
     def fixture(self):
         root = self.tempdir / 'project'
         files = [PACKAGE+'/'+f for f in ('dictionary.json','manifest.json','creator-review-export.json','final-creator-qa-addendum-v0.2.json')]
+        files += [PACKAGE + '/' + f for f in ('applied-decisions/pcd-v01-0002-context.json',
+                  'creator-final-qa-2026-11-19/creator-export.json', 'review/final-creator-qa-v0.2.json')]
+        files += ['tools/research/medical_context_clarification.py']
         files += ['docs/research/composition-library-baseline-v0.1/accepted-corpus.json',
                   'lexicon/icon-index.json','lexicon/compatibility.json','entities/entity-index.json','notation/numeric/index.json',
                   'profiles/standalone-core-v0.1.json','profiles/embodied-core-v0.1.json',
@@ -40,7 +43,10 @@ class ReplicaPackageTests(unittest.TestCase):
         path=root/PACKAGE/'dictionary.json';data=json.loads(path.read_bytes())
         variant=next(v for e in data['entries'] if e['dictionary_entry_id']==ENTRY for v in e['variants'] if v['variant_id']==VARIANT)
         change(variant['message']);path.write_bytes(encode(data));digest=hashlib.sha256(path.read_bytes()).hexdigest()
-        path=root/PACKAGE/'manifest.json';m=json.loads(path.read_bytes());m['artifact_sha256']['dictionary.json']=digest;path.write_bytes(encode(m))
+        path=root/PACKAGE/'manifest.json';m=json.loads(path.read_bytes());m['artifact_sha256']['dictionary.json']=digest
+        # This synthetic Message fixture declares its own direct addendum
+        # binding, rather than claiming the real medical-only application.
+        m.pop('context_clarification', None);path.write_bytes(encode(m))
         path=root/PACKAGE/'final-creator-qa-addendum-v0.2.json';m=json.loads(path.read_bytes());m['source_dictionary_baseline']['dictionary_json_sha256']=digest;path.write_bytes(encode(m))
         return variant['message']
 
@@ -125,9 +131,13 @@ class ReplicaPackageTests(unittest.TestCase):
         with self.assertRaisesRegex(PackageError,'input version unavailable or changed'):verify(new,root)
 
     def test_sample_and_cli(self):
-        self.assertTrue(verify(SAMPLE)['ok'])
+        # K06 remains bound to its historical input bytes; never rebind it to
+        # the active Dictionary revision or silently refresh its manifest.
+        with self.assertRaisesRegex(PackageError, 'input version unavailable or changed'):
+            verify(SAMPLE)
         result=subprocess.run([sys.executable,str(ROOT/'tools/replica_package.py'),'verify',str(SAMPLE)],cwd=self.tempdir,text=True,capture_output=True)
-        self.assertEqual(result.returncode,0,result.stdout+result.stderr)
+        self.assertEqual(result.returncode,1,result.stdout+result.stderr)
+        self.assertIn('input version unavailable or changed', result.stdout)
         bad=subprocess.run([sys.executable,str(ROOT/'tools/replica_package.py'),'build','--entry-id',ENTRY,'--variant-id','unknown','--output',str(self.tempdir/'cli-bad')],cwd=self.tempdir,text=True,capture_output=True)
         self.assertEqual(bad.returncode,1);self.assertFalse(json.loads(bad.stdout)['ok'])
         self.assertFalse((self.tempdir/'cli-bad').exists())
