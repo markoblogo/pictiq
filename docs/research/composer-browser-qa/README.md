@@ -1,6 +1,6 @@
 # Composer v0.1 QA — S01.23 / S01.24 / S01.25
 
-**Current status (S01.25): Composer downloads PASS; Composer browser QA PASS.**
+**Current status (S01.26): Composer downloads PASS; Composer browser QA PASS; CBQA-01 FIXED.**
 Owner-downloaded files independently verified below; the S01.23/S01.24 blocked
 observations remain historical evidence, not current export status.
 
@@ -253,6 +253,58 @@ byte-identical. `git diff --check` passes. No push, tag or release.
 COMPOSER DOWNLOADS: PASS
 COMPOSER BROWSER QA: PASS
 CBQA-01: OPEN / LOW
+DICTIONARY BASELINE: FROZEN / PRESERVED
+PUBLIC RELEASE: NOT PERFORMED
+```
+
+
+## S01.26 — CBQA-01 shortcut instruction fixed (2026-11-19)
+
+Starting clean HEAD: `1624eaa7fcae7557802431772888cafbcb2be92d`.
+Reconfirmed actual Chrome behavior before editing: focus/select a tile button;
+plain ArrowLeft does not reorder, while Alt+Left/Right Arrow moves it within its
+frame. On macOS Alt corresponds to Option. The existing handler is unchanged.
+
+Only the tile-button accessible instruction in `docs/composer/app.mjs` changes:
+
+- Before: `Drag to reorder. Use arrow keys to move, Delete to remove.`
+- After: `Drag to reorder. With a keyboard, focus this tile and press Alt (Option on macOS) + Left/Right Arrow to move; Delete to remove.`
+
+This corrects an accessible label, not a new visible control or new gesture.
+The mobile instruction is conditional on having a keyboard; it does not promise
+an on-screen Alt key or a new touch-reordering feature. Existing drag wording
+and deletion behavior remain unchanged.
+
+Actual browser regression used HTTP Composer at desktop 1280×900 and mobile
+390×844. A cached old module persisted on localhost:8000, so the final verification
+used fresh local origin `http://localhost:8001/docs/composer/`. The new accessible
+label was read from actual rendered buttons before accepting the regression.
+The temporary viewport and cache settings were restored after the check.
+
+On the changed version, `comm_sound + qty_minus` becomes `qty_minus + comm_sound`
+with Alt+Left; Alt+Right restores the original order. Canonical JSON, .pictiq
+inspect/export text and SVG preview data-id order all match the moved sequence.
+Deletion + Undo and an extra palette addition + Undo restore the original Message;
+profile and contexts remain unchanged. No fresh filesystem download is claimed:
+this tests the serialized export payload and preview; the independently validated
+S01.25 real downloads remain separate evidence and are not overwritten.
+
+At mobile width the new labels include “With a keyboard”; clientWidth and
+scrollWidth both equal 390px. Captured browser console: zero warnings/errors.
+No other Composer surface or Dictionary was changed.
+
+Existing `tests.test_composer`: **2 tests PASS**. Existing generated-browser-assets
+freshness validation passes; app.mjs is a hand-maintained source and requires no
+regeneration. All generated assets remain byte-identical. The source diff is
+exactly the one instruction replacement, with event handlers and export logic
+unchanged. All other tracked files except this report are preserved.
+`git diff --check` passes. Historical CBQA-01 OPEN / LOW statements above describe
+the earlier passes; this follow-up closes that defect without rewriting evidence.
+
+```text
+CBQA-01: FIXED
+COMPOSER BROWSER QA: PASS
+DICTIONARY BROWSER QA: PASS / PRESERVED
 DICTIONARY BASELINE: FROZEN / PRESERVED
 PUBLIC RELEASE: NOT PERFORMED
 ```

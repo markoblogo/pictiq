@@ -97,7 +97,7 @@ function renderFrames() {
           const tooltip = `${label} · ${id}`;
           return `
           <article class="token ${frameIndex === state.selectedFrame && tokenIndex === state.selectedToken ? 'selected' : ''}" draggable="true" data-drag-token="${frameIndex}:${tokenIndex}" title="${escapeHtml(tooltip)}">
-            <button class="token-select" type="button" data-select-token="${frameIndex}:${tokenIndex}" aria-label="Select ${escapeHtml(tooltip)}. Drag to reorder. Use arrow keys to move, Delete to remove.">${assetSvgForToken(token)}<span class="sr-only">${escapeHtml(tooltip)}</span></button>
+            <button class="token-select" type="button" data-select-token="${frameIndex}:${tokenIndex}" aria-label="Select ${escapeHtml(tooltip)}. Drag to reorder. With a keyboard, focus this tile and press Alt (Option on macOS) + Left/Right Arrow to move; Delete to remove.">${assetSvgForToken(token)}<span class="sr-only">${escapeHtml(tooltip)}</span></button>
             <button class="token-delete" type="button" data-token-delete="${frameIndex}:${tokenIndex}" aria-label="Delete ${escapeHtml(label)}" title="Delete tile">×</button>
           </article>`; }).join('') : '<p class="palette-gloss empty-frame-note">Drop tiles here or add from the Palette.</p>'}
       </div>
