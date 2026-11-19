@@ -1,10 +1,14 @@
-# S01.23 — Composer v0.1 real Chrome QA
+# Composer v0.1 QA — S01.23 / S01.24 / S01.25
 
-2026-11-19, Europe/Paris. Clean starting HEAD:
+**Current status (S01.25): Composer downloads PASS; Composer browser QA PASS.**
+Owner-downloaded files independently verified below; the S01.23/S01.24 blocked
+observations remain historical evidence, not current export status.
+
+2026-11-19, Europe/Paris. S01.23 clean starting HEAD:
 `f89bfc62c2236200c8ad125cac3ac11fa243d8c0`.
 
 ```text
-COMPOSER BROWSER QA: BLOCKED
+COMPOSER BROWSER QA: PASS
 DICTIONARY BROWSER QA: PASS / PRESERVED
 DICTIONARY BASELINE: FROZEN / PRESERVED
 PUBLIC RELEASE: NOT PERFORMED
@@ -172,6 +176,82 @@ data, frozen Dictionary records/manifests, SVGs and decisions are preserved.
 ```text
 COMPOSER DOWNLOADS: BLOCKED
 COMPOSER BROWSER QA: BLOCKED
+CBQA-01: OPEN / LOW
+DICTIONARY BASELINE: FROZEN / PRESERVED
+PUBLIC RELEASE: NOT PERFORMED
+```
+
+
+## S01.25 — owner-downloaded files independently validated (2026-11-19)
+
+Technical verification started from clean HEAD
+`972eec302900aa01bb9dd4627148dcecb6c4a980`. Owner confirms manual download from
+ordinary Chrome; Codex independently read the actual saved bytes. No browser
+automation, synthetic export or replacement file was used in this pass.
+The superseded pictiq-export-qa directory was not used.
+
+Exactly one Composer-named candidate per requested format was found in
+`/Users/antonbiletskiy-volokh/Downloads`; unrelated files were not inspected.
+Creation times below are Europe/Paris, 2026-11-19. Files were read without editing,
+deleting, renaming or copying them into the repository.
+
+| Actual file | Creation time | Bytes | SHA-256 |
+| --- | --- | --- | --- |
+| `pictiq-message.json` | 18:22:34.075227 +01:00 | 478 | `8d33829db2fdc0fa78b5dd5f1511985d9a3eba73963dcec368df37dcae74ade2` |
+| `pictiq-message.pictiq` | 18:22:38.547168 +01:00 | 98 | `9a633d98d0bbbbd2bfb0203221af48dd1fe95b3bd9c90e0db23de98e9ca5a788` |
+| `pictiq-message.svg` | 18:22:40.805423 +01:00 | 12631 | `b296064c6a9dd5bbdc4df29b88c2c9eb5a554293d0f4f51cac7b1a54ca78b6f2` |
+
+### Results
+
+- **JSON PASS:** declared JSON Schema checked with Draft202012Validator, including
+  validity of the schema itself; existing `schema_errors` / `semantic_errors`
+  also pass. Exactly one frame and four `{type: icon, id: ...}` tokens, ordered
+  `move_public + media_text + time + punct_question`. No params are present or
+  added. `schema=0.1`, `pictiq=1.1`, `profile=standalone-core-v0.1`,
+  `contexts=[universal-core]` are preserved by normalization and all round-trips.
+- **.pictiq PASS:** existing Python `parse_shorthand` and `render_file` parse the
+  actual downloaded shorthand; the complete Message equals downloaded JSON,
+  including metadata and token order. Rendering both real files gives equal
+  canonical SVG output.
+- **SVG PASS:** valid XML with SVG namespace/root; four data-id groups in the
+  expected order. Complete structural tree comparison (tags, attributes,
+  meaningful text and ordered children) matches the existing canonical Renderer
+  using its default RenderOptions, also used by Composer's export. For these
+  particular files, SVG is additionally **byte-identical** to Python Renderer
+  output (12,631 bytes). Byte identity is an observed stronger result, not a
+  general requirement imposed on equivalent Composer SVGs. No external image,
+  script, foreignObject or external resource reference; local fragment/url
+  references are resolved against existing IDs.
+- **Round-trip PASS:** existing Composer core `parseJsonText` and
+  `parseShorthandText` import the actual downloaded text in the local Node runtime.
+  JSON → `serializeShorthand(...).text` → shorthand parser → Message preserves
+  the full Message; serialization is byte-identical to downloaded .pictiq.
+  Downloaded .pictiq → Message → JSON → JSON importer also preserves the full
+  Message. This is a technical importer/serializer check, not a new browser UI
+  round-trip; the earlier actual-browser round-trips remain separately recorded.
+
+### Remaining qualifications
+
+Python Renderer emits `profile-mismatch` and `context-mismatch` warnings for
+`move_public` outside the selected standalone-core-v0.1 / universal-core sets.
+They are non-fatal applicability warnings, not a schema error or lost export
+metadata. No profile/context was changed to suppress them. No new semantic or
+translation approval follows from this check.
+
+Manual saving by the owner closes the previous download-completion evidence gap;
+it does not prove unattended browser automation downloads now work. Earlier
+browser functionality checks plus independently validated real files support
+bounded Composer browser QA **PASS**, with CBQA-01 still **OPEN / LOW**. No new
+browser/device compatibility or untested Composer feature is claimed.
+
+All three files' bytes and SHA-256 were rechecked after validation. Only this
+README changes; Composer, generated data, Dictionary/freeze records, Lexicon,
+Renderer, Messages, canonical SVG, Corpus and application records remain
+byte-identical. `git diff --check` passes. No push, tag or release.
+
+```text
+COMPOSER DOWNLOADS: PASS
+COMPOSER BROWSER QA: PASS
 CBQA-01: OPEN / LOW
 DICTIONARY BASELINE: FROZEN / PRESERVED
 PUBLIC RELEASE: NOT PERFORMED
