@@ -1,4 +1,5 @@
 """Run the real generated viewer script and its original predecessor in a small DOM fixture."""
+import copy
 import hashlib
 import json
 import re
@@ -6,7 +7,7 @@ import subprocess
 import unittest
 from pathlib import Path
 
-from tools.research.build_composition_dictionary_baseline_v0_1 import make_dictionary_viewer
+from tools.research.build_composition_dictionary_baseline_v0_1 import make_dictionary_viewer, current_usage_notes
 
 ROOT = Path(__file__).resolve().parents[1]
 PACKAGE = ROOT / 'docs/research/composition-dictionary-baseline-v0.1'
@@ -42,7 +43,7 @@ function results(view,q,filters={}){
         # Compare the two real algorithms on the same current data. Authorized
         # applications may legitimately change variants, fields and matches.
         harness += "vm.runInContext('D.splice(0,D.length,...'+JSON.stringify(plain(vm.runInContext('D',current.context)))+')',original.context);\n" + body
-        result = subprocess.run(['node','-e',harness],cwd=ROOT,capture_output=True,text=True)
+        result = subprocess.run(['node'],input=harness,cwd=ROOT,capture_output=True,text=True)
         self.assertEqual(result.returncode,0,result.stderr)
 
     def test_crossing_related_only_and_visible_reason(self):
@@ -105,14 +106,77 @@ assert.deepEqual(results(current,'timetable').headings,['Public transport schedu
 assert.equal(vm.runInContext("D.find(e=>e.dictionary_entry_id==='pcd-v01-0065').preferred_variant.token_sequence",current.context),'move_public + time + punct_question');
 ''')
 
+    def test_arrival_current_text_is_resolved_and_old_note_is_labelled_history(self):
+        self.run_js('''
+const shown=results(current,'When does public transport arrive?');
+assert.deepEqual(shown.headings,['When does public transport arrive?']);
+const main=shown.html.split('<details>')[0];
+assert.ok(!main.includes('which remains unresolved'));
+assert.ok(main.includes('Arrival-time question: pcd-v01-0065. Timetable/schedule question: separate Dictionary entry pcd-v01-0066.'));
+assert.ok(shown.html.includes('Historical source note (superseded)'));
+assert.ok(shown.html.includes('which remains unresolved'));
+assert.ok(shown.html.includes('../applied-decisions/pcd-v01-0066-timetable.json'));
+const arrival=plain(vm.runInContext("D.find(e=>e.dictionary_entry_id==='pcd-v01-0065')",current.context));
+assert.ok(arrival.usage_note.includes('which remains unresolved'));
+assert.equal(arrival.preferred_variant.token_sequence,'move_public + time + punct_question');
+assert.equal(vm.runInContext("D.find(e=>e.dictionary_entry_id==='pcd-v01-0066').preferred_variant.token_sequence",current.context),'move_public + media_text + time + punct_question');
+assert.ok(results(current,'timetable').html.includes('Exact ordered timetable composition; no longer unresolved.'));
+''')
+
     def test_generated_viewer_and_manifest_hash_reproducible(self):
-        entries=json.loads((PACKAGE/'dictionary.json').read_text())['entries']
-        generated=make_dictionary_viewer(entries)
-        self.assertEqual(generated,make_dictionary_viewer(entries))
+        dictionary=json.loads((PACKAGE/'dictionary.json').read_text())
+        entries=dictionary['entries']
+        refs=json.loads((PACKAGE/'manifest.json').read_bytes())['context_clarifications']
+        applications=[json.loads((PACKAGE/r['path']).read_bytes()) for r in refs]
+        notes=current_usage_notes(dictionary, applications)
+        generated=make_dictionary_viewer(entries, notes)
+        self.assertEqual(generated,make_dictionary_viewer(entries, notes))
         self.assertEqual(generated,self.html)
         manifest=json.loads((PACKAGE/'manifest.json').read_text())
         self.assertEqual(manifest['artifact_sha256']['review/index.html'],hashlib.sha256(self.html.encode()).hexdigest())
         self.assertIn('do not establish semantic equivalence or complete QA',self.html)
+
+    def test_current_note_requires_verified_application_and_keeps_historical_inputs(self):
+        from tools.read_composition import read_composition
+        from tools.research.communication_context_clarification import verify_sequence
+        dictionary=json.loads((PACKAGE/'dictionary.json').read_bytes())
+        original_bytes=(PACKAGE/'dictionary.json').read_bytes()
+        manifest=json.loads((PACKAGE/'manifest.json').read_bytes())
+        refs=manifest['context_clarifications']
+        applications=[json.loads((PACKAGE/r['path']).read_bytes()) for r in refs]
+        notes=current_usage_notes(dictionary,applications)
+        self.assertEqual(list(notes),['pcd-v01-0065'])
+        note=notes['pcd-v01-0065']
+        self.assertEqual(note['dictionary_sha256'],hashlib.sha256(original_bytes).hexdigest())
+        self.assertEqual(note['application_sha256'],refs[-1]['sha256'])
+        reader=read_composition('dictionary','pcd-v01-0065')
+        self.assertTrue(reader['ok'],reader['diagnostics'])
+        self.assertEqual(reader['subsequent_creator_decisions'][0]['application_status'],'APPLIED')
+        self.assertEqual(reader['baseline_record']['usage_note'],note['historical_note'])
+        self.assertEqual(reader['applied_creator_decisions'][0]['application']['dictionary_entry_id'],'pcd-v01-0066')
+        for change in ('after_hash','source_selector','missing_media_text','broken_intermediate'):
+            with self.subTest(change=change):
+                changed_dictionary=copy.deepcopy(dictionary)
+                changed_applications=copy.deepcopy(applications)
+                if change=='after_hash':
+                    changed_applications[-1]['dictionary_after_sha256']='a'*64
+                elif change=='source_selector':
+                    changed_applications[-1]['source_decision']['selector']='/records/8'
+                elif change=='missing_media_text':
+                    changed_dictionary['entries'][-1]['preferred_variant']['message']['frames'][0]['tokens'].pop(1)
+                else:
+                    changed_applications[0]['dictionary_after_sha256']='a'*64
+                with self.assertRaises(ValueError):
+                    current_usage_notes(changed_dictionary,changed_applications)
+        historical,_,_=verify_sequence(original_bytes,applications,ROOT)
+        self.assertEqual(current_usage_notes(historical,[]),{})
+        historical_script=re.search(r'<script>(.*?)</script>',make_dictionary_viewer(historical['entries']),re.S).group(1)
+        self.run_js('const historical=viewer('+json.dumps(historical_script)+''');
+const shown=results(historical,'When does public transport arrive?');
+assert.ok(shown.html.split('<details>')[0].includes('which remains unresolved'));
+assert.ok(!shown.html.includes('Historical source note (superseded)'));
+''')
+        self.assertEqual((PACKAGE/'dictionary.json').read_bytes(),original_bytes)
 
     def test_protected_data_qa_snapshots_and_exports_unchanged(self):
         from tools.research.communication_context_clarification import receipt_refs, verify_sequence, encode
