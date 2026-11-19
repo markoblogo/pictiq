@@ -115,3 +115,64 @@ assets, Corpus, creator exports and application records. Only this QA directory
 is added. Existing Message/Renderer validation and local evidence links pass;
 `git diff --check` passes. No Node simulation substituted for browser interaction.
 No fixes, push, tag, release or Dictionary re-evaluation were performed.
+
+
+## S01.24 — downloadable exports follow-up (2026-11-19)
+
+Starting clean HEAD: `70139f9da4ff315b433effe3a1ab1996ff81d225`.
+Actual Chrome over HTTP, `http://localhost:8000/docs/composer/`.
+Rebuilt B from palette buttons in the exact order:
+`move_public + media_text + time + punct_question`.
+Displayed Message has schema 0.1, pictiq 1.1, profile
+`standalone-core-v0.1`, contexts `["universal-core"]`, one frame and four icon
+tokens without additional params. Actual preview data-ids match that order.
+
+The earlier BLOCKED was not proof of a broken export button: it combined a
+background-tab/native-save interruption and lack of an inspectable saved file.
+This follow-up activated the Composer tab in Chrome. Chrome displayed a
+localhost multiple-file-download permission prompt, which was allowed for these
+requested exports. Even after that permission, no downloadable artifact was
+confirmed. The browser automation's download waiter timed out for JSON (15s),
+.pictiq (5s) and SVG (5s). No Save As dialog subsequently appeared. Captured tab
+console contained zero warnings/errors. This establishes the observable blocker,
+not its deeper cause; it does not establish a Composer implementation failure.
+
+A dedicated target directory was prepared outside the repository:
+`/tmp/pictiq-s0124-exports`. It remained empty after the attempts. The runtime does
+not support `Page.setDownloadBehavior` to direct files there; it requires its
+`waitForEvent("download")` route, which did not supply a file. No download path
+or protection was bypassed. No user Downloads files were edited or replaced.
+
+| Button | Real file confirmed | Content / SHA-256 / downloaded-file round-trip |
+| --- | --- | --- |
+| Download JSON | NO — download event timed out | NOT AVAILABLE / NOT VERIFIED |
+| Download .pictiq | NO — download event timed out | NOT AVAILABLE / NOT VERIFIED |
+| Download SVG | NO — download event timed out | NOT AVAILABLE / NOT VERIFIED |
+
+The earlier inspected JSON/shorthand/preview checks remain valid but are not
+substituted for downloaded bytes. No hashes are invented and no downloaded-file
+round-trip is claimed. This is neither a confirmed broken button nor a confirmed
+successful download whose file merely cannot be inspected: completion itself
+remains unconfirmed through the available browser interface.
+
+Minimal independent check: in an ordinary foreground Chrome session, open the
+same local HTTP Composer, build B, and use each Download button once. In Save As,
+choose the temporary directory above and retain `pictiq-message.json`,
+`pictiq-message.pictiq`, `pictiq-message.svg`. Once those actual files exist,
+compute `shasum -a 256 /tmp/pictiq-s0124-exports/*`, run existing Message validation,
+parse the downloaded shorthand and compare canonical Renderer SVG structure;
+then paste the downloaded JSON and shorthand into the existing Import UI and
+compare the full Message. This manual save is the only missing prerequisite;
+no new Composer feature or code change is proposed.
+
+Only this README is updated. Previous evidence and all previously tracked code,
+data, frozen Dictionary records/manifests, SVGs and decisions are preserved.
+`git diff --check` passes. CBQA-01 remains OPEN / LOW; it is not fixed here.
+
+```text
+COMPOSER DOWNLOADS: BLOCKED
+COMPOSER BROWSER QA: BLOCKED
+CBQA-01: OPEN / LOW
+DICTIONARY BASELINE: FROZEN / PRESERVED
+PUBLIC RELEASE: NOT PERFORMED
+```
