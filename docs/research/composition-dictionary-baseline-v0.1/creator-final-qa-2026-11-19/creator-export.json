@@ -1,0 +1,112 @@
+{
+  "qa_type": "PICTIQ_COMPOSITION_DICTIONARY_FINAL_CREATOR_QA",
+  "version": "0.2",
+  "source_baseline": {
+    "version": "0.1",
+    "commit": "59e23b2",
+    "source_snapshot": "clb-v0.1:33b00632bedb342af8aed35b62824b9b60663474bca556bb69e4ab16ea22d3e0",
+    "dictionary_json_sha256": "9c0ed9e048b9a4d134635e7f21eab68809b42bfd495ee0697db3ad67063ae107"
+  },
+  "qa_dataset_sha256": "45c041165ad17f2f8114dddd454ba42f74e9e635eb44606133f291348626f413",
+  "pending_addendum": {
+    "path": "final-creator-qa-addendum-v0.2.json",
+    "sha256": "8c5cfda80ee90dea0e185d142249a03e6be83b7ec40f1523f07e74dcd5ed0b51",
+    "status": "PENDING_BASELINE_APPLICATION"
+  },
+  "unique_primary_entry_count": 10,
+  "reviewed_count": 10,
+  "unresolved_follow_up_count": 0,
+  "unresolved_decision_count": 0,
+  "entry_ids": [
+    "pcd-v01-0002",
+    "pcd-v01-0005",
+    "pcd-v01-0006",
+    "pcd-v01-0009",
+    "pcd-v01-0010",
+    "pcd-v01-0025",
+    "pcd-v01-0027",
+    "pcd-v01-0028",
+    "pcd-v01-0030",
+    "pcd-v01-0065"
+  ],
+  "records": [
+    {
+      "decision": "NEEDS_CORRECTION",
+      "note": "если надо сказать \"мне нужна медицинская помощь\" то достаточно safety_medical + punct_exclaim - если \"ему (кому-то) нужна медицинская помощь\" то оптимально person_generic + safety_medical + punct_exclaim - тут есть нюанс: если этот человек рядом с говорящим и слушающим то достаточно safety_medical + punct_exclaim - почему? потому что можно показать пальцем на него, также как и если это мне надо, то в целом все сказаное говорящим относится автоматом к нему. форма person_generic + safety_medical + punct_exclaim нужна в любой ситуации в письменном виде (исключение \"мне\") а также для человека который не в зоне зрительного контакта опонента",
+      "dictionary_entry_id": "pcd-v01-0002",
+      "corpus_record_id": "clh-v01-0003",
+      "creator_note": "если надо сказать \"мне нужна медицинская помощь\" то достаточно safety_medical + punct_exclaim - если \"ему (кому-то) нужна медицинская помощь\" то оптимально person_generic + safety_medical + punct_exclaim - тут есть нюанс: если этот человек рядом с говорящим и слушающим то достаточно safety_medical + punct_exclaim - почему? потому что можно показать пальцем на него, также как и если это мне надо, то в целом все сказаное говорящим относится автоматом к нему. форма person_generic + safety_medical + punct_exclaim нужна в любой ситуации в письменном виде (исключение \"мне\") а также для человека который не в зоне зрительного контакта опонента",
+      "decision_source": "LOCAL_QA_OVERLAY"
+    },
+    {
+      "note": "Да, food_meat отображён правильно.",
+      "decision": "ACCEPT_AS_SHOWN",
+      "dictionary_entry_id": "pcd-v01-0005",
+      "corpus_record_id": "clh-v01-0006",
+      "creator_note": "Да, food_meat отображён правильно.",
+      "decision_source": "LOCAL_QA_OVERLAY"
+    },
+    {
+      "note": "comm_sound - это в целом коммуникация (разговор, сообщение, соц медия и тд - весь набор коммуникаций) и одновременно это так же обозначает производимый человеком звук - именно производимый (не звук дождя, животных и тд), то есть comm_sound + qty_minus либо comm_sound + rel_down могут в зависимости от контекста обозначать \"говори поменьше\", \"можно потише\", \"сделайте потише\", \"пиши меньше\" и подобное. comm_sound может быть как любая производимая человеком коммуникация (оральная, письменная и тд), так и производимый человеком звук - голосом, шуршанием, включением музыки, автомобилем и тд. варианты qty_minus и/или rel_down в данном контексте синонимичны - меньше можно показать и так и так",
+      "decision": "NEEDS_CORRECTION",
+      "dictionary_entry_id": "pcd-v01-0006",
+      "corpus_record_id": "clc-v01-0008-r1",
+      "creator_note": "comm_sound - это в целом коммуникация (разговор, сообщение, соц медия и тд - весь набор коммуникаций) и одновременно это так же обозначает производимый человеком звук - именно производимый (не звук дождя, животных и тд), то есть comm_sound + qty_minus либо comm_sound + rel_down могут в зависимости от контекста обозначать \"говори поменьше\", \"можно потише\", \"сделайте потише\", \"пиши меньше\" и подобное. comm_sound может быть как любая производимая человеком коммуникация (оральная, письменная и тд), так и производимый человеком звук - голосом, шуршанием, включением музыки, автомобилем и тд. варианты qty_minus и/или rel_down в данном контексте синонимичны - меньше можно показать и так и так",
+      "decision_source": "LOCAL_QA_OVERLAY"
+    },
+    {
+      "note": "икона тележки супермаркета place_shop основное изображение процесса покупок/шоппинга и для обозначения того что необходим продовольственный магазин/классический супермаркет используем вторую иконку need_food. иконка мяса после place_shop обозначает запрос на специализированный мясной магазин, иконка \"ремонт\" - на магазин DIY и тд",
+      "decision": "NEEDS_CORRECTION",
+      "dictionary_entry_id": "pcd-v01-0009",
+      "corpus_record_id": "clh-v01-0014",
+      "creator_note": "икона тележки супермаркета place_shop основное изображение процесса покупок/шоппинга и для обозначения того что необходим продовольственный магазин/классический супермаркет используем вторую иконку need_food. иконка мяса после place_shop обозначает запрос на специализированный мясной магазин, иконка \"ремонт\" - на магазин DIY и тд",
+      "decision_source": "LOCAL_QA_OVERLAY"
+    },
+    {
+      "note": "в целом корректно - первая иконка need_food - еда, а qty_minus и rel_down в данном контексте синонимичны, как в предыдущем кейсе - и означает \"меньше еды\", \"довольно\", \"мне хватит\", \"уменьшите порцию\" и подобное",
+      "decision": "ACCEPT_AS_SHOWN",
+      "dictionary_entry_id": "pcd-v01-0010",
+      "corpus_record_id": "clh-v01-0016",
+      "creator_note": "в целом корректно - первая иконка need_food - еда, а qty_minus и rel_down в данном контексте синонимичны, как в предыдущем кейсе - и означает \"меньше еды\", \"довольно\", \"мне хватит\", \"уменьшите порцию\" и подобное",
+      "decision_source": "LOCAL_QA_OVERLAY"
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0025",
+      "corpus_record_id": "clh-v01-0044",
+      "decision": "MOVE_TO_CORPUS_ONLY",
+      "creator_note": "",
+      "decision_source": "PENDING_ADDENDUM"
+    },
+    {
+      "note": "у нас move_feet означает идти, двигаться и подобное и logic_no - нет/запрет - при этом сочетании - логично \"не ходить\", \"не идти\", \"проход запрещен\" и тд, дополнительного person_generic не требуется",
+      "decision": "ACCEPT_AS_SHOWN",
+      "dictionary_entry_id": "pcd-v01-0027",
+      "corpus_record_id": "clh-v01-0046",
+      "creator_note": "у нас move_feet означает идти, двигаться и подобное и logic_no - нет/запрет - при этом сочетании - логично \"не ходить\", \"не идти\", \"проход запрещен\" и тд, дополнительного person_generic не требуется",
+      "decision_source": "LOCAL_QA_OVERLAY"
+    },
+    {
+      "note": "можно и person_generic + move_feet + rel_here и person_generic + move_feet и даже move_feet - более того для знака на дороге я бы выбрал только move_feet ибо этого достаточно для того чтобы сообщить что можно ходить, пересекать пешком и тд - ибо move_feet значит в первую очередь \"ходить\"",
+      "decision": "KEEP_ENTRY_CHANGE_PREFERRED",
+      "dictionary_entry_id": "pcd-v01-0028",
+      "corpus_record_id": "clh-v01-0047",
+      "creator_note": "можно и person_generic + move_feet + rel_here и person_generic + move_feet и даже move_feet - более того для знака на дороге я бы выбрал только move_feet ибо этого достаточно для того чтобы сообщить что можно ходить, пересекать пешком и тд - ибо move_feet значит в первую очередь \"ходить\"",
+      "decision_source": "LOCAL_QA_OVERLAY"
+    },
+    {
+      "note": "тут ситуация такая - в пиктик есть 2 вида письмный и на месте (в контексте) - если это на карте либо в тексте то rel_here + logic_no + move_car или rel_here + иконка места + logic_no + move_car - проезд авто и парковка (вообще авто) запрещено. если это на месте то если это проезд/дорога то logic_no + move_car это значит - проезд запрещен, если это место которое можно принять за стоянку то logic_no + move_car - стоянка запрещена, либо если это и то и другое то и проезд и стоянка запрещены. а вот logic_no + move_car или move_car + logic_no вообще не принципиально - ибо \"запрещено авто\" или \"авто запрещено\" это одно и тоже",
+      "decision": "NEEDS_CORRECTION",
+      "dictionary_entry_id": "pcd-v01-0030",
+      "corpus_record_id": "clh-v01-0049",
+      "creator_note": "тут ситуация такая - в пиктик есть 2 вида письмный и на месте (в контексте) - если это на карте либо в тексте то rel_here + logic_no + move_car или rel_here + иконка места + logic_no + move_car - проезд авто и парковка (вообще авто) запрещено. если это на месте то если это проезд/дорога то logic_no + move_car это значит - проезд запрещен, если это место которое можно принять за стоянку то logic_no + move_car - стоянка запрещена, либо если это и то и другое то и проезд и стоянка запрещены. а вот logic_no + move_car или move_car + logic_no вообще не принципиально - ибо \"запрещено авто\" или \"авто запрещено\" это одно и тоже",
+      "decision_source": "LOCAL_QA_OVERLAY"
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0065",
+      "corpus_record_id": "clh-v01-0022",
+      "decision": "ACCEPT_AS_SHOWN",
+      "creator_note": "",
+      "decision_source": "PENDING_ADDENDUM"
+    }
+  ]
+}
