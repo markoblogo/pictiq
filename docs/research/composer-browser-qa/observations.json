@@ -1,0 +1,369 @@
+{
+  "desktop": [
+    {
+      "diagnostics": "No validation errors.",
+      "height": 900,
+      "message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "comm_sound",
+                "type": "icon"
+              },
+              {
+                "id": "qty_minus",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "previewIDs": [
+        "comm_sound",
+        "qty_minus"
+      ],
+      "scrollAreas": [
+        {
+          "class": "palette-scroll",
+          "clientHeight": 429,
+          "clientWidth": 319,
+          "scrollHeight": 429,
+          "scrollWidth": 319
+        },
+        {
+          "class": "panel workspace",
+          "clientHeight": 796,
+          "clientWidth": 515,
+          "scrollHeight": 796,
+          "scrollWidth": 515
+        },
+        {
+          "class": "panel preview",
+          "clientHeight": 796,
+          "clientWidth": 368,
+          "scrollHeight": 854,
+          "scrollWidth": 368
+        }
+      ],
+      "scrollWidth": 1280,
+      "width": 1280
+    },
+    {
+      "diagnostics": "No validation errors.",
+      "height": 900,
+      "message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "move_public",
+                "type": "icon"
+              },
+              {
+                "id": "media_text",
+                "type": "icon"
+              },
+              {
+                "id": "time",
+                "type": "icon"
+              },
+              {
+                "id": "punct_question",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "previewIDs": [
+        "move_public",
+        "media_text",
+        "time",
+        "punct_question"
+      ],
+      "scrollAreas": [
+        {
+          "class": "palette-scroll",
+          "clientHeight": 429,
+          "clientWidth": 319,
+          "scrollHeight": 429,
+          "scrollWidth": 319
+        },
+        {
+          "class": "panel workspace",
+          "clientHeight": 796,
+          "clientWidth": 515,
+          "scrollHeight": 796,
+          "scrollWidth": 515
+        },
+        {
+          "class": "panel preview",
+          "clientHeight": 796,
+          "clientWidth": 368,
+          "scrollHeight": 854,
+          "scrollWidth": 368
+        }
+      ],
+      "scrollWidth": 1280,
+      "width": 1280
+    }
+  ],
+  "mobile": [
+    {
+      "diagnostics": "No validation errors.",
+      "height": 844,
+      "message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "comm_sound",
+                "type": "icon"
+              },
+              {
+                "id": "qty_minus",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "previewIDs": [
+        "comm_sound",
+        "qty_minus"
+      ],
+      "scrollAreas": [
+        {
+          "class": "palette-scroll",
+          "clientHeight": 219,
+          "clientWidth": 340,
+          "scrollHeight": 219,
+          "scrollWidth": 340
+        },
+        {
+          "class": "panel workspace",
+          "clientHeight": 400,
+          "clientWidth": 364,
+          "scrollHeight": 400,
+          "scrollWidth": 364
+        },
+        {
+          "class": "panel preview",
+          "clientHeight": 820,
+          "clientWidth": 364,
+          "scrollHeight": 820,
+          "scrollWidth": 364
+        }
+      ],
+      "scrollWidth": 390,
+      "width": 390
+    },
+    {
+      "diagnostics": "No validation errors.",
+      "height": 844,
+      "message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "move_public",
+                "type": "icon"
+              },
+              {
+                "id": "media_text",
+                "type": "icon"
+              },
+              {
+                "id": "time",
+                "type": "icon"
+              },
+              {
+                "id": "punct_question",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "previewIDs": [
+        "move_public",
+        "media_text",
+        "time",
+        "punct_question"
+      ],
+      "scrollAreas": [
+        {
+          "class": "palette-scroll",
+          "clientHeight": 219,
+          "clientWidth": 340,
+          "scrollHeight": 219,
+          "scrollWidth": 340
+        },
+        {
+          "class": "panel workspace",
+          "clientHeight": 400,
+          "clientWidth": 364,
+          "scrollHeight": 400,
+          "scrollWidth": 364
+        },
+        {
+          "class": "panel preview",
+          "clientHeight": 794,
+          "clientWidth": 364,
+          "scrollHeight": 794,
+          "scrollWidth": 364
+        }
+      ],
+      "scrollWidth": 390,
+      "width": 390
+    },
+    {
+      "diagnostics": "No validation errors.",
+      "height": 844,
+      "message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "comm_sound",
+                "type": "icon"
+              },
+              {
+                "id": "qty_minus",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "previewIDs": [
+        "comm_sound",
+        "qty_minus"
+      ],
+      "scrollAreas": [
+        {
+          "class": "palette-scroll",
+          "clientHeight": 219,
+          "clientWidth": 270,
+          "scrollHeight": 219,
+          "scrollWidth": 270
+        },
+        {
+          "class": "panel workspace",
+          "clientHeight": 400,
+          "clientWidth": 294,
+          "scrollHeight": 400,
+          "scrollWidth": 294
+        },
+        {
+          "class": "panel preview",
+          "clientHeight": 813,
+          "clientWidth": 294,
+          "scrollHeight": 813,
+          "scrollWidth": 294
+        }
+      ],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "diagnostics": "No validation errors.",
+      "height": 844,
+      "message": {
+        "contexts": [
+          "universal-core"
+        ],
+        "frames": [
+          {
+            "tokens": [
+              {
+                "id": "move_public",
+                "type": "icon"
+              },
+              {
+                "id": "media_text",
+                "type": "icon"
+              },
+              {
+                "id": "time",
+                "type": "icon"
+              },
+              {
+                "id": "punct_question",
+                "type": "icon"
+              }
+            ]
+          }
+        ],
+        "pictiq": "1.1",
+        "profile": "standalone-core-v0.1",
+        "schema": "0.1"
+      },
+      "previewIDs": [
+        "move_public",
+        "media_text",
+        "time",
+        "punct_question"
+      ],
+      "scrollAreas": [
+        {
+          "class": "palette-scroll",
+          "clientHeight": 219,
+          "clientWidth": 270,
+          "scrollHeight": 219,
+          "scrollWidth": 270
+        },
+        {
+          "class": "panel workspace",
+          "clientHeight": 450,
+          "clientWidth": 294,
+          "scrollHeight": 450,
+          "scrollWidth": 294
+        },
+        {
+          "class": "panel preview",
+          "clientHeight": 827,
+          "clientWidth": 294,
+          "scrollHeight": 827,
+          "scrollWidth": 294
+        }
+      ],
+      "scrollWidth": 320,
+      "width": 320
+    }
+  ],
+  "console": [],
+  "roundtripJSON": true,
+  "roundtripPictiq": true
+}

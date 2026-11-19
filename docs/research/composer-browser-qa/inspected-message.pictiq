@@ -1,0 +1,4 @@
+!profile standalone-core-v0.1
+!context universal-core
+
+move_public media_text time punct_question
