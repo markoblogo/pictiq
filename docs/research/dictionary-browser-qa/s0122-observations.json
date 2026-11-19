@@ -1,0 +1,695 @@
+{
+  "run": "S01.22",
+  "date": "2026-11-19",
+  "source_revision": "f02f18d97582b2880a04c1ddef9acb706362a9ea",
+  "browser": "Google Chrome (connected desktop browser)",
+  "url": "http://localhost:8000/docs/research/composition-dictionary-baseline-v0.1/review/index.html",
+  "before": {
+    "children": [
+      {
+        "minWidth": "auto",
+        "overflowWrap": "normal",
+        "width": 638.3515625
+      },
+      {
+        "minWidth": "auto",
+        "overflowWrap": "normal",
+        "width": 638.3515625
+      }
+    ],
+    "clientWidth": 390,
+    "context": {
+      "overflowWrap": "normal",
+      "text": "Used when / context: [{\"communication_mode\":\"STANDALONE\",\"communication_surface\":\"BOOK\",\"context\":{\"domain\":[\"practical communication\"],\"situation\":[\"published Handbook v1.0 worked example\"],\"task\":[\"public transport schedule / when?\"],\"context_supplies\":[{\"cue\":\"Handbook prose / example label supplies the scoped gloss\",\"availability\":\"REQUIRED\",\"evidence_ids\":[\"cand-handbook-transit-schedule\"]},{\"cue\":\"surrounding Handbook explanation and, for zero-intent, pointing/layout context\",\"availability\":\"OPTIONAL\",\"evidence_ids\":[\"cand-handbook-transit-schedule\"]}]},\"evidence_ids\":[\"cand-handbook-transit-schedule\"]}]"
+    },
+    "grid": {
+      "columns": "638.352px",
+      "width": 358
+    },
+    "scrollWidth": 654
+  },
+  "case_checks": [
+    {
+      "id": "pcd-v01-0006",
+      "query": "Less noise",
+      "codes": [
+        "comm_sound + qty_minus",
+        "comm_sound + rel_down",
+        "comm_speak + qty_minus",
+        "comm_speak + rel_down"
+      ],
+      "count": "1 / 65",
+      "height": 900,
+      "images": [
+        {
+          "height": 96,
+          "left": 90,
+          "loaded": true,
+          "right": 258,
+          "src": "../renders/pcd-v01-0006-preferred.svg",
+          "width": 168
+        },
+        {
+          "height": 96,
+          "left": 544,
+          "loaded": true,
+          "right": 712,
+          "src": "../renders/pcd-v01-0006-alternative-down.svg",
+          "width": 168
+        },
+        {
+          "height": 96,
+          "left": 544,
+          "loaded": true,
+          "right": 712,
+          "src": "../renders/pcd-v01-0006-context-speech-less.svg",
+          "width": 168
+        },
+        {
+          "height": 96,
+          "left": 544,
+          "loaded": true,
+          "right": 712,
+          "src": "../renders/pcd-v01-0006-context-speech-down.svg",
+          "width": 168
+        }
+      ],
+      "scrollWidth": 1280,
+      "titles": [
+        "Less noise, please."
+      ],
+      "unresolvedOutsideHistory": 0,
+      "width": 1280,
+      "history": {
+        "clientWidth": 1280,
+        "open": true,
+        "scrollWidth": 1280
+      }
+    },
+    {
+      "id": "pcd-v01-0028",
+      "query": "Pedestrian movement",
+      "codes": [
+        "move_feet",
+        "person_generic + move_feet",
+        "person_generic + move_feet + rel_here"
+      ],
+      "count": "1 / 65",
+      "height": 900,
+      "images": [
+        {
+          "height": 96,
+          "left": 90,
+          "loaded": true,
+          "right": 186,
+          "src": "../renders/pcd-v01-0028-preferred-feet.svg",
+          "width": 96
+        },
+        {
+          "height": 96,
+          "left": 544,
+          "loaded": true,
+          "right": 712,
+          "src": "../renders/pcd-v01-0028-preferred.svg",
+          "width": 168
+        },
+        {
+          "height": 96,
+          "left": 544,
+          "loaded": true,
+          "right": 784,
+          "src": "../renders/pcd-v01-0028-contextual-here.svg",
+          "width": 240
+        }
+      ],
+      "scrollWidth": 1280,
+      "titles": [
+        "Pedestrian movement"
+      ],
+      "unresolvedOutsideHistory": 0,
+      "width": 1280,
+      "history": {
+        "clientWidth": 1280,
+        "open": true,
+        "scrollWidth": 1280
+      }
+    },
+    {
+      "id": "pcd-v01-0025",
+      "query": "No entry at this location",
+      "codes": [],
+      "count": "0 / 65",
+      "height": 900,
+      "images": [],
+      "scrollWidth": 1280,
+      "titles": [],
+      "unresolvedOutsideHistory": 0,
+      "width": 1280
+    },
+    {
+      "id": "pcd-v01-0065",
+      "query": "When does public transport arrive?",
+      "codes": [
+        "move_public + time + punct_question"
+      ],
+      "count": "1 / 65",
+      "height": 900,
+      "images": [
+        {
+          "height": 96,
+          "left": 90,
+          "loaded": true,
+          "right": 330,
+          "src": "../renders/pcd-v01-0065-preferred.svg",
+          "width": 240
+        }
+      ],
+      "scrollWidth": 1280,
+      "titles": [
+        "When does public transport arrive?"
+      ],
+      "unresolvedOutsideHistory": 0,
+      "width": 1280,
+      "history": {
+        "clientWidth": 1280,
+        "open": true,
+        "scrollWidth": 1280
+      }
+    },
+    {
+      "id": "pcd-v01-0066",
+      "query": "Public transport schedule / timetable",
+      "codes": [
+        "move_public + media_text + time + punct_question"
+      ],
+      "count": "1 / 65",
+      "height": 900,
+      "images": [
+        {
+          "height": 96,
+          "left": 90,
+          "loaded": true,
+          "right": 402,
+          "src": "../renders/pcd-v01-0066-preferred.svg",
+          "width": 312
+        }
+      ],
+      "scrollWidth": 1280,
+      "titles": [
+        "Public transport schedule / timetable"
+      ],
+      "unresolvedOutsideHistory": 0,
+      "width": 1280,
+      "history": {
+        "clientWidth": 1280,
+        "open": true,
+        "scrollWidth": 1280
+      }
+    },
+    {
+      "id": "pcd-v01-0006",
+      "query": "Less noise",
+      "codes": [
+        "comm_sound + qty_minus",
+        "comm_sound + rel_down",
+        "comm_speak + qty_minus",
+        "comm_speak + rel_down"
+      ],
+      "count": "1 / 65",
+      "height": 844,
+      "images": [
+        {
+          "height": 96,
+          "left": 16,
+          "loaded": true,
+          "right": 184,
+          "src": "../renders/pcd-v01-0006-preferred.svg",
+          "width": 168
+        },
+        {
+          "height": 96,
+          "left": 26,
+          "loaded": true,
+          "right": 194,
+          "src": "../renders/pcd-v01-0006-alternative-down.svg",
+          "width": 168
+        },
+        {
+          "height": 96,
+          "left": 26,
+          "loaded": true,
+          "right": 194,
+          "src": "../renders/pcd-v01-0006-context-speech-less.svg",
+          "width": 168
+        },
+        {
+          "height": 96,
+          "left": 26,
+          "loaded": true,
+          "right": 194,
+          "src": "../renders/pcd-v01-0006-context-speech-down.svg",
+          "width": 168
+        }
+      ],
+      "scrollWidth": 390,
+      "unresolvedOutsideHistory": 0,
+      "width": 390,
+      "history": {
+        "clientWidth": 390,
+        "open": true,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "id": "pcd-v01-0028",
+      "query": "Pedestrian movement",
+      "codes": [
+        "move_feet",
+        "person_generic + move_feet",
+        "person_generic + move_feet + rel_here"
+      ],
+      "count": "1 / 65",
+      "height": 844,
+      "images": [
+        {
+          "height": 96,
+          "left": 16,
+          "loaded": true,
+          "right": 112,
+          "src": "../renders/pcd-v01-0028-preferred-feet.svg",
+          "width": 96
+        },
+        {
+          "height": 96,
+          "left": 26,
+          "loaded": true,
+          "right": 194,
+          "src": "../renders/pcd-v01-0028-preferred.svg",
+          "width": 168
+        },
+        {
+          "height": 96,
+          "left": 26,
+          "loaded": true,
+          "right": 266,
+          "src": "../renders/pcd-v01-0028-contextual-here.svg",
+          "width": 240
+        }
+      ],
+      "scrollWidth": 390,
+      "unresolvedOutsideHistory": 0,
+      "width": 390,
+      "history": {
+        "clientWidth": 390,
+        "open": true,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "id": "pcd-v01-0025",
+      "query": "No entry at this location",
+      "codes": [],
+      "count": "0 / 65",
+      "height": 844,
+      "images": [],
+      "scrollWidth": 390,
+      "unresolvedOutsideHistory": 0,
+      "width": 390
+    },
+    {
+      "id": "pcd-v01-0065",
+      "query": "When does public transport arrive?",
+      "codes": [
+        "move_public + time + punct_question"
+      ],
+      "count": "1 / 65",
+      "height": 844,
+      "images": [
+        {
+          "height": 96,
+          "left": 16,
+          "loaded": true,
+          "right": 256,
+          "src": "../renders/pcd-v01-0065-preferred.svg",
+          "width": 240
+        }
+      ],
+      "scrollWidth": 390,
+      "unresolvedOutsideHistory": 0,
+      "width": 390,
+      "history": {
+        "clientWidth": 390,
+        "open": true,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "id": "pcd-v01-0066",
+      "query": "Public transport schedule / timetable",
+      "codes": [
+        "move_public + media_text + time + punct_question"
+      ],
+      "count": "1 / 65",
+      "height": 844,
+      "images": [
+        {
+          "height": 96,
+          "left": 16,
+          "loaded": true,
+          "right": 328,
+          "src": "../renders/pcd-v01-0066-preferred.svg",
+          "width": 312
+        }
+      ],
+      "scrollWidth": 390,
+      "unresolvedOutsideHistory": 0,
+      "width": 390,
+      "history": {
+        "clientWidth": 390,
+        "open": true,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "id": "pcd-v01-0006",
+      "query": "Less noise",
+      "codes": [
+        "comm_sound + qty_minus",
+        "comm_sound + rel_down",
+        "comm_speak + qty_minus",
+        "comm_speak + rel_down"
+      ],
+      "count": "1 / 65",
+      "grid": {
+        "children": [
+          {
+            "minWidth": "0px",
+            "overflowWrap": "anywhere",
+            "width": 288
+          },
+          {
+            "minWidth": "0px",
+            "overflowWrap": "anywhere",
+            "width": 288
+          }
+        ],
+        "columns": "288px"
+      },
+      "height": 844,
+      "images": [
+        {
+          "height": 96,
+          "left": 16,
+          "loaded": true,
+          "naturalHeight": 96,
+          "naturalWidth": 168,
+          "right": 184,
+          "src": "../renders/pcd-v01-0006-preferred.svg",
+          "width": 168
+        },
+        {
+          "height": 96,
+          "left": 26,
+          "loaded": true,
+          "naturalHeight": 96,
+          "naturalWidth": 168,
+          "right": 194,
+          "src": "../renders/pcd-v01-0006-alternative-down.svg",
+          "width": 168
+        },
+        {
+          "height": 96,
+          "left": 26,
+          "loaded": true,
+          "naturalHeight": 96,
+          "naturalWidth": 168,
+          "right": 194,
+          "src": "../renders/pcd-v01-0006-context-speech-less.svg",
+          "width": 168
+        },
+        {
+          "height": 96,
+          "left": 26,
+          "loaded": true,
+          "naturalHeight": 96,
+          "naturalWidth": 168,
+          "right": 194,
+          "src": "../renders/pcd-v01-0006-context-speech-down.svg",
+          "width": 168
+        }
+      ],
+      "overflowX": {
+        "body": "visible",
+        "html": "visible"
+      },
+      "scrollWidth": 320,
+      "unresolvedOutsideHistory": 0,
+      "width": 320,
+      "history": {
+        "clientWidth": 320,
+        "open": true,
+        "preWhiteSpace": "pre-wrap",
+        "scrollWidth": 320
+      }
+    },
+    {
+      "id": "pcd-v01-0028",
+      "query": "Pedestrian movement",
+      "codes": [
+        "move_feet",
+        "person_generic + move_feet",
+        "person_generic + move_feet + rel_here"
+      ],
+      "count": "1 / 65",
+      "grid": {
+        "children": [
+          {
+            "minWidth": "0px",
+            "overflowWrap": "anywhere",
+            "width": 288
+          },
+          {
+            "minWidth": "0px",
+            "overflowWrap": "anywhere",
+            "width": 288
+          }
+        ],
+        "columns": "288px"
+      },
+      "height": 844,
+      "images": [
+        {
+          "height": 96,
+          "left": 16,
+          "loaded": true,
+          "naturalHeight": 96,
+          "naturalWidth": 96,
+          "right": 112,
+          "src": "../renders/pcd-v01-0028-preferred-feet.svg",
+          "width": 96
+        },
+        {
+          "height": 96,
+          "left": 26,
+          "loaded": true,
+          "naturalHeight": 96,
+          "naturalWidth": 168,
+          "right": 194,
+          "src": "../renders/pcd-v01-0028-preferred.svg",
+          "width": 168
+        },
+        {
+          "height": 96,
+          "left": 26,
+          "loaded": true,
+          "naturalHeight": 96,
+          "naturalWidth": 240,
+          "right": 266,
+          "src": "../renders/pcd-v01-0028-contextual-here.svg",
+          "width": 240
+        }
+      ],
+      "overflowX": {
+        "body": "visible",
+        "html": "visible"
+      },
+      "scrollWidth": 320,
+      "unresolvedOutsideHistory": 0,
+      "width": 320,
+      "history": {
+        "clientWidth": 320,
+        "open": true,
+        "preWhiteSpace": "pre-wrap",
+        "scrollWidth": 320
+      }
+    },
+    {
+      "id": "pcd-v01-0025",
+      "query": "No entry at this location",
+      "codes": [],
+      "count": "0 / 65",
+      "grid": null,
+      "height": 844,
+      "images": [],
+      "overflowX": {
+        "body": "visible",
+        "html": "visible"
+      },
+      "scrollWidth": 320,
+      "unresolvedOutsideHistory": 0,
+      "width": 320
+    },
+    {
+      "id": "pcd-v01-0065",
+      "query": "When does public transport arrive?",
+      "codes": [
+        "move_public + time + punct_question"
+      ],
+      "count": "1 / 65",
+      "grid": {
+        "children": [
+          {
+            "minWidth": "0px",
+            "overflowWrap": "anywhere",
+            "width": 288
+          },
+          {
+            "minWidth": "0px",
+            "overflowWrap": "anywhere",
+            "width": 288
+          }
+        ],
+        "columns": "288px"
+      },
+      "height": 844,
+      "images": [
+        {
+          "height": 96,
+          "left": 16,
+          "loaded": true,
+          "naturalHeight": 96,
+          "naturalWidth": 240,
+          "right": 256,
+          "src": "../renders/pcd-v01-0065-preferred.svg",
+          "width": 240
+        }
+      ],
+      "overflowX": {
+        "body": "visible",
+        "html": "visible"
+      },
+      "scrollWidth": 320,
+      "unresolvedOutsideHistory": 0,
+      "width": 320,
+      "history": {
+        "clientWidth": 320,
+        "open": true,
+        "preWhiteSpace": "pre-wrap",
+        "scrollWidth": 320
+      }
+    },
+    {
+      "id": "pcd-v01-0066",
+      "query": "Public transport schedule / timetable",
+      "codes": [
+        "move_public + media_text + time + punct_question"
+      ],
+      "count": "1 / 65",
+      "grid": {
+        "children": [
+          {
+            "minWidth": "0px",
+            "overflowWrap": "anywhere",
+            "width": 288
+          },
+          {
+            "minWidth": "0px",
+            "overflowWrap": "anywhere",
+            "width": 288
+          }
+        ],
+        "columns": "288px"
+      },
+      "height": 844,
+      "images": [
+        {
+          "height": 88.609375,
+          "left": 16,
+          "loaded": true,
+          "naturalHeight": 96,
+          "naturalWidth": 312,
+          "right": 303.9765625,
+          "src": "../renders/pcd-v01-0066-preferred.svg",
+          "width": 287.9765625
+        }
+      ],
+      "overflowX": {
+        "body": "visible",
+        "html": "visible"
+      },
+      "scrollWidth": 320,
+      "unresolvedOutsideHistory": 0,
+      "width": 320,
+      "history": {
+        "clientWidth": 320,
+        "open": true,
+        "preWhiteSpace": "pre-wrap",
+        "scrollWidth": 320
+      }
+    }
+  ],
+  "viewport_and_filter_checks": [
+    {
+      "badImages": 0,
+      "count": "65 / 65",
+      "height": 900,
+      "images": 72,
+      "scrollWidth": 1280,
+      "width": 1280,
+      "filters": {
+        "has variants": "4 / 65",
+        "context-dependent": "13 / 65",
+        "known ambiguity": "39 / 65",
+        "WAYFINDING": "21 / 65",
+        "EMBODIED": "1 / 65"
+      },
+      "removedID": "0 / 65"
+    },
+    {
+      "badImages": 0,
+      "count": "65 / 65",
+      "height": 844,
+      "images": 72,
+      "scrollWidth": 390,
+      "width": 390,
+      "filters": {
+        "has variants": "4 / 65",
+        "context-dependent": "13 / 65",
+        "known ambiguity": "39 / 65",
+        "WAYFINDING": "21 / 65",
+        "EMBODIED": "1 / 65"
+      },
+      "removedID": "0 / 65"
+    },
+    {
+      "badImages": 0,
+      "count": "65 / 65",
+      "height": 844,
+      "images": 72,
+      "scrollWidth": 320,
+      "width": 320,
+      "filters": {
+        "has variants": "4 / 65",
+        "context-dependent": "13 / 65",
+        "known ambiguity": "39 / 65",
+        "WAYFINDING": "21 / 65",
+        "EMBODIED": "1 / 65"
+      },
+      "removedID": "0 / 65"
+    }
+  ],
+  "console_warnings_and_errors": [],
+  "overall": "PASS",
+  "BQA_01": "FIXED",
+  "note": "Observed in actual Chrome. No overflow-x hiding, ellipsis or scale changes. CSS-only presentation update; frozen semantic data and original evidence untouched."
+}
