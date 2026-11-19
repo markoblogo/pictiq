@@ -124,11 +124,20 @@ def compose(entry_id, variant_id, root=ROOT, revision=None):
     review_ref = entry['lineage']['creator_review_ref']
     export_path = str((Path(PACKAGE) / review_ref['export_path']))
     export = inputs.json(export_path)
-    ri, decision = one(export['records'], 'corpus_record_id', review_ref['corpus_record_id'])
-    if (decision['dictionary_entry_id'] != entry_id or decision['creator_decision'] != review_ref['decision'] or
-        export['source_snapshot'] != dictionary['source_snapshot'] or
-        inputs.ref(export_path)['sha256'] != manifest['creator_review_export']['sha256']):
-        raise PackageError('Creator decision/source snapshot linkage mismatch')
+    if review_ref.get('type') == 'CREATOR_APPROVED_RELATED_ADDENDUM':
+        from tools.research.timetable_application import approved_source, ENTRY as TIMETABLE_ID, ADDENDUM, TEMPORARY_ID
+        ai, _, decision, _, _ = approved_source(inputs.root)
+        creator_selector = f'/decisions/{ai}/new_related_entry'
+        if (entry_id != TIMETABLE_ID or export_path != ADDENDUM
+                or review_ref['selector'] != creator_selector or review_ref['temporary_qa_id'] != TEMPORARY_ID):
+            raise PackageError('Timetable creator decision linkage mismatch')
+    else:
+        ri, decision = one(export['records'], 'corpus_record_id', review_ref['corpus_record_id'])
+        creator_selector = f'/records/{ri}'
+        if (decision['dictionary_entry_id'] != entry_id or decision['creator_decision'] != review_ref['decision'] or
+            export['source_snapshot'] != dictionary['source_snapshot'] or
+            inputs.ref(export_path)['sha256'] != manifest['creator_review_export']['sha256']):
+            raise PackageError('Creator decision/source snapshot linkage mismatch')
     corpus_path = str(Path(PACKAGE) / manifest['source_corpus_baseline']['path'])
     corpus = inputs.json(corpus_path)
     ci, corpus_record = one(corpus['records'], 'corpus_record_id', review_ref['corpus_record_id'])
@@ -151,8 +160,12 @@ def compose(entry_id, variant_id, root=ROOT, revision=None):
             inputs.take(SOURCE); inputs.take(QA_DATA)
             for module in ('medical_context_clarification.py', 'communication_context_clarification.py',
                            'shopping_context_clarification.py', 'parking_context_clarification.py',
-                           'pedestrian_preferred_application.py', 'corpus_only_application.py'):
+                           'pedestrian_preferred_application.py', 'corpus_only_application.py', 'timetable_application.py'):
                 inputs.take('tools/research/' + module)
+            if len(receipts) == 7:
+                from tools.research.timetable_application import approved_source
+                _, _, approved, _, _ = approved_source(inputs.root)
+                inputs.take(PACKAGE + '/' + approved['preview_render'])
             verify_sequence(inputs.take(relative), receipts, inputs.root)
         except (ValueError, KeyError, TypeError, IndexError, OSError) as exc:
             raise PackageError(f'Context clarification verification failed: {exc}') from exc
@@ -209,7 +222,7 @@ def compose(entry_id, variant_id, root=ROOT, revision=None):
                            'render_options': vars(RenderOptions()),
                            'files': [inputs.ref(p) for p in code]},
         'registry_files': [inputs.ref(p) for p in registry_paths], 'canonical_assets': assets,
-        'creator_decision': {'record': decision, 'source': inputs.ref(export_path, f'/records/{ri}')},
+        'creator_decision': {'record': decision, 'source': inputs.ref(export_path, creator_selector)},
         'corpus_lineage': {'source': inputs.ref(corpus_path, f'/records/{ci}'),
                            'record_id': corpus_record['corpus_record_id'],
                            'provenance': corpus_record.get('provenance')},

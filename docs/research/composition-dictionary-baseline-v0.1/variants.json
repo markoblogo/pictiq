@@ -5621,6 +5621,101 @@
         "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
       },
       "render_status": "RENDERED_CANONICAL"
+    },
+    {
+      "variant_id": "pcd-v01-0066-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "move_public"
+              },
+              {
+                "type": "icon",
+                "id": "media_text"
+              },
+              {
+                "type": "icon",
+                "id": "time"
+              },
+              {
+                "type": "icon",
+                "id": "punct_question"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "move_public + media_text + time + punct_question",
+      "render": "renders/pcd-v01-0066-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "BOOK"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "BOOK",
+          "context": {
+            "domain": [
+              "practical communication"
+            ],
+            "situation": [
+              "published Handbook v1.0 worked example"
+            ],
+            "task": [
+              "public transport schedule / when?"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Handbook prose / example label supplies the scoped gloss",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-handbook-transit-schedule"
+                ]
+              },
+              {
+                "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-handbook-transit-schedule"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-handbook-transit-schedule"
+          ]
+        }
+      ],
+      "variant_context_note": "Standalone related timetable entry; not a variant of the arrival-time question.",
+      "semantic_distinction": "Public transport + textual/information schedule + time/question.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0022"
+        ],
+        "dictionary_entry_id": "pcd-v01-0066",
+        "authority": "CREATOR-APPROVED ADDENDUM",
+        "creator_decision": {
+          "path": "docs/research/composition-dictionary-baseline-v0.1/final-creator-qa-addendum-v0.2.json",
+          "sha256": "8c5cfda80ee90dea0e185d142249a03e6be83b7ec40f1523f07e74dcd5ed0b51",
+          "selector": "/decisions/1/new_related_entry"
+        },
+        "context_source": {
+          "path": "docs/research/composition-library-baseline-v0.1/accepted-corpus.json",
+          "sha256": "8dc2509dfc9d31d006726732e1825bc120dbeef06c5c1b0b1798e6315808e14e",
+          "selector": "/records/21/applicability"
+        }
+      },
+      "render_status": "RENDERED_CANONICAL"
     }
   ]
 }

@@ -82,7 +82,7 @@ for(const q of ['crossing','pedestrian movement','comm_sound','noise','','no-k05
  for(const f of filters){const actual=results(current,q,f),old=results(original,q,f);
   assert.deepEqual(actual.headings,old.headings,{q,f});assert.equal(actual.count,old.count,{q,f});}
 }
-const empty=results(current,'');assert.equal(empty.headings.length,64);
+const empty=results(current,'');assert.equal(empty.headings.length,65);
 assert.ok(!empty.html.includes('class="match-reason"'));assert.equal(current.elements['search-limit'].hidden,true);
 assert.deepEqual(results(current,'no-k05-match-9df52').headings,[]);
 assert.match(results(current,'"aliases":[]').html,/search metadata or combined field text/);
@@ -91,9 +91,18 @@ assert.match(results(current,'"aliases":[]').html,/search metadata or combined f
     def test_corpus_only_entry_is_not_in_live_viewer_or_search(self):
         self.run_js('''
 assert.equal(vm.runInContext("D.some(e=>e.dictionary_entry_id==='pcd-v01-0025')",current.context),false);
-assert.equal(vm.runInContext('D.length',current.context),64);
+assert.equal(vm.runInContext('D.length',current.context),65);
 assert.deepEqual(results(current,'No entry at this location').headings,[]);
 assert.ok(!results(current,'').headings.includes('No entry at this location'));
+''')
+
+    def test_timetable_is_found_as_a_separate_live_entry(self):
+        self.run_js('''
+const entry=plain(vm.runInContext("D.find(e=>e.dictionary_entry_id==='pcd-v01-0066')",current.context));
+assert.equal(entry.headword,'Public transport schedule / timetable');
+assert.equal(entry.preferred_variant.token_sequence,'move_public + media_text + time + punct_question');
+assert.deepEqual(results(current,'timetable').headings,['Public transport schedule / timetable']);
+assert.equal(vm.runInContext("D.find(e=>e.dictionary_entry_id==='pcd-v01-0065').preferred_variant.token_sequence",current.context),'move_public + time + punct_question');
 ''')
 
     def test_generated_viewer_and_manifest_hash_reproducible(self):
@@ -135,20 +144,21 @@ assert.ok(!results(current,'').headings.includes('No entry at this location'));
             frozen.pop(key)
             self.assertEqual(data, frozen)
         validation = json.loads((PACKAGE/'validation.json').read_bytes())
-        self.assertEqual(validation['valid_message_count'], 71)
-        self.assertEqual(validation['rendered_canonically'], 71)
+        self.assertEqual(validation['valid_message_count'], 72)
+        self.assertEqual(validation['rendered_canonically'], 72)
         self.assertEqual(validation['failures'], [])
         frozen_renders = json.loads(subprocess.check_output(['git','show',REVISION+':'+relbase+'render-manifest.json'],cwd=ROOT))['renders']
         renders = json.loads((PACKAGE/'render-manifest.json').read_bytes())['renders']
         self.assertEqual(renders[:69], [r for r in frozen_renders if r['dictionary_entry_id'] != 'pcd-v01-0025'])
-        self.assertEqual([r['variant_id'] for r in renders[69:]], ['pcd-v01-0028-preferred-feet','pcd-v01-0028-contextual-here'])
+        self.assertEqual([r['variant_id'] for r in renders[69:]], ['pcd-v01-0028-preferred-feet','pcd-v01-0028-contextual-here','pcd-v01-0066-preferred'])
         frozen_readme = subprocess.check_output(['git','show',REVISION+':'+relbase+'README.md'],cwd=ROOT,text=True)
-        self.assertEqual((PACKAGE/'README.md').read_text(), frozen_readme.replace('All 70 preferred/accepted', 'All 71 preferred/accepted'))
+        expected_readme = frozen_readme.replace('All 70 preferred/accepted', 'All 72 preferred/accepted').replace('Two note portions remain in `creator-notes-follow-up.json`: the exact scope/token for a proposed UP/AHEAD prohibition and the exact order for a separate schedule/timetable composition. Neither is presented as an accepted Message. The arrival-time entry remains accepted.', 'The original two-note follow-up report remains in `creator-notes-follow-up.json` as history. Its timetable is now applied as the separate `pcd-v01-0066` entry; arrival-time entry `pcd-v01-0065` is unchanged. The proposed UP/AHEAD prohibition is not applied by this pass.')
+        self.assertEqual((PACKAGE/'README.md').read_text(), expected_readme)
         counts = dict(old['counts'])
-        counts.update(dictionary_entries=64, preferred_messages=64, contextual_variants=5, entries_with_multiple_variants=4, entries_with_context_warnings=12, entries_with_known_ambiguity=39, render_count=71)
+        counts.update(dictionary_entries=65, preferred_messages=65, contextual_variants=5, entries_with_multiple_variants=4, entries_with_context_warnings=13, entries_with_known_ambiguity=39, render_count=72)
         self.assertEqual(new['counts'], counts)
         self.assertEqual(set(new['artifact_sha256']), set(old['artifact_sha256']) | {r['path'] for r in refs} |
-                         {'renders/pcd-v01-0028-preferred-feet.svg','renders/pcd-v01-0028-contextual-here.svg'})
+                         {'renders/pcd-v01-0028-preferred-feet.svg','renders/pcd-v01-0028-contextual-here.svg','renders/pcd-v01-0066-preferred.svg'})
         for path, digest in new['artifact_sha256'].items():
             self.assertEqual(hashlib.sha256((PACKAGE/path).read_bytes()).hexdigest(), digest)
         normalized = dict(new)

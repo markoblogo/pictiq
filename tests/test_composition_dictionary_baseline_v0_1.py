@@ -17,15 +17,15 @@ class CompositionDictionaryBaselineTests(unittest.TestCase):
     def test_creator_dispositions_and_protected_decisions(self):
         manifest = json.loads((PACKAGE / "manifest.json").read_text())
         self.assertEqual(manifest["validation"], "PASS")
-        self.assertEqual(manifest["counts"]["dictionary_entries"], 64)
-        self.assertEqual(manifest["counts"]["render_count"], 71)
+        self.assertEqual(manifest["counts"]["dictionary_entries"], 65)
+        self.assertEqual(manifest["counts"]["render_count"], 72)
         amendment = json.loads((PACKAGE / "creator-review-amendment.json").read_text())
         records = amendment["records"]
         self.assertEqual(len(records), 65)
         self.assertEqual(sum(bool(x["creator_notes"].strip()) for x in records), 10)
         dictionary = json.loads((PACKAGE / "dictionary.json").read_text())
         entries = dictionary["entries"]
-        self.assertEqual(len({x["dictionary_entry_id"] for x in entries}), 64)
+        self.assertEqual(len({x["dictionary_entry_id"] for x in entries}), 65)
         self.assertTrue(all(x.get("lineage", {}).get("source_provenance") is not None for x in entries))
         self.assertFalse(any("semantic_examples" in x for x in entries))
         former_review_ids = {"clh-v01-0002", "clh-v01-0007", "clh-v01-0011", "clh-v01-0017", "clh-v01-0022"}
@@ -56,7 +56,10 @@ class CompositionDictionaryBaselineTests(unittest.TestCase):
         from tools.research.parking_context_clarification import RECEIPT as PARKING_RECEIPT, verify as verify_parking
         from tools.research.pedestrian_preferred_application import RECEIPT as PEDESTRIAN_RECEIPT, verify as verify_pedestrian
         from tools.research.corpus_only_application import RECEIPT as CORPUS_ONLY_RECEIPT, verify as verify_corpus_only
+        from tools.research.timetable_application import RECEIPT as TIMETABLE_RECEIPT, verify as verify_timetable
         raw = (PACKAGE / 'dictionary.json').read_bytes()
+        timetable_predecessor, _, _ = verify_timetable(raw, json.loads((PACKAGE / TIMETABLE_RECEIPT).read_bytes()), ROOT)
+        raw = encode(timetable_predecessor)
         corpus_only_predecessor, _, _ = verify_corpus_only(raw, json.loads((PACKAGE / CORPUS_ONLY_RECEIPT).read_bytes()), ROOT)
         raw = encode(corpus_only_predecessor)
         pedestrian_predecessor, _, _ = verify_pedestrian(raw, json.loads((PACKAGE / PEDESTRIAN_RECEIPT).read_bytes()), ROOT)
@@ -87,7 +90,10 @@ class CompositionDictionaryBaselineTests(unittest.TestCase):
         from tools.research.parking_context_clarification import RECEIPT as PARKING_RECEIPT, verify as verify_parking
         from tools.research.pedestrian_preferred_application import RECEIPT as PEDESTRIAN_RECEIPT, verify as verify_pedestrian
         from tools.research.corpus_only_application import RECEIPT as CORPUS_ONLY_RECEIPT, verify as verify_corpus_only
+        from tools.research.timetable_application import RECEIPT as TIMETABLE_RECEIPT, verify as verify_timetable
         raw = (PACKAGE / 'dictionary.json').read_bytes()
+        timetable_predecessor, _, _ = verify_timetable(raw, json.loads((PACKAGE / TIMETABLE_RECEIPT).read_bytes()), ROOT)
+        raw = encode(timetable_predecessor)
         corpus_only_predecessor, _, _ = verify_corpus_only(raw, json.loads((PACKAGE / CORPUS_ONLY_RECEIPT).read_bytes()), ROOT)
         raw = encode(corpus_only_predecessor)
         pedestrian_predecessor, _, _ = verify_pedestrian(raw, json.loads((PACKAGE / PEDESTRIAN_RECEIPT).read_bytes()), ROOT)
@@ -124,7 +130,10 @@ class CompositionDictionaryBaselineTests(unittest.TestCase):
         from tools.research.parking_context_clarification import RECEIPT as PARKING_RECEIPT, verify as verify_parking
         from tools.research.pedestrian_preferred_application import RECEIPT as PEDESTRIAN_RECEIPT, verify as verify_pedestrian
         from tools.research.corpus_only_application import RECEIPT as CORPUS_ONLY_RECEIPT, verify as verify_corpus_only
+        from tools.research.timetable_application import RECEIPT as TIMETABLE_RECEIPT, verify as verify_timetable
         raw = (PACKAGE / 'dictionary.json').read_bytes()
+        timetable_predecessor, _, _ = verify_timetable(raw, json.loads((PACKAGE / TIMETABLE_RECEIPT).read_bytes()), ROOT)
+        raw = encode(timetable_predecessor)
         corpus_only_predecessor, _, _ = verify_corpus_only(raw, json.loads((PACKAGE / CORPUS_ONLY_RECEIPT).read_bytes()), ROOT)
         raw = encode(corpus_only_predecessor)
         pedestrian_predecessor, _, _ = verify_pedestrian(raw, json.loads((PACKAGE / PEDESTRIAN_RECEIPT).read_bytes()), ROOT)
@@ -161,7 +170,10 @@ class CompositionDictionaryBaselineTests(unittest.TestCase):
         from tools.research.parking_context_clarification import RECEIPT, verify, encode, BEFORE_SHA
         from tools.research.pedestrian_preferred_application import RECEIPT as PEDESTRIAN_RECEIPT, verify as verify_pedestrian
         from tools.research.corpus_only_application import RECEIPT as CORPUS_ONLY_RECEIPT, verify as verify_corpus_only
+        from tools.research.timetable_application import RECEIPT as TIMETABLE_RECEIPT, verify as verify_timetable
         raw = (PACKAGE / 'dictionary.json').read_bytes()
+        timetable_predecessor, _, _ = verify_timetable(raw, json.loads((PACKAGE / TIMETABLE_RECEIPT).read_bytes()), ROOT)
+        raw = encode(timetable_predecessor)
         corpus_only_predecessor, _, _ = verify_corpus_only(raw, json.loads((PACKAGE / CORPUS_ONLY_RECEIPT).read_bytes()), ROOT)
         raw = encode(corpus_only_predecessor)
         pedestrian_predecessor, _, _ = verify_pedestrian(raw, json.loads((PACKAGE / PEDESTRIAN_RECEIPT).read_bytes()), ROOT)
@@ -204,7 +216,10 @@ class CompositionDictionaryBaselineTests(unittest.TestCase):
         from pictiq_renderer.svg_renderer import render_svg
         import xml.etree.ElementTree as ET
         from tools.research.corpus_only_application import RECEIPT as CORPUS_ONLY_RECEIPT, verify as verify_corpus_only
+        from tools.research.timetable_application import RECEIPT as TIMETABLE_RECEIPT, verify as verify_timetable
         raw = (PACKAGE / 'dictionary.json').read_bytes()
+        timetable_predecessor, _, _ = verify_timetable(raw, json.loads((PACKAGE / TIMETABLE_RECEIPT).read_bytes()), ROOT)
+        raw = encode(timetable_predecessor)
         corpus_only_predecessor, _, _ = verify_corpus_only(raw, json.loads((PACKAGE / CORPUS_ONLY_RECEIPT).read_bytes()), ROOT)
         raw = encode(corpus_only_predecessor)
         receipt = json.loads((PACKAGE / RECEIPT).read_bytes())
@@ -257,7 +272,10 @@ class CompositionDictionaryBaselineTests(unittest.TestCase):
 
     def test_corpus_only_removal_is_exact_and_preserves_all_prior_versions(self):
         from tools.research.corpus_only_application import RECEIPT, verify, encode, BEFORE_SHA, CORPUS, CORPUS_SHA
+        from tools.research.timetable_application import RECEIPT as TIMETABLE_RECEIPT, verify as verify_timetable
         raw = (PACKAGE / 'dictionary.json').read_bytes()
+        timetable_predecessor, _, _ = verify_timetable(raw, json.loads((PACKAGE / TIMETABLE_RECEIPT).read_bytes()), ROOT)
+        raw = encode(timetable_predecessor)
         receipt = json.loads((PACKAGE / RECEIPT).read_bytes())
         previous, _, decision = verify(raw, receipt, ROOT)
         self.assertEqual(hashlib.sha256(encode(previous)).hexdigest(), BEFORE_SHA)
@@ -280,7 +298,7 @@ class CompositionDictionaryBaselineTests(unittest.TestCase):
         svg = ROOT / receipt['preserved_render']['path']
         self.assertEqual(hashlib.sha256(svg.read_bytes()).hexdigest(), receipt['preserved_render']['sha256'])
         manifest = json.loads((PACKAGE / 'manifest.json').read_bytes())
-        for ref in manifest['context_clarifications'][:-1]:
+        for ref in manifest['context_clarifications'][:5]:
             rel = 'docs/research/composition-dictionary-baseline-v0.1/' + ref['path']
             frozen = subprocess.run(['git', 'show', 'c21b0d9:' + rel], cwd=ROOT, capture_output=True, check=True).stdout
             self.assertEqual((ROOT / rel).read_bytes(), frozen)
@@ -299,6 +317,61 @@ class CompositionDictionaryBaselineTests(unittest.TestCase):
                 fake['removed_entry']['preferred_variant']['message']['frames'][0]['tokens'].pop()
             with self.assertRaises(ValueError):
                 verify(raw, fake, ROOT)
+
+
+    def test_timetable_append_is_exact_preserves_arrival_and_matches_corrected_preview(self):
+        from tools.research.timetable_application import RECEIPT, verify, encode, BEFORE_SHA, TEMPORARY_ID, CORPUS
+        from tools.validate_message_schema import schema_errors, semantic_errors
+        from pictiq_renderer.svg_renderer import render_svg
+        import xml.etree.ElementTree as ET
+        raw = (PACKAGE / 'dictionary.json').read_bytes()
+        receipt = json.loads((PACKAGE / RECEIPT).read_bytes())
+        previous, _, _ = verify(raw, receipt, ROOT)
+        self.assertEqual(hashlib.sha256(encode(previous)).hexdigest(), BEFORE_SHA)
+        current = json.loads(raw)
+        self.assertEqual(len(previous['entries']), 64)
+        self.assertEqual(len(current['entries']), 65)
+        self.assertEqual(current['entries'][:-1], previous['entries'])
+        entry = current['entries'][-1]
+        self.assertEqual(entry['dictionary_entry_id'], 'pcd-v01-0066')
+        self.assertNotIn('pcd-v01-0025', [e['dictionary_entry_id'] for e in current['entries']])
+        addendum = json.loads((PACKAGE / 'final-creator-qa-addendum-v0.2.json').read_bytes())
+        decision, = [d for d in addendum['decisions'] if d.get('new_related_entry', {}).get('temporary_qa_id') == TEMPORARY_ID]
+        pending = decision['new_related_entry']
+        variant, = entry['variants']
+        expected = ['move_public', 'media_text', 'time', 'punct_question']
+        self.assertEqual(variant['message'], pending['message'])
+        self.assertEqual([t['id'] for f in variant['message']['frames'] for t in f['tokens']], expected)
+        self.assertEqual(variant['token_sequence'].split(' + '), expected)
+        self.assertEqual(schema_errors(variant['message']) + semantic_errors(variant['message']), [])
+        svg, _ = render_svg(variant['message'])
+        self.assertEqual((PACKAGE / variant['render']).read_text(), svg)
+        self.assertEqual((PACKAGE / variant['render']).read_bytes(), (PACKAGE / pending['preview_render']).read_bytes())
+        self.assertEqual([n.attrib['data-id'] for n in ET.fromstring(svg).iter() if 'data-id' in n.attrib], expected)
+        corpus = json.loads((ROOT / CORPUS).read_bytes())
+        source, = [r for r in corpus['records'] if r['corpus_record_id'] == 'clh-v01-0022']
+        self.assertEqual(entry['context'], source['applicability'])
+        self.assertEqual(entry['mode'], ['STANDALONE'])
+        self.assertEqual(entry['surface'], ['BOOK'])
+        arrival, = [e for e in current['entries'] if e['dictionary_entry_id'] == 'pcd-v01-0065']
+        self.assertEqual(arrival['preferred_variant']['token_sequence'], 'move_public + time + punct_question')
+        self.assertEqual(entry['lineage']['corpus_message'], arrival['preferred_variant']['message'])
+        self.assertEqual(receipt['technical_correction'], pending['technical_correction'])
+        for ref in receipt['technical_evidence']:
+            self.assertEqual(hashlib.sha256((ROOT / ref['path']).read_bytes()).hexdigest(), ref['sha256'])
+        manifest = json.loads((PACKAGE / 'manifest.json').read_bytes())
+        for ref in manifest['context_clarifications'][:6]:
+            rel = 'docs/research/composition-dictionary-baseline-v0.1/' + ref['path']
+            frozen = subprocess.run(['git', 'show', 'b74f03f:' + rel], cwd=ROOT, capture_output=True, check=True).stdout
+            self.assertEqual((ROOT / rel).read_bytes(), frozen)
+        # Rehashed copies cannot drop media_text or reinterpret the old entries.
+        forged = json.loads(raw)
+        forged['entries'][-1]['preferred_variant']['message']['frames'][0]['tokens'].pop(1)
+        fake_receipt = json.loads(encode(receipt))
+        fake_receipt['created_entry'] = forged['entries'][-1]
+        fake_receipt['dictionary_after_sha256'] = hashlib.sha256(encode(forged)).hexdigest()
+        with self.assertRaises(ValueError):
+            verify(encode(forged), fake_receipt, ROOT)
 
 
 if __name__ == "__main__":

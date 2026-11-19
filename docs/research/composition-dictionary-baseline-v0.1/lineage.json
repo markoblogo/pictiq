@@ -4620,6 +4620,133 @@
         "decision": "KEEP_IN_DICTIONARY",
         "creator_notes_verbatim_in_export": true
       }
+    },
+    {
+      "dictionary_entry_id": "pcd-v01-0066",
+      "corpus_record_id": "clh-v01-0022",
+      "candidate_entry_id": null,
+      "relationship": "CREATOR_APPROVED_RELATED_ENTRY_NOT_CORPUS_MESSAGE",
+      "related_dictionary_entry_id": "pcd-v01-0065",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "move_public"
+              },
+              {
+                "type": "icon",
+                "id": "media_text"
+              },
+              {
+                "type": "icon",
+                "id": "time"
+              },
+              {
+                "type": "icon",
+                "id": "punct_question"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "move_public + media_text + time + punct_question",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "move_public"
+              },
+              {
+                "type": "icon",
+                "id": "media_text"
+              },
+              {
+                "type": "icon",
+                "id": "time"
+              },
+              {
+                "type": "icon",
+                "id": "punct_question"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "move_public + media_text + time + punct_question",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1 / RELATED EVIDENCE",
+        "CREATOR-APPROVED TIMETABLE ADDENDUM",
+        "S01.16_BASELINE_APPLICATION"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0022",
+            "source_type": "HANDBOOK",
+            "reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+            "location": "cand-handbook-transit-schedule",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "5fe3eea1aab10ab51c15727ff2526fb4be42e93ab500edb3a56ee694458b369b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0022",
+          "addendum": {
+            "path": "docs/research/composition-dictionary-baseline-v0.1/final-creator-qa-addendum-v0.2.json",
+            "sha256": "8c5cfda80ee90dea0e185d142249a03e6be83b7ec40f1523f07e74dcd5ed0b51",
+            "selector": "/decisions/1/new_related_entry"
+          }
+        }
+      ],
+      "message_source": {
+        "path": "docs/research/composition-dictionary-baseline-v0.1/final-creator-qa-addendum-v0.2.json",
+        "sha256": "8c5cfda80ee90dea0e185d142249a03e6be83b7ec40f1523f07e74dcd5ed0b51",
+        "selector": "/decisions/1/new_related_entry"
+      },
+      "corpus_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "move_public"
+              },
+              {
+                "type": "icon",
+                "id": "time"
+              },
+              {
+                "type": "icon",
+                "id": "punct_question"
+              }
+            ]
+          }
+        ]
+      },
+      "context_source": {
+        "path": "docs/research/composition-library-baseline-v0.1/accepted-corpus.json",
+        "sha256": "8dc2509dfc9d31d006726732e1825bc120dbeef06c5c1b0b1798e6315808e14e",
+        "selector": "/records/21/applicability"
+      },
+      "creator_review_ref": {
+        "type": "CREATOR_APPROVED_RELATED_ADDENDUM",
+        "export_path": "final-creator-qa-addendum-v0.2.json",
+        "corpus_record_id": "clh-v01-0022",
+        "selector": "/decisions/1/new_related_entry",
+        "temporary_qa_id": "qa-new-public-transport-timetable"
+      }
     }
   ]
 }

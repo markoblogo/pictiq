@@ -1,6 +1,6 @@
 {
   "method": "Deterministic structural checks plus repository Message schema-shape and registry-aware validation; no formal Dictionary JSON Schema is defined.",
-  "valid_message_count": 71,
-  "rendered_canonically": 71,
+  "valid_message_count": 72,
+  "rendered_canonically": 72,
   "failures": []
 }

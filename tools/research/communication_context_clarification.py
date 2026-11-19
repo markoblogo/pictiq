@@ -93,18 +93,20 @@ def verify(dictionary_bytes, receipt, root):
 
 
 def receipt_refs(manifest):
-    """Only the explicitly recorded S01.10 through S01.15 sequences."""
+    """Only the explicitly recorded S01.10 through S01.16 sequences."""
     from tools.research.shopping_context_clarification import RECEIPT as SHOPPING_RECEIPT
     from tools.research.parking_context_clarification import RECEIPT as PARKING_RECEIPT
     from tools.research.pedestrian_preferred_application import RECEIPT as PEDESTRIAN_RECEIPT
     from tools.research.corpus_only_application import RECEIPT as CORPUS_ONLY_RECEIPT
+    from tools.research.timetable_application import RECEIPT as TIMETABLE_RECEIPT
     if 'context_clarifications' in manifest:
         refs = manifest['context_clarifications']
         if 'context_clarification' in manifest or [r['path'] for r in refs] not in (
                 [MEDICAL_RECEIPT, RECEIPT], [MEDICAL_RECEIPT, RECEIPT, SHOPPING_RECEIPT],
                 [MEDICAL_RECEIPT, RECEIPT, SHOPPING_RECEIPT, PARKING_RECEIPT],
                 [MEDICAL_RECEIPT, RECEIPT, SHOPPING_RECEIPT, PARKING_RECEIPT, PEDESTRIAN_RECEIPT],
-                [MEDICAL_RECEIPT, RECEIPT, SHOPPING_RECEIPT, PARKING_RECEIPT, PEDESTRIAN_RECEIPT, CORPUS_ONLY_RECEIPT]):
+                [MEDICAL_RECEIPT, RECEIPT, SHOPPING_RECEIPT, PARKING_RECEIPT, PEDESTRIAN_RECEIPT, CORPUS_ONLY_RECEIPT],
+                [MEDICAL_RECEIPT, RECEIPT, SHOPPING_RECEIPT, PARKING_RECEIPT, PEDESTRIAN_RECEIPT, CORPUS_ONLY_RECEIPT, TIMETABLE_RECEIPT]):
             raise ValueError('Context clarification sequence mismatch')
         return refs
     if 'context_clarification' in manifest:
@@ -116,6 +118,13 @@ def receipt_refs(manifest):
 
 
 def verify_sequence(dictionary_bytes, receipts, root):
+    if len(receipts) == 7:
+        from tools.research.timetable_application import verify as verify_timetable
+        if receipts[5]['dictionary_after_sha256'] != receipts[6]['dictionary_before_sha256']:
+            raise ValueError('Context clarification sequence has a broken intermediate hash link')
+        intermediate, _, timetable_decision = verify_timetable(dictionary_bytes, receipts[6], root)
+        original, export, decisions = verify_sequence(encode(intermediate), receipts[:6], root)
+        return original, export, [*decisions, timetable_decision]
     if len(receipts) == 6:
         from tools.research.corpus_only_application import verify as verify_corpus_only
         if receipts[4]['dictionary_after_sha256'] != receipts[5]['dictionary_before_sha256']:

@@ -31,14 +31,14 @@
   "counts": {
     "creator_review_records": 65,
     "creator_notes_nonempty": 10,
-    "dictionary_entries": 64,
-    "preferred_messages": 64,
+    "dictionary_entries": 65,
+    "preferred_messages": 65,
     "alternative_variants": 2,
     "contextual_variants": 5,
     "entries_with_multiple_variants": 4,
-    "entries_with_context_warnings": 12,
+    "entries_with_context_warnings": 13,
     "entries_with_known_ambiguity": 39,
-    "render_count": 71,
+    "render_count": 72,
     "former_review_promoted": 5,
     "follow_up_items": 2
   },
@@ -75,20 +75,24 @@
     {
       "path": "applied-decisions/pcd-v01-0025-corpus-only.json",
       "sha256": "012c632fd40ec7e34a34467d684968d112a141078d07b3d74ec299b7efd80afe"
+    },
+    {
+      "path": "applied-decisions/pcd-v01-0066-timetable.json",
+      "sha256": "c86e368f97ac69529fbf969ac15b3ce1fef1cbf06c5deb45c7424f8031c78d18"
     }
   ],
   "artifact_sha256": {
     "creator-review-export.json": "3151d779efab99445f3f5b61cd5da41dded979d435cf11226da5d62bbfe9d5ae",
     "creator-review-amendment.json": "e34e5c2d88aa161d543654c6c186ddeab5549581daf9ce83b0cdce345adc4595",
-    "dictionary.json": "4679738d0d2e1bdf6a179e97c2f3ac966c1697b435ae730b383e2ddc197b7ff3",
-    "variants.json": "aa56433c016298a54e787a15eba7b8b097a3a4c41ab3365f65bc9bc905d19247",
-    "lineage.json": "cc14e64b9f562f8fa1cf8c3a5c3b2696b0b1862170df1d635488396b80baacc8",
+    "dictionary.json": "b640ec220ceed0f4f7111791170d0d2f97389c29c8a4306ae6927fbf01c4cdeb",
+    "variants.json": "0438faff3e7beabc1bfbb9f7216e3f0c18ec32288034b36d071b26535a0a6dbc",
+    "lineage.json": "3e85049f714374d10a2d0da996ecb40f6c39e17391d2ad0601806113087ebc88",
     "translator-lessons.json": "14ebbc283bf4f885099465a5357e54d9309ff82f96b28f048e6a88e66dfff82d",
     "creator-notes-follow-up.json": "e84fd4a733d775f37052c4d4200aec9fdedcf265fb43ff5190569ccf4ab0f6e3",
-    "validation.json": "b96a8f67bcc74e1de4dfb80f674bae44a531f6fd968add3a83d060a06aa8f998",
-    "render-manifest.json": "0404081136a98be41510b0ce27ec3e7d6e1af97c3740a68439f0894b2afd9cc2",
-    "review/index.html": "4e507b6684b11621b1203c19ad3a562cceeaf427b2e6cabeca44793caa76c5f5",
-    "review/data.json": "4679738d0d2e1bdf6a179e97c2f3ac966c1697b435ae730b383e2ddc197b7ff3",
+    "validation.json": "2122118104e84d8c0475ddea158e696e865db9412c276b8edaf868ac1ac55a95",
+    "render-manifest.json": "6218a143cdd0b2966cb94f77891d837d2032b1cfd857f35e4c552a6747cc8914",
+    "review/index.html": "f8bc506e49844125a8130943fbacc191aaf310bdf8d5bd70ea4f12cfc0c4098f",
+    "review/data.json": "b640ec220ceed0f4f7111791170d0d2f97389c29c8a4306ae6927fbf01c4cdeb",
     "review/final-creator-visual-qa.html": "eebc2ed93516c04325a8b17191314b887e9c290d2ba0e5428ac8f6ea415317a6",
     "creator-notes-follow-up/index.html": "7a534b2f356206293d684c380f180e71e3fc311f8f25dfe1166b2ce26efd919d",
     "applied-decisions/pcd-v01-0002-context.json": "203e83602e65115fda64d743fe9c6bf59279fb649414e4cc6add99f3db3921d4",
@@ -97,8 +101,10 @@
     "applied-decisions/pcd-v01-0030-context.json": "da8029f6ba1c34d69884e2ca89f2815901ba645611da9883527da8ef1533ac2a",
     "applied-decisions/pcd-v01-0028-preferred.json": "154b8876f7a1d390e8663baab492486a3ee0544fa7cfbeb0fcdf1516a54cbc7a",
     "applied-decisions/pcd-v01-0025-corpus-only.json": "012c632fd40ec7e34a34467d684968d112a141078d07b3d74ec299b7efd80afe",
+    "applied-decisions/pcd-v01-0066-timetable.json": "c86e368f97ac69529fbf969ac15b3ce1fef1cbf06c5deb45c7424f8031c78d18",
+    "renders/pcd-v01-0066-preferred.svg": "b296064c6a9dd5bbdc4df29b88c2c9eb5a554293d0f4f51cac7b1a54ca78b6f2",
     "renders/pcd-v01-0028-preferred-feet.svg": "2ac8c44dd2138695ac6feb20626b16b31598c4d01e971ba81aefcc58d5f0b8e4",
     "renders/pcd-v01-0028-contextual-here.svg": "5292e1f2e45e2fb4c248286238cc21f54a37716f2b2f7ee60d49ccb1ad73ec37",
-    "README.md": "ed93ae7878f4b0f49067c0b620da34a349846b1d2e9d095a38154395a5d77af7"
+    "README.md": "5961fa970219c99e3ae1ae2d6f9d5f795484f1bdcc9c5928cdb95e2f6312a4f0"
   }
 }

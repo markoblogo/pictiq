@@ -425,6 +425,12 @@
       "dictionary_entry_id": "pcd-v01-0028",
       "status": "VALIDATED_AND_RENDERED_CANONICALLY",
       "path": "renders/pcd-v01-0028-contextual-here.svg"
+    },
+    {
+      "variant_id": "pcd-v01-0066-preferred",
+      "dictionary_entry_id": "pcd-v01-0066",
+      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
+      "path": "renders/pcd-v01-0066-preferred.svg"
     }
   ]
 }

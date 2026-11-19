@@ -189,6 +189,46 @@ class CompositionReaderTests(unittest.TestCase):
         self.assertTrue(applied['link_verified'])
         self.assertIn('AWAITING FINAL VISUAL QA', result['package']['dictionary_qa_status'])
 
+    def test_timetable_is_a_distinct_applied_entry_with_explicit_shared_corpus_lineage(self):
+        result = read_composition('dictionary', 'pcd-v01-0066')
+        self.assertTrue(result['ok'], result['diagnostics'])
+        entry = result['baseline_record']
+        self.assertEqual(entry['headword'], 'Public transport schedule / timetable')
+        self.assertEqual(entry['preferred_variant']['token_sequence'], 'move_public + media_text + time + punct_question')
+        self.assertEqual([t['id'] for t in entry['preferred_variant']['message']['frames'][0]['tokens']],
+                         ['move_public', 'media_text', 'time', 'punct_question'])
+        self.assertEqual(len(entry['variants']), 1)
+        self.assertEqual(entry['mode'], ['STANDALONE'])
+        self.assertEqual(entry['surface'], ['BOOK'])
+        self.assertEqual(entry['lineage']['relationship'], 'CREATOR_APPROVED_RELATED_ENTRY_NOT_CORPUS_MESSAGE')
+        self.assertEqual(entry['lineage']['related_dictionary_entry_id'], 'pcd-v01-0065')
+        applied, = result['applied_creator_decisions']
+        self.assertEqual(applied['scope'], 'TIMETABLE_ENTRY_ADDITION')
+        self.assertEqual(applied['application_status'], 'APPLIED')
+        self.assertEqual(applied['application']['temporary_qa_id'], 'qa-new-public-transport-timetable')
+        self.assertNotIn('PENDING_CREATOR_DECISION', self.codes(result))
+        arrival = read_composition('dictionary', 'pcd-v01-0065')
+        self.assertTrue(arrival['ok'], arrival['diagnostics'])
+        self.assertEqual(arrival['baseline_record']['preferred_variant']['token_sequence'], 'move_public + time + punct_question')
+        self.assertEqual(arrival['subsequent_creator_decisions'][0]['application_status'], 'APPLIED')
+        corpus = read_composition('corpus', 'clh-v01-0022')
+        self.assertTrue(corpus['ok'], corpus['diagnostics'])
+        self.assertNotIn('AMBIGUOUS_LINEAGE', self.codes(corpus))
+        original = next(r for r in self.load(CORPUS + '/accepted-corpus.json')['records'] if r['corpus_record_id'] == 'clh-v01-0022')
+        self.assertEqual(corpus['baseline_record'], original)
+
+    def test_unapproved_extra_shared_corpus_link_remains_ambiguous(self):
+        root = self.fixture()
+        def add_third(d):
+            extra = next(e for e in d['entries'] if e['dictionary_entry_id'] == 'pcd-v01-0006')
+            extra['corpus_refs'] = ['clh-v01-0022']
+            extra['lineage']['corpus_record_id'] = 'clh-v01-0022'
+        self.edit(root, DICTIONARY + '/dictionary.json', add_third)
+        result = read_composition('corpus', 'clh-v01-0022', root)
+        self.assertFalse(result['ok'])
+        self.assertIn('AMBIGUOUS_LINEAGE', self.codes(result))
+        self.assertIn('CONTEXT_CLARIFICATION_MISMATCH', self.codes(result))
+
     def test_application_receipt_cannot_hide_other_edits_or_rebind_source(self):
         from tools.research.medical_context_clarification import RECEIPT
         for change in ('source_selector', 'duplicate_field', 'unrelated_entry', 'medical_message'):
@@ -220,38 +260,42 @@ class CompositionReaderTests(unittest.TestCase):
                 self.assertEqual(result['applied_creator_decisions'], [])
                 self.assertFalse(result['subsequent_creator_decisions'][0]['link_verified'])
 
-    def test_application_sequence_accepts_six_steps_and_rejects_intermediate_substitution(self):
+    def test_application_sequence_accepts_seven_steps_and_rejects_intermediate_substitution(self):
         from tools.research.communication_context_clarification import receipt_refs, verify_sequence, encode, verify as verify_communication
         from tools.research.shopping_context_clarification import verify as verify_shopping
         from tools.research.parking_context_clarification import verify as verify_parking
         from tools.research.pedestrian_preferred_application import verify as verify_pedestrian
         from tools.research.corpus_only_application import verify as verify_corpus_only
+        from tools.research.timetable_application import verify as verify_timetable
         manifest = self.load(DICTIONARY + '/manifest.json')
         refs = receipt_refs(manifest)
         receipts = [self.load(DICTIONARY + '/' + ref['path']) for ref in refs]
         raw = (ROOT / DICTIONARY / 'dictionary.json').read_bytes()
-        five_steps, _, _ = verify_corpus_only(raw, receipts[5], ROOT)
+        six_steps, _, _ = verify_timetable(raw, receipts[6], ROOT)
+        five_steps, _, _ = verify_corpus_only(encode(six_steps), receipts[5], ROOT)
         four_steps, _, _ = verify_pedestrian(encode(five_steps), receipts[4], ROOT)
         three_steps, _, _ = verify_parking(encode(four_steps), receipts[3], ROOT)
         two_steps, _, _ = verify_shopping(encode(three_steps), receipts[2], ROOT)
         one_step, _, _ = verify_communication(encode(two_steps), receipts[1], ROOT)
-        ids = ['pcd-v01-0002', 'pcd-v01-0006', 'pcd-v01-0009', 'pcd-v01-0030', 'pcd-v01-0028', 'pcd-v01-0025']
-        for count, state in enumerate((encode(one_step), encode(two_steps), encode(three_steps), encode(four_steps), encode(five_steps), raw), 1):
+        ids = ['pcd-v01-0002', 'pcd-v01-0006', 'pcd-v01-0009', 'pcd-v01-0030', 'pcd-v01-0028', 'pcd-v01-0025', 'pcd-v01-0066']
+        for count, state in enumerate((encode(one_step), encode(two_steps), encode(three_steps), encode(four_steps), encode(five_steps), encode(six_steps), raw), 1):
             original, _, decisions = verify_sequence(state, receipts[:count], ROOT)
-            self.assertEqual([d['dictionary_entry_id'] for d in decisions], ids[:count])
+            self.assertEqual([d['dictionary_entry_id'] for d in decisions], (ids[:6] + ['pcd-v01-0065'])[:count])
             self.assertEqual(hashlib.sha256(encode(original)).hexdigest(), receipts[0]['dictionary_before_sha256'])
         self.assertEqual(receipt_refs({'context_clarification': refs[0]}), refs[:1])
         self.assertEqual(receipt_refs({'context_clarifications': refs[:2]}), refs[:2])
         self.assertEqual(receipt_refs({'context_clarifications': refs[:3]}), refs[:3])
         self.assertEqual(receipt_refs({'context_clarifications': refs[:4]}), refs[:4])
         self.assertEqual(receipt_refs({'context_clarifications': refs[:5]}), refs[:5])
-        for i in (1, 2, 3, 4, 5):
+        self.assertEqual(receipt_refs({'context_clarifications': refs[:6]}), refs[:6])
+        self.assertEqual([r['dictionary_entry_id'] for r in receipts], ids)
+        for i in (1, 2, 3, 4, 5, 6):
             self.assertEqual(receipts[i-1]['dictionary_after_sha256'], receipts[i]['dictionary_before_sha256'])
         for entry_id in ids:
             result = read_composition('dictionary', entry_id)
             self.assertTrue(result['ok'], result['diagnostics'])
             self.assertEqual(result['applied_creator_decisions'][0]['application_status'], 'APPLIED')
-        cases = [(change, i) for change in ('gap', 'substituted_intermediate') for i in (1, 2, 3, 4, 5)]
+        cases = [(change, i) for change in ('gap', 'substituted_intermediate') for i in (1, 2, 3, 4, 5, 6)]
         cases += [(change, None) for change in ('reordered', 'missing_step', 'source_selector', 'duplicate_field')]
         for change, i in cases:
             with self.subTest(change=change, link=i):

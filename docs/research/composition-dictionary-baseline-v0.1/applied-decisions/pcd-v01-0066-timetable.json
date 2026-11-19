@@ -1,0 +1,946 @@
+{
+  "application_id": "S01.16-pcd-v01-0066-timetable",
+  "dictionary_entry_id": "pcd-v01-0066",
+  "application_status": "APPLIED",
+  "scope": "TIMETABLE_ENTRY_ADDITION",
+  "source_revision": "b74f03f111f2d22c6bea691b2488a8591c1c4a6f",
+  "source_decision": {
+    "path": "docs/research/composition-dictionary-baseline-v0.1/creator-final-qa-2026-11-19/creator-export.json",
+    "sha256": "609c38175864d5da66e9f969364ea5dc84f71a15eab7bf4cfed14d81d1412152",
+    "selector": "/records/9",
+    "qa_dataset_sha256": "45c041165ad17f2f8114dddd454ba42f74e9e635eb44606133f291348626f413"
+  },
+  "creator_decision": {
+    "source": {
+      "path": "docs/research/composition-dictionary-baseline-v0.1/final-creator-qa-addendum-v0.2.json",
+      "sha256": "8c5cfda80ee90dea0e185d142249a03e6be83b7ec40f1523f07e74dcd5ed0b51",
+      "selector": "/decisions/1/new_related_entry"
+    },
+    "verbatim_object": {
+      "temporary_qa_id": "qa-new-public-transport-timetable",
+      "headword": "Public transport schedule / timetable",
+      "meaning": "Public transport + textual/information schedule + time/question.",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "move_public"
+              },
+              {
+                "type": "icon",
+                "id": "media_text"
+              },
+              {
+                "type": "icon",
+                "id": "time"
+              },
+              {
+                "type": "icon",
+                "id": "punct_question"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "move_public + media_text + time + punct_question",
+      "preview_render": "review/previews/qa-new-public-transport-timetable.svg",
+      "preview_render_sha256": "b296064c6a9dd5bbdc4df29b88c2c9eb5a554293d0f4f51cac7b1a54ca78b6f2",
+      "status": "CREATOR-APPROVED / PENDING BASELINE APPLICATION",
+      "is_variant_of_arrival_question": false,
+      "technical_correction": {
+        "pass": "K01",
+        "audited_revision": "f9be7228bf1b4a64ab52dd157e2663add3298d5a",
+        "creator_decision_revision": "277bbb5",
+        "creator_decision_path": "docs/research/composition-dictionary-baseline-v0.1/final-creator-qa-addendum-v0.2.json",
+        "creator_decision_selector": "decisions[*].new_related_entry[temporary_qa_id=qa-new-public-transport-timetable].token_sequence",
+        "reason": "Restore media_text already specified by the creator; no new semantic decision."
+      }
+    }
+  },
+  "recorded_addendum_decision": {
+    "path": "docs/research/composition-dictionary-baseline-v0.1/final-creator-qa-addendum-v0.2.json",
+    "sha256": "8c5cfda80ee90dea0e185d142249a03e6be83b7ec40f1523f07e74dcd5ed0b51",
+    "selector": "/decisions/1"
+  },
+  "temporary_qa_id": "qa-new-public-transport-timetable",
+  "related_arrival_entry_id": "pcd-v01-0065",
+  "corpus_record_id": "clh-v01-0022",
+  "context_source": {
+    "path": "docs/research/composition-library-baseline-v0.1/accepted-corpus.json",
+    "sha256": "8dc2509dfc9d31d006726732e1825bc120dbeef06c5c1b0b1798e6315808e14e",
+    "selector": "/records/21/applicability"
+  },
+  "context_inheritance": "The approved related object declares no separate mode/surface/context; use the explicitly linked Corpus applicability unchanged.",
+  "id_allocation": {
+    "policy": "Append the next pcd-v01-NNNN after assigned IDs; never recycle withdrawn pcd-v01-0025.",
+    "previous_max_assigned_id": "pcd-v01-0065",
+    "assigned_id": "pcd-v01-0066"
+  },
+  "technical_correction": {
+    "pass": "K01",
+    "audited_revision": "f9be7228bf1b4a64ab52dd157e2663add3298d5a",
+    "creator_decision_revision": "277bbb5",
+    "creator_decision_path": "docs/research/composition-dictionary-baseline-v0.1/final-creator-qa-addendum-v0.2.json",
+    "creator_decision_selector": "decisions[*].new_related_entry[temporary_qa_id=qa-new-public-transport-timetable].token_sequence",
+    "reason": "Restore media_text already specified by the creator; no new semantic decision."
+  },
+  "technical_evidence": [
+    {
+      "path": "docs/research/composition-dictionary-baseline-v0.1/repairs/K01-timetable-media-text/README.md",
+      "sha256": "03fabea343c732cda3c038a656acc903f7a44c45f040d8fa1789fcde016dbfe9"
+    },
+    {
+      "path": "docs/research/composition-dictionary-baseline-v0.1/repairs/K01-timetable-media-text/K01a-REPORT.md",
+      "sha256": "6696140b787a3c744451f8b6ed64dd63ded0da41bf62a60113e70fd10afdd062"
+    }
+  ],
+  "corpus_lineage": {
+    "path": "docs/research/composition-library-baseline-v0.1/accepted-corpus.json",
+    "sha256": "8dc2509dfc9d31d006726732e1825bc120dbeef06c5c1b0b1798e6315808e14e",
+    "selector": "/records/21",
+    "relationship": "CREATOR_APPROVED_RELATED_ENTRY_NOT_CORPUS_MESSAGE"
+  },
+  "message": {
+    "schema": "0.1",
+    "pictiq": "1.1",
+    "frames": [
+      {
+        "tokens": [
+          {
+            "type": "icon",
+            "id": "move_public"
+          },
+          {
+            "type": "icon",
+            "id": "media_text"
+          },
+          {
+            "type": "icon",
+            "id": "time"
+          },
+          {
+            "type": "icon",
+            "id": "punct_question"
+          }
+        ]
+      }
+    ]
+  },
+  "token_sequence": "move_public + media_text + time + punct_question",
+  "dictionary_before_sha256": "4679738d0d2e1bdf6a179e97c2f3ac966c1697b435ae730b383e2ddc197b7ff3",
+  "dictionary_after_sha256": "b640ec220ceed0f4f7111791170d0d2f97389c29c8a4306ae6927fbf01c4cdeb",
+  "created_entry": {
+    "dictionary_entry_id": "pcd-v01-0066",
+    "semantic_id": "pictiq-dict-sem-v0.1-0066",
+    "headword": "Public transport schedule / timetable",
+    "aliases": [],
+    "semantic_neighbourhood": "Public transport + textual/information schedule + time/question.",
+    "candidate_lookup_material": [],
+    "usage_note": "Distinct timetable/schedule request, not a variant of the arrival-time question. Exact ordered timetable composition; no longer unresolved.",
+    "known_ambiguity": [],
+    "context_warnings": [
+      "Distinct from the arrival-time question (pcd-v01-0065)."
+    ],
+    "preferred_variant": {
+      "variant_id": "pcd-v01-0066-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "move_public"
+              },
+              {
+                "type": "icon",
+                "id": "media_text"
+              },
+              {
+                "type": "icon",
+                "id": "time"
+              },
+              {
+                "type": "icon",
+                "id": "punct_question"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "move_public + media_text + time + punct_question",
+      "render": "renders/pcd-v01-0066-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "BOOK"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "BOOK",
+          "context": {
+            "domain": [
+              "practical communication"
+            ],
+            "situation": [
+              "published Handbook v1.0 worked example"
+            ],
+            "task": [
+              "public transport schedule / when?"
+            ],
+            "context_supplies": [
+              {
+                "cue": "Handbook prose / example label supplies the scoped gloss",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-handbook-transit-schedule"
+                ]
+              },
+              {
+                "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-handbook-transit-schedule"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-handbook-transit-schedule"
+          ]
+        }
+      ],
+      "variant_context_note": "Standalone related timetable entry; not a variant of the arrival-time question.",
+      "semantic_distinction": "Public transport + textual/information schedule + time/question.",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0022"
+        ],
+        "dictionary_entry_id": "pcd-v01-0066",
+        "authority": "CREATOR-APPROVED ADDENDUM",
+        "creator_decision": {
+          "path": "docs/research/composition-dictionary-baseline-v0.1/final-creator-qa-addendum-v0.2.json",
+          "sha256": "8c5cfda80ee90dea0e185d142249a03e6be83b7ec40f1523f07e74dcd5ed0b51",
+          "selector": "/decisions/1/new_related_entry"
+        },
+        "context_source": {
+          "path": "docs/research/composition-library-baseline-v0.1/accepted-corpus.json",
+          "sha256": "8dc2509dfc9d31d006726732e1825bc120dbeef06c5c1b0b1798e6315808e14e",
+          "selector": "/records/21/applicability"
+        }
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    "variants": [
+      {
+        "variant_id": "pcd-v01-0066-preferred",
+        "variant_type": "PREFERRED",
+        "status": "CURRENT_ACCEPTED",
+        "message": {
+          "schema": "0.1",
+          "pictiq": "1.1",
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "move_public"
+                },
+                {
+                  "type": "icon",
+                  "id": "media_text"
+                },
+                {
+                  "type": "icon",
+                  "id": "time"
+                },
+                {
+                  "type": "icon",
+                  "id": "punct_question"
+                }
+              ]
+            }
+          ]
+        },
+        "token_sequence": "move_public + media_text + time + punct_question",
+        "render": "renders/pcd-v01-0066-preferred.svg",
+        "mode": [
+          "STANDALONE"
+        ],
+        "surface": [
+          "BOOK"
+        ],
+        "context": [
+          {
+            "communication_mode": "STANDALONE",
+            "communication_surface": "BOOK",
+            "context": {
+              "domain": [
+                "practical communication"
+              ],
+              "situation": [
+                "published Handbook v1.0 worked example"
+              ],
+              "task": [
+                "public transport schedule / when?"
+              ],
+              "context_supplies": [
+                {
+                  "cue": "Handbook prose / example label supplies the scoped gloss",
+                  "availability": "REQUIRED",
+                  "evidence_ids": [
+                    "cand-handbook-transit-schedule"
+                  ]
+                },
+                {
+                  "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+                  "availability": "OPTIONAL",
+                  "evidence_ids": [
+                    "cand-handbook-transit-schedule"
+                  ]
+                }
+              ]
+            },
+            "evidence_ids": [
+              "cand-handbook-transit-schedule"
+            ]
+          }
+        ],
+        "variant_context_note": "Standalone related timetable entry; not a variant of the arrival-time question.",
+        "semantic_distinction": "Public transport + textual/information schedule + time/question.",
+        "provenance": {
+          "corpus_record_ids": [
+            "clh-v01-0022"
+          ],
+          "dictionary_entry_id": "pcd-v01-0066",
+          "authority": "CREATOR-APPROVED ADDENDUM",
+          "creator_decision": {
+            "path": "docs/research/composition-dictionary-baseline-v0.1/final-creator-qa-addendum-v0.2.json",
+            "sha256": "8c5cfda80ee90dea0e185d142249a03e6be83b7ec40f1523f07e74dcd5ed0b51",
+            "selector": "/decisions/1/new_related_entry"
+          },
+          "context_source": {
+            "path": "docs/research/composition-library-baseline-v0.1/accepted-corpus.json",
+            "sha256": "8dc2509dfc9d31d006726732e1825bc120dbeef06c5c1b0b1798e6315808e14e",
+            "selector": "/records/21/applicability"
+          }
+        },
+        "render_status": "RENDERED_CANONICAL"
+      }
+    ],
+    "mode": [
+      "STANDALONE"
+    ],
+    "surface": [
+      "BOOK"
+    ],
+    "context": [
+      {
+        "communication_mode": "STANDALONE",
+        "communication_surface": "BOOK",
+        "context": {
+          "domain": [
+            "practical communication"
+          ],
+          "situation": [
+            "published Handbook v1.0 worked example"
+          ],
+          "task": [
+            "public transport schedule / when?"
+          ],
+          "context_supplies": [
+            {
+              "cue": "Handbook prose / example label supplies the scoped gloss",
+              "availability": "REQUIRED",
+              "evidence_ids": [
+                "cand-handbook-transit-schedule"
+              ]
+            },
+            {
+              "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+              "availability": "OPTIONAL",
+              "evidence_ids": [
+                "cand-handbook-transit-schedule"
+              ]
+            }
+          ]
+        },
+        "evidence_ids": [
+          "cand-handbook-transit-schedule"
+        ]
+      }
+    ],
+    "corpus_refs": [
+      "clh-v01-0022"
+    ],
+    "source_evidence_summary": [
+      "HANDBOOK"
+    ],
+    "creator_review": {
+      "decision": "CREATOR-APPROVED",
+      "source_addendum": {
+        "path": "docs/research/composition-dictionary-baseline-v0.1/final-creator-qa-addendum-v0.2.json",
+        "sha256": "8c5cfda80ee90dea0e185d142249a03e6be83b7ec40f1523f07e74dcd5ed0b51",
+        "selector": "/decisions/1/new_related_entry"
+      },
+      "temporary_qa_id": "qa-new-public-transport-timetable",
+      "is_variant_of_arrival_question": false
+    },
+    "system_candidate_history": {
+      "candidate_entry_id": null,
+      "temporary_qa_id": "qa-new-public-transport-timetable"
+    },
+    "lineage": {
+      "dictionary_entry_id": "pcd-v01-0066",
+      "corpus_record_id": "clh-v01-0022",
+      "candidate_entry_id": null,
+      "relationship": "CREATOR_APPROVED_RELATED_ENTRY_NOT_CORPUS_MESSAGE",
+      "related_dictionary_entry_id": "pcd-v01-0065",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "move_public"
+              },
+              {
+                "type": "icon",
+                "id": "media_text"
+              },
+              {
+                "type": "icon",
+                "id": "time"
+              },
+              {
+                "type": "icon",
+                "id": "punct_question"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "move_public + media_text + time + punct_question",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "move_public"
+              },
+              {
+                "type": "icon",
+                "id": "media_text"
+              },
+              {
+                "type": "icon",
+                "id": "time"
+              },
+              {
+                "type": "icon",
+                "id": "punct_question"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "move_public + media_text + time + punct_question",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1 / RELATED EVIDENCE",
+        "CREATOR-APPROVED TIMETABLE ADDENDUM",
+        "S01.16_BASELINE_APPLICATION"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0022",
+            "source_type": "HANDBOOK",
+            "reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+            "location": "cand-handbook-transit-schedule",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "5fe3eea1aab10ab51c15727ff2526fb4be42e93ab500edb3a56ee694458b369b",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0022",
+          "addendum": {
+            "path": "docs/research/composition-dictionary-baseline-v0.1/final-creator-qa-addendum-v0.2.json",
+            "sha256": "8c5cfda80ee90dea0e185d142249a03e6be83b7ec40f1523f07e74dcd5ed0b51",
+            "selector": "/decisions/1/new_related_entry"
+          }
+        }
+      ],
+      "message_source": {
+        "path": "docs/research/composition-dictionary-baseline-v0.1/final-creator-qa-addendum-v0.2.json",
+        "sha256": "8c5cfda80ee90dea0e185d142249a03e6be83b7ec40f1523f07e74dcd5ed0b51",
+        "selector": "/decisions/1/new_related_entry"
+      },
+      "corpus_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "move_public"
+              },
+              {
+                "type": "icon",
+                "id": "time"
+              },
+              {
+                "type": "icon",
+                "id": "punct_question"
+              }
+            ]
+          }
+        ]
+      },
+      "context_source": {
+        "path": "docs/research/composition-library-baseline-v0.1/accepted-corpus.json",
+        "sha256": "8dc2509dfc9d31d006726732e1825bc120dbeef06c5c1b0b1798e6315808e14e",
+        "selector": "/records/21/applicability"
+      },
+      "creator_review_ref": {
+        "type": "CREATOR_APPROVED_RELATED_ADDENDUM",
+        "export_path": "final-creator-qa-addendum-v0.2.json",
+        "corpus_record_id": "clh-v01-0022",
+        "selector": "/decisions/1/new_related_entry",
+        "temporary_qa_id": "qa-new-public-transport-timetable"
+      }
+    }
+  },
+  "changed_fields": [
+    {
+      "selector": "/entries/64",
+      "operation": "APPEND_ARRAY_ITEM",
+      "before": null,
+      "after": {
+        "dictionary_entry_id": "pcd-v01-0066",
+        "semantic_id": "pictiq-dict-sem-v0.1-0066",
+        "headword": "Public transport schedule / timetable",
+        "aliases": [],
+        "semantic_neighbourhood": "Public transport + textual/information schedule + time/question.",
+        "candidate_lookup_material": [],
+        "usage_note": "Distinct timetable/schedule request, not a variant of the arrival-time question. Exact ordered timetable composition; no longer unresolved.",
+        "known_ambiguity": [],
+        "context_warnings": [
+          "Distinct from the arrival-time question (pcd-v01-0065)."
+        ],
+        "preferred_variant": {
+          "variant_id": "pcd-v01-0066-preferred",
+          "variant_type": "PREFERRED",
+          "status": "CURRENT_ACCEPTED",
+          "message": {
+            "schema": "0.1",
+            "pictiq": "1.1",
+            "frames": [
+              {
+                "tokens": [
+                  {
+                    "type": "icon",
+                    "id": "move_public"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "media_text"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "time"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "punct_question"
+                  }
+                ]
+              }
+            ]
+          },
+          "token_sequence": "move_public + media_text + time + punct_question",
+          "render": "renders/pcd-v01-0066-preferred.svg",
+          "mode": [
+            "STANDALONE"
+          ],
+          "surface": [
+            "BOOK"
+          ],
+          "context": [
+            {
+              "communication_mode": "STANDALONE",
+              "communication_surface": "BOOK",
+              "context": {
+                "domain": [
+                  "practical communication"
+                ],
+                "situation": [
+                  "published Handbook v1.0 worked example"
+                ],
+                "task": [
+                  "public transport schedule / when?"
+                ],
+                "context_supplies": [
+                  {
+                    "cue": "Handbook prose / example label supplies the scoped gloss",
+                    "availability": "REQUIRED",
+                    "evidence_ids": [
+                      "cand-handbook-transit-schedule"
+                    ]
+                  },
+                  {
+                    "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+                    "availability": "OPTIONAL",
+                    "evidence_ids": [
+                      "cand-handbook-transit-schedule"
+                    ]
+                  }
+                ]
+              },
+              "evidence_ids": [
+                "cand-handbook-transit-schedule"
+              ]
+            }
+          ],
+          "variant_context_note": "Standalone related timetable entry; not a variant of the arrival-time question.",
+          "semantic_distinction": "Public transport + textual/information schedule + time/question.",
+          "provenance": {
+            "corpus_record_ids": [
+              "clh-v01-0022"
+            ],
+            "dictionary_entry_id": "pcd-v01-0066",
+            "authority": "CREATOR-APPROVED ADDENDUM",
+            "creator_decision": {
+              "path": "docs/research/composition-dictionary-baseline-v0.1/final-creator-qa-addendum-v0.2.json",
+              "sha256": "8c5cfda80ee90dea0e185d142249a03e6be83b7ec40f1523f07e74dcd5ed0b51",
+              "selector": "/decisions/1/new_related_entry"
+            },
+            "context_source": {
+              "path": "docs/research/composition-library-baseline-v0.1/accepted-corpus.json",
+              "sha256": "8dc2509dfc9d31d006726732e1825bc120dbeef06c5c1b0b1798e6315808e14e",
+              "selector": "/records/21/applicability"
+            }
+          },
+          "render_status": "RENDERED_CANONICAL"
+        },
+        "variants": [
+          {
+            "variant_id": "pcd-v01-0066-preferred",
+            "variant_type": "PREFERRED",
+            "status": "CURRENT_ACCEPTED",
+            "message": {
+              "schema": "0.1",
+              "pictiq": "1.1",
+              "frames": [
+                {
+                  "tokens": [
+                    {
+                      "type": "icon",
+                      "id": "move_public"
+                    },
+                    {
+                      "type": "icon",
+                      "id": "media_text"
+                    },
+                    {
+                      "type": "icon",
+                      "id": "time"
+                    },
+                    {
+                      "type": "icon",
+                      "id": "punct_question"
+                    }
+                  ]
+                }
+              ]
+            },
+            "token_sequence": "move_public + media_text + time + punct_question",
+            "render": "renders/pcd-v01-0066-preferred.svg",
+            "mode": [
+              "STANDALONE"
+            ],
+            "surface": [
+              "BOOK"
+            ],
+            "context": [
+              {
+                "communication_mode": "STANDALONE",
+                "communication_surface": "BOOK",
+                "context": {
+                  "domain": [
+                    "practical communication"
+                  ],
+                  "situation": [
+                    "published Handbook v1.0 worked example"
+                  ],
+                  "task": [
+                    "public transport schedule / when?"
+                  ],
+                  "context_supplies": [
+                    {
+                      "cue": "Handbook prose / example label supplies the scoped gloss",
+                      "availability": "REQUIRED",
+                      "evidence_ids": [
+                        "cand-handbook-transit-schedule"
+                      ]
+                    },
+                    {
+                      "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+                      "availability": "OPTIONAL",
+                      "evidence_ids": [
+                        "cand-handbook-transit-schedule"
+                      ]
+                    }
+                  ]
+                },
+                "evidence_ids": [
+                  "cand-handbook-transit-schedule"
+                ]
+              }
+            ],
+            "variant_context_note": "Standalone related timetable entry; not a variant of the arrival-time question.",
+            "semantic_distinction": "Public transport + textual/information schedule + time/question.",
+            "provenance": {
+              "corpus_record_ids": [
+                "clh-v01-0022"
+              ],
+              "dictionary_entry_id": "pcd-v01-0066",
+              "authority": "CREATOR-APPROVED ADDENDUM",
+              "creator_decision": {
+                "path": "docs/research/composition-dictionary-baseline-v0.1/final-creator-qa-addendum-v0.2.json",
+                "sha256": "8c5cfda80ee90dea0e185d142249a03e6be83b7ec40f1523f07e74dcd5ed0b51",
+                "selector": "/decisions/1/new_related_entry"
+              },
+              "context_source": {
+                "path": "docs/research/composition-library-baseline-v0.1/accepted-corpus.json",
+                "sha256": "8dc2509dfc9d31d006726732e1825bc120dbeef06c5c1b0b1798e6315808e14e",
+                "selector": "/records/21/applicability"
+              }
+            },
+            "render_status": "RENDERED_CANONICAL"
+          }
+        ],
+        "mode": [
+          "STANDALONE"
+        ],
+        "surface": [
+          "BOOK"
+        ],
+        "context": [
+          {
+            "communication_mode": "STANDALONE",
+            "communication_surface": "BOOK",
+            "context": {
+              "domain": [
+                "practical communication"
+              ],
+              "situation": [
+                "published Handbook v1.0 worked example"
+              ],
+              "task": [
+                "public transport schedule / when?"
+              ],
+              "context_supplies": [
+                {
+                  "cue": "Handbook prose / example label supplies the scoped gloss",
+                  "availability": "REQUIRED",
+                  "evidence_ids": [
+                    "cand-handbook-transit-schedule"
+                  ]
+                },
+                {
+                  "cue": "surrounding Handbook explanation and, for zero-intent, pointing/layout context",
+                  "availability": "OPTIONAL",
+                  "evidence_ids": [
+                    "cand-handbook-transit-schedule"
+                  ]
+                }
+              ]
+            },
+            "evidence_ids": [
+              "cand-handbook-transit-schedule"
+            ]
+          }
+        ],
+        "corpus_refs": [
+          "clh-v01-0022"
+        ],
+        "source_evidence_summary": [
+          "HANDBOOK"
+        ],
+        "creator_review": {
+          "decision": "CREATOR-APPROVED",
+          "source_addendum": {
+            "path": "docs/research/composition-dictionary-baseline-v0.1/final-creator-qa-addendum-v0.2.json",
+            "sha256": "8c5cfda80ee90dea0e185d142249a03e6be83b7ec40f1523f07e74dcd5ed0b51",
+            "selector": "/decisions/1/new_related_entry"
+          },
+          "temporary_qa_id": "qa-new-public-transport-timetable",
+          "is_variant_of_arrival_question": false
+        },
+        "system_candidate_history": {
+          "candidate_entry_id": null,
+          "temporary_qa_id": "qa-new-public-transport-timetable"
+        },
+        "lineage": {
+          "dictionary_entry_id": "pcd-v01-0066",
+          "corpus_record_id": "clh-v01-0022",
+          "candidate_entry_id": null,
+          "relationship": "CREATOR_APPROVED_RELATED_ENTRY_NOT_CORPUS_MESSAGE",
+          "related_dictionary_entry_id": "pcd-v01-0065",
+          "source_message": {
+            "schema": "0.1",
+            "pictiq": "1.1",
+            "frames": [
+              {
+                "tokens": [
+                  {
+                    "type": "icon",
+                    "id": "move_public"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "media_text"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "time"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "punct_question"
+                  }
+                ]
+              }
+            ]
+          },
+          "source_sequence": "move_public + media_text + time + punct_question",
+          "preferred_message": {
+            "schema": "0.1",
+            "pictiq": "1.1",
+            "frames": [
+              {
+                "tokens": [
+                  {
+                    "type": "icon",
+                    "id": "move_public"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "media_text"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "time"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "punct_question"
+                  }
+                ]
+              }
+            ]
+          },
+          "preferred_sequence": "move_public + media_text + time + punct_question",
+          "preferred_changed_by_creator_review": false,
+          "authority_path": [
+            "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1 / RELATED EVIDENCE",
+            "CREATOR-APPROVED TIMETABLE ADDENDUM",
+            "S01.16_BASELINE_APPLICATION"
+          ],
+          "source_provenance": [
+            {
+              "origin": {
+                "event_id": "origin-clh-v01-0022",
+                "source_type": "HANDBOOK",
+                "reference": "books/handbook-v1/pictiq-handbook-v1.0.pdf",
+                "location": "cand-handbook-transit-schedule",
+                "role": "ORIGIN",
+                "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+                "sha256": "5fe3eea1aab10ab51c15727ff2526fb4be42e93ab500edb3a56ee694458b369b",
+                "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+              },
+              "uses": [],
+              "creator_review_id": "review-clh-v01-0022",
+              "addendum": {
+                "path": "docs/research/composition-dictionary-baseline-v0.1/final-creator-qa-addendum-v0.2.json",
+                "sha256": "8c5cfda80ee90dea0e185d142249a03e6be83b7ec40f1523f07e74dcd5ed0b51",
+                "selector": "/decisions/1/new_related_entry"
+              }
+            }
+          ],
+          "message_source": {
+            "path": "docs/research/composition-dictionary-baseline-v0.1/final-creator-qa-addendum-v0.2.json",
+            "sha256": "8c5cfda80ee90dea0e185d142249a03e6be83b7ec40f1523f07e74dcd5ed0b51",
+            "selector": "/decisions/1/new_related_entry"
+          },
+          "corpus_message": {
+            "schema": "0.1",
+            "pictiq": "1.1",
+            "frames": [
+              {
+                "tokens": [
+                  {
+                    "type": "icon",
+                    "id": "move_public"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "time"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "punct_question"
+                  }
+                ]
+              }
+            ]
+          },
+          "context_source": {
+            "path": "docs/research/composition-library-baseline-v0.1/accepted-corpus.json",
+            "sha256": "8dc2509dfc9d31d006726732e1825bc120dbeef06c5c1b0b1798e6315808e14e",
+            "selector": "/records/21/applicability"
+          },
+          "creator_review_ref": {
+            "type": "CREATOR_APPROVED_RELATED_ADDENDUM",
+            "export_path": "final-creator-qa-addendum-v0.2.json",
+            "corpus_record_id": "clh-v01-0022",
+            "selector": "/decisions/1/new_related_entry",
+            "temporary_qa_id": "qa-new-public-transport-timetable"
+          }
+        }
+      }
+    }
+  ],
+  "changed_files": [
+    "docs/research/composition-dictionary-baseline-v0.1/dictionary.json",
+    "docs/research/composition-dictionary-baseline-v0.1/variants.json",
+    "docs/research/composition-dictionary-baseline-v0.1/lineage.json",
+    "docs/research/composition-dictionary-baseline-v0.1/validation.json",
+    "docs/research/composition-dictionary-baseline-v0.1/render-manifest.json",
+    "docs/research/composition-dictionary-baseline-v0.1/review/data.json",
+    "docs/research/composition-dictionary-baseline-v0.1/review/index.html",
+    "docs/research/composition-dictionary-baseline-v0.1/manifest.json",
+    "docs/research/composition-dictionary-baseline-v0.1/README.md",
+    "docs/research/composition-dictionary-baseline-v0.1/renders/pcd-v01-0066-preferred.svg",
+    "docs/research/composition-dictionary-baseline-v0.1/applied-decisions/pcd-v01-0066-timetable.json"
+  ],
+  "other_qa_changes": "NOT APPLIED BY THIS PASS",
+  "baseline_freeze": "NOT PERFORMED"
+}

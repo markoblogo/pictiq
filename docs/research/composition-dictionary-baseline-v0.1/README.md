@@ -16,7 +16,7 @@ The Candidate's old YES/REVIEW classifications survive only as history. All five
 
 ## Variants, context, and unresolved items
 
-Each entry has a preferred current Message and may have evidence-backed ALTERNATIVE or CONTEXTUAL variants. Historical source forms are lineage, not current alternatives. Context warnings remain visible in the viewer. Two note portions remain in `creator-notes-follow-up.json`: the exact scope/token for a proposed UP/AHEAD prohibition and the exact order for a separate schedule/timetable composition. Neither is presented as an accepted Message. The arrival-time entry remains accepted.
+Each entry has a preferred current Message and may have evidence-backed ALTERNATIVE or CONTEXTUAL variants. Historical source forms are lineage, not current alternatives. Context warnings remain visible in the viewer. The original two-note follow-up report remains in `creator-notes-follow-up.json` as history. Its timetable is now applied as the separate `pcd-v01-0066` entry; arrival-time entry `pcd-v01-0065` is unchanged. The proposed UP/AHEAD prohibition is not applied by this pass.
 
 `translator-lessons.json` contains **DESIGN EVIDENCE / NOT EXECUTABLE RULE** only. It does not change Grammar, Protocol, Composer, or implement a Translator.
 
@@ -29,6 +29,6 @@ Each entry has a preferred current Message and may have evidence-backed ALTERNAT
 - Creator amendment and lineage: `creator-review-amendment.json`, `lineage.json`
 - Validation and hashes: `validation.json`, `render-manifest.json`, `manifest.json`
 
-All 71 preferred/accepted variant Messages passed the repository's schema-shape and registry-aware checks and rendered through the canonical Renderer. New research records receive deterministic structural validation; this project has no formal Dictionary schema. These checks are not a human visual acceptance. Run `python3 tools/research/build_composition_dictionary_baseline_v0_1.py` from the repository root to rebuild deterministically from the archived export. Run `pytest -q tests/test_composition_dictionary_baseline_v0_1.py` for the research builder tests.
+All 72 preferred/accepted variant Messages passed the repository's schema-shape and registry-aware checks and rendered through the canonical Renderer. New research records receive deterministic structural validation; this project has no formal Dictionary schema. These checks are not a human visual acceptance. Run `python3 tools/research/build_composition_dictionary_baseline_v0_1.py` from the repository root to rebuild deterministically from the archived export. Run `pytest -q tests/test_composition_dictionary_baseline_v0_1.py` for the research builder tests.
 
 **Next gate:** creator visually reviews the changed-items QA surface and full viewer; then close/freeze this baseline. Public Dictionary deployment is a later product decision. After visual acceptance, the planned sequence is Color Modifier repair, Practical Coverage Corpus, Composer coverage, Translator Spike, and later retrieval research. Current stage: `FINAL CREATOR VISUAL QA`.

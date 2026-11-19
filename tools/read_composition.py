@@ -220,12 +220,17 @@ class Reader:
                 self.file(self.root / QA_DATA)
                 for ref, receipt, raw_decision in zip(applications, receipts, raw_decisions):
                     source_ref = self.ref(self.root / SOURCE, receipt['source_decision']['selector'])
-                    if (source == 'dictionary' and record_id == receipt['dictionary_entry_id']) or (
+                    if receipt['scope'] == 'TIMETABLE_ENTRY_ADDITION':
+                        self.file(db / receipt['creator_decision']['verbatim_object']['preview_render'])
+                    if (source == 'dictionary' and record_id in (receipt['dictionary_entry_id'], receipt.get('related_arrival_entry_id'))) or (
                             source == 'corpus' and record_id == raw_decision['corpus_record_id']):
                         applied.append({'action': raw_decision['decision'], 'application_status': 'APPLIED',
                                         'scope': receipt['scope'], 'link_verified': True,
                                         'source_decision': raw_decision, 'source_provenance': source_ref,
                                         'provenance': self.ref(db / ref['path'], ''), 'application': receipt})
+                        if receipt['scope'] == 'TIMETABLE_ENTRY_ADDITION':
+                            approval = receipt['creator_decision']['source']
+                            applied[-1]['approval_provenance'] = self.ref(self.root / approval['path'], approval['selector'])
         bound = (source_bound and binding['version'] == dictionary['dictionary_version'] == dm['dictionary_version'] and
                  binding['source_snapshot'] == dictionary['source_snapshot'] == dm['creator_review_export']['source_snapshot'] and
                  binding['dictionary_json_sha256'] == bound_dictionary_sha)
@@ -235,6 +240,7 @@ class Reader:
             self.note('ADDENDUM_BASELINE_MISMATCH', 'Active creator decisions cannot be resolved against this baseline', error=True)
         related = []
         removals = [a for a in applied if a['scope'] == 'CORPUS_ONLY_PROJECTION' and a['link_verified']]
+        timetables = [a for a in applied if a['scope'] == 'TIMETABLE_ENTRY_ADDITION' and a['link_verified']]
         projection_removed = (source == 'corpus' and bound and len(removals) == 1 and
                               removals[0]['application']['preserved_corpus']['corpus_record_id'] == record_id and
                               removals[0]['application']['removed_dictionary_id'] == record.get('dictionary_entry_id'))
@@ -255,8 +261,14 @@ class Reader:
                 self.note('CORPUS_ONLY_APPLIED', 'Dictionary projection removed; exact Corpus evidence and historical backlink retained')
             elif record.get('dictionary_entry_id') and not dictionary_entries:
                 self.note('LINEAGE_MISMATCH', 'Corpus Dictionary backlink has no matching forward reference', error=True)
-            if len(dictionary_entries) > 1:
+            explicit_related_pair = (bound and len(timetables) == 1 and len(dictionary_entries) == 2 and
+                                     {e['dictionary_entry_id'] for e in dictionary_entries} ==
+                                     {timetables[0]['application']['dictionary_entry_id'],
+                                      timetables[0]['application']['related_arrival_entry_id']})
+            if len(dictionary_entries) > 1 and not explicit_related_pair:
                 self.note('AMBIGUOUS_LINEAGE', 'Multiple Dictionary entries reference this Corpus record', error=True)
+            elif explicit_related_pair:
+                self.note('APPROVED_RELATED_ENTRY', 'Corpus retains the arrival Message; timetable is a distinct creator-approved related Dictionary entry')
             for e in dictionary_entries:
                 if record.get('dictionary_entry_id') not in (None, e['dictionary_entry_id']) or e['lineage']['corpus_record_id'] != record_id:
                     self.note('LINEAGE_MISMATCH', 'Corpus and Dictionary backlinks disagree', error=True)
@@ -276,6 +288,19 @@ class Reader:
                          and a['action'] == decision['decision']]
             if projection_removed and len(completed) == 1:
                 resolved = bound and not hits and not any(d['level'] == 'error' for d in self.diagnostics)
+            completed_timetable = [a for a in timetables
+                                   if a['application']['recorded_addendum_decision']['selector'] == f'/decisions/{i}'
+                                   and a['application']['related_arrival_entry_id'] == decision['dictionary_entry_id']
+                                   and a['application']['corpus_record_id'] == decision['corpus_record_id']]
+            if len(completed_timetable) == 1:
+                application = completed_timetable[0]['application']
+                current = [e for e in dictionary['entries'] if e['dictionary_entry_id'] == application['dictionary_entry_id']]
+                resolved = (bound and len(hits) == 1 and len(current) == 1 and current[0] == application['created_entry']
+                            and hits[0]['preferred_variant']['message'] == application['created_entry']['lineage']['corpus_message']
+                            and not any(d['level'] == 'error' for d in self.diagnostics))
+                completed.extend(completed_timetable)
+                if source == 'dictionary' and record_id == application['related_arrival_entry_id']:
+                    self.note('RELATED_TIMETABLE_APPLIED', 'Original arrival-time notes remain byte-preserved; the timetable is now applied as separate entry pcd-v01-0066')
             duplicates = [d for d in addendum['decisions'] if d['dictionary_entry_id'] == decision['dictionary_entry_id'] or d['corpus_record_id'] == decision['corpus_record_id']]
             if len(duplicates) != 1:
                 resolved = False

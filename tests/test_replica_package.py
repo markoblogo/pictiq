@@ -33,14 +33,18 @@ class ReplicaPackageTests(unittest.TestCase):
                   'applied-decisions/pcd-v01-0030-context.json',
                   'applied-decisions/pcd-v01-0028-preferred.json',
                   'applied-decisions/pcd-v01-0025-corpus-only.json',
+                  'applied-decisions/pcd-v01-0066-timetable.json',
+                  'review/previews/qa-new-public-transport-timetable.svg',
                   'creator-final-qa-2026-11-19/creator-export.json', 'review/final-creator-qa-v0.2.json')]
         files += ['tools/research/medical_context_clarification.py', 'tools/research/communication_context_clarification.py',
                   'tools/research/shopping_context_clarification.py', 'tools/research/parking_context_clarification.py',
-                  'tools/research/pedestrian_preferred_application.py', 'tools/research/corpus_only_application.py']
+                  'tools/research/pedestrian_preferred_application.py', 'tools/research/corpus_only_application.py',
+                  'tools/research/timetable_application.py']
         files += ['docs/research/composition-library-baseline-v0.1/accepted-corpus.json',
                   'lexicon/icon-index.json','lexicon/compatibility.json','entities/entity-index.json','notation/numeric/index.json',
                   'profiles/standalone-core-v0.1.json','profiles/embodied-core-v0.1.json',
                   'tools/replica_package.py','tools/validate_message_schema.py','icons/svg/comm_sound.svg','icons/svg/qty_minus.svg']
+        files += ['icons/svg/' + name + '.svg' for name in ('move_public', 'media_text', 'time', 'punct_question')]
         files += [str(p.relative_to(ROOT)) for folder,glob in [('packs','*.json'),('pictiq_renderer','*.py')] for p in (ROOT/folder).glob(glob)]
         for rel in files:
             path=root/rel; path.parent.mkdir(parents=True,exist_ok=True); shutil.copyfile(ROOT/rel,path)
@@ -59,6 +63,19 @@ class ReplicaPackageTests(unittest.TestCase):
 
     def built(self, name='package', root=ROOT):
         out=self.tempdir/name;build(ENTRY,VARIANT,out,root,REVISION);return out
+
+    def test_timetable_package_uses_exact_approved_addendum_authority(self):
+        root = self.fixture()
+        out = self.tempdir / 'timetable'
+        build('pcd-v01-0066', 'pcd-v01-0066-preferred', out, root, REVISION)
+        manifest = json.loads((out / 'manifest.json').read_bytes())
+        self.assertEqual(manifest['creator_decision']['source']['selector'], '/decisions/1/new_related_entry')
+        self.assertEqual(manifest['creator_decision']['record']['temporary_qa_id'], 'qa-new-public-transport-timetable')
+        self.assertEqual(manifest['corpus_lineage']['record_id'], 'clh-v01-0022')
+        message = json.loads((out / 'message.json').read_bytes())
+        self.assertEqual([t['id'] for f in message['frames'] for t in f['tokens']], ['move_public', 'media_text', 'time', 'punct_question'])
+        self.assertTrue(verify(out, root)['ok'])
+        self.assertEqual(manifest['review_status'], {'new_render': 'NOT_REVIEWED', 'final_placement': 'NOT_REVIEWED'})
 
     def test_reproducibility_exact_variant_provenance_and_portability(self):
         first=self.built('a');second=self.built('b')

@@ -551,6 +551,19 @@ def build(output_dir: Path = OUT) -> dict[str, Any]:
     # The original SVG above remains on disk for historical QA/provenance.
     # Only the current validation/render index and Dictionary projections lose it.
     validation_rows = [r for r in validation_rows if r['dictionary_entry_id'] != 'pcd-v01-0025']
+    from tools.research.timetable_application import apply as apply_timetable, RECEIPT as TIMETABLE_RECEIPT
+    dictionary, timetable_application = apply_timetable(dictionary, ROOT)
+    write_json(output_dir / TIMETABLE_RECEIPT, timetable_application)
+    timetable = dictionary['entries'][-1]['preferred_variant']
+    errors = schema_errors(timetable['message']) + semantic_errors(timetable['message'])
+    if errors:
+        raise ValueError(f'timetable Message validation failed: {errors}')
+    svg, _ = render_svg(timetable['message'], registry=registry)
+    if sha256_bytes(svg.encode('utf-8')) != timetable_application['creator_decision']['verbatim_object']['preview_render_sha256']:
+        raise ValueError('Timetable canonical render differs from the approved K01/K01a preview')
+    (output_dir / timetable['render']).write_text(svg, encoding='utf-8')
+    validation_rows.append({'variant_id': timetable['variant_id'], 'dictionary_entry_id': timetable_application['dictionary_entry_id'],
+                            'status': 'VALIDATED_AND_RENDERED_CANONICALLY', 'path': timetable['render']})
     counts['dictionary_entries'] = len(dictionary['entries'])
     counts['preferred_messages'] = len(dictionary['entries'])
     counts['entries_with_known_ambiguity'] = sum(bool(e['known_ambiguity']) for e in dictionary['entries'])
@@ -576,6 +589,8 @@ def build(output_dir: Path = OUT) -> dict[str, Any]:
     artifact_paths.append(PARKING_RECEIPT)
     artifact_paths.append(PEDESTRIAN_RECEIPT)
     artifact_paths.append(CORPUS_ONLY_RECEIPT)
+    artifact_paths.append(TIMETABLE_RECEIPT)
+    artifact_paths.append(timetable['render'])
     artifact_paths.extend(v['render'] for v in pedestrian['variants'] if v['variant_id'] != 'pcd-v01-0028-preferred')
     manifest = {
         "dictionary_version": "0.1", "created_on": "2026-09-27", "status": "CREATOR-REVIEWED / ACCEPTED RESEARCH BASELINE; AWAITING FINAL VISUAL QA",
@@ -589,7 +604,7 @@ def build(output_dir: Path = OUT) -> dict[str, Any]:
         "status_dependencies": {"color_modifier": "REQUIRED / NOT IMPLEMENTED", "practical_coverage": "NOT STARTED", "translator": "NOT IMPLEMENTED", "machine_agent_access": "NOT IMPLEMENTED", "stress_test_07_1": "PAUSED / PRESERVED / UNCHANGED", "blocked_hotel_color": "EXCLUDED / STILL BLOCKED"},
         "validation": "PASS" if len(validation_rows) == len(variant_data['variants']) and not failures else "FAIL",
         "context_clarifications": [{"path": path, "sha256": sha256_bytes((output_dir / path).read_bytes())}
-                                   for path in (RECEIPT, COMMUNICATION_RECEIPT, SHOPPING_RECEIPT, PARKING_RECEIPT, PEDESTRIAN_RECEIPT, CORPUS_ONLY_RECEIPT)],
+                                   for path in (RECEIPT, COMMUNICATION_RECEIPT, SHOPPING_RECEIPT, PARKING_RECEIPT, PEDESTRIAN_RECEIPT, CORPUS_ONLY_RECEIPT, TIMETABLE_RECEIPT)],
         "artifact_sha256": {name: sha256_bytes((output_dir / name).read_bytes()) for name in artifact_paths},
     }
     write_json(output_dir / "manifest.json", manifest)
@@ -612,7 +627,7 @@ The Candidate's old YES/REVIEW classifications survive only as history. All five
 
 ## Variants, context, and unresolved items
 
-Each entry has a preferred current Message and may have evidence-backed ALTERNATIVE or CONTEXTUAL variants. Historical source forms are lineage, not current alternatives. Context warnings remain visible in the viewer. Two note portions remain in `creator-notes-follow-up.json`: the exact scope/token for a proposed UP/AHEAD prohibition and the exact order for a separate schedule/timetable composition. Neither is presented as an accepted Message. The arrival-time entry remains accepted.
+Each entry has a preferred current Message and may have evidence-backed ALTERNATIVE or CONTEXTUAL variants. Historical source forms are lineage, not current alternatives. Context warnings remain visible in the viewer. The original two-note follow-up report remains in `creator-notes-follow-up.json` as history. Its timetable is now applied as the separate `pcd-v01-0066` entry; arrival-time entry `pcd-v01-0065` is unchanged. The proposed UP/AHEAD prohibition is not applied by this pass.
 
 `translator-lessons.json` contains **DESIGN EVIDENCE / NOT EXECUTABLE RULE** only. It does not change Grammar, Protocol, Composer, or implement a Translator.
 
