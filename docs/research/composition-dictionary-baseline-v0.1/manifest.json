@@ -36,7 +36,7 @@
     "alternative_variants": 2,
     "contextual_variants": 3,
     "entries_with_multiple_variants": 3,
-    "entries_with_context_warnings": 12,
+    "entries_with_context_warnings": 13,
     "entries_with_known_ambiguity": 40,
     "render_count": 70,
     "former_review_promoted": 5,
@@ -59,24 +59,29 @@
     {
       "path": "applied-decisions/pcd-v01-0006-context.json",
       "sha256": "ac6f5974889c70d560efd84963e3ab026d5473d1a54fde80f3529e15ccf6a6da"
+    },
+    {
+      "path": "applied-decisions/pcd-v01-0009-context.json",
+      "sha256": "9c6f7d19de5e4ede29056d139066e4e98fe0181b465b38ff47f3ed3be88a5aeb"
     }
   ],
   "artifact_sha256": {
     "creator-review-export.json": "3151d779efab99445f3f5b61cd5da41dded979d435cf11226da5d62bbfe9d5ae",
     "creator-review-amendment.json": "e34e5c2d88aa161d543654c6c186ddeab5549581daf9ce83b0cdce345adc4595",
-    "dictionary.json": "fea29c8aa2d1aee8b53d7b786f6656d64ceda9a7d7af4622d8c4bc0a480a2081",
-    "variants.json": "19ffe8a58e3cd43eb52928ff83ad575eb1b1fe3422b0ede866acaf8ec42d7c7d",
+    "dictionary.json": "9b4bddcb3cff4d06c94f0e8da63f0609dc666efc366242683e347fecc7ac03a3",
+    "variants.json": "55a87c1b216d7f518aa8e2887f0ffc0e4c85095ed74449bdba2f71b078d5ae9b",
     "lineage.json": "f181fe3d302dbc9bae30e789d104133f750321c8605cb26f6f5de06d6e1f819e",
     "translator-lessons.json": "14ebbc283bf4f885099465a5357e54d9309ff82f96b28f048e6a88e66dfff82d",
     "creator-notes-follow-up.json": "e84fd4a733d775f37052c4d4200aec9fdedcf265fb43ff5190569ccf4ab0f6e3",
     "validation.json": "fd940fe9276a6c2e5ceaae3ded2e83045c92e56fb1423bdfbe29b2980d5b736e",
     "render-manifest.json": "0af554dc932d365460cc8a4ae069519c6196df03edeabb8151dae086ee810f86",
-    "review/index.html": "a47ca4b8bcac4d7ef2e7b935616b15c0c3494061fce09be705f025e713cc3319",
-    "review/data.json": "fea29c8aa2d1aee8b53d7b786f6656d64ceda9a7d7af4622d8c4bc0a480a2081",
+    "review/index.html": "5bb593c7ea0e0f9367f0f60a21cbe8bd59aaa0a16f56f6c30fe5bb6e8f9476fd",
+    "review/data.json": "9b4bddcb3cff4d06c94f0e8da63f0609dc666efc366242683e347fecc7ac03a3",
     "review/final-creator-visual-qa.html": "eebc2ed93516c04325a8b17191314b887e9c290d2ba0e5428ac8f6ea415317a6",
     "creator-notes-follow-up/index.html": "7a534b2f356206293d684c380f180e71e3fc311f8f25dfe1166b2ce26efd919d",
     "applied-decisions/pcd-v01-0002-context.json": "203e83602e65115fda64d743fe9c6bf59279fb649414e4cc6add99f3db3921d4",
     "applied-decisions/pcd-v01-0006-context.json": "ac6f5974889c70d560efd84963e3ab026d5473d1a54fde80f3529e15ccf6a6da",
+    "applied-decisions/pcd-v01-0009-context.json": "9c6f7d19de5e4ede29056d139066e4e98fe0181b465b38ff47f3ed3be88a5aeb",
     "README.md": "73bb002ce391cfa0cf4649deeec235bcdbb020de3c2af45bc13c3d842a4a2d05"
   }
 }

@@ -879,8 +879,8 @@
           ]
         }
       ],
-      "variant_context_note": null,
-      "semantic_distinction": "General grocery / food shop",
+      "variant_context_note": "This existing form uses need_food as the second icon to specify a grocery / food shop or classic supermarket; place_shop supplies shopping.",
+      "semantic_distinction": "General grocery / food shop or classic supermarket: in place_shop + need_food, place_shop denotes shopping and need_food specifies the shop type.",
       "provenance": {
         "corpus_record_ids": [
           "clh-v01-0014"

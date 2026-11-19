@@ -1,0 +1,56 @@
+{
+  "application_id": "S01.12-pcd-v01-0009-context",
+  "dictionary_entry_id": "pcd-v01-0009",
+  "application_status": "APPLIED",
+  "scope": "CONTEXT_CLARIFICATION_ONLY",
+  "source_revision": "39bf2d3d2f181d8f78626b68c6bca11b7babbf8a",
+  "source_decision": {
+    "path": "docs/research/composition-dictionary-baseline-v0.1/creator-final-qa-2026-11-19/creator-export.json",
+    "sha256": "609c38175864d5da66e9f969364ea5dc84f71a15eab7bf4cfed14d81d1412152",
+    "selector": "/records/3",
+    "qa_dataset_sha256": "45c041165ad17f2f8114dddd454ba42f74e9e635eb44606133f291348626f413"
+  },
+  "dictionary_before_sha256": "fea29c8aa2d1aee8b53d7b786f6656d64ceda9a7d7af4622d8c4bc0a480a2081",
+  "dictionary_after_sha256": "9b4bddcb3cff4d06c94f0e8da63f0609dc666efc366242683e347fecc7ac03a3",
+  "changed_fields": [
+    {
+      "selector": "/entries/8/semantic_neighbourhood",
+      "before": "General grocery / food shop",
+      "after": "General grocery / food shop or classic supermarket: in place_shop + need_food, place_shop denotes shopping and need_food specifies the shop type."
+    },
+    {
+      "selector": "/entries/8/usage_note",
+      "before": "For a general food shop, supermarket, or general market. A specialized shop may require a matching existing food-category primitive; this note does not generate additional entries.",
+      "after": "For this entry and its existing place_shop + need_food form, place_shop denotes the process of shopping; the second icon need_food specifies a grocery / food shop or a classic supermarket. In the creator's explanatory examples, a meat icon after place_shop specifies a specialized meat shop, and a repair icon specifies a DIY shop. These examples explain the shop-type distinction; they do not add variants or assign an ID to the repair icon."
+    },
+    {
+      "selector": "/entries/8/context_warnings",
+      "before": [],
+      "after": [
+        "This clarification is scoped to the existing entry and the creator's shop-type examples, not a universal rule for every combination with place_shop."
+      ]
+    },
+    {
+      "selector": "/entries/8/preferred_variant/semantic_distinction",
+      "before": "General grocery / food shop",
+      "after": "General grocery / food shop or classic supermarket: in place_shop + need_food, place_shop denotes shopping and need_food specifies the shop type."
+    },
+    {
+      "selector": "/entries/8/preferred_variant/variant_context_note",
+      "before": null,
+      "after": "This existing form uses need_food as the second icon to specify a grocery / food shop or classic supermarket; place_shop supplies shopping."
+    },
+    {
+      "selector": "/entries/8/variants/0/semantic_distinction",
+      "before": "General grocery / food shop",
+      "after": "General grocery / food shop or classic supermarket: in place_shop + need_food, place_shop denotes shopping and need_food specifies the shop type."
+    },
+    {
+      "selector": "/entries/8/variants/0/variant_context_note",
+      "before": null,
+      "after": "This existing form uses need_food as the second icon to specify a grocery / food shop or classic supermarket; place_shop supplies shopping."
+    }
+  ],
+  "other_qa_changes": "PENDING",
+  "baseline_freeze": "NOT PERFORMED"
+}

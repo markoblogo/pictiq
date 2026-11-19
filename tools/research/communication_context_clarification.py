@@ -93,10 +93,12 @@ def verify(dictionary_bytes, receipt, root):
 
 
 def receipt_refs(manifest):
-    """Only the existing one-step receipt or this exact ordered two-step sequence."""
+    """Only the explicitly recorded S01.10, S01.11 and S01.12 sequences."""
+    from tools.research.shopping_context_clarification import RECEIPT as SHOPPING_RECEIPT
     if 'context_clarifications' in manifest:
         refs = manifest['context_clarifications']
-        if 'context_clarification' in manifest or [r['path'] for r in refs] != [MEDICAL_RECEIPT, RECEIPT]:
+        if 'context_clarification' in manifest or [r['path'] for r in refs] not in (
+                [MEDICAL_RECEIPT, RECEIPT], [MEDICAL_RECEIPT, RECEIPT, SHOPPING_RECEIPT]):
             raise ValueError('Context clarification sequence mismatch')
         return refs
     if 'context_clarification' in manifest:
@@ -108,6 +110,13 @@ def receipt_refs(manifest):
 
 
 def verify_sequence(dictionary_bytes, receipts, root):
+    if len(receipts) == 3:
+        from tools.research.shopping_context_clarification import verify as verify_shopping
+        if receipts[1]['dictionary_after_sha256'] != receipts[2]['dictionary_before_sha256']:
+            raise ValueError('Context clarification sequence has a broken intermediate hash link')
+        intermediate, _, shopping_decision = verify_shopping(dictionary_bytes, receipts[2], root)
+        original, export, decisions = verify_sequence(encode(intermediate), receipts[:2], root)
+        return original, export, [*decisions, shopping_decision]
     if len(receipts) == 1:
         original, export, decision = verify_medical(dictionary_bytes, receipts[0], root)
         return original, export, [decision]

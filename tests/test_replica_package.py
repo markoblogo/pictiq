@@ -29,8 +29,10 @@ class ReplicaPackageTests(unittest.TestCase):
         files = [PACKAGE+'/'+f for f in ('dictionary.json','manifest.json','creator-review-export.json','final-creator-qa-addendum-v0.2.json')]
         files += [PACKAGE + '/' + f for f in ('applied-decisions/pcd-v01-0002-context.json',
                   'applied-decisions/pcd-v01-0006-context.json',
+                  'applied-decisions/pcd-v01-0009-context.json',
                   'creator-final-qa-2026-11-19/creator-export.json', 'review/final-creator-qa-v0.2.json')]
-        files += ['tools/research/medical_context_clarification.py', 'tools/research/communication_context_clarification.py']
+        files += ['tools/research/medical_context_clarification.py', 'tools/research/communication_context_clarification.py',
+                  'tools/research/shopping_context_clarification.py']
         files += ['docs/research/composition-library-baseline-v0.1/accepted-corpus.json',
                   'lexicon/icon-index.json','lexicon/compatibility.json','entities/entity-index.json','notation/numeric/index.json',
                   'profiles/standalone-core-v0.1.json','profiles/embodied-core-v0.1.json',

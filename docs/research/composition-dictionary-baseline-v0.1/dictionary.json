@@ -2476,13 +2476,15 @@
       "semantic_id": "pictiq-dict-sem-v0.1-0009",
       "headword": "General food shop",
       "aliases": [],
-      "semantic_neighbourhood": "General grocery / food shop",
+      "semantic_neighbourhood": "General grocery / food shop or classic supermarket: in place_shop + need_food, place_shop denotes shopping and need_food specifies the shop type.",
       "candidate_lookup_material": [
         "Grocery / food shop"
       ],
-      "usage_note": "For a general food shop, supermarket, or general market. A specialized shop may require a matching existing food-category primitive; this note does not generate additional entries.",
+      "usage_note": "For this entry and its existing place_shop + need_food form, place_shop denotes the process of shopping; the second icon need_food specifies a grocery / food shop or a classic supermarket. In the creator's explanatory examples, a meat icon after place_shop specifies a specialized meat shop, and a repair icon specifies a DIY shop. These examples explain the shop-type distinction; they do not add variants or assign an ID to the repair icon.",
       "known_ambiguity": [],
-      "context_warnings": [],
+      "context_warnings": [
+        "This clarification is scoped to the existing entry and the creator's shop-type examples, not a universal rule for every combination with place_shop."
+      ],
       "preferred_variant": {
         "variant_id": "pcd-v01-0009-preferred",
         "variant_type": "PREFERRED",
@@ -2549,8 +2551,8 @@
             ]
           }
         ],
-        "variant_context_note": null,
-        "semantic_distinction": "General grocery / food shop",
+        "variant_context_note": "This existing form uses need_food as the second icon to specify a grocery / food shop or classic supermarket; place_shop supplies shopping.",
+        "semantic_distinction": "General grocery / food shop or classic supermarket: in place_shop + need_food, place_shop denotes shopping and need_food specifies the shop type.",
         "provenance": {
           "corpus_record_ids": [
             "clh-v01-0014"
@@ -2628,8 +2630,8 @@
               ]
             }
           ],
-          "variant_context_note": null,
-          "semantic_distinction": "General grocery / food shop",
+          "variant_context_note": "This existing form uses need_food as the second icon to specify a grocery / food shop or classic supermarket; place_shop supplies shopping.",
+          "semantic_distinction": "General grocery / food shop or classic supermarket: in place_shop + need_food, place_shop denotes shopping and need_food specifies the shop type.",
           "provenance": {
             "corpus_record_ids": [
               "clh-v01-0014"
