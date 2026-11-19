@@ -1,0 +1,68 @@
+{
+  "application_id": "S01.13-pcd-v01-0030-context",
+  "dictionary_entry_id": "pcd-v01-0030",
+  "application_status": "APPLIED",
+  "scope": "CONTEXT_CLARIFICATION_ONLY",
+  "source_revision": "044bb6959810782cbe04ef6a10f6b536c8a3faaa",
+  "source_decision": {
+    "path": "docs/research/composition-dictionary-baseline-v0.1/creator-final-qa-2026-11-19/creator-export.json",
+    "sha256": "609c38175864d5da66e9f969364ea5dc84f71a15eab7bf4cfed14d81d1412152",
+    "selector": "/records/8",
+    "qa_dataset_sha256": "45c041165ad17f2f8114dddd454ba42f74e9e635eb44606133f291348626f413"
+  },
+  "dictionary_before_sha256": "9b4bddcb3cff4d06c94f0e8da63f0609dc666efc366242683e347fecc7ac03a3",
+  "dictionary_after_sha256": "13b868cc4abc5d68b4aae2135a31cf12888013254c94b6512ba61d67891a643a",
+  "changed_fields": [
+    {
+      "selector": "/entries/29/semantic_neighbourhood",
+      "before": "Parking prohibited.",
+      "after": "Vehicle prohibition: no passage, no parking, or both according to the situation; No parking is the parking-context reading."
+    },
+    {
+      "selector": "/entries/29/usage_note",
+      "before": "",
+      "after": "In writing or on a map, rel_here + logic_no + move_car, or the creator's example rel_here + [place icon] + logic_no + move_car, prohibits vehicles there, including passage and parking. The place icon is unspecified; this explanation assigns no ID or new Message. On site, logic_no + move_car means no passage at a passage/road, no parking at a place that may be taken for parking, or both where both situations apply. In these specified contexts, logic_no + move_car and move_car + logic_no are equivalent: «запрещено авто» / «авто запрещено». No parking is one situational reading; the combination does not always mean only no parking."
+    },
+    {
+      "selector": "/entries/29/known_ambiguity",
+      "before": [
+        "Usually acceptable in road context, but can overread as all cars prohibited here."
+      ],
+      "after": [
+        "Passage-only, parking-only and combined prohibitions depend on the situation; AUTO/NO does not by itself force the parking-only reading."
+      ]
+    },
+    {
+      "selector": "/entries/29/context_warnings",
+      "before": [
+        "Wayfinding context; preserve the parking-specific reading."
+      ],
+      "after": [
+        "The situation supplies whether passage, parking or both are prohibited; do not force a parking-only reading.",
+        "The equivalence of AUTO/NO orders is scoped to these uses, not a general negation-order rule."
+      ]
+    },
+    {
+      "selector": "/entries/29/preferred_variant/semantic_distinction",
+      "before": "Parking prohibited.",
+      "after": "Vehicle prohibition: no passage, no parking, or both according to the situation; No parking is the parking-context reading."
+    },
+    {
+      "selector": "/entries/29/preferred_variant/variant_context_note",
+      "before": null,
+      "after": "The existing written/map form prohibits vehicles there, including passage and parking; on-site interpretation depends on the road/parking situation. The creator accepts both logic_no + move_car and move_car + logic_no in these contexts. The lineage retains rel_here + move_car + logic_no as history; no new current variant is added."
+    },
+    {
+      "selector": "/entries/29/variants/0/semantic_distinction",
+      "before": "Parking prohibited.",
+      "after": "Vehicle prohibition: no passage, no parking, or both according to the situation; No parking is the parking-context reading."
+    },
+    {
+      "selector": "/entries/29/variants/0/variant_context_note",
+      "before": null,
+      "after": "The existing written/map form prohibits vehicles there, including passage and parking; on-site interpretation depends on the road/parking situation. The creator accepts both logic_no + move_car and move_car + logic_no in these contexts. The lineage retains rel_here + move_car + logic_no as history; no new current variant is added."
+    }
+  ],
+  "other_qa_changes": "PENDING",
+  "baseline_freeze": "NOT PERFORMED"
+}

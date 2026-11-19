@@ -522,6 +522,9 @@ def build(output_dir: Path = OUT) -> dict[str, Any]:
     from tools.research.shopping_context_clarification import apply as apply_shopping, RECEIPT as SHOPPING_RECEIPT
     dictionary, shopping_application = apply_shopping(dictionary, ROOT)
     write_json(output_dir / SHOPPING_RECEIPT, shopping_application)
+    from tools.research.parking_context_clarification import apply as apply_parking, RECEIPT as PARKING_RECEIPT
+    dictionary, parking_application = apply_parking(dictionary, ROOT)
+    write_json(output_dir / PARKING_RECEIPT, parking_application)
     counts['entries_with_context_warnings'] = sum(bool(e['context_warnings']) for e in dictionary['entries'])
     variant_data['variants'] = [v for e in dictionary['entries'] for v in e['variants']]
     write_json(output_dir / 'dictionary.json', dictionary)
@@ -533,6 +536,7 @@ def build(output_dir: Path = OUT) -> dict[str, Any]:
     artifact_paths.append(RECEIPT)
     artifact_paths.append(COMMUNICATION_RECEIPT)
     artifact_paths.append(SHOPPING_RECEIPT)
+    artifact_paths.append(PARKING_RECEIPT)
     manifest = {
         "dictionary_version": "0.1", "created_on": "2026-09-27", "status": "CREATOR-REVIEWED / ACCEPTED RESEARCH BASELINE; AWAITING FINAL VISUAL QA",
         "normative_grammar": False, "publication_status": "INTERNAL / NOT DEPLOYED",
@@ -545,7 +549,7 @@ def build(output_dir: Path = OUT) -> dict[str, Any]:
         "status_dependencies": {"color_modifier": "REQUIRED / NOT IMPLEMENTED", "practical_coverage": "NOT STARTED", "translator": "NOT IMPLEMENTED", "machine_agent_access": "NOT IMPLEMENTED", "stress_test_07_1": "PAUSED / PRESERVED / UNCHANGED", "blocked_hotel_color": "EXCLUDED / STILL BLOCKED"},
         "validation": "PASS" if len(validation_rows) == len(all_variants) and not failures else "FAIL",
         "context_clarifications": [{"path": path, "sha256": sha256_bytes((output_dir / path).read_bytes())}
-                                   for path in (RECEIPT, COMMUNICATION_RECEIPT, SHOPPING_RECEIPT)],
+                                   for path in (RECEIPT, COMMUNICATION_RECEIPT, SHOPPING_RECEIPT, PARKING_RECEIPT)],
         "artifact_sha256": {name: sha256_bytes((output_dir / name).read_bytes()) for name in artifact_paths},
     }
     write_json(output_dir / "manifest.json", manifest)

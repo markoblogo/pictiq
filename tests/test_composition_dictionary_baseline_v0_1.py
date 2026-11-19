@@ -53,7 +53,10 @@ class CompositionDictionaryBaselineTests(unittest.TestCase):
         from tools.research.medical_context_clarification import RECEIPT, verify
         from tools.research.communication_context_clarification import RECEIPT as COMMUNICATION_RECEIPT, verify as verify_communication, encode
         from tools.research.shopping_context_clarification import RECEIPT as SHOPPING_RECEIPT, verify as verify_shopping
+        from tools.research.parking_context_clarification import RECEIPT as PARKING_RECEIPT, verify as verify_parking
         raw = (PACKAGE / 'dictionary.json').read_bytes()
+        parking_predecessor, _, _ = verify_parking(raw, json.loads((PACKAGE / PARKING_RECEIPT).read_bytes()), ROOT)
+        raw = encode(parking_predecessor)
         receipt = json.loads((PACKAGE / RECEIPT).read_bytes())
         shopping_predecessor, _, _ = verify_shopping(raw, json.loads((PACKAGE / SHOPPING_RECEIPT).read_bytes()), ROOT)
         current, _, _ = verify_communication(encode(shopping_predecessor), json.loads((PACKAGE / COMMUNICATION_RECEIPT).read_bytes()), ROOT)
@@ -75,7 +78,10 @@ class CompositionDictionaryBaselineTests(unittest.TestCase):
     def test_communication_application_preserves_medical_and_all_messages(self):
         from tools.research.communication_context_clarification import RECEIPT, verify, encode, BEFORE_SHA
         from tools.research.shopping_context_clarification import RECEIPT as SHOPPING_RECEIPT, verify as verify_shopping
+        from tools.research.parking_context_clarification import RECEIPT as PARKING_RECEIPT, verify as verify_parking
         raw = (PACKAGE / 'dictionary.json').read_bytes()
+        parking_predecessor, _, _ = verify_parking(raw, json.loads((PACKAGE / PARKING_RECEIPT).read_bytes()), ROOT)
+        raw = encode(parking_predecessor)
         receipt = json.loads((PACKAGE / RECEIPT).read_bytes())
         current, _, _ = verify_shopping(raw, json.loads((PACKAGE / SHOPPING_RECEIPT).read_bytes()), ROOT)
         previous, _, _ = verify(encode(current), receipt, ROOT)
@@ -103,7 +109,10 @@ class CompositionDictionaryBaselineTests(unittest.TestCase):
 
     def test_shopping_application_changes_only_seven_descriptive_fields(self):
         from tools.research.shopping_context_clarification import RECEIPT, verify, encode, BEFORE_SHA
+        from tools.research.parking_context_clarification import RECEIPT as PARKING_RECEIPT, verify as verify_parking
         raw = (PACKAGE / 'dictionary.json').read_bytes()
+        parking_predecessor, _, _ = verify_parking(raw, json.loads((PACKAGE / PARKING_RECEIPT).read_bytes()), ROOT)
+        raw = encode(parking_predecessor)
         receipt = json.loads((PACKAGE / RECEIPT).read_bytes())
         previous, _, _ = verify(raw, receipt, ROOT)
         self.assertEqual(hashlib.sha256(encode(previous)).hexdigest(), BEFORE_SHA)
@@ -128,6 +137,41 @@ class CompositionDictionaryBaselineTests(unittest.TestCase):
             rel = 'docs/research/composition-dictionary-baseline-v0.1/applied-decisions/' + name
             old = subprocess.run(['git', 'show', '39bf2d3:' + rel], cwd=ROOT, capture_output=True, check=True).stdout
             self.assertEqual((ROOT / rel).read_bytes(), old)
+
+
+    def test_parking_application_preserves_previous_entries_messages_and_pending_work(self):
+        from tools.research.parking_context_clarification import RECEIPT, verify, encode, BEFORE_SHA
+        raw = (PACKAGE / 'dictionary.json').read_bytes()
+        receipt = json.loads((PACKAGE / RECEIPT).read_bytes())
+        previous, _, _ = verify(raw, receipt, ROOT)
+        self.assertEqual(hashlib.sha256(encode(previous)).hexdigest(), BEFORE_SHA)
+        current = json.loads(raw)
+        allowed = {'semantic_neighbourhood', 'usage_note', 'known_ambiguity', 'context_warnings',
+                   'preferred_variant/semantic_distinction', 'preferred_variant/variant_context_note',
+                   'variants/0/semantic_distinction', 'variants/0/variant_context_note'}
+        self.assertEqual({c['selector'].removeprefix('/entries/29/') for c in receipt['changed_fields']}, allowed)
+        self.assertEqual(len(previous['entries']), 65)
+        for before, after in zip(previous['entries'], current['entries']):
+            if before['dictionary_entry_id'] != 'pcd-v01-0030':
+                self.assertEqual(before, after)
+            else:
+                self.assertEqual(before['headword'], after['headword'])
+                self.assertEqual(before['lineage'], after['lineage'])
+                # All other variant metadata, including status and exact Messages, stays intact.
+                for old, new in zip([before['preferred_variant'], *before['variants']],
+                                    [after['preferred_variant'], *after['variants']]):
+                    self.assertEqual({k: v for k, v in old.items() if k not in ('semantic_distinction', 'variant_context_note')},
+                                     {k: v for k, v in new.items() if k not in ('semantic_distinction', 'variant_context_note')})
+        for entry_id in ('0002', '0006', '0009'):
+            rel = f'docs/research/composition-dictionary-baseline-v0.1/applied-decisions/pcd-v01-{entry_id}-context.json'
+            old = subprocess.run(['git', 'show', '044bb69:' + rel], cwd=ROOT, capture_output=True, check=True).stdout
+            self.assertEqual((ROOT / rel).read_bytes(), old)
+        addendum = json.loads((PACKAGE / 'final-creator-qa-addendum-v0.2.json').read_bytes())
+        timetable, = [d['new_related_entry'] for d in addendum['decisions'] if 'new_related_entry' in d]
+        self.assertEqual(timetable['status'], 'CREATOR-APPROVED / PENDING BASELINE APPLICATION')
+        self.assertEqual(timetable['temporary_qa_id'], 'qa-new-public-transport-timetable')
+        self.assertFalse(any(e['preferred_variant']['token_sequence'] == 'move_public + media_text + time + punct_question'
+                             for e in current['entries']))
 
 
 if __name__ == "__main__":

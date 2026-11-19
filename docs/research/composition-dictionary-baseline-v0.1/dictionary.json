@@ -8873,16 +8873,17 @@
       "semantic_id": "pictiq-dict-sem-v0.1-0030",
       "headword": "No parking",
       "aliases": [],
-      "semantic_neighbourhood": "Parking prohibited.",
+      "semantic_neighbourhood": "Vehicle prohibition: no passage, no parking, or both according to the situation; No parking is the parking-context reading.",
       "candidate_lookup_material": [
         "Do not park here."
       ],
-      "usage_note": "",
+      "usage_note": "In writing or on a map, rel_here + logic_no + move_car, or the creator's example rel_here + [place icon] + logic_no + move_car, prohibits vehicles there, including passage and parking. The place icon is unspecified; this explanation assigns no ID or new Message. On site, logic_no + move_car means no passage at a passage/road, no parking at a place that may be taken for parking, or both where both situations apply. In these specified contexts, logic_no + move_car and move_car + logic_no are equivalent: «запрещено авто» / «авто запрещено». No parking is one situational reading; the combination does not always mean only no parking.",
       "known_ambiguity": [
-        "Usually acceptable in road context, but can overread as all cars prohibited here."
+        "Passage-only, parking-only and combined prohibitions depend on the situation; AUTO/NO does not by itself force the parking-only reading."
       ],
       "context_warnings": [
-        "Wayfinding context; preserve the parking-specific reading."
+        "The situation supplies whether passage, parking or both are prohibited; do not force a parking-only reading.",
+        "The equivalence of AUTO/NO orders is scoped to these uses, not a general negation-order rule."
       ],
       "preferred_variant": {
         "variant_id": "pcd-v01-0030-preferred",
@@ -8954,8 +8955,8 @@
             ]
           }
         ],
-        "variant_context_note": null,
-        "semantic_distinction": "Parking prohibited.",
+        "variant_context_note": "The existing written/map form prohibits vehicles there, including passage and parking; on-site interpretation depends on the road/parking situation. The creator accepts both logic_no + move_car and move_car + logic_no in these contexts. The lineage retains rel_here + move_car + logic_no as history; no new current variant is added.",
+        "semantic_distinction": "Vehicle prohibition: no passage, no parking, or both according to the situation; No parking is the parking-context reading.",
         "provenance": {
           "corpus_record_ids": [
             "clh-v01-0049"
@@ -9037,8 +9038,8 @@
               ]
             }
           ],
-          "variant_context_note": null,
-          "semantic_distinction": "Parking prohibited.",
+          "variant_context_note": "The existing written/map form prohibits vehicles there, including passage and parking; on-site interpretation depends on the road/parking situation. The creator accepts both logic_no + move_car and move_car + logic_no in these contexts. The lineage retains rel_here + move_car + logic_no as history; no new current variant is added.",
+          "semantic_distinction": "Vehicle prohibition: no passage, no parking, or both according to the situation; No parking is the parking-context reading.",
           "provenance": {
             "corpus_record_ids": [
               "clh-v01-0049"

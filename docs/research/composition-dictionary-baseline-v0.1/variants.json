@@ -2579,8 +2579,8 @@
           ]
         }
       ],
-      "variant_context_note": null,
-      "semantic_distinction": "Parking prohibited.",
+      "variant_context_note": "The existing written/map form prohibits vehicles there, including passage and parking; on-site interpretation depends on the road/parking situation. The creator accepts both logic_no + move_car and move_car + logic_no in these contexts. The lineage retains rel_here + move_car + logic_no as history; no new current variant is added.",
+      "semantic_distinction": "Vehicle prohibition: no passage, no parking, or both according to the situation; No parking is the parking-context reading.",
       "provenance": {
         "corpus_record_ids": [
           "clh-v01-0049"

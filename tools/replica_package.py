@@ -150,7 +150,7 @@ def compose(entry_id, variant_id, root=ROOT, revision=None):
                 receipts.append(inputs.json(PACKAGE + '/' + ref['path']))
             inputs.take(SOURCE); inputs.take(QA_DATA)
             for module in ('medical_context_clarification.py', 'communication_context_clarification.py',
-                           'shopping_context_clarification.py'):
+                           'shopping_context_clarification.py', 'parking_context_clarification.py'):
                 inputs.take('tools/research/' + module)
             verify_sequence(inputs.take(relative), receipts, inputs.root)
         except (ValueError, KeyError, TypeError, IndexError, OSError) as exc:
