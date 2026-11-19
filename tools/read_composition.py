@@ -165,6 +165,29 @@ class Reader:
         cb = cp.parent; corpus = self.load(cp); cm = self.load(cb / 'manifest.json')
         primary = dictionary if source == 'dictionary' else corpus
         key, group, primary_path = ('dictionary_entry_id', 'entries', dp) if source == 'dictionary' else ('corpus_record_id', 'records', cp)
+        # One explicitly withdrawn ID has a verified disposition, not a live
+        # Dictionary record. This is not a search/fallback for unknown IDs.
+        if (source == 'dictionary' and record_id == 'pcd-v01-0025'
+                and self.one(dictionary['entries'], key, record_id, required=False) is None):
+            result = self.read('corpus', 'clh-v01-0044')
+            removal = [a for a in result.get('applied_creator_decisions', [])
+                       if a['scope'] == 'CORPUS_ONLY_PROJECTION' and a['link_verified']]
+            if not result['ok'] or len(removal) != 1:
+                self.selected_record = None
+                self.selected_provenance = None
+                raise ReadError('Absent Dictionary entry has no verified Corpus-only application')
+            historical = result['baseline_record']
+            provenance = result['baseline_provenance']
+            result.update(source=source, id=record_id, baseline_record=None, baseline_provenance=None,
+                          linked_corpus_records=[{'record': historical, 'provenance': provenance}],
+                          record_statuses={'dictionary_projection': 'CORPUS_ONLY', 'application_status': 'APPLIED'})
+            result['package'].update(source_metadata={k: v for k, v in dictionary.items() if k != 'entries'},
+                                     version=dictionary['dictionary_version'], declared_status=dictionary['status'],
+                                     manifest_status=dm['status'])
+            for render in result['renders']:
+                render['role'] = 'CORPUS_EVIDENCE_NOT_CURRENT_DICTIONARY'
+            self.note('FINAL_QA_OUTSTANDING', dm['status'])
+            return result
         index, record = self.one(primary[group], key, record_id)
         baseline_ref = self.ref(primary_path, f'/{group}/{index}')
         self.selected_record = record
@@ -211,6 +234,10 @@ class Reader:
                 application['link_verified'] = False
             self.note('ADDENDUM_BASELINE_MISMATCH', 'Active creator decisions cannot be resolved against this baseline', error=True)
         related = []
+        removals = [a for a in applied if a['scope'] == 'CORPUS_ONLY_PROJECTION' and a['link_verified']]
+        projection_removed = (source == 'corpus' and bound and len(removals) == 1 and
+                              removals[0]['application']['preserved_corpus']['corpus_record_id'] == record_id and
+                              removals[0]['application']['removed_dictionary_id'] == record.get('dictionary_entry_id'))
         if source == 'dictionary':
             refs = record['corpus_refs']
             if record['lineage']['dictionary_entry_id'] != record_id or record['lineage']['corpus_record_id'] not in refs:
@@ -224,7 +251,9 @@ class Reader:
         else:
             refs = [record_id]
             dictionary_entries = [e for e in dictionary['entries'] if record_id in e['corpus_refs']]
-            if record.get('dictionary_entry_id') and not dictionary_entries:
+            if projection_removed and not dictionary_entries:
+                self.note('CORPUS_ONLY_APPLIED', 'Dictionary projection removed; exact Corpus evidence and historical backlink retained')
+            elif record.get('dictionary_entry_id') and not dictionary_entries:
                 self.note('LINEAGE_MISMATCH', 'Corpus Dictionary backlink has no matching forward reference', error=True)
             if len(dictionary_entries) > 1:
                 self.note('AMBIGUOUS_LINEAGE', 'Multiple Dictionary entries reference this Corpus record', error=True)
@@ -241,6 +270,12 @@ class Reader:
                         decision['corpus_record_id'] in refs and
                         hits[0]['corpus_refs'] == [decision['corpus_record_id']] and
                         hits[0]['lineage']['corpus_record_id'] == decision['corpus_record_id'])
+            completed = [a for a in removals if a['application']['recorded_addendum_decision']['selector'] == f'/decisions/{i}'
+                         and a['application']['removed_dictionary_id'] == decision['dictionary_entry_id']
+                         and a['application']['preserved_corpus']['corpus_record_id'] == decision['corpus_record_id']
+                         and a['action'] == decision['decision']]
+            if projection_removed and len(completed) == 1:
+                resolved = bound and not hits and not any(d['level'] == 'error' for d in self.diagnostics)
             duplicates = [d for d in addendum['decisions'] if d['dictionary_entry_id'] == decision['dictionary_entry_id'] or d['corpus_record_id'] == decision['corpus_record_id']]
             if len(duplicates) != 1:
                 resolved = False
@@ -252,10 +287,11 @@ class Reader:
                     resolved = False
             if not resolved:
                 self.note('DECISION_LINK_UNRESOLVED', f'/decisions/{i}: incompatible or ambiguous linkage', error=True)
-            pending = 'PENDING' in addendum['status'] or 'PENDING' in decision['application_status']
+            application_status = 'APPLIED' if len(completed) == 1 and resolved else decision['application_status']
+            pending = application_status != 'APPLIED' and ('PENDING' in addendum['status'] or 'PENDING' in decision['application_status'])
             if pending:
                 self.note('PENDING_CREATOR_DECISION', f'{decision["decision"]}: not applied; baseline retained')
-            decisions.append({'action': decision['decision'], 'application_status': decision['application_status'],
+            decisions.append({'action': decision['decision'], 'application_status': application_status,
                               'source_authority': addendum['provenance'], 'source_date': addendum['date'],
                               'addendum_status': addendum['status'], 'link_verified': resolved,
                               'baseline_mutated_by_reader': False, 'raw_decision': decision,
@@ -290,7 +326,8 @@ class Reader:
                 application['link_verified'] = False
         return {'ok': not any(d['level'] == 'error' for d in self.diagnostics),
                 'source': source, 'id': record_id, 'baseline_record': record,
-                'record_statuses': {k: record[k] for k in ('creator_review', 'reconciliation_disposition', 'dictionary_eligibility', 'compatibility', 'render_status') if k in record},
+                'record_statuses': {**{k: record[k] for k in ('creator_review', 'reconciliation_disposition', 'dictionary_eligibility', 'compatibility', 'render_status') if k in record},
+                                    **({'dictionary_projection': 'CORPUS_ONLY'} if projection_removed and not any(d['level'] == 'error' for d in self.diagnostics) else {})},
                 'package': {'source_metadata': {k: v for k, v in primary.items() if k not in ('entries', 'records')},
                             'version': primary.get('dictionary_version', primary.get('baseline_version')),
                             'declared_status': primary['status'], 'manifest_status': (dm if source == 'dictionary' else cm)['status'],

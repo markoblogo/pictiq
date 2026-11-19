@@ -122,8 +122,14 @@ assert.equal(localStorage.getItem(OLD_KEY),raw);assert.equal(localStorage.getIte
                    builder.REVIEW / "previews/qa-new-public-transport-timetable.svg"]
         before = {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in outputs}
         read = builder.read
+        # Exercise drift in the complete historical QA input, not the smaller
+        # active projection. Reversal verifies every intervening application.
+        from tools.research.communication_context_clarification import receipt_refs, verify_sequence
+        refs = receipt_refs(read(builder.PKG / 'manifest.json'))
+        original, _, _ = verify_sequence((builder.PKG / 'dictionary.json').read_bytes(),
+                                         [read(builder.PKG / r['path']) for r in refs], builder.ROOT)
         def changed(path):
-            value = read(path)
+            value = json.loads(json.dumps(original)) if path == builder.PKG / 'dictionary.json' else read(path)
             if path == builder.PKG / "dictionary.json":
                 next(e for e in value["entries"] if "clh-v01-0022" in e["corpus_refs"])["headword"] += " unexpected"
             return value

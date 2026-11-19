@@ -131,7 +131,10 @@ for(const bad of [{{...updated,qa_dataset_sha256:"wrong"}},{{...updated,records:
         self.assertEqual([el.attrib["data-id"] for el in ET.parse(preview).iter()
                           if "data-id" in el.attrib], expected)
         from tools.research.build_composition_dictionary_final_qa_v0_2 import make_addendum
-        dictionary = load(PKG / "dictionary.json")
+        from tools.research.communication_context_clarification import receipt_refs, verify_sequence
+        refs = receipt_refs(load(PKG / 'manifest.json'))
+        dictionary, _, _ = verify_sequence((PKG / 'dictionary.json').read_bytes(),
+                                           [load(PKG / r['path']) for r in refs], ROOT)
         by_corpus = {cid: e for e in dictionary["entries"] for cid in e["corpus_refs"]}
         generated = make_addendum(by_corpus, dictionary, pending["preview_render_sha256"])
         generated_pending = next(d["new_related_entry"] for d in generated["decisions"]

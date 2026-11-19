@@ -1,0 +1,695 @@
+{
+  "application_id": "S01.15-pcd-v01-0025-corpus-only",
+  "dictionary_entry_id": "pcd-v01-0025",
+  "application_status": "APPLIED",
+  "scope": "CORPUS_ONLY_PROJECTION",
+  "source_revision": "c21b0d9f3ad9367dd2aa4419e2573881a9619bda",
+  "source_decision": {
+    "path": "docs/research/composition-dictionary-baseline-v0.1/creator-final-qa-2026-11-19/creator-export.json",
+    "sha256": "609c38175864d5da66e9f969364ea5dc84f71a15eab7bf4cfed14d81d1412152",
+    "selector": "/records/5",
+    "qa_dataset_sha256": "45c041165ad17f2f8114dddd454ba42f74e9e635eb44606133f291348626f413"
+  },
+  "recorded_addendum_decision": {
+    "path": "docs/research/composition-dictionary-baseline-v0.1/final-creator-qa-addendum-v0.2.json",
+    "sha256": "8c5cfda80ee90dea0e185d142249a03e6be83b7ec40f1523f07e74dcd5ed0b51",
+    "selector": "/decisions/0"
+  },
+  "reason": "MOVE_TO_CORPUS_ONLY",
+  "creator_reason": "HERE + NO may work in a sufficiently obvious physical context, but it is too underspecified to be a recommended reusable Dictionary entry. A prohibition should normally preserve what is prohibited where that distinction matters.",
+  "corpus_disposition": "Keep as CONTEXT-DEPENDENT CORPUS EVIDENCE; this is not rejection as invalid Pictiq.",
+  "replacement": null,
+  "dictionary_before_sha256": "fe50cf5f62c908cb05abc2ba57fe28132475599400dc061203c35fb46773873a",
+  "dictionary_after_sha256": "4679738d0d2e1bdf6a179e97c2f3ac966c1697b435ae730b383e2ddc197b7ff3",
+  "removed_dictionary_id": "pcd-v01-0025",
+  "removed_entry": {
+    "dictionary_entry_id": "pcd-v01-0025",
+    "semantic_id": "pictiq-dict-sem-v0.1-0025",
+    "headword": "No entry at this location",
+    "aliases": [],
+    "semantic_neighbourhood": "A location-specific wayfinding prohibition",
+    "candidate_lookup_material": [
+      "Do not enter or proceed into the signed way."
+    ],
+    "usage_note": "HERE + NO is source-bounded to a marked location/entry. It is not a universal translation for every prohibited action or object. Preserve the prohibited referent when it matters.",
+    "known_ambiguity": [
+      "Yes. It can be read as no current location, not available here, or no place here rather than entry forbidden."
+    ],
+    "context_warnings": [
+      "Wayfinding context",
+      "Context/referent-dependent; not a universal prohibition"
+    ],
+    "preferred_variant": {
+      "variant_id": "pcd-v01-0025-preferred",
+      "variant_type": "PREFERRED",
+      "status": "CURRENT_ACCEPTED",
+      "message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_here"
+              },
+              {
+                "type": "icon",
+                "id": "logic_no"
+              }
+            ]
+          }
+        ]
+      },
+      "token_sequence": "rel_here + logic_no",
+      "render": "renders/pcd-v01-0025-preferred.svg",
+      "mode": [
+        "STANDALONE"
+      ],
+      "surface": [
+        "WAYFINDING"
+      ],
+      "context": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "context": {
+            "domain": [
+              "road-wayfinding"
+            ],
+            "situation": [
+              "public road and wayfinding sign"
+            ],
+            "task": [
+              "do not enter or proceed into the signed way."
+            ],
+            "context_supplies": [
+              {
+                "cue": "road/public-wayfinding conventions",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-road-05"
+                ]
+              },
+              {
+                "cue": "sign placement and road-navigation frame",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-road-05"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-road-05"
+          ]
+        }
+      ],
+      "variant_context_note": null,
+      "semantic_distinction": "A location-specific wayfinding prohibition",
+      "provenance": {
+        "corpus_record_ids": [
+          "clh-v01-0044"
+        ],
+        "creator_review_record_id": "clh-v01-0044",
+        "dictionary_entry_id": "pcd-v01-0025",
+        "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+      },
+      "render_status": "RENDERED_CANONICAL"
+    },
+    "variants": [
+      {
+        "variant_id": "pcd-v01-0025-preferred",
+        "variant_type": "PREFERRED",
+        "status": "CURRENT_ACCEPTED",
+        "message": {
+          "schema": "0.1",
+          "pictiq": "1.1",
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "rel_here"
+                },
+                {
+                  "type": "icon",
+                  "id": "logic_no"
+                }
+              ]
+            }
+          ]
+        },
+        "token_sequence": "rel_here + logic_no",
+        "render": "renders/pcd-v01-0025-preferred.svg",
+        "mode": [
+          "STANDALONE"
+        ],
+        "surface": [
+          "WAYFINDING"
+        ],
+        "context": [
+          {
+            "communication_mode": "STANDALONE",
+            "communication_surface": "WAYFINDING",
+            "context": {
+              "domain": [
+                "road-wayfinding"
+              ],
+              "situation": [
+                "public road and wayfinding sign"
+              ],
+              "task": [
+                "do not enter or proceed into the signed way."
+              ],
+              "context_supplies": [
+                {
+                  "cue": "road/public-wayfinding conventions",
+                  "availability": "REQUIRED",
+                  "evidence_ids": [
+                    "cand-road-05"
+                  ]
+                },
+                {
+                  "cue": "sign placement and road-navigation frame",
+                  "availability": "OPTIONAL",
+                  "evidence_ids": [
+                    "cand-road-05"
+                  ]
+                }
+              ]
+            },
+            "evidence_ids": [
+              "cand-road-05"
+            ]
+          }
+        ],
+        "variant_context_note": null,
+        "semantic_distinction": "A location-specific wayfinding prohibition",
+        "provenance": {
+          "corpus_record_ids": [
+            "clh-v01-0044"
+          ],
+          "creator_review_record_id": "clh-v01-0044",
+          "dictionary_entry_id": "pcd-v01-0025",
+          "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+        },
+        "render_status": "RENDERED_CANONICAL"
+      }
+    ],
+    "mode": [
+      "STANDALONE"
+    ],
+    "surface": [
+      "WAYFINDING"
+    ],
+    "context": [
+      {
+        "communication_mode": "STANDALONE",
+        "communication_surface": "WAYFINDING",
+        "context": {
+          "domain": [
+            "road-wayfinding"
+          ],
+          "situation": [
+            "public road and wayfinding sign"
+          ],
+          "task": [
+            "do not enter or proceed into the signed way."
+          ],
+          "context_supplies": [
+            {
+              "cue": "road/public-wayfinding conventions",
+              "availability": "REQUIRED",
+              "evidence_ids": [
+                "cand-road-05"
+              ]
+            },
+            {
+              "cue": "sign placement and road-navigation frame",
+              "availability": "OPTIONAL",
+              "evidence_ids": [
+                "cand-road-05"
+              ]
+            }
+          ]
+        },
+        "evidence_ids": [
+          "cand-road-05"
+        ]
+      }
+    ],
+    "corpus_refs": [
+      "clh-v01-0044"
+    ],
+    "source_evidence_summary": [
+      "ROAD _ WAYFINDING / Harvest clh-v01-0081"
+    ],
+    "creator_review": {
+      "review_record_id": "clh-v01-0044",
+      "decision": "KEEP_IN_DICTIONARY",
+      "source_snapshot": "clb-v0.1:33b00632bedb342af8aed35b62824b9b60663474bca556bb69e4ab16ea22d3e0",
+      "note_present": true
+    },
+    "system_candidate_history": {
+      "eligibility": "YES",
+      "candidate_entry_id": "pcd-v01-0025",
+      "former_question": null
+    },
+    "lineage": {
+      "dictionary_entry_id": "pcd-v01-0025",
+      "corpus_record_id": "clh-v01-0044",
+      "candidate_entry_id": "pcd-v01-0025",
+      "source_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_here"
+              },
+              {
+                "type": "icon",
+                "id": "logic_no"
+              }
+            ]
+          }
+        ]
+      },
+      "source_sequence": "rel_here + logic_no",
+      "preferred_message": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "rel_here"
+              },
+              {
+                "type": "icon",
+                "id": "logic_no"
+              }
+            ]
+          }
+        ]
+      },
+      "preferred_sequence": "rel_here + logic_no",
+      "preferred_changed_by_creator_review": false,
+      "authority_path": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "source_provenance": [
+        {
+          "origin": {
+            "event_id": "origin-clh-v01-0044",
+            "source_type": "ROAD _ WAYFINDING",
+            "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+            "location": "cand-road-05",
+            "role": "ORIGIN",
+            "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+            "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+            "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+          },
+          "uses": [],
+          "creator_review_id": "review-clh-v01-0044",
+          "addendum": null
+        }
+      ],
+      "creator_review_ref": {
+        "export_path": "creator-review-export.json",
+        "corpus_record_id": "clh-v01-0044",
+        "decision": "KEEP_IN_DICTIONARY",
+        "creator_notes_verbatim_in_export": true
+      }
+    }
+  },
+  "removed_entry_provenance": {
+    "path": "docs/research/composition-dictionary-baseline-v0.1/dictionary.json",
+    "sha256": "fe50cf5f62c908cb05abc2ba57fe28132475599400dc061203c35fb46773873a",
+    "selector": "/entries/24"
+  },
+  "preserved_corpus": {
+    "path": "docs/research/composition-library-baseline-v0.1/accepted-corpus.json",
+    "sha256": "8dc2509dfc9d31d006726732e1825bc120dbeef06c5c1b0b1798e6315808e14e",
+    "selector": "/records/43",
+    "corpus_record_id": "clh-v01-0044",
+    "message": {
+      "schema": "0.1",
+      "pictiq": "1.1",
+      "frames": [
+        {
+          "tokens": [
+            {
+              "type": "icon",
+              "id": "rel_here"
+            },
+            {
+              "type": "icon",
+              "id": "logic_no"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "preserved_render": {
+    "path": "docs/research/composition-dictionary-baseline-v0.1/renders/pcd-v01-0025-preferred.svg",
+    "sha256": "61d9313fa8020090115dfc51d6f538345931f71988350255d505f91fa316f429"
+  },
+  "changed_fields": [
+    {
+      "selector": "/entries/24",
+      "operation": "REMOVE_ARRAY_ITEM",
+      "before": {
+        "dictionary_entry_id": "pcd-v01-0025",
+        "semantic_id": "pictiq-dict-sem-v0.1-0025",
+        "headword": "No entry at this location",
+        "aliases": [],
+        "semantic_neighbourhood": "A location-specific wayfinding prohibition",
+        "candidate_lookup_material": [
+          "Do not enter or proceed into the signed way."
+        ],
+        "usage_note": "HERE + NO is source-bounded to a marked location/entry. It is not a universal translation for every prohibited action or object. Preserve the prohibited referent when it matters.",
+        "known_ambiguity": [
+          "Yes. It can be read as no current location, not available here, or no place here rather than entry forbidden."
+        ],
+        "context_warnings": [
+          "Wayfinding context",
+          "Context/referent-dependent; not a universal prohibition"
+        ],
+        "preferred_variant": {
+          "variant_id": "pcd-v01-0025-preferred",
+          "variant_type": "PREFERRED",
+          "status": "CURRENT_ACCEPTED",
+          "message": {
+            "schema": "0.1",
+            "pictiq": "1.1",
+            "frames": [
+              {
+                "tokens": [
+                  {
+                    "type": "icon",
+                    "id": "rel_here"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "logic_no"
+                  }
+                ]
+              }
+            ]
+          },
+          "token_sequence": "rel_here + logic_no",
+          "render": "renders/pcd-v01-0025-preferred.svg",
+          "mode": [
+            "STANDALONE"
+          ],
+          "surface": [
+            "WAYFINDING"
+          ],
+          "context": [
+            {
+              "communication_mode": "STANDALONE",
+              "communication_surface": "WAYFINDING",
+              "context": {
+                "domain": [
+                  "road-wayfinding"
+                ],
+                "situation": [
+                  "public road and wayfinding sign"
+                ],
+                "task": [
+                  "do not enter or proceed into the signed way."
+                ],
+                "context_supplies": [
+                  {
+                    "cue": "road/public-wayfinding conventions",
+                    "availability": "REQUIRED",
+                    "evidence_ids": [
+                      "cand-road-05"
+                    ]
+                  },
+                  {
+                    "cue": "sign placement and road-navigation frame",
+                    "availability": "OPTIONAL",
+                    "evidence_ids": [
+                      "cand-road-05"
+                    ]
+                  }
+                ]
+              },
+              "evidence_ids": [
+                "cand-road-05"
+              ]
+            }
+          ],
+          "variant_context_note": null,
+          "semantic_distinction": "A location-specific wayfinding prohibition",
+          "provenance": {
+            "corpus_record_ids": [
+              "clh-v01-0044"
+            ],
+            "creator_review_record_id": "clh-v01-0044",
+            "dictionary_entry_id": "pcd-v01-0025",
+            "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+          },
+          "render_status": "RENDERED_CANONICAL"
+        },
+        "variants": [
+          {
+            "variant_id": "pcd-v01-0025-preferred",
+            "variant_type": "PREFERRED",
+            "status": "CURRENT_ACCEPTED",
+            "message": {
+              "schema": "0.1",
+              "pictiq": "1.1",
+              "frames": [
+                {
+                  "tokens": [
+                    {
+                      "type": "icon",
+                      "id": "rel_here"
+                    },
+                    {
+                      "type": "icon",
+                      "id": "logic_no"
+                    }
+                  ]
+                }
+              ]
+            },
+            "token_sequence": "rel_here + logic_no",
+            "render": "renders/pcd-v01-0025-preferred.svg",
+            "mode": [
+              "STANDALONE"
+            ],
+            "surface": [
+              "WAYFINDING"
+            ],
+            "context": [
+              {
+                "communication_mode": "STANDALONE",
+                "communication_surface": "WAYFINDING",
+                "context": {
+                  "domain": [
+                    "road-wayfinding"
+                  ],
+                  "situation": [
+                    "public road and wayfinding sign"
+                  ],
+                  "task": [
+                    "do not enter or proceed into the signed way."
+                  ],
+                  "context_supplies": [
+                    {
+                      "cue": "road/public-wayfinding conventions",
+                      "availability": "REQUIRED",
+                      "evidence_ids": [
+                        "cand-road-05"
+                      ]
+                    },
+                    {
+                      "cue": "sign placement and road-navigation frame",
+                      "availability": "OPTIONAL",
+                      "evidence_ids": [
+                        "cand-road-05"
+                      ]
+                    }
+                  ]
+                },
+                "evidence_ids": [
+                  "cand-road-05"
+                ]
+              }
+            ],
+            "variant_context_note": null,
+            "semantic_distinction": "A location-specific wayfinding prohibition",
+            "provenance": {
+              "corpus_record_ids": [
+                "clh-v01-0044"
+              ],
+              "creator_review_record_id": "clh-v01-0044",
+              "dictionary_entry_id": "pcd-v01-0025",
+              "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+            },
+            "render_status": "RENDERED_CANONICAL"
+          }
+        ],
+        "mode": [
+          "STANDALONE"
+        ],
+        "surface": [
+          "WAYFINDING"
+        ],
+        "context": [
+          {
+            "communication_mode": "STANDALONE",
+            "communication_surface": "WAYFINDING",
+            "context": {
+              "domain": [
+                "road-wayfinding"
+              ],
+              "situation": [
+                "public road and wayfinding sign"
+              ],
+              "task": [
+                "do not enter or proceed into the signed way."
+              ],
+              "context_supplies": [
+                {
+                  "cue": "road/public-wayfinding conventions",
+                  "availability": "REQUIRED",
+                  "evidence_ids": [
+                    "cand-road-05"
+                  ]
+                },
+                {
+                  "cue": "sign placement and road-navigation frame",
+                  "availability": "OPTIONAL",
+                  "evidence_ids": [
+                    "cand-road-05"
+                  ]
+                }
+              ]
+            },
+            "evidence_ids": [
+              "cand-road-05"
+            ]
+          }
+        ],
+        "corpus_refs": [
+          "clh-v01-0044"
+        ],
+        "source_evidence_summary": [
+          "ROAD _ WAYFINDING / Harvest clh-v01-0081"
+        ],
+        "creator_review": {
+          "review_record_id": "clh-v01-0044",
+          "decision": "KEEP_IN_DICTIONARY",
+          "source_snapshot": "clb-v0.1:33b00632bedb342af8aed35b62824b9b60663474bca556bb69e4ab16ea22d3e0",
+          "note_present": true
+        },
+        "system_candidate_history": {
+          "eligibility": "YES",
+          "candidate_entry_id": "pcd-v01-0025",
+          "former_question": null
+        },
+        "lineage": {
+          "dictionary_entry_id": "pcd-v01-0025",
+          "corpus_record_id": "clh-v01-0044",
+          "candidate_entry_id": "pcd-v01-0025",
+          "source_message": {
+            "schema": "0.1",
+            "pictiq": "1.1",
+            "frames": [
+              {
+                "tokens": [
+                  {
+                    "type": "icon",
+                    "id": "rel_here"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "logic_no"
+                  }
+                ]
+              }
+            ]
+          },
+          "source_sequence": "rel_here + logic_no",
+          "preferred_message": {
+            "schema": "0.1",
+            "pictiq": "1.1",
+            "frames": [
+              {
+                "tokens": [
+                  {
+                    "type": "icon",
+                    "id": "rel_here"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "logic_no"
+                  }
+                ]
+              }
+            ]
+          },
+          "preferred_sequence": "rel_here + logic_no",
+          "preferred_changed_by_creator_review": false,
+          "authority_path": [
+            "HISTORICAL_COMPOSITION_HARVEST",
+            "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+            "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+            "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+          ],
+          "source_provenance": [
+            {
+              "origin": {
+                "event_id": "origin-clh-v01-0044",
+                "source_type": "ROAD _ WAYFINDING",
+                "reference": "docs/research/road-wayfinding-stress-test-v1.json",
+                "location": "cand-road-05",
+                "role": "ORIGIN",
+                "status": "EARLIEST_RECOVERABLE_REPOSITORY_DOCUMENTATION; actual historical origin not asserted",
+                "sha256": "ed0b68a6b292adb9dc6208350e19fff4e8f4ce6034c8029db50beff36d0f82e2",
+                "notes": "Source mapping is explicit; earliest recovered appearance in the inspected source set is not asserted to be true historical origin."
+              },
+              "uses": [],
+              "creator_review_id": "review-clh-v01-0044",
+              "addendum": null
+            }
+          ],
+          "creator_review_ref": {
+            "export_path": "creator-review-export.json",
+            "corpus_record_id": "clh-v01-0044",
+            "decision": "KEEP_IN_DICTIONARY",
+            "creator_notes_verbatim_in_export": true
+          }
+        }
+      },
+      "after": null
+    }
+  ],
+  "changed_files": [
+    "docs/research/composition-dictionary-baseline-v0.1/dictionary.json",
+    "docs/research/composition-dictionary-baseline-v0.1/variants.json",
+    "docs/research/composition-dictionary-baseline-v0.1/lineage.json",
+    "docs/research/composition-dictionary-baseline-v0.1/render-manifest.json",
+    "docs/research/composition-dictionary-baseline-v0.1/validation.json",
+    "docs/research/composition-dictionary-baseline-v0.1/review/data.json",
+    "docs/research/composition-dictionary-baseline-v0.1/review/index.html",
+    "docs/research/composition-dictionary-baseline-v0.1/manifest.json",
+    "docs/research/composition-dictionary-baseline-v0.1/README.md",
+    "docs/research/composition-dictionary-baseline-v0.1/applied-decisions/pcd-v01-0025-corpus-only.json"
+  ],
+  "other_qa_changes": "PENDING",
+  "baseline_freeze": "NOT PERFORMED"
+}

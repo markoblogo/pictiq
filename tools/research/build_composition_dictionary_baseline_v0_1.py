@@ -545,6 +545,15 @@ def build(output_dir: Path = OUT) -> dict[str, Any]:
             path.write_text(svg, encoding='utf-8')
             validation_rows.append({'variant_id': variant['variant_id'], 'dictionary_entry_id': pedestrian['dictionary_entry_id'],
                                     'status': 'VALIDATED_AND_RENDERED_CANONICALLY', 'path': variant['render']})
+    from tools.research.corpus_only_application import apply as apply_corpus_only, RECEIPT as CORPUS_ONLY_RECEIPT
+    dictionary, corpus_only_application = apply_corpus_only(dictionary, ROOT)
+    write_json(output_dir / CORPUS_ONLY_RECEIPT, corpus_only_application)
+    # The original SVG above remains on disk for historical QA/provenance.
+    # Only the current validation/render index and Dictionary projections lose it.
+    validation_rows = [r for r in validation_rows if r['dictionary_entry_id'] != 'pcd-v01-0025']
+    counts['dictionary_entries'] = len(dictionary['entries'])
+    counts['preferred_messages'] = len(dictionary['entries'])
+    counts['entries_with_known_ambiguity'] = sum(bool(e['known_ambiguity']) for e in dictionary['entries'])
     counts['contextual_variants'] = sum(v['variant_type'] == 'CONTEXTUAL' for e in dictionary['entries'] for v in e['variants'])
     counts['entries_with_multiple_variants'] = sum(len(e['variants']) > 1 for e in dictionary['entries'])
     counts['render_count'] = len(validation_rows)
@@ -566,6 +575,7 @@ def build(output_dir: Path = OUT) -> dict[str, Any]:
     artifact_paths.append(SHOPPING_RECEIPT)
     artifact_paths.append(PARKING_RECEIPT)
     artifact_paths.append(PEDESTRIAN_RECEIPT)
+    artifact_paths.append(CORPUS_ONLY_RECEIPT)
     artifact_paths.extend(v['render'] for v in pedestrian['variants'] if v['variant_id'] != 'pcd-v01-0028-preferred')
     manifest = {
         "dictionary_version": "0.1", "created_on": "2026-09-27", "status": "CREATOR-REVIEWED / ACCEPTED RESEARCH BASELINE; AWAITING FINAL VISUAL QA",
@@ -579,7 +589,7 @@ def build(output_dir: Path = OUT) -> dict[str, Any]:
         "status_dependencies": {"color_modifier": "REQUIRED / NOT IMPLEMENTED", "practical_coverage": "NOT STARTED", "translator": "NOT IMPLEMENTED", "machine_agent_access": "NOT IMPLEMENTED", "stress_test_07_1": "PAUSED / PRESERVED / UNCHANGED", "blocked_hotel_color": "EXCLUDED / STILL BLOCKED"},
         "validation": "PASS" if len(validation_rows) == len(variant_data['variants']) and not failures else "FAIL",
         "context_clarifications": [{"path": path, "sha256": sha256_bytes((output_dir / path).read_bytes())}
-                                   for path in (RECEIPT, COMMUNICATION_RECEIPT, SHOPPING_RECEIPT, PARKING_RECEIPT, PEDESTRIAN_RECEIPT)],
+                                   for path in (RECEIPT, COMMUNICATION_RECEIPT, SHOPPING_RECEIPT, PARKING_RECEIPT, PEDESTRIAN_RECEIPT, CORPUS_ONLY_RECEIPT)],
         "artifact_sha256": {name: sha256_bytes((output_dir / name).read_bytes()) for name in artifact_paths},
     }
     write_json(output_dir / "manifest.json", manifest)

@@ -47,19 +47,32 @@ class CompositionReaderTests(unittest.TestCase):
         self.assertTrue(all(r['exists'] for r in result['renders']))
         self.assertTrue(all(t['registered'] and t['asset']['exists'] for t in result['canonical_assets']))
 
-    def test_pending_exclusion_keeps_baseline_and_creator_decision_separate(self):
+    def test_applied_exclusion_returns_no_dictionary_entry_and_keeps_corpus_evidence(self):
         result = read_composition('dictionary', 'pcd-v01-0025')
         self.assertTrue(result['ok'], result['diagnostics'])
-        self.assertEqual(result['baseline_record']['preferred_variant']['token_sequence'], 'rel_here + logic_no')
-        self.assertEqual(result['baseline_record']['creator_review']['decision'], 'KEEP_IN_DICTIONARY')
+        self.assertIsNone(result['baseline_record'])
+        self.assertIsNone(result['baseline_provenance'])
+        self.assertEqual(result['record_statuses']['dictionary_projection'], 'CORPUS_ONLY')
+        self.assertIn('CORPUS_ONLY_APPLIED', self.codes(result))
+        self.assertNotIn('PENDING_CREATOR_DECISION', self.codes(result))
         decision, = result['subsequent_creator_decisions']
         self.assertEqual(decision['action'], 'MOVE_TO_CORPUS_ONLY')
+        self.assertEqual(decision['application_status'], 'APPLIED')
+        self.assertIn('PENDING', decision['raw_decision']['application_status'])
         self.assertTrue(decision['link_verified'])
-        self.assertIn('PENDING', decision['application_status'])
-        self.assertFalse(decision['baseline_mutated_by_reader'])
-        self.assertIn('PENDING_CREATOR_DECISION', self.codes(result))
+        applied, = result['applied_creator_decisions']
+        self.assertEqual(applied['application_status'], 'APPLIED')
+        self.assertEqual(applied['scope'], 'CORPUS_ONLY_PROJECTION')
+        self.assertEqual(applied['application']['removed_entry']['preferred_variant']['token_sequence'], 'rel_here + logic_no')
         corpus = read_composition('corpus', 'clh-v01-0044')
+        self.assertTrue(corpus['ok'], corpus['diagnostics'])
+        original = next(r for r in self.load(CORPUS + '/accepted-corpus.json')['records'] if r['corpus_record_id'] == 'clh-v01-0044')
+        self.assertEqual(corpus['baseline_record'], original)
+        self.assertEqual(result['linked_corpus_records'][0]['record'], original)
+        self.assertEqual(corpus['record_statuses']['dictionary_projection'], 'CORPUS_ONLY')
         self.assertEqual(corpus['subsequent_creator_decisions'], result['subsequent_creator_decisions'])
+        self.assertTrue(all(r['exists'] for r in result['renders']))
+        self.assertFalse(any(e['dictionary_entry_id'] == 'pcd-v01-0025' for e in self.load(DICTIONARY + '/dictionary.json')['entries']))
 
     def test_medical_context_application_keeps_messages_and_qa_separate(self):
         result = read_composition('dictionary', 'pcd-v01-0002')
@@ -201,27 +214,29 @@ class CompositionReaderTests(unittest.TestCase):
                 (root / DICTIONARY / RECEIPT).write_bytes(raw)
                 self.edit(root, DICTIONARY + '/manifest.json',
                           lambda m: m['context_clarifications'][0].update(sha256=hashlib.sha256(raw).hexdigest()))
-                result = read_composition('dictionary', 'pcd-v01-0025', root)
+                result = read_composition('corpus', 'clh-v01-0044', root)
                 self.assertFalse(result['ok'])
                 self.assertIn('CONTEXT_CLARIFICATION_MISMATCH', self.codes(result))
                 self.assertEqual(result['applied_creator_decisions'], [])
                 self.assertFalse(result['subsequent_creator_decisions'][0]['link_verified'])
 
-    def test_application_sequence_accepts_five_steps_and_rejects_intermediate_substitution(self):
+    def test_application_sequence_accepts_six_steps_and_rejects_intermediate_substitution(self):
         from tools.research.communication_context_clarification import receipt_refs, verify_sequence, encode, verify as verify_communication
         from tools.research.shopping_context_clarification import verify as verify_shopping
         from tools.research.parking_context_clarification import verify as verify_parking
         from tools.research.pedestrian_preferred_application import verify as verify_pedestrian
+        from tools.research.corpus_only_application import verify as verify_corpus_only
         manifest = self.load(DICTIONARY + '/manifest.json')
         refs = receipt_refs(manifest)
         receipts = [self.load(DICTIONARY + '/' + ref['path']) for ref in refs]
         raw = (ROOT / DICTIONARY / 'dictionary.json').read_bytes()
-        four_steps, _, _ = verify_pedestrian(raw, receipts[4], ROOT)
+        five_steps, _, _ = verify_corpus_only(raw, receipts[5], ROOT)
+        four_steps, _, _ = verify_pedestrian(encode(five_steps), receipts[4], ROOT)
         three_steps, _, _ = verify_parking(encode(four_steps), receipts[3], ROOT)
         two_steps, _, _ = verify_shopping(encode(three_steps), receipts[2], ROOT)
         one_step, _, _ = verify_communication(encode(two_steps), receipts[1], ROOT)
-        ids = ['pcd-v01-0002', 'pcd-v01-0006', 'pcd-v01-0009', 'pcd-v01-0030', 'pcd-v01-0028']
-        for count, state in enumerate((encode(one_step), encode(two_steps), encode(three_steps), encode(four_steps), raw), 1):
+        ids = ['pcd-v01-0002', 'pcd-v01-0006', 'pcd-v01-0009', 'pcd-v01-0030', 'pcd-v01-0028', 'pcd-v01-0025']
+        for count, state in enumerate((encode(one_step), encode(two_steps), encode(three_steps), encode(four_steps), encode(five_steps), raw), 1):
             original, _, decisions = verify_sequence(state, receipts[:count], ROOT)
             self.assertEqual([d['dictionary_entry_id'] for d in decisions], ids[:count])
             self.assertEqual(hashlib.sha256(encode(original)).hexdigest(), receipts[0]['dictionary_before_sha256'])
@@ -229,13 +244,14 @@ class CompositionReaderTests(unittest.TestCase):
         self.assertEqual(receipt_refs({'context_clarifications': refs[:2]}), refs[:2])
         self.assertEqual(receipt_refs({'context_clarifications': refs[:3]}), refs[:3])
         self.assertEqual(receipt_refs({'context_clarifications': refs[:4]}), refs[:4])
-        for i in (1, 2, 3, 4):
+        self.assertEqual(receipt_refs({'context_clarifications': refs[:5]}), refs[:5])
+        for i in (1, 2, 3, 4, 5):
             self.assertEqual(receipts[i-1]['dictionary_after_sha256'], receipts[i]['dictionary_before_sha256'])
         for entry_id in ids:
             result = read_composition('dictionary', entry_id)
             self.assertTrue(result['ok'], result['diagnostics'])
             self.assertEqual(result['applied_creator_decisions'][0]['application_status'], 'APPLIED')
-        cases = [(change, i) for change in ('gap', 'substituted_intermediate') for i in (1, 2, 3, 4)]
+        cases = [(change, i) for change in ('gap', 'substituted_intermediate') for i in (1, 2, 3, 4, 5)]
         cases += [(change, None) for change in ('reordered', 'missing_step', 'source_selector', 'duplicate_field')]
         for change, i in cases:
             with self.subTest(change=change, link=i):
@@ -307,18 +323,18 @@ class CompositionReaderTests(unittest.TestCase):
             with self.subTest(mutate=mutate):
                 root = self.fixture()
                 self.edit(root, DICTIONARY + '/final-creator-qa-addendum-v0.2.json', mutate)
-                result = read_composition('dictionary', 'pcd-v01-0025', root)
+                result = read_composition('corpus', 'clh-v01-0044', root)
                 self.assertFalse(result['ok'])
                 self.assertIn('DECISION_LINK_UNRESOLVED', self.codes(result))
                 self.assertTrue(all(not d['link_verified'] for d in result['subsequent_creator_decisions']))
-                expected = next(e for e in self.load(DICTIONARY + '/dictionary.json', root)['entries'] if e['dictionary_entry_id'] == 'pcd-v01-0025')
+                expected = next(e for e in self.load(CORPUS + '/accepted-corpus.json', root)['records'] if e['corpus_record_id'] == 'clh-v01-0044')
                 self.assertEqual(result['baseline_record'], expected)
 
     def test_ambiguous_source_id_is_not_selected(self):
         root = self.fixture()
         self.edit(root, DICTIONARY + '/dictionary.json',
-                  lambda d: d['entries'].append(copy.deepcopy(next(e for e in d['entries'] if e['dictionary_entry_id'] == 'pcd-v01-0025'))))
-        result = read_composition('dictionary', 'pcd-v01-0025', root)
+                  lambda d: d['entries'].append(copy.deepcopy(next(e for e in d['entries'] if e['dictionary_entry_id'] == 'pcd-v01-0006'))))
+        result = read_composition('dictionary', 'pcd-v01-0006', root)
         self.assertFalse(result['ok'])
         self.assertNotIn('baseline_record', result)
         self.assertIn('Ambiguous', result['diagnostics'][0]['message'])
@@ -352,9 +368,20 @@ class CompositionReaderTests(unittest.TestCase):
             self.assertTrue(result['ok'], result['diagnostics'])
             for rel, digest in result['files_sha256'].items():
                 self.assertEqual(hashlib.sha256((ROOT / rel).read_bytes()).hexdigest(), digest)
-            ref = result['baseline_provenance']; selected = json.loads((ROOT / ref['path']).read_text())
+            ref = result['baseline_provenance']
+            expected = result['baseline_record']
+            if ref is None:
+                self.assertIsNone(expected)
+                self.assertEqual(result['record_statuses']['dictionary_projection'], 'CORPUS_ONLY')
+                linked, = result['linked_corpus_records']
+                ref, expected = linked['provenance'], linked['record']
+                application, = result['applied_creator_decisions']
+                historical = application['application']['removed_entry_provenance']
+                self.assertEqual(historical['selector'], '/entries/24')
+                self.assertNotEqual(historical['sha256'], result['files_sha256'][historical['path']])
+            selected = json.loads((ROOT / ref['path']).read_text())
             for part in ref['selector'].split('/')[1:]: selected = selected[int(part)] if isinstance(selected, list) else selected[part]
-            self.assertEqual(selected, result['baseline_record'])
+            self.assertEqual(selected, expected)
         self.assertEqual(before, {p: hashlib.sha256(p.read_bytes()).hexdigest() for p in paths})
 
 

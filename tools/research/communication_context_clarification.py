@@ -93,16 +93,18 @@ def verify(dictionary_bytes, receipt, root):
 
 
 def receipt_refs(manifest):
-    """Only the explicitly recorded S01.10 through S01.14 sequences."""
+    """Only the explicitly recorded S01.10 through S01.15 sequences."""
     from tools.research.shopping_context_clarification import RECEIPT as SHOPPING_RECEIPT
     from tools.research.parking_context_clarification import RECEIPT as PARKING_RECEIPT
     from tools.research.pedestrian_preferred_application import RECEIPT as PEDESTRIAN_RECEIPT
+    from tools.research.corpus_only_application import RECEIPT as CORPUS_ONLY_RECEIPT
     if 'context_clarifications' in manifest:
         refs = manifest['context_clarifications']
         if 'context_clarification' in manifest or [r['path'] for r in refs] not in (
                 [MEDICAL_RECEIPT, RECEIPT], [MEDICAL_RECEIPT, RECEIPT, SHOPPING_RECEIPT],
                 [MEDICAL_RECEIPT, RECEIPT, SHOPPING_RECEIPT, PARKING_RECEIPT],
-                [MEDICAL_RECEIPT, RECEIPT, SHOPPING_RECEIPT, PARKING_RECEIPT, PEDESTRIAN_RECEIPT]):
+                [MEDICAL_RECEIPT, RECEIPT, SHOPPING_RECEIPT, PARKING_RECEIPT, PEDESTRIAN_RECEIPT],
+                [MEDICAL_RECEIPT, RECEIPT, SHOPPING_RECEIPT, PARKING_RECEIPT, PEDESTRIAN_RECEIPT, CORPUS_ONLY_RECEIPT]):
             raise ValueError('Context clarification sequence mismatch')
         return refs
     if 'context_clarification' in manifest:
@@ -114,6 +116,13 @@ def receipt_refs(manifest):
 
 
 def verify_sequence(dictionary_bytes, receipts, root):
+    if len(receipts) == 6:
+        from tools.research.corpus_only_application import verify as verify_corpus_only
+        if receipts[4]['dictionary_after_sha256'] != receipts[5]['dictionary_before_sha256']:
+            raise ValueError('Context clarification sequence has a broken intermediate hash link')
+        intermediate, _, corpus_only_decision = verify_corpus_only(dictionary_bytes, receipts[5], root)
+        original, export, decisions = verify_sequence(encode(intermediate), receipts[:5], root)
+        return original, export, [*decisions, corpus_only_decision]
     if len(receipts) == 5:
         from tools.research.pedestrian_preferred_application import verify as verify_pedestrian
         if receipts[3]['dictionary_after_sha256'] != receipts[4]['dictionary_before_sha256']:

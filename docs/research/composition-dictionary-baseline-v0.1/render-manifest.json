@@ -175,12 +175,6 @@
       "path": "renders/pcd-v01-0024-preferred.svg"
     },
     {
-      "variant_id": "pcd-v01-0025-preferred",
-      "dictionary_entry_id": "pcd-v01-0025",
-      "status": "VALIDATED_AND_RENDERED_CANONICALLY",
-      "path": "renders/pcd-v01-0025-preferred.svg"
-    },
-    {
       "variant_id": "pcd-v01-0026-preferred",
       "dictionary_entry_id": "pcd-v01-0026",
       "status": "VALIDATED_AND_RENDERED_CANONICALLY",

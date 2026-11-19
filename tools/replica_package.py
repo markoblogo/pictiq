@@ -151,7 +151,7 @@ def compose(entry_id, variant_id, root=ROOT, revision=None):
             inputs.take(SOURCE); inputs.take(QA_DATA)
             for module in ('medical_context_clarification.py', 'communication_context_clarification.py',
                            'shopping_context_clarification.py', 'parking_context_clarification.py',
-                           'pedestrian_preferred_application.py'):
+                           'pedestrian_preferred_application.py', 'corpus_only_application.py'):
                 inputs.take('tools/research/' + module)
             verify_sequence(inputs.take(relative), receipts, inputs.root)
         except (ValueError, KeyError, TypeError, IndexError, OSError) as exc:
