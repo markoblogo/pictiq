@@ -18,7 +18,7 @@ class CompositionDictionaryBaselineTests(unittest.TestCase):
         manifest = json.loads((PACKAGE / "manifest.json").read_text())
         self.assertEqual(manifest["validation"], "PASS")
         self.assertEqual(manifest["counts"]["dictionary_entries"], 65)
-        self.assertEqual(manifest["counts"]["render_count"], 70)
+        self.assertEqual(manifest["counts"]["render_count"], 72)
         amendment = json.loads((PACKAGE / "creator-review-amendment.json").read_text())
         records = amendment["records"]
         self.assertEqual(len(records), 65)
@@ -54,7 +54,10 @@ class CompositionDictionaryBaselineTests(unittest.TestCase):
         from tools.research.communication_context_clarification import RECEIPT as COMMUNICATION_RECEIPT, verify as verify_communication, encode
         from tools.research.shopping_context_clarification import RECEIPT as SHOPPING_RECEIPT, verify as verify_shopping
         from tools.research.parking_context_clarification import RECEIPT as PARKING_RECEIPT, verify as verify_parking
+        from tools.research.pedestrian_preferred_application import RECEIPT as PEDESTRIAN_RECEIPT, verify as verify_pedestrian
         raw = (PACKAGE / 'dictionary.json').read_bytes()
+        pedestrian_predecessor, _, _ = verify_pedestrian(raw, json.loads((PACKAGE / PEDESTRIAN_RECEIPT).read_bytes()), ROOT)
+        raw = encode(pedestrian_predecessor)
         parking_predecessor, _, _ = verify_parking(raw, json.loads((PACKAGE / PARKING_RECEIPT).read_bytes()), ROOT)
         raw = encode(parking_predecessor)
         receipt = json.loads((PACKAGE / RECEIPT).read_bytes())
@@ -79,7 +82,10 @@ class CompositionDictionaryBaselineTests(unittest.TestCase):
         from tools.research.communication_context_clarification import RECEIPT, verify, encode, BEFORE_SHA
         from tools.research.shopping_context_clarification import RECEIPT as SHOPPING_RECEIPT, verify as verify_shopping
         from tools.research.parking_context_clarification import RECEIPT as PARKING_RECEIPT, verify as verify_parking
+        from tools.research.pedestrian_preferred_application import RECEIPT as PEDESTRIAN_RECEIPT, verify as verify_pedestrian
         raw = (PACKAGE / 'dictionary.json').read_bytes()
+        pedestrian_predecessor, _, _ = verify_pedestrian(raw, json.loads((PACKAGE / PEDESTRIAN_RECEIPT).read_bytes()), ROOT)
+        raw = encode(pedestrian_predecessor)
         parking_predecessor, _, _ = verify_parking(raw, json.loads((PACKAGE / PARKING_RECEIPT).read_bytes()), ROOT)
         raw = encode(parking_predecessor)
         receipt = json.loads((PACKAGE / RECEIPT).read_bytes())
@@ -110,7 +116,10 @@ class CompositionDictionaryBaselineTests(unittest.TestCase):
     def test_shopping_application_changes_only_seven_descriptive_fields(self):
         from tools.research.shopping_context_clarification import RECEIPT, verify, encode, BEFORE_SHA
         from tools.research.parking_context_clarification import RECEIPT as PARKING_RECEIPT, verify as verify_parking
+        from tools.research.pedestrian_preferred_application import RECEIPT as PEDESTRIAN_RECEIPT, verify as verify_pedestrian
         raw = (PACKAGE / 'dictionary.json').read_bytes()
+        pedestrian_predecessor, _, _ = verify_pedestrian(raw, json.loads((PACKAGE / PEDESTRIAN_RECEIPT).read_bytes()), ROOT)
+        raw = encode(pedestrian_predecessor)
         parking_predecessor, _, _ = verify_parking(raw, json.loads((PACKAGE / PARKING_RECEIPT).read_bytes()), ROOT)
         raw = encode(parking_predecessor)
         receipt = json.loads((PACKAGE / RECEIPT).read_bytes())
@@ -141,7 +150,10 @@ class CompositionDictionaryBaselineTests(unittest.TestCase):
 
     def test_parking_application_preserves_previous_entries_messages_and_pending_work(self):
         from tools.research.parking_context_clarification import RECEIPT, verify, encode, BEFORE_SHA
+        from tools.research.pedestrian_preferred_application import RECEIPT as PEDESTRIAN_RECEIPT, verify as verify_pedestrian
         raw = (PACKAGE / 'dictionary.json').read_bytes()
+        pedestrian_predecessor, _, _ = verify_pedestrian(raw, json.loads((PACKAGE / PEDESTRIAN_RECEIPT).read_bytes()), ROOT)
+        raw = encode(pedestrian_predecessor)
         receipt = json.loads((PACKAGE / RECEIPT).read_bytes())
         previous, _, _ = verify(raw, receipt, ROOT)
         self.assertEqual(hashlib.sha256(encode(previous)).hexdigest(), BEFORE_SHA)
@@ -172,6 +184,59 @@ class CompositionDictionaryBaselineTests(unittest.TestCase):
         self.assertEqual(timetable['temporary_qa_id'], 'qa-new-public-transport-timetable')
         self.assertFalse(any(e['preferred_variant']['token_sequence'] == 'move_public + media_text + time + punct_question'
                              for e in current['entries']))
+
+
+    def test_pedestrian_application_preserves_history_and_renders_all_three_exact_forms(self):
+        from tools.research.pedestrian_preferred_application import RECEIPT, verify, encode, BEFORE_SHA, CORPUS
+        from tools.validate_message_schema import schema_errors, semantic_errors
+        from pictiq_renderer.svg_renderer import render_svg
+        import xml.etree.ElementTree as ET
+        raw = (PACKAGE / 'dictionary.json').read_bytes()
+        receipt = json.loads((PACKAGE / RECEIPT).read_bytes())
+        previous, _, _ = verify(raw, receipt, ROOT)
+        self.assertEqual(hashlib.sha256(encode(previous)).hexdigest(), BEFORE_SHA)
+        current = json.loads(raw)
+        self.assertEqual(len(current['entries']), 65)
+        for before, after in zip(previous['entries'], current['entries']):
+            if before['dictionary_entry_id'] != 'pcd-v01-0028':
+                self.assertEqual(before, after)
+        entry = current['entries'][27]
+        before = previous['entries'][27]
+        self.assertEqual(entry['lineage']['source_message'], before['lineage']['source_message'])
+        self.assertEqual(entry['variants'][1]['message'], before['preferred_variant']['message'])
+        self.assertEqual(entry['variants'][1]['render'], before['preferred_variant']['render'])
+        corpus = json.loads((ROOT / CORPUS).read_bytes())
+        original, = [r for r in corpus['records'] if r['corpus_record_id'] == 'clh-v01-0047']
+        self.assertEqual(entry['variants'][2]['message'], original['historical_message'])
+        sequences = [['move_feet'], ['person_generic', 'move_feet'], ['person_generic', 'move_feet', 'rel_here']]
+        for variant, ids in zip(entry['variants'], sequences):
+            self.assertEqual(schema_errors(variant['message']) + semantic_errors(variant['message']), [])
+            svg, _ = render_svg(variant['message'])
+            self.assertEqual((PACKAGE / variant['render']).read_text(), svg)
+            self.assertEqual([node.attrib['data-id'] for node in ET.fromstring(svg).iter() if 'data-id' in node.attrib], ids)
+        self.assertEqual(receipt['messages_before_after']['preferred_before'], before['preferred_variant']['message'])
+        self.assertEqual(receipt['messages_before_after']['preferred_after'], entry['preferred_variant']['message'])
+        self.assertEqual(receipt['preference_context']['surface'], ['WAYFINDING'])
+        self.assertFalse(receipt['preference_context']['universal_preference'])
+        self.assertEqual(len(receipt['variant_lineage']), 3)
+        # Reject even a rehashed attempt to change the author-selected Message.
+        forged = json.loads(raw)
+        forged['entries'][27]['preferred_variant']['message']['frames'][0]['tokens'].append({'type': 'icon', 'id': 'rel_here'})
+        fake_receipt = json.loads(encode(receipt))
+        fake_receipt['dictionary_after_sha256'] = hashlib.sha256(encode(forged)).hexdigest()
+        with self.assertRaises(ValueError):
+            verify(encode(forged), fake_receipt, ROOT)
+        for name in ('pcd-v01-0002-context.json', 'pcd-v01-0006-context.json',
+                     'pcd-v01-0009-context.json', 'pcd-v01-0030-context.json'):
+            rel = 'docs/research/composition-dictionary-baseline-v0.1/applied-decisions/' + name
+            frozen = subprocess.run(['git', 'show', 'e95b798:' + rel], cwd=ROOT, capture_output=True, check=True).stdout
+            self.assertEqual((ROOT / rel).read_bytes(), frozen)
+        for variant in before['variants']:
+            rel = 'docs/research/composition-dictionary-baseline-v0.1/' + variant['render']
+            frozen = subprocess.run(['git', 'show', 'e95b798:' + rel], cwd=ROOT, capture_output=True, check=True).stdout
+            self.assertEqual((ROOT / rel).read_bytes(), frozen)
+        lineage = json.loads((PACKAGE / 'lineage.json').read_bytes())
+        self.assertEqual(lineage['records'][27], entry['lineage'])
 
 
 if __name__ == "__main__":

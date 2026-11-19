@@ -48,7 +48,15 @@ class FinalCreatorQATests(unittest.TestCase):
     def test_variant_visibility_scope_warnings_and_visual_pairs(self):
         data = load(DATA_PATH)
         html = VIEWER.read_text(encoding="utf-8")
-        entries = load(PKG / "dictionary.json")["entries"]
+        # This viewer is intentionally frozen. Reconstruct its exact bound
+        # baseline through verified receipts, rather than treating it as live QA.
+        from tools.research.communication_context_clarification import receipt_refs, verify_sequence
+        refs = receipt_refs(load(PKG / 'manifest.json'))
+        original, _, _ = verify_sequence((PKG / 'dictionary.json').read_bytes(),
+                                         [load(PKG / r['path']) for r in refs], ROOT)
+        self.assertEqual(hashlib.sha256((json.dumps(original, ensure_ascii=False, indent=2) + '\n').encode()).hexdigest(),
+                         data['source_baseline']['dictionary_json_sha256'])
+        entries = original['entries']
         for card in data["entries"]:
             source = next(x for x in entries if x["dictionary_entry_id"] == card["dictionary_entry_id"])
             self.assertEqual(len(card["accepted_variants"]), len(source["variants"]))

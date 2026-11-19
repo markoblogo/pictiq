@@ -1,0 +1,849 @@
+{
+  "application_id": "S01.14-pcd-v01-0028-preferred",
+  "dictionary_entry_id": "pcd-v01-0028",
+  "application_status": "APPLIED",
+  "scope": "PREFERRED_VARIANT_CHANGE",
+  "source_revision": "e95b79858d6d4314f668884b57c425595b546ca8",
+  "source_decision": {
+    "path": "docs/research/composition-dictionary-baseline-v0.1/creator-final-qa-2026-11-19/creator-export.json",
+    "sha256": "609c38175864d5da66e9f969364ea5dc84f71a15eab7bf4cfed14d81d1412152",
+    "selector": "/records/7",
+    "qa_dataset_sha256": "45c041165ad17f2f8114dddd454ba42f74e9e635eb44606133f291348626f413"
+  },
+  "dictionary_before_sha256": "13b868cc4abc5d68b4aae2135a31cf12888013254c94b6512ba61d67891a643a",
+  "dictionary_after_sha256": "fe50cf5f62c908cb05abc2ba57fe28132475599400dc061203c35fb46773873a",
+  "changed_fields": [
+    {
+      "selector": "/entries/27/semantic_neighbourhood",
+      "before": "Person moving on foot",
+      "after": "Pedestrian movement / walking / movement on foot"
+    },
+    {
+      "selector": "/entries/27/usage_note",
+      "before": "In a wayfinding context, PERSON + FEET indicates pedestrian movement; it does not by itself assert a crossing location.",
+      "after": "All three forms are accepted: move_feet; person_generic + move_feet; person_generic + move_feet + rel_here. For a road sign (WAYFINDING), the creator prefers move_feet. This is not a universal preference for every mode or surface. Movement on foot does not by itself identify a crossing point; crossing is a more specific situation supplied by context. The historical crossing task remains in Corpus and source evidence, not as the general meaning of move_feet."
+    },
+    {
+      "selector": "/entries/27/context_warnings",
+      "before": [
+        "Wayfinding context",
+        "Movement on foot is not necessarily a crossing-place relation"
+      ],
+      "after": [
+        "Road-sign preferred only: move_feet; explicit PERSON and PERSON + HERE forms remain accepted in context.",
+        "Walking / movement on foot does not entail a crossing-place relation or driver-yield instruction."
+      ]
+    },
+    {
+      "selector": "/entries/27/context",
+      "before": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "context": {
+            "domain": [
+              "road-wayfinding"
+            ],
+            "situation": [
+              "public road and wayfinding sign"
+            ],
+            "task": [
+              "expect/use a crossing point; drivers yield/slow where applicable; pedestrians cross here."
+            ],
+            "context_supplies": [
+              {
+                "cue": "road/public-wayfinding conventions",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-road-08"
+                ]
+              },
+              {
+                "cue": "sign placement and road-navigation frame",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-road-08"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-road-08"
+          ]
+        }
+      ],
+      "after": [
+        {
+          "communication_mode": "STANDALONE",
+          "communication_surface": "WAYFINDING",
+          "context": {
+            "domain": [
+              "road-wayfinding"
+            ],
+            "situation": [
+              "public road and wayfinding sign"
+            ],
+            "task": [
+              "pedestrian movement / walking / movement on foot"
+            ],
+            "context_supplies": [
+              {
+                "cue": "road/public-wayfinding conventions",
+                "availability": "REQUIRED",
+                "evidence_ids": [
+                  "cand-road-08"
+                ]
+              },
+              {
+                "cue": "sign placement and road-navigation frame",
+                "availability": "OPTIONAL",
+                "evidence_ids": [
+                  "cand-road-08"
+                ]
+              }
+            ]
+          },
+          "evidence_ids": [
+            "cand-road-08"
+          ]
+        }
+      ]
+    },
+    {
+      "selector": "/entries/27/preferred_variant",
+      "before": {
+        "variant_id": "pcd-v01-0028-preferred",
+        "variant_type": "PREFERRED",
+        "status": "CURRENT_ACCEPTED",
+        "message": {
+          "schema": "0.1",
+          "pictiq": "1.1",
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "person_generic"
+                },
+                {
+                  "type": "icon",
+                  "id": "move_feet"
+                }
+              ]
+            }
+          ]
+        },
+        "token_sequence": "person_generic + move_feet",
+        "render": "renders/pcd-v01-0028-preferred.svg",
+        "mode": [
+          "STANDALONE"
+        ],
+        "surface": [
+          "WAYFINDING"
+        ],
+        "context": [
+          {
+            "communication_mode": "STANDALONE",
+            "communication_surface": "WAYFINDING",
+            "context": {
+              "domain": [
+                "road-wayfinding"
+              ],
+              "situation": [
+                "public road and wayfinding sign"
+              ],
+              "task": [
+                "expect/use a crossing point; drivers yield/slow where applicable; pedestrians cross here."
+              ],
+              "context_supplies": [
+                {
+                  "cue": "road/public-wayfinding conventions",
+                  "availability": "REQUIRED",
+                  "evidence_ids": [
+                    "cand-road-08"
+                  ]
+                },
+                {
+                  "cue": "sign placement and road-navigation frame",
+                  "availability": "OPTIONAL",
+                  "evidence_ids": [
+                    "cand-road-08"
+                  ]
+                }
+              ]
+            },
+            "evidence_ids": [
+              "cand-road-08"
+            ]
+          }
+        ],
+        "variant_context_note": null,
+        "semantic_distinction": "Person moving on foot",
+        "provenance": {
+          "corpus_record_ids": [
+            "clh-v01-0047"
+          ],
+          "creator_review_record_id": "clh-v01-0047",
+          "dictionary_entry_id": "pcd-v01-0028",
+          "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+        },
+        "render_status": "RENDERED_CANONICAL"
+      },
+      "after": {
+        "variant_id": "pcd-v01-0028-preferred-feet",
+        "variant_type": "PREFERRED",
+        "status": "CURRENT_ACCEPTED",
+        "message": {
+          "schema": "0.1",
+          "pictiq": "1.1",
+          "frames": [
+            {
+              "tokens": [
+                {
+                  "type": "icon",
+                  "id": "move_feet"
+                }
+              ]
+            }
+          ]
+        },
+        "token_sequence": "move_feet",
+        "render": "renders/pcd-v01-0028-preferred-feet.svg",
+        "mode": [
+          "STANDALONE"
+        ],
+        "surface": [
+          "WAYFINDING"
+        ],
+        "context": [
+          {
+            "communication_mode": "STANDALONE",
+            "communication_surface": "WAYFINDING",
+            "context": {
+              "domain": [
+                "road-wayfinding"
+              ],
+              "situation": [
+                "public road and wayfinding sign"
+              ],
+              "task": [
+                "pedestrian movement / walking / movement on foot"
+              ],
+              "context_supplies": [
+                {
+                  "cue": "road/public-wayfinding conventions",
+                  "availability": "REQUIRED",
+                  "evidence_ids": [
+                    "cand-road-08"
+                  ]
+                },
+                {
+                  "cue": "sign placement and road-navigation frame",
+                  "availability": "OPTIONAL",
+                  "evidence_ids": [
+                    "cand-road-08"
+                  ]
+                }
+              ]
+            },
+            "evidence_ids": [
+              "cand-road-08"
+            ]
+          }
+        ],
+        "variant_context_note": "Preferred for the road sign (WAYFINDING); not a universal preference for other modes or surfaces.",
+        "semantic_distinction": "Pedestrian movement / walking / movement on foot",
+        "provenance": {
+          "corpus_record_ids": [
+            "clh-v01-0047"
+          ],
+          "creator_review_record_id": "clh-v01-0047",
+          "dictionary_entry_id": "pcd-v01-0028",
+          "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW",
+          "final_creator_decision": {
+            "path": "docs/research/composition-dictionary-baseline-v0.1/creator-final-qa-2026-11-19/creator-export.json",
+            "sha256": "609c38175864d5da66e9f969364ea5dc84f71a15eab7bf4cfed14d81d1412152",
+            "selector": "/records/7"
+          },
+          "message_source": {
+            "path": "docs/research/composition-dictionary-baseline-v0.1/creator-final-qa-2026-11-19/creator-export.json",
+            "sha256": "609c38175864d5da66e9f969364ea5dc84f71a15eab7bf4cfed14d81d1412152",
+            "selector": "/records/7",
+            "message_encoding": "Existing Message v0.1 encoding of the author's exact move_feet sequence"
+          }
+        },
+        "render_status": "RENDERED_CANONICAL"
+      }
+    },
+    {
+      "selector": "/entries/27/variants",
+      "before": [
+        {
+          "variant_id": "pcd-v01-0028-preferred",
+          "variant_type": "PREFERRED",
+          "status": "CURRENT_ACCEPTED",
+          "message": {
+            "schema": "0.1",
+            "pictiq": "1.1",
+            "frames": [
+              {
+                "tokens": [
+                  {
+                    "type": "icon",
+                    "id": "person_generic"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "move_feet"
+                  }
+                ]
+              }
+            ]
+          },
+          "token_sequence": "person_generic + move_feet",
+          "render": "renders/pcd-v01-0028-preferred.svg",
+          "mode": [
+            "STANDALONE"
+          ],
+          "surface": [
+            "WAYFINDING"
+          ],
+          "context": [
+            {
+              "communication_mode": "STANDALONE",
+              "communication_surface": "WAYFINDING",
+              "context": {
+                "domain": [
+                  "road-wayfinding"
+                ],
+                "situation": [
+                  "public road and wayfinding sign"
+                ],
+                "task": [
+                  "expect/use a crossing point; drivers yield/slow where applicable; pedestrians cross here."
+                ],
+                "context_supplies": [
+                  {
+                    "cue": "road/public-wayfinding conventions",
+                    "availability": "REQUIRED",
+                    "evidence_ids": [
+                      "cand-road-08"
+                    ]
+                  },
+                  {
+                    "cue": "sign placement and road-navigation frame",
+                    "availability": "OPTIONAL",
+                    "evidence_ids": [
+                      "cand-road-08"
+                    ]
+                  }
+                ]
+              },
+              "evidence_ids": [
+                "cand-road-08"
+              ]
+            }
+          ],
+          "variant_context_note": null,
+          "semantic_distinction": "Person moving on foot",
+          "provenance": {
+            "corpus_record_ids": [
+              "clh-v01-0047"
+            ],
+            "creator_review_record_id": "clh-v01-0047",
+            "dictionary_entry_id": "pcd-v01-0028",
+            "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW"
+          },
+          "render_status": "RENDERED_CANONICAL"
+        }
+      ],
+      "after": [
+        {
+          "variant_id": "pcd-v01-0028-preferred-feet",
+          "variant_type": "PREFERRED",
+          "status": "CURRENT_ACCEPTED",
+          "message": {
+            "schema": "0.1",
+            "pictiq": "1.1",
+            "frames": [
+              {
+                "tokens": [
+                  {
+                    "type": "icon",
+                    "id": "move_feet"
+                  }
+                ]
+              }
+            ]
+          },
+          "token_sequence": "move_feet",
+          "render": "renders/pcd-v01-0028-preferred-feet.svg",
+          "mode": [
+            "STANDALONE"
+          ],
+          "surface": [
+            "WAYFINDING"
+          ],
+          "context": [
+            {
+              "communication_mode": "STANDALONE",
+              "communication_surface": "WAYFINDING",
+              "context": {
+                "domain": [
+                  "road-wayfinding"
+                ],
+                "situation": [
+                  "public road and wayfinding sign"
+                ],
+                "task": [
+                  "pedestrian movement / walking / movement on foot"
+                ],
+                "context_supplies": [
+                  {
+                    "cue": "road/public-wayfinding conventions",
+                    "availability": "REQUIRED",
+                    "evidence_ids": [
+                      "cand-road-08"
+                    ]
+                  },
+                  {
+                    "cue": "sign placement and road-navigation frame",
+                    "availability": "OPTIONAL",
+                    "evidence_ids": [
+                      "cand-road-08"
+                    ]
+                  }
+                ]
+              },
+              "evidence_ids": [
+                "cand-road-08"
+              ]
+            }
+          ],
+          "variant_context_note": "Preferred for the road sign (WAYFINDING); not a universal preference for other modes or surfaces.",
+          "semantic_distinction": "Pedestrian movement / walking / movement on foot",
+          "provenance": {
+            "corpus_record_ids": [
+              "clh-v01-0047"
+            ],
+            "creator_review_record_id": "clh-v01-0047",
+            "dictionary_entry_id": "pcd-v01-0028",
+            "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW",
+            "final_creator_decision": {
+              "path": "docs/research/composition-dictionary-baseline-v0.1/creator-final-qa-2026-11-19/creator-export.json",
+              "sha256": "609c38175864d5da66e9f969364ea5dc84f71a15eab7bf4cfed14d81d1412152",
+              "selector": "/records/7"
+            },
+            "message_source": {
+              "path": "docs/research/composition-dictionary-baseline-v0.1/creator-final-qa-2026-11-19/creator-export.json",
+              "sha256": "609c38175864d5da66e9f969364ea5dc84f71a15eab7bf4cfed14d81d1412152",
+              "selector": "/records/7",
+              "message_encoding": "Existing Message v0.1 encoding of the author's exact move_feet sequence"
+            }
+          },
+          "render_status": "RENDERED_CANONICAL"
+        },
+        {
+          "variant_id": "pcd-v01-0028-preferred",
+          "variant_type": "CONTEXTUAL",
+          "status": "CURRENT_ACCEPTED",
+          "message": {
+            "schema": "0.1",
+            "pictiq": "1.1",
+            "frames": [
+              {
+                "tokens": [
+                  {
+                    "type": "icon",
+                    "id": "person_generic"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "move_feet"
+                  }
+                ]
+              }
+            ]
+          },
+          "token_sequence": "person_generic + move_feet",
+          "render": "renders/pcd-v01-0028-preferred.svg",
+          "mode": [
+            "STANDALONE"
+          ],
+          "surface": [
+            "WAYFINDING"
+          ],
+          "context": [
+            {
+              "communication_mode": "STANDALONE",
+              "communication_surface": "WAYFINDING",
+              "context": {
+                "domain": [
+                  "road-wayfinding"
+                ],
+                "situation": [
+                  "public road and wayfinding sign"
+                ],
+                "task": [
+                  "pedestrian movement / walking / movement on foot"
+                ],
+                "context_supplies": [
+                  {
+                    "cue": "road/public-wayfinding conventions",
+                    "availability": "REQUIRED",
+                    "evidence_ids": [
+                      "cand-road-08"
+                    ]
+                  },
+                  {
+                    "cue": "sign placement and road-navigation frame",
+                    "availability": "OPTIONAL",
+                    "evidence_ids": [
+                      "cand-road-08"
+                    ]
+                  }
+                ]
+              },
+              "evidence_ids": [
+                "cand-road-08"
+              ]
+            }
+          ],
+          "variant_context_note": "Explicit PERSON form remains accepted for movement on foot in context; former preferred retained.",
+          "semantic_distinction": "Pedestrian movement / walking / movement on foot",
+          "provenance": {
+            "corpus_record_ids": [
+              "clh-v01-0047"
+            ],
+            "creator_review_record_id": "clh-v01-0047",
+            "dictionary_entry_id": "pcd-v01-0028",
+            "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW",
+            "final_creator_decision": {
+              "path": "docs/research/composition-dictionary-baseline-v0.1/creator-final-qa-2026-11-19/creator-export.json",
+              "sha256": "609c38175864d5da66e9f969364ea5dc84f71a15eab7bf4cfed14d81d1412152",
+              "selector": "/records/7"
+            },
+            "message_source": {
+              "path": "docs/research/composition-dictionary-baseline-v0.1/dictionary.json",
+              "sha256": "13b868cc4abc5d68b4aae2135a31cf12888013254c94b6512ba61d67891a643a",
+              "selector": "/entries/27/preferred_variant/message"
+            }
+          },
+          "render_status": "RENDERED_CANONICAL"
+        },
+        {
+          "variant_id": "pcd-v01-0028-contextual-here",
+          "variant_type": "CONTEXTUAL",
+          "status": "CURRENT_ACCEPTED",
+          "message": {
+            "schema": "0.1",
+            "pictiq": "1.1",
+            "frames": [
+              {
+                "tokens": [
+                  {
+                    "type": "icon",
+                    "id": "person_generic"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "move_feet"
+                  },
+                  {
+                    "type": "icon",
+                    "id": "rel_here"
+                  }
+                ]
+              }
+            ]
+          },
+          "token_sequence": "person_generic + move_feet + rel_here",
+          "render": "renders/pcd-v01-0028-contextual-here.svg",
+          "mode": [
+            "STANDALONE"
+          ],
+          "surface": [
+            "WAYFINDING"
+          ],
+          "context": [
+            {
+              "communication_mode": "STANDALONE",
+              "communication_surface": "WAYFINDING",
+              "context": {
+                "domain": [
+                  "road-wayfinding"
+                ],
+                "situation": [
+                  "public road and wayfinding sign"
+                ],
+                "task": [
+                  "movement on foot at the indicated location"
+                ],
+                "context_supplies": [
+                  {
+                    "cue": "road/public-wayfinding conventions",
+                    "availability": "REQUIRED",
+                    "evidence_ids": [
+                      "cand-road-08"
+                    ]
+                  },
+                  {
+                    "cue": "sign placement and road-navigation frame",
+                    "availability": "OPTIONAL",
+                    "evidence_ids": [
+                      "cand-road-08"
+                    ]
+                  }
+                ]
+              },
+              "evidence_ids": [
+                "cand-road-08"
+              ]
+            }
+          ],
+          "variant_context_note": "Explicit PERSON and HERE form remains accepted for movement on foot at an indicated location. Its historical crossing-point interpretation is evidence, not a meaning guaranteed by these tokens.",
+          "semantic_distinction": "Pedestrian movement / walking / movement on foot",
+          "provenance": {
+            "corpus_record_ids": [
+              "clh-v01-0047"
+            ],
+            "creator_review_record_id": "clh-v01-0047",
+            "dictionary_entry_id": "pcd-v01-0028",
+            "authority": "EXPLICIT_CREATOR_DICTIONARY_REVIEW",
+            "final_creator_decision": {
+              "path": "docs/research/composition-dictionary-baseline-v0.1/creator-final-qa-2026-11-19/creator-export.json",
+              "sha256": "609c38175864d5da66e9f969364ea5dc84f71a15eab7bf4cfed14d81d1412152",
+              "selector": "/records/7"
+            },
+            "message_source": {
+              "path": "docs/research/composition-library-baseline-v0.1/accepted-corpus.json",
+              "sha256": "8dc2509dfc9d31d006726732e1825bc120dbeef06c5c1b0b1798e6315808e14e",
+              "selector": "/records/46/historical_message"
+            }
+          },
+          "render_status": "RENDERED_CANONICAL"
+        }
+      ]
+    },
+    {
+      "selector": "/entries/27/lineage/preferred_message",
+      "before": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "person_generic"
+              },
+              {
+                "type": "icon",
+                "id": "move_feet"
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "move_feet"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "selector": "/entries/27/lineage/preferred_sequence",
+      "before": "person_generic + move_feet",
+      "after": "move_feet"
+    },
+    {
+      "selector": "/entries/27/lineage/authority_path",
+      "before": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+      ],
+      "after": [
+        "HISTORICAL_COMPOSITION_HARVEST",
+        "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
+        "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1",
+        "FINAL_CREATOR_QA_V0.2 / S01.14"
+      ]
+    }
+  ],
+  "messages_before_after": {
+    "preferred_before": {
+      "schema": "0.1",
+      "pictiq": "1.1",
+      "frames": [
+        {
+          "tokens": [
+            {
+              "type": "icon",
+              "id": "person_generic"
+            },
+            {
+              "type": "icon",
+              "id": "move_feet"
+            }
+          ]
+        }
+      ]
+    },
+    "preferred_after": {
+      "schema": "0.1",
+      "pictiq": "1.1",
+      "frames": [
+        {
+          "tokens": [
+            {
+              "type": "icon",
+              "id": "move_feet"
+            }
+          ]
+        }
+      ]
+    },
+    "variants_before": [
+      {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "person_generic"
+              },
+              {
+                "type": "icon",
+                "id": "move_feet"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "variants_after": [
+      {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "move_feet"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "person_generic"
+              },
+              {
+                "type": "icon",
+                "id": "move_feet"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "schema": "0.1",
+        "pictiq": "1.1",
+        "frames": [
+          {
+            "tokens": [
+              {
+                "type": "icon",
+                "id": "person_generic"
+              },
+              {
+                "type": "icon",
+                "id": "move_feet"
+              },
+              {
+                "type": "icon",
+                "id": "rel_here"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "variant_lineage": [
+    {
+      "variant_id": "pcd-v01-0028-preferred-feet",
+      "message_source": {
+        "path": "docs/research/composition-dictionary-baseline-v0.1/creator-final-qa-2026-11-19/creator-export.json",
+        "sha256": "609c38175864d5da66e9f969364ea5dc84f71a15eab7bf4cfed14d81d1412152",
+        "selector": "/records/7",
+        "message_encoding": "Existing Message v0.1 encoding of the author's exact move_feet sequence"
+      },
+      "creator_decision": {
+        "path": "docs/research/composition-dictionary-baseline-v0.1/creator-final-qa-2026-11-19/creator-export.json",
+        "sha256": "609c38175864d5da66e9f969364ea5dc84f71a15eab7bf4cfed14d81d1412152",
+        "selector": "/records/7"
+      }
+    },
+    {
+      "variant_id": "pcd-v01-0028-preferred",
+      "message_source": {
+        "path": "docs/research/composition-dictionary-baseline-v0.1/dictionary.json",
+        "sha256": "13b868cc4abc5d68b4aae2135a31cf12888013254c94b6512ba61d67891a643a",
+        "selector": "/entries/27/preferred_variant/message"
+      },
+      "creator_decision": {
+        "path": "docs/research/composition-dictionary-baseline-v0.1/creator-final-qa-2026-11-19/creator-export.json",
+        "sha256": "609c38175864d5da66e9f969364ea5dc84f71a15eab7bf4cfed14d81d1412152",
+        "selector": "/records/7"
+      }
+    },
+    {
+      "variant_id": "pcd-v01-0028-contextual-here",
+      "message_source": {
+        "path": "docs/research/composition-library-baseline-v0.1/accepted-corpus.json",
+        "sha256": "8dc2509dfc9d31d006726732e1825bc120dbeef06c5c1b0b1798e6315808e14e",
+        "selector": "/records/46/historical_message"
+      },
+      "creator_decision": {
+        "path": "docs/research/composition-dictionary-baseline-v0.1/creator-final-qa-2026-11-19/creator-export.json",
+        "sha256": "609c38175864d5da66e9f969364ea5dc84f71a15eab7bf4cfed14d81d1412152",
+        "selector": "/records/7"
+      }
+    }
+  ],
+  "preference_context": {
+    "mode": [
+      "STANDALONE"
+    ],
+    "surface": [
+      "WAYFINDING"
+    ],
+    "situation": "road sign",
+    "universal_preference": false
+  },
+  "other_qa_changes": "PENDING",
+  "baseline_freeze": "NOT PERFORMED"
+}

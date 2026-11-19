@@ -93,14 +93,16 @@ def verify(dictionary_bytes, receipt, root):
 
 
 def receipt_refs(manifest):
-    """Only the explicitly recorded S01.10 through S01.13 sequences."""
+    """Only the explicitly recorded S01.10 through S01.14 sequences."""
     from tools.research.shopping_context_clarification import RECEIPT as SHOPPING_RECEIPT
     from tools.research.parking_context_clarification import RECEIPT as PARKING_RECEIPT
+    from tools.research.pedestrian_preferred_application import RECEIPT as PEDESTRIAN_RECEIPT
     if 'context_clarifications' in manifest:
         refs = manifest['context_clarifications']
         if 'context_clarification' in manifest or [r['path'] for r in refs] not in (
                 [MEDICAL_RECEIPT, RECEIPT], [MEDICAL_RECEIPT, RECEIPT, SHOPPING_RECEIPT],
-                [MEDICAL_RECEIPT, RECEIPT, SHOPPING_RECEIPT, PARKING_RECEIPT]):
+                [MEDICAL_RECEIPT, RECEIPT, SHOPPING_RECEIPT, PARKING_RECEIPT],
+                [MEDICAL_RECEIPT, RECEIPT, SHOPPING_RECEIPT, PARKING_RECEIPT, PEDESTRIAN_RECEIPT]):
             raise ValueError('Context clarification sequence mismatch')
         return refs
     if 'context_clarification' in manifest:
@@ -112,6 +114,13 @@ def receipt_refs(manifest):
 
 
 def verify_sequence(dictionary_bytes, receipts, root):
+    if len(receipts) == 5:
+        from tools.research.pedestrian_preferred_application import verify as verify_pedestrian
+        if receipts[3]['dictionary_after_sha256'] != receipts[4]['dictionary_before_sha256']:
+            raise ValueError('Context clarification sequence has a broken intermediate hash link')
+        intermediate, _, pedestrian_decision = verify_pedestrian(dictionary_bytes, receipts[4], root)
+        original, export, decisions = verify_sequence(encode(intermediate), receipts[:4], root)
+        return original, export, [*decisions, pedestrian_decision]
     if len(receipts) == 4:
         from tools.research.parking_context_clarification import verify as verify_parking
         if receipts[2]['dictionary_after_sha256'] != receipts[3]['dictionary_before_sha256']:

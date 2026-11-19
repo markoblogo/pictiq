@@ -525,10 +525,38 @@ def build(output_dir: Path = OUT) -> dict[str, Any]:
     from tools.research.parking_context_clarification import apply as apply_parking, RECEIPT as PARKING_RECEIPT
     dictionary, parking_application = apply_parking(dictionary, ROOT)
     write_json(output_dir / PARKING_RECEIPT, parking_application)
+    from tools.research.pedestrian_preferred_application import apply as apply_pedestrian, RECEIPT as PEDESTRIAN_RECEIPT
+    dictionary, pedestrian_application = apply_pedestrian(dictionary, ROOT)
+    write_json(output_dir / PEDESTRIAN_RECEIPT, pedestrian_application)
+    # Keep the original render paths/QA frozen; add canonical renders only for
+    # the two new variant IDs and validate all three current pedestrian forms.
+    pedestrian = next(e for e in dictionary['entries'] if e['dictionary_entry_id'] == 'pcd-v01-0028')
+    rendered_ids = {r['variant_id'] for r in validation_rows}
+    for variant in pedestrian['variants']:
+        errors = schema_errors(variant['message']) + semantic_errors(variant['message'])
+        if errors:
+            raise ValueError(f'pedestrian Message validation failed: {errors}')
+        svg, _ = render_svg(variant['message'], registry=registry)
+        path = output_dir / variant['render']
+        if variant['variant_id'] in rendered_ids:
+            if path.read_text(encoding='utf-8') != svg:
+                raise ValueError('Existing pedestrian render changed')
+        else:
+            path.write_text(svg, encoding='utf-8')
+            validation_rows.append({'variant_id': variant['variant_id'], 'dictionary_entry_id': pedestrian['dictionary_entry_id'],
+                                    'status': 'VALIDATED_AND_RENDERED_CANONICALLY', 'path': variant['render']})
+    counts['contextual_variants'] = sum(v['variant_type'] == 'CONTEXTUAL' for e in dictionary['entries'] for v in e['variants'])
+    counts['entries_with_multiple_variants'] = sum(len(e['variants']) > 1 for e in dictionary['entries'])
+    counts['render_count'] = len(validation_rows)
     counts['entries_with_context_warnings'] = sum(bool(e['context_warnings']) for e in dictionary['entries'])
     variant_data['variants'] = [v for e in dictionary['entries'] for v in e['variants']]
     write_json(output_dir / 'dictionary.json', dictionary)
     write_json(output_dir / 'variants.json', variant_data)
+    lineage['records'] = [e['lineage'] for e in dictionary['entries']]
+    write_json(output_dir / 'lineage.json', lineage)
+    write_json(output_dir / 'render-manifest.json', {'renders': validation_rows})
+    write_json(output_dir / 'validation.json', {'method': 'Deterministic structural checks plus repository Message schema-shape and registry-aware validation; no formal Dictionary JSON Schema is defined.',
+                                              'valid_message_count': len(validation_rows), 'rendered_canonically': len(validation_rows), 'failures': failures})
     write_json(output_dir / 'review/data.json', dictionary)
     (output_dir / 'review/index.html').write_text(make_dictionary_viewer(dictionary['entries']), encoding='utf-8')
 
@@ -537,6 +565,8 @@ def build(output_dir: Path = OUT) -> dict[str, Any]:
     artifact_paths.append(COMMUNICATION_RECEIPT)
     artifact_paths.append(SHOPPING_RECEIPT)
     artifact_paths.append(PARKING_RECEIPT)
+    artifact_paths.append(PEDESTRIAN_RECEIPT)
+    artifact_paths.extend(v['render'] for v in pedestrian['variants'] if v['variant_id'] != 'pcd-v01-0028-preferred')
     manifest = {
         "dictionary_version": "0.1", "created_on": "2026-09-27", "status": "CREATOR-REVIEWED / ACCEPTED RESEARCH BASELINE; AWAITING FINAL VISUAL QA",
         "normative_grammar": False, "publication_status": "INTERNAL / NOT DEPLOYED",
@@ -547,9 +577,9 @@ def build(output_dir: Path = OUT) -> dict[str, Any]:
         "creator_review_amendment_sha256": sha256_bytes((output_dir / "creator-review-amendment.json").read_bytes()),
         "creator_decision_counts": creator_counts, "counts": counts,
         "status_dependencies": {"color_modifier": "REQUIRED / NOT IMPLEMENTED", "practical_coverage": "NOT STARTED", "translator": "NOT IMPLEMENTED", "machine_agent_access": "NOT IMPLEMENTED", "stress_test_07_1": "PAUSED / PRESERVED / UNCHANGED", "blocked_hotel_color": "EXCLUDED / STILL BLOCKED"},
-        "validation": "PASS" if len(validation_rows) == len(all_variants) and not failures else "FAIL",
+        "validation": "PASS" if len(validation_rows) == len(variant_data['variants']) and not failures else "FAIL",
         "context_clarifications": [{"path": path, "sha256": sha256_bytes((output_dir / path).read_bytes())}
-                                   for path in (RECEIPT, COMMUNICATION_RECEIPT, SHOPPING_RECEIPT, PARKING_RECEIPT)],
+                                   for path in (RECEIPT, COMMUNICATION_RECEIPT, SHOPPING_RECEIPT, PARKING_RECEIPT, PEDESTRIAN_RECEIPT)],
         "artifact_sha256": {name: sha256_bytes((output_dir / name).read_bytes()) for name in artifact_paths},
     }
     write_json(output_dir / "manifest.json", manifest)

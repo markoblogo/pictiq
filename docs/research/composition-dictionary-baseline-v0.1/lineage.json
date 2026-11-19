@@ -2027,23 +2027,20 @@
             "tokens": [
               {
                 "type": "icon",
-                "id": "person_generic"
-              },
-              {
-                "type": "icon",
                 "id": "move_feet"
               }
             ]
           }
         ]
       },
-      "preferred_sequence": "person_generic + move_feet",
+      "preferred_sequence": "move_feet",
       "preferred_changed_by_creator_review": true,
       "authority_path": [
         "HISTORICAL_COMPOSITION_HARVEST",
         "ACCEPTED_COMPOSITION_CORPUS_BASELINE_V0.1",
         "DICTIONARY_CREATOR_ELIGIBILITY_REVIEW_V0.1",
-        "COMPOSITION_DICTIONARY_BASELINE_V0.1"
+        "COMPOSITION_DICTIONARY_BASELINE_V0.1",
+        "FINAL_CREATOR_QA_V0.2 / S01.14"
       ],
       "source_provenance": [
         {

@@ -153,6 +153,29 @@ class CompositionReaderTests(unittest.TestCase):
         self.assertTrue(applied['link_verified'])
         self.assertIn('AWAITING FINAL VISUAL QA', result['package']['dictionary_qa_status'])
 
+    def test_pedestrian_preferred_is_scoped_to_road_sign_and_preserves_three_forms(self):
+        result = read_composition('dictionary', 'pcd-v01-0028')
+        self.assertTrue(result['ok'], result['diagnostics'])
+        entry = result['baseline_record']
+        self.assertEqual(entry['headword'], 'Pedestrian movement')
+        self.assertEqual(entry['preferred_variant']['token_sequence'], 'move_feet')
+        self.assertEqual([v['token_sequence'] for v in entry['variants']], [
+            'move_feet', 'person_generic + move_feet', 'person_generic + move_feet + rel_here'])
+        self.assertTrue(all(v['status'] == 'CURRENT_ACCEPTED' for v in entry['variants']))
+        self.assertEqual(entry['variants'][1]['variant_id'], 'pcd-v01-0028-preferred')
+        self.assertEqual(entry['lineage']['source_sequence'], 'person_generic + move_feet + rel_here')
+        self.assertEqual(entry['lineage']['preferred_sequence'], 'move_feet')
+        self.assertEqual(entry['surface'], ['WAYFINDING'])
+        self.assertIn('not a universal preference', entry['usage_note'])
+        self.assertIn('does not by itself identify a crossing point', entry['usage_note'])
+        self.assertTrue(all('crossing point; drivers yield' not in str(v['context']) for v in entry['variants']))
+        applied, = result['applied_creator_decisions']
+        self.assertEqual(applied['action'], 'KEEP_ENTRY_CHANGE_PREFERRED')
+        self.assertEqual(applied['scope'], 'PREFERRED_VARIANT_CHANGE')
+        self.assertEqual(applied['source_provenance']['selector'], '/records/7')
+        self.assertTrue(applied['link_verified'])
+        self.assertIn('AWAITING FINAL VISUAL QA', result['package']['dictionary_qa_status'])
+
     def test_application_receipt_cannot_hide_other_edits_or_rebind_source(self):
         from tools.research.medical_context_clarification import RECEIPT
         for change in ('source_selector', 'duplicate_field', 'unrelated_entry', 'medical_message'):
@@ -184,32 +207,35 @@ class CompositionReaderTests(unittest.TestCase):
                 self.assertEqual(result['applied_creator_decisions'], [])
                 self.assertFalse(result['subsequent_creator_decisions'][0]['link_verified'])
 
-    def test_application_sequence_accepts_four_steps_and_rejects_intermediate_substitution(self):
+    def test_application_sequence_accepts_five_steps_and_rejects_intermediate_substitution(self):
         from tools.research.communication_context_clarification import receipt_refs, verify_sequence, encode, verify as verify_communication
         from tools.research.shopping_context_clarification import verify as verify_shopping
         from tools.research.parking_context_clarification import verify as verify_parking
+        from tools.research.pedestrian_preferred_application import verify as verify_pedestrian
         manifest = self.load(DICTIONARY + '/manifest.json')
         refs = receipt_refs(manifest)
         receipts = [self.load(DICTIONARY + '/' + ref['path']) for ref in refs]
         raw = (ROOT / DICTIONARY / 'dictionary.json').read_bytes()
-        three_steps, _, _ = verify_parking(raw, receipts[3], ROOT)
+        four_steps, _, _ = verify_pedestrian(raw, receipts[4], ROOT)
+        three_steps, _, _ = verify_parking(encode(four_steps), receipts[3], ROOT)
         two_steps, _, _ = verify_shopping(encode(three_steps), receipts[2], ROOT)
         one_step, _, _ = verify_communication(encode(two_steps), receipts[1], ROOT)
-        ids = ['pcd-v01-0002', 'pcd-v01-0006', 'pcd-v01-0009', 'pcd-v01-0030']
-        for count, state in enumerate((encode(one_step), encode(two_steps), encode(three_steps), raw), 1):
+        ids = ['pcd-v01-0002', 'pcd-v01-0006', 'pcd-v01-0009', 'pcd-v01-0030', 'pcd-v01-0028']
+        for count, state in enumerate((encode(one_step), encode(two_steps), encode(three_steps), encode(four_steps), raw), 1):
             original, _, decisions = verify_sequence(state, receipts[:count], ROOT)
             self.assertEqual([d['dictionary_entry_id'] for d in decisions], ids[:count])
             self.assertEqual(hashlib.sha256(encode(original)).hexdigest(), receipts[0]['dictionary_before_sha256'])
         self.assertEqual(receipt_refs({'context_clarification': refs[0]}), refs[:1])
         self.assertEqual(receipt_refs({'context_clarifications': refs[:2]}), refs[:2])
         self.assertEqual(receipt_refs({'context_clarifications': refs[:3]}), refs[:3])
-        for i in (1, 2, 3):
+        self.assertEqual(receipt_refs({'context_clarifications': refs[:4]}), refs[:4])
+        for i in (1, 2, 3, 4):
             self.assertEqual(receipts[i-1]['dictionary_after_sha256'], receipts[i]['dictionary_before_sha256'])
         for entry_id in ids:
             result = read_composition('dictionary', entry_id)
             self.assertTrue(result['ok'], result['diagnostics'])
             self.assertEqual(result['applied_creator_decisions'][0]['application_status'], 'APPLIED')
-        cases = [(change, i) for change in ('gap', 'substituted_intermediate') for i in (1, 2, 3)]
+        cases = [(change, i) for change in ('gap', 'substituted_intermediate') for i in (1, 2, 3, 4)]
         cases += [(change, None) for change in ('reordered', 'missing_step', 'source_selector', 'duplicate_field')]
         for change, i in cases:
             with self.subTest(change=change, link=i):
@@ -236,7 +262,7 @@ class CompositionReaderTests(unittest.TestCase):
                     self.edit(root, DICTIONARY + '/manifest.json', lambda m: m['context_clarifications'].reverse())
                 else:
                     self.edit(root, DICTIONARY + '/manifest.json', lambda m: m['context_clarifications'].pop(0))
-                result = read_composition('dictionary', 'pcd-v01-0030', root)
+                result = read_composition('dictionary', 'pcd-v01-0028', root)
                 self.assertFalse(result['ok'])
                 self.assertIn('CONTEXT_CLARIFICATION_MISMATCH', self.codes(result))
                 self.assertEqual(result['applied_creator_decisions'], [])
